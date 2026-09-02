@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Micrositio con pestañas y subtemas</title>
+    <!-- Fuente Poppins desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+   
+</head>
+
+<body>
+
+    <!-- ===== CONTENIDO HTML ===== -->
+    <div class="microsite-wrapper">
+
+        <div class="microsite-container" id="appContainer">
+
+            <!-- Menú principal horizontal -->
+            <nav aria-label="Temas principales">
+                <ul class="main-menu" id="mainMenu" role="tablist">
+                    <!-- Los botones se generarán con JavaScript -->
+                </ul>
+            </nav>
+
+            <!-- Área de contenido dinámico -->
+            <div class="content-area" id="contentArea">
+                <!-- Aquí se inyectará la bienvenida o el panel de subtemas + contenido -->
+            </div>
+
+            <!-- Botón de pantalla completa -->
+            <button class="fullscreen-btn" id="fullscreenBtn" type="button"
+                style="position:absolute; top:8px; right:20px; z-index:10; background:rgba(255,255,255,0.9); border-color:#c81f66; color:#c81f66; box-shadow:0 2px 0 #9b114a; padding:8px 16px; font-size:0.85rem;">
+                <span aria-hidden="true">⛶</span> Maximizar
+            </button>
+        </div>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        (function () {
+            'use strict';
+
+            // ============================================================
+            // 0. CSS 
+            // ============================================================
+            var cssUrl = 'https://cdn.jsdelivr.net/gh/vi-micrositios/cenfotec@main/estilos.css';
+
+            fetch(cssUrl)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('HTTP ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(function (cssText) {
+
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.setAttribute('data-micrositio', 'soft01');
+                    style.textContent = cssText;
+                    document.body.appendChild(style);
+                })
+                .catch(function (error) {
+                    console.error('Error cargando CSS:', error);
+                });
+
+            // ============================================================
+            // 1. DATOS (todo el contenido se define aquí)
+            // ============================================================
+            var dataUrl = 'https://raw.githubusercontent.com/vimora-cursos/micrositio-soft01/refs/heads/develop/data.json';
+
+            fetch(dataUrl)
+                .then(function (response) {
+                    if (!response.ok) {
+                        throw new Error('HTTP ' + response.status);
+                    }
+                    return response.json();
+                })
+                .then(function (data) {
+                    // Una vez cargados los datos, iniciamos la aplicación
+                    iniciarApp(data);
+                })
+                .catch(function (error) {
+                    console.error('Error cargando datos del JSON:', error);
+                    // Opcional: muestra un mensaje en la interfaz
+                    var fallback = document.createElement('p');
+                    fallback.textContent = '⚠️ No se pudieron cargar los contenidos. Recarga la página o contacta al administrador.';
+                    fallback.style.color = 'red';
+                    fallback.style.textAlign = 'center';
+                    fallback.style.padding = '2rem';
+                    document.getElementById('contentArea').appendChild(fallback);
+                });
+
+            
+             function iniciarApp(data) { 
+                // ============================================================
+                // 2. ESTADO DE LA APLICACIÓN
+                // ============================================================
+                var state = {
+                    currentTemaId: null,       // id del tema activo
+                    currentSubtemaId: null,    // id del subtema activo
+                    currentStepIndex: 0        // índice del paso actual dentro del subtema
+                };
+
+                // ============================================================
+                // 3. REFERENCIAS A ELEMENTOS DOM
+                // ============================================================
+                var mainMenuEl = document.getElementById('mainMenu');
+                var contentAreaEl = document.getElementById('contentArea');
+                var fullscreenBtn = document.getElementById('fullscreenBtn');
+                var container = document.getElementById('appContainer');
+
+                // ============================================================
+                // 4. FUNCIONES AUXILIARES
+                // ============================================================
+                function getTemaById(id) {
+                    return data.temas.find(function (t) { return t.id === id; });
+                }
+
+                function getSubtemaById(temaId, subtemaId) {
+                    var tema = getTemaById(temaId);
+                    if (!tema) return null;
+                    return tema.subtemas.find(function (s) { return s.id === subtemaId; });
+                }
+
+                function getStep(temaId, subtemaId, stepIndex) {
+                    var subtema = getSubtemaById(temaId, subtemaId);
+                    if (!subtema) return null;
+                    return subtema.steps[stepIndex] || null;
+                }
+
+                // ============================================================
+                // 5. RENDERIZADO
+                // ============================================================
+
+                // Renderizar menú principal
+                function renderMainMenu() {
+                    var html = '';
+                    data.temas.forEach(function (tema) {
+                        var active = (state.currentTemaId === tema.id) ? 'active' : '';
+                        html += '<li role="none"><button role="tab" class="' + active + '" data-tema-id="' + tema.id + '">' + tema.label + '</button></li>';
+                    });
+                    mainMenuEl.innerHTML = html;
+
+                    // Asignar eventos
+                    mainMenuEl.querySelectorAll('button').forEach(function (btn) {
+                        btn.addEventListener('click', function (e) {
+                            var temaId = this.getAttribute('data-tema-id');
+                            selectTema(temaId);
+                        });
+                    });
+                }
+
+                // Seleccionar un tema (desde menú principal)
+                function selectTema(temaId) {
+                    var tema = getTemaById(temaId);
+                    if (!tema) return;
+
+                    state.currentTemaId = temaId;
+                    // Seleccionar el primer subtema por defecto
+                    if (tema.subtemas && tema.subtemas.length > 0) {
+                        state.currentSubtemaId = tema.subtemas[0].id;
+                        state.currentStepIndex = 0;
+                    } else {
+                        state.currentSubtemaId = null;
+                        state.currentStepIndex = 0;
+                    }
+
+                    // Actualizar menú principal
+                    renderMainMenu();
+                    // Renderizar contenido
+                    renderContent();
+                }
+
+                // Renderizar el área de contenido (bienvenida o panel de subtemas)
+                function renderContent() {
+                    if (!state.currentTemaId) {
+                        // Mostrar bienvenida
+                        renderWelcome();
+                        return;
+                    }
+
+                    var tema = getTemaById(state.currentTemaId);
+                    if (!tema) {
+                        renderWelcome();
+                        return;
+                    }
+
+                    // Mostrar panel con menú lateral y contenido
+                    renderTemaPanel(tema);
+                }
+
+                // Pantalla de bienvenida (dos columnas)
+                function renderWelcome() {
+                    var w = data.welcome;
+                    var html = '<div class="welcome-panel">';
+                    // Columna 1: Imagen
+                    html += '<div class="welcome-col-img">';
+                    if (w.image) {
+                        html += '<img src="' + w.image + '" alt="Imagen decorativa del curso">';
+                    }
+                    html += '</div>';
+                    // Columna 2: Texto
+                    html += '<div class="welcome-col-text">';
+                    html += '<h1>' + w.title + '</h1>';
+                    if (w.description) {
+                        html += '<p>' + w.description + '</p>';
+                    }
+                    if (w.instruction) {
+                        html += '<p class="welcome-instruction">💡 ' + w.instruction + '</p>';
+                    }
+                    html += '</div>';
+                    html += '</div>';
+                    contentAreaEl.innerHTML = html;
+                }
+
+                // Panel con menú lateral de subtemas y contenido del subtema seleccionado
+                function renderTemaPanel(tema) {
+                    var subtemas = tema.subtemas;
+                    if (!subtemas || subtemas.length === 0) {
+                        contentAreaEl.innerHTML = '<div style="padding: 40px; text-align: center;"><p>No hay subtemas para este tema.</p></div>';
+                        return;
+                    }
+
+                    // Asegurar que currentSubtemaId sea válido
+                    var found = subtemas.some(function (s) { return s.id === state.currentSubtemaId; });
+                    if (!found) {
+                        state.currentSubtemaId = subtemas[0].id;
+                        state.currentStepIndex = 0;
+                    }
+
+                    var subtemaActual = getSubtemaById(tema.id, state.currentSubtemaId);
+
+                    // Construir HTML
+                    var html = '';
+
+                    // Menú lateral
+                    html += '<nav class="submenu-side" aria-label="Subtemas">';
+                    html += '<ul>';
+                    subtemas.forEach(function (sub) {
+                        var active = (sub.id === state.currentSubtemaId) ? 'active' : '';
+                        html += '<li><button class="' + active + '" data-subtema-id="' + sub.id + '">' + sub.label + '</button></li>';
+                    });
+                    html += '</ul>';
+                    html += '</nav>';
+
+                    // Panel de contenido (derecha)
+                    html += '<div class="content-panel">';
+                    if (subtemaActual) {
+                        html += renderStepContent(tema.id, subtemaActual, state.currentStepIndex);
+                    } else {
+                        html += '<p>Selecciona un subtema.</p>';
+                    }
+                    html += '</div>';
+
+                    contentAreaEl.innerHTML = html;
+
+                    // Asignar eventos a los botones del menú lateral
+                    contentAreaEl.querySelectorAll('.submenu-side button').forEach(function (btn) {
+                        btn.addEventListener('click', function (e) {
+                            var subId = this.getAttribute('data-subtema-id');
+                            selectSubtema(tema.id, subId);
+                        });
+                    });
+
+                    // Asignar eventos a los botones de navegación de pasos
+                    attachStepEvents(tema.id, subtemaActual);
+                }
+
+                // Renderizar el contenido de un paso específico
+                function renderStepContent(temaId, subtema, stepIndex) {
+                    var step = subtema.steps[stepIndex];
+                    if (!step) return '<p>No hay contenido.</p>';
+
+                    var total = subtema.steps.length;
+                    var html = '';
+
+                    // Título del contenido
+                    html += '<h2 style="color: #164a98; font-size: 1.4rem; font-weight: 700; margin-top: 0; margin: 20px 0">' + step.title + '</h2>';
+
+                    // Contenido principal (con o sin imagen)
+                    if (step.image) {
+                        // Dos columnas: texto | imagen
+                        html += '<div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">';
+                        html += '<div style="flex: 2; min-width: 250px; color: #333; line-height: 1.7; font-size: 1rem;">' + step.content + '</div>';
+                        html += '<div style="flex: 1; min-width: 150px; max-width: 300px; display: flex; align-items: center;">';    
+                        html += '<img src="' + step.image + '" alt="' + (step.imageAlt || 'Imagen ilustrativa') + '" style="width: 100%; height: auto; border-radius: 12px;">';
+                        html += '</div>';
+                        html += '</div>';
+                    } else {
+                        // Solo texto
+                        html += '<div style="color: #333; line-height: 1.7; font-size: 1rem;">' + step.content + '</div>';
+                    }
+
+                    // Navegación de pasos (igual que antes)
+                    html += '<div class="step-navigation">';
+                    var prevDisabled = (stepIndex === 0) ? 'style="visibility:hidden;"' : '';
+                    html += '<button class="prev-btn" data-action="prev" ' + prevDisabled + '><span aria-hidden="true">←</span> Anterior</button>';
+                    html += '<span class="step-indicator">Contenido ' + (stepIndex + 1) + ' de ' + total + '</span>';
+                    var nextLabel = step.nextButton || 'Siguiente';
+                    var nextDisabled = (stepIndex === total - 1) ? 'style="visibility:hidden;"' : '';
+                    html += '<button class="next-btn" data-action="next" ' + nextDisabled + '>' + nextLabel + ' <span aria-hidden="true">→</span></button>';
+                    html += '</div>';
+
+                    return html;
+                }
+
+                // Seleccionar un subtema (desde menú lateral)
+                function selectSubtema(temaId, subtemaId) {
+                    var subtema = getSubtemaById(temaId, subtemaId);
+                    if (!subtema) return;
+
+                    state.currentSubtemaId = subtemaId;
+                    state.currentStepIndex = 0;
+
+                    // Re-renderizar el panel (se mantiene el mismo tema)
+                    var tema = getTemaById(temaId);
+                    if (tema) {
+                        renderTemaPanel(tema);
+                    }
+                }
+
+                // Cambiar de paso (anterior/siguiente) dentro del subtema actual
+                function changeStep(temaId, subtemaId, delta) {
+                    var subtema = getSubtemaById(temaId, subtemaId);
+                    if (!subtema) return;
+
+                    var newIndex = state.currentStepIndex + delta;
+                    if (newIndex < 0 || newIndex >= subtema.steps.length) return;
+
+                    state.currentStepIndex = newIndex;
+
+                    // Re-renderizar el panel
+                    var tema = getTemaById(temaId);
+                    if (tema) {
+                        renderTemaPanel(tema);
+                    }
+                }
+
+                // Asignar eventos a los botones de navegación de pasos (después de renderizar)
+                function attachStepEvents(temaId, subtema) {
+                    if (!subtema) return;
+                    var container = contentAreaEl.querySelector('.content-panel');
+                    if (!container) return;
+
+                    var prevBtn = container.querySelector('.prev-btn');
+                    var nextBtn = container.querySelector('.next-btn');
+
+                    if (prevBtn) {
+                        prevBtn.addEventListener('click', function (e) {
+                            changeStep(temaId, subtema.id, -1);
+                        });
+                    }
+                    if (nextBtn) {
+                        nextBtn.addEventListener('click', function (e) {
+                            changeStep(temaId, subtema.id, 1);
+                        });
+                    }
+                }
+
+                // ============================================================
+                // 6. PANTALLA COMPLETA
+                // ============================================================
+                function toggleFullscreen() {
+                    if (!document.fullscreenElement) {
+                        if (container.requestFullscreen) {
+                            container.requestFullscreen().catch(function (err) {
+                                if (document.documentElement.requestFullscreen) {
+                                    document.documentElement.requestFullscreen();
+                                } else {
+                                    alert('El navegador no soporta pantalla completa.');
+                                }
+                            });
+                        } else if (container.webkitRequestFullscreen) {
+                            container.webkitRequestFullscreen();
+                        } else if (container.msRequestFullscreen) {
+                            container.msRequestFullscreen();
+                        } else {
+                            alert('El navegador no soporta pantalla completa.');
+                        }
+                    } else {
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen();
+                        } else if (document.webkitExitFullscreen) {
+                            document.webkitExitFullscreen();
+                        } else if (document.msExitFullscreen) {
+                            document.msExitFullscreen();
+                        }
+                    }
+                }
+
+                function updateFullscreenButton() {
+                    if (
+                        document.fullscreenElement ||
+                        document.webkitFullscreenElement ||
+                        document.msFullscreenElement
+                    ) {
+                        fullscreenBtn.innerHTML = `
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M8 3v5H3"/>
+                    <path d="M3 8l5-5"/>
+                    <path d="M16 21v-5h5"/>
+                    <path d="M21 16l-5 5"/>
+                </svg>
+            `;
+                        fullscreenBtn.title = "Volver al tamaño normal";
+                        fullscreenBtn.setAttribute("aria-label", "Volver al tamaño normal");
+                    } else {
+                        fullscreenBtn.innerHTML = `
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round"
+                    aria-hidden="true">
+                    <path d="M8 3H3v5"/>
+                    <path d="M3 3l5 5"/>
+                    <path d="M16 21h5v-5"/>
+                    <path d="M21 21l-5-5"/>
+                </svg>
+            `;
+                        fullscreenBtn.title = "Maximizar";
+                        fullscreenBtn.setAttribute("aria-label", "Maximizar");
+                    }
+                }
+
+
+                // ============================================================
+                // 7. INICIALIZACIÓN
+                // ============================================================
+                function init() {
+                    // Estado inicial: sin tema seleccionado → bienvenida
+                    state.currentTemaId = null;
+                    state.currentSubtemaId = null;
+                    state.currentStepIndex = 0;
+
+                    renderMainMenu();
+                    renderWelcome();
+
+                    // Evento de pantalla completa
+                    fullscreenBtn.addEventListener('click', toggleFullscreen);
+                    document.addEventListener('fullscreenchange', updateFullscreenButton);
+                    document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
+                    document.addEventListener('msfullscreenchange', updateFullscreenButton);
+                    updateFullscreenButton();
+                }
+
+                init();
+        }
+
+        })();
+    </script>
+
+</body>
+
+</html>
