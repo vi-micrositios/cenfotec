@@ -1,0 +1,224 @@
+{
+  "welcome": {
+    "title": "SOFT-01 <br> Principios de programación 1",
+    "image": "https://raw.githubusercontent.com/vimora-cursos/micrositio-soft01/develop/imgs/logo.png",
+    "description": "Estudio de estructuras secuenciales, condicionales e iterativas y procedimientos lógicos y abstracciones de computación que permiten la resolución de problemas por medio de la elaboración de programas de software.",
+    "instruction": "Seleccione cada pestaña para acceder a la información"
+  },
+  "temas": [
+    {
+      "id": "modulo_001",
+      "label": "Conceptos básicos",
+      "subtemas": [
+        {
+          "id": "m001-computador",
+          "label": "Partes del computador",
+          "steps": [
+            {
+              "title": "Partes del computador",
+              "content": "<p>Una computadora es una máquina electrónica diseñada para recibir datos (entrada), procesarlos (hacer cálculos o tomar decisiones lógicas) y entregar un resultado (salida), todo de manera automática y a una velocidad alta.</p>\n                        <p>\n                        <i class=\"fas fa-warning\" style=\"color: #00928d;\"></i>\n                        Por muy inteligente que parezca, la computadora es completamente \"tonta\" por sí sola. No piensa, no tiene iniciativa ni creatividad. Solo hace exactamente lo que el ser humano le indica a través de un programa.\n                        </p>\n                        <p>Una computadora nfunciona como una oficina:</p>\n                        <ul>\n                            <li><strong>CPU (Unidad Central de Procesamiento)</strong>: Es el \"cerebro\" que hace los cálculos y toma decisiones (ejecuta las órdenes). </li>\n                            <li><strong>Memoria RAM (memoria de corto plazo)</strong>: Es el \"escritorio\" donde la CPU pone los papeles que está usando ahora mismo. Si se apaga la PC, la RAM se borra.</li>\n                            <li><strong>Disco Duro/SSD (memoria de largo plazo)</strong>: Es el \"archivero\" donde se guardan los papeles para siempre, aunque se apague la PC.</li>\n                            <li><strong>Periféricos de Entrada/Salida</strong>: Teclado (entrada), monitor (salida), mouse (entrada), impresora (salida).</li>\n                        </ul>",
+              "nextButton": "Siguiente: Hardware"
+            },
+            {
+              "title": "Hardware",
+              "content": "<p>Es la parte física del computador, es decir son componentes que podemos tocar. <p>\n                        <p>Por ejemplo:</p>\n                        <ul>\n                            <li>teclado\n                            <li>mouse</li>\n                            <li>monitor</li>\n                            <li>memoria RAM</li>\n                            <li>disco SSD</li>\n                            <li>procesador</li>\n                            <li>tarjeta madre</li>\n                            <li>impresora</li>\n                        </ul>\n                        <p>El análisis es clave para construir una especificación sólida.</p>",
+              "nextButton": "Siguiente: Software"
+            },
+            {
+              "title": "Documentación de requerimientos",
+              "content": "<p>La documentación formaliza los requisitos en un artefacto claro, completo y verificable.</p>\n                        <ul>\n                            <li><strong>Especificación de requisitos de software (SRS).</strong></li>\n                            <li><strong>Plantillas estándar:</strong> IEEE 830, etc.</li>\n                            <li><strong>Trazabilidad:</strong> Vinculación con diseño y pruebas.</li>\n                        </ul>\n                        <p>Una buena documentación facilita la comunicación y el mantenimiento.</p>",
+              "nextButton": "Siguiente: Casos de uso"
+            },
+            {
+              "title": "Casos de uso",
+              "content": "<p>Los casos de uso describen interacciones entre actores y el sistema para lograr un objetivo.</p>\n                        <ul>\n                            <li><strong>Actores:</strong> Usuarios u otros sistemas.</li>\n                            <li><strong>Flujo básico y alternativo.</strong></li>\n                            <li><strong>Pre y post condiciones.</strong></li>\n                        </ul>\n                        <p>Son una herramienta visual para validar requerimientos con los stakeholders.</p>",
+              "nextButton": "Siguiente: Prototipos"
+            },
+            {
+              "title": "Prototipos",
+              "content": "<p>Los prototipos son versiones tempranas del sistema que permiten validar conceptos y obtener retroalimentación rápida.</p>\n                        <ul>\n                            <li><strong>Prototipos de baja fidelidad:</strong> Bocetos en papel.</li>\n                            <li><strong>Prototipos de alta fidelidad:</strong> Interactivos con herramientas.</li>\n                            <li><strong>Prototipos evolutivos:</strong> Se refinan hasta convertirse en el producto final.</li>\n                        </ul>\n                        <p>Ayudan a reducir riesgos y mejorar la comprensión de los requerimientos.</p>",
+              "nextButton": " "
+            }
+          ]
+        },
+        {
+          "id": "m001-algoritmo",
+          "label": "Algoritmo y programa",
+          "steps": [
+            {
+              "title": "Ciclos de vida del software",
+              "content": "<p>Los modelos de ciclo de vida definen las fases y actividades del desarrollo.</p>\n                        <ul>\n                            <li><strong>Cascada:</strong> Secuencial y rígido.</li>\n                            <li><strong>Ágil:</strong> Iterativo y flexible (Scrum, XP).</li>\n                            <li><strong>Espiral:</strong> Enfoque en riesgos.</li>\n                        </ul>\n                        <p>La elección depende del proyecto y el contexto.</p>",
+              "nextButton": "Siguiente: Metodologías ágiles"
+            },
+            {
+              "title": "Metodologías ágiles xx",
+              "content": "<p>Las metodologías ágiles promueven la adaptación continua, la colaboración y la entrega temprana de valor.</p>\n                        <ul>\n                            <li><strong>Scrum:</strong> Sprints, roles, reuniones.</li>\n                            <li><strong>Kanban:</strong> Flujo continuo y visualización.</li>\n                            <li><strong>XP:</strong> Prácticas de ingeniería como TDD, pair programming.</li>\n                        </ul>\n                        <p>Son ampliamente utilizadas en la industria moderna.</p>",
+              "nextButton": "Siguiente: Análisis "
+            },
+            {
+              "title": "Obtención de requerimientos",
+              "content": "<p>La obtención de requerimientos es el proceso de recopilar información...</p>\n                        <ul>...</ul>\n                        <p>Una buena obtención reduce ambigüedades y fallos posteriores.</p>",
+              "image": "https://moodle.ucenfotec.ac.cr/draftfile.php/60198/user/draft/114369068/hardware.png",
+              "imageAlt": "Diagrama de obtención de requerimientos",
+              "nextButton": " "
+            }
+          ]
+        },
+        {
+          "id": "m001-lenguaje",
+          "label": "Lenguaje de programación",
+          "steps": [
+            {
+              "title": "Ciclos de vida del software",
+              "content": "<p>Los modelos de ciclo de vida definen las fases y actividades del desarrollo.</p>\n                        <ul>\n                            <li><strong>Cascada:</strong> Secuencial y rígido.</li>\n                            <li><strong>Ágil:</strong> Iterativo y flexible (Scrum, XP).</li>\n                            <li><strong>Espiral:</strong> Enfoque en riesgos.</li>\n                        </ul>\n                        <p>La elección depende del proyecto y el contexto.</p>",
+              "nextButton": "Siguiente: Metodologías ágiles"
+            },
+            {
+              "title": "Metodologías ágiles",
+              "content": "<p>Las metodologías ágiles promueven la adaptación continua, la colaboración y la entrega temprana de valor.</p>\n                        <ul>\n                            <li><strong>Scrum:</strong> Sprints, roles, reuniones.</li>\n                            <li><strong>Kanban:</strong> Flujo continuo y visualización.</li>\n                            <li><strong>XP:</strong> Prácticas de ingeniería como TDD, pair programming.</li>\n                        </ul>\n                        <p>Son ampliamente utilizadas en la industria moderna.</p>",
+              "nextButton": " "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo_002",
+      "label": "Desarrollo del software",
+      "subtemas": [
+        {
+          "id": "m002-t001",
+          "label": "Tema 01 del módulo 02",
+          "steps": [
+            {
+              "title": "Contenido 1 / diapositiva 1",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 2 / diapositiva 2",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 3 / diapositiva 3",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": " "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "req-modulo_003",
+      "label": "Ingeniería de requerimientos",
+      "subtemas": [
+        {
+          "id": "m003-t001",
+          "label": "Tema 01 del módulo 03",
+          "steps": [
+            {
+              "title": "Contenido 1 / diapositiva 1",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 2 / diapositiva 2",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 3 / diapositiva 3",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": " "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo_004",
+      "label": "Gestión de requerimientos",
+      "subtemas": [
+        {
+          "id": "m004-t001",
+          "label": "Tema 01 del módulo 04",
+          "steps": [
+            {
+              "title": "Contenido 1 / diapositiva 1",
+              "content": "<p>Contenido en construcción</p>",
+              "image": "https://media-public.canva.com/1pRVQ/MAHETj1pRVQ/1/tl.png",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 2 / diapositiva 2",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 3 / diapositiva 3",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": " "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo_005",
+      "label": "Calidad",
+      "subtemas": [
+        {
+          "id": "m005-t001",
+          "label": "Tema 01 del módulo 05",
+          "steps": [
+            {
+              "title": "Contenido 1 / diapositiva 1",
+              "content": "<p>Contenido en construcción</p>",
+              "image": "https://media-public.canva.com/1pRVQ/MAHETj1pRVQ/1/tl.png",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 2 / diapositiva 2",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 3 / diapositiva 3",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": " "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modulo_006",
+      "label": "Pruebas",
+      "subtemas": [
+        {
+          "id": "m006-t001",
+          "label": "Pruebas de software",
+          "steps": [
+            {
+              "title": "Contenido 1 / diapositiva 1",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 2 / diapositiva 2",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": "Siguiente: Paso 2"
+            },
+            {
+              "title": "Contenido 3 / diapositiva 3",
+              "image": "https://media-public.canva.com/1pRVQ/MAHETj1pRVQ/1/tl.png",
+              "content": "<p>Contenido en construcción</p>",
+              "nextButton": " "
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
