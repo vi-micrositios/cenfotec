@@ -1,8 +1,8 @@
 const data = {
     // Pantalla de bienvenida
     welcome: {
-        title: 'SOFT-01 <br> Principios de programación 1',
-        image: 'https://raw.githubusercontent.com/vimora-cursos/micrositio-soft01/develop/imgs/logo.png', // Cambiar por imagen real
+        title: 'SOFT-11 <br> Proyecto integrador 1',
+        image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/logo.png', // Cambiar por imagen real
         description: 'Estudio de estructuras secuenciales, condicionales e iterativas y procedimientos lógicos y abstracciones de computación que permiten la resolución de problemas por medio de la elaboración de programas de software.',
         instruction: 'Seleccione cada pestaña para acceder a la información'
     },
