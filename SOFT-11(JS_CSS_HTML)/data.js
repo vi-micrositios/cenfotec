@@ -18,7 +18,7 @@ const data = {
                     steps: [
                         {
                             title: 'Ciclo de vida del desarrollo de software (SDLC)',
-                            content: `<p>s el proceso estructurado y metódico que se sigue para diseñar, desarrollar y mantener un software de alta calidad.</p>
+                            content: `<p>Proceso estructurado y metódico que se sigue para diseñar, desarrollar y mantener un software de alta calidad.</p>
                             <p> 
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 No es solo "escribir código"; es un marco de trabajo que garantiza que el producto final cumpla con los requisitos del cliente, se entregue a tiempo y dentro del presupuesto.
@@ -38,7 +38,7 @@ const data = {
                             content: `<p>Qué se hace: Reuniones con el cliente y los usuarios finales. Se define qué debe hacer el software y para quién. Se analiza la viabilidad (técnica, económica y legal). </p>
                             <p> Entregable: Documento de Especificación de Requisitos de Software (ERS o SRS).</p>`,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/requerimientos.png',
-                            imageAlt: ' ',
+                            imageAlt: '',
                             nextButton: 'Siguiente: Fase 2'
                         },
                         {
@@ -114,25 +114,16 @@ const data = {
                     label: 'Tema 01 del módulo 02',
                     steps: [
                         {
-                            title: 'Contenido ',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: 'Siguiente: Paso 2'
-                        },
-                        {
-                            title: 'Contenido 2 / diapositiva 2',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: 'Siguiente: Paso 2'
-                        },
-                        {
-                            title: 'Contenido 3 / diapositiva 3',
+                            title: 'Contenido',
                             content: `<p>Contenido en construcción</p>`,
                             nextButton: ' '
                         }
                     ]
                 }
             ]
-        },
-        {
+        }
+     /* Plantilla de un nuevo módulo   
+        ,{
             id: 'req-modulo_003',
             label: 'Diseño',
             subtemas: [
@@ -149,5 +140,6 @@ const data = {
                 }
             ]
         }
+            */
     ]
 };
