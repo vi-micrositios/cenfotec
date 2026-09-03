@@ -37,7 +37,7 @@ const data = {
                             title: 'Fase 1: Planificación y análisis de requisitos',
                             content: `<p>Qué se hace: Reuniones con el cliente y los usuarios finales. Se define qué debe hacer el software y para quién. Se analiza la viabilidad (técnica, económica y legal). </p>
                             <p> Entregable: Documento de Especificación de Requisitos de Software (ERS o SRS).</p>`,
-                            image: 'https://moodle.ucenfotec.ac.cr/draftfile.php/60198/user/draft/114369068/hardware.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/requerimientos.png',
                             imageAlt: ' ',
                             nextButton: 'Siguiente: Fase 2'
                         },
