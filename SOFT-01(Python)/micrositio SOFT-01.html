@@ -42,12 +42,15 @@
     </div>
 
     <!-- ===== SCRIPTS ===== -->
+    <script src="https://cdn.jsdelivr.net/gh/vi-micrositios/cenfotec@main/SOFT-01(Python)/data.js"> </script>
+    
     <script>
+    
         (function () {
             'use strict';
 
             // ============================================================
-            // 0. CSS 
+            // 1. CSS 
             // ============================================================
             var cssUrl = 'https://cdn.jsdelivr.net/gh/vi-micrositios/cenfotec@main/estilos.css';
 
@@ -70,35 +73,6 @@
                     console.error('Error cargando CSS:', error);
                 });
 
-            // ============================================================
-            // 1. DATOS (todo el contenido se define aquí)
-            // ============================================================
-            var dataUrl = 'https://raw.githubusercontent.com/vimora-cursos/micrositio-soft01/refs/heads/develop/data.json';
-
-            fetch(dataUrl)
-                .then(function (response) {
-                    if (!response.ok) {
-                        throw new Error('HTTP ' + response.status);
-                    }
-                    return response.json();
-                })
-                .then(function (data) {
-                    // Una vez cargados los datos, iniciamos la aplicación
-                    iniciarApp(data);
-                })
-                .catch(function (error) {
-                    console.error('Error cargando datos del JSON:', error);
-                    // Opcional: muestra un mensaje en la interfaz
-                    var fallback = document.createElement('p');
-                    fallback.textContent = '⚠️ No se pudieron cargar los contenidos. Recarga la página o contacta al administrador.';
-                    fallback.style.color = 'red';
-                    fallback.style.textAlign = 'center';
-                    fallback.style.padding = '2rem';
-                    document.getElementById('contentArea').appendChild(fallback);
-                });
-
-            
-             function iniciarApp(data) { 
                 // ============================================================
                 // 2. ESTADO DE LA APLICACIÓN
                 // ============================================================
@@ -453,7 +427,6 @@
                 }
 
                 init();
-        }
 
         })();
     </script>

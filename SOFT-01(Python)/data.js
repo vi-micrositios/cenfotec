@@ -1,4 +1,4 @@
-var data = {
+const data = {
                 // Pantalla de bienvenida
                 welcome: {
                     title: 'SOFT-01 <br> Principios de programación 1',
@@ -23,13 +23,20 @@ var data = {
                                         <i class="fas fa-warning" style="color: #00928d;"></i>
                                         Por muy inteligente que parezca, la computadora es completamente "tonta" por sí sola. No piensa, no tiene iniciativa ni creatividad. Solo hace exactamente lo que el ser humano le indica a través de un programa.
                                         </p>
-                                        <p>Una computadora nfunciona como una oficina:</p>
+                                        <p>Principales componentes del computador</p>
 
                                         <ul>
-                                            <li><strong>CPU (Unidad Central de Procesamiento)</strong>: Es el "cerebro" que hace los cálculos y toma decisiones (ejecuta las órdenes). </li>
-                                            <li><strong>Memoria RAM (memoria de corto plazo)</strong>: Es el "escritorio" donde la CPU pone los papeles que está usando ahora mismo. Si se apaga la PC, la RAM se borra.</li>
-                                            <li><strong>Disco Duro/SSD (memoria de largo plazo)</strong>: Es el "archivero" donde se guardan los papeles para siempre, aunque se apague la PC.</li>
-                                            <li><strong>Periféricos de Entrada/Salida</strong>: Teclado (entrada), monitor (salida), mouse (entrada), impresora (salida).</li>
+                                            <li><strong>CPU (Unidad Central de Procesamiento) o procesador</strong>: Es la unidad que ejecuta las instrucciones de los programas. Se puede ver como el "cerebro" de la computadora, que hace los cálculos y toma decisiones (ejecuta las órdenes). </li>
+                                            
+                                            <li><strong>Memoria RAM (memoria de corto plazo)</strong>: Random Access Memory es una memoria temporal que utiliza el computador mientras está trabajando. Si se apaga la PC, la RAM se borra.</li>
+
+                                            <li><strong>Almacenamiento (memoria de largo plazo)</strong>: Los dispositivos de almacenamiento permiten guardar información de forma permanente. <br>
+
+                                            Ejemplos: SSD, disco duro (HDD), memoria USB, tarjeta SD</li>
+                                            
+                                            <li><strong>Periféricos de Entrada/Salida</strong>: Permiten introducir información al computador (entrada) y/o permiten recibir información del computador (salida).
+                                            <br> 
+                                            Ejemplo: Teclado (entrada), monitor (salida), mouse (entrada), impresora (salida).</li>
                                         </ul>
                                          `,
                                         nextButton: 'Siguiente: Hardware'
@@ -49,17 +56,22 @@ var data = {
                                             <li>impresora</li>
                                         </ul>
                                         <p>El análisis es clave para construir una especificación sólida.</p>`,
-                                        nextButton: 'Siguiente: Documentación'
+                                        nextButton: 'Siguiente: Software'
                                     },
                                     {
-                                        title: 'Documentación de requerimientos',
-                                        content: `<p>La documentación formaliza los requisitos en un artefacto claro, completo y verificable.</p>
+                                        title: 'Software',
+                                        content: `<p>Es el conjunto de programas e instrucciones que indican al hardware qué hacer.</p>
+                                        <p>Por ejemplo:</p>
                                         <ul>
-                                            <li><strong>Especificación de requisitos de software (SRS).</strong></li>
-                                            <li><strong>Plantillas estándar:</strong> IEEE 830, etc.</li>
-                                            <li><strong>Trazabilidad:</strong> Vinculación con diseño y pruebas.</li>
+                                            <li>Windows</li>
+                                            <li>Linux</li>
+                                            <li>Microsoft Word
+                                            <li>Google Chrome</li>
+                                            <li>Visual Studio Code</li>
+                                            <li>Python</li>
+                                            <li>videojuegos</li>
                                         </ul>
-                                        <p>Una buena documentación facilita la comunicación y el mantenimiento.</p>`,
+                                        <p>Una forma sencilla de recordarlo: hardware = lo que podemos tocar y software = instrucciones y programas.</p>`,
                                         nextButton: 'Siguiente: Casos de uso'
                                     },
                                     {
