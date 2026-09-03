@@ -9,57 +9,59 @@ const data = {
     // Temas principales y sus subtemas con pasos
     temas: [
         {
-            id: 'modulo_001',
-            label: 'Conceptos básicos',
+            id: 'tema_001',
+            label: 'Desarrollo de software',
             subtemas: [
                 {
-                    id: 'm001-computador',
-                    label: 'Partes del computador',
+                    id: 'm001-cicloVida',
+                    label: 'Ciclo de vida',
                     steps: [
                         {
-                            title: 'Partes del computador',
-                            content: `<p>Una computadora es una máquina electrónica diseñada para recibir datos (entrada), procesarlos (hacer cálculos o tomar decisiones lógicas) y entregar un resultado (salida), todo de manera automática y a una velocidad alta.</p>
-                            <p>
-                            <i class="fas fa-warning" style="color: #00928d;"></i>
-                            Por muy inteligente que parezca, la computadora es completamente "tonta" por sí sola. No piensa, no tiene iniciativa ni creatividad. Solo hace exactamente lo que el ser humano le indica a través de un programa.
+                            title: 'Ciclo de vida del desarrollo de software (SDLC)',
+                            content: `<p>s el proceso estructurado y metódico que se sigue para diseñar, desarrollar y mantener un software de alta calidad.</p>
+                            <p> 
+                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
+                                No es solo "escribir código"; es un marco de trabajo que garantiza que el producto final cumpla con los requisitos del cliente, se entregue a tiempo y dentro del presupuesto.
                             </p>
-                            <p>Principales componentes del computador</p>
-
-                            <ul>
-                                <li><strong>CPU (Unidad Central de Procesamiento) o procesador</strong>: Es la unidad que ejecuta las instrucciones de los programas. Se puede ver como el "cerebro" de la computadora, que hace los cálculos y toma decisiones (ejecuta las órdenes). </li>
-                                
-                                <li><strong>Memoria RAM (memoria de corto plazo)</strong>: Random Access Memory es una memoria temporal que utiliza el computador mientras está trabajando. Si se apaga la PC, la RAM se borra.</li>
-
-                                <li><strong>Almacenamiento (memoria de largo plazo)</strong>: Los dispositivos de almacenamiento permiten guardar información de forma permanente. <br>
-
-                                Ejemplos: SSD, disco duro (HDD), memoria USB, tarjeta SD</li>
-                                
-                                <li><strong>Periféricos de Entrada/Salida</strong>: Permiten introducir información al computador (entrada) y/o permiten recibir información del computador (salida).
-                                <br> 
-                                Ejemplo: Teclado (entrada), monitor (salida), mouse (entrada), impresora (salida).</li>
-                            </ul>
                                 `,
-                            nextButton: 'Siguiente: Hardware'
+                            nextButton: 'Siguiente: Fases'
                         },
                         {
-                            title: 'Hardware',
-                            content: `<p>Es la parte física del computador, es decir son componentes que podemos tocar. <p>
-                                        <p>Por ejemplo:</p>
-                                        <ul>
-                                            <li>teclado
-                                            <li>mouse</li>
-                                            <li>monitor</li>
-                                            <li>memoria RAM</li>
-                                            <li>disco SSD</li>
-                                            <li>procesador</li>
-                                            <li>tarjeta madre</li>
-                                            <li>impresora</li>
-                                        </ul>
-                                        <p>El análisis es clave para construir una especificación sólida.</p>`,
-                            nextButton: 'Siguiente: Software'
+                            title: 'Fases del SDLC ',
+                            content: `
+                            <ol>
+                                <li>Fase 1: Planificación y análisis de requisitos <br> Qué se hace: Reuniones con el cliente y los usuarios finales. Se define qué debe hacer el software y para quién. Se analiza la viabilidad (técnica, económica y legal). <br>
+                                Entregable: Documento de Especificación de Requisitos de Software (ERS o SRS).
+                                </li>
+
+                                <li>Fase 2: Diseño (Arquitectura) <br> Qué se hace: Se define cómo funcionará internamente. Se diseña la arquitectura del sistema, las bases de datos, las interfaces de usuario (UI/UX) y los flujos de trabajo. Se crean diagramas UML y prototipos. <br> 
+                                Entregable: Documento de análisis y diseño (técnico y visual).
+                                </li>
+
+                                <li>Fase 3: Implementación (codificación) <br>      
+                                Qué se hace: Los programadores escriben el código fuente según las especificaciones del diseño. Se dividen en módulos y se integran progresivamente.  <br> 
+                                Entregable: Código fuente funcional (repositorio en Git).                          
+                                </li>
+                                
+                                <li>Fase 4: Pruebas (Testing) <br> 
+                                Qué se hace: Se ejecutan pruebas para encontrar errores (bugs) y verificar que el software cumpla los requisitos. Incluye pruebas unitarias, de integración, de sistema, de rendimiento y de aceptación por el usuario (UAT). <br> 
+                                Entregable: Reporte de errores y software estabilizado.
+                                </li>
+
+                                <li>Fase 5: Despliegue (Deployment) <br> 
+                                Qué se hace: El software se instala en el entorno de producción (servidores reales) para que los usuarios finales puedan usarlo. Puede ser un lanzamiento completo o por fases (piloto). <br> 
+                                Entregable: Software en producción y manuales de usuario.
+                                </li>
+
+                                <li>Fase 6: Mantenimiento y Soporte <br> 
+                                Qué se hace: Una vez en uso, surgen nuevos errores o necesidades. Se corrigen fallos, se optimiza el rendimiento y se añaden mejoras o nuevas funcionalidades (actualizaciones). <br> 
+                                Entregable: Nuevas versiones (parches o actualizaciones mayores).
+                                </li>
+                            </ol>`,
+                            nextButton: 'Siguiente: Metodologías '
                         },
                         {
-                            title: 'Software',
+                            title: 'Metodologías',
                             content: `<p>Es el conjunto de programas e instrucciones que indican al hardware qué hacer.</p>
                                         <p>Por ejemplo:</p>
                                         <ul>
