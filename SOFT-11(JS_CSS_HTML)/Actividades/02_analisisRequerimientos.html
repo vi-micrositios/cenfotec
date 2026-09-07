@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Análisis de Requerimientos - CampusFest</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section aria-labelledby="ejercicio-analisis"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #712c86; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO CON ICONO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #712c86, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </span>
+            <h3 id="ejercicio-analisis"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Ejercicio 2: Análisis de requerimientos 
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #712c86; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <span>
+                <strong>Objetivo</strong>: Analizar los requerimientos funcionales redactados en el ejercicio 1 para identificar <strong>ambigüedades</strong>, <strong>supuestos no validados</strong>, <strong>decisiones sin aprobación del cliente</strong> y <strong>casos límite no considerados</strong>. El análisis debe generar preguntas que permitan clarificar los requerimientos y asegurar que el sistema cumpla con las expectativas reales del usuario.
+            </span>
+        </div>
+
+        <!-- ============================================================
+             PARTE 1: IDENTIFICAR AMBIGÜEDADES Y SUPUESTOS
+             ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+                Identificar ambigüedades, supuestos y decisiones no aprobadas
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0;">
+                Revise cada requerimiento funcional redactado en el ejercicio anterior e identifique si existe alguna <strong>ambigüedad</strong>, <strong>supuestos</strong>, o una <strong>decisión</strong> que se tomó sin aprobación del cliente. Utilice el siguiente formato:
+            </p>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin: 15px 0 20px 0;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>RF-XXX (Nombre):</strong><br>
+                    • <strong>Ambigüedad:</strong> [Describir la ambigüedad detectada]<br>
+                    • <strong>Supuesto no validado:</strong> [Describir el supuesto que se asumió]<br>
+                    • <strong>Decisión sin aprobación:</strong> [Describir la decisión tomada sin consultar]
+                </p>
+            </div>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 10px 0 0 0;">
+                <i class="fa-solid fa-lightbulb" style="color: #c81f66; margin-right: 6px;" aria-hidden="true"></i>
+                <strong>Ejemplo de ambigüedad en RF-002 (Inscripción a actividades):</strong> “El sistema permitirá
+                inscribirse a una actividad” → ¿La inscripción es individual o por equipos? ¿Qué pasa si no hay cupos?
+            </p>
+        </div>
+
+        <!-- ============================================================
+             PARTE 2: PREGUNTAS PARA CLARIFICAR CON EL CLIENTE
+             ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #C7AC19; font-size: 24px;" aria-hidden="true"></i>
+                Formular preguntas para clarificar los requerimientos
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 18px 0; line-height: 1.6;">
+                Con base en las ambigüedades y supuestos detectados, redacte un listado de <strong>preguntas
+                específicas</strong> que deberían hacerse al cliente o al usuario representante para cerrar las
+                lagunas de información. Incluya preguntas para cada requerimiento funcional.
+            </p>
+
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 14px 16px; margin-top: 15px;">
+                <p style="margin: 0 0 5px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-note-sticky" style="color: #00928d; margin-right: 5px;" aria-hidden="true"></i>
+                    Nota:
+                </p>
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.6;">
+                    Asegúrese de que cada pregunta se relacione con un requerimiento específico (RF-001, RF-002 o
+                    RF-003) y que aborde una ambigüedad o caso no considerado.
+                </p>
+            </div>
+        </div>
+
+        <!-- ============================================================
+             PARTE 3: CASOS NO CONSIDERADOS
+             ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 15px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #712c86; font-size: 24px;" aria-hidden="true"></i>
+                Enumerar casos límite y situaciones no consideradas
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 18px 0; line-height: 1.6;">
+                Identifique al menos <strong>cinco casos límite o situaciones excepcionales</strong> que no fueron
+                contemplados en la redacción inicial de los requerimientos. Estos casos deben evidenciar la necesidad
+                de clarificar el alcance del sistema.
+            </p>
+
+            <ul style="margin: 0 0 20px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8; list-style: none;">
+                <li><i class="fa-solid fa-circle-exclamation" style="color: #c81f66; margin-right: 8px;" aria-hidden="true"></i>
+                    Cupo máximo alcanzado en una actividad: ¿el sistema bloquea la inscripción, muestra mensaje o
+                    permite lista de espera?</li>
+                <li><i class="fa-solid fa-ban" style="color: #c81f66; margin-right: 8px;" aria-hidden="true"></i>
+                    Cancelación de una actividad por parte del organizador: ¿se notifica a los inscritos?, ¿se liberan
+                    los cupos?</li>
+                <li><i class="fa-solid fa-clock-rotate-left" style="color: #712c86; margin-right: 8px;" aria-hidden="true"></i>
+                    Inscripción fuera del plazo permitido (menos de 36 horas antes): ¿el sistema lo impide?, ¿se
+                    permite con penalización?</li>
+                <li><i class="fa-solid fa-calendar-minus" style="color: #006AEA; margin-right: 8px;" aria-hidden="true"></i>
+                    Eventos pasados en la agenda: ¿se muestran deshabilitados, se ocultan o se archivan?</li>
+                <li><i class="fa-solid fa-user-xmark" style="color: #C7AC19; margin-right: 8px;" aria-hidden="true"></i>
+                    Usuario que intenta inscribirse dos veces a la misma actividad: ¿el sistema evita duplicados?</li>
+                <li><i class="fa-solid fa-wifi" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>
+                    ¿Qué ocurre si no hay conexión a internet al momento de inscribirse o consultar la agenda?</li>
+            </ul>
+
+            <div
+                style="display: flex; align-items: center; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 10px;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <span><strong>Resultado esperado:</strong> El análisis debe evidenciar la importancia de la
+                comunicación con el cliente y la detección temprana de requerimientos incompletos o ambiguos.</span>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

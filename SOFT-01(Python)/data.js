@@ -192,7 +192,9 @@ const data = {
                     ]
                 }
             ]
-        },
+        }
+        /** Plantilla nuevo módulo
+        ,
         {
             id: 'req-modulo_003',
             label: 'Ingeniería de requerimientos',
@@ -276,9 +278,10 @@ const data = {
                 }
             ]
         },
+        
         {
             id: 'modulo_006',
-            label: 'Pruebas de software',
+            label: 'Pruebas',
             subtemas: [
                 {
                     id: 'm006-t001',
@@ -304,5 +307,6 @@ const data = {
                 }
             ]
         }
+        */
     ]
 };
