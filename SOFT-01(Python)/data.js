@@ -119,42 +119,52 @@ const data = {
                                         <li>Mostrar el resultado.</li>
                                     </ol>
                                     <p>Programa en Python</p>
-                                    <p class="python-code">
+                                    <p class="p-code">
                                         base = float(input("Ingrese la base: "))
                                         altura = float(input("Ingrese la altura: "))
                                         area = base * altura
                                         print("El área es:", area)
                                     </p>
                                     `,
-                            imageAlt: 'Diagrama de obtención de requerimientos',
                             nextButton: ' '
                         }
                     ]
                 },
                 {
                     id: 'm001-lenguaje',
-                    label: 'Lenguaje de programación',
+                    label: 'Compilador y editor',
                     steps: [
                         {
-                            title: 'Ciclos de vida del software',
-                            content: `<p>Los modelos de ciclo de vida definen las fases y actividades del desarrollo.</p>
+                            title: 'Lenguaje de programación',
+                            content: `<p>Un lenguaje de programación permite expresar instrucciones de una manera estructurada para que puedan ser procesadas por una computadora. Ejemplos:</p>
                                         <ul>
-                                            <li><strong>Cascada:</strong> Secuencial y rígido.</li>
-                                            <li><strong>Ágil:</strong> Iterativo y flexible (Scrum, XP).</li>
-                                            <li><strong>Espiral:</strong> Enfoque en riesgos.</li>
+                                            <li>Python
+                                            <li>Java</li>
+                                            <li>C</li>
+                                            <li>C++</li>
+                                            <li>JavaScript</li>
+                                            <li>C#</li>
+                                            <li>Kotlin</li>
                                         </ul>
-                                        <p>La elección depende del proyecto y el contexto.</p>`,
-                            nextButton: 'Siguiente: Metodologías ágiles'
+                                        <p>Para escribir programas se necesita un editor de código.</p>`,
+                            nextButton: 'Siguiente: Editor del lenguaje'
                         },
                         {
-                            title: 'Metodologías ágiles',
-                            content: `<p>Las metodologías ágiles promueven la adaptación continua, la colaboración y la entrega temprana de valor.</p>
+                            title: 'Editor del lenguaje de programación',
+                            content: `<p>Un editor permite crear y modificar archivos que contienen código fuente. Por ejemplo: </p>
                                         <ul>
-                                            <li><strong>Scrum:</strong> Sprints, roles, reuniones.</li>
-                                            <li><strong>Kanban:</strong> Flujo continuo y visualización.</li>
-                                            <li><strong>XP:</strong> Prácticas de ingeniería como TDD, pair programming.</li>
+                                            <li>Visual Studio Code</li>
+                                            <li>PyCharm</li>
+                                            <li>Spyder</li>
+                                            <li>IDLE</li>
+                                            <li>Sublime Text</li>
+                                            <li>Jupyter Notebook</li>
                                         </ul>
-                                        <p>Son ampliamente utilizadas en la industria moderna.</p>`,
+                                        <a href="https://docs.google.com/document/d/1Qk2zS0k_AJDP_VvGlmmbtgxJ_MBNCsqUO0Tl-C0gEHE/edit?usp=sharing"
+                                        target="_blank" rel="noopener noreferrer" style="color: #00928d; text-decoration: none;">
+                                            Taller: Instalación de Visual Studio Code y Python 3
+                                            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+                                        </a>`,
                             nextButton: ' '
                         }
                     ]
