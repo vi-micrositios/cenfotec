@@ -215,7 +215,7 @@ const data = {
                     ]
                 },
                 {
-                    id: 'm001-algoritmo',
+                    id: 'm004-problema-resultado',
                     label: 'Del problema al resultado',
                     steps: [
                         {
