@@ -56,6 +56,7 @@ const data = {
                                             <li>impresora</li>
                                         </ul>
                                         <p>El análisis es clave para construir una especificación sólida.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/hardware.png',
                             nextButton: 'Siguiente: Software'
                         },
                         {
@@ -72,29 +73,7 @@ const data = {
                                             <li>videojuegos</li>
                                         </ul>
                                         <p>Una forma sencilla de recordarlo: hardware = lo que podemos tocar y software = instrucciones y programas.</p>`,
-                            nextButton: 'Siguiente: Casos de uso'
-                        },
-                        {
-                            title: 'Casos de uso',
-                            content: `<p>Los casos de uso describen interacciones entre actores y el sistema para lograr un objetivo.</p>
-                                        <ul>
-                                            <li><strong>Actores:</strong> Usuarios u otros sistemas.</li>
-                                            <li><strong>Flujo básico y alternativo.</strong></li>
-                                            <li><strong>Pre y post condiciones.</strong></li>
-                                        </ul>
-                                        <p>Son una herramienta visual para validar requerimientos con los stakeholders.</p>`,
-                            nextButton: 'Siguiente: Prototipos'
-                        },
-                        {
-                            title: 'Prototipos',
-                            content: `<p>Los prototipos son versiones tempranas del sistema que permiten validar conceptos y obtener retroalimentación rápida.</p>
-                                        <ul>
-                                            <li><strong>Prototipos de baja fidelidad:</strong> Bocetos en papel.</li>
-                                            <li><strong>Prototipos de alta fidelidad:</strong> Interactivos con herramientas.</li>
-                                            <li><strong>Prototipos evolutivos:</strong> Se refinan hasta convertirse en el producto final.</li>
-                                        </ul>
-                                        <p>Ayudan a reducir riesgos y mejorar la comprensión de los requerimientos.</p>`,
-                            nextButton: ' ' // último paso, se oculta el botón
+                            nextButton: ''
                         }
                     ]
                 },
@@ -103,32 +82,44 @@ const data = {
                     label: 'Algoritmo y programa',
                     steps: [
                         {
-                            title: 'Ciclos de vida del software',
-                            content: `<p>Los modelos de ciclo de vida definen las fases y actividades del desarrollo.</p>
-                                        <ul>
-                                            <li><strong>Cascada:</strong> Secuencial y rígido.</li>
-                                            <li><strong>Ágil:</strong> Iterativo y flexible (Scrum, XP).</li>
-                                            <li><strong>Espiral:</strong> Enfoque en riesgos.</li>
-                                        </ul>
-                                        <p>La elección depende del proyecto y el contexto.</p>`,
-                            nextButton: 'Siguiente: Metodologías ágiles'
+                            title: 'Algoritmo',
+                            content: `<p>Un algoritmo es un conjunto de instrucciones ordenadas que permiten resolver un problema o realizar una tarea.</p>
+                                    <p>Por ejemplo: Algoritmo para resolver el problema de preparar una taza de café:</p>
+                                    <ul>
+                                        <li>Tomar una taza.</li>
+                                        <li>Calentar agua.</li>
+                                        <li>Colocar café en la taza.</li>
+                                        <li>Agregar el agua caliente.</li>
+                                        <li>Mezclar.</li>
+                                        <li>Servir.</li>
+                                    </ul>`,
+                            nextButton: 'Siguiente: Características'
                         },
                         {
-                            title: 'Metodologías ágiles xx',
-                            content: `<p>Las metodologías ágiles promueven la adaptación continua, la colaboración y la entrega temprana de valor.</p>
+                            title: 'Características de un algoritmo',
+                            content: `<p>Un algoritmo debe tener instrucciones:</p>
                                         <ul>
-                                            <li><strong>Scrum:</strong> Sprints, roles, reuniones.</li>
-                                            <li><strong>Kanban:</strong> Flujo continuo y visualización.</li>
-                                            <li><strong>XP:</strong> Prácticas de ingeniería como TDD, pair programming.</li>
-                                        </ul>
-                                        <p>Son ampliamente utilizadas en la industria moderna.</p>`,
-                            nextButton: 'Siguiente: Análisis '
+                                            <li>Claras: Cada paso debe poder entenderse.</li>
+                                            <li>Ordenadas: Los pasos tienen una secuencia lógica.</li>
+                                            <li>Precisos: No deberían existir instrucciones ambiguas.</li>
+                                            <li>Finitas: Debe existir un momento en que el algoritmo termina.</li>
+
+                                        </ul>`,
+                            nextButton: 'Siguiente: Programa'
                         },
                         {
-                            title: 'Obtención de requerimientos',
-                            content: `<p>La obtención de requerimientos es el proceso de recopilar información...</p>
-                                        <ul>...</ul>
-                                        <p>Una buena obtención reduce ambigüedades y fallos posteriores.</p>`,
+                            title: 'Programa',
+                            content: `<p>Un algoritmo describe cómo resolver un problema y un programa es una implementación de ese algoritmo utilizando un lenguaje que la computadora puede procesar.</p>
+                                    <p>Por ejemplo: Algoritmo para calcular el área de un rectángulo:</p>
+                                    <ol>
+                                        <li>Solicitar la base.</li>
+                                        <li>Solicitar la altura.</li>
+                                        <li>Multiplicar base × altura.</li>
+                                        <li>Mostrar el resultado.</li>
+                                    </ol>
+                                    <p>Programa en Python</p>
+                                    
+                                    `,
                             image: 'https://moodle.ucenfotec.ac.cr/draftfile.php/60198/user/draft/114369068/hardware.png',
                             imageAlt: 'Diagrama de obtención de requerimientos',
                             nextButton: ' '

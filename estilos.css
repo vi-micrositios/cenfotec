@@ -298,6 +298,20 @@
     background-color: #fff;
 }
 
+.microsite-wrapper .python-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.6;
+    background: #f4f6f8;
+    color: #222;
+    border-left: 4px solid #3776ab;
+    padding: 15px 20px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
 /* ===== AUMENTAR TEXTO EN PANTALLA COMPLETA ===== */
 .microsite-wrapper #appContainer:fullscreen .welcome-col-text h1 {
     font-size: 3.5rem;
@@ -333,7 +347,7 @@
 
 .microsite-wrapper #appContainer:fullscreen .content-panel p,
 .microsite-wrapper #appContainer:fullscreen .content-panel li {
-    font-size: 1.15rem;
+    font-size: 1.15rem !important;
     line-height: 1.8;
 }
 
