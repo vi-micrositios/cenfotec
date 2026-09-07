@@ -140,7 +140,8 @@
     flex-shrink: 0;
 }
 
-.microsite-wrapper .submenu-side ul {
+.microsite-wrapper .submenu-side ul,
+.microsite-wrapper .submenu-side ol {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -298,15 +299,16 @@
     background-color: #fff;
 }
 
-.microsite-wrapper .python-code {
+.microsite-wrapper .p-code {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1rem;
     line-height: 1.6;
     background: #f4f6f8;
     color: #222;
-    border-left: 4px solid #3776ab;
+    border-left: 4px solid #006eaa;
     padding: 15px 20px;
     border-radius: 8px;
+    text-align: left;
     white-space: pre-wrap;
     overflow-x: auto;
     margin: 15px 0;
@@ -389,7 +391,8 @@
 }
 
 /* ===== ELEMENTOS DE TEXTO Y LISTAS (solo dentro del wrapper) ===== */
-.microsite-wrapper ul {
+.microsite-wrapper ul,
+.microsite-wrapper ol{
     margin: 25px;
 }
 
@@ -433,7 +436,8 @@
         gap: 4px;
     }
 
-    .microsite-wrapper .submenu-side ul {
+    .microsite-wrapper .submenu-side ul,
+    .microsite-wrapper .submenu-side ol {
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
