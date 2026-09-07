@@ -73,6 +73,7 @@ const data = {
                                             <li>videojuegos</li>
                                         </ul>
                                         <p>Una forma sencilla de recordarlo: hardware = lo que podemos tocar y software = instrucciones y programas.</p>`,
+                            image: 'https://github.com/vi-micrositios/cenfotec/blob/main/SOFT-01(Python)/imgs/software.png?raw=true',
                             nextButton: ''
                         }
                     ]
@@ -118,9 +119,13 @@ const data = {
                                         <li>Mostrar el resultado.</li>
                                     </ol>
                                     <p>Programa en Python</p>
-                                    
+                                    <p class="python-code">
+                                        base = float(input("Ingrese la base: "))
+                                        altura = float(input("Ingrese la altura: "))
+                                        area = base * altura
+                                        print("El área es:", area)
+                                    </p>
                                     `,
-                            image: 'https://moodle.ucenfotec.ac.cr/draftfile.php/60198/user/draft/114369068/hardware.png',
                             imageAlt: 'Diagrama de obtención de requerimientos',
                             nextButton: ' '
                         }
