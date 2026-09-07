@@ -161,17 +161,115 @@ const data = {
                                             <li>Jupyter Notebook</li>
                                         </ul>
                                         <a href="https://docs.google.com/document/d/1Qk2zS0k_AJDP_VvGlmmbtgxJ_MBNCsqUO0Tl-C0gEHE/edit?usp=sharing"
-                                        target="_blank" rel="noopener noreferrer" style="color: #00928d; text-decoration: none;">
-                                            Taller: Instalación de Visual Studio Code y Python 3
-                                            <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
-                                        </a>`,
-                            nextButton: ' '
+                                        target="_blank" rel="noopener noreferrer" title="Abrir el taller de instalación de Visual Studio Code y Python 3">
+                                        <strong>Instalación de las herramientas necesarias</strong>
+                                        <span style="display: block; margin-top: 0.25rem;">
+                                            Visual Studio Code + Python 3 · Guía paso a paso
+                                        </span>
+
+                                        <i class="fa-solid fa-up-right-from-square" aria-hidden="true" style="color: #00928d; margin-left: 0.4rem;">
+                                        </i>
+                                    </a>`,
+                            nextButton: 'Siguiente: Compilador'
+                        }, 
+                        {
+                            title: 'Compilador',
+                            content: `<p>Es un programa que traduce código fuente escrito en un lenguaje de programación a otra forma que pueda ser ejecutada por la computadora o por una máquina virtual.</p>
+                            <p>Programa en C++</p>
+                            <p class="p-code">
+                                int suma = 5 + 3;
+                            </p>
+
+                            <p>El compilador puede convertirlo en algo parecido a:</p>
+                            <p class="p-code">
+                                mov eax, 5<br>
+                                add eax, 3
+                            </p>
+
+                            <p>Que significa aproximadamente:</p>
+                            <p class="p-code">
+                                mov eax, 5 &nbsp;&nbsp;→ Guardar el número 5 en el registro EAX<br>
+                                add eax, 3 &nbsp;&nbsp;→ Sumarle 3 a EAX
+                            </p>
+
+                            <p>Lenguajes como C y C++ utilizan tradicionalmente procesos de compilación.</p>`,
+                            nextButton: 'Siguiente: Intérprete'
+                        },
+                        {
+                            title: 'Intérprete',
+                            content: `<p>Un intérprete ejecuta instrucciones de un programa mediante un sistema que las procesa durante la ejecución. </p>
+
+                            <p>Python utiliza un intérprete para ejecutar sus programas.</p>
+                            <p>Ejemplo en Python:</p>
+                            <p class="p-code">
+                                print("Hola")
+                            </p>
+
+                            <p>Al ejecutar el programa, el intérprete de Python procesa las instrucciones y produce:</p>
+                            <p class="p-code">
+                                Hola
+                            </p>`,
+                            nextButton: ''
+                        }
+                        
+                    ]
+                },
+                {
+                    id: 'm001-algoritmo',
+                    label: 'Del problema al resultado',
+                    steps: [
+                        {
+                            title: 'Del problema al resultado',
+                            content: `<div style=" margin:auto; text-align:center; color:#333; ">
+
+                                <div style=" display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px;
+                                ">
+                            <!-- PROBLEMA --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-lightbulb"        style="font-size:25px;color:#c81f66;"></i>
+                                <div style="margin-top:6px;">         <b>Problema</b><br>         <small>Necesidad a resolver</small>     </div> </div>
+                            <span style="color:#00928d;font-size:20px;">→</span>
+
+                            <!-- ALGORITMO --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-brain"        style="font-size:25px;color:#00928d;"></i>
+                                <div style="margin-top:6px;">         <b>Algoritmo</b><br>         <small>Pasos para resolverlo</small>     </div> </div>
+                            <span style="color:#c81f66;font-size:20px;">→</span>
+
+                            <!-- CÓDIGO --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-code"        style="font-size:25px;color:#c81f66;"></i>
+                                <div style="margin-top:6px;">         <b>Código</b><br>         <small>Solución escrita</small>     </div> </div>
+                            <span style="color:#00928d;font-size:20px;">→</span>
+
+                            <!-- EDITAR --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-pen-to-square"        style="font-size:25px;color:#00928d;"></i>
+                                <div style="margin-top:6px;">         <b>Editar</b><br>         <small>Modificar el código</small>     </div> </div>
+                            <span style="color:#c81f66;font-size:20px;">→</span>
+
+                            <!-- COMPILAR --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:120px; ">     <i class="fa-solid fa-gears"        style="font-size:25px;color:#c81f66;"></i>
+                                <div style="margin-top:6px;">         <b>Compilar</b><br>         <small>Transformar el código</small>     </div> </div>
+                            <span style="color:#00928d;font-size:20px;">→</span>
+
+                            <!-- INTERPRETAR --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:120px; ">     <i class="fa-solid fa-language"        style="font-size:25px;color:#00928d;"></i>
+                                <div style="margin-top:6px;">         <b>Interpretar</b><br>         <small>Procesar instrucciones</small>     </div> </div>
+                            <span style="color:#c81f66;font-size:20px;">→</span>
+
+                            <!-- ENLAZAR --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-link"        style="font-size:25px;color:#c81f66;"></i>
+                                <div style="margin-top:6px;">         <b>Enlazar</b><br>         <small>Unir las diferentes piezas</small>     </div> </div>
+                            <span style="color:#00928d;font-size:20px;">→</span>
+
+                            <!-- EJECUTAR --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-play"        style="font-size:25px;color:#00928d;"></i>
+                                <div style="margin-top:6px;">         <b>Ejecutar</b><br>         <small>Poner el programa en marcha</small>     </div> </div>
+                            <span style="color:#c81f66;font-size:20px;">→</span>
+
+                            <!-- RESULTADO --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-circle-check"        style="font-size:25px;color:#c81f66;"></i>
+                                <div style="margin-top:6px;">         <b>Resultado</b><br>         <small>Solución obtenida</small>     </div> </div>
+
+                                </div>
+
+                            </div>`,
+                            nextButton: ''
                         }
                     ]
                 }
                 // Puede agregar más subtemas aquí
             ]
-        },
+        } /** Plantilla nuevo módulo
+        ,
         {
             id: 'modulo_002',
             label: 'Desarrollo del software',
@@ -199,7 +297,7 @@ const data = {
                 }
             ]
         }
-        /** Plantilla nuevo módulo
+        
         ,
         {
             id: 'req-modulo_003',
