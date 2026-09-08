@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Algoritmo y Diagrama de Flujo</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+<section aria-labelledby="ejercicio-python" style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<!-- ENCABEZADO CON ICONO -->
+<div
+    style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+    <span
+        style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+        aria-hidden="true">
+        <i class="fa-brands fa-python"></i>
+    </span>
+
+    <h3 id="ejercicio-python"
+        style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+        Ejercicio 3: Programa en Python — Entrada, procesamiento y salida
+    </h3>
+</div>
+
+<!-- INSTRUCCIONES GENERALES -->
+<div
+    style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+    <span>
+        <strong>Instrucciones</strong>: Analizar la situación planteada, proponer el algoritmo
+        correspondiente mediante un <strong>diagrama de flujo</strong> y posteriormente
+        desarrollar el programa en Python. Los datos de entrada y los resultados deberán
+        almacenarse en <strong>variables</strong>.
+    </span>
+</div>
+
+<!-- CONTEXTO DEL EJERCICIO -->
+<div
+    style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-calculator" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i>
+        Situación planteada
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+        Una tienda desea calcular cuánto debe pagar un cliente por un producto.
+        El programa debe solicitar el <strong>nombre del producto</strong>, el
+        <strong>precio unitario</strong> y la <strong>cantidad de unidades</strong>.
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0;">
+        Con estos datos, el programa debe calcular el <strong>total a pagar</strong>
+        y mostrar la información al usuario.
+    </p>
+
+</div>
+
+<!-- PARTE 1: DIAGRAMA DE FLUJO -->
+<div
+    style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-diagram-project" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i>
+        Parte 1: Proponer el algoritmo mediante un diagrama de flujo
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+        Antes de escribir el código en Python, diseñe un <strong>diagrama de flujo</strong>
+        que represente paso a paso la solución del problema.
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        El diagrama debe incluir como mínimo:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li><strong>Inicio</strong> del algoritmo.</li>
+        <li>Solicitud de los datos de entrada.</li>
+        <li>Almacenamiento de los datos en variables.</li>
+        <li>Proceso para calcular el total a pagar.</li>
+        <li>Almacenamiento del resultado en una variable.</li>
+        <li>Presentación de los resultados.</li>
+        <li><strong>Fin</strong> del algoritmo.</li>
+    </ul>
+
+    <div
+        style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+        <strong>Recuerde:</strong> Utilice correctamente los símbolos de un diagrama de flujo:
+        óvalo para inicio y fin, paralelogramo para entrada y salida, y rectángulo
+        para los procesos.
+
+    </div>
+
+</div>
+
+<!-- PARTE 2: DATOS DE ENTRADA -->
+<div
+    style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 22px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-arrow-right-to-bracket" style="color: #006AEA;" aria-hidden="true"></i>
+        Parte 2: Datos de entrada
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        El programa debe solicitar los siguientes datos y almacenarlos en variables:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li>Nombre del producto.</li>
+        <li>Precio unitario.</li>
+        <li>Cantidad de unidades.</li>
+    </ul>
+
+</div>
+
+<!-- PARTE 3: PROCESAMIENTO -->
+<div
+    style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 22px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-gears" style="color: #C7AC19;" aria-hidden="true"></i>
+        Parte 3: Procesamiento
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0;">
+        Realice el cálculo del total multiplicando el precio unitario por la cantidad.
+        El resultado debe almacenarse en una <strong>variable llamada
+        <code>total</code></strong>.
+    </p>
+
+</div>
+
+<!-- PARTE 4: PROGRAMACIÓN EN PYTHON -->
+<div
+    style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 22px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-brands fa-python" style="color: #712c86;" aria-hidden="true"></i>
+        Parte 4: Crear el programa en Python
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+        Transforme el diagrama de flujo en un programa funcional utilizando Python.
+        El programa debe:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li>Utilizar <code>input()</code> para solicitar los datos.</li>
+        <li>Guardar cada dato ingresado en una variable.</li>
+        <li>Utilizar <code>int()</code> o <code>float()</code> cuando sea necesario.</li>
+        <li>Realizar el cálculo y guardar el resultado en una variable.</li>
+        <li>Utilizar <code>print()</code> para mostrar los resultados.</li>
+    </ul>
+
+</div>
+
+<!-- PARTE 5: DATOS DE SALIDA -->
+<div
+    style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+        <i class="fa-solid fa-arrow-right-from-bracket" style="color: #00928d;" aria-hidden="true"></i>
+        Parte 5: Datos de salida
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        El programa debe mostrar:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li>Nombre del producto.</li>
+        <li>Precio unitario.</li>
+        <li>Cantidad comprada.</li>
+        <li>Total a pagar.</li>
+    </ul>
+
+</div>
+
+<!-- RETO -->
+<div
+    style="display: flex; align-items: center; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px;">
+
+    <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+    <span>
+        <strong>Reto:</strong> Modifique el algoritmo y el programa para incluir un
+        porcentaje de descuento. El descuento y el precio final también deberán
+        almacenarse en variables.
+    </span>
+
+</div>
+
+</section>
+
+</body>
+
+</html>

@@ -268,36 +268,50 @@ const data = {
                 }
                 // Puede agregar más subtemas aquí
             ]
-        } /** Plantilla nuevo módulo
-        ,
+        },
         {
             id: 'modulo_002',
-            label: 'Desarrollo del software',
+            label: 'Programación secuencial',
             subtemas: [
                 {
                     id: 'm002-t001',
-                    label: 'Tema 01 del módulo 02',
+                    label: 'Flujo de control secuencial',
                     steps: [
                         {
-                            title: 'Contenido 1 / diapositiva 1',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: 'Siguiente: Paso 2'
+                            title: 'Estructuras secuenciales',
+                            content: `<p>una computadora no piensa ni tiene voluntad propia. Solo hace lo que usted le ordena, en el orden exacto en que se lo dice. Este módulo enseña la forma más básica y fundamental de darle órdenes a una máquina: una instrucción tras otra, de arriba hacia abajo, sin saltos ni desvíos. Es como leer las instrucciones de un manual de ensamble: primero el paso 1, luego el 2, luego el 3, y así hasta terminar.</p>`,
+                            nextButton: 'Siguiente: Flujos secuenciales'
                         },
                         {
-                            title: 'Contenido 2 / diapositiva 2',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: 'Siguiente: Paso 2'
+                            title: 'Flujos secuenciales',
+                            content: `<p>Es el "camino" que sigue el programa. Imagina que el programa es una lista de compras en una hoja. Empieza por el primer ítem, lo tacha, pasa al segundo, y así hasta el final. Eso es un flujo secuencial.</p>`,
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm002-t002',
+                    label: 'Datos',
+                    steps: [
+                        {
+                            title: 'Datos',
+                            content: `<p>Es la información representada simbólicamente a través de números, letras o la combinación de ambas. </p>
+                            <p>Se clasifican en datos de entrada o datos de salida. Además, en Python se pueden utilizar cuatro tipos de datos: numéricos, caracteres, booleanos y el tipo de dato "none".</p>
+                            <p>Ejemplos</p>
+                            
+                            `,
+                            nextButton: 'Siguiente: Flujos secuenciales'
                         },
                         {
-                            title: 'Contenido 3 / diapositiva 3',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: ' '
+                            title: 'Flujos secuenciales',
+                            content: `<p>Es el "camino" que sigue el programa. Imagina que el programa es una lista de compras en una hoja. Empieza por el primer ítem, lo tacha, pasa al segundo, y así hasta el final. Eso es un flujo secuencial.</p>`,
+                            nextButton: 'Siguiente: Paso 2'
                         }
                     ]
                 }
             ]
         }
-        
+        /** Plantilla nuevo módulo
         ,
         {
             id: 'req-modulo_003',
