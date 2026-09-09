@@ -265,6 +265,21 @@ const data = {
                             nextButton: ''
                         }
                     ]
+                },
+                {
+                    id: 'm005-IA',
+                    label: 'IA en programación',
+                    steps: [
+                        {
+                            title: 'Aplicaciones de inteligencia artificial en programación',
+                            content: ` <p>La Inteligencia Artificial tiene diversas aplicaciones en la programación, como la generación de código, detección de errores, optimización de programas y apoyo en el aprendizaje de nuevos lenguajes. Estas herramientas permiten realizar tareas de forma más rápida y eficiente.</p>
+
+                            <p>Sin embargo, la IA no reemplaza la necesidad de aprender las bases de la programación. Es fundamental comprender la lógica, los algoritmos y los conceptos principales para poder revisar, corregir y utilizar correctamente el código generado. Por ello, la IA debe verse como una herramienta de apoyo y no como un sustituto del conocimiento.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/ia.png',
+                            nextButton: ''
+                        }
+                    ]
                 }
                 // Puede agregar más subtemas aquí
             ]
