@@ -366,15 +366,19 @@ const data = {
                                 <li>temperatura = 17.5</li>
                             </ul>
                             `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/datos.png',
-                            nextButton: 'Siguiente: Datos numéricos'
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/variables.png',
+                            nextButton: 'Siguiente: Nombre de variables'
                         },
                         {
-                            title: 'Cadena de caracteres o strings',
-                            content: `<p>Representan secuencias de caracteres que pueden ser desde una letra, un número o hasta una frase. Por ejemplo:</p>
+                            title: 'Nombre de variables',
+                            content: `<p>Elegir nombres adecuados para variables y constantes es fundamental para que el código sea legible, comprensible y mantenible. </p>
                             <ul>
-                                <li>Un carácter: “s”, “n”, “x”, "3".</li>
-                                <li>Frases: “Rose”, “San José”, “Viva Guanacaste”.</li>
+                                <li>Debe comenzar con una letra (a-z, A-Z) o un guion bajo (_), pero no con un número.</li>
+                                <li>Puede contener letras, números y guion bajo (_), pero no espacios ni caracteres especiales.</li>
+                                <li>No puede usar palabras clave de Python (if, while, for, etc.).</li>
+                                <li>Debe ser descriptiva y clara, evitando nombres genéricos como x, y, z.</li>
+                                <li>No debe ser demasiado larga ni redundante.</li>
+                                <li>Debe seguir la convención snake_case o PascalCase.</li>
                             </ul>
                             `,
                             nextButton: ''

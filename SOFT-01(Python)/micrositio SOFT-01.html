@@ -42,36 +42,43 @@
     </div>
 
     <!-- ===== SCRIPTS ===== -->
-    <script src="https://cdn.jsdelivr.net/gh/vi-micrositios/cenfotec@main/SOFT-01(Python)/data.js"> </script>
     
     <script>
     
-        (function () {
-            'use strict';
-
-            // ============================================================
-            // 1. CSS 
-            // ============================================================
-            var cssUrl = 'https://cdn.jsdelivr.net/gh/vi-micrositios/cenfotec@main/estilos.css';
-
-            fetch(cssUrl)
-                .then(function (response) {
+        (async function () {
+                'use strict';
+                let data;
+                const dataUrl = "https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/data.js";
+                try {
+                    const response = await fetch(dataUrl);
                     if (!response.ok) {
                         throw new Error('HTTP ' + response.status);
                     }
-                    return response.text();
-                })
-                .then(function (cssText) {
+                    const scriptData = await response.text();
+                    const scriptDataJson = scriptData.substring(13, scriptData.length-2);
+                    data = (new Function("return " + scriptDataJson))();
+                } catch(error) {
+                    console.error('Error cargando datos:', error);
+                }
 
+                // ============================================================
+                // 1. CSS 
+                // ============================================================
+                var cssUrl = 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/estilos.css';
+                try {
+                    const response = await fetch(cssUrl);
+                    if (!response.ok) {
+                        throw new Error('HTTP ' + response.status);
+                    }
+                    const cssText = await response.text();
                     var style = document.createElement('style');
                     style.type = 'text/css';
                     style.setAttribute('data-micrositio', 'soft01');
                     style.textContent = cssText;
                     document.body.appendChild(style);
-                })
-                .catch(function (error) {
+                } catch(error) {
                     console.error('Error cargando CSS:', error);
-                });
+                }
 
                 // ============================================================
                 // 2. ESTADO DE LA APLICACIÓN
