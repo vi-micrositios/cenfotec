@@ -378,7 +378,7 @@ const data = {
                                 <li>No puede usar palabras clave de Python (if, while, for, etc.).</li>
                                 <li>Debe ser descriptiva y clara, evitando nombres genéricos como x, y, z.</li>
                                 <li>No debe ser demasiado larga ni redundante.</li>
-                                <li>Debe seguir la convención snake_case o PascalCase.</li>
+                                <li>Debe seguir la convención snake_case, camelCase o PascalCase.</li>
                             </ul>
                             `,
                             nextButton: ''
