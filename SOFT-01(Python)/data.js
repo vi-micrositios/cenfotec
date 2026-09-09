@@ -279,12 +279,17 @@ const data = {
                     steps: [
                         {
                             title: 'Estructuras secuenciales',
-                            content: `<p>una computadora no piensa ni tiene voluntad propia. Solo hace lo que usted le ordena, en el orden exacto en que se lo dice. Este módulo enseña la forma más básica y fundamental de darle órdenes a una máquina: una instrucción tras otra, de arriba hacia abajo, sin saltos ni desvíos. Es como leer las instrucciones de un manual de ensamble: primero el paso 1, luego el 2, luego el 3, y así hasta terminar.</p>`,
+                            content: `<p>Una computadora no piensa ni tiene voluntad propia. Solo hace lo que se le ordena, en el orden exacto en que se lo dice. </p>
+                            <p>La forma más básica y fundamental de darle órdenes a una máquina es una instrucción tras otra, de arriba hacia abajo, sin saltos ni desvíos. </p>
+                            
+                            `,
                             nextButton: 'Siguiente: Flujos secuenciales'
                         },
                         {
                             title: 'Flujos secuenciales',
-                            content: `<p>Es el "camino" que sigue el programa. Imagina que el programa es una lista de compras en una hoja. Empieza por el primer ítem, lo tacha, pasa al segundo, y así hasta el final. Eso es un flujo secuencial.</p>`,
+                            content: `<p>Es el "camino" que sigue el programa. </p>
+                            <p>Se puede visualizar como una escalera: se pone un pie en el primer escalón, luego en el segundo, luego en el tercero, y llega al final. Ese es el flujo secuencial. Es el comportamiento por defecto de cualquier programa que no tenga condiciones ni bucles.</p>
+                            `,
                             nextButton: ''
                         }
                     ]
@@ -300,12 +305,40 @@ const data = {
                             <p>Ejemplos</p>
                             
                             `,
-                            nextButton: 'Siguiente: Flujos secuenciales'
+                            nextButton: 'Siguiente: Datos numéricos'
                         },
                         {
-                            title: 'Flujos secuenciales',
-                            content: `<p>Es el "camino" que sigue el programa. Imagina que el programa es una lista de compras en una hoja. Empieza por el primer ítem, lo tacha, pasa al segundo, y así hasta el final. Eso es un flujo secuencial.</p>`,
-                            nextButton: 'Siguiente: Paso 2'
+                            title: 'Datos numéricos',
+                            content: `<p>Los datos numéricos representan un número. </p>
+                            <p>Python permite utilizar tres tipos de datos: enteros, flotantes y complejos:</p>
+                            <ul>
+                                <li>Enteros (int): Son valores que no tienen punto decimal. Pueden ser positivos o negativos, se incluye el cero. Ejemplo: 0, 3, 115, -15, -245.</li>
+                                <li>Flotantes (float): Se utiliza para representar los valores reales, que poseen una parte entera y una parte decimal. Ejemplo: –12.57, 45.76, 3.5, -2.5.</li>
+                                <li>Complejos (complex): Números con una parte real e imaginaria. Ejemplo: 3+4j.</li>
+                            </ul>
+                            `,
+                            nextButton: 'Siguiente: Datos booleanos'
+                        },
+                        {
+                            title: 'Datos booleanos',
+                            content: `<p>Representan valores de verdad que pueden ser únicamente falsos o verdaderos.Por ejemplo:</p>
+                            <ul>
+                                <li>Un interruptor puede estar encendido (verdadero) o apagado (falso).</li>
+                                <li>En Costa Rica cae nieve (False) o cae lluvia (True).</li>
+                                <li>Yo estoy en el un curso de Python = verdadero.</li>
+                            </ul>
+                            `,
+                            nextButton: 'Siguiente: Strings'
+                        },
+                        {
+                            title: 'Cadena de caracteres o strings',
+                            content: `<p>Representan secuencias de caracteres que pueden ser desde una letra, un número o hasta una frase. Por ejemplo:</p>
+                            <ul>
+                                <li>Un carácter: “s”, “n”, “x”, "3".</li>
+                                <li>Frases: “Rose”, “San José”, “Viva Guanacaste”.</li>
+                            </ul>
+                            `,
+                            nextButton: ''
                         }
                     ]
                 }
