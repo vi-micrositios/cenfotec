@@ -348,6 +348,38 @@ const data = {
                             nextButton: ''
                         }
                     ]
+                },
+                {
+                    id: 'm002-t003',
+                    label: 'Variables',
+                    steps: [
+                        {
+                            title: 'Variables',
+                            content: `<p>Es un espacio de memoria en la computadora, en donde un programa almacena un dato que puede o no cambiar durante la ejecución.   </p>
+                            <p>Con las variables se puede almacenar, consultar, mostrar o asignar datos cada vez que se necesite.</p>
+                            <p><strong>Sintaxis</strong>: El nombre de la variable = al dato que almacena la variable. </p>
+                             <ul>
+                                <li>edad = 23</li>
+                                <li>colorFavorito = "azul"</li>
+                                <li>cedula = "6-0000-0000"</li>
+                                <li>creditos_matriculados = 12</li>
+                                <li>temperatura = 17.5</li>
+                            </ul>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/datos.png',
+                            nextButton: 'Siguiente: Datos numéricos'
+                        },
+                        {
+                            title: 'Cadena de caracteres o strings',
+                            content: `<p>Representan secuencias de caracteres que pueden ser desde una letra, un número o hasta una frase. Por ejemplo:</p>
+                            <ul>
+                                <li>Un carácter: “s”, “n”, “x”, "3".</li>
+                                <li>Frases: “Rose”, “San José”, “Viva Guanacaste”.</li>
+                            </ul>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
                 }
             ]
         }
