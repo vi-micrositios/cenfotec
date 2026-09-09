@@ -281,8 +281,8 @@ const data = {
                             title: 'Estructuras secuenciales',
                             content: `<p>Una computadora no piensa ni tiene voluntad propia. Solo hace lo que se le ordena, en el orden exacto en que se lo dice. </p>
                             <p>La forma más básica y fundamental de darle órdenes a una máquina es una instrucción tras otra, de arriba hacia abajo, sin saltos ni desvíos. </p>
-                            
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/pasos_lineales.png',
                             nextButton: 'Siguiente: Flujos secuenciales'
                         },
                         {
@@ -290,6 +290,7 @@ const data = {
                             content: `<p>Es el "camino" que sigue el programa. </p>
                             <p>Se puede visualizar como una escalera: se pone un pie en el primer escalón, luego en el segundo, luego en el tercero, y llega al final. Ese es el flujo secuencial. Es el comportamiento por defecto de cualquier programa que no tenga condiciones ni bucles.</p>
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/escalera.png',
                             nextButton: ''
                         }
                     ]
@@ -302,9 +303,15 @@ const data = {
                             title: 'Datos',
                             content: `<p>Es la información representada simbólicamente a través de números, letras o la combinación de ambas. </p>
                             <p>Se clasifican en datos de entrada o datos de salida. Además, en Python se pueden utilizar cuatro tipos de datos: numéricos, caracteres, booleanos y el tipo de dato "none".</p>
-                            <p>Ejemplos</p>
-                            
+                            <p>Ejemplos:</p>
+                             <ul>
+                                <li>Una canción, un vídeo o una fotografía.</li>
+                                <li>La representación binaria del número 5 que es 101.</li>
+                                <li>Al presionar una tecla del teclado, el dato en la computadora se convierte en un dato de entrada.</li>
+                                <li>Al hacer una suma en la calculadora, el resultado que se muestra en pantalla es un dato de salida.</li>
+                            </ul>
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/datos.png',
                             nextButton: 'Siguiente: Datos numéricos'
                         },
                         {
