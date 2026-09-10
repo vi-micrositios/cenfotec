@@ -38,19 +38,20 @@ const data = {
                             content: `<p>Qué se hace: Reuniones con el cliente y los usuarios finales. Se define qué debe hacer el software y para quién. Se analiza la viabilidad (técnica, económica y legal). </p>
                             <p> Entregable: Documento de Especificación de Requisitos de Software (ERS o SRS).</p>`,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/requerimientos.png',
-                            imageAlt: '',
                             nextButton: 'Siguiente: Fase 2'
                         },
                         {
                             title: 'Fase 2: Diseño (arquitectura) ',
                             content: `<p> Qué se hace: Se define cómo funcionará internamente. Se diseña la arquitectura del sistema, las bases de datos, las interfaces de usuario (UI/UX) y los flujos de trabajo. Se crean diagramas UML y prototipos. </p>
                             <p>Entregable: Documento de análisis y diseño (técnico y visual)</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/disenno.png',
                             nextButton: 'Siguiente: Fase 3'
                         },
                         {
                             title: 'Fase 3: Implementación (codificación)',
                             content: `<p>Qué se hace: Los programadores escriben el código fuente según las especificaciones del diseño. Se dividen en módulos y se integran progresivamente.  </p>
                             <p>Entregable: Código fuente funcional (repositorio en Git). </p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/desarrollo.png',
                             nextButton: 'Siguiente: Fase 4'
                         },
                         {
@@ -58,18 +59,21 @@ const data = {
                             content: `<p>Qué se hace: Se ejecutan pruebas para encontrar errores (bugs) y verificar que el software cumpla los requisitos. Incluye pruebas unitarias, de integración, de sistema, de rendimiento y de aceptación por el usuario (UAT). </p> 
                             <p>Entregable: Reporte de errores y software estabilizado.
                                 </p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/pruebas.png',
                             nextButton: 'Siguiente: Fase 5'
                         },
                         {
                             title: 'Fase 5: Despliegue (deployment)',
                             content: `<p>Qué se hace: El software se instala en el entorno de producción (servidores reales) para que los usuarios finales puedan usarlo. Puede ser un lanzamiento completo o por fases (piloto). </p>
                             <p>Entregable: Software en producción y manuales de usuario.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/despliegue.png',
                             nextButton: 'Siguiente: Fase 6'
                         },
                         {
                             title: 'Fase 6: Mantenimiento y soporte',
                             content: `<p>Qué se hace: Una vez en uso, surgen nuevos errores o necesidades. Se corrigen fallos, se optimiza el rendimiento y se añaden mejoras o nuevas funcionalidades (actualizaciones). </p>
                             <p>Entregable: Nuevas versiones (parches o actualizaciones mayores). </p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/mantenimiento.png',
                             nextButton: ' '
                         }
                     ]
