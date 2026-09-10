@@ -33,6 +33,14 @@
                 <!-- Aquí se inyectará la bienvenida o el panel de subtemas + contenido -->
             </div>
 
+            <button id="homeBtn" class="header-action-btn" type="button" title="Ir al inicio" aria-label="Ir al inicio"> 
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 10.5L12 3l9 7.5"/>
+                    <path d="M5 9.5V21h14V9.5"/>
+                    <path d="M9 21v-7h6v7"/>
+                </svg>
+            </button>
+
             <!-- Botón de pantalla completa -->
             <button class="fullscreen-btn" id="fullscreenBtn" type="button"
                 style="position:absolute; top:8px; right:20px; z-index:10; background:rgba(255,255,255,0.9); border-color:#c81f66; color:#c81f66; box-shadow:0 2px 0 #9b114a; padding:8px 16px; font-size:0.85rem;">
@@ -98,6 +106,7 @@
                 var mainMenuEl = document.getElementById('mainMenu');
                 var contentAreaEl = document.getElementById('contentArea');
                 var fullscreenBtn = document.getElementById('fullscreenBtn');
+                var homeBtn = document.getElementById('homeBtn');
                 var container = document.getElementById('appContainer');
 
                 // ============================================================
@@ -192,7 +201,7 @@
                     html += '</div>';
                     // Columna 2: Texto
                     html += '<div class="welcome-col-text">';
-                    html += '<h1>' + w.title + '</h1>';
+                    html += '<h3>' + w.title + '</h3>';
                     if (w.description) {
                         html += '<p>' + w.description + '</p>';
                     }
@@ -266,7 +275,7 @@
                     var html = '';
 
                     // Título del contenido
-                    html += '<h2 style="color: #164a98; font-size: 1.4rem; font-weight: 700; margin-top: 0; margin: 20px 0">' + step.title + '</h2>';
+                    html += '<h4 style="color: #164a98; font-size: 1.4rem; font-weight: 700; margin-top: 0; margin: 20px 0">' + step.title + '</h4>';
 
                     // Contenido principal (con o sin imagen)
                     if (step.image) {
@@ -416,6 +425,19 @@
                 }
 
 
+                function goHome() {
+    state.currentTemaId = null;
+    state.currentSubtemaId = null;
+    state.currentStepIndex = 0;
+
+    renderMainMenu();
+    renderWelcome();
+
+    // Llevar el scroll al inicio del micrositio
+    container.scrollTop = 0;
+}
+
+
                 // ============================================================
                 // 7. INICIALIZACIÓN
                 // ============================================================
@@ -430,6 +452,7 @@
 
                     // Evento de pantalla completa
                     fullscreenBtn.addEventListener('click', toggleFullscreen);
+                    homeBtn.addEventListener('click', goHome);
                     document.addEventListener('fullscreenchange', updateFullscreenButton);
                     document.addEventListener('webkitfullscreenchange', updateFullscreenButton);
                     document.addEventListener('msfullscreenchange', updateFullscreenButton);

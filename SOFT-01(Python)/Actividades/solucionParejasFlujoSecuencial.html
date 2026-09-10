@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Algoritmo y Diagrama de Flujo</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+<!-- ============================================================
+     EJERCICIOS DE FLUJO SECUENCIAL
+     ============================================================ -->
+
+<!-- ============================================================
+     SEGUNDA PARTE: EJERCICIOS DE FLUJO SECUENCIAL
+     ============================================================ -->
+
+<!-- ============================================================
+     SEGUNDA PARTE: EJERCICIOS DE FLUJO SECUENCIAL
+     ============================================================ -->
+
+<section aria-labelledby="segunda-parte-flujo-secuencial"
+    style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto 30px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00734a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    <!-- ENCABEZADO -->
+    <div
+        style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+        <span
+            style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00734a, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+            aria-hidden="true">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+        </span>
+
+        <h2 id="segunda-parte-flujo-secuencial"
+            style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700;">
+            Segunda parte: Problemas de flujo secuencial
+        </h2>
+    </div>
+
+    <!-- INSTRUCCIONES GENERALES -->
+    <div
+        style="background: #eef5ff; border-left: 5px solid #00734a; padding: 18px 20px; margin: 0 0 28px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.7;">
+
+        <strong>
+            <i class="fa-solid fa-list-check" aria-hidden="true" style="margin-right: 6px;"></i>
+            Instrucciones generales
+        </strong>
+
+        <p style="margin: 10px 0 8px 0;">
+            Para cada problema deberá realizar el proceso completo de solución:
+        </p>
+
+        <ol style="margin: 8px 0 0 22px; padding-left: 10px;">
+            <li>Analice el problema y determine qué se desea resolver.</li>
+            <li>Identifique los datos de entrada.</li>
+            <li>Identifique los procesos y las operaciones necesarias.</li>
+            <li>Identifique los datos que deben mostrarse como salida.</li>
+            <li>Determine las variables necesarias y el tipo de dato de cada una.</li>
+            <li>Escriba el algoritmo en lenguaje natural.</li>
+            <li>Elabore el diagrama de flujo.</li>
+            <li>Implemente la solución utilizando Python.</li>
+            <li>Pruebe el programa utilizando diferentes datos de entrada.</li>
+            <li>Realice pruebas utilizando valores <strong>enteros</strong> y
+                <strong>valores flotantes (decimales)</strong>, según corresponda
+                a cada variable.</li>
+            <li>Compruebe que los resultados obtenidos por el programa sean correctos.</li>
+        </ol>
+
+        <p style="margin: 12px 0 0 0;">
+            <strong>Importante:</strong> los problemas deben resolverse utilizando
+            estructuras secuenciales. No utilice estructuras condicionales,
+            ciclos, funciones, listas ni otros elementos que todavía no hayan
+            sido estudiados.
+        </p>
+
+        <div
+            style="background: #fff8e1; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 16px; color: #6d5710; font-size: 14px; line-height: 1.6;">
+
+            <i class="fa-solid fa-flask" aria-hidden="true"
+                style="margin-right: 6px; color: #C7AC19;"></i>
+
+            <strong>Pruebas:</strong> no se limite a ejecutar el programa una sola vez.
+            Utilice diferentes valores para comprobar su funcionamiento. Por ejemplo,
+            pruebe con cantidades enteras como <strong>5</strong> y <strong>10</strong>,
+            y con valores decimales como <strong>5.5</strong> y <strong>10.75</strong>,
+            cuando estos sean válidos para el problema.
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 1
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-1" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 1. Factura de electricidad
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una empresa de electricidad desea calcular el monto de una factura
+            mensual de un cliente.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del cliente</strong>,
+            el <strong>consumo de electricidad en kilovatios-hora</strong>,
+            el <strong>precio por kilovatio-hora</strong> y el
+            <strong>porcentaje de impuesto</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el costo del consumo, el monto del impuesto y el
+            total de la factura.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            consumo = kilovatios_hora × precio<br>
+            impuesto = consumo × porcentaje / 100<br>
+            total = consumo + impuesto
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 2
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-2" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 2. Reservación de vuelo
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una agencia de viajes desea calcular el costo total de un boleto de avión.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del pasajero</strong>,
+            el <strong>precio del boleto</strong>, el <strong>cargo por equipaje</strong>
+            y un <strong>porcentaje de impuesto</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el subtotal del boleto, el monto del impuesto y el
+            precio total que deberá pagar el pasajero.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            subtotal = precio boleto + equipaje<br>
+            impuesto = subtotal × porcentaje / 100<br>
+            total = subtotal + impuesto
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 3
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-3" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 3. Hospedaje en un hotel
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Un hotel desea calcular el costo de una reservación para un cliente.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del huésped</strong>,
+            la <strong>cantidad de noches</strong>, el <strong>precio de la
+            habitación por noche</strong>, el <strong>costo total de servicios
+            adicionales</strong> y el <strong>porcentaje de impuesto</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el costo de las habitaciones, el subtotal incluyendo
+            los servicios adicionales, el impuesto y el total de la reservación.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            habitación = noches × precio por noche<br>
+            subtotal = habitación + servicios<br>
+            impuesto = subtotal × porcentaje / 100<br>
+            total = subtotal + impuesto
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 4
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-4" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 4. Proyecto de construcción
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una empresa de construcción necesita calcular el costo de colocar
+            piso en una habitación rectangular.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del cliente</strong>,
+            el <strong>largo de la habitación</strong>, el <strong>ancho de la
+            habitación</strong>, el <strong>precio por metro cuadrado</strong>
+            y el <strong>porcentaje adicional por instalación</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el área de la habitación, el costo del material,
+            el costo de instalación y el costo total del proyecto.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            área = largo × ancho<br>
+            material = área × precio por metro cuadrado<br>
+            instalación = material × porcentaje / 100<br>
+            total = material + instalación
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 5
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-5" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 5. Préstamo personal
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una entidad financiera desea calcular el monto que una persona deberá
+            pagar por un préstamo personal.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del cliente</strong>,
+            el <strong>monto solicitado</strong>, el <strong>porcentaje de interés</strong>
+            y el <strong>número de cuotas</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Para simplificar el ejercicio, suponga que el interés se calcula una
+            sola vez sobre el monto solicitado. El programa debe calcular el
+            interés, el monto total a pagar y el valor de cada cuota.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            interés = monto × porcentaje / 100<br>
+            total = monto + interés<br>
+            cuota = total / número de cuotas
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 6
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-6" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 6. Venta de entradas para un evento
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una empresa organiza un evento y necesita calcular los ingresos
+            obtenidos por la venta de entradas.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del evento</strong>,
+            el <strong>precio de la entrada</strong>, la <strong>cantidad de
+            entradas vendidas</strong> y el <strong>porcentaje de comisión</strong>
+            que debe pagar la empresa.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular los ingresos brutos, el monto correspondiente a la
+            comisión y los ingresos netos obtenidos por el evento.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            ingresos brutos = precio × entradas vendidas<br>
+            comisión = ingresos brutos × porcentaje / 100<br>
+            ingresos netos = ingresos brutos - comisión
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 7
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-7" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 7. Envío de un paquete
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una empresa de mensajería necesita calcular el costo de enviar un paquete.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del cliente</strong>,
+            el <strong>peso del paquete en kilogramos</strong>, la
+            <strong>distancia del envío en kilómetros</strong>, el
+            <strong>precio por kilogramo</strong> y el
+            <strong>precio por kilómetro</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el costo según el peso, el costo según la distancia
+            y el costo total del envío.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            costo por peso = peso × precio por kilogramo<br>
+            costo por distancia = distancia × precio por kilómetro<br>
+            total = costo por peso + costo por distancia
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 8
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-8" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 8. Producción de una fábrica
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una fábrica desea calcular el costo de producción de un lote de productos.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del producto</strong>,
+            la <strong>cantidad de unidades producidas</strong>, el
+            <strong>costo de materia prima por unidad</strong>, el
+            <strong>costo de mano de obra por unidad</strong> y un
+            <strong>porcentaje adicional correspondiente a otros costos de producción</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el costo de materia prima, el costo de mano de obra,
+            el subtotal de producción, el monto correspondiente a otros costos
+            y el costo total del lote.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            materia prima = cantidad × costo materia prima<br>
+            mano de obra = cantidad × costo mano de obra<br>
+            subtotal = materia prima + mano de obra<br>
+            otros costos = subtotal × porcentaje / 100<br>
+            total = subtotal + otros costos
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 9
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-9" aria-hidden="true"
+                style="color: #c81f66; margin-right: 8px;"></i>
+            Ejercicio 9. Presupuesto de una boda
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una pareja desea calcular el presupuesto necesario para realizar
+            una celebración.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar la <strong>cantidad de invitados</strong>,
+            el <strong>costo de alimentación por persona</strong>, el
+            <strong>costo del alquiler del lugar</strong>, el
+            <strong>costo de decoración</strong> y el
+            <strong>costo de música</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el costo total de alimentación y el costo total de
+            la celebración.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            alimentación = invitados × costo por persona<br>
+            total = alimentación + alquiler + decoración + música
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 10
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 15px;">
+
+        <h3 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-1" aria-hidden="true" style="color: #c81f66;"></i>
+            <i class="fa-solid fa-0" aria-hidden="true" style="color: #c81f66; margin-right: 8px;"></i>
+            Presupuesto para un viaje
+        </h3>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una persona desea elaborar un presupuesto para un viaje.
+            El programa debe calcular cuánto dinero necesitará para cubrir
+            diferentes gastos durante su viaje.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del viajero</strong>,
+            la <strong>cantidad de días del viaje</strong>, el
+            <strong>costo diario de hospedaje</strong>, el
+            <strong>costo diario de alimentación</strong>, el
+            <strong>costo total del transporte</strong> y un
+            <strong>monto adicional para actividades recreativas</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el costo total de hospedaje, el costo total de
+            alimentación y el presupuesto total necesario para realizar el viaje.
+        </p>
+
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            hospedaje = días × costo diario hospedaje<br>
+            alimentación = días × costo diario alimentación<br>
+            total = hospedaje + alimentación + transporte + actividades
+        </div>
+    </div>
+
+
+    <!-- NOTA FINAL -->
+    <div
+        style="display: flex; align-items: flex-start; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 20px;">
+
+        <i class="fa-solid fa-check" aria-hidden="true"
+            style="font-size: 20px; margin-top: 2px;"></i>
+
+        <span>
+            <strong>Recuerde:</strong> primero analice el problema, identifique las
+            entradas, los procesos, las salidas y las variables necesarias. Después
+            construya el diagrama de flujo y, finalmente, implemente la solución
+            en <strong>Python</strong>. Realice varias pruebas utilizando datos
+            enteros y flotantes para verificar el funcionamiento del programa.
+        </span>
+    </div>
+
+</section>
+
+
+
+
+</body>
+
+</html>

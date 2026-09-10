@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Algoritmo y Diagrama de Flujo</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+<!-- ============================================================
+     EJERCICIOS DE FLUJO SECUENCIAL
+     ============================================================ -->
+
+<section aria-labelledby="ejercicios-flujo-secuencial"
+    style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto 30px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #f05323; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    <!-- ENCABEZADO -->
+    <div
+        style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+        <span
+            style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #f05323, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+            aria-hidden="true">
+            <i class="fa-solid fa-code"aria-hidden="true"></i>
+        </span>
+
+        <h3 id="ejercicios-flujo-secuencial"
+            style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700;">
+            Ejercicios adicionales: Programación secuencial
+        </h3>
+    </div>
+
+    <!-- INSTRUCCIONES GENERALES -->
+    <div
+        style="background: #eef5ff; border-left: 5px solid #f05323; padding: 18px 20px; margin: 0 0 28px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.7;">
+
+        <strong><i class="fa-solid fa-list-check" style="margin-right: 6px;"aria-hidden="true"></i> Instrucciones generales</strong>
+
+        <p style="margin: 10px 0 8px 0;">
+            Para cada uno de los siguientes problemas deberá realizar el proceso completo
+            de solución de un problema mediante programación.
+        </p>
+
+        <ol style="margin: 8px 0 0 22px; padding-left: 10px;">
+            <li><strong>Analizar el problema:</strong> determine qué información necesita el programa (datos de entrada) y qué resultado debe obtener (datos de salida).</li>
+            <li><strong>Identificar el proceso:</strong> determine las variables y operaciones necesarias para resolver el problema.</li>
+            <li><strong>Construir el diagrama de flujo:</strong> represente gráficamente el algoritmo para solucionar el problema.</li>
+            <li><strong>Programar en Python:</strong> convierta el algoritmo en un programa.</li>
+            <li><strong>Probar el programa:</strong> utilice diferentes datos de entrada y compruebe que los resultados sean correctos.</li>
+        </ol>
+
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 1
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-1" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Salario de un trabajador
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una empresa desea calcular el salario semanal de uno de sus trabajadores.
+            El programa debe solicitar el <strong>nombre del trabajador</strong>,
+            la <strong>cantidad de horas trabajadas durante la semana</strong> y
+            el <strong>pago recibido por cada hora trabajada</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Con esta información, el programa debe calcular el salario semanal y mostrar
+            el nombre del trabajador, las horas trabajadas, el pago por hora y el
+            salario obtenido.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px;">
+            <strong>Fórmula:</strong>
+            salario = horas trabajadas × pago por hora
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 2
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-2" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Área y perímetro de un rectángulo
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una aplicación necesita calcular las dimensiones de un rectángulo.
+            El programa debe solicitar el <strong>largo</strong> y el
+            <strong>ancho</strong> de la figura.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Con estos datos debe calcular y mostrar el <strong>área</strong> y el
+            <strong>perímetro</strong> del rectángulo.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            área = largo × ancho<br>
+            perímetro = 2 × (largo + ancho)
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 3
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-3" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Promedio de calificaciones
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Un estudiante desea conocer el promedio obtenido en un curso.
+            El programa debe solicitar el <strong>nombre del estudiante</strong>
+            y las calificaciones obtenidas en <strong>tres evaluaciones</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe calcular el promedio de las tres calificaciones y mostrar
+            el nombre del estudiante, cada una de las calificaciones y el promedio final.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px;">
+            <strong>Fórmula:</strong>
+            promedio = (nota1 + nota2 + nota3) / 3
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 4
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-4" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Consumo de combustible
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una persona desea calcular cuánto dinero necesitará para comprar combustible
+            para realizar un viaje.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar la <strong>distancia del viaje en kilómetros</strong>,
+            el <strong>rendimiento del vehículo en kilómetros por litro</strong> y el
+            <strong>precio de un litro de combustible</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular la cantidad aproximada de litros necesarios para realizar el viaje
+            y el costo total del combustible.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            litros necesarios = distancia / rendimiento<br>
+            costo = litros necesarios × precio por litro
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 5
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-5" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Factura de un restaurante
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Un restaurante desea calcular el monto que debe pagar un cliente.
+            El programa debe solicitar el <strong>nombre del cliente</strong>,
+            el <strong>nombre del plato</strong>, el <strong>precio del plato</strong>
+            y la <strong>cantidad de platos solicitados</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Además, el restaurante cobra un impuesto del <strong>13 %</strong>.
+            El programa debe calcular el subtotal, el monto del impuesto y el total
+            que debe pagar el cliente.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            subtotal = precio × cantidad<br>
+            impuesto = subtotal × 13 / 100<br>
+            total = subtotal + impuesto
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 6
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-6" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Compra con descuento
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una tienda de ropa desea calcular el precio final de una compra.
+            El programa debe solicitar el <strong>nombre del cliente</strong>,
+            el <strong>nombre del producto</strong>, el <strong>precio del producto</strong>,
+            la <strong>cantidad comprada</strong> y el <strong>porcentaje de descuento</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe calcular el subtotal de la compra, el monto correspondiente
+            al descuento y el precio final que debe pagar el cliente.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            subtotal = precio × cantidad<br>
+            descuento = subtotal × porcentaje / 100<br>
+            total = subtotal - descuento
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 7
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-7" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Conversión de temperatura
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una aplicación meteorológica necesita convertir una temperatura expresada
+            en grados Celsius a grados Fahrenheit.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre de la persona</strong> y la
+            <strong>temperatura en grados Celsius</strong>. Luego debe calcular y mostrar
+            la temperatura equivalente en grados Fahrenheit.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px;">
+            <strong>Fórmula:</strong>
+            Fahrenheit = (Celsius × 9 / 5) + 32
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 8
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-8" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Conversión de moneda
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una persona desea conocer cuánto dinero recibirá en colones al cambiar
+            una cantidad de dólares.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre de la persona</strong>,
+            la <strong>cantidad de dólares</strong> que desea convertir y el
+            <strong>tipo de cambio</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular y mostrar la cantidad equivalente en colones.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px;">
+            <strong>Fórmula:</strong>
+            colones = dólares × tipo de cambio
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 9
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-9" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Reservación de hotel
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Un hotel desea calcular el costo total de una reservación.
+            El programa debe solicitar el <strong>nombre del cliente</strong>,
+            la <strong>cantidad de noches</strong>, el <strong>precio por noche</strong>
+            y el <strong>porcentaje de impuesto</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Con estos datos debe calcular el subtotal de la reservación, el monto
+            correspondiente al impuesto y el total que deberá pagar el cliente.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            subtotal = noches × precio por noche<br>
+            impuesto = subtotal × porcentaje / 100<br>
+            total = subtotal + impuesto
+        </div>
+    </div>
+
+
+    <!-- ============================================================
+         EJERCICIO 10
+         ============================================================ -->
+
+    <div
+        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 15px;">
+
+        <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+            <i class="fa-solid fa-1" style="color: #c81f66;"aria-hidden="true"></i>
+            <i class="fa-solid fa-0" style="color: #c81f66; margin-right: 8px;"aria-hidden="true"></i>
+            Salario con deducción
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Una empresa desea calcular cuánto dinero recibirá finalmente un trabajador
+            después de aplicar una deducción a su salario.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar el <strong>nombre del trabajador</strong>,
+            la <strong>cantidad de horas trabajadas</strong>, el
+            <strong>pago por hora</strong> y el <strong>porcentaje de deducción</strong>.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Debe calcular el <strong>salario bruto</strong>, el
+            <strong>monto de la deducción</strong> y el <strong>salario neto</strong>.
+            Finalmente, debe mostrar toda la información al usuario.
+        </p>
+
+        <div style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+            <strong>Fórmulas:</strong><br>
+            salario bruto = horas × pago por hora<br>
+            deducción = salario bruto × porcentaje / 100<br>
+            salario neto = salario bruto - deducción
+        </div>
+    </div>
+
+
+    <!-- NOTA FINAL -->
+    <div
+        style="gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 20px;">
+
+        <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"aria-hidden="true"></i>
+
+        <span>
+            <strong>Recuerde:</strong> antes de escribir código, analice el problema.
+            Identifique las entradas, los procesos y las salidas; determine las variables
+            necesarias; construya el diagrama de flujo y, finalmente, implemente la solución
+            en <strong>Python</strong>.
+        </span>
+    </div>
+
+</section>
+
+
+</body>
+
+</html>
