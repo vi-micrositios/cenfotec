@@ -73,34 +73,6 @@ const data = {
                             nextButton: ' '
                         }
                     ]
-                },
-                {
-                    id: 'm001-lenguaje',
-                    label: 'Lenguaje de programación',
-                    steps: [
-                        {
-                            title: 'Ciclos de vida del software',
-                            content: `<p>Los modelos de ciclo de vida definen las fases y actividades del desarrollo.</p>
-                                        <ul>
-                                            <li><strong>Cascada:</strong> Secuencial y rígido.</li>
-                                            <li><strong>Ágil:</strong> Iterativo y flexible (Scrum, XP).</li>
-                                            <li><strong>Espiral:</strong> Enfoque en riesgos.</li>
-                                        </ul>
-                                        <p>La elección depende del proyecto y el contexto.</p>`,
-                            nextButton: 'Siguiente: Metodologías ágiles'
-                        },
-                        {
-                            title: 'Metodologías ágiles',
-                            content: `<p>Las metodologías ágiles promueven la adaptación continua, la colaboración y la entrega temprana de valor.</p>
-                                        <ul>
-                                            <li><strong>Scrum:</strong> Sprints, roles, reuniones.</li>
-                                            <li><strong>Kanban:</strong> Flujo continuo y visualización.</li>
-                                            <li><strong>XP:</strong> Prácticas de ingeniería como TDD, pair programming.</li>
-                                        </ul>
-                                        <p>Son ampliamente utilizadas en la industria moderna.</p>`,
-                            nextButton: ' '
-                        }
-                    ]
                 }
                 // Puede agregar más subtemas aquí
             ]
@@ -123,6 +95,8 @@ const data = {
             ]
         }
      /* Plantilla de un nuevo módulo   
+
+     poner: https://view.genially.com/6a1f6e0e5223b5322d8622fc 
         ,{
             id: 'req-modulo_003',
             label: 'Diseño',
