@@ -7,6 +7,7 @@
 
 .microsite-wrapper {
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     max-width: 1400px;
     margin: 0 auto;
     padding: 1rem;
@@ -103,7 +104,7 @@
     flex: 1;
 }
 
-.microsite-wrapper .welcome-col-text h1 {
+.microsite-wrapper .welcome-col-text h3 {
     color: #164a98;
     font-size: 2.7rem;
     font-weight: 800;
@@ -315,8 +316,8 @@
 }
 
 /* ===== AUMENTAR TEXTO EN PANTALLA COMPLETA ===== */
-.microsite-wrapper #appContainer:fullscreen .welcome-col-text h1 {
-    font-size: 3.5rem;
+.microsite-wrapper #appContainer:fullscreen .welcome-col-text h3 {
+    font-size: 3.5rem !important;
 }
 
 .microsite-wrapper #appContainer:fullscreen .welcome-col-text p {
@@ -362,23 +363,7 @@
     font-size: 1rem;
 }
 
-.microsite-wrapper .fullscreen-btn {
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff;
-    color: #c81f66;
-    border: 2px solid #c81f66;
-    padding: 10px 22px;
-    border-radius: 30px;
-    font-size: 0.9rem;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.15s;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    box-shadow: 0 2px 0 #c81f66;
-}
-
+.microsite-wrapper .fullscreen-btn, 
 .microsite-wrapper .header-action-btn {
     font-family: 'Poppins', sans-serif;
     background: #ffffff;
@@ -396,13 +381,8 @@
     box-shadow: 0 2px 0 #c81f66;
 }
 
+.microsite-wrapper .fullscreen-btn:hover,
 .microsite-wrapper .header-action-btn:hover {
-    background: #c81f66;
-    color: #ffffff;
-}
-
-
-.microsite-wrapper .fullscreen-btn:hover {
     background: #fce8f0;
     transform: translateY(-1px);
     box-shadow: 0 4px 0 #c81f66;
@@ -489,7 +469,7 @@
         padding: 20px;
     }
 
-    .microsite-wrapper .welcome-col-text h1 {
+    .microsite-wrapper .welcome-col-text h3 {
         font-size: 1.5rem;
     }
 }
