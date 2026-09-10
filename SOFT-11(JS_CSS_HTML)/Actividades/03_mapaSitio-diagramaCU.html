@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: MApa de sitio y diagrama de CU</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section aria-labelledby="ejercicio-sicen"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #d2232a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO CON ICONO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #d2232a, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-school"></i>
+            </span>
+
+            <h3 id="ejercicio-sicen"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Ejercicio 3: Diseño de SICEN
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #d2232a; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+            <span>
+                <strong>Objetivo</strong>: A partir de los requerimientos funcionales
+                definidos para <strong>SICEN (Sistema de Gestión de Censos Escolares)</strong>,
+                diseñar la estructura de navegación del sistema mediante un
+                <strong>mapa de sitio</strong> y representar las principales funcionalidades
+                y actores mediante un <strong>diagrama de casos de uso UML</strong>.
+            </span>
+        </div>
+
+
+        <!-- ============================================================
+             PARTE I: MAPA DE SITIO
+             ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-1" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+
+                Diseñar el mapa de sitio de SICEN
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Analice los requerimientos funcionales de SICEN y construya un
+                <strong>mapa de sitio</strong> que represente la organización jerárquica
+                de las principales páginas, módulos y opciones de navegación del sistema.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Instrucciones:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        Identifique las <strong>secciones principales</strong> que debe contener SICEN.
+                    </li>
+
+                    <li>
+                        Organice los módulos y páginas en una <strong>estructura jerárquica</strong>.
+                    </li>
+
+                    <li>
+                        Determine qué opciones estarán disponibles para cada <strong>tipo de usuario</strong>.
+                    </li>
+
+                    <li>
+                        Represente claramente la relación entre la página principal, los módulos y sus respectivos submódulos.
+                    </li>
+
+                </ul>
+            </div>
+
+
+
+
+            <!-- EJEMPLO -->
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Ejemplo de estructura:</strong><br>
+
+                    Inicio → Gestión de centros educativos → Consultar centro → Ver información censal<br>
+
+                    Inicio → Censo escolar → Registrar información → Actualizar información<br>
+
+                    Inicio → Reportes → Reportes de estudiantes → Reportes de personal
+                </p>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+            <div
+                style="gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+                <span>
+
+                    <strong>Resultado esperado:</strong>
+
+                    Un mapa de sitio que represente de manera clara, ordenada y jerárquica la estructura de navegación
+                    de SICEN.
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ============================================================
+             PARTE II: DIAGRAMA DE CASOS DE USO
+             ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-2" style="color: #C7AC19; font-size: 24px;" aria-hidden="true"></i>
+
+                Diseñar el diagrama de casos de uso de SICEN
+            </h4>
+
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                A partir de los requerimientos funcionales identificados y del mapa de sitio elaborado en la Parte I,
+                construya un <strong>diagrama de casos de uso UML</strong> para representar los actores que interactúan
+                con SICEN y las funcionalidades que cada uno puede realizar.
+            </p>
+
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-diagram-project" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Instrucciones:
+                </p>
+
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        Identifique los <strong>actores</strong> que interactúan
+                        con SICEN.
+                    </li>
+
+                    <li>
+                        Identifique los principales
+                        <strong>casos de uso</strong> del sistema.
+                    </li>
+
+                    <li>
+                        Relacione cada caso de uso con el
+                        <strong>requerimiento funcional</strong> correspondiente.
+                    </li>
+
+                    <li>
+                        Determine qué casos de uso pueden utilizar relaciones
+                        <strong>&lt;&lt;include&gt;&gt;</strong> o
+                        <strong>&lt;&lt;extend&gt;&gt;</strong>.
+                    </li>
+
+                    <li>
+                        Delimite claramente el sistema mediante el
+                        <strong>límite del sistema</strong>.
+                    </li>
+
+                    <li>
+                        Utilice correctamente la
+                        <strong>notación UML</strong>.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- EJEMPLO DE RELACIONES -->
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Ejemplo de relaciones:</strong><br>
+
+                    Director → Iniciar sesión
+                    Director → Registrar información del censo<br>
+                    Director → Actualizar información censal<br>
+                    Funcionario del censo → Validar información<br>
+                    Administrador → Gestionar usuarios<br>
+                    Usuario consultor → Consultar información<br>
+                    Generar reporte
+                    <strong>&lt;&lt;include&gt;&gt;</strong>
+                    Consultar información
+
+                </p>
+
+            </div>
+
+
+
+
+
+            <!-- RESULTADO -->
+            <div
+                style="gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+                <span>
+
+                    <strong>Resultado esperado:</strong>
+
+                    Un diagrama de casos de uso UML que represente
+                    claramente los actores, funcionalidades y relaciones
+                    principales de SICEN.
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+</body>
+
+
+</html>
