@@ -401,11 +401,11 @@ const data = {
                     ]
                 },
                 {
-                    id: 'm002-t003',
+                    id: 'm002-t004',
                     label: 'Constantes',
                     steps: [
                         {
-                            title: 'Variables',
+                            title: 'Constantes',
                             content: `<p>Es un valor que no cambia durante la ejecución de un programa. </p>
                             <p>En Python, no existen constantes como en otros lenguajes de programación, sin embargo, se sigue una convención para indicar que una variable debe tratarse como una constante: <strong> Nombre en mayúsculas y separarla con guiones bajos (_) si es necesario.</strong> </p>
 

@@ -163,7 +163,7 @@
     padding: 12px 24px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: #333;
     cursor: pointer;
     transition: all 0.15s;
@@ -317,7 +317,7 @@
 
 /* ===== AUMENTAR TEXTO EN PANTALLA COMPLETA ===== */
 .microsite-wrapper #appContainer:fullscreen .welcome-col-text h3 {
-    font-size: 3.5rem !important;
+    font-size: 4.5rem !important;
 }
 
 .microsite-wrapper #appContainer:fullscreen .welcome-col-text p {
@@ -336,7 +336,7 @@
 }
 
 .microsite-wrapper #appContainer:fullscreen .submenu-side button {
-    font-size: 1.1rem !important;
+    font-size: 1.3rem !important;
     padding: 15px 24px;
 }
 
