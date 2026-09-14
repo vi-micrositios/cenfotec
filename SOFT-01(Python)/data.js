@@ -466,7 +466,40 @@ const data = {
                                 <li> Cada nivel de anidación (por ejemplo, dentro de una función o un bloque) debe desplazarse hacia la derecha una cantidad fija de espacios.</li>
                                 <li>Lo más común: 4 espacios por nivel en Python; 2 o 4 en otros lenguajes.</li>
                             </ul>`,
-                            nextButton: ' '
+                            nextButton: 'Siguiente: Ejemplos de reglas'
+                        },
+                        {
+                            title: 'Ejemplos de reglas típicas en un estándar',
+                            content: `<p><strong>Comentarios</strong></p>
+                            <ul>
+                                <li>Explicar el por qué de una decisión, no el qué (el qué ya se ve en el código).</li>
+                                <li>Mal comentario: # Suma 1 a x (obvio).</li>
+                                <li>Buen comentario: # Se incrementa el contador porque cada venta suma un punto al cliente.</li>
+                            </ul>
+                            
+                            <p><strong>Longitud de líneas</strong></p>
+                            <ul>
+                                <li>No exceder, por ejemplo, 79 o 100 caracteres por línea, para que el código quede visible sin desplazarse horizontalmente.</li>
+                            </ul>
+                            
+                            <p><strong>Espacios y separació</strong></p>
+                            <ul>
+                                <li>Dejar un espacio alrededor de operadores: total = precio + impuesto (no total=precio+impuesto).</li>
+                                <li>Separar bloques lógicos con una línea en blanco.</li>
+                            </ul>`,
+                            nextButton: 'Siguiente: ¿Quién define el estándar?'
+                        },
+                        {
+                            title: '¿Quién define el estándar?',
+                            content: `<p>Cada lenguaje tiene sus convenciones oficiales. Por ejemplo:</p>
+                            <ul>
+                                <li>Python tiene la PEP 8 (Python Enhancement Proposal 8), que es la guía de estilo oficial.</li>
+                                <li>Java tiene las Google Java Style Guide o las Oracle Code Conventions.</li>
+                                <li>C tiene estándares como MISRA C para sistemas críticos.</li>
+                            </ul>
+                            
+                            `,
+                            nextButton: 'Siguiente: ¿Quién define el estándar?'
                         }
                     ]
                 }
