@@ -399,6 +399,27 @@ const data = {
                             nextButton: ''
                         }
                     ]
+                },
+                {
+                    id: 'm002-t003',
+                    label: 'Constantes',
+                    steps: [
+                        {
+                            title: 'Variables',
+                            content: `<p>Es un valor que no cambia durante la ejecución de un programa. </p>
+                            <p>En Python, no existen constantes como en otros lenguajes de programación, sin embargo, se sigue una convención para indicar que una variable debe tratarse como una constante: <strong> Nombre en mayúsculas y separarla con guiones bajos (_) si es necesario.</strong> </p>
+
+                            <p>Ejemplos de constantes:</p>
+                             <ul>
+                                <li>PI = 3.1416</li>
+                                <li>GRAVITY = 9.81</li>
+                                <li>MAXIMO_USUARIOS= 1000</li>
+                            </ul>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/constantes.png',
+                            nextButton: ''
+                        }
+                    ]
                 }
             ]
         }

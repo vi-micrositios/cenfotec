@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: MApa de sitio y diagrama de CU</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section aria-labelledby="ejercicio-entrevista"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #d2232a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO CON ICONO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #d2232a, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-comments"></i>
+            </span>
+
+            <h3 id="ejercicio-entrevista"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Aclaración de dudas con el cliente
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #d2232a; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+            <span>
+                <strong>Objetivo</strong>: Preparar y realizar una entrevista breve con el cliente
+                para <strong>aclarar dudas, validar supuestos y obtener información adicional</strong>
+                sobre los requerimientos del sistema. El propósito no es presentar una solución,
+                sino aprender a realizar preguntas efectivas y obtener información útil para el análisis.
+            </span>
+        </div>
+
+
+        <!-- ============================================================
+         PARTE I: PREPARACIÓN DE LA ENTREVISTA
+         ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-1" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+
+                Preparar la entrevista
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Cada grupo dispondrá de <strong>15 minutos para prepararse</strong> antes de
+                realizar la entrevista con el cliente. A partir de los requerimientos y
+                artefactos elaborados durante el ejercicio, deberán identificar qué información
+                necesitan confirmar o profundizar.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Durante los 15 minutos de preparación:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        Revise los <strong>requerimientos funcionales</strong> disponibles.
+                    </li>
+
+                    <li>
+                        Identifique información <strong>ambigua, incompleta o contradictoria</strong>.
+                    </li>
+
+                    <li>
+                        Detecte los <strong>supuestos</strong> que el grupo está realizando.
+                    </li>
+
+                    <li>
+                        Prepare preguntas que permitan <strong>validar o corregir</strong> esos supuestos.
+                    </li>
+
+                    <li>
+                        Priorice las preguntas más importantes, considerando que la entrevista
+                        tendrá una duración máxima de <strong>15 minutos</strong>.
+                    </li>
+
+                    <li>
+                        Distribuya los roles dentro del grupo: <strong>entrevistador, encargado de tomar notas,
+                            observador o apoyo</strong>.
+                    </li>
+
+                </ul>
+            </div>
+
+
+        </div>
+
+
+        <!-- ============================================================
+         PARTE II: ENTREVISTA CON EL CLIENTE
+         ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-2" style="color: #C7AC19; font-size: 24px;" aria-hidden="true"></i>
+
+                Realizar la entrevista
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Cada grupo tendrá un máximo de <strong>15 minutos para entrevistar al cliente</strong>.
+                El equipo deberá conducir la conversación de manera ordenada, procurando obtener
+                respuestas concretas que permitan aclarar los requerimientos del sistema.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-microphone-lines" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Durante la entrevista:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        Inicie presentando brevemente el propósito de la entrevista.
+                    </li>
+
+                    <li>
+                        Realice preguntas <strong>claras, concretas y abiertas</strong> cuando sea necesario.
+                    </li>
+
+                    <li>
+                        Solicite ejemplos cuando una respuesta sea demasiado general.
+                    </li>
+
+                    <li>
+                        Evite asumir que una respuesta significa algo que el cliente no ha confirmado.
+                    </li>
+
+                    <li>
+                        Repregunte cuando exista alguna <strong>ambigüedad o contradicción</strong>.
+                    </li>
+
+                    <li>
+                        Tome nota de las decisiones, aclaraciones y nuevos requerimientos identificados.
+                    </li>
+
+                    <li>
+                        Finalice confirmando los puntos más importantes obtenidos durante la conversación.
+                    </li>
+
+                </ul>
+            </div>
+
+
+            <!-- EJEMPLOS -->
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Ejemplos de preguntas:</strong><br><br>
+
+                    • ¿Quiénes necesitan consultar esta información?<br>
+                    • ¿Qué información debe poder modificar cada tipo de usuario?<br>
+                    • ¿Qué sucede cuando la información registrada contiene un error?<br>
+                    • ¿Quién debe aprobar o validar la información ingresada?<br>
+                    • ¿Qué reportes son indispensables para el cliente?<br>
+                    • ¿Existe algún proceso que actualmente se realice de forma manual?<br>
+                    • ¿Qué ocurre si un usuario no completa el proceso?<br>
+                    • ¿Hay alguna información que deba mantenerse histórica y no pueda modificarse?
+
+                </p>
+
+            </div>
+
+
+            <!-- RESULTADO -->
+            <div
+                style="gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+                <span>
+
+                    <strong>Resultado esperado:</strong>
+
+                    Un conjunto de aclaraciones y decisiones obtenidas directamente del cliente
+                    que permita al grupo mejorar, validar o corregir los requerimientos del sistema.
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ============================================================
+         PARTE III: REFLEXIÓN POSTERIOR
+         ============================================================ -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-3" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+
+                Registrar los hallazgos
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Al finalizar la entrevista, el grupo deberá organizar la información obtenida
+                y determinar cómo las respuestas del cliente afectan su comprensión del sistema.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-clipboard-check" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Registre:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        Las principales <strong>dudas que fueron aclaradas</strong>.
+                    </li>
+
+                    <li>
+                        Los <strong>supuestos que fueron confirmados o descartados</strong>.
+                    </li>
+
+                    <li>
+                        Los nuevos requerimientos o necesidades identificadas.
+                    </li>
+
+                    <li>
+                        Los cambios que deberían realizarse en los artefactos elaborados previamente.
+                    </li>
+
+                    <li>
+                        Las preguntas que quedaron pendientes de resolver.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- RESULTADO FINAL -->
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+                <span>
+
+                    <strong>Resultado final:</strong>
+
+                    Una bitácora breve de la entrevista con las aclaraciones obtenidas,
+                    decisiones tomadas y ajustes que deberán considerarse en el análisis
+                    y diseño del sistema.
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+</body>
+
+
+</html>

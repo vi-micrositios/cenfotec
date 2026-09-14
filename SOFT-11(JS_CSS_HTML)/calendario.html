@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C3-2026</title>
+</head>
+
+<body>
+
+<div
+  style="width: 100%; max-width: 900px; height: auto; background: #164a98; border-top-right-radius: 50px; display: flex; flex-wrap: wrap; align-items: center; padding: 10px;">
+  <div class="course-labelhead" style="display: flex; align-items: center;">
+    <div class="labelhead-icon" style="margin-right: 10px; font-size: 24px;"><i
+        class="fa-regular fa-calendar-days" aria-hidden="true"></i> </div>
+  </div>
+  <h2 style="margin: 0; color: white; font-size: 24px; flex: 1;">Calendario de entregas</h2>
+</div>
+
+    <br>
+
+    <div id="taskManager"
+        style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: flex-start; font-family: 'Segoe UI', sans-serif; padding: 20px; background: #eaf1fb; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); max-width: 100%; margin: auto; border-left: 8px solid #164a98;">
+
+        <!-- Tarjeta Próxima entrega -->
+        <div id="proximaEntrega"
+            style="background: linear-gradient(135deg, #006aea, #164a98); color: white; border-radius: 16px; padding: 24px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); flex: 1 1 300px; min-width: 280px; position: relative;">
+            <div style="font-size: 20px; font-weight: bold; margin-bottom: 12px;">🚨 Próxima entrega</div>
+            <div id="contenidoEntrega">
+                <p>Cargando...</p>
+            </div>
+            <div style="position: absolute; bottom: 16px; right: 16px; font-size: 24px;">📦</div>
+        </div>
+
+        <!-- Tarjetas de eventos -->
+        <div id="listaEventos"
+            style="background: #ffffff; border-radius: 16px; padding: 24px; box-shadow: 0 0 12px rgba(0,0,0,0.07); flex: 1 1 300px; min-width: 280px; border-top: 6px solid #006aea;">
+            <h3 style="margin-top: 0; font-size: 18px; color: #164a98; margin-bottom: 12px;">📅 Próximas entregas</h3>
+            <div id="tarjetasEventos" style="display: flex; flex-direction: column; gap: 12px;"></div>
+        </div>
+
+    </div>
+
+    <script>
+        (function () {
+            function fechaLocal(fechaStr) {
+                const partes = fechaStr.split("-");
+                return new Date(partes[0], partes[1] - 1, partes[2]);
+            }
+
+            function obtenerEmoji(texto) {
+                if (texto.toLowerCase().includes("bitácora ")) return "📑";
+                if (texto.toLowerCase().includes("proyecto")) return "🛠️";
+                if (texto.toLowerCase().includes("exposición")) return "🗣";
+                return "📌";
+            }
+
+            const eventos = [{
+                fecha: "2026-09-17",
+                texto: "Bitácora 1"
+            },
+            {
+                fecha: "2026-09-29",
+                texto: "Bitácora 2"
+            },
+            {
+                fecha: "2026-11-03",
+                texto: "Bitácora 3"
+            },
+            {
+                fecha: "2026-12-03",
+                texto: "Bitácora 4"
+            },
+            {
+                fecha: "2026-10-29",
+                texto: "Exposición 1"
+            },
+            {
+                fecha: "2026-12-03",
+                texto: "Exposición  2"
+            },
+            {
+                fecha: "2026-10-29",
+                texto: "Avance del proyecto"
+            },
+            {
+                fecha: "2026-12-03",
+                texto: "Proyecto"
+            },
+            ];
+
+            const hoy = new Date();
+
+            const eventosConFecha = eventos
+                .map(e => ({
+                    ...e,
+                    fechaObj: fechaLocal(e.fecha),
+                    emoji: obtenerEmoji(e.texto)
+                }))
+                .sort((a, b) => a.fechaObj - b.fechaObj);
+
+            const proximos = eventosConFecha.filter(e => e.fechaObj >= hoy);
+
+            const proximo = proximos.length > 0 ? proximos[0] : null;
+
+            const siguientes = proximos.slice(1, 8);
+            const formato = {
+                day: '2-digit',
+                month: 'long',
+                year: 'numeric'
+            };
+
+            const entregaHTML = proximo ? `
+    <div style="font-size: 16px; margin-bottom: 8px;"><strong>${proximo.fechaObj.toLocaleDateString('es-CR', formato)}</strong></div>
+    <div style="font-size: 18px; font-weight: bold;">${proximo.emoji} ${proximo.texto}</div>
+    <div style="margin-top: 10px; font-size: 14px; color: #e0eaff;">📣 ¡En la pestaña Evaluaciones, encontrará la consigna correspondiente y el espacio habilitado para subir el o los entregables solicitados.!</div>
+  ` : `<p style="margin: 0;">No hay entregas pendientes.</p>`;
+
+            const tarjetasHTML = siguientes.map((e, i) => `
+    <div id="tarjeta-${i}" style="background: #f0f6ff; border-left: 4px solid #164a98; border-radius: 12px; padding: 12px 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: transform 0.2s ease, box-shadow 0.2s ease; cursor: pointer;">
+      <div style="font-size: 14px; color: #006aea; font-weight: bold;">${e.fechaObj.toLocaleDateString('es-CR', formato)}</div>
+      <div style="font-size: 15px; color: #333;">${e.emoji} ${e.texto}</div>
+    </div>
+  `).join('');
+
+            document.getElementById("contenidoEntrega").innerHTML = entregaHTML;
+            document.getElementById("tarjetasEventos").innerHTML = tarjetasHTML;
+
+            // Agregar efecto "hover" a cada tarjeta
+            siguientes.forEach((e, i) => {
+                const tarjeta = document.getElementById(`tarjeta-${i}`);
+                tarjeta.addEventListener("mouseenter", () => {
+                    tarjeta.style.transform = "translateY(-4px)";
+                    tarjeta.style.boxShadow = "0 6px 12px rgba(0,0,0,0.1)";
+                });
+                tarjeta.addEventListener("mouseleave", () => {
+                    tarjeta.style.transform = "translateY(0)";
+                    tarjeta.style.boxShadow = "0 2px 6px rgba(0,0,0,0.05)";
+                });
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
