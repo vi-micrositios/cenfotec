@@ -569,8 +569,8 @@ const data = {
                         {
                             title: 'Ejemplo de lista de revisión básica para un programa secuencial',
                             content: `
-                            <ul>
-                                <li>¿El programa pide todos los datos de entrada necesarios?
+                            <ol>
+                                <li>¿El programa pide todos los datos de entrada necesarios?</li>
                                 <li>¿Los nombres de las variables son descriptivos?</li>
                                 <li>¿El código está indentado correctamente?</li>
                                 <li>¿Hay comentarios donde se necesita?</li>
@@ -579,10 +579,50 @@ const data = {
                                 <li>¿Se probó con varios valores diferentes?</li>
                                 <li>¿El código sigue el estándar acordado?</li>
                                 <li>¿Hay líneas duplicadas que se puedan eliminar?</li>
-                                <li>¿El programa termina correctamente (no se queda "colgado")?</li>
+                                <li>¿El programa termina correctamente (no se queda "pegado")?</li>
                                 </ul> 
                                 
-                            </ul>`,
+                            </ol>`,
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm003-t004',
+                    label: 'Revisión conjunta',
+                    steps: [
+                        {
+                            title: 'Revisión conjunta de algoritmos y programas',
+                            content: `<p>También llamada peer review o code review, es un proceso en el que uno o varios compañeros de equipo leen, analizan y comentan el algoritmo o el programa escrito por otro. El objetivo no es criticar a la persona, sino mejorar el producto y compartir conocimiento.</p>
+                            <p>Proceso:</p>
+                            <ol>
+                                <li>Preparación: El autor del código lo comparte con los revisores (puede ser en papel, en una pantalla o mediante una herramienta como GitHub).</li>
+                                <li>Lectura individual: Cada revisor lee el código por su cuenta y anota dudas, errores o sugerencias.</li>
+                                <li>Reunión de revisión: Todos se juntan (presencial o virtualmente) y discuten los hallazgos.</li>
+                                <li>Clasificación de hallazgos:</li>
+                                <ul>
+                                    <li>Errores: El código no hace lo que debería.</li>
+                                    <li>Mejoras de estilo: Funciona, pero podría ser más claro.</li>
+                                    <li>Sugerencias: Ideas opcionales para optimizar o simplificar.</li>
+                                </ul>
+                                <li>Corrección: El autor corrige lo necesario y, si es pertinente, se vuelve a revisar.</li>
+                                <li>Aprobación: Cuando el código cumple con el estándar y funciona, se aprueba.</li>
+                            </ol>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/checklist.png',
+                            nextButton: 'Siguiente: Reglas'
+                        },
+                        {
+                            title: 'Reglas para una revisión conjunta exitosa',
+                            content: `
+                            <ol>
+                                <li>Revisar el código, no a la persona: Los comentarios deben ser sobre el código, nunca sobre la inteligencia o el esfuerzo del autor.</li>
+                                <li>Ser específico: En lugar de decir "esto está mal", decir "en la línea 5, la variable x no está definida antes de usarse".</li>
+                                <li>Ser respetuoso: Usar frases como "¿Qué le parece si...?" en lugar de "Esto está mal".</li>
+                                <li>Escuchar: El autor también puede defender sus decisiones si tienen fundamento.</li>
+                                </ul> 
+                                
+                            </ol>`,
                             nextButton: ''
                         }
                     ]
