@@ -190,8 +190,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    font-size: 1.3rem !important;
-    background-color: #690b32;
+    font-size: 2rem !important;
 }
 
 /* --- Navegación de pasos --- */
@@ -348,11 +347,6 @@
 
 .microsite-wrapper #appContainer:fullscreen .content-panel h4 {
     font-size: 1.6rem !important;
-}
-
-.microsite-wrapper .content-panel p {
-    background-color: #164a98;
-    font-size: 1.1rem !important;
 }
 
 .microsite-wrapper #appContainer:fullscreen .content-panel {
