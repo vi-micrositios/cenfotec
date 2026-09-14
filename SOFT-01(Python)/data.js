@@ -482,7 +482,7 @@ const data = {
                                 <li>No exceder, por ejemplo, 79 o 100 caracteres por línea, para que el código quede visible sin desplazarse horizontalmente.</li>
                             </ul>
                             
-                            <p><strong>Espacios y separació</strong></p>
+                            <p><strong>Espacios y separación</strong></p>
                             <ul>
                                 <li>Dejar un espacio alrededor de operadores: total = precio + impuesto (no total=precio+impuesto).</li>
                                 <li>Separar bloques lógicos con una línea en blanco.</li>
@@ -500,6 +500,90 @@ const data = {
                             
                             `,
                             nextButton: 'Siguiente: ¿Quién define el estándar?'
+                        }
+                    ]
+                },
+                {
+                    id: 'm003-t002',
+                    label: 'Estilo de programación',
+                    steps: [
+                        {
+                            title: '¿Qué es el estilo de programación?',
+                            content: `<p>Es la forma personal (pero consistente) en que un programador escribe su código. Mientras que el estándar es una regla impuesta por un equipo, el estilo es el conjunto de hábitos que usted desarrolla y que, si son buenos, coinciden con el estándar.</p>
+                            <p>El estilo abarca aspectos como:</p>
+                            <ul>
+                                <li>Cómo nombra sus variables.</li>
+                                <li>Cómo organiza sus funciones.</li>
+                                <li>Cómo comenta.</li>
+                                <li>Cómo estructura visualmente el código (espacios, saltos de línea).</li>
+                                <li>Cómo elige las estructuras de control (aunque en este módulo aún no ve condicionales ni bucles, el estilo se aplica desde lo más básico).</li>
+                            </ul>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/estilo.png',
+                            nextButton: 'Siguiente: Principios'
+                        },
+                        {
+                            title: 'Principios de un buen estilo',
+                            content: `
+                            <ul>
+                                <li>Claridad sobre astucia</li>
+                                <ul> 
+                                    <li>Es mejor escribir un código largo pero claro que uno corto pero confuso. La computadora no premia la brevedad; el ser humano que lea su código sí premia la claridad.</li>
+                                </ul> 
+                                <li>Consistencia</li>
+                                <ul> 
+                                    <li>Si usted decide usar snake_case para variables, úselo en todo el programa. No mezcle edad_usuario con edadUsuario en el mismo archivo.</li>
+                                </ul> 
+                                <li>Simplicidad</li>
+                                <ul> 
+                                    <li>Evite trucos innecesarios. Si puede resolver algo en tres líneas sencillas, no lo haga en una línea enrevesada.</li>
+                                </ul> 
+                                <li>Modularidad </li>
+                                <ul> 
+                                    <li>Divida el programa en partes pequeñas y reutilizables (funciones). Esto es parte del estilo.</li>
+                                </ul> 
+                                
+                            </ul>`,
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm003-t003',
+                    label: 'Listas de revisión',
+                    steps: [
+                        {
+                            title: 'Listas de revisión (checklist)',
+                            content: `<p>Conjunto ordenado de preguntas o puntos que un programador verifica antes de dar por terminado un programa. Es como la lista que usa un piloto antes de despegar: aunque sea experto, revisa punto por punto para no olvidar nada.</p>
+                            <p>Son útiles para:</p>
+                            <ul>
+                                <li>Evitar olvidos comunes.</li>
+                                <li>Estandarizar la calidad.</li>
+                                <li>Ahorrar tiempo porque detecta errores antes de que lleguen al usuario.</li>
+                                <li>Como guía de aprendizaje para programadores junior.</li>
+                            </ul>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/checklist.png',
+                            nextButton: 'Siguiente: Ejemplo'
+                        },
+                        {
+                            title: 'Ejemplo de lista de revisión básica para un programa secuencial',
+                            content: `
+                            <ul>
+                                <li>¿El programa pide todos los datos de entrada necesarios?
+                                <li>¿Los nombres de las variables son descriptivos?</li>
+                                <li>¿El código está indentado correctamente?</li>
+                                <li>¿Hay comentarios donde se necesita?</li>
+                                <li>¿El programa maneja valores inesperados (por ejemplo, letras donde se esperan números)?</li>
+                                <li>¿El resultado que muestra es el correcto según la lógica?</li>
+                                <li>¿Se probó con varios valores diferentes?</li>
+                                <li>¿El código sigue el estándar acordado?</li>
+                                <li>¿Hay líneas duplicadas que se puedan eliminar?</li>
+                                <li>¿El programa termina correctamente (no se queda "colgado")?</li>
+                                </ul> 
+                                
+                            </ul>`,
+                            nextButton: ''
                         }
                     ]
                 }
