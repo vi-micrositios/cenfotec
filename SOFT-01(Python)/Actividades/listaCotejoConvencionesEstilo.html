@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Lista de cotejo </title>
+    <!-- Font Awesome 6 (CDN) – no es un estilo, es una librería de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+
+    <section aria-labelledby="ejercicio-lista-cotejo" style="background:#ffffff;border-radius:20px;padding:28px 30px;margin:0 auto;width:100%;box-shadow:0 8px 30px rgba(22,74,152,0.12);border-left:6px solid #4aa147;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;"> <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;border-bottom:3px solid #9CC8FF;padding-bottom:14px;flex-wrap:wrap;"> <span style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:linear-gradient(135deg,#4aa147,#006AEA);border-radius:12px;color:#ffffff;font-size:24px;flex-shrink:0;box-shadow:0 4px 10px rgba(0,146,141,0.35);" aria-hidden="true"> <i class="fa-solid fa-clipboard-check"></i> </span>
+<h3 id="ejercicio-lista-cotejo" style="margin:0;color:#164a98;font-size:26px;font-weight:700;letter-spacing:-0.3px;">
+    Ejercicio: Lista de cotejo para revisar programas secuenciales
+</h3>
+
+</div> <div style="background:#eef5ff;border-left:5px solid #4aa147;padding:16px 18px;margin:0 0 25px 0;border-radius:8px;color:#1a3a6b;font-size:16px;line-height:1.6;"> <strong>Instrucciones:</strong> Analice el programa proporcionado y utilice la siguiente lista de cotejo para determinar si cumple con los criterios de <strong>estándar y estilo de programación</strong>. Marque cada criterio y escriba una observación cuando sea necesario. </div> <div style="background:#fafcff;border:2px solid #c8d1df;border-radius:14px;padding:22px;margin-bottom:28px;">
+<h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+    <i class="fa-solid fa-code" style="color:#c81f66;font-size:22px;" aria-hidden="true"></i>
+    Programa que debe revisar
+</h4>
+
+<pre style="background:#172033;color:#f4f7fb;padding:18px;border-radius:10px;overflow-x:auto;font-size:14px;line-height:1.6;margin:0;"><code>nombreCliente=input("Digite el nombre del cliente:")
+
+
+nombre_plato = input("Digite el nombre del plato: ")
+precio=float(input("Digite el precio del plato:"))
+cantidad=int(input("Digite la cantidad de platos: "))
+
+subtotal=preciocantidad
+impuesto=subtotal13/100
+total=subtotal+impuesto
+
+print("cliente:",nombreCliente)
+print("plato:",nombre_plato)
+print("subtotal:",subtotal)
+print("impuesto:",impuesto)
+print("total a pagar:",total)</code></pre>
+
+</div> <div style="background:#f8fbff;border:2px solid #9CC8FF;border-radius:14px;padding:22px;margin-bottom:28px;">
+<h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+    <i class="fa-solid fa-clipboard-list" style="color:#006AEA;" aria-hidden="true"></i>
+    Lista de cotejo
+</h4>
+
+<p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 18px 0;">
+    Marque <strong>Sí</strong> si el programa cumple con el criterio.
+    Marque <strong>No</strong> si encuentra un error.
+    En <strong>Observación</strong>, explique brevemente el problema encontrado
+    o indique por qué considera que el criterio se cumple.
+</p>
+
+<div style="overflow-x:auto;">
+
+    <table style="width:100%;border-collapse:collapse;color:#1c3b64;font-size:14px;">
+
+        <thead>
+            <tr style="background:#164a98;color:#ffffff;">
+                <th style="padding:12px;border:1px solid #c8d1df;text-align:left;min-width:280px;">Criterio</th>
+                <th style="padding:12px;border:1px solid #c8d1df;text-align:center;width:70px;">Sí</th>
+                <th style="padding:12px;border:1px solid #c8d1df;text-align:center;width:70px;">No</th>
+                <th style="padding:12px;border:1px solid #c8d1df;text-align:left;min-width:250px;">Observación</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td style="padding:12px;border:1px solid #c8d1df;">1. ¿Las variables tienen nombres descriptivos?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio1_si" aria-label="Criterio 1 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio1_no" aria-label="Criterio 1 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion1" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr style="background:#f8fbff;">
+                <td style="padding:12px;border:1px solid #c8d1df;">2. ¿Se utiliza una misma convención para nombrar las variables?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio2_si" aria-label="Criterio 2 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio2_no" aria-label="Criterio 2 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion2" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding:12px;border:1px solid #c8d1df;">3. ¿Se utilizan espacios alrededor de los operadores?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio3_si" aria-label="Criterio 3 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio3_no" aria-label="Criterio 3 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion3" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr style="background:#f8fbff;">
+                <td style="padding:12px;border:1px solid #c8d1df;">4. ¿Los mensajes de entrada son claros y consistentes?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio4_si" aria-label="Criterio 4 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio4_no" aria-label="Criterio 4 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion4" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding:12px;border:1px solid #c8d1df;">5. ¿Las operaciones matemáticas están correctamente escritas?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio5_si" aria-label="Criterio 5 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio5_no" aria-label="Criterio 5 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion5" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr style="background:#f8fbff;">
+                <td style="padding:12px;border:1px solid #c8d1df;">6. ¿Los resultados se almacenan en variables antes de mostrarlos?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio6_si" aria-label="Criterio 6 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio6_no" aria-label="Criterio 6 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion6" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding:12px;border:1px solid #c8d1df;">7. ¿La salida de información es clara y fácil de leer?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio7_si" aria-label="Criterio 7 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio7_no" aria-label="Criterio 7 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion7" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr style="background:#f8fbff;">
+                <td style="padding:12px;border:1px solid #c8d1df;">8. ¿El código mantiene un estilo consistente?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio8_si" aria-label="Criterio 8 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio8_no" aria-label="Criterio 8 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion8" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="padding:12px;border:1px solid #c8d1df;">9. ¿El programa es fácil de leer y comprender?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio9_si" aria-label="Criterio 9 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio9_no" aria-label="Criterio 9 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion9" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+            <tr style="background:#f8fbff;">
+                <td style="padding:12px;border:1px solid #c8d1df;">10. ¿El programa cumple con lo solicitado en el problema?</td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio10_si" aria-label="Criterio 10 Sí" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">
+                    <input type="checkbox" name="criterio10_no" aria-label="Criterio 10 No" style="width:20px;height:20px;">
+                </td>
+
+                <td style="padding:8px;border:1px solid #c8d1df;">
+                    <textarea name="observacion10" rows="2" placeholder="Escriba su observación..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:6px;padding:8px;font-family:inherit;resize:vertical;"></textarea>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+</div> <div style="background:#f7f1fa;border:2px solid #c9a6d5;border-radius:14px;padding:22px;margin-bottom:22px;">
+<h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+    <i class="fa-solid fa-pen-to-square" style="color:#712c86;" aria-hidden="true"></i>
+    Parte 2: Reflexión
+</h4>
+
+<p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 12px 0;">
+    Después de completar la lista de cotejo, responda:
+</p>
+
+<label for="reflexion" style="display:block;color:#164a98;font-weight:600;margin-bottom:8px;">
+    ¿Cuál considera que es el error de estilo más importante encontrado en el programa y por qué?
+</label>
+
+<textarea id="reflexion" name="reflexion" rows="5" placeholder="Escriba aquí su respuesta..." style="width:100%;box-sizing:border-box;border:1px solid #b8c4d4;border-radius:8px;padding:12px;font-family:inherit;font-size:15px;resize:vertical;"></textarea>
+
+</div> <div style="display:flex;align-items:flex-start;gap:10px;background:#e8f5e9;border-radius:10px;padding:16px;color:#2e7d32;font-size:14px;line-height:1.6;">
+<i class="fa-solid fa-lightbulb" aria-hidden="true" style="font-size:20px;"></i>
+
+<span>
+    <strong>Recuerde:</strong> Revisar un programa no consiste únicamente en comprobar
+    que funcione. También debemos verificar que el código sea claro, consistente,
+    ordenado y fácil de comprender.
+</span>
+
+</div> </section>
+
+</body>
+
+</html>

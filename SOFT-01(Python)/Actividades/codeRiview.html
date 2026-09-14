@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Code review </title>
+    <!-- Font Awesome 6 (CDN) – no es un estilo, es una librería de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="ejercicio-code-review"
+        style="background:#ffffff;border-radius:20px;padding:28px 30px;margin:0 auto;width:100%;box-shadow:0 8px 30px rgba(22,74,152,0.12);border-left:6px solid #712c86;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
+        <!-- ENCABEZADO -->
+        <div
+            style="display:flex;align-items:center;gap:14px;margin-bottom:18px;border-bottom:3px solid #9CC8FF;padding-bottom:14px;flex-wrap:wrap;">
+            <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:linear-gradient(135deg,#712c86,#006AEA);border-radius:12px;color:#ffffff;font-size:24px;flex-shrink:0;box-shadow:0 4px 10px rgba(0,146,141,0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-code-branch"></i>
+            </span>
+
+            <h3 id="ejercicio-code-review"
+                style="margin:0;color:#164a98;font-size:26px;font-weight:700;letter-spacing:-0.3px;">
+                Ejercicio: Code Review en parejas
+            </h3>
+
+        </div> <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background:#eef5ff;border-left:5px solid #712c86;padding:16px 18px;margin:0 0 25px 0;border-radius:8px;color:#1a3a6b;font-size:16px;line-height:1.6;">
+            <strong>Instrucciones:</strong> Formen parejas e intercambien el programa desarrollado
+            en la actividad de la <strong>Semana 2: Entrada, procesamiento y salida</strong>.
+            Cada estudiante asumirá el rol de <strong>revisor</strong> del código de su compañero.
+            El propósito de esta actividad es practicar un proceso de <strong>Code Review</strong>
+            para identificar errores, problemas de estilo y oportunidades de mejora.
+
+        </div> <!-- CONTEXTO -->
+        <div style="background:#fafcff;border:2px solid #c8d1df;border-radius:14px;padding:22px;margin-bottom:28px;">
+            <h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+                <i class="fa-solid fa-store" style="color:#c81f66;font-size:22px;" aria-hidden="true"></i>
+                Código que será revisado
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0;">
+                El programa corresponde al ejercicio de la Semana 2:
+                <strong>Una tienda desea calcular cuánto debe pagar un cliente por un producto.</strong>
+                El programa solicita el nombre del producto, el precio unitario y la cantidad
+                de unidades; posteriormente calcula y muestra el total a pagar.
+            </p>
+
+            <div
+                style="background:#eef5ff;border-left:5px solid #006AEA;padding:14px 16px;margin-top:18px;border-radius:8px;color:#1a3a6b;font-size:14px;line-height:1.6;">
+                <strong>Importante:</strong> El código que usted revisará fue escrito por su
+                compañero. No debe modificarlo directamente durante la primera revisión.
+                Primero debe analizarlo y registrar sus hallazgos.
+            </div>
+
+        </div> <!-- PARTE 1 -->
+        <div style="background:#f8fbff;border:2px solid #9CC8FF;border-radius:14px;padding:22px;margin-bottom:22px;">
+            <h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+                <i class="fa-solid fa-book-open" style="color:#006AEA;" aria-hidden="true"></i>
+                Parte 1: Lectura individual del código
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 14px 0;">
+                De manera individual, lea cuidadosamente el programa que recibió de su compañero.
+                No discuta todavía sus observaciones con él o ella.
+            </p>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 10px 0;">
+                Durante la lectura, revise especialmente:
+            </p>
+
+            <ul style="margin:0;padding-left:24px;color:#1c3b64;font-size:15px;line-height:1.8;">
+                <li>Los nombres de las variables.</li>
+                <li>La consistencia de la convención utilizada.</li>
+                <li>Los espacios alrededor de los operadores.</li>
+                <li>La indentación.</li>
+                <li>La claridad de los mensajes de entrada y salida.</li>
+                <li>La organización del código.</li>
+                <li>La claridad y legibilidad del programa.</li>
+                <li>La correcta utilización de los tipos de datos.</li>
+                <li>La lógica del cálculo del total.</li>
+            </ul>
+
+            <div
+                style="background:#fffaf2;border-left:5px solid #712c86;padding:14px 16px;margin-top:18px;border-radius:8px;color:#5d4a08;font-size:14px;line-height:1.6;">
+                <strong>Durante esta etapa:</strong> Anote las dudas, errores y sugerencias
+                que encuentre. Evite corregir el código directamente; primero registre
+                qué encontró y por qué considera que debe revisarse.
+            </div>
+
+        </div> <!-- PARTE 2 -->
+        <div style="background:#f7f1fa;border:2px solid #c9a6d5;border-radius:14px;padding:22px;margin-bottom:22px;">
+            <h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+                <i class="fa-solid fa-people-arrows" style="color:#712c86;" aria-hidden="true"></i>
+                Parte 2: Reunión de revisión
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 14px 0;">
+                Después de realizar la lectura individual, reúnase con su compañero.
+                Compartan y discutan los hallazgos encontrados.
+            </p>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 10px 0;">
+                Durante la reunión:
+            </p>
+
+            <ol style="margin:0;padding-left:24px;color:#1c3b64;font-size:15px;line-height:1.8;">
+                <li>Explique cada observación realizada.</li>
+                <li>Indique en qué parte del código encontró el problema.</li>
+                <li>Explique por qué considera que debe corregirse.</li>
+                <li>Escuche la explicación del autor del código.</li>
+                <li>Acuerden cuáles hallazgos realmente requieren atención.</li>
+                <li>Propongan una forma adecuada de corregirlos.</li>
+            </ol>
+
+            <div
+                style="background:#eef5ff;border-left:5px solid #006AEA;padding:14px 16px;margin-top:18px;border-radius:8px;color:#1a3a6b;font-size:14px;line-height:1.6;">
+                <strong>Recuerde:</strong> Una revisión de código no consiste en señalar
+                errores de manera personal. El objetivo es mejorar el código mediante
+                una comunicación respetuosa y fundamentada.
+            </div>
+
+        </div> <!-- PARTE 3 -->
+        <div style="background:#fffaf2;border:2px solid #e5c76b;border-radius:14px;padding:22px;margin-bottom:22px;">
+            <h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+                <i class="fa-solid fa-tags" style="color:#712c86;" aria-hidden="true"></i>
+                Parte 3: Clasificación de los hallazgos
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 16px 0;">
+                Clasifique cada hallazgo identificado durante la revisión en una de las
+                siguientes categorías:
+            </p>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;">
+
+                <div style="background:#fff0f0;border:2px solid #e4a5a5;border-radius:10px;padding:16px;">
+                    <h5 style="margin:0 0 8px;color:#a52828;font-size:17px;">
+                        <i class="fa-solid fa-bug"></i> Error
+                    </h5>
+                    <p style="margin:0;color:#5d2b2b;font-size:14px;line-height:1.6;">
+                        El código no hace lo que debería o produce un resultado incorrecto.
+                    </p>
+                </div>
+
+                <div style="background:#fffaf0;border:2px solid #e5c76b;border-radius:10px;padding:16px;">
+                    <h5 style="margin:0 0 8px;color:#8a6900;font-size:17px;">
+                        <i class="fa-solid fa-paintbrush"></i> Mejora de estilo
+                    </h5>
+                    <p style="margin:0;color:#5d4a08;font-size:14px;line-height:1.6;">
+                        El código funciona, pero puede escribirse de forma más clara,
+                        consistente u ordenada.
+                    </p>
+                </div>
+
+                <div style="background:#eef5ff;border:2px solid #9CC8FF;border-radius:10px;padding:16px;">
+                    <h5 style="margin:0 0 8px;color:#164a98;font-size:17px;">
+                        <i class="fa-solid fa-lightbulb"></i> Sugerencia
+                    </h5>
+                    <p style="margin:0;color:#1c3b64;font-size:14px;line-height:1.6;">
+                        Es una propuesta opcional que podría mejorar o simplificar el código,
+                        pero no es indispensable.
+                    </p>
+                </div>
+
+            </div>
+
+        </div> <!-- TABLA DE HALLAZGOS -->
+        <div style="background:#fafcff;border:2px solid #c8d1df;border-radius:14px;padding:22px;margin-bottom:22px;">
+            <h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+                <i class="fa-solid fa-table-list" style="color:#c81f66;" aria-hidden="true"></i>
+                Registro de hallazgos
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 14px 0;">
+                Registre al menos <strong>tres hallazgos</strong> encontrados durante la
+                revisión del código de su compañero.
+            </p>
+
+            <div style="overflow-x:auto;">
+
+                <table style="width:100%;border-collapse:collapse;color:#1c3b64;font-size:14px;">
+
+                    <thead>
+                        <tr style="background:#164a98;color:#ffffff;">
+                            <th style="padding:12px;border:1px solid #c8d1df;text-align:center;">#</th>
+                            <th style="padding:12px;border:1px solid #c8d1df;text-align:left;">Parte del código</th>
+                            <th style="padding:12px;border:1px solid #c8d1df;text-align:left;">Descripción del hallazgo
+                            </th>
+                            <th style="padding:12px;border:1px solid #c8d1df;text-align:left;">Categoría</th>
+                            <th style="padding:12px;border:1px solid #c8d1df;text-align:left;">Propuesta</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">1</td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                        </tr>
+
+                        <tr style="background:#f8fbff;">
+                            <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">2</td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                        </tr>
+
+                        <tr>
+                            <td style="padding:12px;border:1px solid #c8d1df;text-align:center;">3</td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                            <td style="padding:12px;border:1px solid #c8d1df;"></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div> <!-- PARTE 4 -->
+        <div style="background:#eef7f6;border:2px solid #9bd1cc;border-radius:14px;padding:22px;margin-bottom:22px;">
+            <h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+                <i class="fa-solid fa-comments" style="color:#00928d;" aria-hidden="true"></i>
+                Parte 4: Conclusiones de la revisión
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 10px 0;">
+                Al finalizar la reunión, respondan en conjunto:
+            </p>
+
+            <ul style="margin:0;padding-left:24px;color:#1c3b64;font-size:15px;line-height:1.8;">
+                <li>¿Cuál fue el error más importante encontrado?</li>
+                <li>¿Cuál fue la principal mejora de estilo propuesta?</li>
+                <li>¿Qué sugerencia decidieron no aplicar y por qué?</li>
+                <li>¿Qué aprendieron al revisar el código de otra persona?</li>
+            </ul>
+
+        </div> <!-- PRODUCTO -->
+        <div style="background:#f7f1fa;border:2px solid #c9a6d5;border-radius:14px;padding:22px;margin-bottom:22px;">
+            <h4 style="margin:0 0 14px 0;color:#164a98;font-size:20px;display:flex;align-items:center;gap:10px;">
+                <i class="fa-solid fa-file-circle-check" style="color:#712c86;" aria-hidden="true"></i>
+                Producto de la actividad
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 10px 0;">
+                Cada estudiante deberá entregar el registro de la revisión realizada al
+                código de su compañero, incluyendo:
+            </p>
+
+            <ul style="margin:0;padding-left:24px;color:#1c3b64;font-size:15px;line-height:1.8;">
+                <li>Los hallazgos identificados.</li>
+                <li>La clasificación de cada hallazgo.</li>
+                <li>La explicación de los errores o mejoras encontradas.</li>
+                <li>Las propuestas de corrección.</li>
+                <li>Las conclusiones de la reunión de revisión.</li>
+            </ul>
+
+        </div> <!-- CIERRE -->
+        <div
+            style="gap:10px;background:#e8f5e9;border-radius:10px;padding:16px;color:#2e7d32;font-size:14px;line-height:1.6;">
+            <i class="fa-solid fa-people-group" aria-hidden="true" style="font-size:20px;"></i>
+
+            <span>
+                <strong>Recuerde:</strong> El propósito de un Code Review no es encontrar
+                “culpables”, sino encontrar oportunidades para mejorar el código.
+                Una buena revisión debe ser <strong>objetiva, respetuosa y fundamentada
+                    en criterios de programación</strong>.
+            </span>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
