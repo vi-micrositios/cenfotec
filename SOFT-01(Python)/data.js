@@ -422,36 +422,55 @@ const data = {
                     ]
                 }
             ]
-        }
-        /** Plantilla nuevo módulo
-        ,
+        },
         {
-            id: 'req-modulo_003',
-            label: 'Ingeniería de requerimientos',
+            id: 'modulo_003_calidad',
+            label: 'Calidad',
             subtemas: [
                 {
                     id: 'm003-t001',
-                    label: 'Tema 01 del módulo 03',
+                    label: 'Estándar de codificación',
                     steps: [
                         {
-                            title: 'Contenido 1 / diapositiva 1',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: 'Siguiente: Paso 2'
+                            title: 'Estándar de codificación propuesto para el lenguaje de programación',
+                            content: `<p>conjunto de reglas acordadas por un equipo o una organización para escribir código de manera uniforme. No se trata de reglas arbitrarias, sino de decisiones tomadas para que todo el mundo escriba de la misma forma y cualquier persona pueda leer el código sin confusión.</p>`,
+                            nextButton: 'Siguiente: ¿Por qué es necesario?'
                         },
                         {
-                            title: 'Contenido 2 / diapositiva 2',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: 'Siguiente: Paso 2'
+                            title: '¿Por qué es necesario?',
+                            content: `
+                            <ul>
+                                <li>Legibilidad: Un código uniforme es más fácil de leer y entender.</li>
+                                <li>Mantenimiento: Cualquier miembro del equipo puede corregir o ampliar el código sin perderse.</li>
+                                <li>Reducción de errores: Las reglas evitan confusiones que llevan a fallos.</li>
+                                <li>Profesionalismo: Un código limpio refleja disciplina y respeto por el trabajo.</li>
+                            </ul>`,
+                            nextButton: 'Siguiente: Ejemplos de reglas'
                         },
                         {
-                            title: 'Contenido 3 / diapositiva 3',
-                            content: `<p>Contenido en construcción</p>`,
+                            title: 'Ejemplos de reglas típicas en un estándar',
+                            content: `<p><strong>Nombres de variables y funciones</strong></p>
+                            <ul>
+                                <li>Usar nombres descriptivos, no letras sueltas. Incorrecto: x = 10. Correcto: edad_usuario = 10.
+                                <li>Dependiendo del lenguaje, se usa una convención:</li>
+                                <li>camelCase: edadUsuario, calcularTotal (común en Java, JavaScript).</li>
+                                <li>snake_case: edad_usuario, calcular_total (común en Python, C).</li>
+                                <li>PascalCase para clases: MiClase, GestorUsuarios.</li>
+                            </ul>
+                            
+                            <p><strong>Indentación (sangría)</</strong>p>
+                            <ul>
+                                <li> Cada nivel de anidación (por ejemplo, dentro de una función o un bloque) debe desplazarse hacia la derecha una cantidad fija de espacios.</li>
+                                <li>Lo más común: 4 espacios por nivel en Python; 2 o 4 en otros lenguajes.</li>
+                            </ul>`,
                             nextButton: ' '
                         }
                     ]
                 }
             ]
-        },
+        }
+        /** Plantilla nuevo módulo
+        ,
         {
             id: 'modulo_004',
             label: 'Gestión de requerimientos',
