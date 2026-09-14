@@ -349,7 +349,8 @@
     font-size: 1.6rem !important;
 }
 
-.microsite-wrapper #appContainer:fullscreen .content-panel p {
+.microsite-wrapper .content-panel p {
+    background-color: #164a98;
     font-size: 1.1rem !important;
 }
 
