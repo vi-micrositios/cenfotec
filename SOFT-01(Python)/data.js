@@ -119,7 +119,7 @@ const data = {
                                         <li>Mostrar el resultado.</li>
                                     </ol>
                                     <p>Programa en Python</p>
-                                    <p class="p-code">
+                                    <p class="code">
                                         base = float(input("Ingrese la base: "))
                                         altura = float(input("Ingrese la altura: "))
                                         area = base * altura
@@ -818,15 +818,7 @@ const data = {
                         {
                             title: 'Paso 1: Entender qué debería hacer el programa',
                             content: `
-                                <p style="gap:14px; margin-bottom:15px;             ">
-                                    <i class="fa-solid fa-lightbulb" aria-hidden="true" style="font-size:30px;color:#006eae;"></i>
-
-                                    <strong style=" color:#006eae; ">
-                                        Antes de probar, hay que entender.
-                                    </strong>
-                                </p>
-
-                                <p style="margin:0;line-height:1.7;">Tener claro el <strong>algoritmo</strong>, las <strong>entradas</strong> y las <strong>salidas esperadas</strong>. </p>
+                                <p>Tener claro el <strong>algoritmo</strong>, las <strong>entradas</strong> y las <strong>salidas esperadas</strong>. </p>
 
                                 <p class="p-nota">
                                     <i class="fa-solid fa-code" aria-hidden="true" style="color:#006eae;margin-right:8px;"></i>
@@ -836,310 +828,78 @@ const data = {
                             `,
                             nextButton: 'Siguiente: Paso 2'
                         },
-
                         {
                             title: 'Paso 2: Diseñar los casos de prueba',
                             content: `
-        <div style="
-            border-left:5px solid #712c86;
-            padding:20px;
-            background:#faf5fc;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-table-list"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#712c86;"></i>
+                                <p>Crear una tabla de casos de prueba que contemple diferentes situaciones.</p>
 
-                <strong style="
-                    font-size:20px;
-                    color:#712c86;
-                ">
-                    Preparar las pruebas
-                </strong>
-            </div>
-
-            <p style="line-height:1.7;margin-top:0;">
-                Crear una tabla de casos de prueba que contemple
-                diferentes situaciones.
-            </p>
-
-            <div style="
-                display:grid;
-                grid-template-columns:repeat(2,1fr);
-                gap:10px;
-                margin-top:15px;
-            ">
-
-                <div style="
-                    padding:12px;
-                    background:#fff;
-                    border-radius:8px;
-                    border:1px solid #e4d8e9;
-                ">
-                    <i class="fa-solid fa-circle-check"
-                       aria-hidden="true"
-                       style="color:#4aa147;"></i>
-                    <strong> Normal</strong>
-                </div>
-
-                <div style="
-                    padding:12px;
-                    background:#fff;
-                    border-radius:8px;
-                    border:1px solid #e4d8e9;
-                ">
-                    <i class="fa-solid fa-ruler-horizontal"
-                       aria-hidden="true"
-                       style="color:#712c86;"></i>
-                    <strong> Límite</strong>
-                </div>
-
-                <div style="
-                    padding:12px;
-                    background:#fff;
-                    border-radius:8px;
-                    border:1px solid #e4d8e9;
-                ">
-                    <i class="fa-solid fa-ban"
-                       aria-hidden="true"
-                       style="color:#d2232a;"></i>
-                    <strong> Inválido</strong>
-                </div>
-
-                <div style="
-                    padding:12px;
-                    background:#fff;
-                    border-radius:8px;
-                    border:1px solid #e4d8e9;
-                ">
-                    <i class="fa-solid fa-bolt"
-                       aria-hidden="true"
-                       style="color:#00734a;"></i>
-                    <strong> Extremo</strong>
-                </div>
-
-            </div>
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                                <ul style="list-style-type: none;">
+                                    <li> <i class="fa-solid fa-circle-check" aria-hidden="true" style="color:#4aa147;"></i>  Normal </li>
+                                    <li> <i class="fa-solid fa-ruler-horizontal" aria-hidden="true" style="color:#712c86;"></i> Límite</li>
+                                    <li> <i class="fa-solid fa-ban" aria-hidden="true" style="color:#d2232a;"></i> Inválido</li>
+                                    <li> <i class="fa-solid fa-bolt" aria-hidden="true" style="color:#00734a;"></i> Extremo</li>
+                                </ul>
+                            `,
                             nextButton: 'Siguiente: Paso 3'
                         },
-
                         {
                             title: 'Paso 3: Ejecutar el programa con cada caso',
                             content: `
-        <div style="
-            border-left:5px solid #00928d;
-            padding:20px;
-            background:#f2fbfa;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-play"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#00928d;"></i>
+                                <p>Ejecutar el programa con <strong>cada caso de prueba</strong> y anotar si el resultado coincide con lo esperado.</p>
 
-                <strong style="
-                    font-size:20px;
-                    color:#00928d;
-                ">
-                    Ejecutar y comparar
-                </strong>
-            </div>
+                                <p>
+                                    <span style=" padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
+                                        Resultado esperado
+                                    </span>
 
-            <p style="line-height:1.7;margin:0;">
-                Ejecutar el programa con <strong>cada caso de prueba</strong>
-                y anotar si el resultado coincide con lo esperado.
-            </p>
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true" style="color:#00928d;font-size:20px;"></i>
 
-            <div style="
-                margin-top:18px;
-                display:flex;
-                align-items:center;
-                justify-content:center;
-                gap:15px;
-                flex-wrap:wrap;
-            ">
-
-                <span style="
-                    padding:10px 16px;
-                    background:#ffffff;
-                    border:2px solid #00928d;
-                    border-radius:8px;
-                ">
-                    Resultado esperado
-                </span>
-
-                <i class="fa-solid fa-arrow-right"
-                   aria-hidden="true"
-                   style="color:#00928d;font-size:20px;"></i>
-
-                <span style="
-                    padding:10px 16px;
-                    background:#ffffff;
-                    border:2px solid #00928d;
-                    border-radius:8px;
-                ">
-                    Resultado obtenido
-                </span>
-
-            </div>
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                                    <span style=" padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
+                                        Resultado obtenido
+                                    </span>
+                                </p>
+                            `,
                             nextButton: 'Siguiente: Paso 4'
                         },
-
                         {
                             title: 'Paso 4: Identificar los fallos',
                             content: `
-        <div style="
-            border-left:5px solid #d2232a;
-            padding:20px;
-            background:#fff5f5;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-triangle-exclamation"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#d2232a;"></i>
+                                <p>Si un caso falla, registrar exactamente <strong>qué salida dio el programa</strong> y </strong>qué salida se esperaba</strong>.</p>
 
-                <strong style="
-                    font-size:20px;
-                    color:#d2232a;
-                ">
-                    Registrar el fallo
-                </strong>
-            </div>
+                                <p style=" padding:15px; background:#ffffff; border-radius:8px; border:1px solid #f0cccc;">
+                                    <i class="fa-solid fa-xmark" aria-hidden="true" style="color:#d2232a;"></i>
+                                    <strong style="color:#d2232a;"> Salida obtenida </strong>
 
-            <p style="line-height:1.7;margin-top:0;">
-                Si un caso falla, registrar exactamente
-                <strong>qué salida dio el programa</strong> y
-                <strong>qué salida se esperaba</strong>.
-            </p>
+                                    <span style="margin-top:8px;"> 30 </span>
+                                </p>
 
-            <div style="
-                margin-top:18px;
-                display:grid;
-                grid-template-columns:1fr 1fr;
-                gap:12px;
-            ">
+                                <p style=" padding:15px; background:#ffffff; border-radius:8px; border:1px solid #c9e2d4;">
+                                    <i class="fa-solid fa-check" aria-hidden="true" style="color:#00734a;"></i>
+                                    <strong style="color:#d2232a;"> Salida esperada </strong>
 
-                <div style="
-                    padding:15px;
-                    background:#ffffff;
-                    border-radius:8px;
-                    border:1px solid #f0cccc;
-                ">
-                    <i class="fa-solid fa-xmark"
-                       aria-hidden="true"
-                       style="color:#d2232a;"></i>
-
-                    <strong style="color:#d2232a;">
-                        Salida obtenida
-                    </strong>
-
-                    <div style="margin-top:8px;">
-                        30
-                    </div>
-                </div>
-
-                <div style="
-                    padding:15px;
-                    background:#ffffff;
-                    border-radius:8px;
-                    border:1px solid #c9e2d4;
-                ">
-                    <i class="fa-solid fa-check"
-                       aria-hidden="true"
-                       style="color:#00734a;"></i>
-
-                    <strong style="color:#00734a;">
-                        Salida esperada
-                    </strong>
-
-                    <div style="margin-top:8px;">
-                        50
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                                    <span style="margin-top:8px;"> 50 </span>
+                                </p>
+                            `,
                             nextButton: 'Siguiente: Paso 5'
+                        },{
+                            title: 'Paso 5: Localizar la causa del fallo',
+                            content: `
+                                <p>Leer el código línea por línea y utilizar una tabla de traza para simular la ejecución.</p>
+
+                                <p class="p-nota">
+                                    <i class="fa-solid fa-bug" aria-hidden="true" style="color:#d2232a; margin-right:8px;"></i>
+                                    <strong>Punto de control</strong>
+                                    Imprimir valores intermedios de las variables para descubrir dónde se produce la desviación.
+                                </p>
+                            `,
+                            nextButton: 'Siguiente: Paso 6'
                         },
 
                         {
                             title: 'Paso 5: Localizar la causa del fallo',
                             content: `
-        <div style="
-            border-left:5px solid #2b93d1;
-            padding:20px;
-            background:#f3f9fd;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-magnifying-glass"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#2b93d1;"></i>
 
-                <strong style="
-                    font-size:20px;
-                    color:#006eae;
-                ">
-                    Investigar dónde se desvía
-                </strong>
-            </div>
 
-            <p style="line-height:1.7;margin-top:0;">
-                Leer el código línea por línea y utilizar una
-                <strong>tabla de traza</strong> para simular la ejecución.
-            </p>
-
-            <div style="
-                margin-top:15px;
-                padding:15px;
-                background:#ffffff;
-                border-radius:8px;
-                border:1px solid #cfe4f2;
-            ">
-                <i class="fa-solid fa-bug"
-                   aria-hidden="true"
-                   style="color:#d2232a;margin-right:7px;"></i>
-
-                <strong>Punto de control</strong>
-
-                <p style="margin:10px 0 0;line-height:1.6;">
-                    Imprimir valores intermedios de las variables
-                    para descubrir dónde se produce la desviación.
-                </p>
-            </div>
 
             <div style="
                 margin-top:12px;
