@@ -620,9 +620,140 @@ const data = {
                                 <li>Ser específico: En lugar de decir "esto está mal", decir "en la línea 5, la variable x no está definida antes de usarse".</li>
                                 <li>Ser respetuoso: Usar frases como "¿Qué le parece si...?" en lugar de "Esto está mal".</li>
                                 <li>Escuchar: El autor también puede defender sus decisiones si tienen fundamento.</li>
-                                </ul> 
                                 
                             </ol>`,
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm003-t005',
+                    label: 'Casos de prueba',
+                    steps: [
+                        {
+                            title: 'cCso de prueba',
+                            content: `<p>Es una situación específica con datos de entrada concretos y un resultado esperado concreto, que se usa para verificar si el programa funciona correctamente. Es como un examen: se le da al programa una pregunta (entrada) y se verifica si la respuesta (salida) es la correcta.</p>
+                            <p>Es necesario porque un programa puede funcionar con un dato y fallar con otro. Por ejemplo, una calculadora de división puede funcionar bien con 10 ÷ 2, pero fallar con 10 ÷ 0. Los casos de prueba ayudan a descubrir esos fallos antes de que el usuario los encuentre.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/casosPrueba.png',
+                            nextButton: 'Siguiente: Tipos de casos de prueba'
+                        },
+                        {
+                            title: 'Tipos de casos de prueba',
+                            content: `
+                            <p><strong> Casos normales (válidos)</strong></p>
+                            <ul>
+                                <li>Datos típicos que el programa debería manejar sin problema.</li>
+                                <li>Ejemplo: para un programa que suma dos números, probar con 5 y 3. Resultado esperado: 8.</li>
+                            </ul>
+
+                            <p><strong>Casos límite (frontera)</strong></p>
+                            <ul>
+                                <li>Datos que están en el borde de lo permitido.</li>
+                                <li>Ejemplo: si el programa acepta edades de 0 a 120, probar con 0, con 120, con 1 y con 119.</li>
+                            </ul>
+                            
+                            <p><strong>Casos inválidos (erróneos)</strong></p>
+                            <ul>
+                                <li>Datos que el programa no debería aceptar, para ver si los rechaza correctamente o si falla.</li>
+                                <li>Ejemplo: ingresar letras cuando se piden números, o ingresar una edad negativa.</li>
+                            </ul>
+
+                            <p><strong>Casos extremos</strong></p>
+                            <ul>
+                                <li>Datos muy grandes o muy pequeños.</li>
+                                <li>Ejemplo: multiplicar números enormes para ver si el programa se detiene.</li>
+                            </ul>
+                            `,
+                            nextButton: 'Siguiente: Documentación de casos de prueba'
+                        },
+                        {
+                            title: 'Documentación de un caso de prueba',
+                            content: `
+                            <p>Se suele usar una tabla con columnas: </p>
+                            <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                                <thead>
+                                    <tr style="background-color: #006eae; color: white;">
+                                    <th style="border: 1px solid #ccc; padding: 10px;">N.º</th>
+                                    <th style="border: 1px solid #ccc; padding: 10px;">Descripción</th>
+                                    <th style="border: 1px solid #ccc; padding: 10px;">Entrada (datos de la prueba)</th>
+                                    <th style="border: 1px solid #ccc; padding: 10px;">Salida esperada</th>
+                                    <th style="border: 1px solid #ccc; padding: 10px;">Resultado de la prueba</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td style="border: 1px solid #ccc; padding: 10px;">&nbsp;</td>
+                                    <td style="border: 1px solid #ccc; padding: 10px;">&nbsp;</td>
+                                    <td style="border: 1px solid #ccc; padding: 10px;">&nbsp;</td>
+                                    <td style="border: 1px solid #ccc; padding: 10px;">&nbsp;</td>
+                                    <td style="border: 1px solid #ccc; padding: 10px;">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            <p>La última columna se llena después de ejecutar el programa con ese caso.</p>
+                            `,
+                            nextButton: 'Siguiente: Ejemplo '
+                        },{
+                            title: 'Ejemplo de casos de prueba',
+                            content: `
+                            <p>Para un programa que calcula el área de un rectángulo (base × altura): </p>
+                            <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                                <thead>
+                                    <tr style="background-color: #006eae; color: white;">
+                                    <th style="padding: 12px; border: 1px solid #ddd;">N.º</th>
+                                    <th style="padding: 12px; border: 1px solid #ddd;">Descripción</th>
+                                    <th style="padding: 12px; border: 1px solid #ddd;">Base</th>
+                                    <th style="padding: 12px; border: 1px solid #ddd;">Altura</th>
+                                    <th style="padding: 12px; border: 1px solid #ddd;">Área esperada</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">1</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Rectángulo típico</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">10</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">50</td>
+                                    </tr>
+                                    <tr style="background-color: #f5f9fb;">
+                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">2</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Base cero</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                    </tr>
+                                    <tr>
+                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">3</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Altura cero</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">10</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                    </tr>
+                                    <tr style="background-color: #f5f9fb;">
+                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">4</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Ambos cero</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                    </tr>
+                                    <tr>
+                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">5</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Números decimales</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">2.5</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">4.0</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">10.0</td>
+                                    </tr>
+                                    <tr style="background-color: #f5f9fb;">
+                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">6</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">Números negativos</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">-3</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                                    <td style="padding: 10px; border: 1px solid #ddd;">-15 (o error, según la lógica)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            `,
                             nextButton: ''
                         }
                     ]
