@@ -437,6 +437,7 @@ const data = {
                                 <li>Reducción de errores: Las reglas evitan confusiones que llevan a fallos.</li>
                                 <li>Profesionalismo: Un código limpio refleja disciplina y respeto por el trabajo.</li>
                             </ul>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/mantenimiento.png',
                             nextButton: 'Siguiente: Ejemplos de reglas'
                         },
                         {
@@ -470,7 +471,7 @@ const data = {
                             
                             <p><strong>Longitud de líneas</strong></p>
                             <ul>
-                                <li>No exceder, por ejemplo, 79 o 100 caracteres por línea, para que el código quede visible sin desplazarse horizontalmente.</li>
+                                <li>No exceder 100 caracteres por línea, para que el código quede visible sin desplazarse horizontalmente.</li>
                             </ul>
                             
                             <p><strong>Espacios y separación</strong></p>
@@ -488,8 +489,8 @@ const data = {
                                 <li>Java tiene las Google Java Style Guide o las Oracle Code Conventions.</li>
                                 <li>C tiene estándares como MISRA C para sistemas críticos.</li>
                             </ul>
-                            
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/lenguajes.png',
                             nextButton: 'Siguiente: ¿Quién define el estándar?'
                         }
                     ]
@@ -528,12 +529,7 @@ const data = {
                                 <li>Simplicidad</li>
                                 <ul> 
                                     <li>Evite trucos innecesarios. Si puede resolver algo en tres líneas sencillas, no lo haga en una línea enrevesada.</li>
-                                </ul> 
-                                <li>Modularidad </li>
-                                <ul> 
-                                    <li>Divida el programa en partes pequeñas y reutilizables (funciones). Esto es parte del estilo.</li>
-                                </ul> 
-                                
+                                </ul>                                 
                             </ul>`,
                             nextButton: ''
                         }
@@ -574,6 +570,7 @@ const data = {
                                 </ul> 
                                 
                             </ol>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/listaRevision.png',
                             nextButton: ''
                         }
                     ]
@@ -689,59 +686,70 @@ const data = {
                             title: 'Ejemplo de casos de prueba',
                             content: `
                             <p>Para un programa que calcula el área de un rectángulo (base × altura): </p>
-                            <table style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+                            <table style="width: 100%; border-collapse: collapse;">
                                 <thead>
                                     <tr style="background-color: #006eae; color: white;">
-                                    <th style="padding: 12px; border: 1px solid #ddd;">N.º</th>
-                                    <th style="padding: 12px; border: 1px solid #ddd;">Descripción</th>
-                                    <th style="padding: 12px; border: 1px solid #ddd;">Base</th>
-                                    <th style="padding: 12px; border: 1px solid #ddd;">Altura</th>
-                                    <th style="padding: 12px; border: 1px solid #ddd;">Área esperada</th>
-                                    <th style="padding: 12px; border: 1px solid #ddd;>Resultado de la prueba</th>
+                                        <th style="padding: 12px; border: 1px solid #ddd;">N.º</th>
+                                        <th style="padding: 12px; border: 1px solid #ddd;">Descripción</th>
+                                        <th style="padding: 12px; border: 1px solid #ddd;">Base</th>
+                                        <th style="padding: 12px; border: 1px solid #ddd;">Altura</th>
+                                        <th style="padding: 12px; border: 1px solid #ddd;">Área esperada</th>
+                                        <th style="padding: 12px; border: 1px solid #ddd;">Resultado de la prueba</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">1</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">Rectángulo típico</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">10</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">5</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">50</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">1</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">Rectángulo típico</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">10</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">50</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;"> </td>
                                     </tr>
+
                                     <tr style="background-color: #f5f9fb;">
-                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">2</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">Base cero</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">5</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">2</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">Base cero</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;"> </td>
                                     </tr>
+
                                     <tr>
-                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">3</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">Altura cero</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">10</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">3</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">Altura cero</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">10</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;"> </td>
                                     </tr>
+
                                     <tr style="background-color: #f5f9fb;">
-                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">4</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">Ambos cero</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">4</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">Ambos cero</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;"> </td>
                                     </tr>
+
                                     <tr>
-                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">5</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">Números decimales</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">2.5</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">4.0</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">10.0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">5</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">Números decimales</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">2.5</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">4.0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">10.0</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;"> </td>
                                     </tr>
+
                                     <tr style="background-color: #f5f9fb;">
-                                    <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">6</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">Números negativos</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">-3</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">5</td>
-                                    <td style="padding: 10px; border: 1px solid #ddd;">Mensaje de error</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd; text-align: center;">6</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">Números negativos</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">-3</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">5</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;">Mensaje de error</td>
+                                        <td style="padding: 10px; border: 1px solid #ddd;"> </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -775,7 +783,8 @@ const data = {
                                 <li>Solución: leer el mensaje de error, que suele indicar la línea y el tipo de problema.</li>
                             </ul>
                             `,
-                            nextButton: 'Siguiente: Documentación de casos de prueba'
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente:Errores de lógica'
                         },
                         {
                             title: 'Errores de lógica',
@@ -787,6 +796,7 @@ const data = {
                                 <li>Solución: usar la tabla de traza, revisar paso a paso, comparar con el algoritmo original.</li>
                             </ul>
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/bug.png',
                             nextButton: 'Siguiente: Errores en tiempo de ejecución'
                         },
                         {
@@ -798,13 +808,14 @@ const data = {
                                 <li>Solución: identificar la línea donde ocurre, validar los datos de entrada, usar estructuras de control (que se verán más adelante).</li>
                             </ul>
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/bugs.png',
                             nextButton: ''
                         }
                     ]
                 },
                 {
                     id: 'm003-t007',
-                    label: 'Proceso básico de pruebas ydepuración',
+                    label: 'Proceso básico de pruebas y depuración',
                     steps: [
                         {
                             title: 'Paso 1: Entender qué debería hacer el programa',
@@ -839,13 +850,13 @@ const data = {
                                 <p>Ejecutar el programa con <strong>cada caso de prueba</strong> y anotar si el resultado coincide con lo esperado.</p>
 
                                 <p>
-                                    <span style="margin:10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px;">
+                                    <span style="margin:10px 20px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px;">
                                         Resultado esperado
                                     </span>
 
                                     <i class="fa-solid fa-arrow-right" aria-hidden="true" style="margin:0 10px; color:#00928d; font-size:20px;"></i>
 
-                                    <span style="margin:10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px;">
+                                    <span style="margin:10px 20px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px;">
                                         Resultado obtenido
                                     </span>
 
@@ -910,10 +921,10 @@ const data = {
                                 <p>Ejecutar de nuevo todos los casos de prueba (no solo el que falló, porque el cambio podría haber roto algo que antes funcionaba).</p>
 
                                 <ul style="list-style-type: none;">
-                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 1 </li>
-                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 2 </li>
-                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 3 </li>
-                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 4 </li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true" style="color:#4aa147;"></i> Caso 1 </li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true" style="color:#4aa147;"></i> Caso 2 </li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true" style="color:#4aa147;"></i> Caso 3 </li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true" style="color:#4aa147;"></i> Caso 4 </li>
                                 </ul>
 
                                 <p class="p-nota">
@@ -926,8 +937,8 @@ const data = {
                             title: 'Paso 8: Documentar',
                             content: `
                                 <p>Anotar qué error se encontró, cómo se corrigió y qué caso de prueba lo detectó. Esto ayuda a no repetir el mismo error en el futuro.</p>
-
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/documentar.png',
                             nextButton: 'Siguiente: Herramientas útiles para depurar'
                         },{
                             title: 'Herramientas útiles para depurar',
@@ -938,6 +949,7 @@ const data = {
                                     <li>Tabla de traza</li>
                                 </ul>
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/ide.png',
                             nextButton: ''
                         }
                     ]
