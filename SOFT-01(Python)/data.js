@@ -804,7 +804,7 @@ const data = {
                 },
                 {
                     id: 'm003-t007',
-                    label: 'Proceso de test y debug',
+                    label: 'Proceso básico de pruebas ydepuración',
                     steps: [
                         {
                             title: 'Paso 1: Entender qué debería hacer el programa',
@@ -813,7 +813,7 @@ const data = {
 
                                 <p class="p-nota">
                                     <i class="fa-solid fa-code" aria-hidden="true" style="color:#006eae;margin-right:8px;"></i>
-                                    <strong>Pregunta clave:</strong>
+                                    <strong>Pregunta clave:</strong> <br>
                                     ¿Qué debería hacer exactamente el programa?
                                 </p>
                             `,
@@ -839,15 +839,16 @@ const data = {
                                 <p>Ejecutar el programa con <strong>cada caso de prueba</strong> y anotar si el resultado coincide con lo esperado.</p>
 
                                 <p>
-                                    <span style="margin=10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
+                                    <span style="margin:10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px;">
                                         Resultado esperado
                                     </span>
 
-                                    <i class="fa-solid fa-arrow-right" aria-hidden="true" style="margin=10px; color:#00928d; font-size:20px;"></i>
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true" style="margin:0 10px; color:#00928d; font-size:20px;"></i>
 
-                                    <span style="margin=10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
+                                    <span style="margin:10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px;">
                                         Resultado obtenido
                                     </span>
+
                                 </p>
                             `,
                             nextButton: 'Siguiente: Paso 4'
@@ -880,13 +881,13 @@ const data = {
                                 <p class="p-nota">
                                     <i class="fa-solid fa-bug" aria-hidden="true" style="color:#d2232a; margin-right:8px;"></i>
                                     <strong>Punto de control</strong> <br>
-                                    Imprimir valores intermedios de las variables para descubrir dónde se produce la desviación.
+                                    Agregar "puntos de control": imprimir valores intermedios de variables para ver dónde se desvía el programa. <br> 
+                                    Ejemplo: si el área debería ser 50 y da 30, imprimir la base y la altura justo antes de multiplicar para ver si los valores son los correctos.
                                 </p>
 
                                 <p class="code"> base = 10 <br>
                                     altura = 5 <br>
-                                    print(base * altura)
-                                    area = base + altura
+                                    print(base, altura)
                                 </p>
                             `,
                             nextButton: 'Siguiente: Paso 6'
@@ -906,14 +907,14 @@ const data = {
                         },{
                             title: 'Paso 7: Volver a probar',
                             content: `
-                                <p>No basta con repetir solamente el caso que falló. Hay que ejecutar <strong>todos los casos de prueba</strong>.</p>
+                                <p>Ejecutar de nuevo todos los casos de prueba (no solo el que falló, porque el cambio podría haber roto algo que antes funcionaba).</p>
 
                                 <ul style="list-style-type: none;">
                                     <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 1 </li>
                                     <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 2 </li>
                                     <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 3 </li>
                                     <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 4 </li>
-                                <ul>
+                                </ul>
 
                                 <p class="p-nota">
                                     <i class="fa-solid fa-circle-info" aria-hidden="true" style="color:#4aa147;"></i>
@@ -926,6 +927,16 @@ const data = {
                             content: `
                                 <p>Anotar qué error se encontró, cómo se corrigió y qué caso de prueba lo detectó. Esto ayuda a no repetir el mismo error en el futuro.</p>
 
+                            `,
+                            nextButton: 'Siguiente: Herramientas útiles para depurar'
+                        },{
+                            title: 'Herramientas útiles para depurar',
+                            content: `
+                                <ul>
+                                    <li>Impresiones de depuración: Colocar print() en medio del código para ver valores de variables.</li>
+                                    <li> Depurador (debugger): Herramienta del IDE que permite ejecutar el programa paso a paso y ver los valores de las variables en cada momento.</li>
+                                    <li>Tabla de traza</li>
+                                </ul>
                             `,
                             nextButton: ''
                         }
