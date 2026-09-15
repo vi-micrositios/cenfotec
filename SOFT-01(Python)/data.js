@@ -176,18 +176,18 @@ const data = {
                             title: 'Compilador',
                             content: `<p>Es un programa que traduce código fuente escrito en un lenguaje de programación a otra forma que pueda ser ejecutada por la computadora o por una máquina virtual.</p>
                             <p>Programa en C++</p>
-                            <p class="p-code">
+                            <p class="code">
                                 int suma = 5 + 3;
                             </p>
 
                             <p>El compilador puede convertirlo en algo parecido a:</p>
-                            <p class="p-code">
+                            <p class="code">
                                 mov eax, 5<br>
                                 add eax, 3
                             </p>
 
                             <p>Que significa aproximadamente:</p>
-                            <p class="p-code">
+                            <p class="code">
                                 mov eax, 5 &nbsp;&nbsp;→ Guardar el número 5 en el registro EAX<br>
                                 add eax, 3 &nbsp;&nbsp;→ Sumarle 3 a EAX
                             </p>
@@ -201,12 +201,12 @@ const data = {
 
                             <p>Python utiliza un intérprete para ejecutar sus programas.</p>
                             <p>Ejemplo en Python:</p>
-                            <p class="p-code">
+                            <p class="code">
                                 print("Hola")
                             </p>
 
                             <p>Al ejecutar el programa, el intérprete de Python procesa las instrucciones y produce:</p>
-                            <p class="p-code">
+                            <p class="code">
                                 Hola
                             </p>`,
                             nextButton: ''
@@ -831,12 +831,12 @@ const data = {
                         {
                             title: 'Paso 2: Diseñar los casos de prueba',
                             content: `
-                                <p>Crear una tabla de casos de prueba que contemple diferentes situaciones.</p>
+                                <p>Crear una tabla de casos de prueba que contemple diferentes situaciones:</p>
 
                                 <ul style="list-style-type: none;">
-                                    <li> <i class="fa-solid fa-circle-check" aria-hidden="true" style="color:#4aa147;"></i>  Normal </li>
-                                    <li> <i class="fa-solid fa-ruler-horizontal" aria-hidden="true" style="color:#712c86;"></i> Límite</li>
-                                    <li> <i class="fa-solid fa-ban" aria-hidden="true" style="color:#d2232a;"></i> Inválido</li>
+                                    <li> <i class="fa-solid fa-circle-check" aria-hidden="true" style="color:#4aa147;"></i>  Normal(válidos) </li>
+                                    <li> <i class="fa-solid fa-ruler-horizontal" aria-hidden="true" style="color:#712c86;"></i> Límite (frontera)</li>
+                                    <li> <i class="fa-solid fa-ban" aria-hidden="true" style="color:#d2232a;"></i> Inválido (erróneo)</li>
                                     <li> <i class="fa-solid fa-bolt" aria-hidden="true" style="color:#00734a;"></i> Extremo</li>
                                 </ul>
                             `,
@@ -848,13 +848,13 @@ const data = {
                                 <p>Ejecutar el programa con <strong>cada caso de prueba</strong> y anotar si el resultado coincide con lo esperado.</p>
 
                                 <p>
-                                    <span style=" padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
+                                    <span style="margin=10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
                                         Resultado esperado
                                     </span>
 
-                                    <i class="fa-solid fa-arrow-right" aria-hidden="true" style="color:#00928d;font-size:20px;"></i>
+                                    <i class="fa-solid fa-arrow-right" aria-hidden="true" style="margin=10px; color:#00928d; font-size:20px;"></i>
 
-                                    <span style=" padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
+                                    <span style="margin=10px; padding:10px 16px; background:#ffffff; border:2px solid #00928d; border-radius:8px; ">
                                         Resultado obtenido
                                     </span>
                                 </p>
@@ -867,15 +867,15 @@ const data = {
                                 <p>Si un caso falla, registrar exactamente <strong>qué salida dio el programa</strong> y </strong>qué salida se esperaba</strong>.</p>
 
                                 <p style=" padding:15px; background:#ffffff; border-radius:8px; border:1px solid #f0cccc;">
-                                    <i class="fa-solid fa-xmark" aria-hidden="true" style="color:#d2232a;"></i>
+                                    <i class="fa-solid fa-xmark" aria-hidden="true" style="color:#d2232a;"></i> <br>
                                     <strong style="color:#d2232a;"> Salida obtenida </strong>
 
                                     <span style="margin-top:8px;"> 30 </span>
                                 </p>
 
                                 <p style=" padding:15px; background:#ffffff; border-radius:8px; border:1px solid #c9e2d4;">
-                                    <i class="fa-solid fa-check" aria-hidden="true" style="color:#00734a;"></i>
-                                    <strong style="color:#d2232a;"> Salida esperada </strong>
+                                    <i class="fa-solid fa-check" aria-hidden="true" style="color:#00734a;"></i> <br>
+                                    <strong style="color:#4aa147;"> Salida esperada </strong>
 
                                     <span style="margin-top:8px;"> 50 </span>
                                 </p>
@@ -888,9 +888,19 @@ const data = {
 
                                 <p class="p-nota">
                                     <i class="fa-solid fa-bug" aria-hidden="true" style="color:#d2232a; margin-right:8px;"></i>
-                                    <strong>Punto de control</strong>
+                                    <strong>Punto de control</strong> <br>
                                     Imprimir valores intermedios de las variables para descubrir dónde se produce la desviación.
                                 </p>
+
+                                <p class="code">
+                                    base = 10 <br>
+                                    altura = 5 <br>
+                                    area = base * altura
+                                    print(area)
+                                    print("El área es:", area - 20)
+                                </p>
+
+
                             `,
                             nextButton: 'Siguiente: Paso 6'
                         },
@@ -901,18 +911,7 @@ const data = {
 
 
 
-            <div style="
-                margin-top:12px;
-                padding:12px;
-                background:#263238;
-                color:#ffffff;
-                border-radius:8px;
-                font-family:monospace;
-            ">
-                base = 10<br>
-                altura = 5<br>
-                área = base * altura
-            </div>
+            
 
         </div>
     `,
