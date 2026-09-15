@@ -1,64 +1,576 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Ciclo de Depuración</title>
 </head>
 
 <body>
 
 
-<div style="
-    margin:auto;
-    text-align:center;
-    color:#333;
-">
+    <div
+        style=" margin:0; min-height:100vh; font-family:Arial,Helvetica,sans-serif; background:transparent; color:#333333; ">
 
-    <div style=" display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px;
+        <div style=" width:min(1100px,92%); margin:0 auto; padding:40px 0 60px;">
+
+            <!-- ENCABEZADO -->
+            <div style=" text-align:center; margin-bottom:35px;     ">
+                <p style=" margin:0 auto; max-width:700px; color:#333333; font-size:17px; line-height:1.6;    ">
+                    Ciclo: comprender, probar, detectar, localizar, corregir y volver a probar.
+                </p>
+
+            </div>
+
+
+            <!-- CONTENEDOR PRINCIPAL -->
+            <div
+                style=" position:relative; border:1px solid #9cc8ff; border-radius:28px; padding:35px; box-shadow:none;    ">
+
+                <!-- PROGRESO -->
+                <div
+                    style=" display:flex; justify-content:space-between; align-items:center; margin-bottom:30px;         ">
+
+                    <span id="depuracion_contador" style="
+                font-weight:bold;
+                color:#333333;
+            ">
+                        Paso 1 de 8
+                    </span>
+
+                    <span id="depuracion_estado"
+                        style=" padding:7px 14px; border-radius:20px; background:#00928d; color: #fff; font-size:13px; font-weight:bold;             ">
+                        ANALIZANDO
+                    </span>
+
+                </div>
+
+
+                <!-- BARRA -->
+                <div
+                    style=" height:8px; background:rgba(255,255,255,.18); border-radius:20px; overflow:hidden; margin-bottom:40px;        ">
+
+                    <div id="depuracion_barra"
+                        style=" height:100%; width:12.5%; background:linear-gradient(90deg,#4aa147,#2b93d1); border-radius:20px; transition:width .7s ease;             ">
+                    </div>
+
+                </div>
+
+
+                <!-- ESCENA + INFORMACIÓN -->
+                <div style=" display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center;         ">
+
+
+                    <!-- ESCENA ANIMADA -->
+                    <div id="depuracion_escena" style=" min-height:350px; display:flex; justify-content:center; align-items:center; position:relative; overflow:hidden; border-radius:22px; background:transparent;
+            ">
+
+                        <div id="depuracion_circulo" style="
+                    width:210px;
+                    height:210px;
+                    border-radius:50%;
+                    background:linear-gradient(135deg,#006eae,#2b93d1);
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    box-shadow:0 0 45px rgba(43,147,209,.45);
+                    transition:all .7s ease;
+                ">
+
+                            <div id="depuracion_icono" style="
+                        width:120px;
+                        height:120px;
+                        border-radius:50%;
+                        background:#fff;
+                        color:#006eae;
+                        display:flex;
+                        justify-content:center;
+                        align-items:center;
+                        font-size:55px;
+                        font-weight:bold;
+                        transition:all .5s ease;
+                    ">
+                                ?
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- INFORMACIÓN DEL PASO -->
+                    <div>
+
+                        <div id="depuracion_numero" style="
+                    color:#4aa147;
+                    font-size:18px;
+                    font-weight:bold;
+                    margin-bottom:8px;
+                ">
+                            01
+                        </div>
+
+                        <h2 id="depuracion_titulo" style="
+                    margin:0 0 15px;
+                    font-size:32px;
+                    line-height:1.15;
+                ">
+                            Entender el programa
+                        </h2>
+
+                        <p id="depuracion_descripcion" style="
+                    color:#333333;
+                    line-height:1.7;
+                    font-size:16px;
+                    margin-bottom:25px;
+                ">
+                            Tener claro el algoritmo, las entradas
+                            y las salidas esperadas.
+                        </p>
+
+                        <div id="depuracion_detalle" style="
+                    padding:18px;
+                    border-radius:16px;
+                    background:rgba(255,255,255,.08);
+                    border-left:4px solid #4aa147;
+                    line-height:1.6;
+                    color:#333333;
+                ">
+                            <strong>Objetivo:</strong><br>
+                            Definir exactamente qué debería hacer el programa.
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SOLO DOS BOTONES -->
+                <div style="
+            display:flex;
+            justify-content:center;
+            gap:12px;
+            margin-top:35px;
+            flex-wrap:wrap;
+        ">
+
+                    <button onclick="anteriorPasoDepuracion()" style="
+                border:0;
+                padding:13px 22px;
+                border-radius:12px;
+                background:#712c86;
+                color:#fff;
+                font-weight:bold;
+                cursor:pointer;
+                font-size:15px;
+            ">
+                        ← Anterior
+                    </button>
+
+                    <button onclick="siguientePasoDepuracion()" style="
+                border:0;
+                padding:13px 22px;
+                border-radius:12px;
+                background:#2b93d1;
+                color:#fff;
+                font-weight:bold;
+                cursor:pointer;
+                font-size:15px;
+            ">
+                        Siguiente →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- INDICADORES -->
+            <div id="depuracion_pasosMini" style="
+        margin-top:25px;
+        display:grid;
+        grid-template-columns:repeat(8,1fr);
+        gap:8px;
+    "></div>
+
+
+            <!-- MENSAJE FINAL -->
+            <div id="depuracion_final" style="
+        margin-top:25px;
+        padding:25px;
+        border-radius:20px;
+        text-align:center;
+        background:#00734a;
+        display:none;
     ">
- <!-- PROBLEMA --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-lightbulb"        style="font-size:25px;color:#c81f66;"></i>
-     <div style="margin-top:6px;">         <b>Problema</b><br>         <small>Necesidad a resolver</small>     </div> </div>
- <span style="color:#00928d;font-size:20px;">→</span>
 
- <!-- ALGORITMO --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-brain"        style="font-size:25px;color:#00928d;"></i>
-     <div style="margin-top:6px;">         <b>Algoritmo</b><br>         <small>Pasos para resolverlo</small>     </div> </div>
- <span style="color:#c81f66;font-size:20px;">→</span>
+                <div style="
+            font-size:40px;
+            margin-bottom:8px;
+        ">
+                    ✓
+                </div>
 
- <!-- CÓDIGO --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-code"        style="font-size:25px;color:#c81f66;"></i>
-     <div style="margin-top:6px;">         <b>Código</b><br>         <small>Solución escrita</small>     </div> </div>
- <span style="color:#00928d;font-size:20px;">→</span>
+                <h2 style="
+            margin:0 0 8px;
+        ">
+                    ¡Todos los casos pasan!
+                </h2>
 
- <!-- EDITAR --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-pen-to-square"        style="font-size:25px;color:#00928d;"></i>
-     <div style="margin-top:6px;">         <b>Editar</b><br>         <small>Modificar el código</small>     </div> </div>
- <span style="color:#c81f66;font-size:20px;">→</span>
+                <p style="
+            margin:0;
+            color:#fff;
+        ">
+                    El ciclo termina con una solución documentada y lista.
+                </p>
 
- <!-- COMPILAR --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:120px; ">     <i class="fa-solid fa-gears"        style="font-size:25px;color:#c81f66;"></i>
-     <div style="margin-top:6px;">         <b>Compilar</b><br>         <small>Transformar el código</small>     </div> </div>
- <span style="color:#00928d;font-size:20px;">→</span>
+            </div>
 
- <!-- INTERPRETAR --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:120px; ">     <i class="fa-solid fa-language"        style="font-size:25px;color:#00928d;"></i>
-     <div style="margin-top:6px;">         <b>Interpretar</b><br>         <small>Procesar instrucciones</small>     </div> </div>
- <span style="color:#c81f66;font-size:20px;">→</span>
+        </div>
 
- <!-- ENLAZAR --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-link"        style="font-size:25px;color:#c81f66;"></i>
-     <div style="margin-top:6px;">         <b>Enlazar</b><br>         <small>Unir las diferentes piezas</small>     </div> </div>
- <span style="color:#00928d;font-size:20px;">→</span>
 
- <!-- EJECUTAR --> <div style="     padding:12px 15px;     border:2px solid #00928d;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-play"        style="font-size:25px;color:#00928d;"></i>
-     <div style="margin-top:6px;">         <b>Ejecutar</b><br>         <small>Poner el programa en marcha</small>     </div> </div>
- <span style="color:#c81f66;font-size:20px;">→</span>
+        <script>
 
- <!-- RESULTADO --> <div style="     padding:12px 15px;     border:2px solid #c81f66;     border-radius:12px;     min-width:105px; ">     <i class="fa-solid fa-circle-check"        style="font-size:25px;color:#c81f66;"></i>
-     <div style="margin-top:6px;">         <b>Resultado</b><br>         <small>Solución obtenida</small>     </div> </div>
+            const pasosDepuracion = [
+
+                {
+                    numero: "01",
+                    titulo: "Entender el programa",
+                    descripcion: "Tener claro el algoritmo, las entradas y las salidas esperadas.",
+                    detalle: "<strong>Objetivo:</strong><br>Definir exactamente qué debería hacer el programa.",
+                    icono: "?",
+                    color: "#006eae",
+                    estado: "ANALIZANDO"
+                },
+
+                {
+                    numero: "02",
+                    titulo: "Diseñar los casos de prueba",
+                    descripcion: "Crear una tabla con casos válidos, límite, inválidos y extremos.",
+                    detalle: "<strong>Pruebas:</strong><br>Normal · Límite · Inválido · Extremo",
+                    icono: "▦",
+                    color: "#712c86",
+                    estado: "PLANIFICANDO"
+                },
+
+                {
+                    numero: "03",
+                    titulo: "Ejecutar cada caso",
+                    descripcion: "Ejecutar el programa con cada caso y comparar el resultado con lo esperado.",
+                    detalle: "<strong>Resultado:</strong><br>¿La salida real coincide con la salida esperada?",
+                    icono: "▶",
+                    color: "#00928d",
+                    estado: "EJECUTANDO"
+                },
+
+                {
+                    numero: "04",
+                    titulo: "Identificar los fallos",
+                    descripcion: "Cuando un caso falla, registrar exactamente qué ocurrió y qué se esperaba.",
+                    detalle: "<strong>Detectado:</strong><br>Salida obtenida ≠ salida esperada.",
+                    icono: "!",
+                    color: "#d2232a",
+                    estado: "FALLO DETECTADO"
+                },
+
+                {
+                    numero: "05",
+                    titulo: "Localizar la causa",
+                    descripcion: "Leer el código línea por línea y usar una tabla de traza y puntos de control.",
+                    detalle: "<strong>Debug:</strong><br>Imprimir valores intermedios para descubrir dónde se desvía.",
+                    icono: "⌕",
+                    color: "#2b93d1",
+                    estado: "INVESTIGANDO"
+                },
+
+                {
+                    numero: "06",
+                    titulo: "Corregir el error",
+                    descripcion: "Modificar únicamente la línea o líneas responsables del problema.",
+                    detalle: "<strong>Regla:</strong><br>Un cambio a la vez. No modificar todo el programa.",
+                    icono: "✓",
+                    color: "#4aa147",
+                    estado: "CORRIGIENDO"
+                },
+
+                {
+                    numero: "07",
+                    titulo: "Volver a probar",
+                    descripcion: "Ejecutar nuevamente todos los casos para comprobar que nada se rompió.",
+                    detalle: "<strong>Regresión:</strong><br>Todos los casos deben volver a pasar.",
+                    icono: "↻",
+                    color: "#00734a",
+                    estado: "VERIFICANDO"
+                },
+
+                {
+                    numero: "08",
+                    titulo: "Documentar",
+                    descripcion: "Registrar el error encontrado, la solución y el caso que permitió detectarlo.",
+                    detalle: "<strong>Resultado:</strong><br>Problema + corrección + caso de prueba documentados.",
+                    icono: "✓",
+                    color: "#00928d",
+                    estado: "COMPLETADO"
+                }
+
+            ];
+
+
+            let actual = 0;
+
+            const titulo = document.getElementById("depuracion_titulo");
+            const descripcion = document.getElementById("depuracion_descripcion");
+            const detalle = document.getElementById("depuracion_detalle");
+            const numero = document.getElementById("depuracion_numero");
+            const icono = document.getElementById("depuracion_icono");
+            const circulo = document.getElementById("depuracion_circulo");
+            const contador = document.getElementById("depuracion_contador");
+            const estado = document.getElementById("depuracion_estado");
+            const barra = document.getElementById("depuracion_barra");
+            const final = document.getElementById("depuracion_final");
+            const pasosMini = document.getElementById("depuracion_pasosMini");
+
+
+            /* CREAR INDICADORES */
+
+            pasosDepuracion.forEach((pasoDepuracion, index) => {
+
+                const elemento = document.createElement("div");
+
+                elemento.style.cssText = `
+        height:8px;
+        border-radius:20px;
+        background:rgba(255,255,255,.18);
+        cursor:pointer;
+        transition:all .4s ease;
+    `;
+
+                elemento.onclick = () => {
+                    actual = index;
+                    mostrarPasoDepuracion();
+                };
+                pasosMini.appendChild(elemento);
+            });
+
+
+            /* MOSTRAR PASO */
+
+            function mostrarPasoDepuracion() {
+
+                const pasoDepuracion = pasosDepuracion[actual];
+
+                titulo.innerHTML = pasoDepuracion.titulo;
+                descripcion.innerHTML = pasoDepuracion.descripcion;
+                detalle.innerHTML = pasoDepuracion.detalle;
+                numero.innerHTML = pasoDepuracion.numero;
+                icono.innerHTML = pasoDepuracion.icono;
+
+                contador.innerHTML =
+                    `Paso ${actual + 1} de 8`;
+
+                estado.innerHTML =
+                    pasoDepuracion.estado;
+
+                estado.style.background =
+                    pasoDepuracion.color;
+
+                circulo.style.background =
+                    `linear-gradient(135deg,${pasoDepuracion.color},#2b93d1)`;
+
+                circulo.style.boxShadow =
+                    `0 0 55px ${pasoDepuracion.color}88`;
+
+                icono.style.color =
+                    pasoDepuracion.color;
+
+                detalle.style.borderLeftColor =
+                    pasoDepuracion.color;
+
+                barra.style.width =
+                    `${((actual + 1) / pasosDepuracion.length) * 100}%`;
+
+
+                /* ANIMACIÓN */
+
+                circulo.style.transform =
+                    "scale(.75) rotate(-8deg)";
+
+                icono.style.transform =
+                    "scale(.7)";
+
+                setTimeout(() => {
+
+                    circulo.style.transform =
+                        "scale(1) rotate(0deg)";
+
+                    icono.style.transform =
+                        "scale(1)";
+
+                }, 120);
+
+
+                /* INDICADORES */
+
+                [...pasosMini.children].forEach((elemento, index) => {
+
+                    if (index === actual) {
+
+                        elemento.style.background =
+                            paso.color;
+
+                        elemento.style.transform =
+                            "scaleY(1.8)";
+
+                        elemento.style.boxShadow =
+                            `0 0 15px ${paso.color}`;
+
+                    } else {
+
+                        elemento.style.background =
+                            "rgba(255,255,255,.18)";
+
+                        elemento.style.transform =
+                            "scaleY(1)";
+
+                        elemento.style.boxShadow =
+                            "none";
+
+                    }
+
+                });
+
+
+                /* FINAL */
+
+                if (actual === 7) {
+                    final.style.display =
+                        "block";
+                } else {
+                    final.style.display =
+                        "none";
+                }
+            }
+
+
+            /* SIGUIENTE */
+
+            function siguientePasoDepuracion() {
+                actual++;
+                if (actual >= pasosDepuracion.length) {
+                    actual = 0;
+                }
+                mostrarPasoDepuracion();
+            }
+
+            /* ANTERIOR */
+            function anteriorPasoDepuracion() {
+                actual--;
+                if (actual < 0) {
+                    actual = pasosDepuracion.length - 1;
+                }
+                mostrarPasoDepuracion();
+            }
+
+            /* PARTÍCULAS */
+            const depuracion_escena =
+                document.getElementById("depuracion_escena");
+
+            for (let i = 0; i < 18; i++) {
+
+                const p =
+                    document.createElement("div");
+
+                p.style.cssText = `
+        position:absolute;
+        width:${Math.random() * 7 + 3}px;
+        height:${Math.random() * 7 + 3}px;
+        border-radius:50%;
+        background:#333333;
+        opacity:${Math.random() * .4 + .1};
+        left:${Math.random() * 100}%;
+        top:${Math.random() * 100}%;
+        pointer-events:none;
+        animation:flotar ${Math.random() * 4 + 3}s ease-in-out infinite alternate;
+    `;
+
+                depuracion_escena.appendChild(p);
+
+            }
+
+
+            /* ANIMACIONES */
+
+            const estilo =
+                document.createElement("style");
+
+            estilo.innerHTML = `
+
+@keyframes flotar {
+
+    0% {
+        transform:translateY(0) scale(1);
+    }
+
+    100% {
+        transform:translateY(-25px) scale(1.3);
+    }
+
+}
+
+button:hover {
+
+    transform:translateY(-2px);
+    filter:brightness(1.12);
+
+}
+
+button {
+
+    transition:all .25s ease;
+
+}
+
+@media(max-width:750px){
+
+    #depuracion_escena {
+        min-height:260px !important;
+    }
+
+    #depuracion_circulo {
+        width:170px !important;
+        height:170px !important;
+    }
+
+    #depuracion_icono {
+        width:95px !important;
+        height:95px !important;
+        font-size:42px !important;
+    }
+
+    [style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns:1fr !important;
+    }
+
+    #depuracion_pasosMini {
+        grid-template-columns:repeat(4,1fr) !important;
+    }
+
+}
+
+`;
+
+            document.head.appendChild(estilo);
+
+
+            /* INICIO */
+
+            mostrarPasoDepuracion();
+
+        </script>
 
     </div>
 
-</div>
-
-    
 </body>
 
 </html>
