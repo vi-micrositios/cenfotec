@@ -818,7 +818,7 @@ const data = {
                         {
                             title: 'Paso 1: Entender qué debería hacer el programa',
                             content: `
-                                <div style=" display:flex; align-items:center; gap:14px; margin-bottom:15px;             ">
+                                <div style="gap:14px; margin-bottom:15px;             ">
                                     <i class="fa-solid fa-lightbulb" aria-hidden="true" style="font-size:30px;color:#006eae;"></i>
 
                                     <strong style=" color:#006eae; ">
@@ -828,11 +828,10 @@ const data = {
 
                                 <p style="margin:0;line-height:1.7;">Tener claro el <strong>algoritmo</strong>, las <strong>entradas</strong> y las <strong>salidas esperadas</strong>. </p>
 
-                                    <div class="p-nota">
-                                        <i class="fa-solid fa-code" aria-hidden="true" style="color:#006eae;margin-right:8px;"></i>
-                                        <strong>Pregunta clave:</strong>
-                                        ¿Qué debería hacer exactamente el programa?
-                                    </div>
+                                <div class="p-nota">
+                                    <i class="fa-solid fa-code" aria-hidden="true" style="color:#006eae;margin-right:8px;"></i>
+                                    <strong>Pregunta clave:</strong>
+                                    ¿Qué debería hacer exactamente el programa?
                                 </div>
                             `,
                             nextButton: 'Siguiente: Paso 2'
