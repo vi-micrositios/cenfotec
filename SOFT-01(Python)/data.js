@@ -171,7 +171,7 @@ const data = {
                                         </i>
                                     </a>`,
                             nextButton: 'Siguiente: Compilador'
-                        }, 
+                        },
                         {
                             title: 'Compilador',
                             content: `<p>Es un programa que traduce código fuente escrito en un lenguaje de programación a otra forma que pueda ser ejecutada por la computadora o por una máquina virtual.</p>
@@ -211,7 +211,7 @@ const data = {
                             </p>`,
                             nextButton: ''
                         }
-                        
+
                     ]
                 },
                 {
@@ -694,7 +694,7 @@ const data = {
                             <p>La última columna se llena después de ejecutar el programa con ese caso.</p>
                             `,
                             nextButton: 'Siguiente: Ejemplo '
-                        },{
+                        }, {
                             title: 'Ejemplo de casos de prueba',
                             content: `
                             <p>Para un programa que calcula el área de un rectángulo (base × altura): </p>
@@ -813,11 +813,11 @@ const data = {
                 },
                 {
                     id: 'm003-t007',
-                    label: 'Proceso de prueba y depuración ',
+                    label: 'Proceso de test y debug',
                     steps: [
                         {
-    title: 'Paso 1: Entender qué debería hacer el programa',
-    content: `
+                            title: 'Paso 1: Entender qué debería hacer el programa',
+                            content: `
         <div style="
             border-left:5px solid #006eae;
             padding:20px;
@@ -865,13 +865,13 @@ const data = {
             </div>
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Siguiente: Paso 2'
-},
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente: Paso 2'
+                        },
 
-{
-    title: 'Paso 2: Diseñar los casos de prueba',
-    content: `
+                        {
+                            title: 'Paso 2: Diseñar los casos de prueba',
+                            content: `
         <div style="
             border-left:5px solid #712c86;
             padding:20px;
@@ -960,13 +960,13 @@ const data = {
             </div>
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Siguiente: Paso 3'
-},
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente: Paso 3'
+                        },
 
-{
-    title: 'Paso 3: Ejecutar el programa con cada caso',
-    content: `
+                        {
+                            title: 'Paso 3: Ejecutar el programa con cada caso',
+                            content: `
         <div style="
             border-left:5px solid #00928d;
             padding:20px;
@@ -1031,13 +1031,13 @@ const data = {
             </div>
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Siguiente: Paso 4'
-},
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente: Paso 4'
+                        },
 
-{
-    title: 'Paso 4: Identificar los fallos',
-    content: `
+                        {
+                            title: 'Paso 4: Identificar los fallos',
+                            content: `
         <div style="
             border-left:5px solid #d2232a;
             padding:20px;
@@ -1117,13 +1117,13 @@ const data = {
             </div>
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Siguiente: Paso 5'
-},
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente: Paso 5'
+                        },
 
-{
-    title: 'Paso 5: Localizar la causa del fallo',
-    content: `
+                        {
+                            title: 'Paso 5: Localizar la causa del fallo',
+                            content: `
         <div style="
             border-left:5px solid #2b93d1;
             padding:20px;
@@ -1188,13 +1188,13 @@ const data = {
 
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Siguiente: Paso 6'
-},
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente: Paso 6'
+                        },
 
-{
-    title: 'Paso 6: Corregir el error',
-    content: `
+                        {
+                            title: 'Paso 6: Corregir el error',
+                            content: `
         <div style="
             border-left:5px solid #4aa147;
             padding:20px;
@@ -1265,13 +1265,13 @@ const data = {
 
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Siguiente: Paso 7'
-},
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente: Paso 7'
+                        },
 
-{
-    title: 'Paso 7: Volver a probar',
-    content: `
+                        {
+                            title: 'Paso 7: Volver a probar',
+                            content: `
         <div style="
             border-left:5px solid #00734a;
             padding:20px;
@@ -1367,13 +1367,13 @@ const data = {
 
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Siguiente: Paso 8'
-},
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: 'Siguiente: Paso 8'
+                        },
 
-{
-    title: 'Paso 8: Documentar',
-    content: `
+                        {
+                            title: 'Paso 8: Documentar',
+                            content: `
         <div style="
             border-left:5px solid #00928d;
             padding:20px;
@@ -1474,9 +1474,9 @@ const data = {
 
         </div>
     `,
-    image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-    nextButton: 'Finalizar'
-}
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            nextButton: ''
+                        }
 
                     ]
                 }
