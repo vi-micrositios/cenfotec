@@ -812,7 +812,7 @@ const data = {
                     ]
                 },
                 {
-                    id: 'm003-t006',
+                    id: 'm003-t007',
                     label: 'Proceso de prueba y depuración ',
                     steps: [
                         {
