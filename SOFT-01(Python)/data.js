@@ -550,7 +550,7 @@ const data = {
                                 <li>Como guía de aprendizaje para programadores junior.</li>
                             </ul>
                             `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/checklist.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/listaCotejo.png',
                             nextButton: 'Siguiente: Ejemplo'
                         },
                         {
