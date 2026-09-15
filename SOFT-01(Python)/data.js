@@ -119,8 +119,7 @@ const data = {
                                         <li>Mostrar el resultado.</li>
                                     </ol>
                                     <p>Programa en Python</p>
-                                    <p class="code">
-                                        base = float(input("Ingrese la base: "))
+                                    <p class="code">base = float(input("Ingrese la base: "))
                                         altura = float(input("Ingrese la altura: "))
                                         area = base * altura
                                         print("El área es:", area)
@@ -176,19 +175,15 @@ const data = {
                             title: 'Compilador',
                             content: `<p>Es un programa que traduce código fuente escrito en un lenguaje de programación a otra forma que pueda ser ejecutada por la computadora o por una máquina virtual.</p>
                             <p>Programa en C++</p>
-                            <p class="code">
-                                int suma = 5 + 3;
-                            </p>
+                            <p class="code"> int suma = 5 + 3; </p>
 
                             <p>El compilador puede convertirlo en algo parecido a:</p>
-                            <p class="code">
-                                mov eax, 5<br>
+                            <p class="code"> mov eax, 5<br>
                                 add eax, 3
                             </p>
 
                             <p>Que significa aproximadamente:</p>
-                            <p class="code">
-                                mov eax, 5 &nbsp;&nbsp;→ Guardar el número 5 en el registro EAX<br>
+                            <p class="code"> mov eax, 5 &nbsp;&nbsp;→ Guardar el número 5 en el registro EAX<br>
                                 add eax, 3 &nbsp;&nbsp;→ Sumarle 3 a EAX
                             </p>
 
@@ -201,14 +196,10 @@ const data = {
 
                             <p>Python utiliza un intérprete para ejecutar sus programas.</p>
                             <p>Ejemplo en Python:</p>
-                            <p class="code">
-                                print("Hola")
-                            </p>
+                            <p class="code"> print("Hola") </p>
 
                             <p>Al ejecutar el programa, el intérprete de Python procesa las instrucciones y produce:</p>
-                            <p class="code">
-                                Hola
-                            </p>`,
+                            <p class="code"> Hola </p>`,
                             nextButton: ''
                         }
 
@@ -834,7 +825,7 @@ const data = {
                                 <p>Crear una tabla de casos de prueba que contemple diferentes situaciones:</p>
 
                                 <ul style="list-style-type: none;">
-                                    <li> <i class="fa-solid fa-circle-check" aria-hidden="true" style="color:#4aa147;"></i>  Normal(válidos) </li>
+                                    <li> <i class="fa-solid fa-circle-check" aria-hidden="true" style="color:#4aa147;"></i>  Normal (válidos) </li>
                                     <li> <i class="fa-solid fa-ruler-horizontal" aria-hidden="true" style="color:#712c86;"></i> Límite (frontera)</li>
                                     <li> <i class="fa-solid fa-ban" aria-hidden="true" style="color:#d2232a;"></i> Inválido (erróneo)</li>
                                     <li> <i class="fa-solid fa-bolt" aria-hidden="true" style="color:#00734a;"></i> Extremo</li>
@@ -867,15 +858,15 @@ const data = {
                                 <p>Si un caso falla, registrar exactamente <strong>qué salida dio el programa</strong> y </strong>qué salida se esperaba</strong>.</p>
 
                                 <p style=" padding:15px; background:#ffffff; border-radius:8px; border:1px solid #f0cccc;">
-                                    <i class="fa-solid fa-xmark" aria-hidden="true" style="color:#d2232a;"></i> <br>
-                                    <strong style="color:#d2232a;"> Salida obtenida </strong>
+                                    <i class="fa-solid fa-xmark" aria-hidden="true" style="color:#d2232a;"></i> 
+                                    <strong style="color:#d2232a;"> Salida obtenida </strong> <br>
 
-                                    <span style="margin-top:8px;"> 30 </span>
+                                    <span style="margin-top:8px;"> 15 </span>
                                 </p>
 
                                 <p style=" padding:15px; background:#ffffff; border-radius:8px; border:1px solid #c9e2d4;">
-                                    <i class="fa-solid fa-check" aria-hidden="true" style="color:#00734a;"></i> <br>
-                                    <strong style="color:#4aa147;"> Salida esperada </strong>
+                                    <i class="fa-solid fa-check" aria-hidden="true" style="color:#00734a;"></i> 
+                                    <strong style="color:#4aa147;"> Salida esperada </strong> <br>
 
                                     <span style="margin-top:8px;"> 50 </span>
                                 </p>
@@ -892,319 +883,52 @@ const data = {
                                     Imprimir valores intermedios de las variables para descubrir dónde se produce la desviación.
                                 </p>
 
-                                <p class="code">
-                                    base = 10 <br>
+                                <p class="code"> base = 10 <br>
                                     altura = 5 <br>
-                                    area = base * altura
-                                    print(area)
-                                    print("El área es:", area - 20)
+                                    print(base * altura)
+                                    area = base + altura
                                 </p>
-
-
                             `,
                             nextButton: 'Siguiente: Paso 6'
-                        },
-
-                        {
-                            title: 'Paso 5: Localizar la causa del fallo',
-                            content: `
-
-
-
-            
-
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
-                            nextButton: 'Siguiente: Paso 6'
-                        },
-
-                        {
+                        },{
                             title: 'Paso 6: Corregir el error',
                             content: `
-        <div style="
-            border-left:5px solid #4aa147;
-            padding:20px;
-            background:#f5fbf5;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-wrench"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#4aa147;"></i>
+                                <p>Modificar únicamente la línea o líneas responsables del problema.</p>
 
-                <strong style="
-                    font-size:20px;
-                    color:#00734a;
-                ">
-                    Aplicar la corrección
-                </strong>
-            </div>
+                                <p class="code"> area = base * altura </p>
 
-            <p style="line-height:1.7;margin-top:0;">
-                Modificar únicamente la línea o líneas responsables
-                del problema.
-            </p>
-
-            <div style="
-                margin-top:18px;
-                padding:15px;
-                background:#ffffff;
-                border-radius:8px;
-                border:1px solid #cde5d1;
-            ">
-
-                <div style="
-                    color:#d2232a;
-                    text-decoration:line-through;
-                    margin-bottom:8px;
-                ">
-                    <i class="fa-solid fa-xmark"
-                       aria-hidden="true"></i>
-                    área = base + altura
-                </div>
-
-                <div style="color:#00734a;">
-                    <i class="fa-solid fa-check"
-                       aria-hidden="true"></i>
-                    área = base * altura
-                </div>
-
-            </div>
-
-            <p style="
-                margin:15px 0 0;
-                font-size:14px;
-                color:#555;
-            ">
-                <i class="fa-solid fa-circle-info"
-                   aria-hidden="true"
-                   style="color:#4aa147;"></i>
-                Hacer un cambio a la vez facilita identificar
-                qué modificación solucionó el problema.
-            </p>
-
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                                <p class="p-nota">
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true" style="color:#4aa147;"></i>
+                                    Hacer un cambio a la vez facilita identificar qué modificación solucionó el problema.
+                                </p>
+                            `,
                             nextButton: 'Siguiente: Paso 7'
-                        },
-
-                        {
+                        },{
                             title: 'Paso 7: Volver a probar',
                             content: `
-        <div style="
-            border-left:5px solid #00734a;
-            padding:20px;
-            background:#f3faf7;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-rotate"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#00734a;"></i>
+                                <p>No basta con repetir solamente el caso que falló. Hay que ejecutar <strong>todos los casos de prueba</strong>.</p>
 
-                <strong style="
-                    font-size:20px;
-                    color:#00734a;
-                ">
-                    Ejecutar nuevamente las pruebas
-                </strong>
-            </div>
+                                <ul style="list-style-type: none;">
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 1 </li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 2 </li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 3 </li>
+                                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Caso 4 </li>
+                                <ul>
 
-            <p style="line-height:1.7;margin-top:0;">
-                No basta con repetir solamente el caso que falló.
-                Hay que ejecutar <strong>todos los casos de prueba</strong>.
-            </p>
-
-            <div style="
-                margin-top:18px;
-                display:flex;
-                justify-content:center;
-                gap:10px;
-                flex-wrap:wrap;
-            ">
-
-                <span style="
-                    padding:10px 14px;
-                    border-radius:20px;
-                    background:#4aa147;
-                    color:#fff;
-                ">
-                    <i class="fa-solid fa-check"
-                       aria-hidden="true"></i>
-                    Caso 1
-                </span>
-
-                <span style="
-                    padding:10px 14px;
-                    border-radius:20px;
-                    background:#4aa147;
-                    color:#fff;
-                ">
-                    <i class="fa-solid fa-check"
-                       aria-hidden="true"></i>
-                    Caso 2
-                </span>
-
-                <span style="
-                    padding:10px 14px;
-                    border-radius:20px;
-                    background:#4aa147;
-                    color:#fff;
-                ">
-                    <i class="fa-solid fa-check"
-                       aria-hidden="true"></i>
-                    Caso 3
-                </span>
-
-                <span style="
-                    padding:10px 14px;
-                    border-radius:20px;
-                    background:#4aa147;
-                    color:#fff;
-                ">
-                    <i class="fa-solid fa-check"
-                       aria-hidden="true"></i>
-                    Caso 4
-                </span>
-
-            </div>
-
-            <div style="
-                margin-top:18px;
-                text-align:center;
-                font-weight:bold;
-                color:#00734a;
-            ">
-                El ciclo se repite hasta que todos los casos pasen.
-            </div>
-
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                                <p class="p-nota">
+                                    <i class="fa-solid fa-circle-info" aria-hidden="true" style="color:#4aa147;"></i>
+                                    El ciclo se repite hasta que todos los casos pasen.
+                                </p>
+                            `,
                             nextButton: 'Siguiente: Paso 8'
-                        },
-
-                        {
+                        },{
                             title: 'Paso 8: Documentar',
                             content: `
-        <div style="
-            border-left:5px solid #00928d;
-            padding:20px;
-            background:#f2fbfa;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-file-circle-check"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#00928d;"></i>
+                                <p>Anotar qué error se encontró, cómo se corrigió y qué caso de prueba lo detectó. Esto ayuda a no repetir el mismo error en el futuro.</p>
 
-                <strong style="
-                    font-size:20px;
-                    color:#00734a;
-                ">
-                    Registrar lo aprendido
-                </strong>
-            </div>
-
-            <p style="line-height:1.7;margin-top:0;">
-                Anotar qué error se encontró, cómo se corrigió
-                y qué caso de prueba permitió detectarlo.
-            </p>
-
-            <div style="
-                margin-top:18px;
-                background:#ffffff;
-                border-radius:10px;
-                padding:16px;
-                border:1px solid #cce8e5;
-            ">
-
-                <div style="
-                    display:flex;
-                    gap:10px;
-                    margin-bottom:12px;
-                ">
-                    <i class="fa-solid fa-bug"
-                       aria-hidden="true"
-                       style="color:#d2232a;"></i>
-
-                    <div>
-                        <strong>Error encontrado</strong><br>
-                        La operación utilizaba suma en lugar de multiplicación.
-                    </div>
-                </div>
-
-                <div style="
-                    display:flex;
-                    gap:10px;
-                    margin-bottom:12px;
-                ">
-                    <i class="fa-solid fa-wrench"
-                       aria-hidden="true"
-                       style="color:#4aa147;"></i>
-
-                    <div>
-                        <strong>Corrección</strong><br>
-                        Se modificó la operación responsable.
-                    </div>
-                </div>
-
-                <div style="
-                    display:flex;
-                    gap:10px;
-                ">
-                    <i class="fa-solid fa-vial"
-                       aria-hidden="true"
-                       style="color:#006eae;"></i>
-
-                    <div>
-                        <strong>Caso que lo detectó</strong><br>
-                        Prueba con base 10 y altura 5.
-                    </div>
-                </div>
-
-            </div>
-
-            <div style="
-                margin-top:18px;
-                padding:13px;
-                background:#00734a;
-                color:#ffffff;
-                border-radius:8px;
-                text-align:center;
-                font-weight:bold;
-            ">
-                <i class="fa-solid fa-circle-check"
-                   aria-hidden="true"></i>
-                ¡Proceso completado!
-            </div>
-
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                            `,
                             nextButton: ''
                         }
-
                     ]
                 }
             ]
