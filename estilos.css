@@ -190,7 +190,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    font-size: 2rem !important;
+}
+
+.microsite-wrapper .content-panel p,
+.microsite-wrapper .content-panel li,
+.microsite-wrapper .content-panel ul,
+.microsite-wrapper .content-panel ol {
+    font-size: 1.5rem;      /* 16px */
+    line-height: 1.7;
 }
 
 /* --- Navegación de pasos --- */
@@ -487,10 +494,6 @@
     .microsite-wrapper .submenu-side button.active {
         border-left: none;
         border-bottom-color: #164a98;
-    }
-
-    .microsite-wrapper .content-panel {
-        padding: 20px;
     }
 
     .microsite-wrapper .welcome-col-text h3 {

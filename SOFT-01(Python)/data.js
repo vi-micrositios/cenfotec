@@ -610,6 +610,7 @@ const data = {
                                 <li>Escuchar: El autor también puede defender sus decisiones si tienen fundamento.</li>
                                 
                             </ol>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/recomendaciones.png',
                             nextButton: ''
                         }
                     ]
