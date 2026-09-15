@@ -316,6 +316,15 @@
     margin: 15px 0;
 }
 
+.microsite-wrapper .p-nota{
+    margin-top:18px;
+    padding:14px;
+    background:#ffffff;
+    border-radius:8px;
+    border:1px solid #d9e8f0;
+
+}
+
 /* ===== AUMENTAR TEXTO EN PANTALLA COMPLETA ===== */
 .microsite-wrapper #appContainer:fullscreen .welcome-col-text h3 {
     font-size: 4.5rem !important;

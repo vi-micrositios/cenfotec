@@ -818,54 +818,23 @@ const data = {
                         {
                             title: 'Paso 1: Entender qué debería hacer el programa',
                             content: `
-        <div style="
-            border-left:5px solid #006eae;
-            padding:20px;
-            background:#f4f9fc;
-            border-radius:12px;
-            color:#333;
-        ">
-            <div style="
-                display:flex;
-                align-items:center;
-                gap:14px;
-                margin-bottom:15px;
-            ">
-                <i class="fa-solid fa-lightbulb"
-                   aria-hidden="true"
-                   style="font-size:30px;color:#006eae;"></i>
+                                <div style=" display:flex; align-items:center; gap:14px; margin-bottom:15px;             ">
+                                    <i class="fa-solid fa-lightbulb" aria-hidden="true" style="font-size:30px;color:#006eae;"></i>
 
-                <strong style="
-                    font-size:20px;
-                    color:#006eae;
-                ">
-                    Antes de probar, hay que entender.
-                </strong>
-            </div>
+                                    <strong style=" color:#006eae; ">
+                                        Antes de probar, hay que entender.
+                                    </strong>
+                                </div>
 
-            <p style="margin:0;line-height:1.7;">
-                Tener claro el <strong>algoritmo</strong>, las
-                <strong>entradas</strong> y las
-                <strong>salidas esperadas</strong>.
-            </p>
+                                <p style="margin:0;line-height:1.7;">Tener claro el <strong>algoritmo</strong>, las <strong>entradas</strong> y las <strong>salidas esperadas</strong>. </p>
 
-            <div style="
-                margin-top:18px;
-                padding:14px;
-                background:#ffffff;
-                border-radius:8px;
-                border:1px solid #d9e8f0;
-            ">
-                <i class="fa-solid fa-code"
-                   aria-hidden="true"
-                   style="color:#006eae;margin-right:8px;"></i>
-
-                <strong>Pregunta clave:</strong>
-                ¿Qué debería hacer exactamente el programa?
-            </div>
-        </div>
-    `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/test.png',
+                                    <div class="p-nota">
+                                        <i class="fa-solid fa-code" aria-hidden="true" style="color:#006eae;margin-right:8px;"></i>
+                                        <strong>Pregunta clave:</strong>
+                                        ¿Qué debería hacer exactamente el programa?
+                                    </div>
+                                </div>
+                            `,
                             nextButton: 'Siguiente: Paso 2'
                         },
 
