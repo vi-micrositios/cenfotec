@@ -23,7 +23,7 @@ const data = {
                             <i class="fas fa-warning" style="color: #00928d;"></i>
                             Por muy inteligente que parezca, la computadora es completamente "tonta" por sí sola. No piensa, no tiene iniciativa ni creatividad. Solo hace exactamente lo que el ser humano le indica a través de un programa.
                             </p>
-                            <p>Principales componentes del computador</p>
+                            <p><strong>Principales componentes del computador:</strong></p>
 
                             <ul>
                                 <li><strong>CPU (Unidad Central de Procesamiento) o procesador</strong>: Es la unidad que ejecuta las instrucciones de los programas. Se puede ver como el "cerebro" de la computadora, que hace los cálculos y toma decisiones (ejecuta las órdenes). </li>
