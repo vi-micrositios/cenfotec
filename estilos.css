@@ -192,11 +192,15 @@
     flex-direction: column;
 }
 
-.microsite-wrapper .content-panel p,
+.microsite-wrapper .content-panel p {
+    font-size: 1.05rem !important;
+    line-height: 1.7;
+}
+
 .microsite-wrapper .content-panel li,
 .microsite-wrapper .content-panel ul,
 .microsite-wrapper .content-panel ol {
-    font-size: 1.1rem;      /* 16px */
+    font-size: 1.05rem;      /* 16px */
     line-height: 1.7;
 }
 
