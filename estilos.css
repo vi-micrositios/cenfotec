@@ -318,12 +318,12 @@
 
 .microsite-wrapper .code {
     font-family: 'Courier New', Courier, monospace;
-    border-left: 4px solid #164a98;
     margin-top:12px;
     padding:12px;
     background:#263238;
     color:#ffffff;
     border-radius:8px;
+    white-space: pre-line;
 }
 
 .microsite-wrapper .p-nota{
