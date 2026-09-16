@@ -975,14 +975,14 @@ const data = {
                             title: 'La condición: el corazón de la estructura',
                             content: `<p>Una condición es una expresión que solo puede dar como resultado verdadero (True) o falso (False). Se construye usando operadores de comparación y operadores lógicos.</p>
                             
-                            <div style="width:100%; max-width:1400px; margin:40px auto; padding:0 20px; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:30px; font-family:Arial, sans-serif;">
+                            <div style="margin:40px auto; padding:0 20px; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:30px;">
 
     <!-- TABLA 1 -->
     <div style="background:#fff; border:1px solid #9cc8ff; border-radius:16px; overflow:hidden; box-shadow:0 8px 25px rgba(0,110,174,.12);">
 
-        <h2 style="margin:0; padding:18px 22px; color:#fff; background:#006eae; font-size:21px;">
+        <p style="margin:0; padding:18px 22px; color:#fff; background:#006eae;">
             Operadores de comparación
-        </h2>
+        </p>
 
         <div style="overflow-x:auto;">
             <table style="width:100%; border-collapse:collapse;">
