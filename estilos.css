@@ -343,32 +343,17 @@
     background-color: #fff;
 }
 
-.microsite-wrapper .p-code {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1rem;
-    line-height: 1.6;
-    background: #f4f6f8;
-    color: #222;
-    border-left: 4px solid #006eaa;
-    padding: 15px 20px;
-    border-radius: 8px;
-    text-align: left;
-    white-space: pre-wrap;
-    overflow-x: auto;
-    margin: 15px 0;
-}
-
-.microsite-wrapper .code {
+.microsite-wrapper .codigo {
     font-family: 'Courier New', Courier, monospace;
     margin-top:12px;
     padding:12px;
     background:#263238;
     color:#ffffff;
     border-radius:8px;
-    white-space: pre-line;
+    white-space: pre;
 }
 
-.microsite-wrapper .p-nota{
+.microsite-wrapper .nota{
     margin-top:18px;
     padding:14px;
     background:#ffffff;

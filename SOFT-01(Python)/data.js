@@ -1002,7 +1002,7 @@ const data = {
                                             <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
                                                 <code>5 == 5</code>
                                             </td>
-                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#00734a; font-weight:bold;">
                                                 Verdadero
                                             </td>
                                         </tr>
@@ -1015,7 +1015,7 @@ const data = {
                                             <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
                                                 <code>5 != 3</code>
                                             </td>
-                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#00734a; font-weight:bold;">
                                                 Verdadero
                                             </td>
                                         </tr>
@@ -1028,7 +1028,7 @@ const data = {
                                             <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
                                                 <code>7 &gt; 10</code>
                                             </td>
-                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#c62828; font-weight:bold;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#d2232a; font-weight:bold;">
                                                 Falso
                                             </td>
                                         </tr>
@@ -1041,7 +1041,7 @@ const data = {
                                             <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
                                                 <code>3 &lt; 8</code>
                                             </td>
-                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#00734a; font-weight:bold;">
                                                 Verdadero
                                             </td>
                                         </tr>
@@ -1054,7 +1054,7 @@ const data = {
                                             <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
                                                 <code>5 &gt;= 5</code>
                                             </td>
-                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#00734a; font-weight:bold;">
                                                 Verdadero
                                             </td>
                                         </tr>
@@ -1067,7 +1067,7 @@ const data = {
                                             <td style="padding:13px 12px;">
                                                 <code>4 &lt;= 2</code>
                                             </td>
-                                            <td style="padding:13px 12px; color:#c62828; font-weight:bold;">
+                                            <td style="padding:13px 12px; color:#d2232a; font-weight:bold;">
                                                 Falso
                                             </td>
                                         </tr>
@@ -1105,7 +1105,7 @@ const data = {
                                             <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
                                                 <code>(5 &gt; 3) and (2 &lt; 4)</code>
                                             </td>
-                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#00734a; font-weight:bold;">
                                                 Verdadero
                                             </td>
                                         </tr>
@@ -1120,7 +1120,7 @@ const data = {
                                             <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
                                                 <code>(5 &gt; 10) or (2 &lt; 4)</code>
                                             </td>
-                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#00734a; font-weight:bold;">
                                                 Verdadero
                                             </td>
                                         </tr>
@@ -1135,7 +1135,7 @@ const data = {
                                             <td style="padding:13px 12px;">
                                                 <code>not (5 &gt; 3)</code>
                                             </td>
-                                            <td style="padding:13px 12px; color:#c62828; font-weight:bold;">
+                                            <td style="padding:13px 12px; color:#d2232a; font-weight:bold;">
                                                 Falso
                                             </td>
                                         </tr>
@@ -1144,7 +1144,7 @@ const data = {
                                 </table>
                             </div>
                             `,
-                            nextButton: ' '
+                            nextButton: ''
                         }
                     ]
                 },
@@ -1155,19 +1155,19 @@ const data = {
                         {
                             title: 'Condicional simple (if)',
                             content: `<p>Evalúa una condición. Si es verdadera, ejecuta un bloque de código. Si es falsa, no hace nada y continúa con la siguiente instrucción.</p>
-                            <p class="code">
+                            <pre class="codigo">
                             si (condición) entonces
                                 instrucciones
                             fin si
-                            </p>
+                            </pre>
                             
 
                             <p> Ejemplo:</p> 
-                            <p class="code">
+                            <pre class="codigo">
                             si (edad >= 18):
                                 print("Usted es mayor de edad")
                             # fin si
-                            </p>
+                            </pre>
                             <p class="p-nota"> Si la edad es 20, muestra el mensaje. Si es 15, no muestra nada y sigue.</p>
 
                             `,
