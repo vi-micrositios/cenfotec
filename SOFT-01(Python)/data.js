@@ -980,108 +980,170 @@ const data = {
                         },
                         {
                             title: 'Operadores de comparación',
-                            content: `
-    <div style="overflow-x:auto; border:1px solid #9cc8ff; border-top:none; border-radius:0 0 14px 14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
-        <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            content: `<p>Se utilizan para comparar dos valores. Si el resultado de la comparación es correcto la expresión es considerada verdadera. </p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-top:none; border-radius:0 0 14px 14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                                <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
 
-            <thead>
-                <tr>
-                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operador</th>
-                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
-                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
-                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
-                </tr>
-            </thead>
+                                    <thead>
+                                        <tr>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operador</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
+                                        </tr>
+                                    </thead>
 
-            <tbody>
-                <tr>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">==</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Igual a</td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code>5 == 5</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
-                        Verdadero
-                    </td>
-                </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">==</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Igual a</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code>5 == 5</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                                Verdadero
+                                            </td>
+                                        </tr>
 
-                <tr style="background:#f3f9ff;">
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">!=</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Distinto de</td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code>5 != 3</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
-                        Verdadero
-                    </td>
-                </tr>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">!=</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Distinto de</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code>5 != 3</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                                Verdadero
+                                            </td>
+                                        </tr>
 
-                <tr>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&gt;</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor que</td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code>7 &gt; 10</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#c62828; font-weight:bold;">
-                        Falso
-                    </td>
-                </tr>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&gt;</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor que</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code>7 &gt; 10</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#c62828; font-weight:bold;">
+                                                Falso
+                                            </td>
+                                        </tr>
 
-                <tr style="background:#f3f9ff;">
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&lt;</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Menor que</td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code>3 &lt; 8</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
-                        Verdadero
-                    </td>
-                </tr>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&lt;</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Menor que</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code>3 &lt; 8</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                                Verdadero
+                                            </td>
+                                        </tr>
 
-                <tr>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&gt;=</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor o igual que</td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                        <code>5 &gt;= 5</code>
-                    </td>
-                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
-                        Verdadero
-                    </td>
-                </tr>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&gt;=</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor o igual que</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code>5 &gt;= 5</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                                Verdadero
+                                            </td>
+                                        </tr>
 
-                <tr style="background:#f3f9ff;">
-                    <td style="padding:13px 12px;">
-                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&lt;=</code>
-                    </td>
-                    <td style="padding:13px 12px;">Menor o igual que</td>
-                    <td style="padding:13px 12px;">
-                        <code>4 &lt;= 2</code>
-                    </td>
-                    <td style="padding:13px 12px; color:#c62828; font-weight:bold;">
-                        Falso
-                    </td>
-                </tr>
-            </tbody>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&lt;=</code>
+                                            </td>
+                                            <td style="padding:13px 12px;">Menor o igual que</td>
+                                            <td style="padding:13px 12px;">
+                                                <code>4 &lt;= 2</code>
+                                            </td>
+                                            <td style="padding:13px 12px; color:#c62828; font-weight:bold;">
+                                                Falso
+                                            </td>
+                                        </tr>
+                                    </tbody>
 
-        </table>
-    </div>
-
+                                </table>
+                            </div>
                             `,
-                            nextButton: ' '
+                            nextButton: 'Siguiente: Operadores lógicos'
                         },
                         {
-                            title: 'Operadores de comparación',
-                            content: ``,
+                            title: 'Operadores lógicos o booleanos',
+                            content: `<p>Permiten combinar la evaluación de dos valores booleanos y devolver un solo resultado verdadero o falso. </p>
+                            
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-top:none; border-radius:0 0 14px 14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                                <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+
+                                    <thead>
+                                        <tr>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operador</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">and (Y)</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                Verdadero solo si ambas son verdaderas
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code>(5 &gt; 3) and (2 &lt; 4)</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                                Verdadero
+                                            </td>
+                                        </tr>
+
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">or (O)</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                Verdadero si al menos una es verdadera
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                                                <code>(5 &gt; 10) or (2 &lt; 4)</code>
+                                            </td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                                                Verdadero
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td style="padding:13px 12px;">
+                                                <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">not (NO)</code>
+                                            </td>
+                                            <td style="padding:13px 12px;">
+                                                Invierte el valor
+                                            </td>
+                                            <td style="padding:13px 12px;">
+                                                <code>not (5 &gt; 3)</code>
+                                            </td>
+                                            <td style="padding:13px 12px; color:#c62828; font-weight:bold;">
+                                                Falso
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                            `,
                             nextButton: ' '
                         }
                     ]
