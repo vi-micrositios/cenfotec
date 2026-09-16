@@ -892,7 +892,7 @@ add eax, 3 &nbsp;&nbsp; → Sumarle 3 a EAX
                                 </p>
                             `,
                             nextButton: 'Siguiente: Paso 5'
-                        },{
+                        }, {
                             title: 'Paso 5: Localizar la causa del fallo',
                             content: `
                                 <p>Leer el código línea por línea y utilizar una tabla de traza para simular la ejecución.</p>
@@ -911,7 +911,7 @@ print(base, altura)
 </pre>
                             `,
                             nextButton: 'Siguiente: Paso 6'
-                        },{
+                        }, {
                             title: 'Paso 6: Corregir el error',
                             content: `
                                 <p>Modificar únicamente la línea o líneas responsables del problema.</p>
@@ -924,7 +924,7 @@ print(base, altura)
                                 </p>
                             `,
                             nextButton: 'Siguiente: Paso 7'
-                        },{
+                        }, {
                             title: 'Paso 7: Volver a probar',
                             content: `
                                 <p>Ejecutar de nuevo todos los casos de prueba (no solo el que falló, porque el cambio podría haber roto algo que antes funcionaba).</p>
@@ -942,14 +942,14 @@ print(base, altura)
                                 </p>
                             `,
                             nextButton: 'Siguiente: Paso 8'
-                        },{
+                        }, {
                             title: 'Paso 8: Documentar',
                             content: `
                                 <p>Anotar qué error se encontró, cómo se corrigió y qué caso de prueba lo detectó. Esto ayuda a no repetir el mismo error en el futuro.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/documentar.png',
                             nextButton: 'Siguiente: Herramientas útiles para depurar'
-                        },{
+                        }, {
                             title: 'Herramientas útiles para depurar',
                             content: `
                                 <ul>
@@ -1163,6 +1163,8 @@ print(base, altura)
                         {
                             title: 'Condicional simple (if)',
                             content: `<p>Evalúa una condición. Si es verdadera, ejecuta un bloque de código. Si es falsa, no hace nada y continúa con la siguiente instrucción.</p>
+
+                            <p><strong>Sintaxis genérica</strong></p>
 <pre class="codigo">
 si (condición) entonces
     instrucciones
@@ -1171,20 +1173,102 @@ fin si
                             
                             <p> Ejemplo:</p> 
 <pre class="codigo">
-si (edad >= 18):
-    print("Usted es mayor de edad")
-# fin si
+if edad >= 18:
+    print("Es mayor de edad")
 </pre>
-                            <p class="nota"> Si la edad es 20, muestra el mensaje. Si es 15, no muestra nada y sigue.</p>
-
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Si la edad es 20, muestra el mensaje. <br>
+                            Si es 15, no muestra nada y sigue.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/unaRuta.png',
-                            nextButton: 'Siguiente: Condición'
+                            nextButton: 'Siguiente: Condicional doble'
                         },
                         {
-                            title: 'Operadores de comparación',
-                            content: `<p>Contenido en construcción</p>`,
-                            nextButton: ' '
+                            title: 'Condicional doble (if-else)',
+                            content: `<p>Evalúa una condición. Si es verdadera, ejecuta un bloque. Si es falsa, ejecuta otro bloque.</p>
+                            <p><strong>Sintaxis genérica</strong></p>
+<pre class="codigo">
+si (condición) entonces
+    instrucciones A
+si no
+    instrucciones B
+fin si
+</pre>
+                            
+                            <p> Ejemplo:</p> 
+<pre class="codigo">
+if nota >= 70:
+    print("Aprobado")
+else:
+    print("Reprobado")
+</pre>
+                            <p> Nunca se ejecutan ambos bloques: o se ejecuta uno, o se ejecuta el otro. Siempre se ejecuta exactamente uno de los dos. </p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Si la nota es 20, muestra el mensaje "Reprobado". <br>
+                            Si es 85, muestra el mensaje "Aprobado".</p>
+                            
+                            `,
+                            nextButton: 'Siguiente: Condicional múltiple'
+                        },
+                        {
+                            title: 'Condicional múltiple (if-else-if o elif)',
+                            content: `<p>Se usa cuando hay más de dos caminos posibles. Se evalúan varias condiciones en orden. La primera que sea verdadera ejecuta su bloque y se sale de toda la estructura. Si ninguna es verdadera, se ejecuta el bloque final (else), que es opcional.</p>
+                            <p><strong>Sintaxis genérica</strong></p>
+<pre class="codigo">
+si (condición 1) entonces
+    instrucciones A
+si no, si (condición 2) entonces
+    instrucciones B
+si no, si (condición 3) entonces
+    instrucciones C
+si no
+    instrucciones D
+fin si
+</pre>
+                            
+                            <p> Ejemplo:</p> 
+<pre class="codigo">
+nota = float(input("Ingrese la nota: "))
+if nota >= 90:
+    print("Excelente")
+elif nota >= 80:
+    print("Muy bueno")
+elif nota >= 70:
+    print("Aprobado")
+else:
+    print("Reprobado")
+</pre>
+                            <p> Nunca se ejecutan ambos bloques: o se ejecuta uno, o se ejecuta el otro. Siempre se ejecuta exactamente uno de los dos. </p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Si la nota es 20, muestra el mensaje "Reprobado". <br>
+                            Si la nota es 73, muestra el mensaje "Aprobado". <br>
+                            Si la nota es 80, muestra el mensaje "Muy bueno". <br>
+                            Si es 85, muestra el mensaje "Excelente".</p>
+                            
+                            `,
+                            nextButton: 'Siguiente: Condicional múltiple'
+                        },
+                        {
+                            title: 'Condicional anidada',
+                            content: `<p>Es una estructura condicional dentro de otra. Se usa cuando una decisión depende de otra decisión previa.</p>
+                            <p><strong>Sintaxis genérica</strong></p>
+<pre class="codigo">
+si (edad >= 18) entonces
+    si (tiene_licencia == verdadero) entonces
+        mostrar "Puede conducir"
+    si no
+        mostrar "Es mayor de edad, pero no tiene licencia"
+    fin si
+si no
+    mostrar "Es menor de edad, no puede conducir"
+fin si
+</pre>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/tresRutas.png',
+                            nextButton: ''
                         }
                     ]
                 },
