@@ -1164,7 +1164,40 @@ const data = {
                             nextButton: ' '
                         }
                     ]
-                }
+                },
+                {
+                    id: 'm004-t002',
+                    label: 'Tipos de estructuras condicionales',
+                    steps: [
+                        {
+                            title: 'Condicional simple (if)',
+                            content: `<p>Evalúa una condición. Si es verdadera, ejecuta un bloque de código. Si es falsa, no hace nada y continúa con la siguiente instrucción.</p>
+                            <p class="code">
+                            si (condición) entonces
+                                instrucciones
+                            fin si
+                            </p>
+                            
+
+                            <p> Ejemplo:</p> 
+                            <p class="code">
+                            si (edad >= 18):
+                                print("Usted es mayor de edad")
+                            # fin si
+                            </p>
+                            <p class="p-nota"> Si la edad es 20, muestra el mensaje. Si es 15, no muestra nada y sigue.</p>
+
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/dosRutas.png',
+                            nextButton: 'Siguiente: Condición'
+                        },
+                        {
+                            title: 'Operadores de comparación',
+                            content: `<p>Contenido en construcción</p>`,
+                            nextButton: ' '
+                        }
+                    ]
+                },
             ]
         }
         /** Plantilla nuevo módulo
