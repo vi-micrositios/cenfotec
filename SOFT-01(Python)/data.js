@@ -1164,7 +1164,7 @@ print(base, altura)
                             title: 'Condicional simple (if)',
                             content: `<p>Evalúa una condición. Si es verdadera, ejecuta un bloque de código. Si es falsa, no hace nada y continúa con la siguiente instrucción.</p>
 
-                            <p><strong>Sintaxis genérica</strong></p>
+                            <p><strong>Sintaxis genérica:</strong></p>
 <pre class="codigo">
 si (condición) entonces
     instrucciones
@@ -1187,7 +1187,7 @@ if edad >= 18:
                         {
                             title: 'Condicional doble (if-else)',
                             content: `<p>Evalúa una condición. Si es verdadera, ejecuta un bloque. Si es falsa, ejecuta otro bloque.</p>
-                            <p><strong>Sintaxis genérica</strong></p>
+                            <p><strong>Sintaxis genérica:</strong></p>
 <pre class="codigo">
 si (condición) entonces
     instrucciones A
@@ -1215,7 +1215,7 @@ else:
                         {
                             title: 'Condicional múltiple (if-else-if o elif)',
                             content: `<p>Se usa cuando hay más de dos caminos posibles. Se evalúan varias condiciones en orden. La primera que sea verdadera ejecuta su bloque y se sale de toda la estructura. Si ninguna es verdadera, se ejecuta el bloque final (else), que es opcional.</p>
-                            <p><strong>Sintaxis genérica</strong></p>
+                            <p><strong>Sintaxis genérica:</strong></p>
 <pre class="codigo">
 si (condición 1) entonces
     instrucciones A
@@ -1254,7 +1254,7 @@ else:
                         {
                             title: 'Condicional anidada',
                             content: `<p>Es una estructura condicional dentro de otra. Se usa cuando una decisión depende de otra decisión previa.</p>
-                            <p><strong>Sintaxis genérica</strong></p>
+                            <p><strong>Sintaxis genérica:</strong></p>
 <pre class="codigo">
 si (edad >= 18) entonces
     si (tiene_licencia == verdadero) entonces
@@ -1272,6 +1272,49 @@ fin si
                         }
                     ]
                 },
+                {
+                    id: 'm004-t003',
+                    label: 'Flujos condicionales',
+                    steps: [
+                        {
+                            title: '¿Qué es un flujo condicional?',
+                            content: `<p>Es el camino que sigue la ejecución del programa cuando se encuentra con una estructura condicional. A diferencia del flujo secuencial (que siempre va hacia adelante), el flujo condicional se bifurca: puede tomar un camino u otro, e incluso puede saltarse bloques enteros de código.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/cuatroRutas.png',
+                            nextButton: 'Siguiente: Paso 2'
+                        },
+                        {
+                            title: 'Representación gráfica',
+                            content: `<p>En un diagrama de flujo, una condición se representa con un rombo. Del rombo salen dos flechas: una etiquetada "Sí" (o "Verdadero") y otra etiquetada "No" (o "Falso"). Cada flecha lleva a un bloque distinto.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/algoritmoDecisiones.png',
+                            nextButton: 'Siguiente: Características'
+                        },
+                        {
+                            title: 'Características del flujo condicional',
+                            content: `
+                            <ul>
+                                <li>No es lineal: El programa puede saltar de una línea a otra, dependiendo de la condición.</li>
+                                <li>Es excluyente en el if-else: Solo se ejecuta uno de los dos caminos.</li>
+                                <li>Puede no ejecutar nada: En el if simple, si la condición es falsa, el bloque interno se salta por completo.</li>
+                                <li>Puede anidarse: Un flujo condicional puede contener otro dentro, creando árboles de decisión.</li>
+                            </ul>
+                            `,
+                            nextButton: 'Siguiente: Utilidad'
+                        },
+                        {
+                            title: 'Funcionalidad del flujo condicional',
+                            content: `<p>El flujo condicional permite que un programa:</p>
+                            <ul>
+                                <li><strong>Valide datos de entrada</strong>: Verificar si el usuario ingresó un número positivo, si la contraseña es correcta, si el correo tiene formato válido.</li>
+                                <li><strong>Tome decisiones</strong>: Aplicar un descuento solo si el cliente es frecuente; mostrar un mensaje solo si la edad es mayor a 18.</li>
+                                <li><strong>Maneje múltiples escenarios</strong>: Clasificar un triángulo según sus lados; asignar una letra según la nota; determinar el día de la semana según un número.</li>
+                                <li><strong>Evite errores</strong>: Antes de dividir, verificar que el divisor no sea cero; antes de acceder a una lista, verificar que el índice exista.</li>
+                                <li><strong>Controle el flujo de un menú</strong>: Si el usuario elige la opción 1, hacer esto; si elige la 2, hacer aquello.</li>
+                            </ul>
+                            `,
+                            nextButton: ' '
+                        }
+                    ]
+                }
             ]
         }
         /** Plantilla nuevo módulo
