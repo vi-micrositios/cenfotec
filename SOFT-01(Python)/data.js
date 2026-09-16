@@ -94,6 +94,7 @@ const data = {
                                         <li>Mezclar.</li>
                                         <li>Servir.</li>
                                     </ul>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/algoritmo.png',
                             nextButton: 'Siguiente: Características'
                         },
                         {
@@ -106,6 +107,7 @@ const data = {
                                             <li>Finitas: Debe existir un momento en que el algoritmo termina.</li>
 
                                         </ul>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/diagramaFlujo.png',
                             nextButton: 'Siguiente: Programa'
                         },
                         {
@@ -137,39 +139,41 @@ print("El área es:", area)
                         {
                             title: 'Lenguaje de programación',
                             content: `<p>Un lenguaje de programación permite expresar instrucciones de una manera estructurada para que puedan ser procesadas por una computadora. Ejemplos:</p>
-                                        <ul>
-                                            <li>Python
-                                            <li>Java</li>
-                                            <li>C</li>
-                                            <li>C++</li>
-                                            <li>JavaScript</li>
-                                            <li>C#</li>
-                                            <li>Kotlin</li>
-                                        </ul>
-                                        <p>Para escribir programas se necesita un editor de código.</p>`,
+                            <ul>
+                                <li>Python
+                                <li>Java</li>
+                                <li>C</li>
+                                <li>C++</li>
+                                <li>JavaScript</li>
+                                <li>C#</li>
+                                <li>Kotlin</li>
+                            </ul>
+                            <p>Para escribir programas se necesita un editor de código.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/lenguaje.png',
                             nextButton: 'Siguiente: Editor del lenguaje'
                         },
                         {
                             title: 'Editor del lenguaje de programación',
                             content: `<p>Un editor permite crear y modificar archivos que contienen código fuente. Por ejemplo: </p>
-                                        <ul>
-                                            <li>Visual Studio Code</li>
-                                            <li>PyCharm</li>
-                                            <li>Spyder</li>
-                                            <li>IDLE</li>
-                                            <li>Sublime Text</li>
-                                            <li>Jupyter Notebook</li>
-                                        </ul>
-                                        <a href="https://docs.google.com/document/d/1Qk2zS0k_AJDP_VvGlmmbtgxJ_MBNCsqUO0Tl-C0gEHE/edit?usp=sharing"
-                                        target="_blank" rel="noopener noreferrer" title="Abrir el taller de instalación de Visual Studio Code y Python 3">
-                                        <strong>Instalación de las herramientas necesarias</strong>
-                                        <span style="display: block; margin-top: 0.25rem;">
-                                            Visual Studio Code + Python 3 · Guía paso a paso
-                                        </span>
+                                <ul>
+                                    <li>Visual Studio Code</li>
+                                    <li>PyCharm</li>
+                                    <li>Spyder</li>
+                                    <li>IDLE</li>
+                                    <li>Sublime Text</li>
+                                    <li>Jupyter Notebook</li>
+                                </ul>
+                                <a href="https://docs.google.com/document/d/1Qk2zS0k_AJDP_VvGlmmbtgxJ_MBNCsqUO0Tl-C0gEHE/edit?usp=sharing"
+                                target="_blank" rel="noopener noreferrer" title="Abrir el taller de instalación de Visual Studio Code y Python 3">
+                                <strong>Instalación de las herramientas necesarias</strong>
+                                <span style="display: block; margin-top: 0.25rem;">
+                                    Visual Studio Code + Python 3 · Guía paso a paso
+                                </span>
 
-                                        <i class="fa-solid fa-up-right-from-square" aria-hidden="true" style="color: #00928d; margin-left: 0.4rem;">
-                                        </i>
-                                    </a>`,
+                                <i class="fa-solid fa-up-right-from-square" aria-hidden="true" style="color: #00928d; margin-left: 0.4rem;">
+                                </i>
+                            </a>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/editor.png',
                             nextButton: 'Siguiente: Compilador'
                         },
                         {
@@ -180,7 +184,7 @@ print("El área es:", area)
 
                             <p>El compilador puede convertirlo en algo parecido a:</p>
 <pre class="codigo">
-mov eax, 5<br>
+mov eax, 5
 add eax, 3
 </pre>
 
@@ -199,7 +203,7 @@ add eax, 3 &nbsp;&nbsp; → Sumarle 3 a EAX
 
                             <p>Python utiliza un intérprete para ejecutar sus programas.</p>
                             <p>Ejemplo en Python:</pre>
-                            <pre class="codigo"> print("Hola") </p>
+                            <pre class="codigo"> print("Hola") </pre>
 
                             <p>Al ejecutar el programa, el intérprete de Python procesa las instrucciones y produce:</p>
                             <pre class="codigo"> Hola </pre>`,
