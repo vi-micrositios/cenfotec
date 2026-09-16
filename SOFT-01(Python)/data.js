@@ -974,193 +974,114 @@ const data = {
                         {
                             title: 'La condición: el corazón de la estructura',
                             content: `<p>Una condición es una expresión que solo puede dar como resultado verdadero (True) o falso (False). Se construye usando operadores de comparación y operadores lógicos.</p>
-                            
-                            <div style="margin:40px auto; padding:0 20px; box-sizing:border-box; display:grid; grid-template-columns:1fr 1fr; gap:30px;">
-
-    <!-- TABLA 1 -->
-    <div style="background:#fff; border:1px solid #9cc8ff; border-radius:16px; overflow:hidden; box-shadow:0 8px 25px rgba(0,110,174,.12);">
-
-        <p style="margin:0; padding:18px 22px; color:#fff; background:#006eae;">
-            Operadores de comparación
-        </p>
-
-        <div style="overflow-x:auto;">
-            <table style="width:100%; border-collapse:collapse;">
-
-                <thead>
-                    <tr>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operador</th>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr style="background:#f3f9ff;">
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">==</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Igual a</td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">5 == 5</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">Verdadero</td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">!=</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Distinto de</td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">5 != 3</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">Verdadero</td>
-                    </tr>
-
-                    <tr style="background:#f3f9ff;">
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">&gt;</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor que</td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">7 &gt; 10</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#c62828; font-weight:bold;">Falso</td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">&lt;</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Menor que</td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">3 &lt; 8</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">Verdadero</td>
-                    </tr>
-
-                    <tr style="background:#f3f9ff;">
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">&gt;=</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor o igual que</td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">5 &gt;= 5</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">Verdadero</td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:13px 12px;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">&lt;=</code>
-                        </td>
-                        <td style="padding:13px 12px;">Menor o igual que</td>
-                        <td style="padding:13px 12px;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">4 &lt;= 2</code>
-                        </td>
-                        <td style="padding:13px 12px; color:#c62828; font-weight:bold;">Falso</td>
-                    </tr>
-                </tbody>
-
-            </table>
-        </div>
-    </div>
-
-
-    <!-- TABLA 2 -->
-    <div style="background:#fff; border:1px solid #9cc8ff; border-radius:16px; overflow:hidden; box-shadow:0 8px 25px rgba(0,110,174,.12);">
-
-        <h2 style="margin:0; padding:18px 22px; color:#fff; background:#006eae; font-size:21px;">
-            Operadores lógicos
-        </h2>
-
-        <p style="margin:18px 22px; color:#444; font-size:15px;">
-            Combinan condiciones:
-        </p>
-
-        <div style="overflow-x:auto;">
-            <table style="width:100%; border-collapse:collapse;">
-
-                <thead>
-                    <tr>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operador</th>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
-                        <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    <tr style="background:#f3f9ff;">
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">and (Y)</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            Verdadero solo si ambas son verdaderas
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">(5 &gt; 3) and (2 &lt; 4)</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
-                            Verdadero
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">or (O)</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            Verdadero si al menos una es verdadera
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">(5 &gt; 10) or (2 &lt; 4)</code>
-                        </td>
-                        <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
-                            Verdadero
-                        </td>
-                    </tr>
-
-                    <tr style="background:#f3f9ff;">
-                        <td style="padding:13px 12px;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">not (NO)</code>
-                        </td>
-                        <td style="padding:13px 12px;">
-                            Invierte el valor
-                        </td>
-                        <td style="padding:13px 12px;">
-                            <code style="background:#9cc8ff; color:#003d61; padding:4px 7px; border-radius:6px;">not (5 &gt; 3)</code>
-                        </td>
-                        <td style="padding:13px 12px; color:#c62828; font-weight:bold;">
-                            Falso
-                        </td>
-                    </tr>
-                </tbody>
-
-            </table>
-        </div>
-    </div>
-
-</div>
-
-<!-- Responsive -->
-<style>
-@media (max-width: 900px) {
-    .tablas-operadores {
-        grid-template-columns: 1fr !important;
-    }
-}
-</style>
-
                             `,
-                            
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/dosRutas.png',
                             nextButton: 'Siguiente: Operadores de comparación'
                         },
                         {
                             title: 'Operadores de comparación',
-                            content: `<p>Contenido en construcción</p>`,
+                            content: `
+    <div style="overflow-x:auto; border:1px solid #9cc8ff; border-top:none; border-radius:0 0 14px 14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+        <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+
+            <thead>
+                <tr>
+                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operador</th>
+                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
+                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">==</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Igual a</td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code>5 == 5</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                        Verdadero
+                    </td>
+                </tr>
+
+                <tr style="background:#f3f9ff;">
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">!=</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Distinto de</td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code>5 != 3</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                        Verdadero
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&gt;</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor que</td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code>7 &gt; 10</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#c62828; font-weight:bold;">
+                        Falso
+                    </td>
+                </tr>
+
+                <tr style="background:#f3f9ff;">
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&lt;</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Menor que</td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code>3 &lt; 8</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                        Verdadero
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&gt;=</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mayor o igual que</td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">
+                        <code>5 &gt;= 5</code>
+                    </td>
+                    <td style="padding:13px 12px; border-bottom:1px solid #dceeff; color:#087443; font-weight:bold;">
+                        Verdadero
+                    </td>
+                </tr>
+
+                <tr style="background:#f3f9ff;">
+                    <td style="padding:13px 12px;">
+                        <code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">&lt;=</code>
+                    </td>
+                    <td style="padding:13px 12px;">Menor o igual que</td>
+                    <td style="padding:13px 12px;">
+                        <code>4 &lt;= 2</code>
+                    </td>
+                    <td style="padding:13px 12px; color:#c62828; font-weight:bold;">
+                        Falso
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+                            `,
+                            nextButton: ' '
+                        },
+                        {
+                            title: 'Operadores de comparación',
+                            content: ``,
                             nextButton: ' '
                         }
                     ]
@@ -1188,7 +1109,7 @@ const data = {
                             <p class="p-nota"> Si la edad es 20, muestra el mensaje. Si es 15, no muestra nada y sigue.</p>
 
                             `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/dosRutas.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/unaRuta.png',
                             nextButton: 'Siguiente: Condición'
                         },
                         {
