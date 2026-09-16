@@ -119,11 +119,12 @@ const data = {
                                         <li>Mostrar el resultado.</li>
                                     </ol>
                                     <p>Programa en Python</p>
-                                    <p class="code">base = float(input("Ingrese la base: "))
-                                        altura = float(input("Ingrese la altura: "))
-                                        area = base * altura
-                                        print("El área es:", area)
-                                    </p>
+<pre class="codigo">
+base = float(input("Ingrese la base: "))
+altura = float(input("Ingrese la altura: "))
+area = base * altura
+print("El área es:", area)
+</pre>
                                     `,
                             nextButton: ' '
                         }
@@ -178,14 +179,16 @@ const data = {
                             <pre class="codigo">int suma = 5 + 3; </pre>
 
                             <p>El compilador puede convertirlo en algo parecido a:</p>
-                            <p class="code"> mov eax, 5<br>
-                                add eax, 3
-                            </p>
+<pre class="codigo">
+mov eax, 5<br>
+add eax, 3
+</pre>
 
                             <p>Que significa aproximadamente:</p>
-                            <p class="code"> mov eax, 5 &nbsp;&nbsp;→ Guardar el número 5 en el registro EAX<br>
-                                add eax, 3 &nbsp;&nbsp;→ Sumarle 3 a EAX
-                            </p>
+<pre class="codigo">
+mov eax, 5 &nbsp;&nbsp; → Guardar el número 5 en el registro EAX
+add eax, 3 &nbsp;&nbsp; → Sumarle 3 a EAX
+</pre>
 
                             <p>Lenguajes como C y C++ utilizan tradicionalmente procesos de compilación.</p>`,
                             nextButton: 'Siguiente: Intérprete'
@@ -195,11 +198,11 @@ const data = {
                             content: `<p>Un intérprete ejecuta instrucciones de un programa mediante un sistema que las procesa durante la ejecución. </p>
 
                             <p>Python utiliza un intérprete para ejecutar sus programas.</p>
-                            <p>Ejemplo en Python:</p>
-                            <p class="code"> print("Hola") </p>
+                            <p>Ejemplo en Python:</pre>
+                            <pre class="codigo"> print("Hola") </p>
 
                             <p>Al ejecutar el programa, el intérprete de Python procesa las instrucciones y produce:</p>
-                            <p class="code"> Hola </p>`,
+                            <pre class="codigo"> Hola </pre>`,
                             nextButton: ''
                         }
 
@@ -823,7 +826,7 @@ const data = {
                             content: `
                                 <p>Tener claro el <strong>algoritmo</strong>, las <strong>entradas</strong> y las <strong>salidas esperadas</strong>. </p>
 
-                                <p class="p-nota">
+                                <p class="nota">
                                     <i class="fa-solid fa-code" aria-hidden="true" style="color:#006eae;margin-right:8px;"></i>
                                     <strong>Pregunta clave:</strong> <br>
                                     ¿Qué debería hacer exactamente el programa?
@@ -890,17 +893,18 @@ const data = {
                             content: `
                                 <p>Leer el código línea por línea y utilizar una tabla de traza para simular la ejecución.</p>
 
-                                <p class="p-nota">
+                                <p class="nota">
                                     <i class="fa-solid fa-bug" aria-hidden="true" style="color:#d2232a; margin-right:8px;"></i>
                                     <strong>Punto de control</strong> <br>
                                     Agregar "puntos de control": imprimir valores intermedios de variables para ver dónde se desvía el programa. <br> 
                                     Ejemplo: si el área debería ser 50 y da 30, imprimir la base y la altura justo antes de multiplicar para ver si los valores son los correctos.
                                 </p>
 
-                                <p class="code"> base = 10 <br>
-                                    altura = 5 <br>
-                                    print(base, altura)
-                                </p>
+<pre class="codigo">
+base = 10 <br>
+altura = 5 <br>
+print(base, altura)
+</pre>
                             `,
                             nextButton: 'Siguiente: Paso 6'
                         },{
@@ -908,9 +912,9 @@ const data = {
                             content: `
                                 <p>Modificar únicamente la línea o líneas responsables del problema.</p>
 
-                                <p class="code"> area = base * altura </p>
+                                <pre class="codigo"> area = base * altura </pre>
 
-                                <p class="p-nota">
+                                <p class="nota">
                                     <i class="fa-solid fa-circle-info" aria-hidden="true" style="color:#4aa147;"></i>
                                     Hacer un cambio a la vez facilita identificar qué modificación solucionó el problema.
                                 </p>
@@ -928,7 +932,7 @@ const data = {
                                     <li><i class="fa-solid fa-check" aria-hidden="true" style="color:#4aa147;"></i> Caso 4 </li>
                                 </ul>
 
-                                <p class="p-nota">
+                                <p class="nota">
                                     <i class="fa-solid fa-circle-info" aria-hidden="true" style="color:#4aa147;"></i>
                                     El ciclo se repite hasta que todos los casos pasen.
                                 </p>
@@ -1167,7 +1171,7 @@ si (edad >= 18):
     print("Usted es mayor de edad")
 # fin si
 </pre>
-                            <p class="p-nota"> Si la edad es 20, muestra el mensaje. Si es 15, no muestra nada y sigue.</p>
+                            <p class="nota"> Si la edad es 20, muestra el mensaje. Si es 15, no muestra nada y sigue.</p>
 
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/unaRuta.png',
