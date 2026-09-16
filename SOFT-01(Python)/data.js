@@ -175,7 +175,7 @@ const data = {
                             title: 'Compilador',
                             content: `<p>Es un programa que traduce código fuente escrito en un lenguaje de programación a otra forma que pueda ser ejecutada por la computadora o por una máquina virtual.</p>
                             <p>Programa en C++</p>
-                            <p class="code"> int suma = 5 + 3; </p>
+                            <pre class="codigo">int suma = 5 + 3; </pre>
 
                             <p>El compilador puede convertirlo en algo parecido a:</p>
                             <p class="code"> mov eax, 5<br>
@@ -1155,19 +1155,18 @@ const data = {
                         {
                             title: 'Condicional simple (if)',
                             content: `<p>Evalúa una condición. Si es verdadera, ejecuta un bloque de código. Si es falsa, no hace nada y continúa con la siguiente instrucción.</p>
-                            <pre class="codigo">
-                            si (condición) entonces
-                                instrucciones
-                            fin si
-                            </pre>
+<pre class="codigo">
+si (condición) entonces
+    instrucciones
+fin si
+</pre>
                             
-
                             <p> Ejemplo:</p> 
-                            <pre class="codigo">
-                            si (edad >= 18):
-                                print("Usted es mayor de edad")
-                            # fin si
-                            </pre>
+<pre class="codigo">
+si (edad >= 18):
+    print("Usted es mayor de edad")
+# fin si
+</pre>
                             <p class="p-nota"> Si la edad es 20, muestra el mensaje. Si es 15, no muestra nada y sigue.</p>
 
                             `,
