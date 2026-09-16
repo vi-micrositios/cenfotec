@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Pruebas y depuración</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="ejercicio-errores-python"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #fff200; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #fff200, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-tag" aria-hidden="true"></i>
+            </span>
+
+            <h3 id="ejercicio-errores-python"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Ejercicio: Pruebas y corrección de errores en Python
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #fff200; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+            <span>
+                <strong>Instrucciones</strong>: Analizar el problema planteado, diseñar casos
+                de prueba antes de modificar el programa, ejecutar las pruebas sobre el código
+                proporcionado, identificar el error, corregirlo y volver a ejecutar las pruebas
+                para comprobar que el programa funciona correctamente.
+            </span>
+        </div>
+
+        <!-- CONTEXTO -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-bug" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i>
+                Situación planteada
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+                Un programador ha desarrollado un programa que debe calcular el
+                <strong>precio final de un producto aplicando un descuento del 10 %</strong>.
+                El programa solicita al usuario el precio original y posteriormente
+                muestra el precio con descuento.
+            </p>
+
+            <div
+                style="background: #272822; border-radius: 10px; padding: 18px; color: #f8f8f2; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; overflow-x: auto;">
+
+                <div style="color: #75715e;"># Código proporcionado</div>
+                <div><span style="color: #66d9ef;">p</span> = <span style="color: #ae81ff;">float</span>(<span
+                        style="color: #e6db74;">input</span>(<span style="color: #e6db74;">"Precio: "</span>))</div>
+                <div><span style="color: #66d9ef;">d</span> = <span style="color: #ae81ff;">10</span></div>
+                <div><span style="color: #66d9ef;">pf</span> = <span style="color: #f92672;">p - d</span></div>
+                <div><span style="color: #e6db74;">print</span>(<span style="color: #e6db74;">"Precio final:"</span>,
+                    <span style="color: #66d9ef;">pf</span>)</div>
+
+            </div>
+
+        </div>
+
+        <!-- PARTE 1: CASOS DE PRUEBA -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-vial" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Parte 1: Diseñar los casos de prueba (CP)
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+                Antes de ejecutar el programa, diseñe <strong>al menos cuatro casos de prueba</strong>
+                que permitan comprobar diferentes datos de entrada.
+            </p>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                Los casos de prueba deben incluir como mínimo:
+            </p>
+
+            <ul style="margin: 0 0 18px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Un caso <strong>normal</strong>.</li>
+                <li>Un caso <strong>límite</strong>.</li>
+                <li>Un caso <strong>inválido</strong>.</li>
+                <li>Un caso <strong>extremo</strong>.</li>
+            </ul>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Utilice la siguiente estructura:
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">N.º</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de CP</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Entrada (datos de la prueba)</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida esperada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado de la prueba</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+                <strong>Importante:</strong> La columna <strong>“Resultado de la prueba”</strong>
+                deberá completarse después de ejecutar el código original. No debe confundirse
+                con la salida esperada.
+
+            </div>
+
+        </div>
+
+        <!-- PARTE 2: EJECUCIÓN -->
+        <div
+            style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-play" style="color: #c7ac19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 2: Ejecutar las pruebas sobre el código original
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Ejecute el programa proporcionado utilizando los datos definidos en cada
+                caso de prueba.
+            </p>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0;">
+                Registre en la tabla el <strong>resultado obtenido realmente por el programa</strong>
+                y compárelo con la salida esperada.
+            </p>
+
+        </div>
+
+        <!-- PARTE 3: IDENTIFICAR ERROR -->
+        <div
+            style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-magnifying-glass" style="color: #c62828; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: Identificar y explicar el error
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                A partir de los resultados obtenidos, determine por qué el programa
+                no produce los resultados esperados.
+            </p>
+
+        </div>
+
+        <!-- PARTE 4: CORREGIR -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-brands fa-python" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Parte 4: Corregir el código
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Corrija el programa para que aplique correctamente el descuento del
+                <strong>10 %</strong>.
+            </p>
+
+
+
+        </div>
+
+        <!-- PARTE 5: ESTILO -->
+        <div
+            style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-code" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Parte 5: Aplicar convenciones y estilos adecuados
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                Una vez corregido el algoritmo, mejore el código aplicando buenas prácticas
+                de programación en Python.
+            </p>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Utilizar nombres de variables descriptivos.</li>
+                <li>Utilizar <strong>snake_case</strong> para las variables.</li>
+                <li>Utilizar una constante para el porcentaje de descuento.</li>
+                <li>Mantener una indentación y espaciado adecuados.</li>
+                <li>Evitar nombres poco descriptivos como <code>p</code>, <code>d</code> y <code>pf</code>.</li>
+                <li>Mostrar mensajes claros al usuario.</li>
+                <li>Mantener el código sencillo y legible.</li>
+            </ul>
+
+        </div>
+
+        <!-- PARTE 6: REPETIR PRUEBAS -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-rotate" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Parte 6: Reejecutar las pruebas
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Ejecute nuevamente todos los casos de prueba utilizando el código corregido.
+            </p>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                Para cada caso, indique si:
+            </p>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>La salida obtenida coincide con la salida esperada.</li>
+                <li>La prueba fue <strong>exitosa</strong> o <strong>fallida</strong>.</li>
+                <li>Es necesario realizar algún ajuste adicional al programa.</li>
+            </ul>
+
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+                <strong>Conclusión:</strong> Un programa no se considera correctamente corregido
+                únicamente porque el código pueda ejecutarse. Es necesario comprobar mediante
+                casos de prueba que los resultados obtenidos coincidan con los resultados esperados.
+
+            </div>
+
+        </div>
+
+        <!-- RETO -->
+        <div
+            style=" gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.6;">
+
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+
+            <span>
+                <strong>Opcional (para quienes conocen de condicionales):</strong> Modifique el programa para que el
+                usuario
+                pueda ingresar el porcentaje de descuento. Agregue validaciones para
+                impedir precios negativos y controlar entradas que no sean numéricas.
+                Diseñe nuevos casos de prueba para comprobar estas validaciones.
+            </span>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
