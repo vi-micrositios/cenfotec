@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: MApa de sitio y diagrama de CU</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #fff200; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-accesibilidad"><!-- ENCABEZADO CON ICONO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #fff200, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true"> <i class="fa-solid fa-universal-access"></i> </span>
+            <h3 id="ejercicio-accesibilidad"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Ejercicio: Evaluación de accesibilidad web</h3>
+        </div> <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #fff200; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo</strong>: Evaluar la accesibilidad de la página <strong>productos.html</strong>, mediante pruebas manuales, revisión del código HTML y análisis automatizado con <strong>WAVE</strong>, con el propósito de identificar posibles problemas de
+            accesibilidad y documentar los hallazgos <strong>sin realizar correcciones</strong>. </div> <!-- RECURSO -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-link" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i> Recurso de
+                evaluación</h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0; line-height: 1.6;">
+                Utilice la rama <strong>accesibilidad</strong> del repositorio del
+                proyecto y concentre toda la evaluación específicamente en el archivo
+                <strong>productos.html</strong>.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 14px 16px; margin-top: 16px;">
+                <p style="margin: 0; color: #164a98; font-size: 14px; line-height: 1.7;">
+                    <strong>Archivo a evaluar:</strong><br>
+                    productos.html
+                </p>
+            </div>
+
+        </div>
+        <!-- ============================================================ PARTE I: PRUEBAS MANUALES ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i> Realizar
+                pruebas manuales de accesibilidad</h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Analice el comportamiento de <strong>productos.html</strong> desde la
+                perspectiva de una persona que utiliza diferentes formas de interacción.
+                Las pruebas deben realizarse de manera manual y los resultados deben
+                quedar documentados.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Pruebas sugeridas:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Comprobar si los enlaces y botones tienen nombres o textos que permitan comprender su función.
+                    </li>
+                    <li>Revisar si las imágenes poseen información alternativa cuando corresponde.</li>
+                    <li>Observar si existen elementos que dependan exclusivamente del <strong>color</strong> para
+                        transmitir información.</li>
+                    <li>Revisar la legibilidad y el contraste visual de los contenidos.</li>
+                    <li>Comprobar si los encabezados permiten comprender la estructura de la página.</li>
+                    <li>Identificar problemas de accesibilidad que puedan afectar la comprensión o interacción con los
+                        productos.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Importante:</strong> No se deben corregir los problemas
+                    encontrados. El objetivo de esta etapa es únicamente
+                    <strong>identificar, comprobar y documentar</strong> los posibles
+                    problemas de accesibilidad.
+                </p>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Resultado esperado:</strong> Registro de los problemas
+                identificados durante las pruebas manuales, indicando el elemento
+                afectado y una descripción del comportamiento observado.
+            </div>
+
+        </div>
+        <!-- ============================================================ PARTE II: REVISIÓN DE ETIQUETAS HTML ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i> Revisar el uso
+                de etiquetas HTML</h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Inspeccione el código fuente de <strong>productos.html</strong> para
+                determinar si las etiquetas HTML utilizadas contribuyen a una estructura
+                semántica y accesible.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Aspectos a revisar:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Uso correcto de <strong>encabezados</strong> como H1, H2, H3, entre otros.</li>
+                    <li>Uso adecuado de elementos semánticos como <strong>header, nav, main, section, article y
+                            footer</strong>.</li>
+                    <li>Uso correcto de enlaces mediante <strong>&lt;a&gt;</strong> y botones mediante
+                        <strong>&lt;button&gt;</strong>.</li>
+                    <li>Existencia y asociación adecuada de <strong>labels</strong> en formularios, si los hubiera.</li>
+                    <li>Uso de atributos <strong>alt</strong> en imágenes.</li>
+                    <li>Identificación de elementos HTML utilizados de manera incorrecta o poco semántica.</li>
+                    <li>Identificación de posibles atributos ARIA utilizados de forma incorrecta, innecesaria o
+                        incompleta.</li>
+                    <li>Revisión de la estructura jerárquica y semántica general del documento.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Resultado esperado:</strong> Una revisión documentada de las
+                principales etiquetas y atributos relacionados con la accesibilidad,
+                indicando cuáles presentan un uso incorrecto.
+            </div>
+
+        </div>
+        <!-- ============================================================ PARTE III: EVALUACIÓN CON WAVE ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i> Evaluar con
+                WAVE</h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Utilice la herramienta <strong>WAVE (Web Accessibility Evaluation
+                    Tool)</strong> para realizar una evaluación automatizada de
+                <strong>productos.html</strong>.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-magnifying-glass" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i> Instrucciones:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Ejecute la evaluación de la página utilizando WAVE.</li>
+                    <li>Identifique los <strong>errores</strong> reportados por la herramienta.</li>
+                    <li>Revise los <strong>errores</strong> y determine cuáles requieren corrección.</li>
+                    <li>Observe los elementos relacionados con contraste, estructura, navegación y contenido.</li>
+                    <li>Documente los resultados sin realizar cambios en el código.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> WAVE es una herramienta de apoyo y sus
+                    resultados deben analizarse. Un elemento marcado por la herramienta
+                    debe ser revisado para comprender el problema y determinar si realmente
+                    representa un hallazgo de accesibilidad.
+                </p>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Resultado esperado:</strong> Registro de los resultados obtenidos
+                mediante WAVE, diferenciando los errores detectados y las alertas que
+                requieran revisión.
+            </div>
+
+        </div>
+        <!-- ============================================================ PARTE IV: LISTA DE HALLAZGOS ============================================================ -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-4" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i> Elaborar la
+                lista de errores encontrados</h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Integre los resultados de las pruebas manuales, la revisión del código
+                HTML y la evaluación realizada con WAVE en una única lista de hallazgos.
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-table-list" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Para cada hallazgo registre:
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li><strong>Número del hallazgo.</strong></li>
+                    <li><strong>Elemento o componente afectado.</strong></li>
+                    <li><strong>Descripción del problema.</strong></li>
+                    <li><strong>Tipo de evaluación:</strong> manual, código HTML, WAVE o varias.</li>
+                    <li><strong>Evidencia:</strong> captura de pantalla, fragmento de código o referencia al elemento
+                        evaluado.</li>
+                    <li><strong>Impacto observable:</strong> describa qué dificultad puede generar el problema, sin
+                        proponer una solución.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Restricción del ejercicio:</strong> El informe debe limitarse a
+                    <strong>identificar y documentar los problemas</strong>. No se deben
+                    modificar archivos, corregir etiquetas, cambiar atributos, alterar
+                    estilos ni implementar soluciones de accesibilidad.
+                </p>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Resultado esperado:</strong> Una lista consolidada y sustentada
+                de los problemas de accesibilidad encontrados en
+                <strong>productos.html</strong>, acompañada de evidencias.
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+</body>
+
+
+</html>

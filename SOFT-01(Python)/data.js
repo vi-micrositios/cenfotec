@@ -1280,7 +1280,7 @@ fin si
                             title: '¿Qué es un flujo condicional?',
                             content: `<p>Es el camino que sigue la ejecución del programa cuando se encuentra con una estructura condicional. A diferencia del flujo secuencial (que siempre va hacia adelante), el flujo condicional se bifurca: puede tomar un camino u otro, e incluso puede saltarse bloques enteros de código.</p>`,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/cuatroRutas.png',
-                            nextButton: 'Siguiente: Paso 2'
+                            nextButton: 'Siguiente: Representación'
                         },
                         {
                             title: 'Representación gráfica',
@@ -1298,6 +1298,7 @@ fin si
                                 <li>Puede anidarse: Un flujo condicional puede contener otro dentro, creando árboles de decisión.</li>
                             </ul>
                             `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/multiplesRutas.png',
                             nextButton: 'Siguiente: Utilidad'
                         },
                         {
