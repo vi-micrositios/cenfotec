@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Diagrama de flujo de condicionales</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<section aria-labelledby="ejercicio-condicionales-evento"
+    style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #f05323; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+
+<!-- ENCABEZADO -->
+<div
+    style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+    <span
+        style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #f05323, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+        aria-hidden="true">
+        <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+    </span>
+
+    <h3 id="ejercicio-condicionales-evento"
+        style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+        Ejercicio: Modelado de decisiones para el acceso a un evento
+    </h3>
+</div>
+
+<!-- PROPÓSITO -->
+<div
+    style="background: #eef5ff; border-left: 5px solid #f05323; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+    <strong>Propósito:</strong> analizar un problema con diferentes condiciones,
+    establecer el orden lógico de las decisiones y representar la solución
+    mediante un <strong>diagrama de flujo</strong>.
+</div>
+
+<!-- SITUACIÓN -->
+<div
+    style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-door-open"
+            style="color: #c81f66; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Situación planteada
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+
+        Una institución organiza un evento presencial y necesita un sistema
+        que determine si una persona puede ingresar y, en caso afirmativo,
+        qué tipo de acceso recibirá.
+
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+
+        Para tomar la decisión, el sistema debe conocer los siguientes datos:
+
+    </p>
+
+    <ul style="margin: 0 0 18px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>La edad de la persona.</li>
+
+        <li>Si posee una entrada válida.</li>
+
+        <li>Si pertenece a la institución.</li>
+
+        <li>La hora en la que intenta ingresar.</li>
+
+    </ul>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+        La organización ha establecido las siguientes reglas:
+    </p>
+
+    <div
+        style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 18px;">
+
+        <ol
+            style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+            <li>
+                Para ingresar, la persona debe tener una
+                <strong>entrada válida</strong>.
+            </li>
+
+            <li>
+                Si no tiene una entrada válida, el acceso es
+                <strong>denegado</strong>, independientemente de las demás
+                condiciones.
+            </li>
+
+            <li>
+                Las personas menores de <strong>18 años</strong> no pueden
+                ingresar al evento.
+            </li>
+
+            <li>
+                Las personas de <strong>18 años o más</strong> pueden continuar
+                con la evaluación de las demás condiciones.
+            </li>
+
+            <li>
+                Si la persona pertenece a la institución y llega antes de las
+                <strong>18:00</strong>, recibe <strong>acceso preferencial</strong>.
+            </li>
+
+            <li>
+                Si pertenece a la institución pero llega a las
+                <strong>18:00 o después</strong>, recibe <strong>acceso general</strong>.
+            </li>
+
+            <li>
+                Si no pertenece a la institución, puede ingresar únicamente
+                con <strong>acceso general</strong>.
+            </li>
+
+        </ol>
+
+    </div>
+
+</div>
+
+<!-- PARTE 1 -->
+<div
+    style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-brain"
+            style="color: #c7ac19; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Analizar las reglas del problema
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+        Antes de construir el diagrama, analice cuidadosamente las reglas.
+    </p>
+
+    <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+        <li>
+            ¿Qué datos necesita el sistema para tomar la decisión?
+        </li>
+
+        <li>
+            ¿Cuáles de esos datos representan valores numéricos?
+        </li>
+
+        <li>
+            ¿Cuáles representan respuestas de tipo sí/no?
+        </li>
+
+        <li>
+            ¿Cuál debería ser la primera condición que evalúe el sistema?
+            Justifique su respuesta.
+        </li>
+
+        <li>
+            ¿Qué condiciones hacen que una persona quede inmediatamente
+            fuera del proceso de evaluación?
+        </li>
+
+        <li>
+            ¿Qué condiciones solamente deben comprobarse después de que
+            se cumplan otras condiciones?
+        </li>
+
+        <li>
+            ¿Existe alguna condición que dependa del resultado de una
+            decisión anterior?
+        </li>
+
+        <li>
+            ¿En qué parte del problema podría aparecer una estructura
+            condicional anidada?
+        </li>
+
+    </ol>
+
+</div>
+
+<!-- PARTE 2 -->
+<div
+    style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-code-branch"
+            style="color: #006AEA; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Identificar las decisiones
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+        Transforme las reglas del problema en preguntas que puedan aparecer
+        como decisiones dentro de un diagrama de flujo.
+    </p>
+
+    <div style="overflow-x: auto;">
+
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+
+            <thead>
+                <tr style="background: #164a98; color: #ffffff;">
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">N.º</th>
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">Regla</th>
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">Pregunta de decisión</th>
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">¿Qué ocurre si se cumple?</th>
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">¿Qué ocurre si no se cumple?</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr style="background: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                </tr>
+
+                <tr style="background: #f8fbff;">
+                    <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                </tr>
+
+                <tr style="background: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                </tr>
+
+                <tr style="background: #f8fbff;">
+                    <td style="padding: 12px; border: 1px solid #c8d1df;">4</td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<!-- PARTE 3 -->
+<div
+    style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-diagram-project"
+            style="color: #712c86; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Diseñar el diagrama de flujo
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+        Construya el diagrama de flujo que represente la solución completa.
+        No se limite a colocar las condiciones una debajo de otra: debe
+        determinar el <strong>orden lógico</strong> en que deben evaluarse.
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+        El diagrama debe:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>Incluir inicio y fin.</li>
+
+        <li>Solicitar todos los datos necesarios.</li>
+
+        <li>Representar cada decisión mediante un símbolo de decisión.</li>
+
+        <li>Mostrar claramente las ramas de <strong>Sí</strong> y <strong>No</strong>.</li>
+
+        <li>Conducir cada posible situación hacia un resultado.</li>
+
+        <li>Evitar decisiones innecesarias.</li>
+
+        <li>Mostrar correctamente las decisiones que dependen de otras.</li>
+
+    </ul>
+
+    <div
+        style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+        <strong>Pregunta clave:</strong> Si una persona no tiene una entrada
+        válida, ¿tiene sentido que el programa continúe preguntando su edad,
+        pertenencia a la institución y hora de llegada? Explique cómo debería
+        reflejarse esta situación en el diagrama.
+
+    </div>
+
+</div>
+
+<!-- PARTE 4 -->
+<div
+    style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-route"
+            style="color: #c62828; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Seguir los caminos del diagrama
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+        Utilice su propio diagrama para determinar qué resultado obtiene el
+        sistema en cada situación. No consulte las reglas originales durante
+        esta parte: siga únicamente el recorrido dibujado.
+    </p>
+
+    <div style="overflow-x: auto;">
+
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+
+            <thead>
+                <tr style="background: #c62828; color: #ffffff;">
+                    <th style="padding: 12px; border: 1px solid #e5a5a5;">Caso</th>
+                    <th style="padding: 12px; border: 1px solid #e5a5a5;">Edad</th>
+                    <th style="padding: 12px; border: 1px solid #e5a5a5;">Entrada válida</th>
+                    <th style="padding: 12px; border: 1px solid #e5a5a5;">Pertenece a la institución</th>
+                    <th style="padding: 12px; border: 1px solid #e5a5a5;">Hora</th>
+                    <th style="padding: 12px; border: 1px solid #e5a5a5;">Resultado según el diagrama</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr style="background: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">1</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">17</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">17:30</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;"></td>
+                </tr>
+
+                <tr style="background: #fff5f5;">
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">2</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">20</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">No</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">17:00</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;"></td>
+                </tr>
+
+                <tr style="background: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">3</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">21</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">17:45</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;"></td>
+                </tr>
+
+                <tr style="background: #fff5f5;">
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">4</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">19</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">No</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">17:15</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;"></td>
+                </tr>
+
+                <tr style="background: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">5</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">22</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">18:00</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;"></td>
+                </tr>
+
+                <tr style="background: #fff5f5;">
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">6</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">25</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">Sí</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">No</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;">19:00</td>
+                    <td style="padding: 12px; border: 1px solid #e5a5a5;"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+
+</section>
+
+
+    
+
+
+
+</body>
+
+</html>

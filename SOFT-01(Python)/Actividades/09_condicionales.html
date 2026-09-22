@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Pruebas y depuración</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <section aria-labelledby="ejercicio-flujos-condicionales"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #4aa147; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #4aa147, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+            </span>
+
+            <h3 id="ejercicio-flujos-condicionales"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Ejercicio: Diseñando programas que toman decisiones
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #4aa147; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+            <strong>Instrucciones:</strong> Seleccione uno de los contextos propuestos y desarrolle una solución que
+            utilice <strong>variables, constantes, flujo secuencial y estructuras condicionales</strong>. Primero
+            represente la solución mediante un <strong>diagrama de flujo</strong> y posteriormente impleméntela en
+            Python.
+        </div>
+
+        <!-- SELECCIÓN DE CONTEXTO -->
+
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-list-check" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i>
+                Seleccione un contexto
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 18px 0;">
+                Seleccione <strong>uno</strong> de los siguientes contextos y desarrolle
+                una solución utilizando variables, constantes, operaciones aritméticas,
+                flujo secuencial y estructuras condicionales.
+            </p>
+
+            <!-- NIVEL 1: CINE -->
+            <div
+                style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+
+                <h5 style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; margin-top: 0px; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-film" aria-hidden="true" ></i> Cine con amigos
+                    </strong>
+                </h5>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 12px 0;">
+                    Un cine desea calcular el precio que debe pagar un cliente por sus
+                    entradas. El precio normal de cada entrada es de
+                    <strong>₡3 500</strong>.
+                </p>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    El programa debe solicitar:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>Edad del cliente.</li>
+                    <li>Cantidad de entradas.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Utilice las siguientes reglas:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>
+                        Las personas menores de <strong>12 años</strong> reciben un
+                        <strong>20 % de descuento</strong>.
+                    </li>
+                    <li>
+                        Las personas de <strong>65 años o más</strong> reciben un
+                        <strong>15 % de descuento</strong>.
+                    </li>
+                    <li>
+                        Las demás personas pagan el precio normal.
+                    </li>
+                    <li>
+                        Si el cliente compra <strong>4 entradas o más</strong>, recibe
+                        <strong>1 bebida gratis</strong>.
+                    </li>
+                </ul>
+
+                <div
+                    style="background: #ffffff; border-left: 5px solid #00928d; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+
+                    <strong>El programa debe mostrar:</strong> subtotal, descuento aplicado, total a pagar e indicar si el cliente recibe la bebida gratis.
+
+                </div>
+
+            </div>
+
+            <!-- NIVEL 2: VIDEOJUEGO -->
+            <div
+                style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+
+                <h5 style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; margin-top: 0px; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-gamepad" aria-hidden="true"></i> Tienda de videojuegos
+                    </strong>
+                </h5>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 12px 0;">
+                    Una tienda vende videojuegos en tres ediciones. El precio depende
+                    de la edición seleccionada.
+                </p>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Precios establecidos:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li><strong>Edición estándar:</strong> ₡25 000.</li>
+                    <li><strong>Edición deluxe:</strong> ₡35 000.</li>
+                    <li><strong>Edición coleccionista:</strong> ₡50 000.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    El programa debe solicitar:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>Tipo de edición.</li>
+                    <li>Cantidad de videojuegos.</li>
+                    <li>Si el cliente es estudiante.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Utilice las siguientes reglas:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>
+                        Si el cliente compra <strong>3 videojuegos o más</strong>,
+                        recibe un <strong>10 % de descuento</strong>.
+                    </li>
+                    <li>
+                        Si además es estudiante, recibe un <strong>5 % adicional</strong>
+                        sobre el precio después del primer descuento.
+                    </li>
+                    <li>
+                        Si compra menos de 3 videojuegos, no recibe el descuento por cantidad.
+                    </li>
+                </ul>
+
+                <div
+                    style="background: #ffffff; border-left: 5px solid #c7ac19; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+
+                    <strong>El programa debe mostrar:</strong> edición seleccionada, precio unitario, subtotal, descuentos aplicados y total a pagar.
+
+                </div>
+
+            </div>
+
+            <!-- NIVEL 2: MÚSICA -->
+            <div
+                style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+
+                <h5 style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; margin-top: 0px; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-music" aria-hidden="true"></i> Plataforma de música
+                    </strong>
+                </h5>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 12px 0;">
+                    Una plataforma de música ofrece diferentes planes de suscripción.
+                    El usuario debe seleccionar el plan que desea contratar.
+                </p>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Precios mensuales:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li><strong>Individual:</strong> ₡4 500.</li>
+                    <li><strong>Estudiante:</strong> ₡2 500.</li>
+                    <li><strong>Familiar:</strong> ₡7 500.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    El programa debe solicitar:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>Tipo de plan.</li>
+                    <li>Cantidad de meses que desea contratar.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Utilice las siguientes reglas:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>
+                        Si contrata <strong>6 meses</strong>, recibe un descuento del
+                        <strong>5 %</strong>.
+                    </li>
+                    <li>
+                        Si contrata <strong>12 meses</strong>, recibe un descuento del
+                        <strong>15 %</strong>.
+                    </li>
+                    <li>
+                        Si contrata menos de 6 meses, no recibe descuento por permanencia.
+                    </li>
+                    <li>
+                        Si contrata 12 meses, además recibe <strong>1 mes adicional sin costo</strong>.
+                    </li>
+                </ul>
+
+                <div
+                    style="background: #ffffff; border-left: 5px solid #712c86; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+
+                    <strong>El programa debe mostrar:</strong> plan seleccionado, precio
+                    mensual, cantidad de meses, descuento, meses gratuitos y costo total.
+
+                </div>
+
+            </div>
+
+            <!-- NIVEL 3: GIMNASIO -->
+            <div
+                style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+
+                <h5 style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; margin-top: 0px; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-dumbbell" aria-hidden="true"></i> Membresía de gimnasio
+                    </strong>
+                </h5>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 12px 0;">
+                    Un gimnasio ofrece tres tipos de membresía. El precio mensual depende
+                    del plan elegido.
+                </p>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Precios mensuales:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li><strong>Básica:</strong> ₡15 000.</li>
+                    <li><strong>Premium:</strong> ₡25 000.</li>
+                    <li><strong>VIP:</strong> ₡35 000.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    El programa debe solicitar:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>Edad del cliente.</li>
+                    <li>Tipo de membresía.</li>
+                    <li>Cantidad de meses contratados.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Utilice las siguientes reglas:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>
+                        Los clientes menores de <strong>25 años</strong> reciben un
+                        <strong>10 % de descuento</strong>.
+                    </li>
+                    <li>
+                        Los clientes de <strong>60 años o más</strong> reciben un
+                        <strong>15 % de descuento</strong>.
+                    </li>
+                    <li>
+                        Si la membresía es de <strong>12 meses</strong>, se aplica un
+                        <strong>10 % adicional</strong> después del descuento por edad.
+                    </li>
+                    <li>
+                        Las membresías de <strong>Premium y VIP</strong> incluyen acceso
+                        a clases grupales.
+                    </li>
+                    <li>
+                        La membresía <strong>VIP</strong> incluye además acceso al área
+                        de recuperación.
+                    </li>
+                </ul>
+
+                <div
+                    style="background: #ffffff; border-left: 5px solid #c62828; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+
+                    <strong>El programa debe mostrar:</strong> membresía, precio mensual,
+                    descuento aplicado, costo total, clases incluidas y beneficios adicionales.
+
+                </div>
+
+            </div>
+
+            <!-- NIVEL 3: TELEFONÍA -->
+            <div style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px;">
+                <h5 style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; margin-top: 0px; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i> Plan de telefonía móvil
+                    </strong>
+                </h5>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 12px 0;">
+                    Una empresa de telefonía ofrece diferentes planes mensuales. Cada plan
+                    incluye una cantidad determinada de datos móviles.
+                </p>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Planes disponibles:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li><strong>Plan Básico:</strong> ₡8 000 mensuales, incluye 10 GB.</li>
+                    <li><strong>Plan Plus:</strong> ₡12 000 mensuales, incluye 25 GB.</li>
+                    <li><strong>Plan Pro:</strong> ₡18 000 mensuales, incluye 50 GB.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    El programa debe solicitar:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>Plan seleccionado.</li>
+                    <li>Cantidad de GB consumidos durante el mes.</li>
+                    <li>Cantidad de meses que lleva el cliente con la empresa.</li>
+                </ul>
+
+                <p style="color: #1c3b64; font-size: 14px; line-height: 1.7; margin: 0 0 8px 0;">
+                    Utilice las siguientes reglas:
+                </p>
+
+                <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <li>
+                        Si el cliente supera los GB incluidos en su plan, debe pagar
+                        <strong>₡500 por cada GB adicional</strong>.
+                    </li>
+                    <li>
+                        Si lleva <strong>12 meses o más</strong> con la empresa, recibe
+                        un <strong>10 % de descuento</strong> sobre el precio del plan.
+                    </li>
+                    <li>
+                        Si lleva menos de 12 meses, no recibe descuento por antigüedad.
+                    </li>
+                    <li>
+                        Si no supera los GB incluidos, no se cobra consumo adicional.
+                    </li>
+                </ul>
+
+                <div
+                    style="background: #ffffff; border-left: 5px solid #006AEA; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+
+                    <strong>El programa debe mostrar:</strong> plan seleccionado,
+                    GB incluidos, GB consumidos, GB adicionales, costo adicional,
+                    descuento, precio del plan y total de la factura.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PARTE 1: ANALIZAR PROBLEMA -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-magnifying-glass" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Parte 1: Analizar el problema
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Lea cuidadosamente el contexto seleccionado y determine qué información
+                necesita el programa para resolver el problema.
+            </p>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                Sin escribir todavía el código, responda:
+            </p>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>¿Qué datos debe ingresar el usuario?</li>
+                <li>¿Qué cálculos debe realizar el programa?</li>
+                <li>¿Qué valores permanecen fijos durante la ejecución?</li>
+                <li>¿Qué decisiones debe tomar el programa?</li>
+                <li>¿Qué información debe mostrar al finalizar?</li>
+            </ul>
+
+        </div>
+
+        <!-- PARTE 2: DIAGRAMA -->
+        <div
+            style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-diagram-project" style="color: #c7ac19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 2: Diseñar el diagrama de flujo
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Antes de programar, represente gráficamente la solución mediante un
+                <strong>diagrama de flujo</strong>.
+            </p>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                El diagrama debe mostrar:
+            </p>
+
+            <ul style="margin: 0 0 14px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Inicio y finalización del programa.</li>
+                <li>Entrada de datos.</li>
+                <li>Procesos y cálculos.</li>
+                <li>Constantes utilizadas.</li>
+                <li>Decisiones y sus diferentes caminos.</li>
+                <li>Resultados mostrados al usuario.</li>
+            </ul>
+
+        </div>
+
+        <!-- PARTE 3: PROGRAMACIÓN -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-brands fa-python" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: Implementar la solución en Python
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Transforme el diagrama de flujo en un programa funcional utilizando
+                Python.
+            </p>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                El programa debe utilizar:
+            </p>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Variables para almacenar los datos que pueden cambiar.</li>
+                <li>Constantes para los valores que representan reglas del problema.</li>
+                <li>Operaciones aritméticas cuando sean necesarias.</li>
+                <li>Flujo secuencial.</li>
+                <li>Al menos una estructura <strong>if / else</strong>.</li>
+            </ul>
+
+        </div>
+
+        <!-- PARTE 4: CONVENCIONES -->
+        <div
+            style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-code" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Parte 4: Aplicar convenciones y estilos adecuados
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                Revise el programa antes de realizar las pruebas y compruebe que el código
+                sea claro y fácil de comprender.
+            </p>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Utilice nombres de variables descriptivos.</li>
+                <li>Utilice constantes con nombres en mayúsculas.</li>
+                <li>Mantenga una indentación adecuada.</li>
+                <li>Evite repetir valores que deberían estar definidos como constantes.</li>
+                <li>Muestre mensajes claros al usuario.</li>
+                <li>Mantenga el código sencillo y legible.</li>
+            </ul>
+
+        </div>
+
+        <!-- PARTE 5 -->
+        <div
+            style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-code-branch" style="color: #c62828; font-size: 22px;" aria-hidden="true"></i>
+                Parte 5: Analizar el flujo condicional
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Analice qué ocurre con el programa cuando cambian los datos de entrada.
+                No se limite a indicar el resultado: explique <strong>qué camino del
+                    programa se ejecuta y por qué</strong>.
+            </p>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+                Responda:
+            </p>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>¿Cuáles son las condiciones que utiliza el programa?</li>
+                <li>¿Qué sucede cuando una condición es verdadera?</li>
+                <li>¿Qué sucede cuando una condición es falsa?</li>
+                <li>¿Existen condiciones que pueden combinarse?</li>
+                <li>¿Todas las instrucciones se ejecutan en todas las situaciones?</li>
+                <li>¿Qué camino sigue el programa para cada escenario?</li>
+            </ul>
+
+            <div
+                style="background: #ffffff; border-left: 5px solid #c62828; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+                <strong>Reflexión:</strong> Explique con sus propias palabras cómo una
+                estructura condicional modifica el flujo de ejecución de un programa.
+
+            </div>
+
+        </div>
+
+        <!-- PARTE 6 -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-vial" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Parte 6: Diseñar y ejecutar casos de prueba
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+                Diseñe y ejecute al menos <strong>cinco casos de prueba</strong>.
+                Los casos deben comprobar tanto el funcionamiento normal como las
+                diferentes decisiones del programa.
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">N.º</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de prueba</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Condición que se prueba</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida esperada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado obtenido (exitosa o fallida)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Normal</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Límite</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Rama verdadera</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Rama falsa</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Caso especial</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+                <strong>Importante:</strong> Los casos de prueba deben diseñarse antes
+                de ejecutarlos. La salida esperada debe calcularse previamente y luego
+                compararse con el resultado real del programa.
+
+            </div>
+
+        </div>
+
+        <!-- PARTE 7 -->
+        <div
+            style="background: #e8f5e9; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-check-double" style="color: #2e7d32; font-size: 22px;" aria-hidden="true"></i>
+                Parte 7: Verificación y reflexión
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                Después de ejecutar todos los casos de prueba, analice los resultados
+                obtenidos y responda:
+            </p>
+
+            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>¿Todos los resultados obtenidos coinciden con los resultados esperados?</li>
+                <li>¿Qué caso de prueba fue más importante para comprobar la lógica del programa?</li>
+                <li>¿Qué sucede cuando los datos se encuentran exactamente en un límite?</li>
+                <li>¿Se ejecutan todas las instrucciones del programa en todos los casos?</li>
+                <li>¿Qué ramas del flujo condicional fueron comprobadas?</li>
+                <li>¿Existe alguna situación que no haya sido contemplada en los casos de prueba?</li>
+                <li>¿Qué modificación realizaría para mejorar el programa?</li>
+            </ol>
+
+            <div
+                style="background: #ffffff; border-left: 5px solid #2e7d32; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+                <strong>Conclusión:</strong> Un programa no se considera correctamente
+                desarrollado solamente porque pueda ejecutarse. Es necesario comprobar
+                mediante diferentes casos de prueba que cada camino del flujo condicional
+                produce el resultado esperado.
+
+            </div>
+
+        </div>
+
+        <!-- RETO -->
+        <div
+            style="background: #fffaf2; border-radius: 10px; padding: 14px 16px; color: #6b531a; font-size: 14px; line-height: 1.6;">
+
+            <i class="fa-solid fa-rocket" aria-hidden="true"
+                style="font-size: 20px; margin-right: 8px; color: #c7ac19;"></i>
+
+            <span>
+                <strong>Reto:</strong> Una vez que el programa funcione correctamente,
+                agregue una nueva regla al contexto seleccionado. Actualice el diagrama
+                de flujo, modifique el código y diseñe nuevos casos de prueba que
+                permitan comprobar la nueva condición sin afectar las anteriores.
+            </span>
+
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>

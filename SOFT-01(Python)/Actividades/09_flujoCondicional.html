@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Pruebas y depuración</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <section aria-labelledby="ejercicio-flujo-condicional"
+    style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #fff200; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+<!-- ENCABEZADO -->
+<div
+    style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+    <span
+        style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #fff200, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+        aria-hidden="true">
+        <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+    </span>
+
+    <h3 id="ejercicio-flujo-condicional"
+        style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+        Ejercicio: Análisis y mejora de programas con flujo condicional
+    </h3>
+</div>
+
+<!-- INSTRUCCIONES -->
+<div
+    style="background: #eef5ff; border-left: 5px solid #fff200; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+    <strong>Instrucciones:</strong>
+    Analice el programa proporcionado, determine cómo funciona su flujo
+    condicional, compruebe sus resultados mediante diferentes datos de entrada,
+    identifique posibles problemas y proponga mejoras que permitan obtener
+    un código correcto, claro y fácil de mantener.
+
+</div>
+
+
+<!-- CONTEXTO -->
+<div
+    style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-cart-shopping"
+            style="color: #c81f66; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Situación planteada
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+
+        Una tienda en línea desea calcular el descuento que recibe un cliente
+        dependiendo del monto de su compra.
+
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        Las reglas establecidas por la tienda son:
+    </p>
+
+    <ul style="margin: 0 0 14px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>
+            Compras menores de <strong>₡30 000</strong>: no tienen descuento.
+        </li>
+
+        <li>
+            Compras desde <strong>₡30 000</strong> hasta menos de
+            <strong>₡60 000</strong>: reciben un <strong>5 %</strong>.
+        </li>
+
+        <li>
+            Compras desde <strong>₡60 000</strong> hasta menos de
+            <strong>₡100 000</strong>: reciben un <strong>10 %</strong>.
+        </li>
+
+        <li>
+            Compras de <strong>₡100 000 o más</strong>: reciben un
+            <strong>15 %</strong>.
+        </li>
+
+    </ul>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0;">
+        El siguiente programa pretende implementar estas reglas:
+    </p>
+
+    <div
+        style="background: #272822; border-radius: 10px; padding: 18px; margin-top: 15px; color: #f8f8f2; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; overflow-x: auto;">
+
+        <div>
+            <span style="color: #66d9ef;">compra</span> =
+            <span style="color: #ae81ff;">float</span>(
+            <span style="color: #e6db74;">input</span>(
+            <span style="color: #e6db74;">"Monto de la compra: "</span>))
+        </div>
+
+        <div>
+            <span style="color: #66d9ef;">descuento</span> =
+            <span style="color: #ae81ff;">0</span>
+        </div>
+
+        <div>
+            <span style="color: #f92672;">if</span>
+            <span style="color: #66d9ef;">compra</span> &gt;
+            <span style="color: #ae81ff;">30000</span>:
+        </div>
+
+        <div style="padding-left: 24px;">
+            <span style="color: #66d9ef;">descuento</span> =
+            <span style="color: #66d9ef;">compra</span> *
+            <span style="color: #ae81ff;">0.05</span>
+        </div>
+
+        <div>
+            <span style="color: #f92672;">elif</span>
+            <span style="color: #66d9ef;">compra</span> &gt;
+            <span style="color: #ae81ff;">60000</span>:
+        </div>
+
+        <div style="padding-left: 24px;">
+            <span style="color: #66d9ef;">descuento</span> =
+            <span style="color: #66d9ef;">compra</span> *
+            <span style="color: #ae81ff;">0.10</span>
+        </div>
+
+        <div>
+            <span style="color: #f92672;">elif</span>
+            <span style="color: #66d9ef;">compra</span> &gt;
+            <span style="color: #ae81ff;">100000</span>:
+        </div>
+
+        <div style="padding-left: 24px;">
+            <span style="color: #66d9ef;">descuento</span> =
+            <span style="color: #66d9ef;">compra</span> *
+            <span style="color: #ae81ff;">0.15</span>
+        </div>
+
+        <div>
+            <span style="color: #66d9ef;">total</span> =
+            <span style="color: #66d9ef;">compra</span> -
+            <span style="color: #66d9ef;">descuento</span>
+        </div>
+
+        <div>
+            <span style="color: #e6db74;">print</span>(
+            <span style="color: #e6db74;">"Descuento:"</span>,
+            <span style="color: #66d9ef;">descuento</span>)
+        </div>
+
+        <div>
+            <span style="color: #e6db74;">print</span>(
+            <span style="color: #e6db74;">"Total:"</span>,
+            <span style="color: #66d9ef;">total</span>)
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PARTE 1 -->
+<div
+    style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-magnifying-glass-chart"
+            style="color: #006AEA; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Parte 1: Analizar el programa
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+
+        Antes de modificar el código, analice su funcionamiento y responda:
+
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>¿Qué datos recibe el programa?</li>
+
+        <li>¿Qué variables utiliza?</li>
+
+        <li>¿Qué decisión o decisiones toma el programa?</li>
+
+        <li>¿Qué condiciones se evalúan?</li>
+
+        <li>¿Qué sucede cuando una condición es verdadera?</li>
+
+        <li>¿Qué sucede cuando ninguna condición se cumple?</li>
+
+        <li>¿El orden de las condiciones afecta el resultado?</li>
+
+    </ul>
+
+</div>
+
+
+<!-- PARTE 2 -->
+<div
+    style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-route"
+            style="color: #c7ac19; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Parte 2: Analizar el flujo condicional
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+
+        Represente mediante un <strong>diagrama de flujo</strong> el funcionamiento
+        actual del programa.
+
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        En el diagrama deben identificarse claramente:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>La entrada de datos.</li>
+
+        <li>Las operaciones.</li>
+
+        <li>Cada condición.</li>
+
+        <li>Las ramas verdaderas y falsas.</li>
+
+        <li>El resultado final.</li>
+
+    </ul>
+
+    <div
+        style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+        <strong>Pregunta de análisis:</strong>
+        ¿El diagrama representa realmente las reglas establecidas por la tienda?
+        Justifique su respuesta.
+
+    </div>
+
+</div>
+
+
+<!-- PARTE 3 -->
+<div
+    style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-triangle-exclamation"
+            style="color: #c62828; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Parte 3: Comprobar la funcionalidad del flujo condicional
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+
+        Ejecute el programa utilizando diferentes montos de compra y determine
+        si el resultado corresponde con las reglas establecidas.
+
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        Pruebe especialmente los siguientes valores:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>₡20 000</li>
+        <li>₡30 000</li>
+        <li>₡45 000</li>
+        <li>₡60 000</li>
+        <li>₡80 000</li>
+        <li>₡100 000</li>
+        <li>₡120 000</li>
+
+    </ul>
+
+    <div
+        style="background: #ffffff; border: 1px solid #e5a5a5; border-radius: 8px; padding: 14px 16px; margin-top: 18px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+        <strong>Analice especialmente los valores límite.</strong>
+        Explique qué ocurre cuando la compra es exactamente de
+        ₡30 000, ₡60 000 y ₡100 000.
+
+    </div>
+
+</div>
+
+
+<!-- PARTE 4 -->
+<div
+    style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-screwdriver-wrench"
+            style="color: #712c86; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Parte 4: Mejorar la calidad de la programación
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+
+        Identifique aspectos del código que podrían mejorarse para hacerlo
+        más claro, correcto y fácil de mantener.
+
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        Considere aspectos como:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>Claridad de los nombres de las variables.</li>
+
+        <li>Uso de constantes para valores que no deberían modificarse.</li>
+
+        <li>Orden y estructura de las condiciones.</li>
+
+        <li>Uso adecuado de <strong>if, elif y else</strong>.</li>
+
+        <li>Evitar condiciones innecesarias o repetidas.</li>
+
+        <li>Indentación y espaciado.</li>
+
+        <li>Claridad de los mensajes mostrados al usuario.</li>
+
+    </ul>
+
+</div>
+
+
+<!-- PARTE 5 -->
+<div
+    style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-code"
+            style="color: #00928d; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Parte 5: Corregir y mejorar el programa
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+
+        Modifique el programa para que cumpla correctamente todas las reglas
+        establecidas y aplique buenas prácticas de programación.
+
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        La versión mejorada debe:
+    </p>
+
+    <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>Aplicar correctamente los cuatro rangos de descuento.</li>
+
+        <li>Utilizar una estructura condicional clara.</li>
+
+        <li>Utilizar nombres de variables descriptivos.</li>
+
+        <li>Utilizar constantes cuando corresponda.</li>
+
+        <li>Mostrar mensajes claros al usuario.</li>
+
+        <li>Mantener una estructura sencilla y legible.</li>
+
+    </ul>
+
+</div>
+
+
+<!-- PARTE 6 -->
+<div
+    style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-vial-circle-check"
+            style="color: #006AEA; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Parte 6: Diseñar y ejecutar casos de prueba
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+
+        Diseñe nuevos casos de prueba que permitan comprobar que todas las
+        ramas del flujo condicional funcionan correctamente.
+
+    </p>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
+        Incluya como mínimo:
+    </p>
+
+    <ul style="margin: 0 0 14px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+        <li>Un valor por debajo del primer límite.</li>
+
+        <li>Un valor exactamente igual a cada límite.</li>
+
+        <li>Un valor entre cada rango.</li>
+
+        <li>Un valor superior al último límite.</li>
+
+    </ul>
+
+    <div style="overflow-x: auto;">
+
+        <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+
+            <thead>
+                <tr style="background: #164a98; color: #ffffff;">
+
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">
+                        N.º
+                    </th>
+
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">
+                        Entrada
+                    </th>
+
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">
+                        Condición que debería activarse
+                    </th>
+
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">
+                        Resultado esperado
+                    </th>
+
+                    <th style="padding: 12px; border: 1px solid #c8d1df;">
+                        Resultado obtenido
+                    </th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr style="background: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                </tr>
+
+                <tr style="background: #f8fbff;">
+                    <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                </tr>
+
+                <tr style="background: #ffffff;">
+                    <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                    <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+
+<!-- PARTE 7 -->
+<div
+    style="background: #eef5ff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+        <i class="fa-solid fa-clipboard-check"
+            style="color: #006AEA; font-size: 22px;"
+            aria-hidden="true"></i>
+
+        Parte 7: Verificación y reflexión
+    </h4>
+
+    <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+
+        Después de corregir y probar el programa, responda las siguientes
+        preguntas:
+
+    </p>
+
+    <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+        <li>
+            ¿Todas las condiciones producen el resultado esperado?
+        </li>
+
+        <li>
+            ¿Existe algún valor de entrada que no haya sido contemplado?
+        </li>
+
+        <li>
+            ¿Qué ocurriría si se cambiara el orden de las condiciones?
+        </li>
+
+        <li>
+            ¿Por qué es importante probar los valores que se encuentran
+            exactamente en los límites?
+        </li>
+
+        <li>
+            ¿Qué mejora realizada al programa facilita más su comprensión?
+            Explique por qué.
+        </li>
+
+        <li>
+            ¿Qué diferencia existe entre que un programa se ejecute sin
+            errores y que su flujo condicional sea correcto?
+        </li>
+
+    </ol>
+
+</div>
+
+
+<!-- CIERRE -->
+<div
+    style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; line-height: 1.6;">
+
+    <i class="fa-solid fa-circle-check"
+        aria-hidden="true"
+        style="font-size: 20px; margin-right: 8px;"></i>
+
+    <strong>Objetivo:</strong>
+    comprobar que un flujo condicional no se evalúa únicamente por si el
+    programa puede ejecutarse, sino también por la correcta aplicación de
+    sus condiciones, la claridad de su estructura, la calidad del código
+    y la capacidad de verificar su comportamiento mediante pruebas.
+
+</div>
+```
+
+</section>
+
+
+
+
+</body>
+
+</html>

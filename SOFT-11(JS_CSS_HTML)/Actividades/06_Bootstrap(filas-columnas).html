@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Filas y columnas en Bootstrap</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #712c86; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-bootstrap">
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #712c86, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0;">
+                <i class="fa-brands fa-bootstrap" aria-hidden="true"></i> </span>
+            <h3 id="ejercicio-bootstrap" style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold;">
+                Ejercicio: Diseño de una página utilizando Bootstrap </h3>
+        </div>
+        <div
+            style="background: #eef5ff; border-left: 5px solid #712c86; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo</strong>: Diseñar una página web utilizando el sistema <strong>Grid de Bootstrap</strong>,
+            aplicando correctamente contenedores, filas y columnas para reproducir una estructura visual determinada,
+            sin utilizar posicionamiento absoluto.
+        </div>
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;"> <i class="fa-solid fa-bullseye"
+                    style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i> Estructura que debe construir
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.6;"> La página debe reproducir visualmente la
+                siguiente distribución utilizando el sistema <strong>Grid de Bootstrap</strong>. Observe la proporción
+                de cada área y utilice las clases de columnas correspondientes. </p> <!-- REPRESENTACIÓN VISUAL -->
+            <div
+                style="background: #ffffff; border: 2px solid #d7dee8; border-radius: 12px; padding: 18px; margin-top: 18px;">
+                <!-- FILA SUPERIOR -->
+                <div
+                    style="width: 100%; height: 70px; background: #fff200; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #164a98; font-weight: bold; font-size: 16px; margin-bottom: 12px;">
+                    col-12 · ENCABEZADO
+                </div>
+
+                <!-- FILA PRINCIPAL -->
+                <div style="display: flex; gap: 12px; min-height: 280px;">
+
+                    <!-- COLUMNA VERDE -->
+                    <div
+                        style="width: 16.666%; background: #65c466; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #ffffff; font-weight: bold; font-size: 15px; text-align: center; padding: 10px; box-sizing: border-box;">
+                        col-2<br>COLUMNA<br>LATERAL
+                    </div>
+
+                    <!-- ÁREA CELESTE -->
+                    <div
+                        style="width: 83.333%; background: #9cdbf5; border-radius: 8px; padding: 18px; box-sizing: border-box; display: flex; align-items: center;">
+
+                        <!-- CONTENEDORES GRISES -->
+                        <div
+                            style="width: 100%; display: flex; justify-content: space-evenly; align-items: center; gap: 12px;">
+
+                            <div
+                                style="width: 25%; min-height: 130px; background: #b8b8b8; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #333333; font-weight: bold; text-align: center;">
+                                col-3
+                            </div>
+
+                            <div
+                                style="width: 25%; min-height: 130px; background: #b8b8b8; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #333333; font-weight: bold; text-align: center;">
+                                col-3
+                            </div>
+
+                            <div
+                                style="width: 25%; min-height: 130px; background: #b8b8b8; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #333333; font-weight: bold; text-align: center;">
+                                col-3
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- LEYENDA -->
+            
+        </div>
+
+        </div>
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;"> <i class="fa-solid fa-1"
+                    style="color: #c81f66; margin-right: 8px;" aria-hidden="true"></i> Configurar Bootstrap </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                Cree un documento HTML e incorpore Bootstrap mediante CDN. La página debe
+                utilizar las clases de Bootstrap para construir la cuadrícula y distribuir
+                los elementos.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Utilizar un <strong>container-fluid</strong> como contenedor principal.</li>
+                    <li>Utilizar <strong>row</strong> para crear las filas.</li>
+                    <li>Utilizar <strong>col-12</strong>, <strong>col-2</strong>, <strong>col-10</strong> y
+                        <strong>col-3</strong> según la estructura indicada.
+                    </li>
+                    <li>Utilizar las clases <strong>d-flex</strong>, <strong>justify-content-evenly</strong> y
+                        <strong>align-items-center</strong> para distribuir los tres contenedores interiores.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;"> <i class="fa-solid fa-2"
+                    style="color: #c7ac19; margin-right: 8px;" aria-hidden="true"></i> Construir la distribución </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                Reproduzca visualmente la distribución indicada respetando las
+                proporciones del sistema de 12 columnas de Bootstrap.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>La primera fila debe contener un elemento que ocupe las <strong>12 columnas</strong>.</li>
+                    <li>La segunda fila debe dividirse en una columna de <strong>2</strong> y otra de
+                        <strong>10</strong>.
+                    </li>
+                    <li>Dentro de la columna de 10, cree una nueva fila.</li>
+                    <li>La fila interior debe contener <strong>tres columnas de tamaño 3</strong>.</li>
+                    <li>Los tres elementos interiores deben distribuirse horizontalmente utilizando Flexbox de
+                        Bootstrap.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;"> <i class="fa-solid fa-3"
+                    style="color: #f05323; margin-right: 8px;" aria-hidden="true"></i> Comprobar el resultado </h4>
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Verifique que la estructura respete las <strong>12 columnas de Bootstrap</strong>.</li>
+                    <li>Compruebe que la columna lateral ocupe 2 columnas y el área principal 10.</li>
+                    <li>Compruebe que existan exactamente <strong>tres contenedores grises</strong>.</li>
+                    <li>Verifique que los contenedores interiores estén alineados y distribuidos mediante las clases de
+                        Bootstrap indicadas.</li>
+                    <li>Pruebe la página modificando el ancho de la ventana del navegador.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Resultado esperado:</strong> Una página HTML que reproduzca la
+                distribución solicitada utilizando correctamente el sistema Grid y las
+                clases de Flexbox de Bootstrap.
+            </div>
+
+        </div>
+    </section>
+
+
+</body>
+
+
+</html>
