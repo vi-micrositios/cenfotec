@@ -1,0 +1,1040 @@
+{
+  "microciclos": [
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "1",
+      "nombre": "Programación Aplicada para Soluciones AI-Native",
+      "competencia_nombre": "Desarrollo de componentes de software AI-Native",
+      "habilidad_sfia": {
+        "nombre": "Programación/Desarrollo de software (PROG)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Construir componentes de software robustos y mantenibles en Python para integrar datos, servicios y capacidades de inteligencia artificial en aplicaciones.",
+      "capacidades_especificas": [
+        "Desarrolla componentes modulares en Python moderno aplicando tipado, gestión de dependencias y buenas prácticas de organización del código.",
+        "Consume y expone servicios mediante APIs REST, gestionando errores, configuración, variables de entorno y procesamiento asíncrono.",
+        "Construye una aplicación de integración probada y documentada, preparada para incorporar servicios de inteligencia artificial."
+      ],
+      "descripcion": "La programación aplicada para soluciones AI-Native constituye la base para construir componentes de software mantenibles, consumir servicios y preparar aplicaciones para incorporar capacidades de inteligencia artificial. Las principales temáticas por abordar son Python moderno, gestión de dependencias y ambientes, tipado y estructuras de datos, JSON y formatos de intercambio, programación asíncrona, HTTP y APIs REST, manejo de errores y logging, variables de entorno y configuración, pruebas unitarias, y Git y flujo de trabajo con repositorios.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Programación/Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts simples; aplican estándares y herramientas acordados para lograr un resultado bien diseñado; y revisan su propio trabajo. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), diseñando y ejecutando pruebas unitarias básicas, y Métodos y herramientas (METL), configurando y documentando herramientas de desarrollo y control de versiones.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Fundamentos de Python moderno, datos y entorno de trabajo",
+          "subtemas": [
+            "Python moderno",
+            "Gestión de dependencias y ambientes",
+            "Tipado y estructuras de datos",
+            "JSON y formatos de intercambio",
+            "Git y flujo de trabajo con repositorios"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "HTTP, APIs REST y programación asíncrona",
+          "subtemas": [
+            "HTTP y APIs REST",
+            "Programación asíncrona"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Manejo de errores, configuración, logging y calidad",
+          "subtemas": [
+            "Manejo de errores y logging",
+            "Variables de entorno y configuración",
+            "Pruebas unitarias"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "2",
+      "nombre": "Ingeniería de Software Aumentada con IA",
+      "competencia_nombre": "Ingeniería de software asistida por IA",
+      "habilidad_sfia": {
+        "nombre": "Programación/Desarrollo de software (PROG)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Utilizar herramientas de inteligencia artificial dentro del ciclo de desarrollo de software aplicando mecanismos independientes de comprensión, revisión y verificación del resultado producido.",
+      "capacidades_especificas": [
+        "Utiliza asistentes y agentes de IA para generación, explicación, refactorización y depuración de código, diseñando instrucciones y contexto técnico adecuados.",
+        "Revisa críticamente el código generado por IA aplicando TDD y pruebas protegidas como mecanismos de verificación independiente.",
+        "Documenta las decisiones delegadas y las mantenidas bajo responsabilidad humana, gestionando deuda técnica, cognitiva y trazabilidad de cambios."
+      ],
+      "descripcion": "La ingeniería de software aumentada con IA permite utilizar asistentes y agentes para generar, explicar, refactorizar y depurar código, manteniendo la comprensión, revisión y verificación humanas sobre los resultados producidos. Las principales temáticas por abordar son AI-assisted coding, ingeniería de contexto aplicada al desarrollo, generación y refactorización, depuración asistida, code review, TDD, Git, gestión de deuda técnica y cognitiva, riesgos de dependencia de herramientas, y trazabilidad de decisiones.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Programación/Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts de complejidad moderada; aplican estándares y herramientas acordados; monitorean e informan sobre el progreso; identifican problemas y proponen soluciones prácticas; y colaboran en revisiones de trabajo con otros. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), aplicando TDD y pruebas protegidas como mecanismo de verificación, y Métodos y herramientas (METL), configurando y documentando herramientas de asistencia con IA.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Asistentes de IA e ingeniería de contexto",
+          "subtemas": [
+            "AI-assisted coding",
+            "Ingeniería de contexto aplicada al desarrollo"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Generación, refactorización y depuración asistida",
+          "subtemas": [
+            "Generación y refactorización",
+            "Depuración asistida"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Verificación con code review, TDD y Git",
+          "subtemas": [
+            "Code review",
+            "TDD",
+            "Git"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Deuda técnica, riesgos y trazabilidad de decisiones",
+          "subtemas": [
+            "Gestión de deuda técnica y cognitiva",
+            "Riesgos de dependencia de herramientas",
+            "Trazabilidad de decisiones"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "3",
+      "nombre": "Datos, SQL y Pipelines para Sistemas de IA",
+      "competencia_nombre": "Ingeniería de datos y pipelines para IA",
+      "habilidad_sfia": {
+        "nombre": "Ingeniería de datos (DENG)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Diseñar e implementar pipelines que preparen y suministren datos confiables a aplicaciones y componentes de inteligencia artificial.",
+      "capacidades_especificas": [
+        "Modela y consulta información mediante SQL, aplicando normalización y modelado relacional para estructurar datos confiables.",
+        "Construye procesos ETL/ELT reproducibles que limpian, transforman y validan datos procedentes de múltiples fuentes.",
+        "Suministra información estructurada a aplicaciones de IA, considerando calidad de datos, integración mediante APIs y privacidad."
+      ],
+      "descripcion": "Los datos, SQL y pipelines para sistemas de IA permiten preparar y suministrar información confiable a aplicaciones y componentes de inteligencia artificial. Las principales temáticas por abordar son SQL, modelado relacional, normalización, Pandas, ETL/ELT, validación de datos, data quality, procesamiento por lotes, integración mediante APIs, y consideraciones de privacidad.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Ingeniería de datos (DENG). En este nivel, los estudiantes asisten en la construcción y mantenimiento de componentes de ingeniería de datos, aplican técnicas establecidas para la preparación de datos y documentan su trabajo bajo supervisión. Adicionalmente, se abordan de manera complementaria las áreas de Modelado y diseño de datos (DTAN), estructurando datos simples y sus componentes asociados, y Programación/Desarrollo de software (PROG), escribiendo código de procesamiento y transformación.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Bases de datos relacionales",
+          "subtemas": [
+            "SQL",
+            "Modelado relacional",
+            "Normalización"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Procesamiento y transformación de datos",
+          "subtemas": [
+            "Pandas",
+            "ETL/ELT",
+            "Procesamiento por lotes"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Calidad y validación de datos",
+          "subtemas": [
+            "Validación de datos",
+            "Data quality"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Integración y privacidad",
+          "subtemas": [
+            "Integración mediante APIs",
+            "Consideraciones de privacidad"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "4",
+      "nombre": "Modelos Fundacionales e Integración mediante APIs",
+      "competencia_nombre": "Integración de modelos fundacionales mediante APIs",
+      "habilidad_sfia": {
+        "nombre": "Construcción e integración de sistemas (SINT)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Integrar modelos fundacionales en aplicaciones de software mediante interfaces programáticas, seleccionando configuraciones y mecanismos de resiliencia adecuados al problema.",
+      "capacidades_especificas": [
+        "Explica las capacidades y limitaciones operativas de los modelos fundacionales, considerando tokens, ventanas de contexto, parámetros de inferencia y costos.",
+        "Integra APIs de distintos proveedores implementando structured outputs, streaming y function/tool calling básico.",
+        "Gestiona errores, rate limits, reintentos y fallbacks para asegurar resiliencia en el consumo de servicios externos de IA."
+      ],
+      "descripcion": "La integración de modelos fundacionales mediante APIs permite incorporar capacidades de inteligencia artificial en aplicaciones de software, gestionando contexto, tokens, parámetros de inferencia y mecanismos de resiliencia. Las principales temáticas por abordar son LLM y modelos fundacionales, tokens y ventanas de contexto, parámetros de inferencia, structured outputs, APIs, streaming, tool/function calling, rate limits, reintentos y fallbacks, y costos y selección de modelos.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Construcción e integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas simples bajo especificaciones y con supervisión, aplican estándares y herramientas acordados. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), escribiendo el código de integración, y Seguridad de la información (SCTY), aplicando manejo seguro de credenciales y validación de entradas.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Modelos fundacionales y contexto",
+          "subtemas": [
+            "LLM y modelos fundacionales",
+            "Tokens y ventanas de contexto"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Parámetros, APIs y streaming",
+          "subtemas": [
+            "Parámetros de inferencia",
+            "APIs",
+            "Streaming"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Structured outputs y tool/function calling",
+          "subtemas": [
+            "Structured outputs",
+            "Tool/function calling"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Operación, límites, fallbacks y costos",
+          "subtemas": [
+            "Rate limits",
+            "Reintentos y fallbacks",
+            "Costos y selección de modelos"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "5",
+      "nombre": "RAG e Ingeniería de Contexto",
+      "competencia_nombre": "Ingeniería de contexto y sistemas RAG",
+      "habilidad_sfia": {
+        "nombre": "Construcción e integración de sistemas (SINT)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar e implementar sistemas RAG capaces de fundamentar respuestas de modelos en fuentes de información organizacional y evaluar la calidad de su recuperación.",
+      "capacidades_especificas": [
+        "Genera embeddings y diseña estrategias de chunking para representar contenido organizacional en espacios vectoriales.",
+        "Implementa búsqueda semántica e híbrida utilizando almacenes vectoriales, metadata filtering y reranking.",
+        "Evalúa recuperación, relevancia y fundamentación de respuestas, incorporando citación y trazabilidad de fuentes."
+      ],
+      "descripcion": "Los sistemas RAG y la ingeniería de contexto permiten fundamentar respuestas de modelos en fuentes de información organizacional, evaluando la calidad de la recuperación y la fidelidad de las respuestas. Las principales temáticas por abordar son embeddings, espacios vectoriales, chunking, vector databases, semantic search, hybrid search, metadata, reranking, context construction, RAG evaluation, y citación y trazabilidad de fuentes.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Construcción e integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Ingeniería de datos (DENG), preparando y transformando datos, y Diseño de software (SWDN), diseñando componentes y sus interfaces.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Embeddings, espacios vectoriales y chunking",
+          "subtemas": [
+            "Embeddings",
+            "Espacios vectoriales",
+            "Chunking"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Almacenes vectoriales y búsqueda",
+          "subtemas": [
+            "Vector databases",
+            "Semantic search",
+            "Hybrid search"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Metadata, reranking y contexto",
+          "subtemas": [
+            "Metadata",
+            "Reranking",
+            "Context construction"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Evaluación RAG y trazabilidad de fuentes",
+          "subtemas": [
+            "RAG evaluation",
+            "Citación y trazabilidad de fuentes"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "6",
+      "nombre": "Especificación y Arquitectura de Software AI-Native",
+      "competencia_nombre": "Arquitectura de software AI-Native",
+      "habilidad_sfia": {
+        "nombre": "Gestión y definición de requisitos (REQM)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Transformar un problema organizacional en requisitos verificables y diseñar una arquitectura AI-Native que defina responsabilidades, interfaces, restricciones y niveles apropiados de autonomía.",
+      "capacidades_especificas": [
+        "Elicita y estructura requisitos funcionales y no funcionales, formulando criterios de aceptación verificables.",
+        "Diseña arquitecturas AI-Native definiendo límites, responsabilidades, interfaces y decisiones apropiadas para componentes deterministas y probabilísticos.",
+        "Documenta decisiones y trade-offs mediante ADR y representaciones arquitectónicas, evaluando riesgos de acoplamiento, dependencia de modelos y deuda cognitiva."
+      ],
+      "descripcion": "La especificación y arquitectura de software AI-Native permite transformar problemas organizacionales en requisitos verificables y diseñar arquitecturas que definan responsabilidades, interfaces, restricciones y niveles de autonomía. Las principales temáticas por abordar son ingeniería de requisitos, criterios de aceptación, requisitos no funcionales, arquitectura AI-Native, patrones de integración, ADR, C4 u otras representaciones arquitectónicas, control de autonomía, human-in-the-loop, y gestión de deuda cognitiva.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Gestión y definición de requisitos (REQM). En este nivel, los estudiantes elicitan, analizan, documentan y gestionan requisitos de complejidad moderada, facilitan su trazabilidad, gestionan cambios y contribuyen a la selección de enfoques. Adicionalmente, se abordan de manera complementaria las áreas de Diseño de sistemas (DESN), diseñando la arquitectura de la solución, y Diseño de software (SWDN), especificando componentes y sus interfaces.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Ingeniería de requisitos y criterios de aceptación",
+          "subtemas": [
+            "Ingeniería de requisitos",
+            "Criterios de aceptación",
+            "Requisitos no funcionales"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Arquitectura AI-Native y patrones de integración",
+          "subtemas": [
+            "Arquitectura AI-Native",
+            "Patrones de integración"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Documentación y representación de decisiones arquitectónicas",
+          "subtemas": [
+            "ADR",
+            "C4 u otras representaciones arquitectónicas"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Autonomía, human-in-the-loop y deuda cognitiva",
+          "subtemas": [
+            "Control de autonomía",
+            "Human-in-the-loop",
+            "Gestión de deuda cognitiva"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "7",
+      "nombre": "Agentes de IA y Automatización de Tareas",
+      "competencia_nombre": "Desarrollo de agentes de IA",
+      "habilidad_sfia": {
+        "nombre": "Programación/Desarrollo de software (PROG)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Construir agentes de IA capaces de razonar sobre una tarea, utilizar herramientas externas y ejecutar flujos de trabajo bajo límites de autonomía definidos.",
+      "capacidades_especificas": [
+        "Diferencia automatización, workflow y comportamiento agéntico, implementando patrones como ReAct, Plan-and-Solve y Reflection.",
+        "Incorpora herramientas mediante tool calling y mantiene estado durante la ejecución, controlando ciclos, errores y acciones riesgosas.",
+        "Aplica mecanismos de Human-in-the-loop y límites de autonomía para supervisar decisiones críticas del agente."
+      ],
+      "descripcion": "La construcción de agentes de IA y la automatización de tareas permite implementar agentes capaces de razonar, utilizar herramientas externas y ejecutar flujos de trabajo bajo límites de autonomía definidos. Las principales temáticas por abordar son arquitectura básica de agentes, ReAct, Plan-and-Solve, Reflection, tool use, estado, workflows, checkpointing, human-in-the-loop, límites de autonomía, y frameworks de agentes.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Programación/Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts de complejidad moderada; aplican estándares y herramientas acordados; monitorean e informan sobre el progreso; identifican problemas y proponen soluciones prácticas; y colaboran en revisiones de trabajo con otros. Adicionalmente, se abordan de manera complementaria las áreas de Construcción e integración de sistemas (SINT), integrando el agente con herramientas y servicios, y Métodos y herramientas (METL), configurando y documentando frameworks de agentes.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Fundamentos de agentes y workflows",
+          "subtemas": [
+            "Arquitectura básica de agentes",
+            "Workflows",
+            "Frameworks de agentes"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Patrones de agentes y uso de herramientas",
+          "subtemas": [
+            "ReAct",
+            "Plan-and-Solve",
+            "Reflection",
+            "Tool use"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Estado y continuidad de ejecución",
+          "subtemas": [
+            "Estado",
+            "Checkpointing",
+            "Human-in-the-loop",
+            "Límites de autonomía"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "8",
+      "nombre": "Arquitectura y Orquestación Multiagente",
+      "competencia_nombre": "Orquestación multiagente",
+      "habilidad_sfia": {
+        "nombre": "Diseño de sistemas (DESN)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar y construir sistemas multiagente mediante patrones explícitos de coordinación, delegación, supervisión, comunicación y recuperación ante fallas.",
+      "capacidades_especificas": [
+        "Determina cuándo un problema requiere uno o múltiples agentes, seleccionando patrones supervisor-worker, router, planner-executor o colaboración especializada.",
+        "Gestiona estado, comunicación y handoffs entre agentes, estableciendo mecanismos de delegación y aprobación.",
+        "Controla fallas, ciclos y terminación en sistemas multiagente, analizando ventajas y costos de diferentes arquitecturas de orquestación."
+      ],
+      "descripcion": "La arquitectura y orquestación multiagente permite diseñar y construir sistemas multiagente mediante patrones explícitos de coordinación, delegación, supervisión, comunicación y recuperación ante fallas. Las principales temáticas por abordar son multi-agent systems, supervisor-worker, router, planner-executor, handoffs, shared state, message passing, checkpointing, concurrencia, fallos parciales, control de autonomía, y frameworks de orquestación.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Diseño de sistemas (DESN). En este nivel, los estudiantes diseñan componentes de sistemas y sus interfaces, aplican estándares y patrones acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Diseño de software (SWDN), especificando componentes de software, y Construcción e integración de sistemas (SINT), integrando los agentes en un sistema funcional.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Sistemas multi-agente y patrones de orquestación",
+          "subtemas": [
+            "Multi-agent systems",
+            "Supervisor-worker",
+            "Router",
+            "Planner-executor"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Comunicación, estado y delegación entre agentes",
+          "subtemas": [
+            "Handoffs",
+            "Shared state",
+            "Message passing"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Concurrencia, continuidad y fallos",
+          "subtemas": [
+            "Checkpointing",
+            "Concurrencia",
+            "Fallos parciales"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Autonomía y frameworks de orquestación",
+          "subtemas": [
+            "Control de autonomía",
+            "Frameworks de orquestación"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "9",
+      "nombre": "Memoria, GraphRAG y Sistemas de Conocimiento para Agentes",
+      "competencia_nombre": "Memoria y sistemas de conocimiento para agentes",
+      "habilidad_sfia": {
+        "nombre": "Gestión del conocimiento (KNOW)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar mecanismos de memoria y recuperación de conocimiento que permitan a agentes mantener contexto útil y utilizar relaciones estructuradas durante la resolución de problemas.",
+      "capacidades_especificas": [
+        "Diferencia memoria de trabajo, episódica, semántica y persistente, diseñando mecanismos de almacenamiento y recuperación.",
+        "Construye grafos de conocimiento e implementa GraphRAG para que agentes utilicen relaciones estructuradas durante la resolución de problemas.",
+        "Gestiona actualización, caducidad y relevancia de memoria, evaluando riesgos de contaminación y pérdida de contexto."
+      ],
+      "descripcion": "La memoria, GraphRAG y los sistemas de conocimiento para agentes permiten diseñar mecanismos que mantengan contexto útil y utilicen relaciones estructuradas durante la resolución de problemas. Las principales temáticas por abordar son memoria de agentes, short-term y long-term memory, knowledge graphs, bases orientadas a grafos, GraphRAG, retrieval, entity relationships, persistencia, memory policies, y context lifecycle.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Gestión del conocimiento (KNOW), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes aplican técnicas y procedimientos establecidos para capturar, organizar y compartir conocimiento, y contribuyen a la definición de políticas y estructuras de conocimiento. Adicionalmente, se abordan de manera complementaria las áreas de Ingeniería de datos (DENG), gestionando datos estructurados y grafos, y Construcción e integración de sistemas (SINT), integrando los mecanismos de memoria en el sistema agéntico.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Memoria de agentes y tipos de memoria",
+          "subtemas": [
+            "Memoria de agentes",
+            "Short-term y long-term memory"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Recuperación y persistencia",
+          "subtemas": [
+            "Retrieval",
+            "Persistencia"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Grafos de conocimiento y GraphRAG",
+          "subtemas": [
+            "Knowledge graphs",
+            "Bases orientadas a grafos",
+            "Entity relationships",
+            "GraphRAG"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Políticas y ciclo de vida de la memoria",
+          "subtemas": [
+            "Memory policies",
+            "Context lifecycle"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "10",
+      "nombre": "Testing, Evaluación y Verificación de Sistemas con IA",
+      "competencia_nombre": "Verificación y evaluación de sistemas con IA",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar un régimen de verificación que combine pruebas de software, evaluaciones de modelos y criterios observables de aceptación para determinar si un sistema AI-Native se comporta dentro de límites aceptables.",
+      "capacidades_especificas": [
+        "Aplica pruebas unitarias, de integración, de contrato y end-to-end, diferenciando testing tradicional de evaluación de comportamiento probabilístico.",
+        "Construye datasets de evaluación y define métricas relevantes para realizar regresión sobre prompts, modelos, RAG y agentes.",
+        "Implementa evaluación automatizada y revisión humana, identificando resultados no verificables y estableciendo mecanismos adicionales de control."
+      ],
+      "descripcion": "El testing, la evaluación y la verificación de sistemas con IA permite diseñar un régimen de verificación que combine pruebas de software, evaluaciones de modelos y criterios observables de aceptación. Las principales temáticas por abordar son testing pyramid, TDD, contract testing, integration testing, evals, golden datasets, LLM-as-judge y sus limitaciones, RAG evaluation, agent evaluation, regression testing, property-based testing, criterios de aceptación, e introducción a contratos y verificabilidad.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Aseguramiento de la calidad (QUAS), aplicando y manteniendo procedimientos de calidad, y Pruebas de aceptación (BPTS), definiendo criterios observables de aceptación.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Fundamentos de testing y TDD",
+          "subtemas": [
+            "Testing pyramid",
+            "TDD",
+            "Property-based testing"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Pruebas de integración y contrato",
+          "subtemas": [
+            "Integration testing",
+            "Contract testing"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Evaluación de comportamiento probabilístico",
+          "subtemas": [
+            "Evals",
+            "Golden datasets",
+            "LLM-as-judge y sus limitaciones",
+            "RAG evaluation",
+            "Agent evaluation"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Regresión, aceptación y verificabilidad",
+          "subtemas": [
+            "Regression testing",
+            "Criterios de aceptación",
+            "Introducción a contratos y verificabilidad"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "11",
+      "nombre": "Seguridad y Gobernanza de Sistemas Agénticos",
+      "competencia_nombre": "Seguridad y gobernanza de sistemas agénticos",
+      "habilidad_sfia": {
+        "nombre": "Seguridad de la información (SCTY)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Identificar, evaluar y mitigar riesgos de seguridad y gobernanza asociados con aplicaciones AI-Native y sistemas agénticos, manteniendo control y responsabilidad humana sobre las acciones ejecutadas.",
+      "capacidades_especificas": [
+        "Analiza amenazas específicas de aplicaciones basadas en LLM, identificando prompt injection directa e indirecta, jailbreaking y tool abuse.",
+        "Aplica least privilege, gestión de secretos, guardrails y controles de dependencias para proteger agentes, herramientas y cadena de suministro.",
+        "Preserva trazabilidad, auditabilidad y privacidad, estableciendo mecanismos de autorización y responsabilidad humana sobre las acciones ejecutadas."
+      ],
+      "descripcion": "La seguridad y gobernanza de sistemas agénticos permite identificar, evaluar y mitigar riesgos específicos de aplicaciones basadas en LLM y agentes, manteniendo control y responsabilidad humana. Las principales temáticas por abordar son threat modeling, prompt injection, jailbreaking, tool abuse, exfiltración de información, gestión de secretos, least privilege, supply chain, dependencias y paquetes alucinados, SBOM, guardrails, autorización, audit logs, privacidad, y gobernanza y responsabilidad.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Seguridad de la información (SCTY), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes aplican y mantienen controles de seguridad específicos, comunican riesgos y realizan valoraciones básicas de riesgos para sistemas de información de menor complejidad. Adicionalmente, se abordan de manera complementaria las áreas de Ingeniería de seguridad (SFEN), diseñando controles y configuraciones seguras, y Evaluación de vulnerabilidades (VUAS), realizando evaluaciones de vulnerabilidades y pruebas de seguridad.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Amenazas y ataques en aplicaciones basadas en LLM",
+          "subtemas": [
+            "Threat modeling",
+            "Prompt injection",
+            "Jailbreaking",
+            "Tool abuse",
+            "Exfiltración de información"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Protección de secretos, privilegios y cadena de suministro",
+          "subtemas": [
+            "Gestión de secretos",
+            "Least privilege",
+            "Supply chain",
+            "Dependencies y paquetes alucinados",
+            "SBOM"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Guardrails, autorización y auditoría",
+          "subtemas": [
+            "Guardrails",
+            "Autorización",
+            "Audit logs"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Privacidad, gobernanza y responsabilidad",
+          "subtemas": [
+            "Privacidad",
+            "Gobernanza y responsabilidad"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "12",
+      "nombre": "LLMOps, Observabilidad y Despliegue de Sistemas Agénticos",
+      "competencia_nombre": "LLMOps y observabilidad de sistemas agénticos",
+      "habilidad_sfia": {
+        "nombre": "Liberación e implementación (RELM)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Desplegar y operar sistemas AI-Native y agénticos mediante mecanismos de observabilidad, evaluación continua, resiliencia y control de costos.",
+      "capacidades_especificas": [
+        "Conteneriza y despliega soluciones AI-Native sobre infraestructura cloud, administrando configuración y secretos mediante CI/CD.",
+        "Instrumenta logs, métricas y trazas distribuidas, observando llamadas a modelos, herramientas y agentes, así como latencia, costo y calidad.",
+        "Implementa mecanismos de resiliencia (rate limiting, retry, fallback, circuit breaker) y evaluación continua para detectar degradación y regresiones."
+      ],
+      "descripcion": "El LLMOps, la observabilidad y el despliegue de sistemas agénticos permiten operar soluciones AI-Native y agénticas mediante mecanismos de observabilidad, evaluación continua, resiliencia y control de costos. Las principales temáticas por abordar son Docker, CI/CD, cloud deployment, secrets management, logging, metrics, distributed tracing, LLM traces, observabilidad de agentes, cost tracking, rate limiting, retry, fallback, circuit breaker, evaluación continua, e incident analysis.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Liberación e implementación (RELM). En este nivel, los estudiantes aplican herramientas y técnicas estándar para construir, probar y desplegar componentes, participan en la mejora de los procesos de liberación y colaboran en la automatización de pipelines. Adicionalmente, se abordan de manera complementaria las áreas de Construcción e integración de sistemas (SINT), integrando los componentes desplegados, Soporte de aplicaciones (ASUP), manteniendo y diagnosticando la aplicación en producción, y Métodos y herramientas (METL), configurando y documentando herramientas de observabilidad y despliegue.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Contenerización, CI/CD y despliegue cloud",
+          "subtemas": [
+            "Docker",
+            "CI/CD",
+            "Cloud deployment"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Configuración, secretos y observabilidad",
+          "subtemas": [
+            "Secrets management",
+            "Logging",
+            "Metrics",
+            "Distributed tracing",
+            "LLM traces",
+            "Observabilidad de agentes"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Costos, resiliencia y control de tráfico",
+          "subtemas": [
+            "Cost tracking",
+            "Rate limiting",
+            "Retry",
+            "Fallback",
+            "Circuit breaker"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Evaluación continua e incidentes",
+          "subtemas": [
+            "Evaluación continua",
+            "Incident analysis"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "",
+      "semanas": "4",
+      "horas_semanales": "8",
+      "horas_lectivas": "32",
+      "numero": "13",
+      "nombre": "Proyecto Integrador: Sistema Agéntico Empresarial",
+      "competencia_nombre": "Proyecto integrador de sistemas agénticos empresariales",
+      "habilidad_sfia": {
+        "nombre": "Construcción e integración de sistemas (SINT)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar, construir, verificar, asegurar, desplegar y defender una solución empresarial AI-Native o agéntica que demuestre de forma integrada las competencias terminales del Path.",
+      "capacidades_especificas": [
+        "Diseña y construye una solución AI-Native o agéntica que integre modelos, datos, RAG, agentes, herramientas y estrategia de autonomía con Human-in-the-loop.",
+        "Verifica y asegura la solución mediante suite de pruebas, sistema de Evals, análisis de seguridad, threat model y trazabilidad operacional.",
+        "Despliega y defiende profesionalmente la solución, presentando arquitectura, ADR, análisis de costos, limitaciones y justificación de decisiones técnicas."
+      ],
+      "descripcion": "El Proyecto Integrador: Sistema Agéntico Empresarial permite consolidar las competencias del Path mediante el diseño, construcción, verificación, aseguramiento, despliegue y defensa de una solución empresarial AI-Native o agéntica. Las principales temáticas por abordar son problema y stakeholders, requisitos, criterios de aceptación, arquitectura, ADR, integración de modelos, datos y/o RAG cuando corresponda, uno o varios agentes, herramientas, estrategia de autonomía y human-in-the-loop, suite de pruebas, sistema de evals, análisis de seguridad, trazabilidad, observabilidad, despliegue funcional, documentación técnica, análisis de costos, análisis de limitaciones, y defensa profesional de las decisiones tomadas.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Construcción e integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), Pruebas (TEST), Seguridad de la información (SCTY) y Liberación e implementación (RELM), integrando desarrollo, verificación, seguridad y despliegue.",
+      "perfil_ingreso_requisitos": [
+        "Fundamentos de programación.",
+        "Capacidad para comprender algoritmos y estructuras de datos básicas.",
+        "Conocimientos básicos de programación orientada a objetos o programación modular.",
+        "Nociones básicas de Git y control de versiones.",
+        "Capacidad de lectura de documentación técnica en inglés.",
+        "Pensamiento lógico y disposición para resolver problemas mediante programación.",
+        "Requisito académico recomendado: Haber aprobado el Path fundacional Python Foundations: Programación Aplicada desde Cero de la Escuela de Ingeniería del Software o demostrar competencias equivalentes mediante mecanismo de nivelación u homologación."
+      ],
+      "relacion_empleabilidad": [
+        "AI Application Developer",
+        "AI-Native Software Developer",
+        "LLM Application Developer",
+        "AI Integration Developer",
+        "RAG Application Developer",
+        "Agentic Systems Developer",
+        "AI Automation Developer",
+        "Junior Agentic AI Engineer",
+        "Junior LLMOps / AI Platform Engineer",
+        "Software Developer especializado en integración de IA"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Definición del problema, requisitos y arquitectura",
+          "subtemas": [
+            "Problema y stakeholders",
+            "Requisitos",
+            "Criterios de aceptación",
+            "Arquitectura",
+            "ADR"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Integración de modelos, datos, agentes y herramientas",
+          "subtemas": [
+            "Integración de modelos",
+            "Datos y/o RAG cuando corresponda",
+            "Uno o varios agentes",
+            "Herramientas",
+            "Estrategia de autonomía y Human-in-the-loop"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Verificación, seguridad, trazabilidad y observabilidad",
+          "subtemas": [
+            "Suite de pruebas",
+            "Sistema de Evals",
+            "Análisis de seguridad",
+            "Trazabilidad",
+            "Observabilidad"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Despliegue, documentación, costos, limitaciones y defensa",
+          "subtemas": [
+            "Despliegue funcional",
+            "Documentación técnica",
+            "Análisis de costos",
+            "Análisis de limitaciones",
+            "Defensa profesional de las decisiones tomadas"
+          ]
+        }
+      ]
+    }
+  ],
+  "herramientas": [
+    "Python: es un lenguaje de programación interpretado que permite construir componentes de software, servicios, pipelines de datos, flujos RAG, agentes y sistemas multiagente. Su sintaxis limpia, su tipado moderno y su ecosistema de librerías facilitan la integración de modelos fundacionales, APIs, herramientas y componentes de IA en aplicaciones mantenibles y probadas.",
+    "Visual Studio Code o IDE equivalente: es un editor de código extensible que permite escribir, depurar, refactorizar y organizar código Python, archivos de configuración, notebooks y documentación. Su terminal integrada, su soporte para asistentes de IA, su depurador y su amplia variedad de extensiones agilizan el desarrollo, la revisión y el mantenimiento de soluciones AI-Native y agénticas.",
+    "Git: es un sistema de control de versiones distribuido que permite registrar la evolución del código, crear ramas, gestionar versiones y revertir cambios sin perder información. Su trazabilidad y su flujo de trabajo con ramas facilitan la colaboración, la revisión de código y la conservación de evidencias técnicas.",
+    "GitHub o repositorio equivalente: es una plataforma en la nube para alojar repositorios Git, gestionar issues, revisiones, pull requests y pipelines de CI/CD. Su integración con herramientas de calidad, seguridad y despliegue facilita el trabajo colaborativo, la automatización y la trazabilidad de decisiones.",
+    "Docker: es una plataforma de contenedores que permite empaquetar aplicaciones, servicios y dependencias en imágenes portables. Su aislamiento, reproducibilidad y ligereza facilitan el despliegue consistente de soluciones AI-Native y agénticas en distintos entornos.",
+    "Sistema de gestión de bases de datos relacionales (PostgreSQL, MySQL, SQL Server): es un motor de base de datos que permite modelar, almacenar, consultar y validar información estructurada. Su integridad, transacciones y soporte SQL facilitan la construcción de pipelines de datos y la persistencia de información para aplicaciones de IA.",
+    "Plataforma o base de datos vectorial (pgvector, Pinecone, Weaviate, Qdrant, Chroma): es un sistema de almacenamiento y búsqueda de embeddings que permite indexar y consultar vectores por similitud semántica. Su soporte para metadatos, filtros y búsqueda híbrida facilita la implementación de sistemas RAG y la recuperación de contexto relevante.",
+    "Base de datos orientada a grafos (Neo4j, Amazon Neptune, ArangoDB): es un motor de base de datos que permite almacenar entidades y relaciones como nodos y aristas. Su modelo de consulta por relaciones facilita la construcción de grafos de conocimiento, GraphRAG y sistemas de memoria estructurada para agentes.",
+    "APIs de al menos un proveedor de modelos fundacionales (OpenAI, Anthropic, Google, Azure OpenAI, Meta Llama): son servicios que exponen modelos de lenguaje mediante interfaces programáticas. Su capacidad de generar texto, procesar contexto, producir structured outputs y ejecutar tool calling facilita la integración de IA en aplicaciones y sistemas agénticos.",
+    "Framework de RAG (LangChain, LlamaIndex, Haystack, implementación propia): es un conjunto de librerías y abstracciones que permiten construir pipelines de recuperación y generación, gestionar embeddings, almacenes vectoriales y prompts. Su estructura modular facilita la implementación, evaluación y mantenimiento de sistemas RAG.",
+    "Framework de agentes y orquestación (LangGraph, CrewAI, AutoGen, Semantic Kernel, implementación propia): es un conjunto de librerías que permiten definir agentes, herramientas, estados, handoffs y flujos multiagente. Su modelo de orquestación, checkpointing y control de autonomía facilita la construcción de sistemas agénticos verificables.",
+    "Herramientas de testing (pytest, unittest, coverage.py): son frameworks de pruebas que permiten escribir y ejecutar pruebas unitarias, de integración, de contrato y end-to-end. Su integración con CI/CD y su capacidad de medir cobertura facilitan la verificación continua de componentes deterministas y probabilísticos.",
+    "Herramientas de evaluación de LLM (RAGAS, DeepEval, promptfoo, Evals propias): son librerías y plataformas que permiten evaluar recuperación, relevancia, fidelidad, exactitud y comportamiento de sistemas RAG y agénticos. Su capacidad de construir datasets, definir métricas y ejecutar regresiones facilita la verificación de sistemas probabilísticos.",
+    "Herramientas de observabilidad y trazabilidad (LangSmith, LangFuse, OpenTelemetry, Grafana, Prometheus): son plataformas que permiten instrumentar logs, métricas, trazas y llamadas a modelos, herramientas y agentes. Su capacidad de correlacionar datos y detectar degradaciones facilita la operación, el análisis de incidentes y la mejora continua.",
+    "Plataforma cloud para despliegue (AWS, Azure, GCP o equivalente): es un entorno de infraestructura que permite desplegar, escalar, monitorear y operar aplicaciones y servicios. Su integración con contenedores, CI/CD, secretos y observabilidad facilita la puesta en producción de soluciones AI-Native y agénticas.",
+    "Markdown, Mermaid, Draw.io: son herramientas de documentación y diagramación que permiten redactar especificaciones, ADR, documentación técnica y representar arquitecturas, flujos RAG y orquestaciones multiagente. Su formato sencillo y versionable facilita la elaboración de documentación clara, ordenada y mantenible."
+  ],
+  "bibliografia": [""]
+}
