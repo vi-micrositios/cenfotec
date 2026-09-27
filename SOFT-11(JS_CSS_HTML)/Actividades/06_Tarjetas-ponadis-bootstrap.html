@@ -12,567 +12,1057 @@
 
 <body>
 
-
     <!-- ============ TARJETA PRINCIPAL ============ -->
-    ```html
-<section
-    style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #fff200; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
-    aria-labelledby="investigacion-bootstrap">
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #c81f66; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-tarjetas-ponadis">
 
-    <!-- ENCABEZADO -->
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #c81f66, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-table-cells-large"></i>
+            </span>
+
+            <h3 id="ejercicio-tarjetas-ponadis"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Ejercicio: Construcción de tarjetas con Bootstrap
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #c81f66; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+            <strong>Objetivo:</strong>
+            Completar la sección de tarjetas de la página
+            <strong>SICID</strong> utilizando el sistema de filas y columnas de
+            <strong>Bootstrap</strong>, combinando clases del framework con los
+            estilos CSS proporcionados.
+
+            <br><br>
+
+            El ejercicio busca que usted aplique de manera práctica los conceptos
+            de <strong>grid</strong>, columnas, alineación, espaciado y diseño
+            responsive para reproducir una estructura visual a partir de una
+            referencia.
+        </div>
+
+        <!-- RECURSOS -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-folder-open" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Archivos de trabajo
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 15px 0; line-height: 1.6;">
+                Para realizar el ejercicio se proporciona una página HTML que ya
+                contiene la estructura general de SICID, Bootstrap, Font Awesome y
+                una hoja de estilos CSS propia.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Archivos proporcionados
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        <strong>HTML:</strong>
+                        archivo
+                        <strong>ponadis.html</strong>
+                    </li>
+
+                    <li>
+                        <strong>CSS:</strong>
+                        archivo
+                        <strong>css/ponadis.css</strong>
+                    </li>
+
+                    <li>
+                        <strong>Framework:</strong>
+                        Bootstrap 5
+                    </li>
+
+                    <li>
+                        <strong>Iconos:</strong>
+                        Font Awesome
+                    </li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 15px;">
+
+                <p style="margin: 0 0 8px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-link" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Enlaces de referencia
+                </p>
+
+                <p style="margin: 0 0 8px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <a href="https://github.com/ismora/C3-2026-SOFT-11/blob/bootstrap/Bootstrap/ponadis.html"
+                        target="_blank" rel="noopener noreferrer" style="color: #164a98; font-weight: 600;">
+                        Archivo HTML: ponadis.html
+                    </a>
+                </p>
+
+                <p style="margin: 0 0 8px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <a href="https://github.com/ismora/C3-2026-SOFT-11/blob/bootstrap/Bootstrap/css/ponadis.css"
+                        target="_blank" rel="noopener noreferrer" style="color: #164a98; font-weight: 600;">
+                        Hoja de estilos: ponadis.css
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- PARTE I -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+                Identificar la sección que debe completar
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Abra el archivo <strong>ponadis.html</strong> y localice el
+                comentario:
+            </p>
+
+            <div style="background: #212529; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+
+                <code style="color: #ffffff; font-size: 14px;">
+                &lt;!-- TODO: TARJETAS --&gt;
+            </code>
+
+            </div>
+
+            <p style="color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                Esta es la sección que debe desarrollar. La estructura anterior de
+                la página ya está construida y no debe ser modificada para resolver
+                este ejercicio.
+            </p>
+
+        </div>
+
+        <!-- PARTE II -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-2" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+
+                Analizar la referencia visual
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Observe la imagen de referencia proporcionada para determinar la
+                estructura general de las tarjetas.
+
+                <strong>No es necesario reproducir exactamente los colores,
+                    tamaños o espacios.</strong>
+
+                Lo importante es conservar la organización general de los
+                elementos.
+            </p>
+
+            <!-- IMAGEN DE REFERENCIA -->
+            <div
+                style="background: #ffffff; border: 2px solid #9CC8FF; border-radius: 12px; padding: 16px; margin: 20px auto; text-align: center;">
+
+                <img src="https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/Actividades/imgs/tarjetasPonadis.png"
+                    alt="Referencia visual de las tarjetas de PONADIS"
+                    style="display: block; max-width: 50%; height: auto; margin: 0 auto; border-radius: 8px;">
+
+            </div>
+
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Importante:</strong>
+
+                    La imagen funciona como una <strong>referencia de estructura y composición</strong>.
+
+                    La apariencia final puede presentar diferencias de color, tamaño, tipografía o espaciado siempre que
+                    se conserve la organización solicitada.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- PARTE III -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-3" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+
+                Construir la estructura utilizando Bootstrap
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Construya las cinco tarjetas utilizando el sistema de
+                <strong>filas y columnas de Bootstrap</strong>.
+
+                La solución debe partir de una estructura basada en
+                <strong>row</strong> y <strong>col</strong>.
+
+            </p>
+
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-table-columns" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Requisitos de estructura
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li> Crear las <strong>5 tarjetas</strong>. </li>
+
+                    <li> Utilizar al menos una estructura basada en <strong>row</strong>.
+                    </li>
+
+                    <li> Utilizar columnas de Bootstrap para distribuir las tarjetas.
+                    </li>
+
+                    <li> Conseguir una distribución visual similar a la referencia. </li>
+
+                    <li> Utilizar clases de Bootstrap para alineación y espaciado cuando resulte apropiado.
+                    </li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+                <strong>Resultado esperado:</strong>
+
+                Cinco tarjetas distribuidas mediante el sistema de grid de Bootstrap.
+
+            </div>
+        </div>
+
+        <!-- PARTE IV -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-4" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+
+                Incorporar el contenido de las tarjetas
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Cada tarjeta debe contener un número y uno de los textos
+                correspondientes a las opciones disponibles en la pantalla
+                principal de SICID.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-list-ol" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Contenido requerido
+                </p>
+
+                <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.9;">
+
+                    <li>
+                        <strong>Crear componentes de la Política Nacional en
+                            Discapacidad</strong>
+                    </li>
+
+                    <li>
+                        <strong>Ver las Políticas Nacionales en Discapacidad
+                            existentes</strong>
+                    </li>
+
+                    <li>
+                        <strong>Editar los componentes de la versión más reciente
+                            de PONADIS</strong>
+                    </li>
+
+                    <li>
+                        <strong>Aprobar publicación de la PONADIS</strong>
+                    </li>
+
+                    <li>
+                        <strong>Cambiar a la visualización/edición de otra
+                            sección</strong>
+                    </li>
+
+                </ol>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Recomendación:</strong>
+
+                    Utilice elementos HTML semánticos siempre que sea posible.
+                    Si una tarjeta representa una opción seleccionable, considere
+                    cómo debería estructurarse para que también sea comprensible
+                    mediante teclado y tecnologías de asistencia.
+
+                </p>
+
+            </div>
+        </div>
+
+        <!-- PARTE V -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+
+                <i class="fa-solid fa-5" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+
+                Construir las tarjetas utilizando diferentes técnicas
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                En esta parte deberá construir las cinco tarjetas solicitadas
+                utilizando <strong>dos formas diferentes de implementación</strong>:
+                una tarjeta desarrollada completamente de forma manual con
+                <strong>HTML y CSS</strong>, y otra utilizando el componente
+                <strong>Card de Bootstrap</strong>.
+            </p>
+
+            <!-- RECURSO -->
+            <div
+                style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-book-open" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Documentación de referencia
+                </p>
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    Para la segunda tarjeta consulte la documentación oficial del
+                    componente <strong>Card</strong> de Bootstrap:
+
+                    <br>
+
+                    <a href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank"
+                        rel="noopener noreferrer" style="color: #164a98; font-weight: 600;">
+
+                        Documentación oficial de Bootstrap - Cards
+                    </a>
+
+                </p>
+            </div>
+
+            <!-- TARJETA 1: MANUAL -->
+            <div
+                style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 18px; margin-top: 18px;">
+
+                <h5 style="margin: 0 0 10px 0; color: #164a98; font-size: 17px;">
+
+                    <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Tarjeta 1: Construcción manual con HTML y CSS
+                </h5>
+
+                <p style="margin: 0 0 12px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    La primera tarjeta debe construirse
+                    <strong>completamente de forma manual</strong>.
+                    No utilice el componente <strong>Card</strong> de Bootstrap.
+                </p>
+
+                <div
+                    style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px;">
+
+                    <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                        <strong>Requisitos:</strong>
+
+                    </p>
+
+                    <ul
+                        style="margin: 8px 0 0 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                        <li>
+                            Crear la estructura utilizando HTML.
+                        </li>
+
+                        <li>
+                            Crear mediante CSS los estilos necesarios para obtener
+                            la apariencia de la tarjeta.
+                        </li>
+
+                        <li>
+                            Crear manualmente el círculo que contiene el número.
+                        </li>
+
+                        <li>
+                            Crear manualmente el espacio, bordes, esquinas redondeadas,
+                            alineación y demás características visuales.
+                        </li>
+
+                        <li>
+                            No utilizar el componente
+                            <strong>Card</strong> de Bootstrap.
+                        </li>
+
+                        <li>
+                            No copiar directamente una tarjeta prediseñada de
+                            Bootstrap para esta primera tarjeta.
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div
+                    style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 14px 16px; margin-top: 15px;">
+
+                    <p style="margin: 0; color: #164a98; font-weight: 600; font-size: 14px;">
+
+                        <i class="fa-solid fa-lightbulb" style="color: #00928d; margin-right: 6px;"
+                            aria-hidden="true"></i>
+
+                        Propósito
+                    </p>
+
+                    <p style="margin: 8px 0 0 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                        Demostrar que comprende cómo construir un componente visual
+                        desde cero utilizando únicamente la estructura HTML y las
+                        propiedades CSS necesarias.
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- TARJETA 2: BOOTSTRAP -->
+            <div
+                style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 18px; margin-top: 18px;">
+
+                <h5 style="margin: 0 0 10px 0; color: #164a98; font-size: 17px;">
+
+                    <i class="fa-brands fa-bootstrap" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Tarjeta 2: Utilizando el componente Card de Bootstrap
+                </h5>
+
+                <p style="margin: 0 0 12px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    La segunda tarjeta debe construirse utilizando el componente
+                    <strong>Card de Bootstrap</strong>.
+                </p>
+
+                <div
+                    style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px;">
+
+                    <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                        <strong>Requisitos:</strong>
+
+                    </p>
+
+                    <ul
+                        style="margin: 8px 0 0 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                        <li>
+                            Utilizar la estructura del componente
+                            <strong>Card</strong> proporcionada por Bootstrap.
+                        </li>
+
+                        <li>
+                            Utilizar las clases propias del componente cuando
+                            corresponda.
+                        </li>
+
+                        <li>
+                            Agregar las clases CSS necesarias para modificar su
+                            apariencia.
+                        </li>
+
+                        <li>
+                            La tarjeta debe adaptarse visualmente a la
+                            <strong>referencia proporcionada en la Parte II</strong>.
+                        </li>
+
+                        <li>
+                            El resultado final no debe conservar simplemente la
+                            apariencia predeterminada de Bootstrap.
+                        </li>
+
+                        <li>
+                            Debe modificar aspectos como tamaño, bordes, esquinas,
+                            colores, alineación, número y espaciado según sea
+                            necesario.
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div
+                    style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 14px 16px; margin-top: 15px;">
+
+                    <p style="margin: 0; color: #164a98; font-weight: 600; font-size: 14px;">
+
+                        <i class="fa-solid fa-palette" style="color: #00928d; margin-right: 6px;"
+                            aria-hidden="true"></i>
+
+                        Personalización obligatoria
+                    </p>
+
+                    <p style="margin: 8px 0 0 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                        Utilizar Bootstrap no significa aceptar la apariencia
+                        predeterminada del componente. Debe crear los estilos
+                        adicionales necesarios para que esta segunda tarjeta tenga
+                        una apariencia visual equivalente a la referencia.
+
+                    </p>
+                </div>
+
+                <div
+                    style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                    <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+                    <strong>Resultado esperado:</strong>
+
+                    Una tarjeta construida utilizando el componente Card de Bootstrap,
+                    pero personalizada mediante CSS para aproximarse visualmente a la
+                    tarjeta de referencia.
+
+                </div>
+            </div>
+
+            <!-- TARJETAS 3, 4 Y 5 -->
+            <div
+                style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 18px; margin-top: 18px;">
+
+                <h5 style="margin: 0 0 10px 0; color: #164a98; font-size: 17px;">
+
+                    <i class="fa-solid fa-layer-group" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Tarjetas 3, 4 y 5 — Selección de la técnica
+                </h5>
+
+                <p style="margin: 0 0 12px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    Para las tres tarjetas restantes puede seleccionar libremente
+                    cualquiera de las dos técnicas anteriores.
+
+                </p>
+
+                <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 14px 16px;">
+
+                    <p style="margin: 0; color: #164a98; font-weight: 600; font-size: 14px;">
+
+                        <i class="fa-solid fa-code-branch" style="color: #00928d; margin-right: 6px;"
+                            aria-hidden="true"></i>
+
+                        Puede elegir entre:
+                    </p>
+
+                    <ul
+                        style="margin: 8px 0 0 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                        <li>
+                            Construcción manual mediante
+                            <strong>HTML + CSS</strong>.
+                        </li>
+
+                        <li>
+                            Utilización del componente
+                            <strong>Card de Bootstrap + CSS personalizado</strong>.
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div
+                    style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 15px;">
+
+                    <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                        <strong>Importante:</strong>
+
+                        Aunque pueda escoger la técnica, las tarjetas 3, 4 y 5 deben
+                        mantener la misma estructura visual general y ser coherentes
+                        con las tarjetas anteriores.
+
+                    </p>
+
+                </div>
+            </div>
+
+            <!-- COMPARACIÓN 
+            <div
+                style="background: #eef5ff; border-left: 5px solid #00928d; padding: 18px 20px; margin-top: 20px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.7;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 700; color: #164a98;">
+
+                    <i class="fa-solid fa-code-compare" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Comparación de las técnicas
+                </p>
+
+                <p style="margin: 0;">
+
+                    Al finalizar, compare la implementación de las dos primeras
+                    tarjetas e indique brevemente qué elementos tuvo que construir
+                    manualmente y cuáles fueron proporcionados por Bootstrap.
+
+                    También explique qué modificaciones CSS realizó sobre la tarjeta
+                    de Bootstrap para aproximarla a la referencia visual.
+
+                </p>
+            </div>
+            -->
+
+            <!-- RESULTADO FINAL -->
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 16px 18px; color: #2e7d32; font-size: 14px; line-height: 1.7; margin-top: 20px;">
+
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+                <strong>Resultado final esperado:</strong>
+
+                Cinco tarjetas funcionales y visualmente coherentes con la referencia.
+                La primera debe estar construida manualmente con HTML y CSS; la
+                segunda debe utilizar el componente Card de Bootstrap y ser
+                personalizada mediante CSS; y las tres restantes pueden utilizar
+                cualquiera de las dos técnicas.
+
+            </div>
+
+        </div>
+
+
+        <!-- PARTE VI -->
+<div
+    style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+    <h4
+        style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+
+        <i class="fa-solid fa-6"
+            style="color: #00928d; font-size: 24px;"
+            aria-hidden="true"></i>
+
+        Investigar los breakpoints de Bootstrap
+    </h4>
+
+    <p
+        style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+        Antes de adaptar las tarjetas a diferentes tamaños de pantalla,
+        investigue qué son los <strong>breakpoints</strong> y cómo funcionan
+        dentro de Bootstrap.
+
+        El objetivo de esta actividad es comprender la función de los
+        breakpoints y reconocer las diferentes categorías disponibles en
+        Bootstrap.
+
+        <strong>No es necesario modificar todavía las tarjetas para hacerlas
+        responsive.</strong>
+    </p>
+
+    <!-- DOCUMENTACIÓN -->
     <div
-        style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+        style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
 
-        <span
-            style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #fff200, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
-            aria-hidden="true">
-            <i class="fa-solid fa-bootstrap"></i>
-        </span>
+        <p
+            style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
 
-        <h3 id="investigacion-bootstrap"
-            style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
-            Ejercicio: Investigación sobre el framework frontend Bootstrap
-        </h3>
+            <i class="fa-solid fa-book-open"
+                style="color: #00928d; margin-right: 6px;"
+                aria-hidden="true"></i>
+
+            Fuente recomendada
+        </p>
+
+        <p
+            style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+            Consulte principalmente la documentación oficial de Bootstrap
+            sobre el sistema responsive y sus breakpoints:
+
+            <br>
+
+            <a href="https://getbootstrap.com/docs/5.3/layout/breakpoints/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: #164a98; font-weight: 600;">
+
+                Documentación oficial de Bootstrap - Breakpoints
+            </a>
+
+        </p>
+
+        <p
+            style="margin: 10px 0 0 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+            Puede complementar la investigación con otras fuentes técnicas
+            confiables. Incluya las fuentes consultadas en la entrega.
+
+        </p>
     </div>
 
-    <!-- OBJETIVO -->
+    <!-- ASPECTOS A INVESTIGAR -->
     <div
-        style="background: #eef5ff; border-left: 5px solid #fff200; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+        style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 15px;">
 
-        <strong>Objetivo:</strong>
-        Realizar una investigación sobre el framework frontend
-        <strong>Bootstrap</strong>, comprendiendo su sistema de grillas,
-        breakpoints, componentes y herramientas de alineación, y relacionando
-        la teoría con ejemplos de código funcionales.
+        <p
+            style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
 
-        <br><br>
+            <i class="fa-solid fa-magnifying-glass"
+                style="color: #00928d; margin-right: 6px;"
+                aria-hidden="true"></i>
 
-        La investigación debe permitir comprender no solamente
-        <strong>qué hace cada recurso de Bootstrap</strong>, sino también
-        <strong>cómo y cuándo utilizarlo</strong> en una página web adaptable
-        y accesible.
+            Aspectos que debe investigar
+        </p>
+
+        <ul
+            style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+            <li>
+                ¿Qué es un <strong>breakpoint</strong> en diseño responsive?
+            </li>
+
+            <li>
+                ¿Para qué sirven los breakpoints en Bootstrap?
+            </li>
+
+            <li>
+                ¿Qué relación existe entre los breakpoints y el tamaño de la
+                pantalla?
+            </li>
+
+            <li>
+                ¿Cuáles son los breakpoints disponibles en Bootstrap 5?
+            </li>
+
+            <li>
+                ¿Qué significan las abreviaturas
+                <strong>sm, md, lg, xl y xxl</strong>?
+            </li>
+
+            <li>
+                ¿Qué significa el comportamiento <strong>extra small</strong>
+                o tamaño base cuando no se especifica un breakpoint?
+            </li>
+
+            <li>
+                ¿Qué diferencia existe entre utilizar una clase como
+                <strong>col-12</strong> y una clase como
+                <strong>col-md-6</strong>?
+            </li>
+
+            <li>
+                ¿Qué ocurre cuando se combinan diferentes breakpoints en una
+                misma estructura?
+            </li>
+
+            <li>
+                ¿Por qué los breakpoints permiten construir interfaces que se
+                adaptan a diferentes tamaños de pantalla?
+            </li>
+
+        </ul>
     </div>
 
-    <!-- ORIENTACIONES -->
+    <!-- TABLA -->
     <div
-        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+        style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
 
-        <h4
-            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-book-open" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
-            Orientaciones para la investigación
-        </h4>
+        <p
+            style="margin: 0 0 12px 0; font-weight: 600; color: #164a98;">
 
-        <p style="color: #1c3b64; font-size: 15px; margin: 0 0 15px 0; line-height: 1.6;">
-            Consulte fuentes confiables para desarrollar la investigación.
-            Se recomienda utilizar como fuente principal la
-            <strong>documentación oficial de Bootstrap</strong> y complementar
-            con otras fuentes técnicas de calidad.
+            <i class="fa-solid fa-table"
+                style="color: #00928d; margin-right: 6px;"
+                aria-hidden="true"></i>
+
+            Tabla de investigación
+        </p>
+
+        <p
+            style="margin: 0 0 12px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+            Elabore una tabla que permita resumir los breakpoints de Bootstrap.
+            Como mínimo debe incluir las siguientes columnas:
+
         </p>
 
         <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+            style="overflow-x: auto;">
 
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-link" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Documentación recomendada
-            </p>
+            <table
+                style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
 
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"
-                    style="color: #164a98; font-weight: 600;">
-                    Sitio oficial de Bootstrap
-                </a>
-            </p>
+                <thead>
 
-            <p style="margin: 10px 0 0 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                La investigación debe incluir las fuentes consultadas y una
-                breve referencia de qué información fue obtenida de cada una.
-            </p>
+                    <tr style="background: #164a98; color: #ffffff;">
+
+                        <th style="padding: 10px; border: 1px solid #c8d1df;">
+                            Breakpoint
+                        </th>
+
+                        <th style="padding: 10px; border: 1px solid #c8d1df;">
+                            Abreviatura
+                        </th>
+
+                        <th style="padding: 10px; border: 1px solid #c8d1df;">
+                            Ancho mínimo
+                        </th>
+
+                        <th style="padding: 10px; border: 1px solid #c8d1df;">
+                            Descripción
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Extra small
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            —
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Small
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            sm
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Medium
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            md
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Large
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            lg
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Extra large
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            xl
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Extra extra large
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            xxl
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                        <td style="padding: 10px; border: 1px solid #d7e0ec;">
+                            Investigar
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
         </div>
     </div>
 
-    <!-- PARTE I -->
+
+
+
+
+    <!-- RESULTADO -->
     <div
-        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+        style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
 
-        <h4
-            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-1" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
-            Investigar el sistema de filas y columnas
-        </h4>
+        <i class="fa-solid fa-circle-check"
+            aria-hidden="true"
+            style="font-size: 20px;"></i>
 
-        <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
-            Explique cómo funciona el sistema de <strong>grid</strong> o grilla
-            de Bootstrap y cómo se organiza una interfaz mediante filas y
-            columnas.
-        </p>
+        <strong>Resultado esperado:</strong>
 
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
+        Una investigación que demuestre que comprende qué son los breakpoints,
+        cuáles existen en Bootstrap, qué significan sus abreviaturas y cómo
+        pueden utilizarse para definir diferentes comportamientos según el
+        tamaño de pantalla.
 
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-table-columns" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Aspectos que debe investigar
-            </p>
-
-            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                <li>¿Qué es el sistema de <strong>grid</strong> de Bootstrap?</li>
-                <li>¿Cuál es la función de <strong>container</strong>, <strong>row</strong> y <strong>col</strong>?</li>
-                <li>¿Cómo se distribuyen las columnas dentro de una fila?</li>
-                <li>¿Cómo se construyen columnas de diferentes tamaños?</li>
-                <li>¿Qué ocurre cuando la suma de las columnas supera el espacio disponible?</li>
-                <li>¿Cómo pueden combinarse varias columnas dentro de una misma fila?</li>
-            </ul>
-        </div>
-
-        <div
-            style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
-
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                <strong>Actividad práctica:</strong>
-                Incluya al menos <strong>tres ejemplos de código</strong> de
-                filas y columnas utilizando configuraciones diferentes.
-                Para cada ejemplo explique qué distribución se espera observar
-                en pantalla.
-            </p>
-        </div>
-
-        <div
-            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
-
-            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
-            <strong>Resultado esperado:</strong>
-            Explicación clara del sistema de grid y ejemplos de código
-            acompañados de una descripción del resultado visual.
-        </div>
     </div>
 
-    <!-- PARTE II -->
+    <!-- CONEXIÓN CON LA PARTE VII -->
     <div
-        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+        style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin-top: 20px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.7;">
 
-        <h4
-            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-2" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
-            Investigar los Media Queries y breakpoints de Bootstrap
-        </h4>
+        <p
+            style="margin: 0 0 8px 0; font-weight: 700; color: #164a98;">
 
-        <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
-            Investigue cómo Bootstrap permite construir interfaces
-            <strong>responsive</strong>, es decir, interfaces capaces de adaptar
-            la distribución de sus elementos a diferentes tamaños de pantalla.
-        </p>
+            <i class="fa-solid fa-arrow-right"
+                style="color: #00928d; margin-right: 6px;"
+                aria-hidden="true"></i>
 
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
-
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-mobile-screen-button" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Aspectos que debe investigar
-            </p>
-
-            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                <li>¿Qué función cumplen los <strong>breakpoints</strong> en Bootstrap?</li>
-                <li>Explique los breakpoints <strong>sm, md, lg, xl y xxl</strong>.</li>
-                <li>¿Cómo se adaptan las columnas a diferentes tamaños de pantalla?</li>
-                <li>¿Qué significa utilizar clases como <strong>col-sm-6</strong> o <strong>col-lg-4</strong>?</li>
-                <li>¿Cómo puede una misma grilla presentar diferentes distribuciones en dispositivos pequeños y grandes?</li>
-                <li>Explique qué ocurre cuando no se especifica un breakpoint.</li>
-            </ul>
-        </div>
-
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 15px;">
-
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Ejemplo obligatorio
-            </p>
-
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Cree una misma grilla que se comporte de una manera en pantallas
-                pequeñas y de otra manera en pantallas grandes.
-                Utilice específicamente clases asociadas con
-                <strong>sm</strong> y <strong>lg</strong>.
-            </p>
-
-            <p style="margin: 12px 0 0 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Documente el resultado utilizando capturas de pantalla o una
-                demostración funcional y explique qué cambia entre ambas
-                resoluciones.
-            </p>
-        </div>
-
-        <div
-            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
-
-            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
-            <strong>Resultado esperado:</strong>
-            Explicación de los breakpoints y demostración funcional de una
-            grilla adaptable.
-        </div>
-    </div>
-
-    <!-- PARTE III -->
-    <div
-        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
-
-        <h4
-            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
-            <i class="fa-solid fa-3" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
-            Investigar los componentes de Bootstrap
-        </h4>
-
-        <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
-            Investigue los siguientes componentes de Bootstrap. Para
-            <strong>cada componente</strong> explique su funcionalidad,
-            principales características, clases utilizadas y casos de uso.
-        </p>
-
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
-
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-layer-group" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Componentes que debe investigar
-            </p>
-
-            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                <li><strong>Navbar:</strong> barra de navegación.</li>
-                <li><strong>Buttons:</strong> botones e interacción.</li>
-                <li><strong>Cards:</strong> presentación estructurada de contenido.</li>
-                <li><strong>Dropdown:</strong> menús desplegables.</li>
-                <li><strong>Forms:</strong> formularios y controles de entrada.</li>
-                <li><strong>Carousel:</strong> presentación de contenido mediante desplazamiento.</li>
-                <li><strong>Tables:</strong> presentación estructurada de datos.</li>
-                <li><strong>Tooltips:</strong> descripciones emergentes asociadas a elementos.</li>
-            </ul>
-        </div>
-
-        <div
-            style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
-
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                <strong>Requisito práctico:</strong>
-                Para <strong>cada componente</strong> cree como mínimo
-                <strong>dos ejemplos funcionales</strong> de implementación.
-                Los ejemplos deben ejecutarse correctamente y permitir comprobar
-                visualmente o mediante interacción el funcionamiento del
-                componente.
-            </p>
-        </div>
-
-        <!-- NAVBAR -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 18px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-bars" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Navbar
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue su estructura, navegación, enlaces, logotipo,
-                comportamiento adaptable y posibilidades de organización.
-            </p>
-        </div>
-
-        <!-- BUTTONS -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 12px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-hand-pointer" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Buttons
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue variantes, tamaños, estados y formas de presentación
-                de los botones.
-            </p>
-        </div>
-
-        <!-- CARDS -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 12px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-id-card" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Cards
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue cómo organizar títulos, textos, imágenes, enlaces y
-                botones dentro de una tarjeta.
-            </p>
-        </div>
-
-        <!-- DROPDOWN -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 12px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-caret-down" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Dropdown
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue la creación de menús desplegables y su comportamiento
-                mediante interacción.
-            </p>
-        </div>
-
-        <!-- FORMS -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 12px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-pen-to-square" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Forms
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue campos, etiquetas, controles, agrupación y
-                presentación visual de formularios.
-            </p>
-        </div>
-
-        <!-- CAROUSEL -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 12px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-images" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Carousel
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue indicadores, controles de navegación y presentación
-                de varios contenidos.
-            </p>
-        </div>
-
-        <!-- TABLES -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 12px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-table" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Tables
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue clases para tablas, encabezados, filas, bordes y
-                presentación de datos.
-            </p>
-        </div>
-
-        <!-- TOOLTIPS -->
-        <div
-            style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 15px 16px; margin-top: 12px;">
-            <p style="margin: 0 0 6px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-comment-dots" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Tooltips
-            </p>
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Investigue cómo se muestran las descripciones emergentes y qué
-                recursos adicionales requiere su funcionamiento.
-            </p>
-        </div>
-
-        <div
-            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
-
-            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
-            <strong>Resultado esperado:</strong>
-            Documento de investigación acompañado de ejemplos funcionales para
-            cada uno de los componentes estudiados.
-        </div>
-    </div>
-
-    <!-- PARTE IV -->
-    <div
-        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
-
-        <h4
-            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-4" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
-            Investigar la alineación horizontal y vertical
-        </h4>
-
-        <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
-            Investigue las herramientas de alineación proporcionadas por
-            Bootstrap mediante <strong>Flexbox</strong>.
-        </p>
-
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
-
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-arrows-left-right" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Aspectos que debe investigar
-            </p>
-
-            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                <li>¿Qué función cumple la clase <strong>d-flex</strong>?</li>
-                <li>¿Cómo funciona <strong>justify-content</strong>?</li>
-                <li>¿Cómo funciona <strong>align-items</strong>?</li>
-                <li>¿Cuál es la diferencia entre alineación horizontal y vertical?</li>
-                <li>¿Qué otras clases de utilidad pueden utilizarse para controlar la posición y distribución?</li>
-            </ul>
-        </div>
-
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
-
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Actividad práctica
-            </p>
-
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                Cree ejemplos en los que varios elementos estén alineados
-                horizontalmente y verticalmente. Documente las clases utilizadas
-                y explique qué efecto produce cada una.
-            </p>
-        </div>
-
-        <div
-            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
-
-            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
-            <strong>Resultado esperado:</strong>
-            Demostraciones funcionales de diferentes métodos de alineación y
-            explicación del comportamiento obtenido.
-        </div>
-    </div>
-
-    <!-- PARTE V -->
-    <div
-        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
-
-        <h4
-            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-5" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
-            Investigar buenas prácticas al utilizar Bootstrap
-        </h4>
-
-        <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
-            Analice recomendaciones para utilizar Bootstrap de manera
-            organizada, mantenible, responsive y accesible.
-        </p>
-
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
-
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                Como mínimo, analice
-            </p>
-
-            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                <li>Uso adecuado de las clases y utilidades del framework.</li>
-                <li>Organización consistente del código HTML.</li>
-                <li>Evitar depender innecesariamente de estilos duplicados.</li>
-                <li>Uso adecuado del sistema responsive.</li>
-                <li>Compatibilidad entre estructura, contenido y presentación.</li>
-                <li>Consideraciones de accesibilidad en los componentes.</li>
-                <li>Uso correcto de componentes interactivos.</li>
-                <li>Importancia de consultar la documentación oficial antes de implementar.</li>
-            </ul>
-        </div>
-
-        <div
-            style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
-
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                <strong>Importante:</strong>
-                No se limite a enumerar buenas prácticas. Para cada una,
-                explique <strong>por qué es importante</strong> y presente un
-                ejemplo breve de una implementación adecuada o inadecuada.
-            </p>
-        </div>
-
-        <div
-            style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
-
-            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
-            <strong>Resultado esperado:</strong>
-            Conjunto de recomendaciones justificadas mediante ejemplos.
-        </div>
-    </div>
-
-    <!-- PARTE VI -->
-    <div
-        style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
-
-        <h4
-            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-6" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
-            Elaborar la entrega de la investigación
-        </h4>
-
-        <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
-            Integre los resultados de la investigación en un documento
-            organizado y acompañado de las evidencias de las pruebas realizadas.
-        </p>
-
-        <div
-            style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin: 15px 0 20px 0;">
-
-            <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                <i class="fa-solid fa-file-lines" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                La entrega debe incluir
-            </p>
-
-            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                <li>Introducción breve sobre Bootstrap.</li>
-                <li>Explicación del sistema de filas y columnas.</li>
-                <li>Explicación de los breakpoints y comportamiento responsive.</li>
-                <li>Ejemplos de grillas en diferentes configuraciones.</li>
-                <li>Ejemplo comparativo utilizando <strong>sm</strong> y <strong>lg</strong>.</li>
-                <li>Investigación de los ocho componentes solicitados.</li>
-                <li>Dos ejemplos funcionales de cada componente.</li>
-                <li>Ejemplos de alineación horizontal y vertical.</li>
-                <li>Buenas prácticas justificadas.</li>
-                <li>Capturas de pantalla o evidencias de los ejemplos ejecutados.</li>
-                <li>Fuentes bibliográficas o enlaces consultados.</li>
-            </ul>
-        </div>
-
-        <div
-            style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
-
-            <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
-                <strong>Criterio importante:</strong>
-                Los ejemplos de código deben ser comprensibles y funcionales.
-                No se considerará suficiente copiar código de una fuente sin
-                explicar qué hace, cómo funciona y qué resultado produce.
-            </p>
-        </div>
-    </div>
-
-    <!-- RETO INTEGRADOR -->
-    <div
-        style="background: #eef5ff; border-left: 5px solid #00928d; padding: 18px 20px; margin: 0 0 28px 0; border-radius: 8px; color: #1a3a6b; font-size: 15px; line-height: 1.7;">
-
-        <p style="margin: 0 0 10px 0; font-weight: 700; color: #164a98;">
-            <i class="fa-solid fa-laptop-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-            Reto integrador
+            Próxima etapa
         </p>
 
         <p style="margin: 0;">
-            Como parte final de la investigación, construya una pequeña página
-            demostrativa que integre varios de los recursos investigados.
-            La página debe utilizar una grilla responsive, al menos un
-            componente de navegación, botones, tarjetas, un formulario y
-            elementos de alineación. Debe comprobarse su comportamiento en
-            diferentes tamaños de pantalla.
+
+            En la siguiente parte se trabajará la aplicación práctica de estos
+            conceptos. En la clase se explicará cómo utilizar los breakpoints y
+            otras herramientas de Bootstrap para adaptar la distribución de
+            las tarjetas a diferentes tamaños de pantalla.
+
         </p>
+
     </div>
 
-    <!-- RESULTADO FINAL -->
-    <div
-        style="background: #e8f5e9; border-radius: 10px; padding: 16px 18px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+</div>
 
-        <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
-        <strong>Resultado final esperado:</strong>
-        Una investigación técnica y aplicada que demuestre que la persona
-        estudiante comprende el sistema responsive de Bootstrap, su sistema
-        de grillas, sus componentes, sus herramientas de alineación y sus
-        buenas prácticas, y que además puede implementarlos mediante código
-        funcional.
-    </div>
 
-</section>
-```
+
+
+
+        <!-- RESULTADO FINAL -->
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 16px 18px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+            <strong>Resultado final esperado:</strong>
+
+            Una página SICID que incluya cinco tarjetas correctamente estructuradas
+            mediante HTML y Bootstrap, con una distribución semejante a la
+            referencia visual, contenido correcto, integración con los estilos
+            proporcionados y comportamiento adecuado en diferentes tamaños de
+            pantalla.
+
+        </div>
+
+    </section>
 
 
 

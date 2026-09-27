@@ -1,0 +1,795 @@
+{
+    "microciclos": [
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "1",
+            "nombre": "Fundamentos de DevOps y Entrega Continua",
+            "competencia_nombre": "Fundamentos de DevOps y Entrega Continua",
+            "habilidad_sfia": {
+                "nombre": "Métodos y herramientas (METL)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Comprender la cultura, los principios y las prácticas de DevOps y la entrega continua como base para la automatización, la colaboración y la mejora del flujo de valor.",
+            "capacidades_especificas": [
+                "Reconoce los principios culturales de DevOps (colaboración, eliminación de silos, responsabilidad compartida) para comprender su impacto en el flujo de valor.",
+                "Relaciona DevOps con Agile y Lean, identificando prácticas de mejora continua y feedback temprano aplicables al ciclo de entrega.",
+                "Interpreta métricas de flujo y calidad para evaluar el desempeño del pipeline y fundamentar decisiones de mejora."
+            ],
+            "descripcion": "La cultura y los principios DevOps, junto con la integración y entrega continua, constituyen la base para comprender cómo se automatiza y mejora el flujo de valor en equipos de software. Las principales temáticas por abordar son cultura y principios DevOps, DevOps, Agile y Lean, integración y entrega continua (CI/CD), feedback temprano y continuo, y métricas DevOps.\n\nEl microcurso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Métodos y herramientas (METL), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes brindan apoyo en el uso de métodos y herramientas existentes, configuran métodos y herramientas dentro de un contexto conocido y crean y actualizan su documentación. Adicionalmente, se abordan de manera complementaria las áreas de Medición (MEAS) en nivel 3, identificando y recopilando datos de métricas de flujo y calidad, y Liberación e implementación (RELM) en nivel 3, comprendiendo los conceptos de CI/CD y entrega continua.",
+            "perfil_ingreso_requisitos": [
+                "Python Foundations: Programación Aplicada desde Cero.",
+                "Automatización de Pruebas de Software o equivalencia demostrable en: CI/CD básico y testing automatizado."
+            ],
+            "relacion_empleabilidad": [
+                "DevOps Engineer junior",
+                "Release Engineer",
+                "CI/CD Engineer",
+                "Automation Engineer",
+                "Software Engineer con enfoque DevOps",
+                "Platform Engineer inicial",
+                "Site Reliability Engineer (SRE) inicial"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Cultura y principios DevOps",
+                    "subtemas": [
+                        "Origen de DevOps",
+                        "Cultura colaborativa",
+                        "Eliminación de silos"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "DevOps, Agile y Lean",
+                    "subtemas": [
+                        "Relación entre enfoques",
+                        "Flujo de valor",
+                        "Mejora continua"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Integración y entrega continua (CI/CD)",
+                    "subtemas": [
+                        "Conceptos clave",
+                        "Pipeline básico",
+                        "Automatización"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Feedback temprano y continuo",
+                    "subtemas": [
+                        "Feedback técnico",
+                        "Feedback del negocio",
+                        "Aprendizaje continuo"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Métricas DevOps",
+                    "subtemas": [
+                        "Métricas de flujo",
+                        "Métricas de calidad",
+                        "Uso para mejora"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "2",
+            "nombre": "Prácticas DevOps y Toolchains",
+            "competencia_nombre": "Prácticas DevOps y Toolchains",
+            "habilidad_sfia": {
+                "nombre": "Liberación e implementación (RELM)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Aplicar prácticas DevOps y toolchains para construir, validar, versionar y entregar software de forma automatizada, aplicando quality gates y estrategias de testing en pipelines.",
+            "capacidades_especificas": [
+                "Implementa builds automáticos y validaciones tempranas para detectar errores en etapas iniciales del pipeline.",
+                "Aplica estrategias de testing y quality gates en pipelines para asegurar la calidad antes de la entrega.",
+                "Integra toolchains DevOps y criterios de arquitectura orientada al flujo para versionar, desplegar y habilitar rollbacks controlados."
+            ],
+            "descripcion": "Las prácticas DevOps y las toolchains permiten automatizar la integración, la entrega y el testing dentro de pipelines, asegurando versionado, releases frecuentes y rollbacks controlados. Las principales temáticas por abordar son integración continua, entrega continua, testing en pipelines, toolchains DevOps y arquitectura orientada al flujo.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Liberación e implementación (RELM). En este nivel, los estudiantes aplican herramientas y técnicas estándar para construir, probar y desplegar componentes, participan en la mejora de los procesos de liberación y colaboran en la automatización de pipelines. Adicionalmente, se abordan de manera complementaria las áreas de Métodos y herramientas (METL) en nivel 3, configurando y documentando toolchains DevOps, y Pruebas (TEST) en nivel 3, integrando quality gates y testing automatizado en pipelines.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 1: Fundamentos de DevOps y Entrega Continua o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "DevOps Engineer",
+                "CI/CD Engineer",
+                "Release Engineer",
+                "Build Engineer",
+                "Automation Engineer",
+                "Platform Engineer",
+                "QA Automation Engineer"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Integración continua",
+                    "subtemas": [
+                        "Builds automáticos",
+                        "Validaciones",
+                        "Errores tempranos"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Entrega continua",
+                    "subtemas": [
+                        "Versionado",
+                        "Releases frecuentes",
+                        "Rollbacks"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Testing en pipelines",
+                    "subtemas": [
+                        "Quality gates",
+                        "Testing automatizado",
+                        "Estrategias"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Toolchains DevOps",
+                    "subtemas": [
+                        "Herramientas típicas",
+                        "Integración",
+                        "Orquestación"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Arquitectura orientada al flujo",
+                    "subtemas": [
+                        "Diseño para DevOps",
+                        "Desacoplamiento",
+                        "Escalabilidad"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "3",
+            "nombre": "Observabilidad, Métricas y Confiabilidad",
+            "competencia_nombre": "Observabilidad, Métricas y Confiabilidad",
+            "habilidad_sfia": {
+                "nombre": "Medición (MEAS)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Aplicar observabilidad, métricas de confiabilidad y gestión de incidentes para evaluar el comportamiento de sistemas, definir SLIs, SLOs y SLAs, y mejorar de forma basada en datos.",
+            "capacidades_especificas": [
+                "Implementa observabilidad mediante logs, métricas y trazas para monitorear el comportamiento de sistemas en operación.",
+                "Define SLIs, SLOs y SLAs a partir de métricas de disponibilidad, latencia y errores para establecer objetivos de confiabilidad.",
+                "Gestiona incidentes aplicando análisis post-mortem y acciones correctivas para prevenir recurrencias y mejorar de forma basada en datos."
+            ],
+            "descripcion": "La observabilidad, las métricas de confiabilidad y la gestión de incidentes permiten evaluar el comportamiento de sistemas, definir objetivos de nivel de servicio y mejorar de forma basada en datos. Las principales temáticas por abordar son observabilidad (logs, métricas, trazas), métricas de confiabilidad, SLIs, SLOs y SLAs, gestión de incidentes, y mejora basada en datos.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Medición (MEAS), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes identifican y recopilan datos de medición, los analizan e interpretan, y reportan resultados para apoyar decisiones y mejoras. Adicionalmente, se abordan de manera complementaria las áreas de Gestión de nivel de servicio (SLMO) en nivel 3, definiendo SLIs, SLOs y SLAs, y Gestión de incidentes (USUP) en nivel 3, gestionando detección, análisis y aprendizaje de incidentes.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 2: Prácticas DevOps y Toolchains o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "Site Reliability Engineer (SRE)",
+                "DevOps Engineer",
+                "Observability Engineer",
+                "Monitoring Engineer",
+                "Platform Engineer",
+                "Cloud Operations Engineer",
+                "Incident Manager inicial"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Observabilidad",
+                    "subtemas": [
+                        "Logs",
+                        "Métricas",
+                        "Trazas"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Métricas de confiabilidad",
+                    "subtemas": [
+                        "Disponibilidad",
+                        "Latencia",
+                        "Errores"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "SLIs, SLOs y SLAs",
+                    "subtemas": [
+                        "Definiciones",
+                        "Uso práctico",
+                        "Evaluación"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Gestión de incidentes",
+                    "subtemas": [
+                        "Detección",
+                        "Análisis",
+                        "Aprendizaje"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Mejora basada en datos",
+                    "subtemas": [
+                        "Análisis post-mortem",
+                        "Acciones correctivas",
+                        "Prevención"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "4",
+            "nombre": "Fundamentos de DevSecOps",
+            "competencia_nombre": "Fundamentos de DevSecOps",
+            "habilidad_sfia": {
+                "nombre": "Ingeniería de seguridad (SFEN)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Comprender el enfoque DevSecOps, el panorama de amenazas, la seguridad como código y los roles y responsabilidades para integrar seguridad desde etapas tempranas del ciclo de vida.",
+            "capacidades_especificas": [
+                "Reconoce el mindset DevSecOps y el shift-left security para integrar seguridad desde etapas tempranas del ciclo de vida.",
+                "Identifica tipos de amenazas, riesgos comunes y su impacto para fundamentar decisiones de seguridad en equipos técnicos.",
+                "Distingue roles, responsabilidades y prácticas de seguridad como código para promover una cultura de seguridad y mejora continua."
+            ],
+            "descripcion": "Los fundamentos de DevSecOps permiten integrar la seguridad desde etapas tempranas del ciclo de vida mediante la seguridad como código, la colaboración entre equipos y una cultura de mejora continua. Las principales temáticas por abordar son DevSecOps mindset, panorama de amenazas, seguridad como código, roles y responsabilidades, y cultura de seguridad.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Ingeniería de seguridad (SFEN). En este nivel, los estudiantes aplican técnicas y herramientas de ingeniería de seguridad para diseñar, construir y mantener sistemas seguros, y contribuyen a la definición de controles y configuraciones seguras. Adicionalmente, se abordan de manera complementaria las áreas de Seguridad de la información (SCTY) en nivel 3, aplicando controles de seguridad básicos, y Métodos y herramientas (METL) en nivel 3, configurando y documentando herramientas de seguridad como código.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 3: Observabilidad, Métricas y Confiabilidad o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "DevSecOps Engineer",
+                "Security Engineer",
+                "DevOps Engineer con enfoque en seguridad",
+                "Cloud Security Engineer",
+                "Application Security Engineer",
+                "Compliance Engineer"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "DevSecOps mindset",
+                    "subtemas": [
+                        "Seguridad como responsabilidad compartida",
+                        "Shift-left security"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Panorama de amenazas",
+                    "subtemas": [
+                        "Tipos de amenazas",
+                        "Riesgos comunes",
+                        "Impacto"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Seguridad como código",
+                    "subtemas": [
+                        "Infraestructura",
+                        "Configuración",
+                        "Automatización"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Roles y responsabilidades",
+                    "subtemas": [
+                        "Equipos",
+                        "Colaboración",
+                        "Gobierno"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Cultura de seguridad",
+                    "subtemas": [
+                        "Conciencia",
+                        "Buenas prácticas",
+                        "Mejora continua"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "5",
+            "nombre": "Seguridad Integrada en Pipelines CI/CD",
+            "competencia_nombre": "Seguridad Integrada en Pipelines CI/CD",
+            "habilidad_sfia": {
+                "nombre": "Seguridad de la información (SCTY)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Integrar seguridad en pipelines CI/CD mediante puntos de control automatizados, análisis de vulnerabilidades, gestión de secretos, compliance automatizado y seguridad continua.",
+            "capacidades_especificas": [
+                "Integra puntos de control automatizados en pipelines CI/CD para detectar vulnerabilidades mediante análisis OWASP, CVE y CWE.",
+                "Aplica buenas prácticas de gestión de secretos y credenciales para proteger la información sensible en el pipeline.",
+                "Implementa controles de compliance automatizado y monitoreo continuo de seguridad para asegurar evidencias y respuesta ante incidentes."
+            ],
+            "descripcion": "La seguridad integrada en pipelines CI/CD permite aplicar controles automatizados, análisis de vulnerabilidades y gestión de secretos, asegurando compliance y seguridad continua. Las principales temáticas por abordar son seguridad en pipelines, análisis de vulnerabilidades (OWASP, CVE, CWE), gestión de secretos, compliance automatizado y seguridad continua.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Seguridad de la información (SCTY), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes aplican y mantienen controles de seguridad específicos, comunican riesgos y realizan valoraciones básicas de riesgos para sistemas de información de menor complejidad. Adicionalmente, se abordan de manera complementaria las áreas de Ingeniería de seguridad (SFEN) en nivel 3, diseñando controles y configuraciones seguras, y Métodos y herramientas (METL) en nivel 3, configurando y documentando herramientas de seguridad en pipelines.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 4: Fundamentos de DevSecOps o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "DevSecOps Engineer",
+                "Security Automation Engineer",
+                "CI/CD Security Engineer",
+                "Application Security Engineer",
+                "Cloud Security Engineer",
+                "Compliance Automation Engineer"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Seguridad en pipelines",
+                    "subtemas": [
+                        "Puntos de control",
+                        "Automatización"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Análisis de vulnerabilidades",
+                    "subtemas": [
+                        "OWASP",
+                        "CVE y CWE"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Gestión de secretos",
+                    "subtemas": [
+                        "Credenciales",
+                        "Buenas prácticas"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Compliance automatizado",
+                    "subtemas": [
+                        "Controles",
+                        "Evidencias"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Seguridad continua",
+                    "subtemas": [
+                        "Monitoreo",
+                        "Respuesta",
+                        "Mejora"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "6",
+            "nombre": "Introducción a AIOps y Operaciones Inteligentes",
+            "competencia_nombre": "Fundamentos de AIOps y Operaciones Inteligentes",
+            "habilidad_sfia": {
+                "nombre": "Machine learning (MLNG)",
+                "nivel_sfia": "2"
+            },
+            "competencia_especifica": "Comprender el rol de AIOps, su relación con DevOps y MLOps, y el uso de datos operativos, ML y GenAI en operaciones inteligentes.",
+            "capacidades_especificas": [
+                "Reconoce el origen, la necesidad y los beneficios de AIOps para comprender su rol en operaciones inteligentes.",
+                "Diferencia AIOps de DevOps y MLOps, identificando su complementariedad y diferencias en contextos operativos.",
+                "Identifica casos de uso de ML y GenAI en operaciones, así como fuentes de datos operativos (logs, métricas, eventos) para detección temprana y optimización."
+            ],
+            "descripcion": "La introducción a AIOps y operaciones inteligentes permite comprender cómo se aplican datos operativos, aprendizaje automático y GenAI para mejorar la detección temprana y la optimización de operaciones. Las principales temáticas por abordar son qué es AIOps, relación AIOps–DevOps–MLOps, datos operativos, ML y GenAI en operaciones, y casos reales de AIOps.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Machine learning (MLNG). En este nivel, los estudiantes asisten en la preparación de datos, el entrenamiento de modelos y las tareas de evaluación bajo supervisión rutinaria, y aplican técnicas dadas a los datos bajo orientación técnica. Adicionalmente, se abordan de manera complementaria las áreas de Ingeniería de datos (DENG) en nivel 2, reconociendo fuentes de datos operativos, y Gestión de servicios tecnológicos (ITMG) en nivel 4, comprendiendo el contexto operativo de los servicios.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 5: Seguridad Integrada en Pipelines CI/CD o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "AIOps Engineer",
+                "DevOps Engineer con enfoque en IA",
+                "MLOps Engineer inicial",
+                "Site Reliability Engineer (SRE) con enfoque AIOps",
+                "Operations Analyst",
+                "Automation Engineer"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Qué es AIOps",
+                    "subtemas": [
+                        "Origen",
+                        "Necesidad",
+                        "Beneficios"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Relación AIOps–DevOps–MLOps",
+                    "subtemas": [
+                        "Complementariedad",
+                        "Diferencias"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Datos operativos",
+                    "subtemas": [
+                        "Logs",
+                        "Métricas",
+                        "Eventos"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "ML y GenAI en operaciones",
+                    "subtemas": [
+                        "Casos de uso",
+                        "Automatización"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Casos reales de AIOps",
+                    "subtemas": [
+                        "Detección temprana",
+                        "Optimización"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "7",
+            "nombre": "Datos, Métricas y ML para AIOps",
+            "competencia_nombre": "Datos, Métricas y ML para AIOps",
+            "habilidad_sfia": {
+                "nombre": "Ingeniería de datos (DENG)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Preparar datos operativos, analizar y correlacionar eventos, aplicar detección de anomalías y evaluar resultados para fundamentar operaciones inteligentes.",
+            "capacidades_especificas": [
+                "Prepara datos operativos provenientes de sistemas, aplicaciones e infraestructura mediante limpieza y normalización.",
+                "Analiza y correlaciona eventos identificando patrones y relaciones para detectar anomalías con técnicas básicas.",
+                "Evalúa resultados de detección de anomalías aplicando métricas y ajustes para fundamentar decisiones operativas."
+            ],
+            "descripcion": "La preparación de datos operativos, el análisis y correlación de eventos, y la detección de anomalías permiten fundamentar operaciones inteligentes basadas en datos. Las principales temáticas por abordar son fuentes de datos operativos, preparación de datos, análisis y correlación de eventos, detección de anomalías, y evaluación de resultados.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Ingeniería de datos (DENG). En este nivel, los estudiantes diseñan, implementan y prueban componentes de ingeniería de datos de complejidad moderada, aplican técnicas y estándares acordados, y colaboran en la selección de enfoques. Adicionalmente, se abordan de manera complementaria las áreas de Machine learning (MLNG) en nivel 3, aplicando técnicas de detección de anomalías, y Medición (MEAS) en nivel 3, evaluando resultados mediante métricas y ajustes.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 6: Introducción a AIOps y Operaciones Inteligentes o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "AIOps Engineer",
+                "Data Engineer for Operations",
+                "MLOps Engineer",
+                "Site Reliability Engineer (SRE)",
+                "Observability Engineer",
+                "Machine Learning Operations Analyst"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Fuentes de datos operativos",
+                    "subtemas": [
+                        "Sistemas",
+                        "Aplicaciones",
+                        "Infraestructura"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Preparación de datos",
+                    "subtemas": [
+                        "Limpieza",
+                        "Normalización"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Análisis y correlación de eventos",
+                    "subtemas": [
+                        "Patrones",
+                        "Relaciones"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Detección de anomalías",
+                    "subtemas": [
+                        "Técnicas básicas",
+                        "Interpretación"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Evaluación de resultados",
+                    "subtemas": [
+                        "Métricas",
+                        "Ajustes"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "8",
+            "nombre": "Automatización Inteligente y AIOps en Producción",
+            "competencia_nombre": "Automatización Inteligente y AIOps en Producción",
+            "habilidad_sfia": {
+                "nombre": "Machine learning (MLNG)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Aplicar automatización reactiva y proactiva, integrar AIOps en pipelines, implementar observabilidad inteligente y considerar riesgos, ética y preparación organizacional.",
+            "capacidades_especificas": [
+                "Aplica automatización reactiva y proactiva para respuesta automática y prevención de incidentes en producción.",
+                "Integra AIOps en pipelines mediante validaciones y feedback continuo, incorporando observabilidad inteligente con alertas y predicción.",
+                "Considera riesgos, ética y preparación organizacional (procesos y personas) en la adopción de AIOps en producción."
+            ],
+            "descripcion": "La automatización inteligente y la integración de AIOps en producción permiten aplicar respuestas automáticas, prevención, observabilidad inteligente y consideraciones éticas y organizacionales. Las principales temáticas por abordar son automatización reactiva y proactiva, integración AIOps en pipelines, observabilidad inteligente, riesgos y ética en AIOps, y preparación organizacional.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Machine learning (MLNG). En este nivel, los estudiantes aplican técnicas existentes de aprendizaje automático a nuevos problemas y conjuntos de datos, seleccionan y preparan datos para el entrenamiento y la evaluación, y comunican resultados y limitaciones a las partes interesadas. Adicionalmente, se abordan de manera complementaria las áreas de Métodos y herramientas (METL) en nivel 3, configurando y documentando herramientas de automatización, y Gestión de servicios tecnológicos (ITMG) en nivel 4, comprendiendo el impacto operativo en producción.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 7: Datos, Métricas y ML para AIOps o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "AIOps Engineer",
+                "Automation Engineer",
+                "Site Reliability Engineer (SRE)",
+                "DevOps Engineer",
+                "MLOps Engineer",
+                "Platform Engineer",
+                "Operations Engineer"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Automatización reactiva y proactiva",
+                    "subtemas": [
+                        "Respuesta automática",
+                        "Prevención"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Integración AIOps en pipelines",
+                    "subtemas": [
+                        "Validación",
+                        "Feedback"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Observabilidad inteligente",
+                    "subtemas": [
+                        "Alertas",
+                        "Predicción"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Riesgos y ética en AIOps",
+                    "subtemas": [
+                        "Impacto",
+                        "Responsabilidad"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Preparación organizacional",
+                    "subtemas": [
+                        "Procesos",
+                        "Personas"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "9",
+            "nombre": "Integración DevOps, DevSecOps y AIOps para Software e IA",
+            "competencia_nombre": "Integración DevOps, DevSecOps y AIOps",
+            "habilidad_sfia": {
+                "nombre": "Construcción e integración de sistemas (SINT)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Integrar DevOps, DevSecOps y AIOps en pipelines unificados para software tradicional y software con IA, aplicando testing como quality gate, seguridad en datos y modelos, monitoreo y gobernanza operativa.",
+            "capacidades_especificas": [
+                "Integra pipelines unificados DevOps, DevSecOps y AIOps para software tradicional y software con IA, considerando sus diferencias.",
+                "Aplica testing como quality gate y validación continua para asegurar la calidad en pipelines integrados.",
+                "Implementa seguridad en datos y modelos, monitoreo de aplicaciones y modelos, y gobernanza operativa mediante evidencias y control."
+            ],
+            "descripcion": "La integración de DevOps, DevSecOps y AIOps permite construir pipelines unificados para software tradicional y software con IA, asegurando testing, seguridad, monitoreo y gobernanza operativa. Las principales temáticas por abordar son pipelines integrados, testing como quality gate, seguridad en datos y modelos, monitoreo de aplicaciones y modelos, y gobernanza operativa.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Construcción e integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Seguridad de la información (SCTY) en nivel 3, protegiendo datos y modelos, Pruebas (TEST) en nivel 3, aplicando testing como quality gate, y Machine learning (MLNG) en nivel 3, monitoreando modelos y aplicaciones.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 8: Automatización Inteligente y AIOps en Producción o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "DevOps Engineer",
+                "DevSecOps Engineer",
+                "AIOps Engineer",
+                "MLOps Engineer",
+                "Site Reliability Engineer (SRE)",
+                "Platform Engineer",
+                "Cloud Engineer",
+                "Software Engineer con enfoque en IA"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Pipelines integrados",
+                    "subtemas": [
+                        "Software tradicional",
+                        "Software con IA"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Testing como quality gate",
+                    "subtemas": [
+                        "Automatización",
+                        "Validación continua"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Seguridad en datos y modelos",
+                    "subtemas": [
+                        "Protección",
+                        "Riesgos"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Monitoreo de aplicaciones y modelos",
+                    "subtemas": [
+                        "Métricas",
+                        "Alertas"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Gobernanza operativa",
+                    "subtemas": [
+                        "Evidencias",
+                        "Control"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "",
+            "horas_semanales": "",
+            "horas_lectivas": "45",
+            "numero": "10",
+            "nombre": "Proyecto Integrador DevOps, DevSecOps & AIOps",
+            "competencia_nombre": "Proyecto Integrador DevOps, DevSecOps y AIOps",
+            "habilidad_sfia": {
+                "nombre": "Construcción e integración de sistemas (SINT)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Diseñar, implementar, evaluar y defender un pipeline integrado de DevOps, DevSecOps y AIOps para un sistema de software o IA, aplicando automatización, testing, seguridad, observabilidad y gobernanza operativa.",
+            "capacidades_especificas": [
+                "Diseña un pipeline integrado analizando el sistema, su alcance, riesgos y componentes CI/CD, seguridad y observabilidad.",
+                "Implementa la automatización, testing, monitoreo y controles de seguridad del pipeline integrado para un sistema de software o IA.",
+                "Evalúa y defiende el pipeline mediante métricas, resultados, documentación y presentación técnica ante audiencia."
+            ],
+            "descripcion": "El Proyecto Integrador DevOps, DevSecOps & AIOps permite consolidar las competencias del programa mediante el análisis, diseño, implementación, evaluación y defensa de un pipeline integrado para software o IA. Las principales temáticas por abordar son análisis del sistema, diseño del pipeline (CI/CD, seguridad, observabilidad), implementación (automatización, testing, monitoreo), evaluación y mejora (métricas, resultados), y presentación final (documentación y defensa técnica).\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Construcción e integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Liberación e implementación (RELM) en nivel 3, desplegando el pipeline, Seguridad de la información (SCTY) en nivel 3, integrando controles de seguridad, Medición (MEAS) en nivel 3, evaluando métricas y resultados, y Machine learning (MLNG) en nivel 3, integrando componentes de IA cuando aplique.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el Microcurso 9: Integración DevOps, DevSecOps y AIOps para Software e IA o equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "DevOps Engineer",
+                "DevSecOps Engineer",
+                "AIOps Engineer",
+                "Site Reliability Engineer (SRE)",
+                "Platform Engineer",
+                "Cloud Engineer",
+                "Automation Engineer",
+                "MLOps Engineer",
+                "Technical Lead inicial"
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Análisis del sistema",
+                    "subtemas": [
+                        "Alcance",
+                        "Riesgos"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Diseño del pipeline",
+                    "subtemas": [
+                        "CI/CD",
+                        "Seguridad",
+                        "Observabilidad"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Implementación",
+                    "subtemas": [
+                        "Automatización",
+                        "Testing",
+                        "Monitoreo"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Evaluación y mejora",
+                    "subtemas": [
+                        "Métricas",
+                        "Resultados"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Presentación final",
+                    "subtemas": [
+                        "Documentación",
+                        "Defensa técnica"
+                    ]
+                }
+            ]
+        }
+    ],
+    "herramientas": [
+        "Git y GitHub / GitLab son herramientas para el control y alojamiento de versiones. Git permite registrar la evolución del código, crear ramas, gestionar versiones y revertir cambios sin perder información. GitHub o GitLab complementan a Git como plataformas en la nube para alojar repositorios, gestionar issues, revisiones, pull requests y pipelines de CI/CD. Su trazabilidad y colaboración facilitan el trabajo en equipo, la automatización y la conservación de evidencias.",
+        "Jenkins / GitLab CI / GitHub Actions / Azure DevOps son plataformas de integración y entrega continua (CI/CD) que permiten automatizar builds, pruebas, análisis de calidad, despliegues y validaciones. Su configuración basada en pipelines, su integración con repositorios y su capacidad de orquestar múltiples etapas facilitan la entrega frecuente y confiable de software.",
+        "Docker es una plataforma de contenedores que permite empaquetar aplicaciones y sus dependencias en imágenes portables. Su aislamiento, reproducibilidad y ligereza facilitan la ejecución consistente de aplicaciones en desarrollo, pruebas y producción, y su integración con pipelines de CI/CD.",
+        "Kubernetes es un orquestador de contenedores que permite desplegar, escalar, gestionar y recuperar aplicaciones en clústeres. Su capacidad de automatizar despliegues, balanceo de carga, autoescalado y recuperación ante fallos facilita la operación confiable de sistemas modernos.",
+        "Terraform / Ansible son herramientas de infraestructura como código que permiten definir, aprovisionar y configurar recursos de infraestructura de forma declarativa. Su enfoque versionable, reproducible y automatizable facilita la gestión consistente de entornos y la eliminación de configuraciones manuales.",
+        "Prometheus es un sistema de monitoreo y alertas que permite recopilar métricas de aplicaciones, servicios e infraestructura mediante series temporales. Su modelo de recolección, su lenguaje de consulta PromQL y su integración con alertas facilitan la observabilidad y la detección temprana de problemas.",
+        "Grafana es una plataforma de visualización y análisis que permite construir paneles, gráficos y alertas a partir de métricas, logs y trazas. Su integración con múltiples fuentes de datos facilita la observabilidad, el análisis de tendencias y la comunicación de resultados operativos.",
+        "ELK Stack (Elasticsearch, Logstash, Kibana) / Loki son herramientas de gestión y análisis de logs que permiten recolectar, procesar, almacenar y visualizar registros de aplicaciones e infraestructura. Su capacidad de búsqueda, filtrado y correlación facilita la observabilidad, la detección de incidentes y el análisis post-mortem.",
+        "Jaeger / Zipkin son herramientas de trazabilidad distribuida que permiten rastrear el recorrido de solicitudes a través de múltiples servicios. Su representación visual de trazas y dependencias facilita la detección de cuellos de botella, errores y latencias en arquitecturas distribuidas.",
+        "SonarQube es una plataforma de análisis estático de código que permite detectar bugs, vulnerabilidades, code smells y problemas de calidad. Su integración con pipelines de CI/CD y su quality gate facilitan la validación temprana y la mejora continua del código.",
+        "OWASP ZAP es una herramienta de pruebas de seguridad de aplicaciones web que permite detectar vulnerabilidades como inyección, XSS, CSRF y configuraciones inseguras. Su integración con pipelines y su modo automatizado facilitan la seguridad continua y el shift-left security.",
+        "Snyk / Trivy / OWASP Dependency-Check son herramientas de análisis de vulnerabilidades en dependencias, contenedores e infraestructura como código. Su integración con repositorios y pipelines facilita la detección temprana de riesgos y la aplicación de controles de seguridad.",
+        "HashiCorp Vault es una herramienta de gestión de secretos que permite almacenar, controlar y auditar credenciales, tokens y claves de forma segura. Su integración con pipelines y aplicaciones facilita la protección de secretos y la aplicación del principio de mínimo privilegio.",
+        "Python es un lenguaje de programación interpretado que permite construir scripts de automatización, análisis de datos, modelos de machine learning y lógica de AIOps. Su sintaxis limpia y su ecosistema de librerías facilitan la integración de operaciones inteligentes.",
+        "pandas, numpy, scikit-learn son librerías de Python para manipulación de datos, cálculo numérico y machine learning. Su capacidad de limpiar, normalizar, analizar y modelar datos operativos facilita la detección de anomalías, la correlación de eventos y la evaluación de resultados.",
+        "Jupyter Notebooks es un entorno interactivo que permite escribir, ejecutar y documentar código Python, visualizar datos y compartir análisis. Su formato reproducible y su integración con librerías de datos y ML facilitan la experimentación y la documentación de resultados.",
+        "MLflow es una plataforma de gestión del ciclo de vida de machine learning que permite registrar experimentos, versionar modelos, empaquetar artefactos y desplegar soluciones. Su trazabilidad y reproducibilidad facilitan la integración de modelos en operaciones.",
+        "LangChain / APIs de LLM son frameworks y servicios que permiten integrar modelos de lenguaje en flujos de automatización, análisis de logs, generación de resúmenes y asistentes operativos. Su capacidad de procesar lenguaje natural facilita la aplicación de GenAI en operaciones.",
+        "PagerDuty / Opsgenie son plataformas de gestión de incidentes y alertas que permiten notificar, escalar y coordinar respuestas ante eventos operativos. Su integración con herramientas de monitoreo facilita la detección temprana, la asignación de responsables y el aprendizaje post-incidente.",
+        "Datadog / New Relic son plataformas de observabilidad que integran métricas, logs, trazas y alertas en una sola vista. Su capacidad de correlacionar datos y generar paneles facilita la operación inteligente y la mejora continua.",
+        "Markdown, Mermaid, Draw.io son herramientas de documentación y diagramación que permiten redactar documentación técnica, representar pipelines, arquitecturas y flujos operativos. Su formato sencillo y versionable facilita la elaboración de documentación clara, ordenada y mantenible."
+    ],
+    "bibliografia": [
+        "Guijarro Olivares, J. Caparrós Ramírez, J. & Cubero Luque, L. (2019). DevOps y seguridad cloud: ( ed.). Editorial UOC. https://elibro.net/es/lc/ucenfotec/titulos/128889"
+    ]
+}

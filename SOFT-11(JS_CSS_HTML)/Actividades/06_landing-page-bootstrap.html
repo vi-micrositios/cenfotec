@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Filas y columnas en Bootstrap</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-paginas-informativas-bootstrap">
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-table-columns"></i>
+            </span>
+
+            <h3 id="ejercicio-paginas-informativas-bootstrap"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Ejercicio: Diseño de páginas informativas con Bootstrap
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+            <strong>Objetivo:</strong>
+            Diseñar y desarrollar una o varias páginas informativas utilizando
+            <strong>Bootstrap</strong>, aplicando el sistema de
+            <strong>filas y columnas (Grid)</strong> y diferentes componentes del
+            framework.
+
+            <br><br>
+
+            El ejercicio busca que usted aplique de manera práctica los conceptos de
+            <strong>grid, columnas, alineación, espaciado y componentes
+                reutilizables</strong> para construir una interfaz informativa coherente,
+            funcional.
+
+        </div>
+
+        <!-- ORGANIZACIÓN -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-users" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+
+                Organización de los equipos
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                El ejercicio se realizará en los grupos del proyecto. Cada equipo deberá seleccionar
+                <strong>uno de los tres tipos de páginas informativas</strong>
+                disponibles de acuerdo a las necesidades del cliente de SICEN.
+
+                La cantidad de páginas a desarrollar dependerá de la cantidad de
+                integrantes del equipo.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-people-group" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Cantidad de páginas por equipo
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        <strong>1 integrante:</strong>
+                        desarrollar <strong>1 página</strong>.
+                    </li>
+
+                    <li>
+                        <strong>2 integrantes:</strong>
+                        desarrollar <strong>2 páginas</strong>.
+                    </li>
+
+                    <li>
+                        <strong>3 integrantes:</strong>
+                        desarrollar <strong>3 páginas</strong>.
+                    </li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Importante:</strong>
+                    Si el equipo está conformado por dos integrantes, por ejemplo,
+                    deberá desarrollar dos páginas informativas. Las páginas pueden
+                    pertenecer al mismo tipo o combinar diferentes tipos de páginas,
+                    según la organización definida por el equipo.
+
+                </p>
+
+            </div>
+        </div>
+
+        <!-- PARTE I -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-1" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+
+                Seleccionar el tipo de página
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Seleccione uno de los siguientes tipos de páginas informativas.
+                Cada tipo tiene un propósito diferente dentro de un sistema
+                institucional.
+
+            </p>
+
+            <!-- OPCIÓN 1 -->
+            <div
+                style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 18px; margin-top: 16px;">
+
+                <h5 style="margin: 0 0 10px 0; color: #164a98; font-size: 17px;">
+
+                    <i class="fa-solid fa-house" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Opción 1: Landing page
+                </h5>
+
+                <p style="margin: 0 0 12px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    Una <strong>landing page</strong> tiene como propósito presentar
+                    de manera clara y atractiva un servicio, proyecto, plataforma,
+                    iniciativa o funcionalidad.
+
+                    Debe captar la atención del usuario y facilitar que encuentre
+                    rápidamente la información o acción principal.
+
+                </p>
+
+
+
+                <div
+                    style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 15px;">
+
+                    <strong>Propósito:</strong>
+                    comunicar rápidamente qué es el servicio o proyecto y orientar
+                    al usuario hacia las acciones principales.
+
+                </div>
+            </div>
+
+            <!-- OPCIÓN 2 -->
+            <div
+                style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 18px; margin-top: 18px;">
+
+                <h5 style="margin: 0 0 10px 0; color: #164a98; font-size: 17px;">
+
+                    <i class="fa-solid fa-circle-question" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Opción 2: Centro de ayuda / Soporte
+                </h5>
+
+                <p style="margin: 0 0 12px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    El <strong>Centro de ayuda</strong> tiene como propósito ofrecer
+                    recursos que permitan a los usuarios aprender a utilizar un
+                    sistema, resolver dudas y encontrar información cuando necesitan
+                    asistencia.
+
+                </p>
+
+                <div
+                    style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 15px;">
+
+                    <strong>Propósito:</strong>
+                    ayudar al usuario a encontrar respuestas y recursos de soporte
+                    sin necesidad de conocer previamente el funcionamiento del
+                    sistema.
+
+                </div>
+            </div>
+
+            <!-- OPCIÓN 3 -->
+            <div
+                style="background: #ffffff; border: 1px solid #d7e0ec; border-radius: 10px; padding: 18px; margin-top: 18px;">
+
+                <h5 style="margin: 0 0 10px 0; color: #164a98; font-size: 17px;">
+
+                    <i class="fa-solid fa-newspaper" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Opción 3: Noticias / Comunicados
+                </h5>
+
+                <p style="margin: 0 0 12px 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    Esta página tiene como propósito presentar información de interés
+                    general para los usuarios, como novedades, fechas importantes,
+                    cambios y comunicados relacionados con el servicio.
+
+                </p>
+
+
+                <div
+                    style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 15px;">
+
+                    <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                        <strong>Importante:</strong>
+                        esta página debe utilizarse para comunicación general.
+                        Los comunicados específicos dirigidos a un centro educativo
+                        deberían manejarse dentro del sistema mediante el
+                        <strong>módulo de notificaciones</strong>.
+
+                    </p>
+
+                </div>
+
+                <div
+                    style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 15px;">
+
+                    <strong>Propósito:</strong>
+                    mantener a los usuarios informados sobre novedades y
+                    acontecimientos relevantes del servicio.
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PARTE II -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-2" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+
+                Definir la estructura de la página
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Antes de comenzar a escribir el código, determine qué secciones tendrá
+                la página y cómo se distribuirán utilizando el sistema de
+                <strong>filas y columnas de Bootstrap</strong>.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-sitemap" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    La página debe considerar
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>Una estructura general organizada mediante <strong>container</strong>.</li>
+
+                    <li>Al menos una estructura basada en <strong>row</strong>.</li>
+
+                    <li>Uso de diferentes clases <strong>col-*</strong> para distribuir el contenido.</li>
+
+                    <li>Secciones visualmente diferenciadas.</li>
+
+                    <li>Una jerarquía visual clara entre títulos, contenido y acciones.</li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Nota:</strong>
+                    La próxima semana se ajustará esa página para que pueda adaptarse a diferentes tamaños de pantalla.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- PARTE III -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-3" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+
+                Utilizar el sistema de Grid de Bootstrap
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                La página debe construirse utilizando el sistema de grillas de
+                <strong>Bootstrap</strong>. No se debe resolver toda la distribución
+                utilizando únicamente CSS personalizado.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-table-columns" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Requisitos del Grid
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>Utilizar <strong>container</strong> o <strong>container-fluid</strong>.</li>
+
+                    <li>Utilizar al menos <strong>3 filas (row)</strong>.</li>
+
+                    <li>Utilizar columnas de Bootstrap para organizar el contenido.</li>
+
+                    <li>Utilizar al menos una combinación de columnas diferente a
+                        <strong>col-12</strong>.
+                    </li>
+
+                    <li>Utilizar clases de espaciado de Bootstrap cuando sean apropiadas,
+                        como <strong>m-*</strong>, <strong>p-*</strong> o
+                        <strong>gap-*</strong>.
+                    </li>
+
+                    <li>Utilizar clases de alineación cuando sean necesarias.</li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                <strong>Resultado esperado:</strong>
+                una página cuya estructura principal sea reconociblemente construida
+                mediante el sistema de Grid de Bootstrap.
+
+            </div>
+
+        </div>
+
+        <!-- PARTE IV -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-4" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+
+                Incorporar componentes de Bootstrap
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Además del sistema de Grid, la página debe utilizar diferentes
+                <strong>componentes de Bootstrap</strong> que sean apropiados para
+                el tipo de contenido seleccionado.
+
+                No es necesario utilizar todos los componentes disponibles. Seleccione
+                aquellos que aporten valor a la página.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-cubes" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+
+                    Componentes sugeridos
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        <strong>Cards:</strong>
+                        para presentar servicios, noticias, recursos o categorías.
+                    </li>
+
+                    <li>
+                        <strong>Buttons:</strong>
+                        para acciones principales y llamadas a la acción.
+                    </li>
+
+                    <li>
+                        <strong>Carousel:</strong>
+                        para destacar imágenes, noticias o contenidos principales.
+                    </li>
+
+                    <li>
+                        <strong>Accordion:</strong>
+                        especialmente útil para preguntas frecuentes.
+                    </li>
+
+                    <li>
+                        <strong>Alerts:</strong>
+                        para información importante o avisos.
+                    </li>
+
+                    <li>
+                        <strong>Badges:</strong>
+                        para categorías, estados o etiquetas.
+                    </li>
+
+                    <li>
+                        <strong>Navbar:</strong>
+                        para navegación entre secciones o páginas.
+                    </li>
+
+                    <li>
+                        <strong>List group:</strong>
+                        para organizar recursos, enlaces o categorías.
+                    </li>
+
+                    <li>
+                        <strong>Modal:</strong>
+                        para mostrar información adicional cuando sea apropiado.
+                    </li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Importante:</strong>
+                    los componentes deben seleccionarse de acuerdo con la función de
+                    la página. No se trata de colocar componentes únicamente para
+                    aumentar su cantidad, sino de utilizarlos cuando ayuden a
+                    presentar o organizar mejor la información.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULTADO FINAL -->
+        <div
+            style="background: #e8f5e9; border-radius: 10px; padding: 16px 18px; color: #2e7d32; font-size: 14px; line-height: 1.7;">
+
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+
+            <strong>Resultado final esperado:</strong>
+
+            Una o varias páginas informativas desarrolladas con Bootstrap, utilizando
+            correctamente el sistema de grillas mediante filas y columnas y 
+            componentes del framework.
+
+        </div>
+
+    </section>
+
+
+
+</body>
+
+
+</html>

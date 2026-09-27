@@ -1,0 +1,56 @@
+{
+  "microciclos": [
+    {
+      "codigo":"",
+      "semanas":"",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "",
+      "nombre": "",
+      "competencia_nombre": "",
+      "habilidad_sfia": {
+        "nombre": "",
+        "nivel_sfia": ""
+      },
+      "competencia_especifica": "",
+      "capacidades_especificas": [],
+      "descripcion": "",
+      "perfil_ingreso_requisitos": [],
+      "relacion_empleabilidad": [],
+      "temas": [
+        {
+          "numero": "",
+          "nombre": "",
+          "subtemas": []
+        }
+      ]
+    },
+    {
+      "codigo":"",
+      "semanas":"",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "",
+      "nombre": "",
+      "competencia_nombre": "",
+      "habilidad_sfia": {
+        "nombre": "",
+        "nivel_sfia": ""
+      },
+      "competencia_especifica": "",
+      "capacidades_especificas": [],
+      "descripcion": "",
+      "perfil_ingreso_requisitos": [],
+      "relacion_empleabilidad": [],
+      "temas": [
+        {
+          "numero": "",
+          "nombre": "",
+          "subtemas": []
+        }
+      ]
+    }
+  ],
+  "herramientas": [],
+  "bibliografia":[]
+}

@@ -1,0 +1,1090 @@
+{
+    "microciclos": [
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "1",
+            "nombre": "Fundamentos de IA generativa, recuperación de información y RAG",
+            "competencia_nombre": "Fundamentos de IA generativa y RAG",
+            "habilidad_sfia": {
+                "nombre": "Aprendizaje automático (MLNG)",
+                "nivel_sfia": "2"
+            },
+            "competencia_especifica": "Comprender el rol de la IA generativa, la recuperación de información y las arquitecturas RAG en soluciones empresariales basadas en conocimiento organizacional.",
+            "capacidades_especificas": [
+                "Reconoce las limitaciones de los modelos generativos sin contexto externo, identificando alucinaciones, corte de conocimiento y ausencia de fuentes organizacionales.",
+                "Diferencia la búsqueda por palabras clave, la búsqueda semántica y las arquitecturas RAG según su propósito y mecanismo de recuperación.",
+                "Identifica casos empresariales donde un sistema RAG aporta valor frente a un modelo generativo sin contexto, reconociendo sus componentes generales."
+            ],
+            "descripcion": "La inteligencia artificial generativa, la recuperación de información y las arquitecturas RAG constituyen la base para comprender cómo conectar modelos de lenguaje con fuentes documentales organizacionales. Las principales temáticas por abordar son IA generativa aplicada a datos, necesidad de datos externos, recuperación de información y casos de uso RAG.\n\nEl microciclo está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Aprendizaje automático (MLNG). En este nivel, los estudiantes asisten en la preparación de datos, el entrenamiento de modelos y las tareas de evaluación bajo supervisión rutinaria, y aplican técnicas dadas a los datos bajo orientación técnica. Adicionalmente, se abordan de manera complementaria las áreas de Gestión de la información (IRMG), nivel inicial de esta habilidad, comprendiendo la organización y recuperación de activos de información, y Pruebas (TEST) en nivel 1–2, validando la pertinencia de los casos de uso identificados.",
+            "perfil_ingreso_requisitos": [
+                "Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "IA generativa aplicada a datos",
+                    "subtemas": [
+                        "Modelos de lenguaje",
+                        "Generación de texto",
+                        "Limitaciones",
+                        "Alucinaciones"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Necesidad de datos externos",
+                    "subtemas": [
+                        "Corte de conocimiento",
+                        "Contexto organizacional",
+                        "Fuentes internas"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Recuperación de información",
+                    "subtemas": [
+                        "Búsqueda por palabras clave",
+                        "Full-text",
+                        "Búsqueda semántica",
+                        "Ranking y relevancia"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Casos de uso RAG",
+                    "subtemas": [
+                        "Asistentes internos",
+                        "Buscadores inteligentes",
+                        "Soporte",
+                        "Manuales",
+                        "Políticas",
+                        "Bases de conocimiento"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "2",
+            "nombre": "Fuentes documentales, metadatos y calidad de conocimiento",
+            "competencia_nombre": "Gestión de fuentes documentales y metadatos",
+            "habilidad_sfia": {
+                "nombre": "Gestión de la información (IRMG)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Identificar, clasificar y preparar fuentes de conocimiento empresarial para una solución de recuperación semántica.",
+            "capacidades_especificas": [
+                "Identifica fuentes documentales empresariales útiles para un sistema RAG, clasificándolas según confiabilidad, vigencia y utilidad.",
+                "Define metadatos relevantes (fuente, fecha, autor, versión, categoría, permisos y confidencialidad) para recuperación, filtrado y trazabilidad.",
+                "Detecta problemas de calidad documental como ruido, duplicidad, contradicciones, obsolescencia y material irrelevante en un corpus organizacional."
+            ],
+            "descripcion": "La identificación, clasificación y preparación de fuentes documentales permiten construir una base de conocimiento confiable para sistemas RAG. Las principales temáticas por abordar son fuentes documentales empresariales, confiabilidad de fuentes, metadatos y calidad documental.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Gestión de la información (IRMG), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes aplican técnicas y procedimientos establecidos para organizar, controlar y descubrir activos de información, y contribuyen a la definición de metadatos y criterios de calidad. Adicionalmente, se abordan de manera complementaria las áreas de Ingeniería de datos (DENG), reconociendo fuentes y estructuras de datos, y Métodos y herramientas (METL), utilizando herramientas de clasificación y catalogación de documentos.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado el curso: Fundamentos de IA generativa, recuperación de información y RAG.",
+                "Conocimiento de casos de uso RAG, recuperación de información y limitaciones de los modelos generativos.",
+                "Capacidad para identificar, clasificar y preparar fuentes documentales empresariales.",
+                "Nociones de metadatos, confiabilidad de fuentes y calidad documental."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Fuentes documentales empresariales",
+                    "subtemas": [
+                        "PDF",
+                        "Word",
+                        "HTML",
+                        "Markdown",
+                        "Bases de conocimiento",
+                        "Tickets",
+                        "Manuales",
+                        "Políticas"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Confiabilidad de fuentes",
+                    "subtemas": [
+                        "Vigencia",
+                        "Autoridad",
+                        "Duplicidad",
+                        "Contradicciones",
+                        "Versiones"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Metadatos",
+                    "subtemas": [
+                        "Fuente",
+                        "Fecha",
+                        "Autor",
+                        "Versión",
+                        "Categoría",
+                        "Permisos",
+                        "Confidencialidad"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Calidad documental",
+                    "subtemas": [
+                        "Ruido",
+                        "Documentos obsoletos",
+                        "Contenido incompleto",
+                        "Versiones múltiples",
+                        "Material irrelevante"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "3",
+            "nombre": "Procesamiento documental, chunking y preparación de corpus",
+            "competencia_nombre": "Procesamiento documental y chunking",
+            "habilidad_sfia": {
+                "nombre": "Ingeniería de datos (DENG)",
+                "nivel_sfia": "2"
+            },
+            "competencia_especifica": "Preparar documentos para recuperación semántica mediante extracción, limpieza, normalización, segmentación y generación de unidades recuperables.",
+            "capacidades_especificas": [
+                "Extrae y limpia texto útil desde fuentes documentales, eliminando encabezados, pies de página y contenido no recuperable.",
+                "Diseña estrategias de chunking (fijo, contextual o semántico) considerando tamaño, overlap y segmentación por párrafos, títulos o secciones.",
+                "Construye un pipeline de preparación documental que genere un corpus listo para generación de embeddings, justificando las decisiones de segmentación."
+            ],
+            "descripcion": "El procesamiento documental, el chunking y la preparación de corpus permiten transformar documentos en unidades recuperables para búsqueda semántica. Las principales temáticas por abordar son extracción y limpieza, normalización documental, chunking y estrategias de segmentación.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Ingeniería de datos (DENG). En este nivel, los estudiantes asisten en la construcción y mantenimiento de componentes de ingeniería de datos, aplican técnicas establecidas para la preparación de datos y documentan su trabajo bajo supervisión. Adicionalmente, se abordan de manera complementaria las áreas de Modelado y diseño de datos (DTAN), comprendiendo la estructura de los datos procesados, y Métodos y herramientas (METL), configurando y documentando herramientas de procesamiento documental.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento.",
+                "Conocimiento de fuentes documentales, metadatos y criterios de calidad.",
+                "Capacidad para extraer, limpiar, normalizar y segmentar documentos.",
+                "Comprensión inicial de chunking y preparación de corpus para recuperación semántica."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Extracción y limpieza",
+                    "subtemas": [
+                        "Texto",
+                        "Secciones",
+                        "Encabezados",
+                        "Pies de página",
+                        "Ruido",
+                        "Contenido irrelevante"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Normalización documental",
+                    "subtemas": [
+                        "Estructura",
+                        "Formato",
+                        "Contenido útil",
+                        "Exclusión de material no recuperable"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Chunking",
+                    "subtemas": [
+                        "Tamaño de chunk",
+                        "Overlap",
+                        "Segmentación por párrafos",
+                        "Segmentación por títulos o secciones"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Estrategias de segmentación",
+                    "subtemas": [
+                        "Chunking fijo",
+                        "Chunking contextual",
+                        "Chunking semántico",
+                        "Impacto en recuperación"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "4",
+            "nombre": "Embeddings y representación vectorial",
+            "competencia_nombre": "Embeddings y representación vectorial",
+            "habilidad_sfia": {
+                "nombre": "Modelado y diseño de datos (DTAN)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Generar representaciones vectoriales de contenido textual y analizar similitud semántica para fundamentar la recuperación de información.",
+            "capacidades_especificas": [
+                "Reconoce el concepto de embedding, su dimensionalidad y su uso en recuperación semántica dentro de un sistema RAG.",
+                "Genera embeddings para chunks, consultas y documentos, aplicando criterios de selección, costo, latencia y actualización de modelos.",
+                "Analiza similitud vectorial mediante coseno, distancia euclidiana o producto interno para comparar consultas y fragmentos recuperados."
+            ],
+            "descripcion": "Los embeddings y la representación vectorial permiten convertir contenido textual en vectores numéricos para búsqueda por similitud semántica. Las principales temáticas por abordar son concepto de embedding, modelos de embeddings, generación de embeddings y similitud vectorial.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Modelado y diseño de datos (DTAN). En este nivel, los estudiantes elicitan requisitos de datos, producen modelos de datos lógicos y contribuyen a la selección de componentes y técnicas de diseño, incluyendo la representación vectorial y los metadatos asociados. Adicionalmente, se abordan de manera complementaria las áreas de Aprendizaje automático (MLNG) en nivel 2, aplicando técnicas dadas de representación vectorial, y Métodos y herramientas (METL), configurando y documentando herramientas de generación de embeddings.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus.",
+                "Conocimiento de corpus documental, chunking y metadatos.",
+                "Manejo básico de Python para generación de embeddings.",
+                "Comprensión de similitud vectorial: coseno, distancia euclidiana, producto interno y top-k."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Concepto de embedding",
+                    "subtemas": [
+                        "Representación numérica",
+                        "Significado",
+                        "Dimensionalidad",
+                        "Uso en recuperación"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Modelos de embeddings",
+                    "subtemas": [
+                        "Selección",
+                        "Uso",
+                        "Límites",
+                        "Costo",
+                        "Latencia",
+                        "Actualización"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Generación de embeddings",
+                    "subtemas": [
+                        "Texto",
+                        "Chunks",
+                        "Consultas",
+                        "Almacenamiento",
+                        "Actualización de vectores"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Similitud vectorial",
+                    "subtemas": [
+                        "Coseno",
+                        "Distancia euclidiana",
+                        "Producto interno",
+                        "Top-k"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "5",
+            "nombre": "Bases de datos vectoriales",
+            "competencia_nombre": "Bases de datos vectoriales",
+            "habilidad_sfia": {
+                "nombre": "Administración de base de datos (DBAD)",
+                "nivel_sfia": "2"
+            },
+            "competencia_especifica": "Almacenar, indexar y consultar embeddings en una base vectorial o extensión vectorial, utilizando una herramienta institucional definida.",
+            "capacidades_especificas": [
+                "Explica la función de una base vectorial dentro de un sistema RAG, diferenciando vector stores, índices y colecciones.",
+                "Almacena embeddings junto con texto original y metadatos en una base vectorial implementada con la herramienta institucional definida (pgvector sobre PostgreSQL).",
+                "Ejecuta consultas por similitud e implementa criterios iniciales de indexación y rendimiento en una base vectorial funcional."
+            ],
+            "descripcion": "Las bases de datos vectoriales permiten almacenar, indexar y consultar embeddings junto con texto original y metadatos para recuperación semántica. Las principales temáticas por abordar son vector stores, operaciones vectoriales, indexación vectorial y herramienta institucional de implementación (pgvector).\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Administración de base de datos (DBAD). En este nivel, los estudiantes realizan tareas rutinarias de administración de bases de datos bajo supervisión, incluyendo la creación de estructuras, la carga de datos y la ejecución de consultas básicas. Adicionalmente, se abordan de manera complementaria las áreas de Modelado y diseño de datos (DTAN), estructurando los vectores y metadatos, y Métodos y herramientas (METL), configurando y documentando la herramienta vectorial institucional.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial.",
+                "Conocimiento de embeddings, similitud vectorial y top-k.",
+                "Familiaridad con bases de datos relacionales y SQL básico.",
+                "Uso de pgvector sobre PostgreSQL como herramienta institucional."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Vector stores",
+                    "subtemas": [
+                        "Colecciones",
+                        "Índices",
+                        "Vectores",
+                        "Texto original",
+                        "Chunks",
+                        "Metadatos"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Operaciones vectoriales",
+                    "subtemas": [
+                        "Inserción",
+                        "Actualización",
+                        "Eliminación",
+                        "Consulta de vectores"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Indexación vectorial",
+                    "subtemas": [
+                        "Búsqueda exacta",
+                        "Búsqueda aproximada",
+                        "Latencia",
+                        "Tamaño de índice",
+                        "Criterios iniciales de rendimiento"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Herramienta institucional de implementación",
+                    "subtemas": [
+                        "Uso guiado de pgvector para aplicar almacenamiento, consulta e indexación vectorial"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "6",
+            "nombre": "Búsqueda semántica y relevancia inicial",
+            "competencia_nombre": "Búsqueda semántica",
+            "habilidad_sfia": {
+                "nombre": "Programación/Desarrollo de software (PROG)",
+                "nivel_sfia": "2"
+            },
+            "competencia_especifica": "Transformar consultas en lenguaje natural en embeddings y recuperar resultados mediante similitud vectorial, interpretando ranking, umbrales y fallos frecuentes.",
+            "capacidades_especificas": [
+                "Transforma consultas en lenguaje natural en embeddings para recuperar resultados mediante similitud vectorial.",
+                "Interpreta ranking, umbrales y top-k para evaluar la relevancia inicial de los resultados recuperados.",
+                "Identifica fallos frecuentes de recuperación como resultados irrelevantes, ruido, chunks mal segmentados o ausencia de contexto."
+            ],
+            "descripcion": "La búsqueda semántica permite recuperar información relevante mediante la transformación de consultas en embeddings y la comparación por similitud vectorial. Las principales temáticas por abordar son consulta en lenguaje natural, recuperación por similitud, presentación de resultados y fallos frecuentes.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Programación/Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts simples; aplican estándares y herramientas acordados; y revisan su propio trabajo. Adicionalmente, se abordan de manera complementaria las áreas de Modelado y diseño de datos (DTAN), comprendiendo la estructura de los datos vectoriales, y Pruebas (TEST), validando la relevancia de los resultados recuperados.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales.",
+                "Conocimiento de almacenamiento, indexación y consulta vectorial.",
+                "Capacidad para transformar consultas en embeddings y recuperar resultados por similitud.",
+                "Comprensión de ranking, umbrales y fallos frecuentes de recuperación."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Consulta en lenguaje natural",
+                    "subtemas": [
+                        "Transformación de consulta en embedding",
+                        "Comparación semántica"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Recuperación por similitud",
+                    "subtemas": [
+                        "Top-k",
+                        "Ranking",
+                        "Umbrales",
+                        "Resultados relevantes"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Presentación de resultados",
+                    "subtemas": [
+                        "Texto recuperado",
+                        "Metadatos",
+                        "Fuente",
+                        "Fragmento",
+                        "Score"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Fallos frecuentes",
+                    "subtemas": [
+                        "Resultados irrelevantes",
+                        "Ruido",
+                        "Chunks mal segmentados",
+                        "Ausencia de contexto"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "7",
+            "nombre": "Búsqueda híbrida y recuperación contextual",
+            "competencia_nombre": "Búsqueda híbrida y recuperación contextual",
+            "habilidad_sfia": {
+                "nombre": "Modelado y diseño de datos (DTAN)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Combinar búsqueda vectorial con filtros, metadatos y búsqueda textual para mejorar precisión, control, trazabilidad y utilidad del contexto recuperado.",
+            "capacidades_especificas": [
+                "Diferencia la búsqueda semántica simple de la búsqueda híbrida, reconociendo el aporte de filtros y búsqueda textual.",
+                "Aplica filtros por metadatos (fecha, fuente, categoría, permisos, versión) para mejorar precisión, control y trazabilidad del contexto recuperado.",
+                "Selecciona fragmentos útiles aplicando re-ranking básico y comparación de estrategias para preparar el contexto mínimo suficiente para generación."
+            ],
+            "descripcion": "La búsqueda híbrida y la recuperación contextual permiten combinar estrategias vectoriales, textuales y filtros por metadatos para obtener fragmentos más útiles y trazables. Las principales temáticas por abordar son búsqueda híbrida, filtros por metadatos, re-ranking básico y recuperación contextual.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Modelado y diseño de datos (DTAN). En este nivel, los estudiantes elicitan requisitos de datos, producen modelos de datos lógicos y contribuyen a la selección de técnicas de recuperación y filtrado, asegurando la coherencia entre metadatos y patrones de consulta. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), implementando la lógica de búsqueda híbrida, y Pruebas (TEST), comparando resultados entre estrategias.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales; Búsqueda semántica y relevancia inicial.",
+                "Conocimiento de búsqueda vectorial, metadatos y ranking."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Búsqueda híbrida",
+                    "subtemas": [
+                        "Vectorial",
+                        "Textual",
+                        "Filtros",
+                        "Combinación de estrategias"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Filtros por metadatos",
+                    "subtemas": [
+                        "Fecha",
+                        "Fuente",
+                        "Categoría",
+                        "Tipo de documento",
+                        "Permisos",
+                        "Versión",
+                        "Confidencialidad"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Re-ranking básico",
+                    "subtemas": [
+                        "Priorización",
+                        "Reducción de ruido",
+                        "Comparación de resultados",
+                        "Selección de fragmentos"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Recuperación contextual",
+                    "subtemas": [
+                        "Fragmentos útiles",
+                        "Contexto mínimo suficiente",
+                        "Preparación para generación"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "8",
+            "nombre": "Arquitectura RAG y prompting con contexto",
+            "competencia_nombre": "Arquitectura RAG y prompting contextual",
+            "habilidad_sfia": {
+                "nombre": "Aprendizaje automático (MLNG)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Diseñar e implementar el flujo base de una arquitectura RAG, integrando recuperación de contexto, armado de prompt, uso controlado de evidencia y generación de respuestas.",
+            "capacidades_especificas": [
+                "Diseña el flujo general de una solución RAG integrando ingesta, chunking, embeddings, vector store, recuperación y generación.",
+                "Diferencia RAG de fine-tuning, reconociendo cuándo usar cada enfoque según actualización, costo y control de fuentes.",
+                "Construye prompts que utilicen contexto recuperado, incorporen citas o referencias a fuentes y controlen respuestas sin evidencia suficiente."
+            ],
+            "descripcion": "La arquitectura RAG y el prompting con contexto permiten diseñar flujos que integran recuperación de información y generación de respuestas controladas por evidencia. Las principales temáticas por abordar son componentes RAG, flujo de consulta, prompting para RAG y control de respuesta.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Aprendizaje automático (MLNG). En este nivel, los estudiantes aplican técnicas existentes de aprendizaje automático a nuevos problemas y conjuntos de datos, seleccionan y preparan datos para el entrenamiento y la evaluación, y comunican resultados y limitaciones a las partes interesadas. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), implementando el flujo RAG, y Diseño de sistemas (DESN), asistiendo en la documentación de los elementos de diseño del sistema.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales; Búsqueda semántica y relevancia inicial; Búsqueda híbrida y recuperación contextual.",
+                "Conocimiento de recuperación contextual y selección de fragmentos.",
+                "Capacidad para diseñar flujos RAG, construir prompts con contexto y controlar respuestas sin evidencia.",
+                "Comprensión de la diferencia entre RAG y fine-tuning."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Componentes RAG",
+                    "subtemas": [
+                        "Ingesta",
+                        "Chunking",
+                        "Embeddings",
+                        "Vector store",
+                        "Recuperación",
+                        "Generación"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Flujo de consulta",
+                    "subtemas": [
+                        "Pregunta",
+                        "Recuperación de contexto",
+                        "Armado de prompt",
+                        "Generación",
+                        "Respuesta"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Prompting para RAG",
+                    "subtemas": [
+                        "Sistema",
+                        "Contexto",
+                        "Pregunta",
+                        "Formato de salida",
+                        "Uso de evidencia"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Control de respuesta",
+                    "subtemas": [
+                        "Manejo de ambigüedad",
+                        "Falta de evidencia",
+                        "Límites",
+                        "Tono",
+                        "“No sé” cuando corresponde"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "9",
+            "nombre": "Integración con modelos de lenguaje, APIs y control operativo",
+            "competencia_nombre": "Integración de modelos de lenguaje y APIs",
+            "habilidad_sfia": {
+                "nombre": "Construcción e integración de sistemas (SINT)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Integrar modelos de lenguaje mediante APIs para generar respuestas a partir de contexto recuperado, considerando parámetros básicos, manejo de errores, costos, tokens y latencia.",
+            "capacidades_especificas": [
+                "Consume APIs de modelos de lenguaje aplicando parámetros básicos, configuración de claves y manejo de respuestas.",
+                "Integra recuperación y generación en un flujo funcional que controle tokens, latencia y costos iniciales.",
+                "Maneja errores básicos de API mediante reintentos, validaciones y separación de componentes de recuperación, generación y configuración."
+            ],
+            "descripcion": "La integración con modelos de lenguaje mediante APIs permite generar respuestas a partir del contexto recuperado, controlando tokens, latencia y errores operativos. Las principales temáticas por abordar son consumo de APIs de modelos, control de tokens y latencia, manejo de errores y separación de componentes.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Construcción e integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), escribiendo el código de integración, Métodos y herramientas (METL), configurando y documentando las herramientas de integración, y Seguridad de la información (SCTY), aplicando manejo seguro de credenciales y validación de entradas.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales; Búsqueda semántica y relevancia inicial; Búsqueda híbrida y recuperación contextual; Arquitectura RAG y prompting con contexto.",
+                "Conocimiento de flujos RAG y prompting contextual.",
+                "Capacidad para consumir APIs de modelos de lenguaje, manejar errores, controlar tokens, latencia y costos iniciales.",
+                "Separación de componentes de recuperación, generación y configuración."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Consumo de APIs de modelos",
+                    "subtemas": [
+                        "Parámetros básicos",
+                        "Claves",
+                        "Configuración",
+                        "Manejo de respuestas"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Control de tokens y latencia",
+                    "subtemas": [
+                        "Tamaño de contexto",
+                        "Límites operativos",
+                        "Costos",
+                        "Tiempos de respuesta"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Manejo de errores",
+                    "subtemas": [
+                        "Reintentos",
+                        "Fallos de API",
+                        "Validaciones",
+                        "Respuestas incompletas"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Separación de componentes",
+                    "subtemas": [
+                        "Recuperación",
+                        "Generación",
+                        "Respuesta",
+                        "Configuración",
+                        "Manejo operativo básico"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "10",
+            "nombre": "Desarrollo de aplicaciones o servicios RAG",
+            "competencia_nombre": "Desarrollo de aplicaciones RAG",
+            "habilidad_sfia": {
+                "nombre": "Programación/Desarrollo de software (PROG)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Exponer una solución RAG mediante una aplicación, servicio o API simple que permita realizar consultas, recuperar contexto, generar respuestas y mostrar fuentes.",
+            "capacidades_especificas": [
+                "Organiza una aplicación RAG en componentes, carpetas, configuración y separación lógica de responsabilidades.",
+                "Crea un endpoint o interfaz simple de consulta que valide entradas de usuario, recupere contexto y presente fuentes y fragmentos utilizados.",
+                "Registra consultas, errores, respuestas y fuentes utilizadas mediante logs y manejo operativo básico en la aplicación o servicio RAG."
+            ],
+            "descripcion": "El desarrollo de aplicaciones o servicios RAG permite exponer la solución mediante endpoints o interfaces simples que gestionan consultas, recuperación, generación y presentación de fuentes. Las principales temáticas por abordar son estructura de aplicación RAG, API o endpoint de consulta, presentación de fuentes y logs y manejo operativo.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Programación/Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts de complejidad moderada; aplican estándares y herramientas acordados; monitorean e informan sobre el progreso; identifican problemas y proponen soluciones prácticas; y colaboran en revisiones de trabajo con otros. Adicionalmente, se abordan de manera complementaria las áreas de Construcción e integración de sistemas (SINT), desplegando la aplicación o servicio, y Seguridad de la información (SCTY), validando entradas de usuario y protegiendo credenciales.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales; Búsqueda semántica y relevancia inicial; Búsqueda híbrida y recuperación contextual; Arquitectura RAG y prompting con contexto; Integración con modelos de lenguaje, APIs y control operativo.",
+                "Conocimiento de integración funcional entre recuperación y generación.",
+                "Capacidad para organizar una aplicación RAG en componentes, crear endpoints o interfaces simples, validar entradas y presentar fuentes.",
+                "Manejo básico de logs, errores y respuestas estructuradas."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Estructura de aplicación RAG",
+                    "subtemas": [
+                        "Componentes",
+                        "Carpetas",
+                        "Configuración",
+                        "Separación lógica"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "API o endpoint de consulta",
+                    "subtemas": [
+                        "Entrada de usuario",
+                        "Validación",
+                        "Respuesta estructurada",
+                        "Manejo de errores"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Presentación de fuentes",
+                    "subtemas": [
+                        "Evidencia recuperada",
+                        "Metadatos",
+                        "Fragmentos",
+                        "Trazabilidad inicial"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Logs y manejo operativo",
+                    "subtemas": [
+                        "Registro de consultas",
+                        "Errores",
+                        "Respuestas",
+                        "Fuentes utilizadas"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "11",
+            "nombre": "Evaluación de recuperación y respuestas generadas",
+            "competencia_nombre": "Evaluación de sistemas RAG",
+            "habilidad_sfia": {
+                "nombre": "Pruebas (TEST)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Evaluar la calidad de la recuperación y de las respuestas generadas por un sistema RAG, aplicando criterios de relevancia, fidelidad, exactitud, cobertura y trazabilidad.",
+            "capacidades_especificas": [
+                "Diseña casos de prueba para una solución RAG, incluyendo preguntas esperadas, fuera de alcance, ambiguas y críticas.",
+                "Evalúa relevancia, precisión y cobertura de los resultados recuperados, así como fidelidad y exactitud de las respuestas generadas.",
+                "Detecta alucinaciones, fuentes incorrectas, respuestas incompletas y ausencia de evidencia, proponiendo mejoras al sistema RAG evaluado."
+            ],
+            "descripcion": "La evaluación de la recuperación y de las respuestas generadas permite verificar la calidad del sistema RAG mediante criterios de relevancia, fidelidad, exactitud, cobertura y trazabilidad. Las principales temáticas por abordar son evaluación de recuperación, casos de prueba, evaluación de respuesta y detección de fallos.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Medición (MEAS), recopilando y reportando métricas de evaluación, y Aprendizaje automático (MLNG) en nivel 3, interpretando el comportamiento del modelo y sus limitaciones.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales; Búsqueda semántica y relevancia inicial; Búsqueda híbrida y recuperación contextual; Arquitectura RAG y prompting con contexto; Integración con modelos de lenguaje, APIs y control operativo; Desarrollo de aplicaciones o servicios RAG.",
+                "Conocimiento de flujos RAG funcionales y presentación de fuentes.",
+                "Capacidad para diseñar casos de prueba, evaluar relevancia, fidelidad, exactitud, cobertura y trazabilidad.",
+                "Detección de alucinaciones, fuentes incorrectas y respuestas incompletas."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Evaluación de recuperación",
+                    "subtemas": [
+                        "Relevancia",
+                        "Precisión",
+                        "Recall/cobertura",
+                        "Top-k",
+                        "Calidad del contexto"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Casos de prueba",
+                    "subtemas": [
+                        "Preguntas esperadas",
+                        "Fuera de alcance",
+                        "Ambiguas",
+                        "Críticas"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Evaluación de respuesta",
+                    "subtemas": [
+                        "Fidelidad al contexto",
+                        "Exactitud",
+                        "Completitud",
+                        "Claridad",
+                        "Utilidad"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Detección de fallos",
+                    "subtemas": [
+                        "Alucinaciones",
+                        "Fuentes incorrectas",
+                        "Respuestas incompletas",
+                        "Ausencia de evidencia"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "12",
+            "nombre": "Seguridad, trazabilidad, mantenimiento y documentación técnica",
+            "competencia_nombre": "Seguridad y documentación de sistemas RAG",
+            "habilidad_sfia": {
+                "nombre": "Seguridad de la información (SCTY)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Aplicar controles básicos de seguridad, privacidad, trazabilidad, mantenimiento y documentación técnica en sistemas RAG empresariales.",
+            "capacidades_especificas": [
+                "Aplica controles básicos de seguridad y privacidad sobre credenciales, fuentes, datos sensibles, prompt injection y data leakage.",
+                "Documenta la trazabilidad entre respuestas, chunks y fuentes, así como un plan básico de mantenimiento de la base de conocimiento (reindexación, versiones, eliminación de obsoletos).",
+                "Elabora documentación técnica de arquitectura, fuentes, chunking, embeddings, límites, decisiones y riesgos de una solución RAG empresarial."
+            ],
+            "descripcion": "La seguridad, la trazabilidad, el mantenimiento y la documentación técnica permiten operar sistemas RAG de forma confiable y sostenible. Las principales temáticas por abordar son seguridad y privacidad, trazabilidad, mantenimiento y documentación técnica.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Seguridad de la información (SCTY), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes aplican y mantienen controles de seguridad específicos, comunican riesgos y realizan valoraciones básicas de riesgos para sistemas de información de menor complejidad. Adicionalmente, se abordan de manera complementaria las áreas de Métodos y herramientas (METL), documentando métodos y herramientas utilizadas, y Gestión de la información (IRMG), gestionando la trazabilidad y el mantenimiento de la base de conocimiento.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales; Búsqueda semántica y relevancia inicial; Búsqueda híbrida y recuperación contextual; Arquitectura RAG y prompting con contexto; Integración con modelos de lenguaje, APIs y control operativo; Desarrollo de aplicaciones o servicios RAG; Evaluación de recuperación y respuestas generadas.",
+                "Conocimiento de evaluación de sistemas RAG y detección de fallos.",
+                "Capacidad para identificar riesgos de seguridad y privacidad, aplicar controles iniciales y documentar trazabilidad.",
+                "Elaboración de documentación técnica, planes de mantenimiento y auditoría básica."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Seguridad y privacidad",
+                    "subtemas": [
+                        "Datos sensibles",
+                        "Permisos",
+                        "Credenciales",
+                        "Prompt injection",
+                        "Data leakage"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Trazabilidad",
+                    "subtemas": [
+                        "Fuentes",
+                        "Chunks",
+                        "Metadatos",
+                        "Evidencia recuperada",
+                        "Auditoría básica"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Mantenimiento",
+                    "subtemas": [
+                        "Reindexación",
+                        "Actualización documental",
+                        "Versiones",
+                        "Eliminación de obsoletos"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Documentación técnica",
+                    "subtemas": [
+                        "Arquitectura",
+                        "Fuentes",
+                        "Chunking",
+                        "Embeddings",
+                        "Límites",
+                        "Decisiones",
+                        "Riesgos"
+                    ]
+                }
+            ]
+        },
+        {
+            "codigo": "",
+            "semanas": "4",
+            "horas_semanales": "6",
+            "horas_lectivas": "24",
+            "numero": "13",
+            "nombre": "Proyecto Integrador RAG Empresarial",
+            "competencia_nombre": "Proyecto Integrador RAG Empresarial",
+            "habilidad_sfia": {
+                "nombre": "Construcción e integración de sistemas (SINT)",
+                "nivel_sfia": "3"
+            },
+            "competencia_especifica": "Diseñar, implementar, evaluar, documentar y defender un sistema RAG empresarial funcional que integre preparación documental, embeddings, base vectorial, búsqueda semántica o híbrida, modelo de lenguaje, trazabilidad, seguridad básica y evaluación de respuestas.",
+            "capacidades_especificas": [
+                "Diseña e implementa un sistema RAG empresarial funcional que integre preparación documental, embeddings, base vectorial, búsqueda semántica o híbrida y modelo de lenguaje.",
+                "Evalúa la recuperación y las respuestas generadas, aplicando criterios de relevancia, fidelidad, exactitud, cobertura y trazabilidad hacia fuentes.",
+                "Documenta y defiende técnicamente la solución, justificando decisiones de arquitectura, chunking, integración, seguridad, límites y plan de mantenimiento."
+            ],
+            "descripcion": "El Proyecto Integrador RAG Empresarial permite consolidar las competencias del Path mediante el diseño, implementación, evaluación, documentación y defensa de una solución RAG funcional para un caso empresarial. Las principales temáticas por abordar son análisis del caso empresarial, preparación de conocimiento, implementación vectorial, recuperación y generación, integración funcional, evaluación y controles, documentación técnica, y defensa técnica.\n\nEl microciclo está alineado con SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Construcción e integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Aprendizaje automático (MLNG) en nivel 3, Programación/Desarrollo de software (PROG), Seguridad de la información (SCTY) y Pruebas (TEST), integrando IA aplicada, desarrollo, seguridad y evaluación.",
+            "perfil_ingreso_requisitos": [
+                "Haber aprobado los cursos: Fundamentos de IA generativa, recuperación de información y RAG; Fuentes documentales, metadatos y calidad de conocimiento; Procesamiento documental, chunking y preparación de corpus; Embeddings y representación vectorial; Bases de datos vectoriales; Búsqueda semántica y relevancia inicial; Búsqueda híbrida y recuperación contextual; Arquitectura RAG y prompting con contexto; Integración con modelos de lenguaje, APIs y control operativo; Desarrollo de aplicaciones o servicios RAG; Evaluación de recuperación y respuestas generadas; Seguridad, trazabilidad, mantenimiento y documentación técnica."
+            ],
+            "relacion_empleabilidad": [
+                "Implementador junior de soluciones RAG.",
+                "Desarrollador junior de aplicaciones con IA.",
+                "Junior AI Application Developer.",
+                "AI Data Technician.",
+                "Asistente de ingeniería de datos para IA.",
+                "Técnico en búsqueda semántica empresarial.",
+                "Soporte técnico de soluciones de IA con datos."
+            ],
+            "temas": [
+                {
+                    "numero": "1",
+                    "nombre": "Análisis del caso empresarial",
+                    "subtemas": [
+                        "Necesidad organizacional",
+                        "Fuentes",
+                        "Alcance",
+                        "Usuarios",
+                        "Restricciones",
+                        "Criterios de éxito"
+                    ]
+                },
+                {
+                    "numero": "2",
+                    "nombre": "Preparación de conocimiento",
+                    "subtemas": [
+                        "Fuentes documentales",
+                        "Limpieza",
+                        "Chunking",
+                        "Metadatos",
+                        "Calidad documental"
+                    ]
+                },
+                {
+                    "numero": "3",
+                    "nombre": "Implementación vectorial",
+                    "subtemas": [
+                        "Embeddings",
+                        "Base vectorial",
+                        "Almacenamiento de chunks",
+                        "Metadatos",
+                        "Consultas por similitud"
+                    ]
+                },
+                {
+                    "numero": "4",
+                    "nombre": "Recuperación y generación",
+                    "subtemas": [
+                        "Búsqueda semántica",
+                        "Búsqueda híbrida o filtros",
+                        "Armado de contexto",
+                        "Prompt",
+                        "Respuesta"
+                    ]
+                },
+                {
+                    "numero": "5",
+                    "nombre": "Integración funcional",
+                    "subtemas": [
+                        "Aplicación, API o servicio de consulta",
+                        "Manejo de errores",
+                        "Respuesta estructurada"
+                    ]
+                },
+                {
+                    "numero": "6",
+                    "nombre": "Evaluación y controles",
+                    "subtemas": [
+                        "Pruebas",
+                        "Relevancia",
+                        "Fidelidad",
+                        "Trazabilidad",
+                        "Seguridad básica",
+                        "Privacidad"
+                    ]
+                },
+                {
+                    "numero": "7",
+                    "nombre": "Documentación técnica",
+                    "subtemas": [
+                        "Arquitectura",
+                        "Decisiones",
+                        "Límites",
+                        "Riesgos",
+                        "Mantenimiento",
+                        "Uso de la solución"
+                    ]
+                },
+                {
+                    "numero": "8",
+                    "nombre": "Defensa técnica",
+                    "subtemas": [
+                        "Demo funcional",
+                        "Explicación de decisiones",
+                        "Evidencias y retroalimentación final"
+                    ]
+                }
+            ]
+        }
+    ],
+    "herramientas": [
+        "Python es un lenguaje de programación interpretado que permite construir scripts, pipelines de datos, servicios y aplicaciones para sistemas RAG. Su sintaxis limpia y su ecosistema de librerías facilitan la integración de procesamiento documental, embeddings, bases vectoriales, APIs de modelos de lenguaje y lógica de recuperación.",
+        "PostgreSQL es un sistema gestor de bases de datos relacional, open source y robusto, que permite almacenar datos estructurados y, mediante extensiones, datos vectoriales. Su confiabilidad, transacciones y soporte para SQL avanzado facilitan la persistencia de metadatos, documentos y vectores en una misma plataforma.",
+        "pgvector sobre PostgreSQL es una extensión vectorial que permite almacenar embeddings, crear índices y ejecutar búsquedas por similitud dentro de PostgreSQL. Su integración con SQL, su soporte para operadores vectoriales y su capacidad de combinar filtros relacionales con búsqueda semántica facilitan la implementación de bases vectoriales empresariales.",
+        "DBeaver, pgAdmin o cliente equivalente son herramientas gráficas de administración de bases de datos que permiten conectarse a PostgreSQL, explorar esquemas, ejecutar consultas SQL y vectoriales, y gestionar objetos. Su editor, historial y visualización de resultados agilizan la administración y depuración de la base vectorial.",
+        "Modelos de embeddings son modelos de representación vectorial que convierten texto en vectores numéricos capaces de capturar significado semántico. Su uso permite transformar documentos, chunks y consultas en embeddings comparables mediante similitud, facilitando la recuperación semántica.",
+        "API de LLM seleccionada por la institución o el docente es un servicio de modelo de lenguaje que permite generar respuestas a partir de un prompt y un contexto recuperado. Su integración mediante API facilita la generación de respuestas controladas, el manejo de tokens, latencia y costos, y la separación entre recuperación y generación.",
+        "PyMuPDF, Unstructured, LangChain loaders, LlamaIndex readers u opción equivalente son librerías y herramientas de procesamiento documental que permiten extraer texto, limpiar contenido, normalizar formatos y preparar documentos para indexación. Su capacidad de manejar PDF, Word, HTML, Markdown y otras fuentes facilita la construcción de corpus recuperables.",
+        "LangChain, LlamaIndex o implementación propia guiada son frameworks y librerías para construir aplicaciones RAG que permiten conectar fuentes documentales, generar embeddings, almacenar vectores, recuperar contexto y orquestar modelos de lenguaje. Su estructura modular y sus integraciones facilitan el diseño de flujos RAG funcionales y mantenibles.",
+        "FastAPI o Flask son frameworks de Python para construir APIs y servicios web ligeros que permiten exponer endpoints de consulta, validar entradas, recuperar contexto y generar respuestas. Su estructura simple, su documentación automática y su manejo de errores facilitan la integración de la solución RAG con aplicaciones cliente.",
+        "ThunderClient / Postman / Insomnia son herramientas de pruebas manuales de API que permiten enviar peticiones HTTP, validar endpoints, códigos de respuesta, headers y estructuras JSON. Su organización en colecciones, variables de entorno e historial facilitan la verificación de la integración entre la aplicación, la base vectorial y el modelo de lenguaje.",
+        "Git y GitHub / GitLab son herramientas para el control y alojamiento de versiones. Git permite registrar la evolución de scripts, pipelines, documentación y código de integración, mientras que GitHub o GitLab permiten alojar repositorios, gestionar issues, revisiones y pull requests, facilitando el trabajo colaborativo y la conservación de evidencias.",
+        "Markdown, Mermaid, Draw.io son herramientas de documentación y diagramación que permiten redactar documentación técnica, representar arquitecturas RAG, flujos de recuperación y decisiones de diseño. Su formato sencillo y versionable facilita la elaboración de documentación clara, ordenada y mantenible."
+    ],
+    "bibliografia": [
+        "Calcina-Puma, E., Arroyo-Paz, A. (2026). Semantic Search for Financial Products Using Embeddings and Pgvector. In: Lossio-Ventura, J.A., Medina Rodriguez, R., Zilberman, J., Paz Espinoza, F.A., Alatrista-Salas, H. (eds) Information Management and Big Data. SIMBig 2025. Communications in Computer and Information Science, vol 2895. Springer, Cham. https://doi.org/10.1007/978-3-032-20322-9_25"
+    ]
+}
