@@ -965,7 +965,7 @@ print(base, altura)
         },
         {
             id: 'modulo_004',
-            label: 'Flujo de control condicional',
+            label: 'Control condicional',
             subtemas: [
                 {
                     id: 'm004-t001',
@@ -1835,7 +1835,7 @@ print(mensaje)
         },
         {
             id: 'modulo_005',
-            label: 'Flujo de control iterativo',
+            label: 'Control iterativo',
             subtemas: [
                 {
                     id: 'm005-t001',

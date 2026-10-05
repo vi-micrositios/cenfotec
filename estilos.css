@@ -351,8 +351,12 @@
     color:#ffffff;
     border-radius:8px;
     white-space: pre;
+    margin-bottom: 20px;
 }
 
+.microsite-wrapper table {
+    margin-top:15px;
+}
 .microsite-wrapper .nota{
     margin-top:18px;
     padding:14px;
