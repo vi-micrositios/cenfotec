@@ -1,0 +1,464 @@
+Nota general:
+
+Todos los microciclos tienen 24 horas lectivas (4 semanas × 6 horas semanales).
+
+El campo Software requerido no está definido en el JSON (herramientas está vacío); se sugiere según contenidos.
+
+Los roles de empleabilidad son los mismos para todos los microciclos según el JSON.
+
+En los microciclos 2 al 12, el único requisito de ingreso indicado en el JSON es el curso anterior (aparece como “Cruso: …”).
+
+La bibliografía también está vacía.
+
+Microcurso 1: Fundamentos de IA para Pruebas de Software
+Ingrese el nombre del curso:
+Fundamentos de IA para Pruebas de Software
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso constituye la base para comprender las diferencias entre sistemas tradicionales, sistemas inteligentes y sistemas generativos, y su impacto en el diseño y la ejecución de pruebas. Se abordan inteligencia artificial, aprendizaje automático e IA generativa; datos, modelos, inferencia y salida; sistemas deterministas y probabilísticos; tipos de sistemas inteligentes como clasificación, predicción, recomendación y generación; y el alcance del rol tester en sistemas con IA. El estudiante diferencia sistemas tradicionales, inteligentes y generativos, explica conceptos básicos de datos, modelos e inferencia desde la perspectiva del testing, reconoce implicaciones de la IA en el diseño y ejecución de pruebas, e identifica los límites del tester frente a ciencia de datos, desarrollo de modelos y MLOps. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 2, con apoyo en Aseguramiento de la calidad (QUAS) y Machine learning (MLNG). Como resultado, el estudiante comprende el comportamiento probabilístico de los sistemas con IA y su efecto en la validación de software.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+II Ciclo de Educación General Básica aprobado o equivalente, como referencia del MNC-EFTP-CR.
+
+Python Foundations o competencia equivalente validada por diagnóstico.
+
+Técnico Ágil en Pruebas Manuales de Software o competencias equivalentes homologables por experiencia o diagnóstico.
+
+Conocimientos de automatización de pruebas o experiencia equivalente.
+
+Dominio básico previo de programación; no se enseña programación desde cero.
+
+Conocimiento previo de requerimientos, casos de prueba, defectos, evidencia, APIs manuales, regresión y reportes.
+
+No se requiere experiencia avanzada en IA, ciencia de datos o machine learning.
+
+Manejo básico de sistema operativo, navegador, documentos colaborativos, archivos, plataformas virtuales y terminal básica.
+
+Curso anterior: ninguno.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, navegador, editor de código, Git, herramientas de prueba, Jupyter/Colab, Markdown.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+IA, aprendizaje automático, IA generativa, datos, modelos, inferencia, salida, sistemas deterministas, sistemas probabilísticos, clasificación, predicción, recomendación, generación, rol tester.
+
+Contenidos principales:
+
+Inteligencia artificial, aprendizaje automático e IA generativa.
+
+Datos, modelos, inferencia y salida.
+
+Sistemas deterministas y probabilísticos.
+
+Tipos de sistemas inteligentes: clasificación, predicción, recomendación, generación.
+
+Alcance del rol tester en sistemas con IA: límites, relación con ciencia de datos, desarrollo de modelos y MLOps.
+
+Microcurso 2: Comportamiento No Determinista, Riesgo y Oráculos de Prueba
+Ingrese el nombre del curso:
+Comportamiento No Determinista, Riesgo y Oráculos de Prueba
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite analizar sistemas inteligentes considerando variabilidad, incertidumbre, oráculos parciales, criterios flexibles y riesgos de validación. Se abordan variabilidad de salida y comportamiento no determinista; incertidumbre, confianza, umbrales y tolerancias; oráculos tradicionales, parciales y aproximados; riesgos de validación en sistemas inteligentes; e implicaciones para regresión y cambios de comportamiento. El estudiante explica la diferencia entre resultado exacto y resultado aceptable, identifica fuentes de variabilidad, define criterios flexibles de aceptación y oráculos parciales o aproximados, y analiza riesgos asociados con incertidumbre, confianza y variabilidad. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Aseguramiento de la calidad (QUAS) y Gestión y definición de requisitos (REQM). Como resultado, puede diseñar validaciones para salidas no deterministas y reconocer el impacto de la variabilidad en la regresión y el cambio de comportamiento.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Fundamentos de IA para Pruebas de Software.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pytest, APIs de LLM, Jupyter, herramientas de evaluación, Git.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Variabilidad, no determinismo, incertidumbre, confianza, umbrales, tolerancias, oráculos tradicionales, parciales, aproximados, riesgos de validación, regresión, cambios de comportamiento.
+
+Contenidos principales:
+
+Variabilidad de salida y comportamiento no determinista.
+
+Incertidumbre, confianza, umbrales y tolerancias.
+
+Oráculos tradicionales, parciales y aproximados.
+
+Riesgos de validación en sistemas inteligentes.
+
+Implicaciones para regresión y cambios de comportamiento.
+
+Microcurso 3: Diseño de Escenarios, Criterios y Rúbricas para Sistemas Inteligentes
+Ingrese el nombre del curso:
+Diseño de Escenarios, Criterios y Rúbricas para Sistemas Inteligentes
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite diseñar escenarios, criterios de aceptación flexibles, rúbricas, matrices de riesgo y trazabilidad para funcionalidades con IA. Se abordan el diseño de escenarios funcionales con IA; criterios flexibles y aceptación basada en riesgo; rúbricas de evaluación; cobertura por intención, usuario, contexto, idioma, dato y riesgo; y trazabilidad para pruebas de IA. El estudiante diseña escenarios positivos, negativos, ambiguos, críticos y borde, construye criterios de evaluación flexibles y rúbricas para valorar utilidad, consistencia, corrección, seguridad y completitud, y relaciona requerimientos, riesgos, escenarios, datos, prompts, resultados y hallazgos mediante matrices de trazabilidad. El curso se alinea con SFIA 8 en Gestión y definición de requisitos (REQM) nivel 3, con apoyo en Pruebas (TEST) y Aseguramiento de la calidad (QUAS). Como resultado, puede planificar pruebas de IA con criterios observables y cobertura basada en riesgo.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Comportamiento No Determinista, Riesgo y Oráculos de Prueba.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: hojas de cálculo, herramientas de gestión de pruebas, Markdown/Mermaid, plantillas de rúbricas, Git.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Escenarios positivos, negativos, ambiguos, críticos, borde, criterios flexibles, aceptación basada en riesgo, rúbricas, utilidad, consistencia, corrección, seguridad, completitud, trazabilidad.
+
+Contenidos principales:
+
+Diseño de escenarios funcionales con IA.
+
+Criterios flexibles y aceptación basada en riesgo.
+
+Rúbricas de evaluación: utilidad, consistencia, corrección, seguridad, completitud.
+
+Cobertura por intención, usuario, contexto, idioma, dato y riesgo.
+
+Trazabilidad para pruebas de IA: requerimientos, riesgos, escenarios, datos, prompts, resultados, hallazgos.
+
+Microcurso 4: Calidad de Datos para Pruebas de IA
+Ingrese el nombre del curso:
+Calidad de Datos para Pruebas de IA
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite evaluar datos de prueba considerando completitud, consistencia, representatividad, cobertura, actualidad y pertinencia para sistemas inteligentes. Se abordan los datos como base del comportamiento inteligente; calidad de datos (completitud, consistencia, validez y actualidad); datos sintéticos y datos reales controlados; segmentación de datos de prueba; y riesgos por datos insuficientes o sesgados. El estudiante explica la relación entre datos, comportamiento del sistema y calidad de salida, evalúa datos de prueba según criterios de calidad, pertinencia y cobertura, diferencia datos sintéticos y reales controlados, diseña muestras representativas y documenta limitaciones por datos incompletos, insuficientes o sesgados. El curso se alinea con SFIA 8 en Modelado y diseño de datos (DTAN) nivel 3, con apoyo en Pruebas (TEST) y Aseguramiento de la calidad (QUAS). Como resultado, puede preparar y evaluar datos confiables para pruebas de IA.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Diseño de Escenarios, Criterios y Rúbricas para Sistemas Inteligentes.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pandas, Jupyter, generadores de datos sintéticos, herramientas de perfilado de datos, Git.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Datos, comportamiento inteligente, calidad de datos, completitud, consistencia, validez, actualidad, datos sintéticos, datos reales controlados, segmentación, muestras representativas, sesgo.
+
+Contenidos principales:
+
+Datos como base del comportamiento inteligente.
+
+Calidad de datos: completitud, consistencia, validez, actualidad.
+
+Datos sintéticos y datos reales controlados.
+
+Segmentación de datos de prueba: muestras representativas.
+
+Riesgos por datos insuficientes o sesgados: incompletos, insuficientes, sesgados.
+
+Microcurso 5: Sesgo, Equidad y Representatividad en Sistemas Inteligentes
+Ingrese el nombre del curso:
+Sesgo, Equidad y Representatividad en Sistemas Inteligentes
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite diseñar y ejecutar pruebas orientadas a identificar sesgos, trato diferenciado, exclusiones y riesgos de representatividad. Se abordan el concepto de sesgo en sistemas inteligentes; representatividad de datos, perfiles y contextos; equidad y trato diferenciado; casos de prueba comparativos; y documentación cuidadosa de hallazgos. El estudiante identifica fuentes de sesgo en datos, modelos, prompts, criterios o interpretación humana, diseña escenarios comparativos, evalúa representatividad de perfiles, contextos y variaciones relevantes, y documenta hallazgos de sesgo de forma responsable, contextualizada y basada en evidencia. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Modelado y diseño de datos (DTAN) y Aseguramiento de la calidad (QUAS). Como resultado, puede detectar riesgos de exclusión y equidad en sistemas inteligentes.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Calidad de Datos para Pruebas de IA.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pandas, Jupyter, herramientas de análisis de sesgo, datasets de prueba, Git.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Sesgo, fuentes de sesgo, representatividad, equidad, trato diferenciado, exclusiones, escenarios comparativos, variaciones relevantes, documentación responsable, evidencia.
+
+Contenidos principales:
+
+Concepto de sesgo en sistemas inteligentes: datos, modelos, prompts, criterios, interpretación humana.
+
+Representatividad de datos, perfiles y contextos.
+
+Equidad y trato diferenciado: equidad, exclusiones.
+
+Casos de prueba comparativos: escenarios comparativos, variaciones relevantes.
+
+Documentación cuidadosa de hallazgos: documentación responsable, contextualización, evidencia.
+
+Microcurso 6: Pruebas de Sistemas Predictivos, Clasificación y Recomendación
+Ingrese el nombre del curso:
+Pruebas de Sistemas Predictivos, Clasificación y Recomendación
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite evaluar funcionalidades basadas en predicción, clasificación o recomendación mediante escenarios, umbrales, resultados esperados flexibles y análisis de errores. Se abordan sistemas predictivos, clasificadores y recomendadores; umbrales, categorías y criterios de decisión; casos positivos, negativos, borde y críticos; análisis de errores e impacto funcional; y evidencia y comunicación de fallos en sistemas inteligentes no generativos. El estudiante diseña escenarios de prueba, evalúa salidas mediante umbrales, categorías, patrones esperados y criterios flexibles, analiza errores de clasificación, predicción o recomendación, y documenta riesgos funcionales y de negocio asociados con resultados incorrectos. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Machine learning (MLNG) y Gestión y definición de requisitos (REQM). Como resultado, puede validar sistemas inteligentes no generativos con criterios flexibles y análisis de errores.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Sesgo, Equidad y Representatividad en Sistemas Inteligentes.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, scikit-learn, pytest, Jupyter, APIs, herramientas de análisis de errores, Git.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Sistemas predictivos, clasificadores, recomendadores, umbrales, categorías, criterios de decisión, casos positivos, negativos, borde, críticos, errores, impacto funcional, evidencia.
+
+Contenidos principales:
+
+Sistemas predictivos, clasificadores y recomendadores.
+
+Umbrales, categorías y criterios de decisión.
+
+Casos positivos, negativos, borde y críticos.
+
+Análisis de errores e impacto funcional: clasificación, predicción, recomendación.
+
+Evidencia y comunicación de fallos en sistemas inteligentes no generativos.
+
+Microcurso 7: Robustez, Seguridad Básica y Entradas Adversariales Introductorias
+Ingrese el nombre del curso:
+Robustez, Seguridad Básica y Entradas Adversariales Introductorias
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite aplicar pruebas de robustez y seguridad básica mediante entradas ambiguas, incompletas, contradictorias, inesperadas o adversariales introductorias. Se abordan robustez funcional en sistemas inteligentes; entradas ambiguas, incompletas y contradictorias; entradas adversariales introductorias; degradación de calidad y comportamiento inesperado; y privacidad, exposición de información y uso indebido. El estudiante diseña entradas ambiguas, incompletas, contradictorias o inesperadas, evalúa el comportamiento ante variaciones controladas, identifica señales de fragilidad, degradación o comportamiento inseguro, y documenta hallazgos de robustez y seguridad básica dentro del alcance del tester. El curso se alinea con SFIA 8 en Seguridad de la información (SCTY) nivel 3, con apoyo en Pruebas (TEST) y Aseguramiento de la calidad (QUAS). Como resultado, puede detectar riesgos básicos de seguridad y uso indebido en sistemas inteligentes.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Pruebas de Sistemas Predictivos, Clasificación y Recomendación.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, APIs de LLM, herramientas de fuzzing/adversariales, Postman, Jupyter, Git.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Robustez, entradas ambiguas, incompletas, contradictorias, inesperadas, adversariales, fragilidad, degradación, comportamiento inseguro, privacidad, exposición, uso indebido.
+
+Contenidos principales:
+
+Robustez funcional en sistemas inteligentes.
+
+Entradas ambiguas, incompletas y contradictorias.
+
+Entradas adversariales introductorias: variaciones controladas.
+
+Degradación de calidad y comportamiento inesperado: fragilidad, degradación, comportamiento inseguro.
+
+Privacidad, exposición de información y uso indebido.
+
+Microcurso 8: Pruebas de IA Generativa y Evaluación de Respuestas
+Ingrese el nombre del curso:
+Pruebas de IA Generativa y Evaluación de Respuestas
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite evaluar respuestas generativas mediante prompts, rúbricas, utilidad, consistencia, completitud, tono, seguridad básica y alucinaciones. Se abordan la naturaleza de los sistemas generativos; el prompt como dato de prueba; evaluación de utilidad, corrección, completitud y tono; alucinaciones y errores plausibles; y rúbricas de evaluación generativa. El estudiante diseña prompts como insumos de prueba, evalúa respuestas generativas mediante rúbricas estructuradas, identifica alucinaciones, errores plausibles, contradicciones y respuestas incompletas, y documenta consistencia, utilidad, seguridad y adecuación de salida. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Aseguramiento de la calidad (QUAS) y Métodos y herramientas (METL). Como resultado, puede validar salidas generativas con criterios observables y evidencia.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Robustez, Seguridad Básica y Entradas Adversariales Introductorias.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, APIs de LLM, promptfoo/DeepEval/RAGAS, Jupyter, Git, Markdown.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+IA generativa, respuestas generativas, prompts, rúbricas, utilidad, corrección, completitud, tono, alucinaciones, errores plausibles, contradicciones, seguridad, adecuación.
+
+Contenidos principales:
+
+Naturaleza de los sistemas generativos.
+
+Prompt como dato de prueba.
+
+Evaluación de utilidad, corrección, completitud y tono.
+
+Alucinaciones y errores plausibles: contradicciones, respuestas incompletas.
+
+Rúbricas de evaluación generativa: consistencia, seguridad, adecuación de salida.
+
+Microcurso 9: Evaluación Conversacional, Contexto y Comportamiento No Deseado
+Ingrese el nombre del curso:
+Evaluación Conversacional, Contexto y Comportamiento No Deseado
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite evaluar continuidad conversacional, pérdida de contexto, contradicciones, desviación de instrucciones, respuestas inseguras y escalamiento de riesgos. Se abordan pruebas conversacionales; pérdida de contexto y contradicciones; desviación de instrucciones y comportamiento no deseado; riesgos acumulados en conversaciones; y evidencia y trazabilidad conversacional. El estudiante diseña conversaciones de prueba con múltiples turnos, evalúa continuidad, memoria contextual, coherencia y contradicciones, identifica desviaciones de instrucciones, comportamientos no deseados y riesgos de escalamiento, y documenta evidencia conversacional con trazabilidad de entradas, salidas y criterios. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Aseguramiento de la calidad (QUAS) y Gestión de incidentes (USUP). Como resultado, puede validar interacciones conversacionales y detectar riesgos acumulados.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Pruebas de IA Generativa y Evaluación de Respuestas.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, APIs de LLM, herramientas de prueba conversacional, Jupyter, Git, Markdown.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Pruebas conversacionales, múltiples turnos, continuidad, pérdida de contexto, memoria contextual, coherencia, contradicciones, desviación de instrucciones, comportamiento no deseado, riesgos acumulados, evidencia, trazabilidad.
+
+Contenidos principales:
+
+Pruebas conversacionales: conversaciones de prueba, múltiples turnos, continuidad.
+
+Pérdida de contexto y contradicciones: memoria contextual, coherencia.
+
+Desviación de instrucciones y comportamiento no deseado: respuestas inseguras.
+
+Riesgos acumulados en conversaciones: escalamiento de riesgos.
+
+Evidencia y trazabilidad conversacional: entradas, salidas, criterios.
+
+Microcurso 10: IA como Apoyo Responsable al Proceso de Pruebas
+Ingrese el nombre del curso:
+IA como Apoyo Responsable al Proceso de Pruebas
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite utilizar IA de forma crítica y responsable para apoyar análisis, diseño de casos, datos de prueba, defectos, documentación y revisión de pruebas. Se abordan IA para análisis de requerimientos; IA para generación de escenarios, casos y datos; IA para documentación y defectos; IA para revisión de pruebas y automatización; riesgos del uso de IA en QA; y revisión humana y trazabilidad de cambios. El estudiante usa IA para apoyar análisis de requerimientos, detección de ambigüedades y generación de escenarios, casos y datos, revisa y depura críticamente artefactos generados por IA, documenta intervención humana, cambios y decisiones, y evita dependencia excesiva, fuga de datos y aceptación acrítica. El curso se alinea con SFIA 8 en Métodos y herramientas (METL) nivel 3, con apoyo en Pruebas (TEST) y Programación/Desarrollo de software (PROG). Como resultado, puede aumentar la productividad en QA sin perder juicio profesional ni trazabilidad.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Evaluación Conversacional, Contexto y Comportamiento No Deseado.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: asistentes de IA, Python, pytest, herramientas de gestión de pruebas, Git, Markdown.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+IA en QA, análisis de requerimientos, ambigüedades, generación de escenarios, casos, datos, documentación, defectos, revisión de pruebas, automatización asistida, dependencia excesiva, fuga de datos, aceptación acrítica, revisión humana, trazabilidad.
+
+Contenidos principales:
+
+IA para análisis de requerimientos: detección de ambigüedades.
+
+IA para generación de escenarios, casos y datos.
+
+IA para documentación y defectos.
+
+IA para revisión de pruebas y automatización.
+
+Riesgos del uso de IA en QA: dependencia excesiva, fuga de datos, aceptación acrítica.
+
+Revisión humana y trazabilidad de cambios: intervención humana, decisiones.
+
+Microcurso 11: Evidencia, Métricas, Regresión y Comunicación de Riesgos de IA
+Ingrese el nombre del curso:
+Evidencia, Métricas, Regresión y Comunicación de Riesgos de IA
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite documentar evidencias, métricas básicas, variabilidad, regresión de comportamiento, trazabilidad, limitaciones y recomendaciones de calidad para sistemas con IA. Se abordan evidencia en pruebas de IA; registro de variabilidad y múltiples ejecuciones; métricas básicas de evaluación; regresión de comportamiento; riesgos residuales y recomendaciones; y comunicación técnica y ejecutiva. El estudiante construye evidencia completa registrando variabilidad y múltiples ejecuciones, aplica métricas básicas y analiza regresión de comportamiento ante cambios de datos, prompts, configuración o modelo, y comunica riesgos residuales, limitaciones y recomendaciones de calidad a audiencias técnicas y ejecutivas. El curso se alinea con SFIA 8 en Medición (MEAS) nivel 3, con apoyo en Pruebas (TEST), Aseguramiento de la calidad (QUAS) y Gestión de incidentes (USUP). Como resultado, puede reportar y comunicar la calidad de sistemas con IA con base en evidencia.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: IA como Apoyo Responsable al Proceso de Pruebas.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pandas, herramientas de métricas, dashboards, Jupyter, Markdown, Git.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Evidencia, variabilidad, múltiples ejecuciones, métricas de evaluación, regresión de comportamiento, cambios de datos, prompts, configuración, modelo, riesgos residuales, limitaciones, recomendaciones, comunicación técnica, ejecutiva.
+
+Contenidos principales:
+
+Evidencia en pruebas de IA.
+
+Registro de variabilidad y múltiples ejecuciones.
+
+Métricas básicas de evaluación.
+
+Regresión de comportamiento: cambios de datos, prompts, configuración, modelo.
+
+Riesgos residuales y recomendaciones: limitaciones, recomendaciones de calidad.
+
+Comunicación técnica y ejecutiva.
+
+Microcurso 12: Proyecto Integrador de Pruebas de Software con IA y Sistemas Inteligentes
+Ingrese el nombre del curso:
+Proyecto Integrador de Pruebas de Software con IA y Sistemas Inteligentes
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite validar un sistema o funcionalidad con IA en un caso empresarial simulado, integrando estrategia, escenarios, datos, sesgos, robustez, evaluación generativa, evidencias y reporte final. Los componentes incluyen caso empresarial simulado, caracterización del sistema, estrategia de pruebas, rúbricas de evaluación, evaluación de datos, pruebas de robustez, pruebas generativas o inteligentes, uso asistido de IA en QA, trazabilidad y métricas, reporte final y defensa profesional. El estudiante define la estrategia y caracteriza el sistema con IA, ejecuta pruebas sobre funcionalidades inteligentes, predictivas o generativas, documenta evidencias, hallazgos, métricas, limitaciones y riesgos residuales, y presenta recomendaciones de calidad defendiendo técnicamente el proceso. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Aseguramiento de la calidad (QUAS), Medición (MEAS) y Métodos y herramientas (METL). Como resultado, consolida las competencias del Path en un proyecto integrador de pruebas de IA.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso anterior: Evidencia, Métricas, Regresión y Comunicación de Riesgos de IA.
+
+Software requerido:
+Python, pytest, APIs de LLM, promptfoo/DeepEval/RAGAS, pandas, Jupyter, herramientas de gestión de pruebas, Git, Markdown/Mermaid.
+
+Roles que podrá desempeñar:
+QA Tester especializado en IA Junior; AI Software Tester Junior; QA Analyst para Sistemas Inteligentes; GenAI Testing Analyst Junior; Tester de Sistemas con IA; AI Quality Analyst Junior; Prompt Evaluation Tester; Data Quality Testing Assistant; Responsible AI Testing Assistant.
+
+Palabras clave:
+Proyecto integrador, caso empresarial simulado, sistema con IA, estrategia de pruebas, rúbricas, evaluación de datos, robustez, pruebas generativas, uso asistido de IA, trazabilidad, métricas, reporte final, defensa profesional.
+
+Contenidos principales:
+
+Caso empresarial simulado: producto o funcionalidad con IA, propósito de negocio, usuarios, riesgos.
+
+Caracterización del sistema: tipo de IA, entradas, salidas, comportamiento esperado, límites.
+
+Estrategia de pruebas: alcance, riesgos, criterios, escenarios, datos, prompts, restricciones.
+
+Rúbricas de evaluación: utilidad, corrección, consistencia, seguridad, completitud, adecuación.
+
+Evaluación de datos: calidad, cobertura, representatividad, sesgos, limitaciones.
+
+Pruebas de robustez: entradas ambiguas, incompletas, adversariales introductorias, casos borde.
+
+Pruebas generativas o inteligentes: evaluación de salidas, variabilidad, alucinaciones, errores o recomendaciones.
+
+Uso asistido de IA en QA: evidencia de apoyo de IA, revisión humana, ajustes realizados.
+
+Trazabilidad y métricas: relación entre requerimientos, riesgos, escenarios, resultados y hallazgos.
+
+Reporte final: riesgos residuales, recomendaciones, limitaciones, conclusiones.
+
+Defensa profesional: presentación de decisiones, evidencias, hallazgos, mejoras propuestas.
+

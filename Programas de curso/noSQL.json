@@ -1,0 +1,952 @@
+{
+  "microciclos": [
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "1",
+      "nombre": "Fundamentos de bases de datos NoSQL",
+      "competencia_nombre": "Fundamentos de bases de datos NoSQL",
+      "habilidad_sfia": {
+        "nombre": "Diseño de datos (DTAN)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Comprender el papel de los modelos NoSQL y sus diferencias con el modelo relacional, identificando casos de uso y criterios iniciales de selección.",
+      "capacidades_especificas": [
+        "Reconoce las limitaciones del modelo relacional y el surgimiento de las bases NoSQL para responder a necesidades de flexibilidad, volumen y escalabilidad.",
+        "Identifica las características generales de los modelos NoSQL (documental, key-value, column-family y grafos) y sus casos de uso típicos.",
+        "Distingue criterios iniciales de selección NoSQL según tipo de dato, patrón de acceso, consistencia y escalabilidad requerida."
+      ],
+      "descripcion": "Los fundamentos de las bases de datos NoSQL constituyen la base para comprender los modelos de persistencia no relacional y su aplicación en aplicaciones modernas. Las principales temáticas por abordar son modelo documental, modelo key-value, modelo column-family y grafos, y criterios de selección según tipo de dato, patrón de consulta, escalabilidad, consistencia, costo y mantenibilidad.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Diseño de datos (DTAN). En este nivel, los estudiantes establecen, modifican o mantienen estructuras de datos sencillas y los componentes asociados, y utilizan técnicas específicas de modelado y diseño de datos bajo orientación. Adicionalmente, se abordan de manera complementaria las áreas de Desarrollo de software (PROG) en nivel 2, reconociendo estructuras de datos en programas simples, y Métodos y herramientas (METL) en nivel 3, nivel inicial de esta habilidad, utilizando herramientas NoSQL bajo orientación.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Lógica de programación, funciones, manejo de archivos JSON, consumo de APIs, conexión con bases de datos, uso de Git.",
+        "Alfabetización digital básica.",
+        "No requiere experiencia previa en bases de datos NoSQL.",
+        "Se recomiendan nociones generales de bases de datos relacionales."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior (en formación inicial).",
+        "Soporte técnico de plataformas de datos modernas.",
+        "Data Platform Assistant.",
+        "Asistente junior de bases de datos modernas.",
+        "Perfiles iniciales interesados en datos semiestructurados y aplicaciones modernas."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Evolución de las bases de datos",
+          "subtemas": [
+            "Limitaciones del modelo relacional en ciertos escenarios",
+            "Surgimiento de NoSQL",
+            "Datos modernos",
+            "Aplicaciones distribuidas"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Fundamentos NoSQL",
+          "subtemas": [
+            "Concepto de NoSQL",
+            "Flexibilidad de esquema",
+            "Datos estructurados",
+            "Datos semiestructurados",
+            "Datos no estructurados"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "SQL vs. NoSQL",
+          "subtemas": [
+            "Diferencias de modelado",
+            "Diferencias de consulta",
+            "Consistencia",
+            "Escalabilidad",
+            "Casos de uso"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Casos de uso NoSQL",
+          "subtemas": [
+            "Catálogos",
+            "Perfiles",
+            "Sesiones",
+            "Logs",
+            "Eventos",
+            "Contenido",
+            "IoT",
+            "Aplicaciones web y móviles"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "2",
+      "nombre": "Modelos de datos NoSQL y selección tecnológica",
+      "competencia_nombre": "Selección de modelos de persistencia NoSQL",
+      "habilidad_sfia": {
+        "nombre": "Diseño de datos (DTAN)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Seleccionar modelos de persistencia NoSQL según tipo de dato, patrón de acceso, escalabilidad, consistencia, costo y mantenibilidad.",
+      "capacidades_especificas": [
+        "Compara los modelos documental, key-value, column-family y grafos según estructura de datos, consultas y contexto de aplicación.",
+        "Analiza casos empresariales o técnicos para determinar el modelo de persistencia más adecuado según requerimientos.",
+        "Elabora una matriz de selección tecnológica que justifique la elección del modelo NoSQL a partir de criterios técnicos y organizacionales."
+      ],
+      "descripcion": "La selección de modelos de datos NoSQL permite elegir la tecnología de persistencia más adecuada según las necesidades de la solución. Las principales temáticas por abordar son modelos documental, key-value, column-family y grafos, criterios de selección, y análisis de trade-offs entre consistencia, escalabilidad y costo.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Diseño de datos (DTAN). En este nivel, los estudiantes elicitan requisitos de datos, producen modelos de datos lógicos y contribuyen a la selección de componentes y técnicas de diseño. Adicionalmente, se abordan de manera complementaria las áreas de Integración de sistemas (SINT) en nivel 3, evaluando la integración del modelo con la solución, y Métodos y herramientas (METL) en nivel 3, configurando y documentando herramientas NoSQL.\n\nComo parte de las actividades, elaboran una matriz de selección tecnológica, analizan escenarios comparativos y justifican la elección de un modelo NoSQL para distintos casos empresariales o técnicos.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado el curso: Fundamentos de bases de datos NoSQL.",
+        "Comprensión de las diferencias entre SQL y NoSQL, casos de uso y evolución de las bases de datos.",
+        "Capacidad para analizar escenarios y justificar el uso de una solución NoSQL."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior.",
+        "Backend Developer con énfasis en NoSQL.",
+        "Data Platform Assistant.",
+        "Analista junior de selección tecnológica de datos.",
+        "Soporte técnico de plataformas de datos modernas."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Modelo documental",
+          "subtemas": [
+            "Documentos",
+            "Colecciones",
+            "JSON",
+            "Estructuras anidadas",
+            "Casos de uso"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Modelo key-value",
+          "subtemas": [
+            "Clave",
+            "Valor",
+            "Acceso directo",
+            "Caché",
+            "Sesiones",
+            "Datos temporales"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Modelo column-family y grafos",
+          "subtemas": [
+            "Wide-column",
+            "Relaciones altamente conectadas",
+            "Usos introductorios"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Criterios de selección",
+          "subtemas": [
+            "Tipo de dato",
+            "Patrón de consulta",
+            "Escalabilidad",
+            "Consistencia",
+            "Costo",
+            "Mantenibilidad"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "3",
+      "nombre": "Modelado documental y datos JSON",
+      "competencia_nombre": "Modelado documental y datos JSON",
+      "habilidad_sfia": {
+        "nombre": "Diseño de datos (DTAN)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar modelos documentales utilizando estructuras JSON, colecciones, documentos embebidos y referencias, de acuerdo con patrones de consulta y actualización.",
+      "capacidades_especificas": [
+        "Diseña estructuras JSON con objetos, arreglos y campos anidados para representar datos semiestructurados de una aplicación moderna.",
+        "Aplica criterios de embebido o referencia según patrones de consulta, actualización y mantenibilidad del modelo.",
+        "Construye modelos documentales orientados a consultas, justificando decisiones de diseño y convenciones de colecciones."
+      ],
+      "descripcion": "El modelado documental y el uso de datos JSON permiten diseñar estructuras flexibles para aplicaciones modernas, considerando patrones de acceso, consultas esperadas y mantenibilidad. Las principales temáticas por abordar son estructuras JSON, colecciones y documentos, embebido versus referencia, y diseño orientado a consultas.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Diseño de datos (DTAN). En este nivel, los estudiantes elicitan requisitos de datos, producen modelos de datos lógicos, documentan decisiones de diseño y colaboran en la selección de técnicas de modelado. Adicionalmente, se abordan de manera complementaria las áreas de Desarrollo de software (PROG) en nivel 2, construyendo ejemplos de documentos y estructuras, y Métodos y herramientas (METL) en nivel 3, utilizando herramientas de modelado y documentación.\n\nComo parte de las actividades, diseñan un modelo documental para un caso de aplicación moderna, incluyen ejemplos de documentos y justifican decisiones de embebido o referencia.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica.",
+        "Conocimiento de modelos documentales, key-value, column-family y grafos.",
+        "Manejo básico de estructuras JSON: objetos, arreglos, campos y documentos anidados.",
+        "Capacidad para diseñar estructuras orientadas a patrones de consulta."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior.",
+        "Backend Developer con énfasis en NoSQL.",
+        "Junior Data Engineer.",
+        "Modelador junior de datos documentales.",
+        "Implementador junior de soluciones de persistencia moderna."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Estructuras JSON",
+          "subtemas": [
+            "Objetos",
+            "Arreglos",
+            "Campos",
+            "Tipos de datos",
+            "Documentos anidados"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Colecciones y documentos",
+          "subtemas": [
+            "Organización de documentos",
+            "Estructura de colecciones",
+            "Convenciones de diseño"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Embebido vs. referencia",
+          "subtemas": [
+            "Criterios de duplicación controlada",
+            "Relaciones entre documentos",
+            "Ventajas y riesgos"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Diseño orientado a consultas",
+          "subtemas": [
+            "Patrones de acceso",
+            "Consultas esperadas",
+            "Actualización de datos",
+            "Mantenibilidad"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "4",
+      "nombre": "Operaciones documentales y CRUD",
+      "competencia_nombre": "Operaciones CRUD documentales",
+      "habilidad_sfia": {
+        "nombre": "Desarrollo de software (PROG)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Implementar operaciones de creación, consulta, actualización y eliminación de documentos en una base documental.",
+      "capacidades_especificas": [
+        "Implementa operaciones de creación de bases, colecciones y documentos aplicando validaciones básicas.",
+        "Ejecuta consultas, actualizaciones y eliminaciones documentales utilizando filtros, proyecciones y operadores de comparación.",
+        "Valida resultados de operaciones CRUD mediante conteos y control de errores comunes en una base documental."
+      ],
+      "descripcion": "Las operaciones documentales y CRUD permiten manipular datos en bases NoSQL documentales, aplicando consultas, actualizaciones y eliminaciones controladas. Las principales temáticas por abordar son creación de bases, colecciones y documentos, consultas documentales, actualización de documentos, y eliminación y control de resultados.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts simples; aplican estándares y herramientas acordados; y revisan su propio trabajo. Adicionalmente, se abordan de manera complementaria las áreas de Diseño de datos (DTAN) en nivel 3, comprendiendo las estructuras manipuladas, y Métodos y herramientas (METL) en nivel 3, configurando y documentando la herramienta documental utilizada.\n\nComo parte de las actividades, implementan una base documental funcional con operaciones CRUD completas, validan resultados y documentan errores comunes.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON.",
+        "Comprensión de colecciones, documentos, embebido vs. referencia y diseño orientado a consultas.",
+        "Conocimiento básico de estructuras JSON y operaciones sobre documentos."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior.",
+        "Backend Developer con énfasis en NoSQL.",
+        "Implementador junior de persistencia moderna.",
+        "Soporte técnico de plataformas de datos modernas.",
+        "Data Platform Assistant."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Creación de bases, colecciones y documentos",
+          "subtemas": [
+            "Inicialización",
+            "Inserción individual",
+            "Inserción múltiple",
+            "Validaciones básicas"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Consultas documentales",
+          "subtemas": [
+            "Filtros simples",
+            "Campos anidados",
+            "Operadores de comparación",
+            "Proyecciones"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Actualización de documentos",
+          "subtemas": [
+            "Actualizaciones parciales",
+            "Reemplazo de documentos",
+            "Operaciones sobre arreglos"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Eliminación y control de resultados",
+          "subtemas": [
+            "Eliminación simple y múltiple",
+            "Conteos",
+            "Validación de operaciones",
+            "Errores comunes"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "5",
+      "nombre": "Consultas avanzadas, agregaciones e índices documentales",
+      "competencia_nombre": "Consultas avanzadas, agregaciones e índices NoSQL",
+      "habilidad_sfia": {
+        "nombre": "Desarrollo de software (PROG)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Construir consultas documentales avanzadas, agregaciones e índices básicos para recuperar y analizar datos semiestructurados de forma eficiente.",
+      "capacidades_especificas": [
+        "Construye consultas documentales avanzadas con condiciones múltiples, operadores lógicos y acceso a campos anidados y arreglos.",
+        "Aplica pipelines de agregación para generar agrupamientos, cálculos, filtros y reportes operativos.",
+        "Implementa índices simples y compuestos, evaluando su impacto en el rendimiento de las consultas documentales."
+      ],
+      "descripcion": "Las consultas avanzadas, agregaciones e índices documentales permiten recuperar y analizar datos semiestructurados de forma eficiente. Las principales temáticas por abordar son consultas avanzadas, agregaciones, índices documentales, y consultas para reportes operativos.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts de complejidad moderada; aplican estándares y herramientas acordados; monitorean e informan sobre el progreso; identifican problemas y proponen soluciones prácticas; y colaboran en revisiones de trabajo con otros. Adicionalmente, se abordan de manera complementaria las áreas de Diseño de datos (DTAN) en nivel 3, ajustando el modelo a los patrones de consulta, y Métodos y herramientas (METL) en nivel 3, configurando y documentando la herramienta de consulta e indexación.\n\nComo parte de las actividades, elaboran un conjunto de consultas avanzadas y agregaciones documentadas sobre una base documental con índices básicos, validando su rendimiento inicial.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD.",
+        "Manejo de consultas documentales, filtros simples, campos anidados y proyecciones.",
+        "Capacidad para construir consultas avanzadas, agregaciones y aplicar índices básicos."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior.",
+        "Junior Data Engineer.",
+        "Analista junior de datos NoSQL.",
+        "Backend Developer con énfasis en NoSQL.",
+        "Soporte a reportes operativos y consultas sobre datos semiestructurados."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Consultas avanzadas",
+          "subtemas": [
+            "Condiciones múltiples",
+            "Operadores lógicos",
+            "Consultas sobre arreglos",
+            "Campos anidados"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Agregaciones",
+          "subtemas": [
+            "Agrupamientos",
+            "Filtros en pipelines",
+            "Proyecciones",
+            "Cálculos",
+            "Ordenamientos"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Índices documentales",
+          "subtemas": [
+            "Concepto de índice",
+            "Índices simples",
+            "Índices compuestos",
+            "Impacto en consultas"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Consultas para reportes operativos",
+          "subtemas": [
+            "Resúmenes",
+            "Métricas",
+            "Segmentaciones",
+            "Consultas para consumo por aplicaciones"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "6",
+      "nombre": "Bases key-value y patrones de acceso rápido",
+      "competencia_nombre": "Bases key-value y patrones de acceso rápido",
+      "habilidad_sfia": {
+        "nombre": "Diseño de datos (DTAN)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Aplicar modelos key-value para resolver necesidades de acceso rápido, almacenamiento temporal, caché, sesiones y estructuras simples de baja latencia.",
+      "capacidades_especificas": [
+        "Reconoce el funcionamiento del modelo key-value y sus operaciones básicas de lectura y escritura directa.",
+        "Aplica estructuras key-value como TTL, listas, conjuntos, mapas y contadores para resolver necesidades de acceso rápido.",
+        "Implementa patrones básicos de caching (cache-aside, invalidación) en casos de sesiones, tokens o datos temporales."
+      ],
+      "descripcion": "Las bases key-value y los patrones de acceso rápido permiten resolver necesidades de caché, sesiones, tokens y datos temporales con baja latencia. Las principales temáticas por abordar son fundamentos key-value, casos de uso, expiración y estructuras simples, y patrones básicos de caching.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Diseño de datos (DTAN). En este nivel, los estudiantes elicitan requisitos de datos, producen modelos de datos lógicos y contribuyen a la selección de estructuras y patrones de acceso. Adicionalmente, se abordan de manera complementaria las áreas de Desarrollo de software (PROG) en nivel 3, implementando operaciones sobre la base key-value, y Métodos y herramientas (METL) en nivel 3, configurando y documentando la herramienta key-value utilizada.\n\nComo parte de las actividades, implementan un caso key-value para caché, sesiones o almacenamiento temporal, integrado a una aplicación o script, y reflexionan sobre los límites del modelo.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD; Consultas avanzadas, agregaciones e índices documentales.",
+        "Comprensión de modelos key-value, caché, sesiones y datos temporales.",
+        "Conocimiento de TTL, listas, conjuntos, mapas y contadores."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior.",
+        "Backend Developer con énfasis en NoSQL.",
+        "Soporte de caché, sesiones y almacenamiento temporal.",
+        "Data Platform Assistant.",
+        "Implementador junior de soluciones de acceso rápido."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Fundamentos key-value",
+          "subtemas": [
+            "Clave",
+            "Valor",
+            "Operaciones básicas",
+            "Lectura y escritura directa"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Casos de uso",
+          "subtemas": [
+            "Caché",
+            "Sesiones",
+            "Tokens",
+            "Preferencias",
+            "Contadores",
+            "Datos temporales"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Expiración y estructuras simples",
+          "subtemas": [
+            "TTL",
+            "Listas",
+            "Conjuntos",
+            "Mapas",
+            "Contadores",
+            "Almacenamiento temporal"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Patrones básicos de caching",
+          "subtemas": [
+            "Cache-aside",
+            "Invalidación",
+            "Actualización",
+            "Riesgos de datos obsoletos"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "7",
+      "nombre": "Fundamentos de datos distribuidos",
+      "competencia_nombre": "Fundamentos de datos distribuidos",
+      "habilidad_sfia": {
+        "nombre": "Integración de sistemas (SINT)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Comprender los principios básicos de distribución de datos, replicación, particionamiento, disponibilidad, tolerancia a fallos y escalabilidad horizontal.",
+      "capacidades_especificas": [
+        "Reconoce los principios de escalabilidad vertical y horizontal, replicación, particionamiento y disponibilidad en sistemas distribuidos.",
+        "Analiza escenarios distribuidos considerando tolerancia a fallos, latencia y continuidad del servicio.",
+        "Diseña una estrategia conceptual de distribución para una solución NoSQL, justificando decisiones de replicación y particionamiento."
+      ],
+      "descripcion": "Los fundamentos de datos distribuidos permiten comprender cómo se distribuyen, replican y particionan los datos en soluciones NoSQL, considerando disponibilidad, tolerancia a fallos y escalabilidad horizontal. Las principales temáticas por abordar son escalabilidad, replicación, particionamiento, y disponibilidad y tolerancia a fallos.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Diseño de datos (DTAN) en nivel 3, considerando estrategias de distribución, y Métodos y herramientas (METL) en nivel 3, documentando las herramientas de distribución evaluadas.\n\nComo parte de las actividades, diseñan conceptualmente una estrategia de distribución para una solución NoSQL, considerando replicación, particionamiento y disponibilidad, y analizan trade-offs.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD; Consultas avanzadas, agregaciones e índices documentales; Bases key-value y patrones de acceso rápido.",
+        "Comprensión de escalabilidad vertical y horizontal, replicación, particionamiento y disponibilidad.",
+        "Capacidad para diseñar conceptualmente una estrategia de distribución."
+      ],
+      "relacion_empleabilidad": [
+        "Junior Data Engineer.",
+        "Data Platform Assistant.",
+        "Cloud Data Technician orientado a datos.",
+        "Desarrollador NoSQL junior.",
+        "Soporte técnico de plataformas de datos distribuidas."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Escalabilidad",
+          "subtemas": [
+            "Escalabilidad vertical",
+            "Escalabilidad horizontal",
+            "Crecimiento de datos y tráfico"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Replicación",
+          "subtemas": [
+            "Copias de datos",
+            "Disponibilidad",
+            "Tolerancia a fallos",
+            "Lectura desde réplicas"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Particionamiento",
+          "subtemas": [
+            "Sharding",
+            "Distribución de datos",
+            "Claves de partición",
+            "Particiones calientes"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Disponibilidad y tolerancia a fallos",
+          "subtemas": [
+            "Latencia",
+            "Fallos parciales",
+            "Continuidad de servicio",
+            "Degradación controlada"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "8",
+      "nombre": "Consistencia, escalabilidad y rendimiento inicial",
+      "competencia_nombre": "Consistencia, escalabilidad y rendimiento NoSQL",
+      "habilidad_sfia": {
+        "nombre": "Integración de sistemas (SINT)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Aplicar criterios básicos de consistencia, escalabilidad y rendimiento en el diseño de soluciones NoSQL y distribuidas.",
+      "capacidades_especificas": [
+        "Distingue los modelos de consistencia fuerte y eventual, así como las implicaciones del teorema CAP y BASE frente a ACID.",
+        "Aplica criterios de diseño para rendimiento basados en patrones de acceso, lecturas, escrituras y cardinalidad de datos.",
+        "Mejora un modelo NoSQL considerando duplicación controlada, índices, particiones calientes y límites del modelo."
+      ],
+      "descripcion": "La consistencia, la escalabilidad y el rendimiento inicial permiten evaluar y mejorar soluciones NoSQL y distribuidas según patrones de acceso y requerimientos técnicos. Las principales temáticas por abordar son consistencia en sistemas distribuidos, CAP y BASE, diseño para rendimiento, y buenas prácticas iniciales.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Diseño de datos (DTAN) en nivel 3, ajustando el modelo según patrones de acceso, y Métodos y herramientas (METL) en nivel 3, documentando herramientas de análisis y monitoreo.\n\nComo parte de las actividades, analizan y mejoran un modelo NoSQL considerando consistencia, escalabilidad, rendimiento inicial y patrones de acceso, y documentan las decisiones tomadas.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD; Consultas avanzadas, agregaciones e índices documentales; Bases key-value y patrones de acceso rápido; Fundamentos de datos distribuidos.",
+        "Conocimiento de consistencia fuerte y eventual, teorema CAP, BASE y ACID.",
+        "Capacidad para analizar rendimiento inicial, patrones de acceso y buenas prácticas."
+      ],
+      "relacion_empleabilidad": [
+        "Junior Data Engineer.",
+        "Data Platform Assistant.",
+        "Desarrollador NoSQL junior.",
+        "Analista junior de rendimiento y escalabilidad de datos.",
+        "Cloud Data Technician orientado a datos."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Consistencia en sistemas distribuidos",
+          "subtemas": [
+            "Consistencia fuerte",
+            "Consistencia eventual",
+            "Conflictos",
+            "Sincronización"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "CAP y BASE",
+          "subtemas": [
+            "Teorema CAP a nivel conceptual",
+            "BASE frente a ACID",
+            "Implicaciones prácticas"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Diseño para rendimiento",
+          "subtemas": [
+            "Diseño por patrones de acceso",
+            "Lecturas vs. escrituras",
+            "Tamaño de documentos",
+            "Cardinalidad"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Buenas prácticas iniciales",
+          "subtemas": [
+            "Duplicación controlada",
+            "Consultas frecuentes",
+            "Índices",
+            "Particiones calientes",
+            "Límites del modelo"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "9",
+      "nombre": "Integración de NoSQL con aplicaciones y APIs",
+      "competencia_nombre": "Integración de NoSQL con aplicaciones y APIs",
+      "habilidad_sfia": {
+        "nombre": "Integración de sistemas (SINT)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Integrar bases NoSQL con aplicaciones, scripts o APIs, ejecutando operaciones de persistencia, consulta, validación y manejo de datos JSON.",
+      "capacidades_especificas": [
+        "Reconoce los componentes de conexión entre aplicaciones y bases NoSQL: drivers, clientes, cadenas de conexión y credenciales.",
+        "Implementa operaciones CRUD desde código para insertar, consultar, actualizar y eliminar documentos o pares clave-valor.",
+        "Integra una base NoSQL con una API o aplicación simple, manejando datos JSON, validaciones y errores."
+      ],
+      "descripcion": "La integración de bases NoSQL con aplicaciones, scripts o APIs permite conectar la persistencia moderna con la lógica de negocio, manejando datos JSON, validaciones y errores. Las principales temáticas por abordar son conexión desde aplicaciones, CRUD desde código, e integración con APIs.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Desarrollo de software (PROG) en nivel 3, escribiendo código de acceso a datos, Métodos y herramientas (METL) en nivel 3, configurando y documentando las herramientas de integración, y Seguridad de la información (SCTY) en nivel 3, aplicando validaciones y manejo seguro de credenciales.\n\nComo parte de las actividades, desarrollan una aplicación o API simple que integre una base NoSQL y ejecute operaciones CRUD con datos JSON.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD; Consultas avanzadas, agregaciones e índices documentales; Bases key-value y patrones de acceso rápido; Fundamentos de datos distribuidos; Consistencia, escalabilidad y rendimiento inicial.",
+        "Conocimiento de conexión desde aplicaciones, drivers, cadenas de conexión y credenciales.",
+        "Manejo de CRUD desde código, consumo y exposición de datos JSON, endpoints y validación de entradas."
+      ],
+      "relacion_empleabilidad": [
+        "Backend Developer con énfasis en NoSQL.",
+        "Desarrollador NoSQL junior.",
+        "Integrador junior de APIs y datos JSON.",
+        "Junior Data Engineer.",
+        "Implementador junior de soluciones de persistencia moderna."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Conexión desde aplicaciones",
+          "subtemas": [
+            "Drivers",
+            "Clientes",
+            "Cadenas de conexión",
+            "Manejo de credenciales"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "CRUD desde código",
+          "subtemas": [
+            "Inserción",
+            "Consulta",
+            "Actualización",
+            "Eliminación desde una aplicación o script"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Integración con APIs",
+          "subtemas": [
+            "Consumo y exposición de datos JSON",
+            "Endpoints",
+            "Validación de entradas"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Manejo de errores y capa de acceso a datos",
+          "subtemas": [
+            "Errores comunes",
+            "Separación de responsabilidades y patrones básicos de repositorio"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "10",
+      "nombre": "Servicios administrados como entorno de implementación",
+      "competencia_nombre": "Servicios administrados de datos NoSQL",
+      "habilidad_sfia": {
+        "nombre": "Métodos y herramientas (METL)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Utilizar servicios administrados de bases de datos como entorno de implementación para soluciones NoSQL, aplicando configuración inicial, conexión, acceso, monitoreo básico y consideraciones de costo.",
+      "capacidades_especificas": [
+        "Distingue las diferencias entre instalación propia y servicios administrados de datos, identificando ventajas y límites.",
+        "Configura un servicio administrado de base NoSQL aplicando aprovisionamiento, regiones, recursos y parámetros básicos.",
+        "Documenta el despliegue de una solución NoSQL considerando acceso seguro, monitoreo básico y consideraciones de costo."
+      ],
+      "descripcion": "Los servicios administrados de bases de datos permiten implementar soluciones NoSQL en entornos de nube, aplicando configuración inicial, conexión segura, monitoreo básico y consideraciones de costo. Las principales temáticas por abordar son servicios administrados de datos, aprovisionamiento básico, acceso y conexión segura, y monitoreo y costos iniciales.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Métodos y herramientas (METL), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes brindan apoyo en el uso de métodos y herramientas existentes, configuran métodos y herramientas dentro de un contexto conocido, y crean y actualizan la documentación de métodos y herramientas. Adicionalmente, se abordan de manera complementaria las áreas de Integración de sistemas (SINT) en nivel 3, desplegando componentes en el entorno administrado, y Seguridad de la información (SCTY) en nivel 3, aplicando controles básicos de acceso y credenciales.\n\nComo parte de las actividades, despliegan controladamente una solución NoSQL en un servicio administrado o entorno equivalente, documentan la conexión y la configuración básica, y reflexionan sobre costos y límites.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD; Consultas avanzadas, agregaciones e índices documentales; Bases key-value y patrones de acceso rápido; Fundamentos de datos distribuidos; Consistencia, escalabilidad y rendimiento inicial; Integración de NoSQL con aplicaciones y APIs.",
+        "Conocimiento de servicios administrados de datos, aprovisionamiento básico, acceso y conexión segura.",
+        "Capacidad para documentar despliegues y considerar monitoreo básico y costos iniciales."
+      ],
+      "relacion_empleabilidad": [
+        "Cloud Data Technician orientado a datos.",
+        "Data Platform Assistant.",
+        "Implementador junior de soluciones de persistencia moderna.",
+        "Desarrollador NoSQL junior.",
+        "Soporte técnico de plataformas de datos modernas."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Servicios administrados de datos",
+          "subtemas": [
+            "Concepto",
+            "Diferencia entre instalación propia y servicio administrado",
+            "Ventajas y límites"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Aprovisionamiento básico",
+          "subtemas": [
+            "Creación del servicio",
+            "Configuración inicial",
+            "Regiones",
+            "Recursos",
+            "Parámetros básicos"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Acceso y conexión segura",
+          "subtemas": [
+            "Reglas de acceso",
+            "Credenciales",
+            "Cadenas de conexión",
+            "Exposición controlada"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Monitoreo y costos iniciales",
+          "subtemas": [
+            "Métricas básicas",
+            "Uso de recursos",
+            "Alertas iniciales",
+            "Consideraciones de costo"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "11",
+      "nombre": "Seguridad básica, documentación y toma de decisiones",
+      "competencia_nombre": "Seguridad, documentación y decisiones técnicas NoSQL",
+      "habilidad_sfia": {
+        "nombre": "Seguridad de la información (SCTY)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Aplicar controles básicos de seguridad, documentar soluciones NoSQL y justificar decisiones técnicas de diseño, integración y despliegue.",
+      "capacidades_especificas": [
+        "Aplica controles básicos de seguridad NoSQL mediante usuarios, roles, permisos y mínimo privilegio.",
+        "Documenta técnicamente una solución NoSQL incluyendo modelo de datos, colecciones, campos, patrones de consulta y configuración.",
+        "Justifica decisiones técnicas de diseño, integración y despliegue, reconociendo límites, riesgos y criterios de selección."
+      ],
+      "descripcion": "La seguridad básica, la documentación técnica y la justificación de decisiones permiten asegurar y comunicar soluciones NoSQL de forma profesional. Las principales temáticas por abordar son seguridad básica NoSQL, protección de credenciales y datos, documentación técnica, y justificación de decisiones.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Seguridad de la información (SCTY), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes aplican y mantienen controles de seguridad específicos, comunican riesgos y realizan valoraciones básicas de riesgos para sistemas de información de menor complejidad. Adicionalmente, se abordan de manera complementaria las áreas de Métodos y herramientas (METL) en nivel 3, documentando métodos y herramientas utilizadas, y Diseño de datos (DTAN) en nivel 3, justificando decisiones de diseño.\n\nComo parte de las actividades, elaboran un documento técnico completo de una solución NoSQL, incluyendo modelo, configuración, seguridad básica, integración y justificación de decisiones.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD; Consultas avanzadas, agregaciones e índices documentales; Bases key-value y patrones de acceso rápido; Fundamentos de datos distribuidos; Consistencia, escalabilidad y rendimiento inicial; Integración de NoSQL con aplicaciones y APIs; Servicios administrados como entorno de implementación.",
+        "Conocimiento de usuarios, roles, permisos, mínimo privilegio y exposición de servicios.",
+        "Capacidad para documentar modelos, configuraciones, integración y justificar decisiones técnicas."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior.",
+        "Data Platform Assistant.",
+        "Soporte técnico de plataformas de datos modernas.",
+        "Analista junior de seguridad básica de datos NoSQL.",
+        "Documentador técnico de soluciones NoSQL."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Seguridad básica NoSQL",
+          "subtemas": [
+            "Usuarios",
+            "Roles",
+            "Permisos",
+            "Mínimo privilegio",
+            "Exposición de servicios"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Protección de credenciales y datos",
+          "subtemas": [
+            "Manejo seguro de credenciales",
+            "Datos sensibles",
+            "Conexiones seguras",
+            "Riesgos de inyección NoSQL"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Documentación técnica",
+          "subtemas": [
+            "Modelo de datos",
+            "Colecciones",
+            "Campos",
+            "Patrones de consulta",
+            "Configuración e integración"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Justificación de decisiones",
+          "subtemas": [
+            "Selección tecnológica",
+            "Embebido vs. referencia",
+            "Consistencia",
+            "Escalabilidad",
+            "Límites y riesgos"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "",
+      "horas_semanales": "",
+      "horas_lectivas": "",
+      "numero": "12",
+      "nombre": "Proyecto integrador NoSQL y datos distribuidos",
+      "competencia_nombre": "Proyecto integrador NoSQL y datos distribuidos",
+      "habilidad_sfia": {
+        "nombre": "Integración de sistemas (SINT)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Integrar los conocimientos del Path en una solución funcional de persistencia NoSQL y distribuida para un caso empresarial o técnico, justificando decisiones de diseño, integración, seguridad, rendimiento inicial y despliegue.",
+      "capacidades_especificas": [
+        "Diseña una solución NoSQL funcional integrando modelo documental o key-value, decisiones de distribución y criterios de rendimiento inicial.",
+        "Implementa e integra la solución con una aplicación, script o API, aplicando seguridad básica y consultas con índices.",
+        "Documenta y defiende técnicamente el proyecto, justificando decisiones de modelado, integración, despliegue y límites del modelo seleccionado."
+      ],
+      "descripcion": "El Proyecto Integrador NoSQL y Datos Distribuidos permite consolidar las competencias del Path mediante el diseño, implementación, integración, validación, documentación y defensa de una solución funcional de persistencia moderna. Las principales temáticas por abordar son análisis del caso, diseño de la solución, implementación NoSQL, consultas y rendimiento inicial, integración con aplicación o API, entorno de implementación, seguridad básica, y documentación y defensa técnica.\n\nEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Integración de sistemas (SINT). En este nivel, los estudiantes construyen e integran componentes de sistemas de complejidad moderada, aplican estándares y herramientas acordados, y colaboran en la selección de enfoques técnicos. Adicionalmente, se abordan de manera complementaria las áreas de Diseño de datos (DTAN) en nivel 3, Desarrollo de software (PROG) en nivel 3, Métodos y herramientas (METL) en nivel 3 y Seguridad de la información (SCTY) en nivel 3, integrando diseño, programación, herramientas y seguridad.\n\nComo parte de las actividades, desarrollan y defienden una solución NoSQL funcional que incluye análisis del problema, justificación del modelo seleccionado, diseño de datos documentales o key-value, implementación, operaciones CRUD, consultas y agregaciones, índices básicos, integración con aplicación, script o API, configuración básica de seguridad, documentación técnica y presentación final.",
+      "perfil_ingreso_requisitos": [
+        "Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.",
+        "Haber aprobado los cursos: Fundamentos de bases de datos NoSQL; Modelos de datos NoSQL y selección tecnológica; Modelado documental y datos JSON; Operaciones documentales y CRUD; Consultas avanzadas, agregaciones e índices documentales; Bases key-value y patrones de acceso rápido; Fundamentos de datos distribuidos; Consistencia, escalabilidad y rendimiento inicial; Integración de NoSQL con aplicaciones y APIs; Servicios administrados como entorno de implementación; Seguridad básica, documentación y toma de decisiones.",
+        "Competencias en análisis del caso, diseño documental o key-value, implementación NoSQL, consultas y agregaciones, índices básicos, integración con aplicación o API, seguridad básica y documentación técnica.",
+        "Capacidad para defender técnica y funcionalmente una solución NoSQL y distribuida."
+      ],
+      "relacion_empleabilidad": [
+        "Desarrollador NoSQL junior.",
+        "Backend Developer con énfasis en NoSQL.",
+        "Junior Data Engineer.",
+        "Data Platform Assistant.",
+        "Cloud Data Technician orientado a datos.",
+        "Soporte técnico de plataformas de datos modernas.",
+        "Implementador junior de soluciones de persistencia moderna."
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Análisis del caso",
+          "subtemas": [
+            "Requerimientos",
+            "Tipo de datos",
+            "Patrones de acceso",
+            "Restricciones",
+            "Criterios de selección NoSQL"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Diseño de la solución",
+          "subtemas": [
+            "Modelo documental o key-value",
+            "Estructura de datos",
+            "Decisiones de embebido o referencia",
+            "Justificación técnica"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Implementación NoSQL",
+          "subtemas": [
+            "Creación de base",
+            "Colecciones o estructuras key-value",
+            "Carga de datos",
+            "Operaciones CRUD"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Consultas y rendimiento inicial",
+          "subtemas": [
+            "Consultas",
+            "Agregaciones",
+            "Índices básicos",
+            "Validación de patrones de acceso",
+            "Revisión inicial de rendimiento"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Integración con aplicación o API",
+          "subtemas": [
+            "Conexión desde aplicación, script o API",
+            "Manejo de datos JSON",
+            "Validaciones y errores"
+          ]
+        },
+        {
+          "numero": "6",
+          "nombre": "Entorno de implementación",
+          "subtemas": [
+            "Uso de entorno local o servicio administrado",
+            "Configuración básica",
+            "Acceso y conexión documentada"
+          ]
+        },
+        {
+          "numero": "7",
+          "nombre": "Seguridad básica",
+          "subtemas": [
+            "Roles",
+            "Permisos",
+            "Protección de credenciales",
+            "Exposición controlada",
+            "Manejo de datos sensibles"
+          ]
+        },
+        {
+          "numero": "8",
+          "nombre": "Documentación y defensa técnica",
+          "subtemas": [
+            "Documentación del modelo",
+            "Decisiones",
+            "Límites",
+            "Presentación funcional",
+            "Defensa técnica"
+          ]
+        }
+      ]
+    }
+  ],
+  "herramientas": [],
+  "bibliografia": []
+}

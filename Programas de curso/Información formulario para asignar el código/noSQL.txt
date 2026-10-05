@@ -1,0 +1,303 @@
+Moneda: Dolares
+Horas: 24
+Roles:
+Desarrollador NoSQL junior, Backend Developer con énfasis en NoSQL, Junior Data Engineer, Data Platform Assistant, Cloud Data Technician orientado a datos, Soporte técnico de plataformas de datos modernas, Implementador junior de soluciones de persistencia moderna
+
+Software requerido: 
+MongoDB Community / MongoDB Atlas, Redis / Valkey, Python, FastAPI o Flask, ThunderClient, Postman o Insomnia, Visual Studio Code, Git y GitHub / GitLab
+
+Microcurso 1: Fundamentos de bases de datos NoSQL
+Ingrese el nombre del curso:
+Fundamentos de bases de datos NoSQL
+
+Descripción del curso
+Este curso  introduce los fundamentos de las bases de datos NoSQL y su rol frente al modelo relacional. Se estudian las limitaciones del modelo relacional en escenarios de flexibilidad, volumen, escalabilidad y datos semiestructurados o no estructurados, así como el surgimiento de NoSQL y su relación con aplicaciones distribuidas y datos modernos. El estudiante comprende el concepto de NoSQL, la flexibilidad de esquema y los tipos de datos, y compara SQL frente a NoSQL en modelado, consultas, consistencia, escalabilidad y casos de uso. Se revisan casos típicos como catálogos, perfiles, sesiones, logs, eventos, contenido, IoT y aplicaciones web o móviles. El curso se alinea con SFIA 8 en Diseño de datos (DTAN) nivel 2, con apoyo en Desarrollo de software (PROG) nivel 2 y Métodos y herramientas (METL) nivel 3. Como resultado, el estudiante reconoce cuándo una base NoSQL puede ser adecuada y distingue criterios iniciales de selección según tipo de dato, patrón de acceso, consistencia y escalabilidad. No requiere experiencia previa en NoSQL, aunque se recomiendan nociones generales de bases relacionales y manejo básico de JSON, APIs, Git y programación en Python.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  ninguno (primer curso ).
+
+Palabras clave
+NoSQL, modelo relacional, flexibilidad de esquema, datos semiestructurados, escalabilidad, consistencia, casos de uso, SQL vs. NoSQL, datos modernos, aplicaciones distribuidas.
+
+Contenidos principales
+Evolución de las bases de datos: limitaciones del modelo relacional, surgimiento de NoSQL, datos modernos, aplicaciones distribuidas.
+
+Fundamentos NoSQL: concepto de NoSQL, flexibilidad de esquema, datos estructurados, semiestructurados y no estructurados.
+
+SQL vs. NoSQL: diferencias de modelado, consulta, consistencia, escalabilidad y casos de uso.
+
+Casos de uso NoSQL: catálogos, perfiles, sesiones, logs, eventos, contenido, IoT, aplicaciones web y móviles.
+
+Microcurso 2: Modelos de datos NoSQL y selección tecnológica
+Ingrese el nombre del curso:
+Modelos de datos NoSQL y selección tecnológica
+
+Descripción del curso
+Este curso  aborda la selección de modelos de persistencia NoSQL y la elección tecnológica según las necesidades de una solución. Se comparan los modelos documental, key-value, column-family y grafos, considerando estructura de datos, patrones de consulta, escalabilidad, consistencia, costo y mantenibilidad. El estudiante analiza casos empresariales o técnicos, identifica trade-offs y elabora una matriz de selección tecnológica que justifica la elección del modelo NoSQL. Se profundiza en documentos, colecciones, JSON, estructuras anidadas, claves y valores, acceso directo, caché, sesiones, datos temporales, wide-column y relaciones altamente conectadas. El curso se alinea con SFIA 8 en Diseño de datos (DTAN) nivel 3, con apoyo en Integración de sistemas (SINT) nivel 3 y Métodos y herramientas (METL) nivel 3. El estudiante produce modelos lógicos y contribuye a seleccionar componentes y técnicas de diseño. Como resultado, puede justificar técnicamente una elección NoSQL y reconocer cuándo cada modelo resulta más conveniente. Se requiere haber aprobado Fundamentos de bases de datos NoSQL y comprensión de diferencias SQL/NoSQL.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Fundamentos de bases de datos NoSQL.
+
+Palabras clave
+Modelo documental, key-value, column-family, grafos, criterios de selección, trade-offs, consistencia, escalabilidad, costo, mantenibilidad, matriz tecnológica.
+
+Contenidos principales
+Modelo documental: documentos, colecciones, JSON, estructuras anidadas, casos de uso.
+
+Modelo key-value: clave, valor, acceso directo, caché, sesiones, datos temporales.
+
+Modelo column-family y grafos: wide-column, relaciones altamente conectadas, usos introductorios.
+
+Criterios de selección: tipo de dato, patrón de consulta, escalabilidad, consistencia, costo, mantenibilidad.
+
+Microcurso 3: Modelado documental y datos JSON
+Ingrese el nombre del curso:
+Modelado documental y datos JSON
+
+Descripción del curso
+Este curso  se centra en el modelado documental y el uso de datos JSON para diseñar estructuras flexibles en aplicaciones modernas. Se estudian objetos, arreglos, campos, tipos de datos y documentos anidados; la organización de documentos y colecciones; las convenciones de diseño; y los criterios para decidir entre embebido y referencia según patrones de consulta, actualización y mantenibilidad. El estudiante diseña estructuras JSON, aplica duplicación controlada, establece relaciones entre documentos y construye modelos orientados a consultas esperadas, actualización de datos y mantenibilidad. El curso se alinea con SFIA 8 en Diseño de datos (DTAN) nivel 3, con apoyo en Desarrollo de software (PROG) nivel 2 y Métodos y herramientas (METL) nivel 3. Como actividad, diseña un modelo documental para un caso de aplicación moderna, incluye ejemplos de documentos y justifica decisiones de embebido o referencia. Se requiere haber aprobado Fundamentos de bases de datos NoSQL y Modelos de datos NoSQL y selección tecnológica, además de manejo básico de JSON.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Modelos de datos NoSQL y selección tecnológica.
+
+Palabras clave
+JSON, documentos, colecciones, embebido, referencia, estructuras anidadas, patrones de consulta, duplicación controlada, mantenibilidad, modelado documental.
+
+Contenidos principales
+Estructuras JSON: objetos, arreglos, campos, tipos de datos, documentos anidados.
+
+Colecciones y documentos: organización, estructura, convenciones de diseño.
+
+Embebido vs. referencia: duplicación controlada, relaciones entre documentos, ventajas y riesgos.
+
+Diseño orientado a consultas: patrones de acceso, consultas esperadas, actualización de datos, mantenibilidad.
+
+Microcurso 4: Operaciones documentales y CRUD
+Ingrese el nombre del curso:
+Operaciones documentales y CRUD
+
+Descripción del curso
+Este curso  desarrolla las operaciones documentales y CRUD en bases NoSQL documentales. Se abordan la creación de bases, colecciones y documentos, inserción individual y múltiple, validaciones básicas, consultas con filtros simples, campos anidados, operadores de comparación y proyecciones; actualizaciones parciales, reemplazo de documentos y operaciones sobre arreglos; y eliminación simple o múltiple con conteos, validación de operaciones y errores comunes. El estudiante implementa una base documental funcional con operaciones CRUD completas, valida resultados y documenta errores frecuentes. El curso se alinea con SFIA 8 en Desarrollo de software (PROG) nivel 2, con apoyo en Diseño de datos (DTAN) nivel 3 y Métodos y herramientas (METL) nivel 3. Se espera que diseñe, codifique, verifique, pruebe y documente scripts simples, aplicando estándares y revisando su propio trabajo. Requiere haber aprobado Modelado documental y datos JSON, y comprensión de colecciones, documentos, embebido vs. referencia y diseño orientado a consultas.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Modelado documental y datos JSON.
+
+Palabras clave
+CRUD, documentos, colecciones, inserción, consultas, filtros, proyecciones, actualización, eliminación, validación.
+
+Contenidos principales
+Creación de bases, colecciones y documentos: inicialización, inserción individual, inserción múltiple, validaciones básicas.
+
+Consultas documentales: filtros simples, campos anidados, operadores de comparación, proyecciones.
+
+Actualización de documentos: actualizaciones parciales, reemplazo, operaciones sobre arreglos.
+
+Eliminación y control de resultados: eliminación simple y múltiple, conteos, validación, errores comunes.
+
+Microcurso 5: Consultas avanzadas, agregaciones e índices documentales
+Ingrese el nombre del curso:
+Consultas avanzadas, agregaciones e índices documentales
+
+Descripción del curso
+Este curso  aborda consultas avanzadas, agregaciones e índices documentales para recuperar y analizar datos semiestructurados de forma eficiente. Se estudian condiciones múltiples, operadores lógicos, consultas sobre arreglos y campos anidados; pipelines de agregación con agrupamientos, filtros, proyecciones, cálculos y ordenamientos; índices simples y compuestos y su impacto en el rendimiento; y consultas para reportes operativos con resúmenes, métricas, segmentaciones y consumo por aplicaciones. El estudiante construye consultas avanzadas, aplica agregaciones y implementa índices básicos, evaluando su efecto en el rendimiento. El curso se alinea con SFIA 8 en Desarrollo de software (PROG) nivel 3, con apoyo en Diseño de datos (DTAN) nivel 3 y Métodos y herramientas (METL) nivel 3. Como actividad, elabora un conjunto de consultas y agregaciones documentadas sobre una base documental con índices básicos, validando su rendimiento inicial. Requiere haber aprobado Operaciones documentales y CRUD, y manejo de filtros, campos anidados y proyecciones.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Operaciones documentales y CRUD.
+
+Palabras clave
+Consultas avanzadas, agregaciones, pipelines, índices, índices compuestos, rendimiento, reportes operativos, campos anidados, arreglos, segmentaciones.
+
+Contenidos principales
+Consultas avanzadas: condiciones múltiples, operadores lógicos, consultas sobre arreglos, campos anidados.
+
+Agregaciones: agrupamientos, filtros en pipelines, proyecciones, cálculos, ordenamientos.
+
+Índices documentales: concepto, índices simples, índices compuestos, impacto en consultas.
+
+Consultas para reportes operativos: resúmenes, métricas, segmentaciones, consultas para consumo por aplicaciones.
+
+Microcurso 6: Bases key-value y patrones de acceso rápido
+Ingrese el nombre del curso:
+Bases key-value y patrones de acceso rápido
+
+Descripción del curso
+Este curso  aplica modelos key-value para resolver necesidades de acceso rápido, almacenamiento temporal, caché, sesiones y estructuras simples de baja latencia. Se revisan los fundamentos de clave y valor, operaciones básicas de lectura y escritura directa; casos de uso como caché, sesiones, tokens, preferencias, contadores y datos temporales; expiración y estructuras simples como TTL, listas, conjuntos, mapas y contadores; y patrones básicos de caching: cache-aside, invalidación, actualización y riesgos de datos obsoletos. El estudiante reconoce el funcionamiento del modelo, aplica estructuras key-value e implementa patrones básicos de caching en casos de sesiones, tokens o datos temporales. El curso se alinea con SFIA 8 en Diseño de datos (DTAN) nivel 3, con apoyo en Desarrollo de software (PROG) nivel 3 y Métodos y herramientas (METL) nivel 3. Como actividad, implementa un caso key-value para caché, sesiones o almacenamiento temporal, integrado a una aplicación o script, y reflexiona sobre los límites del modelo. Requiere haber aprobado Consultas avanzadas, agregaciones e índices documentales.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Consultas avanzadas, agregaciones e índices documentales.
+
+Palabras clave
+Key-value, caché, sesiones, tokens, TTL, listas, conjuntos, mapas, contadores, cache-aside, invalidación.
+
+Contenidos principales
+Fundamentos key-value: clave, valor, operaciones básicas, lectura y escritura directa.
+
+Casos de uso: caché, sesiones, tokens, preferencias, contadores, datos temporales.
+
+Expiración y estructuras simples: TTL, listas, conjuntos, mapas, contadores, almacenamiento temporal.
+
+Patrones básicos de caching: cache-aside, invalidación, actualización, riesgos de datos obsoletos.
+
+Microcurso 7: Fundamentos de datos distribuidos
+Ingrese el nombre del curso:
+Fundamentos de datos distribuidos
+
+Descripción del curso
+Este curso  introduce los fundamentos de datos distribuidos y su aplicación en soluciones NoSQL. Se estudian escalabilidad vertical y horizontal, crecimiento de datos y tráfico; replicación mediante copias de datos, disponibilidad, tolerancia a fallos y lectura desde réplicas; particionamiento con sharding, distribución de datos, claves de partición y particiones calientes; y disponibilidad y tolerancia a fallos considerando latencia, fallos parciales, continuidad de servicio y degradación controlada. El estudiante analiza escenarios distribuidos y diseña una estrategia conceptual de distribución para una solución NoSQL, justificando decisiones de replicación y particionamiento. El curso se alinea con SFIA 8 en Integración de sistemas (SINT) nivel 3, con apoyo en Diseño de datos (DTAN) nivel 3 y Métodos y herramientas (METL) nivel 3. Como actividad, diseña conceptualmente una estrategia de distribución y analiza trade-offs. Requiere haber aprobado Bases key-value y patrones de acceso rápido, y comprensión de escalabilidad, replicación y particionamiento.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Bases key-value y patrones de acceso rápido.
+
+Palabras clave
+Escalabilidad horizontal, escalabilidad vertical, replicación, particionamiento, sharding, tolerancia a fallos, disponibilidad, latencia, particiones calientes, degradación controlada.
+
+Contenidos principales
+Escalabilidad: vertical, horizontal, crecimiento de datos y tráfico.
+
+Replicación: copias de datos, disponibilidad, tolerancia a fallos, lectura desde réplicas.
+
+Particionamiento: sharding, distribución de datos, claves de partición, particiones calientes.
+
+Disponibilidad y tolerancia a fallos: latencia, fallos parciales, continuidad de servicio, degradación controlada.
+
+Microcurso 8: Consistencia, escalabilidad y rendimiento inicial
+Ingrese el nombre del curso:
+Consistencia, escalabilidad y rendimiento inicial
+
+Descripción del curso
+Este curso  aplica criterios básicos de consistencia, escalabilidad y rendimiento en el diseño de soluciones NoSQL y distribuidas. Se abordan consistencia fuerte y eventual, conflictos y sincronización; teorema CAP a nivel conceptual, BASE frente a ACID e implicaciones prácticas; diseño para rendimiento basado en patrones de acceso, lecturas vs. escrituras, tamaño de documentos y cardinalidad; y buenas prácticas iniciales como duplicación controlada, consultas frecuentes, índices, particiones calientes y límites del modelo. El estudiante distingue modelos de consistencia, aplica criterios de rendimiento y mejora un modelo NoSQL considerando patrones de acceso, índices y particiones. El curso se alinea con SFIA 8 en Integración de sistemas (SINT) nivel 3, con apoyo en Diseño de datos (DTAN) nivel 3 y Métodos y herramientas (METL) nivel 3. Como actividad, analiza y mejora un modelo NoSQL documentando decisiones. Requiere haber aprobado Fundamentos de datos distribuidos y conocer consistencia, CAP, BASE y ACID.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Fundamentos de datos distribuidos.
+
+Palabras clave
+Consistencia fuerte, consistencia eventual, CAP, BASE, ACID, rendimiento, patrones de acceso, cardinalidad, duplicación controlada, particiones calientes.
+
+Contenidos principales
+Consistencia en sistemas distribuidos: consistencia fuerte, eventual, conflictos, sincronización.
+
+CAP y BASE: teorema CAP conceptual, BASE frente a ACID, implicaciones prácticas.
+
+Diseño para rendimiento: patrones de acceso, lecturas vs. escrituras, tamaño de documentos, cardinalidad.
+
+Buenas prácticas iniciales: duplicación controlada, consultas frecuentes, índices, particiones calientes, límites del modelo.
+
+Microcurso 9: Integración de NoSQL con aplicaciones y APIs
+Ingrese el nombre del curso:
+Integración de NoSQL con aplicaciones y APIs
+
+Descripción del curso
+Este curso  integra bases NoSQL con aplicaciones, scripts o APIs. Se estudian drivers, clientes, cadenas de conexión y manejo de credenciales; operaciones CRUD desde código para insertar, consultar, actualizar y eliminar documentos o pares clave-valor; integración con APIs mediante consumo y exposición de datos JSON, endpoints y validación de entradas; y manejo de errores y capa de acceso a datos con separación de responsabilidades y patrones básicos de repositorio. El estudiante implementa operaciones desde código, integra una base NoSQL con una API o aplicación simple y maneja datos JSON, validaciones y errores. El curso se alinea con SFIA 8 en Integración de sistemas (SINT) nivel 3, con apoyo en Desarrollo de software (PROG) nivel 3, Métodos y herramientas (METL) nivel 3 y Seguridad de la información (SCTY) nivel 3. Como actividad, desarrolla una aplicación o API simple que integre una base NoSQL y ejecute CRUD con datos JSON. Requiere haber aprobado Consistencia, escalabilidad y rendimiento inicial.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Consistencia, escalabilidad y rendimiento inicial.
+
+Palabras clave
+Drivers, clientes, cadenas de conexión, credenciales, CRUD desde código, APIs, JSON, endpoints, validación, repositorio, manejo de errores.
+
+Contenidos principales
+Conexión desde aplicaciones: drivers, clientes, cadenas de conexión, manejo de credenciales.
+
+CRUD desde código: inserción, consulta, actualización, eliminación desde aplicación o script.
+
+Integración con APIs: consumo y exposición de datos JSON, endpoints, validación de entradas.
+
+Manejo de errores y capa de acceso a datos: errores comunes, separación de responsabilidades y patrones básicos de repositorio.
+
+Microcurso 10: Servicios administrados como entorno de implementación
+Ingrese el nombre del curso:
+Servicios administrados como entorno de implementación
+
+Descripción del curso
+Este curso  utiliza servicios administrados de bases de datos como entorno de implementación para soluciones NoSQL. Se estudian el concepto de servicio administrado, diferencias con la instalación propia, ventajas y límites; aprovisionamiento básico con creación del servicio, configuración inicial, regiones, recursos y parámetros; acceso y conexión segura mediante reglas, credenciales, cadenas de conexión y exposición controlada; y monitoreo y costos iniciales con métricas, uso de recursos, alertas y consideraciones de costo. El estudiante configura un servicio administrado, documenta el despliegue y aplica acceso seguro, monitoreo básico y criterios de costo. El curso se alinea con SFIA 8 en Métodos y herramientas (METL) nivel 3, con apoyo en Integración de sistemas (SINT) nivel 3 y Seguridad de la información (SCTY) nivel 3. Como actividad, despliega controladamente una solución NoSQL en un servicio administrado o entorno equivalente, documenta conexión y configuración, y reflexiona sobre costos y límites. Requiere haber aprobado Integración de NoSQL con aplicaciones y APIs.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Integración de NoSQL con aplicaciones y APIs.
+
+Palabras clave
+Servicios administrados, aprovisionamiento, regiones, recursos, conexión segura, credenciales, monitoreo, métricas, alertas, costos.
+
+Contenidos principales
+Servicios administrados de datos: concepto, diferencia con instalación propia, ventajas y límites.
+
+Aprovisionamiento básico: creación del servicio, configuración inicial, regiones, recursos, parámetros básicos.
+
+Acceso y conexión segura: reglas de acceso, credenciales, cadenas de conexión, exposición controlada.
+
+Monitoreo y costos iniciales: métricas básicas, uso de recursos, alertas iniciales, consideraciones de costo.
+
+Microcurso 11: Seguridad básica, documentación y toma de decisiones
+Ingrese el nombre del curso:
+Seguridad básica, documentación y toma de decisiones
+
+Descripción del curso
+Este curso  aplica controles básicos de seguridad, documenta soluciones NoSQL y justifica decisiones técnicas. Se abordan usuarios, roles, permisos, mínimo privilegio y exposición de servicios; protección de credenciales y datos, incluyendo datos sensibles, conexiones seguras y riesgos de inyección NoSQL; documentación técnica con modelo de datos, colecciones, campos, patrones de consulta, configuración e integración; y justificación de decisiones sobre selección tecnológica, embebido vs. referencia, consistencia, escalabilidad, límites y riesgos. El estudiante aplica controles de seguridad, elabora documentación técnica completa y defiende decisiones de diseño, integración y despliegue. El curso se alinea con SFIA 8 en Seguridad de la información (SCTY) nivel 3, con apoyo en Métodos y herramientas (METL) nivel 3 y Diseño de datos (DTAN) nivel 3. Como actividad, elabora un documento técnico de una solución NoSQL incluyendo modelo, configuración, seguridad, integración y justificación. Requiere haber aprobado Servicios administrados como entorno de implementación.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Servicios administrados como entorno de implementación.
+
+Palabras clave
+Seguridad NoSQL, usuarios, roles, permisos, mínimo privilegio, credenciales, datos sensibles, inyección NoSQL, documentación técnica, justificación de decisiones.
+
+Contenidos principales
+Seguridad básica NoSQL: usuarios, roles, permisos, mínimo privilegio, exposición de servicios.
+
+Protección de credenciales y datos: manejo seguro de credenciales, datos sensibles, conexiones seguras, riesgos de inyección NoSQL.
+
+Documentación técnica: modelo de datos, colecciones, campos, patrones de consulta, configuración e integración.
+
+Justificación de decisiones: selección tecnológica, embebido vs. referencia, consistencia, escalabilidad, límites y riesgos.
+
+Microcurso 12: Proyecto integrador NoSQL y datos distribuidos
+Ingrese el nombre del curso:
+Proyecto integrador NoSQL y datos distribuidos
+
+Descripción del curso
+Este curso  integra los conocimientos del Path en una solución funcional de persistencia NoSQL y distribuida para un caso empresarial o técnico. Se abordan análisis del caso con requerimientos, tipo de datos, patrones de acceso, restricciones y criterios de selección; diseño de la solución con modelo documental o key-value, estructura de datos, decisiones de embebido o referencia y justificación; implementación con creación de base, colecciones o estructuras key-value, carga de datos y CRUD; consultas, agregaciones, índices básicos, validación de patrones de acceso y rendimiento inicial; integración con aplicación, script o API; entorno de implementación local o administrado; seguridad básica con roles, permisos y protección de credenciales; y documentación y defensa técnica. El estudiante diseña, implementa, integra, documenta y defiende una solución NoSQL funcional, justificando modelado, integración, despliegue y límites. Se alinea con SFIA 8 en Integración de sistemas (SINT) nivel 3, con apoyo en DTAN, PROG, METL y SCTY nivel 3. Requiere haber aprobado Seguridad básica, documentación y toma de decisiones.
+
+Perfil de ingreso
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso  Seguridad básica, documentación y toma de decisiones.
+
+Palabras clave
+Proyecto integrador, diseño NoSQL, modelado documental, key-value, CRUD, consultas, agregaciones, índices, integración API, seguridad básica, documentación, defensa técnica.
+
+Contenidos principales
+Análisis del caso: requerimientos, tipo de datos, patrones de acceso, restricciones, criterios de selección NoSQL.
+
+Diseño de la solución: modelo documental o key-value, estructura de datos, decisiones de embebido o referencia, justificación técnica.
+
+Implementación NoSQL: creación de base, colecciones o estructuras key-value, carga de datos, operaciones CRUD.
+
+Consultas y rendimiento inicial: consultas, agregaciones, índices básicos, validación de patrones de acceso, revisión inicial de rendimiento.
+
+Integración con aplicación o API: conexión desde aplicación, script o API, manejo de datos JSON, validaciones y errores.
+
+Entorno de implementación: uso de entorno local o servicio administrado, configuración básica, acceso y conexión documentada.
+
+Seguridad básica: roles, permisos, protección de credenciales, exposición controlada, manejo de datos sensibles.
+
+Documentación y defensa técnica: documentación del modelo, decisiones, límites, presentación funcional, defensa técnica.

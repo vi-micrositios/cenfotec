@@ -1,0 +1,1063 @@
+{
+  "microciclos": [
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "1",
+      "nombre": "Fundamentos de IA para Pruebas de Software",
+      "competencia_nombre": "Fundamentos de IA para pruebas de software",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Interpretar conceptos esenciales de IA, modelos, datos, inferencia y comportamiento probabilístico desde la perspectiva del testing.",
+      "capacidades_especificas": [
+        "Diferencia sistemas tradicionales, sistemas inteligentes y sistemas generativos, reconociendo sus implicaciones para el diseño y ejecución de pruebas.",
+        "Explica conceptos básicos de datos, modelos, inferencia y salida probabilística desde la perspectiva del testing de software.",
+        "Reconoce los límites del rol tester frente a ciencia de datos, desarrollo de modelos y MLOps, identificando su alcance profesional en sistemas con IA."
+      ],
+      "descripcion": "Los fundamentos de IA para pruebas de software constituyen la base para comprender las diferencias entre sistemas tradicionales, sistemas inteligentes y sistemas generativos, y su impacto en el diseño y la ejecución de pruebas. Las principales temáticas por abordar son inteligencia artificial, aprendizaje automático e IA generativa, datos, modelos, inferencia y salida; sistemas deterministas y probabilísticos; tipos de sistemas inteligentes (clasificación, predicción, recomendación, generación); y alcance del rol tester en sistemas con IA.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba, crean scripts y datos de ensayo, y automatizan tareas repetibles trabajando según los requisitos o las especificaciones establecidas; definen las condiciones de prueba para determinados requisitos; ejecutan y registran pruebas manuales y automatizadas; y preparan análisis e informes sobre actividades, resultados, problemas y riesgos. Adicionalmente, se abordan de manera complementaria las áreas de Aseguramiento de la calidad (QUAS), aplicando procedimientos de calidad dentro de un área definida, y Machine learning (MLNG), comprendiendo capacidades y límites de los modelos desde una perspectiva introductoria.<br><br>Como parte de las actividades, diferencian sistemas tradicionales, inteligentes y generativos, explican conceptos básicos de datos, modelos e inferencia, identifican implicaciones de la IA en el diseño y ejecución de pruebas, y reconocen los límites del tester frente a ciencia de datos, desarrollo de modelos y MLOps.",
+      "perfil_ingreso_requisitos": [
+        "II Ciclo de Educación General Básica aprobado o equivalente, como referencia del MNC-EFTP-CR.",
+        "Python Foundations o competencia equivalente validada por diagnóstico.",
+        "Técnico Ágil en Pruebas Manuales de Software o competencias equivalentes homologables por experiencia o diagnóstico.",
+        "Conocimientos de automatización de pruebas o experiencia equivalente.",
+        "Dominio básico previo de programación; no se enseña programación desde cero.",
+        "Conocimiento previo de requerimientos, casos de prueba, defectos, evidencia, APIs manuales, regresión y reportes.",
+        "No se requiere experiencia avanzada en IA, ciencia de datos o machine learning.",
+        "Manejo básico de sistema operativo, navegador, documentos colaborativos, archivos, plataformas virtuales y terminal básica."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Inteligencia artificial, aprendizaje automático e IA generativa",
+          "subtemas": [
+            "Inteligencia artificial",
+            "Aprendizaje automático",
+            "IA generativa"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Datos, modelos, inferencia y salida",
+          "subtemas": [
+            "Datos",
+            "Modelos",
+            "Inferencia",
+            "Salida"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Sistemas deterministas y probabilísticos",
+          "subtemas": [
+            "Sistemas deterministas",
+            "Sistemas probabilísticos"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Tipos de sistemas inteligentes",
+          "subtemas": [
+            "Clasificación",
+            "Predicción",
+            "Recomendación",
+            "Generación"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Alcance del rol tester en sistemas con IA",
+          "subtemas": [
+            "Límites del tester",
+            "Relación con ciencia de datos",
+            "Relación con desarrollo de modelos",
+            "Relación con MLOps"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "2",
+      "nombre": "Comportamiento No Determinista, Riesgo y Oráculos de Prueba",
+      "competencia_nombre": "Análisis de comportamiento no determinista y oráculos de prueba",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Analizar sistemas inteligentes considerando variabilidad, incertidumbre, oráculos parciales, criterios flexibles y riesgos de validación.",
+      "capacidades_especificas": [
+        "Explica la diferencia entre resultado exacto y resultado aceptable, identificando fuentes de variabilidad en sistemas inteligentes.",
+        "Define criterios flexibles de aceptación y oráculos parciales o aproximados para evaluar salidas no deterministas.",
+        "Analiza riesgos asociados con incertidumbre, confianza y variabilidad, reconociendo implicaciones para regresión y cambios de comportamiento."
+      ],
+      "descripcion": "El comportamiento no determinista, el riesgo y los oráculos de prueba permiten analizar sistemas inteligentes considerando variabilidad, incertidumbre, oráculos parciales, criterios flexibles y riesgos de validación. Las principales temáticas por abordar son variabilidad de salida y comportamiento no determinista; incertidumbre, confianza, umbrales y tolerancias; oráculos tradicionales, parciales y aproximados; riesgos de validación en sistemas inteligentes; e implicaciones para regresión y cambios de comportamiento.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Aseguramiento de la calidad (QUAS), aplicando y manteniendo procedimientos de calidad, y Gestión y definición de requisitos (REQM), derivando criterios flexibles de aceptación a partir de requisitos ambiguos.<br><br>Como parte de las actividades, explican la diferencia entre resultado exacto y resultado aceptable, identifican fuentes de variabilidad, definen criterios flexibles de aceptación, y analizan riesgos asociados con incertidumbre, confianza y variabilidad.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Fundamentos de IA para Pruebas de Software."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Variabilidad de salida y comportamiento no determinista",
+          "subtemas": [
+            "Variabilidad de salida",
+            "Comportamiento no determinista"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Incertidumbre, confianza, umbrales y tolerancias",
+          "subtemas": [
+            "Incertidumbre",
+            "Confianza",
+            "Umbrales",
+            "Tolerancias"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Oráculos tradicionales, parciales y aproximados",
+          "subtemas": [
+            "Oráculos tradicionales",
+            "Oráculos parciales",
+            "Oráculos aproximados"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Riesgos de validación en sistemas inteligentes",
+          "subtemas": [
+            "Riesgos de validación"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Implicaciones para regresión y cambios de comportamiento",
+          "subtemas": [
+            "Regresión",
+            "Cambios de comportamiento"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "3",
+      "nombre": "Diseño de Escenarios, Criterios y Rúbricas para Sistemas Inteligentes",
+      "competencia_nombre": "Diseño de escenarios y rúbricas para sistemas inteligentes",
+      "habilidad_sfia": {
+        "nombre": "Gestión y definición de requisitos (REQM)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar escenarios, criterios de aceptación flexibles, rúbricas, matrices de riesgo y trazabilidad para funcionalidades con IA.",
+      "capacidades_especificas": [
+        "Diseña escenarios positivos, negativos, ambiguos, críticos y borde para funcionalidades con IA, considerando cobertura por intención, usuario, contexto, idioma y riesgo.",
+        "Construye criterios de evaluación flexibles y rúbricas para valorar utilidad, consistencia, corrección, seguridad y completitud de salidas variables.",
+        "Relaciona requerimientos, riesgos, escenarios, datos, prompts, resultados y hallazgos mediante matrices de trazabilidad para pruebas de IA."
+      ],
+      "descripcion": "El diseño de escenarios, criterios y rúbricas para sistemas inteligentes permite construir criterios de aceptación flexibles, matrices de riesgo y trazabilidad para funcionalidades con IA. Las principales temáticas por abordar son diseño de escenarios funcionales con IA; criterios flexibles y aceptación basada en riesgo; rúbricas de evaluación; cobertura por intención, usuario, contexto, idioma, dato y riesgo; y trazabilidad para pruebas de IA.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Gestión y definición de requisitos (REQM). En este nivel, los estudiantes elicitan, analizan, documentan y gestionan requisitos de complejidad moderada, facilitan su trazabilidad, gestionan cambios y contribuyen a la selección de enfoques. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), diseñando escenarios y criterios de aceptación flexibles, y Aseguramiento de la calidad (QUAS), aplicando rúbricas y criterios de cobertura.<br><br>Como parte de las actividades, diseñan escenarios positivos, negativos, ambiguos, críticos y borde, construyen criterios de evaluación para salidas variables, elaboran rúbricas para evaluar utilidad, consistencia, corrección, seguridad y completitud, y relacionan requerimientos, riesgos, escenarios, datos, prompts, resultados y hallazgos.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Comportamiento No Determinista, Riesgo y Oráculos de Prueba."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Diseño de escenarios funcionales con IA",
+          "subtemas": [
+            "Escenarios positivos",
+            "Escenarios negativos",
+            "Escenarios ambiguos",
+            "Escenarios críticos",
+            "Escenarios borde"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Criterios flexibles y aceptación basada en riesgo",
+          "subtemas": [
+            "Criterios flexibles",
+            "Aceptación basada en riesgo"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Rúbricas de evaluación",
+          "subtemas": [
+            "Utilidad",
+            "Consistencia",
+            "Corrección",
+            "Seguridad",
+            "Completitud"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Cobertura por intención, usuario, contexto, idioma, dato y riesgo",
+          "subtemas": [
+            "Cobertura por intención",
+            "Cobertura por usuario",
+            "Cobertura por contexto",
+            "Cobertura por idioma",
+            "Cobertura por dato",
+            "Cobertura por riesgo"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Trazabilidad para pruebas de IA",
+          "subtemas": [
+            "Requerimientos",
+            "Riesgos",
+            "Escenarios",
+            "Datos",
+            "Prompts",
+            "Resultados",
+            "Hallazgos"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "4",
+      "nombre": "Calidad de Datos para Pruebas de IA",
+      "competencia_nombre": "Calidad de datos para pruebas de IA",
+      "habilidad_sfia": {
+        "nombre": "Modelado y diseño de datos (DTAN)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Evaluar datos de prueba considerando completitud, consistencia, representatividad, cobertura, actualidad y pertinencia para sistemas inteligentes.",
+      "capacidades_especificas": [
+        "Explica la relación entre datos, comportamiento del sistema y calidad de salida, reconociendo los datos como base del comportamiento inteligente.",
+        "Evalúa datos de prueba según criterios de calidad, pertinencia y cobertura, diferenciando datos sintéticos y datos reales controlados.",
+        "Diseña muestras representativas y documenta limitaciones asociadas con datos incompletos, insuficientes o sesgados."
+      ],
+      "descripcion": "La calidad de datos para pruebas de IA permite evaluar datos de prueba considerando completitud, consistencia, representatividad, cobertura, actualidad y pertinencia para sistemas inteligentes. Las principales temáticas por abordar son datos como base del comportamiento inteligente; calidad de datos (completitud, consistencia, validez y actualidad); datos sintéticos y datos reales controlados; segmentación de datos de prueba; y riesgos por datos insuficientes o sesgados.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Modelado y diseño de datos (DTAN). En este nivel, los estudiantes elicitan requisitos de datos, producen modelos de datos lógicos y contribuyen a la selección de componentes y técnicas de diseño, incluyendo criterios de calidad, segmentación y representatividad. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), evaluando la calidad de los datos como insumo de prueba, y Aseguramiento de la calidad (QUAS), aplicando criterios de calidad y documentando limitaciones.<br><br>Como parte de las actividades, explican la relación entre datos, comportamiento del sistema y calidad de salida, evalúan datos de prueba según criterios de calidad y pertinencia, diseñan muestras representativas, y documentan limitaciones asociadas con datos incompletos, insuficientes o sesgados.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Diseño de Escenarios, Criterios y Rúbricas para Sistemas Inteligentes."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Datos como base del comportamiento inteligente",
+          "subtemas": [
+            "Relación datos-comportamiento",
+            "Relación datos-calidad de salida"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Calidad de datos",
+          "subtemas": [
+            "Completitud",
+            "Consistencia",
+            "Validez",
+            "Actualidad"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Datos sintéticos y datos reales controlados",
+          "subtemas": [
+            "Datos sintéticos",
+            "Datos reales controlados"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Segmentación de datos de prueba",
+          "subtemas": [
+            "Muestras representativas",
+            "Segmentación"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Riesgos por datos insuficientes o sesgados",
+          "subtemas": [
+            "Datos incompletos",
+            "Datos insuficientes",
+            "Datos sesgados"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "5",
+      "nombre": "Sesgo, Equidad y Representatividad en Sistemas Inteligentes",
+      "competencia_nombre": "Pruebas de sesgo y representatividad en sistemas inteligentes",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Diseñar y ejecutar pruebas orientadas a identificar sesgos, trato diferenciado, exclusiones y riesgos de representatividad.",
+      "capacidades_especificas": [
+        "Identifica posibles fuentes de sesgo en datos, modelos, prompts, criterios o interpretación humana dentro de sistemas inteligentes.",
+        "Diseña escenarios comparativos y evalúa representatividad de perfiles, contextos y variaciones relevantes para detectar trato diferenciado.",
+        "Documenta hallazgos de sesgo de forma responsable, contextualizada y basada en evidencia, reconociendo riesgos de exclusión y equidad."
+      ],
+      "descripcion": "El sesgo, la equidad y la representatividad en sistemas inteligentes permiten diseñar y ejecutar pruebas orientadas a identificar sesgos, trato diferenciado, exclusiones y riesgos de representatividad. Las principales temáticas por abordar son concepto de sesgo en sistemas inteligentes; representatividad de datos, perfiles y contextos; equidad y trato diferenciado; casos de prueba comparativos; y documentación cuidadosa de hallazgos.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Modelado y diseño de datos (DTAN), analizando la representatividad de los datos, y Aseguramiento de la calidad (QUAS), aplicando criterios de equidad y documentando hallazgos de forma responsable.<br><br>Como parte de las actividades, identifican posibles fuentes de sesgo en datos, modelos, prompts, criterios o interpretación humana, diseñan escenarios comparativos para detectar trato diferenciado, evalúan representatividad de perfiles, contextos y variaciones relevantes, y documentan hallazgos de sesgo de manera responsable, contextualizada y basada en evidencia.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Calidad de Datos para Pruebas de IA."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Concepto de sesgo en sistemas inteligentes",
+          "subtemas": [
+            "Fuentes de sesgo en datos",
+            "Fuentes de sesgo en modelos",
+            "Fuentes de sesgo en prompts",
+            "Fuentes de sesgo en criterios",
+            "Fuentes de sesgo en interpretación humana"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Representatividad de datos, perfiles y contextos",
+          "subtemas": [
+            "Representatividad de datos",
+            "Representatividad de perfiles",
+            "Representatividad de contextos"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Equidad y trato diferenciado",
+          "subtemas": [
+            "Equidad",
+            "Trato diferenciado",
+            "Exclusiones"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Casos de prueba comparativos",
+          "subtemas": [
+            "Escenarios comparativos",
+            "Variaciones relevantes"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Documentación cuidadosa de hallazgos",
+          "subtemas": [
+            "Documentación responsable",
+            "Contextualización",
+            "Evidencia"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "6",
+      "nombre": "Pruebas de Sistemas Predictivos, Clasificación y Recomendación",
+      "competencia_nombre": "Pruebas de sistemas predictivos y de recomendación",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Evaluar funcionalidades basadas en predicción, clasificación o recomendación mediante escenarios, umbrales, resultados esperados flexibles y análisis de errores.",
+      "capacidades_especificas": [
+        "Diseña escenarios de prueba para sistemas predictivos, clasificadores y recomendadores, incluyendo casos positivos, negativos, borde y críticos.",
+        "Evalúa salidas mediante umbrales, categorías, patrones esperados y criterios de aceptación flexibles.",
+        "Analiza errores de clasificación, predicción o recomendación y documenta riesgos funcionales y de negocio asociados con resultados incorrectos."
+      ],
+      "descripcion": "Las pruebas de sistemas predictivos, clasificación y recomendación permiten evaluar funcionalidades basadas en predicción, clasificación o recomendación mediante escenarios, umbrales, resultados esperados flexibles y análisis de errores. Las principales temáticas por abordar son sistemas predictivos, clasificadores y recomendadores; umbrales, categorías y criterios de decisión; casos positivos, negativos, borde y críticos; análisis de errores e impacto funcional; y evidencia y comunicación de fallos en sistemas inteligentes no generativos.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Machine learning (MLNG), interpretando el comportamiento de modelos predictivos y de clasificación, y Gestión y definición de requisitos (REQM), derivando criterios de aceptación flexibles para salidas no deterministas.<br><br>Como parte de las actividades, diseñan escenarios de prueba para sistemas predictivos, clasificadores y recomendadores, evalúan salidas mediante umbrales, categorías, patrones esperados y criterios de aceptación, analizan errores de clasificación, predicción o recomendación, y documentan riesgos funcionales y de negocio asociados con resultados incorrectos o inadecuados.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Sesgo, Equidad y Representatividad en Sistemas Inteligentes."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Sistemas predictivos, clasificadores y recomendadores",
+          "subtemas": [
+            "Sistemas predictivos",
+            "Clasificadores",
+            "Recomendadores"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Umbrales, categorías y criterios de decisión",
+          "subtemas": [
+            "Umbrales",
+            "Categorías",
+            "Criterios de decisión"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Casos positivos, negativos, borde y críticos",
+          "subtemas": [
+            "Casos positivos",
+            "Casos negativos",
+            "Casos borde",
+            "Casos críticos"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Análisis de errores e impacto funcional",
+          "subtemas": [
+            "Errores de clasificación",
+            "Errores de predicción",
+            "Errores de recomendación",
+            "Impacto funcional"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Evidencia y comunicación de fallos en sistemas inteligentes no generativos",
+          "subtemas": [
+            "Evidencia de fallos",
+            "Comunicación de fallos",
+            "Riesgos funcionales y de negocio"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "7",
+      "nombre": "Robustez, Seguridad Básica y Entradas Adversariales Introductorias",
+      "competencia_nombre": "Pruebas de robustez y seguridad básica en sistemas inteligentes",
+      "habilidad_sfia": {
+        "nombre": "Seguridad de la información (SCTY)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Aplicar pruebas de robustez y seguridad básica mediante entradas ambiguas, incompletas, contradictorias, inesperadas o adversariales introductorias.",
+      "capacidades_especificas": [
+        "Diseña entradas ambiguas, incompletas, contradictorias o inesperadas para evaluar el comportamiento de sistemas inteligentes ante variaciones controladas.",
+        "Identifica señales de fragilidad, degradación o comportamiento inseguro, reconociendo riesgos básicos de privacidad, exposición de información y uso indebido.",
+        "Documenta hallazgos de robustez y seguridad básica dentro del alcance del tester, incluyendo entradas adversariales introductorias y evidencia de riesgos."
+      ],
+      "descripcion": "La robustez, la seguridad básica y las entradas adversariales introductorias permiten evaluar el comportamiento de sistemas inteligentes ante entradas ambiguas, incompletas, contradictorias, inesperadas o adversariales. Las principales temáticas por abordar son robustez funcional en sistemas inteligentes; entradas ambiguas, incompletas y contradictorias; entradas adversariales introductorias; degradación de calidad y comportamiento inesperado; y privacidad, exposición de información y uso indebido.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Seguridad de la información (SCTY), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes aplican y mantienen controles de seguridad específicos, comunican riesgos y realizan valoraciones básicas de riesgos para sistemas de información de menor complejidad. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), diseñando pruebas de robustez y entradas adversariales, y Aseguramiento de la calidad (QUAS), aplicando criterios de calidad y documentando hallazgos de seguridad.<br><br>Como parte de las actividades, diseñan entradas ambiguas, incompletas, contradictorias o inesperadas, evalúan comportamiento ante variaciones controladas, identifican señales de fragilidad, degradación o comportamiento inseguro, y documentan riesgos básicos de seguridad y uso indebido dentro del alcance del tester.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Pruebas de Sistemas Predictivos, Clasificación y Recomendación."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Robustez funcional en sistemas inteligentes",
+          "subtemas": [
+            "Robustez funcional"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Entradas ambiguas, incompletas y contradictorias",
+          "subtemas": [
+            "Entradas ambiguas",
+            "Entradas incompletas",
+            "Entradas contradictorias",
+            "Entradas inesperadas"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Entradas adversariales introductorias",
+          "subtemas": [
+            "Entradas adversariales",
+            "Variaciones controladas"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Degradación de calidad y comportamiento inesperado",
+          "subtemas": [
+            "Fragilidad",
+            "Degradación",
+            "Comportamiento inseguro"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Privacidad, exposición de información y uso indebido",
+          "subtemas": [
+            "Privacidad",
+            "Exposición de información",
+            "Uso indebido"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "8",
+      "nombre": "Pruebas de IA Generativa y Evaluación de Respuestas",
+      "competencia_nombre": "Evaluación de respuestas generativas",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Evaluar respuestas generativas mediante prompts, rúbricas, utilidad, consistencia, completitud, tono, seguridad básica y alucinaciones.",
+      "capacidades_especificas": [
+        "Diseña prompts como insumos de prueba, reconociendo la naturaleza de los sistemas generativos y su variabilidad.",
+        "Evalúa respuestas generativas mediante rúbricas estructuradas, valorando utilidad, corrección, completitud y tono.",
+        "Identifica alucinaciones, errores plausibles, contradicciones y respuestas incompletas, documentando consistencia, utilidad, seguridad y adecuación de salida."
+      ],
+      "descripcion": "Las pruebas de IA generativa y la evaluación de respuestas permiten evaluar respuestas generativas mediante prompts, rúbricas, utilidad, consistencia, completitud, tono, seguridad básica y alucinaciones. Las principales temáticas por abordar son naturaleza de los sistemas generativos; prompt como dato de prueba; evaluación de utilidad, corrección, completitud y tono; alucinaciones y errores plausibles; y rúbricas de evaluación generativa.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Aseguramiento de la calidad (QUAS), aplicando rúbricas y criterios de calidad, y Métodos y herramientas (METL), configurando y documentando herramientas de evaluación generativa.<br><br>Como parte de las actividades, diseñan prompts como insumos de prueba, evalúan respuestas generativas mediante rúbricas estructuradas, identifican alucinaciones, errores plausibles, contradicciones y respuestas incompletas, y documentan consistencia, utilidad, seguridad y adecuación de salida.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Robustez, Seguridad Básica y Entradas Adversariales Introductorias."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Naturaleza de los sistemas generativos",
+          "subtemas": [
+            "Sistemas generativos",
+            "Respuestas generativas"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Prompt como dato de prueba",
+          "subtemas": [
+            "Diseño de prompts",
+            "Prompts como insumo de prueba"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Evaluación de utilidad, corrección, completitud y tono",
+          "subtemas": [
+            "Utilidad",
+            "Corrección",
+            "Completitud",
+            "Tono"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Alucinaciones y errores plausibles",
+          "subtemas": [
+            "Alucinaciones",
+            "Errores plausibles",
+            "Contradicciones",
+            "Respuestas incompletas"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Rúbricas de evaluación generativa",
+          "subtemas": [
+            "Rúbricas estructuradas",
+            "Consistencia",
+            "Seguridad",
+            "Adecuación de salida"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "9",
+      "nombre": "Evaluación Conversacional, Contexto y Comportamiento No Deseado",
+      "competencia_nombre": "Evaluación conversacional y comportamiento no deseado",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Evaluar continuidad conversacional, pérdida de contexto, contradicciones, desviación de instrucciones, respuestas inseguras y escalamiento de riesgos.",
+      "capacidades_especificas": [
+        "Diseña conversaciones de prueba con múltiples turnos para evaluar continuidad, memoria contextual, coherencia y contradicciones.",
+        "Identifica desviaciones de instrucciones, comportamientos no deseados y riesgos de escalamiento en interacciones conversacionales.",
+        "Documenta evidencia conversacional con trazabilidad de entradas, salidas y criterios, registrando riesgos acumulados en conversaciones."
+      ],
+      "descripcion": "La evaluación conversacional, el contexto y el comportamiento no deseado permiten evaluar continuidad conversacional, pérdida de contexto, contradicciones, desviación de instrucciones, respuestas inseguras y escalamiento de riesgos. Las principales temáticas por abordar son pruebas conversacionales; pérdida de contexto y contradicciones; desviación de instrucciones y comportamiento no deseado; riesgos acumulados en conversaciones; y evidencia y trazabilidad conversacional.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Aseguramiento de la calidad (QUAS), aplicando criterios de calidad conversacional, y Gestión de incidentes (USUP), documentando y escalando hallazgos y comportamientos no deseados.<br><br>Como parte de las actividades, diseñan conversaciones de prueba con múltiples turnos, evalúan continuidad, memoria contextual, coherencia y contradicciones, identifican desviaciones de instrucciones, comportamientos no deseados y riesgos de escalamiento, y documentan evidencia conversacional con trazabilidad de entradas, salidas y criterios.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Pruebas de IA Generativa y Evaluación de Respuestas."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Pruebas conversacionales",
+          "subtemas": [
+            "Conversaciones de prueba",
+            "Múltiples turnos",
+            "Continuidad conversacional"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Pérdida de contexto y contradicciones",
+          "subtemas": [
+            "Pérdida de contexto",
+            "Memoria contextual",
+            "Coherencia",
+            "Contradicciones"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Desviación de instrucciones y comportamiento no deseado",
+          "subtemas": [
+            "Desviación de instrucciones",
+            "Comportamiento no deseado",
+            "Respuestas inseguras"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Riesgos acumulados en conversaciones",
+          "subtemas": [
+            "Riesgos acumulados",
+            "Escalamiento de riesgos"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Evidencia y trazabilidad conversacional",
+          "subtemas": [
+            "Evidencia conversacional",
+            "Trazabilidad de entradas y salidas",
+            "Criterios"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "10",
+      "nombre": "IA como Apoyo Responsable al Proceso de Pruebas",
+      "competencia_nombre": "Uso responsable de IA en pruebas de software",
+      "habilidad_sfia": {
+        "nombre": "Métodos y herramientas (METL)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Utilizar IA de forma crítica y responsable para apoyar análisis, diseño de casos, datos de prueba, defectos, documentación y revisión de pruebas.",
+      "capacidades_especificas": [
+        "Usa IA para apoyar análisis de requerimientos, detección de ambigüedades y generación de escenarios, casos y datos de prueba.",
+        "Revisa y depura críticamente artefactos generados por IA, documentando intervención humana, cambios y decisiones realizadas.",
+        "Evita dependencia excesiva, fuga de datos y aceptación acrítica de respuestas, documentando riesgos del uso de IA y trazabilidad de cambios."
+      ],
+      "descripcion": "El uso de IA como apoyo responsable al proceso de pruebas permite utilizar tecnologías de IA de forma crítica y responsable para apoyar análisis, diseño de casos, datos de prueba, defectos, documentación y revisión de pruebas, sin sustituir el juicio profesional. Las principales temáticas por abordar son IA para análisis de requerimientos; IA para generación de escenarios, casos y datos; IA para documentación y defectos; IA para revisión de pruebas y automatización; riesgos del uso de IA en QA; y revisión humana y trazabilidad de cambios.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Métodos y herramientas (METL), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes brindan apoyo en el uso de métodos y herramientas existentes, configuran métodos y herramientas dentro de un contexto conocido, y crean y actualizan la documentación de métodos y herramientas. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), aplicando la IA como apoyo al proceso de pruebas, y Programación/Desarrollo de software (PROG), generando y revisando artefactos técnicos con apoyo de IA.<br><br>Como parte de las actividades, usan IA para apoyar análisis de requerimientos y detección de ambigüedades, generan escenarios, casos y datos de prueba con apoyo de IA, revisan y depuran críticamente artefactos generados por IA, documentan intervención humana, cambios, decisiones y riesgos del uso de IA, y evitan dependencia excesiva, fuga de datos y aceptación acrítica de respuestas.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Evaluación Conversacional, Contexto y Comportamiento No Deseado."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "IA para análisis de requerimientos",
+          "subtemas": [
+            "Análisis de requerimientos",
+            "Detección de ambigüedades"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "IA para generación de escenarios, casos y datos",
+          "subtemas": [
+            "Generación de escenarios",
+            "Generación de casos",
+            "Generación de datos de prueba"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "IA para documentación y defectos",
+          "subtemas": [
+            "Documentación asistida",
+            "Gestión de defectos con IA"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "IA para revisión de pruebas y automatización",
+          "subtemas": [
+            "Revisión de pruebas con IA",
+            "Automatización asistida"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Riesgos del uso de IA en QA",
+          "subtemas": [
+            "Dependencia excesiva",
+            "Fuga de datos",
+            "Aceptación acrítica de respuestas"
+          ]
+        },
+        {
+          "numero": "6",
+          "nombre": "Revisión humana y trazabilidad de cambios",
+          "subtemas": [
+            "Intervención humana",
+            "Trazabilidad de cambios",
+            "Documentación de decisiones"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "11",
+      "nombre": "Evidencia, Métricas, Regresión y Comunicación de Riesgos de IA",
+      "competencia_nombre": "Evidencia, métricas y comunicación de riesgos de IA",
+      "habilidad_sfia": {
+        "nombre": "Medición (MEAS)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Documentar evidencias, métricas básicas, variabilidad, regresión de comportamiento, trazabilidad, limitaciones y recomendaciones de calidad para sistemas con IA.",
+      "capacidades_especificas": [
+        "Construye evidencia completa para pruebas de IA, registrando variabilidad, múltiples ejecuciones y diferencias de salida.",
+        "Aplica métricas básicas de evaluación y analiza regresión de comportamiento ante cambios de datos, prompts, configuración o modelo.",
+        "Comunica riesgos residuales, limitaciones y recomendaciones de calidad a audiencias técnicas y ejecutivas, integrando trazabilidad y hallazgos."
+      ],
+      "descripcion": "La evidencia, las métricas, la regresión y la comunicación de riesgos de IA permiten documentar resultados, variabilidad, regresión de comportamiento, trazabilidad, limitaciones y recomendaciones de calidad para sistemas con IA. Las principales temáticas por abordar son evidencia en pruebas de IA; registro de variabilidad y múltiples ejecuciones; métricas básicas de evaluación; regresión de comportamiento; riesgos residuales y recomendaciones; y comunicación técnica y ejecutiva.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Medición (MEAS), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes identifican y recopilan datos de medición, los analizan e interpretan, y reportan resultados para apoyar decisiones y mejoras. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), analizando resultados y regresiones, Aseguramiento de la calidad (QUAS), aplicando criterios de calidad y documentando recomendaciones, y Gestión de incidentes (USUP), comunicando riesgos residuales y hallazgos.<br><br>Como parte de las actividades, construyen evidencia completa para pruebas de IA, registran variabilidad, múltiples ejecuciones y diferencias de salida, aplican métricas básicas de evaluación y comunicación de resultados, analizan regresión de comportamiento ante cambios de datos, prompts, configuración o modelo, y comunican riesgos residuales, limitaciones y recomendaciones de calidad.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: IA como Apoyo Responsable al Proceso de Pruebas."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Evidencia en pruebas de IA",
+          "subtemas": [
+            "Construcción de evidencia",
+            "Documentación de resultados"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Registro de variabilidad y múltiples ejecuciones",
+          "subtemas": [
+            "Variabilidad",
+            "Múltiples ejecuciones",
+            "Diferencias de salida"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Métricas básicas de evaluación",
+          "subtemas": [
+            "Métricas de evaluación",
+            "Comunicación de resultados"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Regresión de comportamiento",
+          "subtemas": [
+            "Cambios de datos",
+            "Cambios de prompts",
+            "Cambios de configuración",
+            "Cambios de modelo"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Riesgos residuales y recomendaciones",
+          "subtemas": [
+            "Riesgos residuales",
+            "Limitaciones",
+            "Recomendaciones de calidad"
+          ]
+        },
+        {
+          "numero": "6",
+          "nombre": "Comunicación técnica y ejecutiva",
+          "subtemas": [
+            "Comunicación técnica",
+            "Comunicación ejecutiva"
+          ]
+        }
+      ]
+    },
+    {
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "12",
+      "nombre": "Proyecto Integrador de Pruebas de Software con IA y Sistemas Inteligentes",
+      "competencia_nombre": "Proyecto integrador de pruebas de software con IA",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Validar un sistema o funcionalidad con IA en un caso empresarial simulado, integrando estrategia, escenarios, datos, sesgos, robustez, evaluación generativa, evidencias y reporte final.",
+      "capacidades_especificas": [
+        "Define la estrategia de pruebas y caracteriza el sistema con IA del caso empresarial simulado, incluyendo alcance, riesgos, criterios, escenarios, datos y prompts.",
+        "Ejecuta pruebas sobre funcionalidades inteligentes, predictivas o generativas, documentando evidencias, hallazgos, métricas, limitaciones y riesgos residuales.",
+        "Presenta recomendaciones de calidad y defiende técnicamente el proceso realizado, integrando trazabilidad, uso asistido de IA en QA y análisis de sesgos y robustez."
+      ],
+      "descripcion": "El Proyecto Integrador de Pruebas de Software con IA y Sistemas Inteligentes permite consolidar las competencias del Path mediante la validación de un sistema o funcionalidad con IA en un caso empresarial simulado, integrando estrategia, escenarios, datos, sesgos, robustez, evaluación generativa, evidencias y reporte final. Los componentes del proyecto incluyen caso empresarial simulado, caracterización del sistema, estrategia de pruebas, rúbricas de evaluación, evaluación de datos, pruebas de robustez, pruebas generativas o inteligentes, uso asistido de IA en QA, trazabilidad y métricas, reporte final, y defensa profesional.<br><br>EEl curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Aseguramiento de la calidad (QUAS), Medición (MEAS) y Métodos y herramientas (METL), integrando calidad, medición y herramientas en la validación de sistemas con IA.",
+      "perfil_ingreso_requisitos": [
+        "Cruso: Evidencia, Métricas, Regresión y Comunicación de Riesgos de IA."
+      ],
+      "relacion_empleabilidad": [
+        "QA Tester especializado en IA Junior",
+        "AI Software Tester Junior",
+        "QA Analyst para Sistemas Inteligentes",
+        "GenAI Testing Analyst Junior",
+        "Tester de Sistemas con IA",
+        "AI Quality Analyst Junior",
+        "Prompt Evaluation Tester",
+        "Data Quality Testing Assistant",
+        "Responsible AI Testing Assistant"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Caso empresarial simulado",
+          "subtemas": [
+            "Producto o funcionalidad con IA",
+            "Propósito de negocio",
+            "Usuarios",
+            "Riesgos"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Caracterización del sistema",
+          "subtemas": [
+            "Tipo de IA",
+            "Entradas",
+            "Salidas",
+            "Comportamiento esperado",
+            "Límites"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Estrategia de pruebas",
+          "subtemas": [
+            "Alcance",
+            "Riesgos",
+            "Criterios",
+            "Escenarios",
+            "Datos",
+            "Prompts",
+            "Restricciones"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Rúbricas de evaluación",
+          "subtemas": [
+            "Utilidad",
+            "Corrección",
+            "Consistencia",
+            "Seguridad",
+            "Completitud",
+            "Adecuación"
+          ]
+        },
+        {
+          "numero": "5",
+          "nombre": "Evaluación de datos",
+          "subtemas": [
+            "Calidad",
+            "Cobertura",
+            "Representatividad",
+            "Sesgos",
+            "Limitaciones"
+          ]
+        },
+        {
+          "numero": "6",
+          "nombre": "Pruebas de robustez",
+          "subtemas": [
+            "Entradas ambiguas",
+            "Entradas incompletas",
+            "Entradas adversariales introductorias",
+            "Casos borde"
+          ]
+        },
+        {
+          "numero": "7",
+          "nombre": "Pruebas generativas o inteligentes",
+          "subtemas": [
+            "Evaluación de salidas",
+            "Variabilidad",
+            "Alucinaciones",
+            "Errores o recomendaciones"
+          ]
+        },
+        {
+          "numero": "8",
+          "nombre": "Uso asistido de IA en QA",
+          "subtemas": [
+            "Evidencia de apoyo de IA",
+            "Revisión humana",
+            "Ajustes realizados"
+          ]
+        },
+        {
+          "numero": "9",
+          "nombre": "Trazabilidad y métricas",
+          "subtemas": [
+            "Relación entre requerimientos, riesgos, escenarios, resultados y hallazgos"
+          ]
+        },
+        {
+          "numero": "10",
+          "nombre": "Reporte final",
+          "subtemas": [
+            "Riesgos residuales",
+            "Recomendaciones",
+            "Limitaciones",
+            "Conclusiones"
+          ]
+        },
+        {
+          "numero": "11",
+          "nombre": "Defensa profesional",
+          "subtemas": [
+            "Presentación de decisiones",
+            "Evidencias",
+            "Hallazgos",
+            "Mejoras propuestas"
+          ]
+        }
+      ]
+    }
+  ],
+  "herramientas": [],
+  "bibliografia": []
+}

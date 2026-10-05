@@ -1,0 +1,735 @@
+{
+  "microciclos": [
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "1",
+      "nombre": "Criterio Profesional de Automatización de Pruebas",
+      "competencia_nombre": "Criterio profesional de automatización",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Seleccionar y priorizar escenarios automatizables considerando riesgo, repetición, estabilidad funcional, valor de negocio, esfuerzo técnico, mantenibilidad y cobertura de regresión.",
+      "capacidades_especificas": [
+        "Diferencia pruebas manuales, pruebas automatizadas y escenarios no recomendados para automatización, reconociendo el propósito y los límites de cada enfoque.",
+        "Aplica criterios de selección y priorización de escenarios automatizables según riesgo, repetición, estabilidad funcional y valor de negocio.",
+        "Elabora una estrategia inicial de automatización con escenarios priorizados, criterios de decisión, riesgos y cobertura esperada."
+      ],
+      "descripcion": "El criterio profesional de automatización de pruebas permite seleccionar y priorizar escenarios automatizables considerando riesgo, repetición, estabilidad funcional, valor de negocio, esfuerzo técnico, mantenibilidad y cobertura de regresión. Las principales temáticas por abordar son propósito de la automatización, automatización como apoyo a regresión y retroalimentación, criterios para decidir qué automatizar y qué no, riesgos de automatización (fragilidad, falsos positivos, falsos negativos, deuda técnica), cobertura automatizable, estabilidad funcional y valor de negocio, y estrategia inicial de automatización.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Aseguramiento de la calidad (QUAS), aplicando y manteniendo procedimientos de calidad dentro de un área definida, y Gestión y definición de requisitos (REQM), interpretando requerimientos y criterios de aceptación para derivar condiciones de prueba.",
+      "perfil_ingreso_requisitos": [
+        "El Ciclo de Educación General Básica aprobado o equivalente.",
+        "Python Foundations o competencia equivalente validada por diagnóstico.",
+        "Técnico Ágil en Pruebas Manuales de Software o competencias equivalentes homologables por experiencia o diagnóstico.",
+        "Dominio básico previo de programación; no se enseña programación desde cero.",
+        "Conocimiento previo de fundamentos de pruebas, casos de prueba, defectos, evidencia, APIs manuales y regresión.",
+        "Manejo básico de sistema operativo, navegador, archivos, terminal básica, documentos colaborativos y plataformas virtuales."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Propósito y beneficios de la automatización",
+          "subtemas": [
+            "Propósito de la automatización de pruebas",
+            "Automatización como apoyo a regresión, repetibilidad y retroalimentación",
+            "Diferencias entre pruebas manuales y automatizadas",
+            "Beneficios de la automatización en ciclos de retroalimentación continua"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Criterios de selección y cobertura",
+          "subtemas": [
+            "Criterios para decidir qué automatizar y qué no automatizar",
+            "Cobertura automatizable, estabilidad funcional y valor de negocio",
+            "Priorización de escenarios según riesgo, repetición y valor",
+            "Matriz de automatización como herramienta de selección"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Riesgos de automatización",
+          "subtemas": [
+            "Riesgos de automatización: fragilidad, falsos positivos, falsos negativos y deuda técnica",
+            "Identificación de escenarios no recomendados para automatización",
+            "Impacto de la fragilidad en el mantenimiento de suites"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Estrategia inicial de automatización",
+          "subtemas": [
+            "Estrategia inicial de automatización",
+            "Elaboración de estrategia para un contexto definido",
+            "Justificación técnica de decisiones de automatización"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "2",
+      "nombre": "Python Aplicado a Automatización de Pruebas",
+      "competencia_nombre": "Python aplicado a automatización",
+      "habilidad_sfia": {
+        "nombre": "Programación/Desarrollo de software (PROG)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Construir componentes reutilizables de automatización utilizando programación aplicada, estructuras modulares, manejo de errores, archivos, configuración, dependencias y buenas prácticas de legibilidad.",
+      "capacidades_especificas": [
+        "Construye funciones, módulos y utilidades reutilizables para pruebas automatizadas, aplicando organización modular del código.",
+        "Maneja excepciones y mensajes diagnósticos en la ejecución automatizada, controlando errores y facilitando la depuración.",
+        "Organiza un proyecto técnico básico con dependencias, configuración inicial y documentación mínima, aplicando convenciones de legibilidad."
+      ],
+      "descripcion": "La aplicación de Python a la automatización de pruebas permite construir componentes reutilizables mediante estructuras modulares, manejo de errores, archivos, configuración, dependencias y buenas prácticas de legibilidad. Las principales temáticas por abordar son reutilización de funciones y utilidades, organización modular del código, manejo de excepciones y mensajes técnicos, lectura de archivos estructurados, dependencias, ambientes y configuración inicial, y legibilidad, convenciones y documentación mínima.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Programación/Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts simples; aplican estándares y herramientas acordados para lograr un resultado bien diseñado; y revisan su propio trabajo. Adicionalmente, se abordan de manera complementaria las áreas de Métodos y herramientas (METL), configurando y documentando herramientas de desarrollo y dependencias, y Pruebas (TEST), diseñando y ejecutando pruebas unitarias básicas sobre las utilidades construidas.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  1: Criterio Profesional de Automatización de Pruebas."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Reutilización y organización modular",
+          "subtemas": [
+            "Reutilización de funciones y utilidades",
+            "Organización modular del código",
+            "Creación de utilidades para validación",
+            "Organización de módulos de prueba"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Manejo de errores y datos estructurados",
+          "subtemas": [
+            "Manejo de excepciones y mensajes técnicos",
+            "Lectura de archivos estructurados",
+            "Manejo de errores controlados en ejecución automatizada",
+            "Procesamiento de datos externos"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Dependencias, ambientes y configuración",
+          "subtemas": [
+            "Dependencias, ambientes y configuración inicial",
+            "Configuración inicial de proyecto técnico",
+            "Gestión de dependencias para pruebas"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Legibilidad y documentación",
+          "subtemas": [
+            "Legibilidad, convenciones y documentación mínima",
+            "Convenciones de código aplicadas a pruebas",
+            "Documentación mínima de utilidades"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "3",
+      "nombre": "Automatización de Pruebas con Pytest",
+      "competencia_nombre": "Automatización de pruebas con Pytest",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Construir suites automatizadas utilizando un framework de ejecución de pruebas, aplicando aserciones, preparación de contexto, parametrización, organización modular y ejecución controlada.",
+      "capacidades_especificas": [
+        "Crea pruebas automatizadas con estructura clara, aplicando aserciones y mensajes diagnósticos para validar resultados esperados.",
+        "Aplica mecanismos de preparación y limpieza de contexto, así como parametrización para ejecutar múltiples escenarios.",
+        "Organiza suites ejecutables por criterio técnico o funcional, aplicando ejecución selectiva e interpretación de resultados."
+      ],
+      "descripcion": "La automatización de pruebas con Pytest permite construir suites automatizadas aplicando aserciones, preparación de contexto, parametrización, organización modular y ejecución controlada. Las principales temáticas por abordar son estructura de pruebas automatizadas, aserciones y mensajes diagnósticos, preparación y limpieza del contexto de prueba, parametrización de escenarios, clasificación y ejecución selectiva de pruebas, y organización de suites por propósito, criticidad o tipo de prueba.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba, crean scripts y datos de ensayo, y automatizan tareas repetibles trabajando según los requisitos o las especificaciones establecidas; definen las condiciones de prueba para determinados requisitos; ejecutan y registran pruebas manuales y automatizadas de acuerdo con los planes de prueba; y preparan análisis e informes sobre actividades, resultados, problemas y riesgos. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), escribiendo el código de las pruebas, y Métodos y herramientas (METL), configurando y documentando el framework de ejecución.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  2: Python Aplicado a Automatización de Pruebas."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Estructura y aserciones",
+          "subtemas": [
+            "Estructura de pruebas automatizadas",
+            "Aserciones y mensajes diagnósticos",
+            "Validación de resultados esperados",
+            "Mensajes claros para diagnóstico de fallos"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Preparación y parametrización",
+          "subtemas": [
+            "Preparación y limpieza del contexto de prueba",
+            "Parametrización de escenarios",
+            "Reutilización de mecanismos de preparación",
+            "Ejecución de múltiples escenarios con datos"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Clasificación y ejecución selectiva",
+          "subtemas": [
+            "Clasificación y ejecución selectiva de pruebas",
+            "Ejecución por criterio técnico o funcional",
+            "Interpretación de resultados de ejecución"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Organización de suites",
+          "subtemas": [
+            "Organización de suites por propósito, criticidad o tipo de prueba",
+            "Agrupación de pruebas por criticidad",
+            "Suites ejecutables por tipo de prueba"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "4",
+      "nombre": "Datos de Prueba, Configuración y Ambientes",
+      "competencia_nombre": "Gestión de datos y configuración de pruebas",
+      "habilidad_sfia": {
+        "nombre": "Métodos y herramientas (METL)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Gestionar datos de prueba, parametrización, configuración por ambiente, variables, credenciales y aislamiento de datos para pruebas automatizadas.",
+      "capacidades_especificas": [
+        "Diseña datos de prueba válidos, inválidos, borde y combinados, separando los datos de la lógica de automatización.",
+        "Configura parámetros de ejecución por ambiente, gestionando variables, credenciales y datos sensibles de forma responsable.",
+        "Aplica criterios de aislamiento, limpieza y reutilización de datos para reducir dependencias entre pruebas y asegurar estabilidad de ejecución."
+      ],
+      "descripcion": "La gestión de datos de prueba, configuración y ambientes permite separar datos de la lógica de automatización, configurar parámetros por ambiente, manejar credenciales y datos sensibles de forma responsable, y reducir dependencias entre pruebas mediante aislamiento de datos. Las principales temáticas por abordar son diseño de datos de prueba, datos externos y parametrización, configuración por ambiente, variables, credenciales y datos sensibles, aislamiento, limpieza y reutilización de datos, y dependencias de datos y estabilidad de ejecución.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Métodos y herramientas (METL), nivel inicial de esta habilidad en SFIA 8. En este nivel, los estudiantes brindan apoyo en el uso de métodos y herramientas existentes, configuran métodos y herramientas dentro de un contexto conocido, y crean y actualizan la documentación de métodos y herramientas. Adicionalmente, se abordan de manera complementaria las áreas de Pruebas (TEST), diseñando datos y escenarios de prueba de complejidad moderada, y Seguridad de la información (SCTY), aplicando manejo seguro de credenciales y protección de datos sensibles.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  3: Automatización de Pruebas con Pytest."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Diseño de datos de prueba",
+          "subtemas": [
+            "Diseño de datos de prueba",
+            "Datos válidos, inválidos, borde y combinados",
+            "Separación de datos y lógica"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Datos externos y parametrización",
+          "subtemas": [
+            "Datos externos y parametrización",
+            "Parametrización con archivos externos",
+            "Ejecución de pruebas con distintos datos"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Configuración y credenciales",
+          "subtemas": [
+            "Configuración por ambiente",
+            "Variables, credenciales y datos sensibles",
+            "Manejo responsable de datos sensibles",
+            "Configuración de parámetros de ejecución"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Aislamiento y estabilidad",
+          "subtemas": [
+            "Aislamiento, limpieza y reutilización de datos",
+            "Dependencias de datos y estabilidad de ejecución",
+            "Reducción de dependencias entre pruebas",
+            "Análisis de fallos asociados a datos"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "5",
+      "nombre": "Framework Base de Automatización",
+      "competencia_nombre": "Framework base de automatización",
+      "habilidad_sfia": {
+        "nombre": "Programación/Desarrollo de software (PROG)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Organizar un framework básico de automatización mediante estructura de carpetas, utilidades reutilizables, convenciones, separación de capas y documentación técnica inicial.",
+      "capacidades_especificas": [
+        "Diseña una estructura base para una solución de automatización, separando pruebas, datos, configuración, utilidades y reportes.",
+        "Aplica convenciones de nombres y organización, incorporando componentes reutilizables y configuración centralizada.",
+        "Documenta la instalación, ejecución y estructura del proyecto, aplicando criterios básicos de mantenibilidad y separación de responsabilidades."
+      ],
+      "descripcion": "La organización de un framework base de automatización permite estructurar una solución mantenible mediante separación de responsabilidades, convenciones, utilidades reutilizables, configuración centralizada y documentación técnica inicial. Las principales temáticas por abordar son estructura base de un proyecto de automatización, separación de responsabilidades, convenciones de nombres y organización, utilidades comunes y componentes reutilizables, configuración centralizada, documentación técnica mínima, y criterios básicos de mantenibilidad.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Programación/Desarrollo de software (PROG). En este nivel, los estudiantes diseñan, codifican, verifican, prueban, documentan, modifican y refactorizan programas/scripts de complejidad moderada; aplican estándares y herramientas acordados; monitorean e informan sobre el progreso; identifican problemas y proponen soluciones prácticas; y colaboran en revisiones de trabajo con otros. Adicionalmente, se abordan de manera complementaria las áreas de Métodos y herramientas (METL), configurando y documentando el framework, y Gestión de la configuración (CFMG), aplicando control de versiones y organización de artefactos.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  4: Datos de Prueba, Configuración y Ambientes."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Estructura base y separación de responsabilidades",
+          "subtemas": [
+            "Estructura base de un proyecto de automatización",
+            "Separación de responsabilidades",
+            "Diseño de estructura de carpetas",
+            "Separación de pruebas, datos, configuración y reportes"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Convenciones y componentes reutilizables",
+          "subtemas": [
+            "Convenciones de nombres y organización",
+            "Utilidades comunes y componentes reutilizables",
+            "Aplicación de convenciones de nombres",
+            "Incorporación de utilidades comunes"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Configuración y documentación técnica",
+          "subtemas": [
+            "Configuración centralizada",
+            "Documentación técnica mínima",
+            "Documentación de instalación y ejecución",
+            "Configuración centralizada del proyecto"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Criterios de mantenibilidad",
+          "subtemas": [
+            "Criterios básicos de mantenibilidad",
+            "Refactorización básica",
+            "Revisión de mantenibilidad",
+            "Reorganización de suites desestructuradas"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "6",
+      "nombre": "Automatización Funcional Web",
+      "competencia_nombre": "Automatización funcional web",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "2"
+      },
+      "competencia_especifica": "Automatizar flujos funcionales web utilizando localizadores, acciones de usuario, navegación, formularios, esperas, validaciones y evidencia básica de ejecución.",
+      "capacidades_especificas": [
+        "Identifica elementos de interfaz mediante estrategias de localización, automatizando acciones de usuario en flujos funcionales.",
+        "Aplica esperas y sincronización para estabilizar ejecuciones, validando resultados visibles, mensajes, estados y navegación.",
+        "Genera evidencia básica de ejecución automatizada, documentando resultados y comportamiento de los flujos web automatizados."
+      ],
+      "descripcion": "La automatización funcional web permite automatizar flujos funcionales mediante localizadores, acciones de usuario, navegación, formularios, esperas, validaciones y evidencia básica de ejecución. Las principales temáticas por abordar son automatización funcional de interfaces web, localizadores y selectores, acciones de usuario y navegación, formularios, mensajes y validaciones, esperas, sincronización y estabilidad, y evidencia técnica básica de ejecución.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 2 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba, crean scripts y datos de ensayo, y automatizan tareas repetibles trabajando según los requisitos o las especificaciones establecidas; definen condiciones de prueba para determinados requisitos; ejecutan y registran pruebas manuales y automatizadas de acuerdo con los planes de prueba; y preparan análisis e informes sobre actividades, resultados, problemas y riesgos. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), escribiendo los scripts de automatización, y Métodos y herramientas (METL), configurando y documentando herramientas de automatización web.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  5: Framework Base de Automatización."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Automatización funcional de interfaces web",
+          "subtemas": [
+            "Automatización funcional de interfaces web",
+            "Automatización de flujos funcionales web",
+            "Validación de resultados visibles"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Localizadores y acciones de usuario",
+          "subtemas": [
+            "Localizadores y selectores",
+            "Acciones de usuario y navegación",
+            "Estrategias de localización de elementos",
+            "Automatización de navegación web"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Formularios, mensajes y validaciones",
+          "subtemas": [
+            "Formularios, mensajes y validaciones",
+            "Validación de mensajes y resultados",
+            "Automatización de formularios"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Esperas, sincronización y evidencia",
+          "subtemas": [
+            "Esperas, sincronización y estabilidad",
+            "Evidencia técnica básica de ejecución",
+            "Manejo de esperas para estabilidad",
+            "Registro de evidencia de ejecución"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "7",
+      "nombre": "Automatización Web Mantenible",
+      "competencia_nombre": "Automatización web mantenible",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Mejorar suites web automatizadas aplicando patrones básicos de diseño, componentes reutilizables, manejo de fallos, refactorización, selectores robustos y reducción de fragilidad.",
+      "capacidades_especificas": [
+        "Identifica fragilidad en pruebas automatizadas web, aplicando separación de responsabilidades y encapsulamiento de páginas, componentes o acciones reutilizables.",
+        "Refactoriza pruebas web para mejorar legibilidad y mantenimiento, mejorando selectores y reduciendo duplicación.",
+        "Analiza fallos distinguiendo entre defecto de producto, dato, ambiente o automatización, documentando decisiones de diseño y generando evidencia técnica."
+      ],
+      "descripcion": "La automatización web mantenible permite mejorar suites automatizadas aplicando patrones básicos de diseño, componentes reutilizables, manejo de fallos, refactorización, selectores robustos y reducción de fragilidad. Las principales temáticas por abordar son fragilidad en pruebas web automatizadas, separación de responsabilidades, patrones básicos para interacción web mantenible, componentes reutilizables, refactorización básica, y manejo de fallos y reducción de intermitencia.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), refactorizando y estructurando el código de las pruebas, y Métodos y herramientas (METL), configurando y documentando las herramientas y patrones de automatización.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  6: Automatización Funcional Web."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Fragilidad en pruebas web",
+          "subtemas": [
+            "Fragilidad en pruebas web automatizadas",
+            "Identificación de pruebas frágiles",
+            "Análisis de causas de fragilidad"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Separación de responsabilidades y patrones",
+          "subtemas": [
+            "Separación de responsabilidades",
+            "Patrones básicos para interacción web mantenible",
+            "Aplicación de patrones de diseño básicos",
+            "Encapsulación de páginas o acciones"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Componentes reutilizables y refactorización",
+          "subtemas": [
+            "Componentes reutilizables",
+            "Refactorización básica",
+            "Mejora de legibilidad y mantenimiento",
+            "Refactorización de pruebas web"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Manejo de fallos y reducción de intermitencia",
+          "subtemas": [
+            "Manejo de fallos y reducción de intermitencia",
+            "Distinción entre defecto, dato, ambiente o automatización",
+            "Documentación de decisiones de diseño"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "8",
+      "nombre": "Automatización de APIs y Servicios",
+      "competencia_nombre": "Automatización de pruebas de APIs",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Automatizar pruebas de APIs y servicios validando métodos, parámetros, códigos de respuesta, estructuras de datos, autenticación básica, errores, reglas de negocio y escenarios positivos y negativos.",
+      "capacidades_especificas": [
+        "Automatiza solicitudes a servicios y APIs, validando códigos de respuesta, estructuras de datos y encabezados.",
+        "Automatiza escenarios positivos, negativos y casos borde, validando reglas de negocio a nivel de servicio.",
+        "Integra datos de prueba y autenticación básica en pruebas automatizadas, interpretando fallos en servicios y documentando evidencia técnica."
+      ],
+      "descripcion": "La automatización de pruebas de APIs y servicios permite validar métodos, parámetros, códigos de respuesta, estructuras de datos, autenticación básica, errores, reglas de negocio y escenarios positivos y negativos. Las principales temáticas por abordar son fundamentos técnicos de APIs para automatización, solicitudes, parámetros, encabezados y cuerpos de petición, validación de códigos de respuesta, validación de estructuras de datos, escenarios positivos, negativos y borde, autenticación y autorización básica, y validación de reglas de negocio.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), escribiendo los scripts de automatización de servicios, y Métodos y herramientas (METL), configurando y documentando las herramientas de pruebas de API.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  7: Automatización Web Mantenible."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Fundamentos técnicos de APIs",
+          "subtemas": [
+            "Fundamentos técnicos de APIs para automatización",
+            "Automatización de solicitudes a servicios",
+            "Interpretación de fallos en servicios"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Solicitudes y validación de respuestas",
+          "subtemas": [
+            "Solicitudes, parámetros, encabezados y cuerpos de petición",
+            "Validación de códigos de respuesta",
+            "Automatización de endpoints",
+            "Validación de respuestas"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Validación de datos y escenarios",
+          "subtemas": [
+            "Validación de estructuras de datos",
+            "Escenarios positivos, negativos y borde",
+            "Automatización de errores esperados"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Autenticación y reglas de negocio",
+          "subtemas": [
+            "Autenticación y autorización básica",
+            "Validación de reglas de negocio",
+            "Integración de datos de prueba y autenticación",
+            "Validación de reglas de negocio a nivel de servicio"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "9",
+      "nombre": "Reportes, Control de Versiones e Integración Continua Básica",
+      "competencia_nombre": "Integración continua de pruebas automatizadas",
+      "habilidad_sfia": {
+        "nombre": "Liberación e implementación (RELM)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Integrar suites automatizadas con reportes técnicos, evidencia, repositorio versionado, documentación colaborativa y ejecución en un flujo básico de integración continua.",
+      "capacidades_especificas": [
+        "Genera reportes técnicos de ejecución automatizada, interpretando resultados, fallos, errores técnicos y defectos potenciales.",
+        "Versiona una solución de automatización mediante control de versiones, documentando instalación, ejecución y mantenimiento básico.",
+        "Configura una ejecución automatizada básica en integración continua, publicando o almacenando resultados y artefactos de ejecución."
+      ],
+      "descripcion": "La integración de suites automatizadas con reportes, control de versiones e integración continua básica permite construir un ciclo completo de ejecución, evidencia y retroalimentación técnica. Las principales temáticas por abordar son reportes de ejecución y evidencia automatizada, análisis de fallos y clasificación de causas, control de versiones aplicado a automatización, repositorio, ramas, commits y revisión básica, documentación técnica colaborativa, integración continua básica, y artefactos de ejecución y resultados.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Liberación e implementación (RELM). En este nivel, los estudiantes aplican herramientas y técnicas estándar para construir, probar y desplegar componentes, participan en la mejora de los procesos de liberación y colaboran en la automatización de pipelines. Adicionalmente, se abordan de manera complementaria las áreas de Métodos y herramientas (METL), configurando y documentando las herramientas de reporte y CI, Gestión de la configuración (CFMG), aplicando control de versiones y organización de artefactos, y Pruebas (TEST), analizando resultados y fallos.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  8: Automatización de APIs y Servicios."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Reportes y análisis de fallos",
+          "subtemas": [
+            "Reportes de ejecución y evidencia automatizada",
+            "Análisis de fallos y clasificación de causas",
+            "Generación de reportes técnicos",
+            "Interpretación de resultados y defectos potenciales"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Control de versiones",
+          "subtemas": [
+            "Control de versiones aplicado a automatización",
+            "Repositorio, ramas, commits y revisión básica",
+            "Versionamiento de código",
+            "Organización de repositorio"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Documentación técnica colaborativa",
+          "subtemas": [
+            "Documentación técnica colaborativa",
+            "Documentación de instalación, ejecución y mantenimiento",
+            "Documentación de repositorio"
+          ]
+        },
+        {
+          "numero": "4",
+          "nombre": "Integración continua y artefactos",
+          "subtemas": [
+            "Integración continua básica",
+            "Artefactos de ejecución y resultados",
+            "Configuración de ejecución automatizada",
+            "Publicación o almacenamiento de resultados"
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": " ",
+      "semanas": "4",
+      "horas_semanales": "6",
+      "horas_lectivas": "24",
+      "numero": "10",
+      "nombre": "Proyecto Integrador de Automatización de Pruebas de Software",
+      "competencia_nombre": "Proyecto integrador de automatización de pruebas",
+      "habilidad_sfia": {
+        "nombre": "Pruebas (TEST)",
+        "nivel_sfia": "3"
+      },
+      "competencia_especifica": "Construir y defender una solución básica de automatización de pruebas sobre un caso empresarial simulado, integrando estrategia, pruebas web, pruebas de APIs, datos, configuración, reportes, repositorio, documentación e integración continua básica.",
+      "capacidades_especificas": [
+        "Define la estrategia de automatización para un caso empresarial simulado, estableciendo alcance, objetivos, riesgos y escenarios seleccionados.",
+        "Construye una solución de automatización con pruebas funcionales web y de APIs, integrando datos, configuración, reportes, control de versiones y ejecución automatizada.",
+        "Defiende decisiones técnicas, limitaciones, resultados y oportunidades de mejora, documentando la solución técnica y sus instrucciones de uso."
+      ],
+      "descripcion": "El Proyecto Integrador de Automatización de Pruebas de Software permite consolidar las competencias del Path mediante el diseño, construcción, documentación y defensa de una solución básica de automatización sobre un caso empresarial simulado. Las principales temáticas por abordar son contexto empresarial, estrategia de automatización, pruebas web, pruebas de APIs, datos de prueba, solución técnica, reportes, control de versiones, integración continua básica, y defensa técnica.<br><br>El curso está diseñado por competencias y alineado con el marco global de habilidades y competencias para un mundo digital SFIA8, por lo que se propone que los estudiantes logren responder a un nivel de responsabilidad 3 en el área de Pruebas (TEST). En este nivel, los estudiantes diseñan casos de prueba y scripts de complejidad moderada, ejecutan y registran pruebas, analizan e informan sobre actividades, resultados, problemas y riesgos, y colaboran en la selección de enfoques, herramientas y técnicas. Adicionalmente, se abordan de manera complementaria las áreas de Programación/Desarrollo de software (PROG), construyendo la solución técnica, Métodos y herramientas (METL), configurando y documentando las herramientas del proyecto, y Liberación e implementación (RELM), integrando la ejecución en un flujo básico de CI.",
+      "perfil_ingreso_requisitos": [
+        "Haber aprobado el curso  9: Reportes, Control de Versiones e Integración Continua Básica."
+      ],
+      "relacion_empleabilidad": [
+        "QA Automation Engineer Junior",
+        "Automation Tester Junior",
+        "Test Automation Developer Junior",
+        "API Test Automation Junior",
+        "QA Engineer Junior con énfasis en automatización",
+        "Regression Automation Tester",
+        "Continuous Testing Assistant",
+        "SDET Trainee"
+      ],
+      "temas": [
+        {
+          "numero": "1",
+          "nombre": "Definición del caso, contexto y estrategia de automatización",
+          "subtemas": [
+            "Contexto empresarial",
+            "Estrategia de automatización",
+            "Alcance, objetivos y riesgos",
+            "Escenarios seleccionados y justificación"
+          ]
+        },
+        {
+          "numero": "2",
+          "nombre": "Construcción de la solución: pruebas web, APIs y datos",
+          "subtemas": [
+            "Pruebas web",
+            "Pruebas de APIs",
+            "Datos de prueba"
+          ]
+        },
+        {
+          "numero": "3",
+          "nombre": "Solución técnica, reportes, versiones e integración continua",
+          "subtemas": [
+            "Solución técnica",
+            "Reportes",
+            "Control de versiones",
+            "Integración continua básica"
+          ]
+        }
+      ]
+    }
+  ],
+  "herramientas": [],
+  "bibliografia": []
+}

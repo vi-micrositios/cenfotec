@@ -1,0 +1,112 @@
+[
+{
+"codigo_y_nombre": "XX Fundamentos de DevOps y Entrega Continua",
+"descripcion": "Comprender la cultura, los principios y las prácticas de DevOps y la entrega continua como base para la automatización, la colaboración y la mejora del flujo de valor.",
+"habilidades": "cultura y principios DevOps, origen de DevOps, cultura colaborativa, eliminación de silos, DevOps Agile y Lean, flujo de valor, mejora continua, integración y entrega continua, CI/CD, pipeline básico, automatización, feedback temprano y continuo, métricas DevOps, métricas de flujo, métricas de calidad",
+"habilidad_1": "Habilidad: Reconocer los principios culturales de DevOps para comprender su impacto en el flujo de valor.",
+"habilidad_2": "Habilidad: Relacionar DevOps con Agile y Lean identificando prácticas de mejora continua y feedback temprano aplicables al ciclo de entrega.",
+"habilidad_3": "Habilidad: Interpretar métricas de flujo y calidad para evaluar el desempeño del pipeline y fundamentar decisiones de mejora.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Métodos y herramientas (METL)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/METL"
+},
+{
+"codigo_y_nombre": "XX Prácticas DevOps y Toolchains",
+"descripcion": "Aplicar prácticas DevOps y toolchains para construir, validar, versionar y entregar software de forma automatizada, aplicando quality gates y estrategias de testing en pipelines.",
+"habilidades": "integración continua, builds automáticos, validaciones tempranas, errores tempranos, entrega continua, versionado, releases frecuentes, rollbacks, testing en pipelines, quality gates, testing automatizado, toolchains DevOps, integración de herramientas, orquestación, arquitectura orientada al flujo",
+"habilidad_1": "Habilidad: Implementar builds automáticos y validaciones tempranas para detectar errores en etapas iniciales del pipeline.",
+"habilidad_2": "Habilidad: Aplicar estrategias de testing y quality gates en pipelines para asegurar la calidad antes de la entrega.",
+"habilidad_3": "Habilidad: Integrar toolchains DevOps y criterios de arquitectura orientada al flujo para versionar, desplegar y habilitar rollbacks controlados.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Liberación e implementación (RELM)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/RELM"
+},
+{
+"codigo_y_nombre": "XX Observabilidad, Métricas y Confiabilidad",
+"descripcion": "Aplicar observabilidad, métricas de confiabilidad y gestión de incidentes para evaluar el comportamiento de sistemas, definir SLIs, SLOs y SLAs, y mejorar de forma basada en datos.",
+"habilidades": "observabilidad, logs, métricas, trazas, métricas de confiabilidad, disponibilidad, latencia, errores, SLIs SLOs y SLAs, definiciones, uso práctico, evaluación, gestión de incidentes, detección análisis y aprendizaje, mejora basada en datos",
+"habilidad_1": "Habilidad: Implementar observabilidad mediante logs, métricas y trazas para monitorear el comportamiento de sistemas en operación.",
+"habilidad_2": "Habilidad: Definir SLIs, SLOs y SLAs a partir de métricas de disponibilidad, latencia y errores para establecer objetivos de confiabilidad.",
+"habilidad_3": "Habilidad: Gestionar incidentes aplicando análisis post-mortem y acciones correctivas para prevenir recurrencias y mejorar de forma basada en datos.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Medición (MEAS)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/MEAS"
+},
+{
+"codigo_y_nombre": "XX Fundamentos de DevSecOps",
+"descripcion": "Comprender el enfoque DevSecOps, el panorama de amenazas, la seguridad como código y los roles y responsabilidades para integrar seguridad desde etapas tempranas del ciclo de vida.",
+"habilidades": "DevSecOps mindset, seguridad como responsabilidad compartida, shift-left security, panorama de amenazas, tipos de amenazas, riesgos comunes, impacto, seguridad como código, infraestructura, configuración, automatización, roles y responsabilidades, equipos, colaboración, gobierno",
+"habilidad_1": "Habilidad: Reconocer el mindset DevSecOps y el shift-left security para integrar seguridad desde etapas tempranas del ciclo de vida.",
+"habilidad_2": "Habilidad: Identificar tipos de amenazas, riesgos comunes y su impacto para fundamentar decisiones de seguridad en equipos técnicos.",
+"habilidad_3": "Habilidad: Distinguir roles, responsabilidades y prácticas de seguridad como código para promover una cultura de seguridad y mejora continua.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Ingeniería de seguridad (SFEN)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/SFEN"
+},
+{
+"codigo_y_nombre": "XX Seguridad Integrada en Pipelines CI/CD",
+"descripcion": "Integrar seguridad en pipelines CI/CD mediante puntos de control automatizados, análisis de vulnerabilidades, gestión de secretos, compliance automatizado y seguridad continua.",
+"habilidades": "seguridad en pipelines, puntos de control, automatización, análisis de vulnerabilidades, OWASP, CVE, CWE, gestión de secretos, credenciales, buenas prácticas, compliance automatizado, controles, evidencias, seguridad continua, monitoreo y respuesta",
+"habilidad_1": "Habilidad: Integrar puntos de control automatizados en pipelines CI/CD para detectar vulnerabilidades mediante análisis OWASP, CVE y CWE.",
+"habilidad_2": "Habilidad: Aplicar buenas prácticas de gestión de secretos y credenciales para proteger la información sensible en el pipeline.",
+"habilidad_3": "Habilidad: Implementar controles de compliance automatizado y monitoreo continuo de seguridad para asegurar evidencias y respuesta ante incidentes.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Seguridad de la información (SCTY)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/SCTY"
+},
+{
+"codigo_y_nombre": "XX Introducción a AIOps y Operaciones Inteligentes",
+"descripcion": "Comprender el rol de AIOps, su relación con DevOps y MLOps, y el uso de datos operativos, ML y GenAI en operaciones inteligentes.",
+"habilidades": "qué es AIOps, origen, necesidad, beneficios, relación AIOps-DevOps-MLOps, complementariedad, diferencias, datos operativos, logs, métricas, eventos, ML y GenAI en operaciones, casos de uso, automatización, detección temprana y optimización",
+"habilidad_1": "Habilidad: Reconocer el origen, la necesidad y los beneficios de AIOps para comprender su rol en operaciones inteligentes.",
+"habilidad_2": "Habilidad: Diferenciar AIOps de DevOps y MLOps, identificando su complementariedad y diferencias en contextos operativos.",
+"habilidad_3": "Habilidad: Identificar casos de uso de ML y GenAI en operaciones, así como fuentes de datos operativos para detección temprana y optimización.",
+"nivel_sfia": 2,
+"habilidad_area_conocimiento": "Machine learning (MLNG)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/MLNG"
+},
+{
+"codigo_y_nombre": "XX Datos, Métricas y ML para AIOps",
+"descripcion": "Preparar datos operativos, analizar y correlacionar eventos, aplicar detección de anomalías y evaluar resultados para fundamentar operaciones inteligentes.",
+"habilidades": "fuentes de datos operativos, sistemas, aplicaciones, infraestructura, preparación de datos, limpieza, normalización, análisis y correlación de eventos, patrones, relaciones, detección de anomalías, técnicas básicas, interpretación, evaluación de resultados, métricas y ajustes",
+"habilidad_1": "Habilidad: Preparar datos operativos provenientes de sistemas, aplicaciones e infraestructura mediante limpieza y normalización.",
+"habilidad_2": "Habilidad: Analizar y correlacionar eventos identificando patrones y relaciones para detectar anomalías con técnicas básicas.",
+"habilidad_3": "Habilidad: Evaluar resultados de detección de anomalías aplicando métricas y ajustes para fundamentar decisiones operativas.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Ingeniería de datos (DENG)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/DENG"
+},
+{
+"codigo_y_nombre": "XX Automatización Inteligente y AIOps en Producción",
+"descripcion": "Aplicar automatización reactiva y proactiva, integrar AIOps en pipelines, implementar observabilidad inteligente y considerar riesgos, ética y preparación organizacional.",
+"habilidades": "automatización reactiva y proactiva, respuesta automática, prevención, integración AIOps en pipelines, validación, feedback, observabilidad inteligente, alertas, predicción, riesgos y ética en AIOps, impacto, responsabilidad, preparación organizacional, procesos, personas",
+"habilidad_1": "Habilidad: Aplicar automatización reactiva y proactiva para respuesta automática y prevención de incidentes en producción.",
+"habilidad_2": "Habilidad: Integrar AIOps en pipelines mediante validaciones y feedback continuo, incorporando observabilidad inteligente con alertas y predicción.",
+"habilidad_3": "Habilidad: Considerar riesgos, ética y preparación organizacional en la adopción de AIOps en producción.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Machine learning (MLNG)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/MLNG"
+},
+{
+"codigo_y_nombre": "XX Integración DevOps, DevSecOps y AIOps para Software e IA",
+"descripcion": "Integrar DevOps, DevSecOps y AIOps en pipelines unificados para software tradicional y software con IA, aplicando testing como quality gate, seguridad en datos y modelos, monitoreo y gobernanza operativa.",
+"habilidades": "pipelines integrados, software tradicional, software con IA, testing como quality gate, automatización, validación continua, seguridad en datos y modelos, protección, riesgos, monitoreo de aplicaciones y modelos, métricas, alertas, gobernanza operativa, evidencias y control",
+"habilidad_1": "Habilidad: Integrar pipelines unificados DevOps, DevSecOps y AIOps para software tradicional y software con IA, considerando sus diferencias.",
+"habilidad_2": "Habilidad: Aplicar testing como quality gate y validación continua para asegurar la calidad en pipelines integrados.",
+"habilidad_3": "Habilidad: Implementar seguridad en datos y modelos, monitoreo de aplicaciones y modelos, y gobernanza operativa mediante evidencias y control.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+},
+{
+"codigo_y_nombre": "XX Proyecto Integrador DevOps, DevSecOps & AIOps",
+"descripcion": "Diseñar, implementar, evaluar y defender un pipeline integrado de DevOps, DevSecOps y AIOps para un sistema de software o IA, aplicando automatización, testing, seguridad, observabilidad y gobernanza operativa.",
+"habilidades": "análisis del sistema, alcance, riesgos, diseño del pipeline, CI/CD, seguridad, observabilidad, implementación, automatización, testing, monitoreo, evaluación y mejora, métricas, resultados, defensa técnica",
+"habilidad_1": "Habilidad: Diseñar un pipeline integrado analizando el sistema, su alcance, riesgos y componentes CI/CD, seguridad y observabilidad.",
+"habilidad_2": "Habilidad: Implementar la automatización, testing, monitoreo y controles de seguridad del pipeline integrado para un sistema de software o IA.",
+"habilidad_3": "Habilidad: Evaluar y defender el pipeline mediante métricas, resultados, documentación y presentación técnica ante audiencia.",
+"nivel_sfia": 3,
+"habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+"link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+}
+]

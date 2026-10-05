@@ -1,0 +1,34 @@
+1. Temáticas (Palabras clave del programa profesional):
+Hace referencia a conocimientos que se obtienen en el curso. Ejemplo: (Virtualización, Redes, Sistemas Operativos, etc)
+
+2. Descripción del Técnico:  (Párrafo que describe las competencias del técnico y la necesidad del mercado)
+"Seleccione entre:El Técnico Ágil en automatización de pruebas de software - Esepcialista en Automatización que ofrece la Universidad Cenfotec está diseñado para desarrollar las habilidades necesarias en el diseño, ejecución y personalización de pruebas de productos de software, utilizando herramientas de automatización, con el fin de mejorar los procesos de calidad en las empresas de desarrollo de software y que así, sus productos cumplan con los estándares de calidad y rendimiento que el usuario de hoy espera."
+
+3. Mensaje Comercial(Razones por la cual es importante este programa)
+Ejemplo: La automatización de pruebas disminuye los costos del negocio, al disminuir la cantidad de defectos de los productos de software Los procesos automatizados de pruebas se han convertido, hoy en día, en una necesidad, especialmente para las empresas que desarrollan aplicaciones intensivas en datos. El énfasis dado a la integración continua y a Dev-Ops ha generado una mayor demanda de profesionales con conocimiento de automatización de pruebas."
+
+4. Palabras clave (Separadas por coma)"		"
+Sugerencia: Elegir palabras clave que faciliten la búsqueda en páginas web"
+
+5. Perfil de Ingreso
+(En prosa, requisitos mínimos para cursar el programa)"		"Ejemplo:
+Tercer Ciclo Educación General Básica"
+
+6. Perfil de Salida
+(En prosa de qué es capaz la persona que lo cursó, tipo Marketing)"		"Ejemplo:
+Los egresados de este programa estarán capacitados para roles en desarrollo de software, análisis de datos y aplicaciones de inteligencia artificial, incluyendo deep learning y visión por computadora. Con sólidas habilidades en Python y un entendimiento de la ética en tecnología, podrán contribuir en sectores como TI, salud, finanzas y educación. Estarán preparados para roles que requieren tanto habilidades técnicas como de colaboración, adaptándose a equipos multidisciplinarios y liderando iniciativas de transformación digital."
+
+7. Perfil Ocupacional (Qué roles puede tener la persona en una empresa al finalizar el programa)"		
+Ejemplo:
+Desarrolladores
+Web Developer
+Web Designer
+Desarrollador web
+Desarrolladores Junior
+JavaScript Developer
+Full Stack JavaScript Developer
+Back End Developer"
+
+8. Duración
+( Total en meses, un período son 5 semanas en total. [4 de lecciones + 1 de matrícula] )
+Ejemplo: 10 meses.

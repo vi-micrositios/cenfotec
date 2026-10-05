@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Formulario responsivo con Bootstrap</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-formulario-responsivo-bootstrap">
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-wpforms"></i>
+            </span>
+
+            <h3 id="ejercicio-formulario-responsivo-bootstrap"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Ejercicio: Formulario responsivo con Bootstrap
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+            <strong>Objetivo:</strong>
+            Diseñar y desarrollar un <strong>formulario web responsivo</strong> utilizando
+            <strong>Bootstrap</strong>, aplicando el sistema de <strong>filas y columnas
+                (Grid)</strong>, los <strong>componentes de formulario</strong> del
+            framework y sus <strong>clases de validación</strong> para ofrecer
+            mensajes claros y significativos al usuario.
+
+
+        </div>
+
+        <!-- ORGANIZACIÓN -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-users" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+
+                Contexto
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Seleccionar <strong>uno de los tipos de formulario</strong> disponibles
+                de acuerdo con las necesidades del cliente de SICEN.
+
+            </p>
+        </div>
+
+
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+
+                Definir la estructura del formulario
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Antes de comenzar a escribir el código, determine qué campos tendrá
+                el formulario, cómo se agruparán y en qué orden aparecerán.
+                Un formulario bien estructurado guía al usuario paso a paso.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-sitemap" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    El formulario debe considerar
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>Una estructura general organizada mediante <strong>container</strong>.</li>
+
+                    <li>Una agrupación lógica de campos en <strong>secciones</strong>
+                        (por ejemplo: datos personales, datos de contacto, credenciales).</li>
+
+                    <li>Uso de <strong>&lt;fieldset&gt;</strong> y <strong>&lt;legend&gt;</strong>
+                        para delimitar grupos cuando corresponda.</li>
+
+                    <li>Etiquetas <strong>&lt;label for="…"&gt;</strong> asociadas a cada control.</li>
+
+                    <li>Un orden visual y lógico: primero lo simple, luego lo detallado.</li>
+
+                    <li>Jerarquía clara entre títulos de sección, etiquetas, campos
+                        y mensajes de ayuda o error.</li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Nota:</strong>
+                    La próxima semana se ajustará ese formulario para que pueda adaptarse
+                    a diferentes tamaños de pantalla y para validar los datos del lado del cliente.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- PARTE III -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+
+                Utilizar el sistema de Grid de Bootstrap en el formulario
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                La distribución de los campos dentro del formulario debe resolverse
+                utilizando el sistema de grillas de <strong>Bootstrap</strong>.
+                No se debe resolver el diseño usando únicamente CSS personalizado.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-table-columns" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Requisitos del Grid
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>Utilizar <strong>container</strong> o <strong>container-fluid</strong>.</li>
+
+                    <li>Utilizar al menos <strong>3 filas (row)</strong> dentro del formulario.</li>
+
+                    <li>Utilizar columnas de Bootstrap para organizar los campos
+                        (<strong>col-*</strong>).</li>
+
+                    <li>Utilizar al menos una combinación diferente a <strong>col-12</strong>
+                        (por ejemplo <strong>col-md-6</strong> o <strong>col-lg-4</strong>).</li>
+
+                    <li>Utilizar clases de espaciado de Bootstrap cuando sean apropiadas,
+                        como <strong>mb-3</strong>, <strong>p-*</strong> o <strong>g-*</strong>.</li>
+
+                    <li>Utilizar clases de alineación cuando sean necesarias
+                        (por ejemplo <strong>align-items-end</strong> para alinear un botón
+                        con un campo).</li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px;">
+
+                <strong>Resultado esperado:</strong>
+                un formulario cuya estructura principal sea reconociblemente construida
+                mediante el sistema de Grid de Bootstrap y se adapte a distintos
+                anchos de pantalla.
+
+            </div>
+
+        </div>
+
+        <!-- PARTE IV -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-3" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+
+                Incorporar componentes de formulario de Bootstrap
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                Además del sistema de Grid, el formulario debe utilizar los
+                <strong>componentes de formulario</strong> que Bootstrap ofrece.
+                No es necesario usar todos; seleccione los que aporten valor
+                al tipo de formulario elegido.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-cubes" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Componentes sugeridos
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>
+                        <strong>Form controls:</strong>
+                        <em>form-control</em>, <em>form-control-lg</em>, <em>form-control-sm</em>
+                        para campos de texto, correo, contraseña y área de texto.
+                    </li>
+
+                    <li>
+                        <strong>Select:</strong>
+                        <em>form-select</em> para listas desplegables (país, categoría, tipo de solicitud).
+                    </li>
+
+                    <li>
+                        <strong>Checks &amp; radios:</strong>
+                        <em>form-check</em>, <em>form-check-input</em>, <em>form-check-label</em>
+                        para opciones y aceptación de términos.
+                    </li>
+
+                    <li>
+                        <strong>Switches:</strong>
+                        <em>form-switch</em> para preferencias activables (por ejemplo, recibir notificaciones).
+                    </li>
+
+                    <li>
+                        <strong>Input group:</strong>
+                        <em>input-group</em> con <em>input-group-text</em> para prefijos
+                        (por ejemplo, <code>@</code> en un usuario o un ícono de correo).
+                    </li>
+
+                    <li>
+                        <strong>Floating labels:</strong>
+                        <em>form-floating</em> para mostrar la etiqueta dentro del campo
+                        cuando esté vacío y pequeña cuando tenga contenido.
+                    </li>
+
+                    <li>
+                        <strong>Buttons:</strong>
+                        <em>btn</em>, <em>btn-primary</em>, <em>btn-outline-secondary</em>
+                        para acciones principales y secundarias.
+                    </li>
+
+                    <li>
+                        <strong>Alerts:</strong>
+                        para mostrar mensajes generales de éxito o error tras el envío.
+                    </li>
+
+                    <li>
+                        <strong>Badges:</strong>
+                        para marcar campos opcionales, nuevos o recomendados.
+                    </li>
+
+                    <li>
+                        <strong>Tooltips / Popovers:</strong>
+                        para explicar campos que puedan generar dudas.
+                    </li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Importante:</strong>
+                    los componentes deben seleccionarse de acuerdo con la función
+                    del formulario. No se trata de colocar componentes únicamente
+                    para aumentar su cantidad, sino de utilizarlos cuando ayuden
+                    a capturar mejor los datos o a guiar al usuario.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- PARTE VI -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+                <i class="fa-solid fa-4" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+
+                Asegurar la responsividad del formulario
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+
+                El formulario debe verse bien y ser usable en <strong>móvil, tableta
+                    y escritorio</strong>. Bootstrap trabaja con un enfoque
+                <em>mobile-first</em>, por lo que las clases base aplican a pantallas
+                pequeñas y los prefijos <strong>sm</strong>, <strong>md</strong>,
+                <strong>lg</strong>, <strong>xl</strong> ajustan el diseño hacia
+                arriba.
+
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+
+                    <i class="fa-solid fa-mobile-screen-button" style="color: #00928d; margin-right: 6px;"
+                        aria-hidden="true"></i>
+
+                    Requisitos de responsividad
+                </p>
+
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+
+                    <li>En móvil, los campos deben apilarse (<strong>col-12</strong>).</li>
+
+                    <li>En tableta, agrupar en dos columnas (<strong>col-md-6</strong>).</li>
+
+                    <li>En escritorio, permitir hasta tres columnas cuando aplique
+                        (<strong>col-lg-4</strong>).</li>
+
+                    <li>Utilizar <strong>g-3</strong> o <strong>gx-*</strong> y
+                        <strong>gy-*</strong> para separar columnas y filas sin
+                        usar márgenes manuales.</li>
+
+                    <li>Los botones deben ocupar todo el ancho en móvil
+                        (<strong>w-100 w-md-auto</strong> o <strong>d-grid d-md-block</strong>).</li>
+
+                    <li>Los mensajes de validación deben permanecer visibles sin
+                        romper el layout en pantallas pequeñas.</li>
+
+                    <li>Verificar el resultado en al menos tres anchos distintos
+                        usando las herramientas de desarrollo del navegador.</li>
+
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+
+                    <strong>Importante:</strong>
+                    la responsividad no se limita al tamaño de los campos. También
+                    incluye el tamaño de las etiquetas, la separación entre bloques,
+                    el orden visual de las secciones y la facilidad para completar
+                    el formulario en pantallas táctiles.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

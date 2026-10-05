@@ -1,0 +1,134 @@
+[
+  {
+    "codigo_y_nombre": "SOFT-788 Fundamentos de bases de datos NoSQL",
+    "descripcion": "La persona acreditada es capaz de comprender el papel de los modelos NoSQL y sus diferencias con el modelo relacional, identificando casos de uso y criterios iniciales de selección.",
+    "habilidades": "Limitaciones del modelo relacional, Surgimiento de NoSQL, Datos modernos, Aplicaciones distribuidas, Flexibilidad de esquema, Datos estructurados, Datos semiestructurados, Datos no estructurados, SQL vs NoSQL, Consistencia, Escalabilidad, Casos de uso NoSQL, Catálogos, Perfiles, Sesiones",
+    "habilidad_1": "Reconocer las limitaciones del modelo relacional y el surgimiento de las bases NoSQL para responder a necesidades de flexibilidad, volumen y escalabilidad.",
+    "habilidad_2": "Identificar las características generales de los modelos NoSQL (documental, key-value, column-family y grafos) y sus casos de uso típicos.",
+    "habilidad_3": "Distinguir criterios iniciales de selección NoSQL según tipo de dato, patrón de acceso, consistencia y escalabilidad requerida.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-789 Modelos de datos NoSQL y selección tecnológica",
+    "descripcion": "La persona acreditada es capaz de seleccionar modelos de persistencia NoSQL según tipo de dato, patrón de acceso, escalabilidad, consistencia, costo y mantenibilidad.",
+    "habilidades": "Modelo documental, Modelo key-value, Modelo column-family, Grafos, Documentos, Colecciones, JSON, Estructuras anidadas, Clave, Valor, Acceso directo, Cache, Sesiones, Criterios de selección, Escalabilidad",
+    "habilidad_1": "Comparar los modelos documental, key-value, column-family y grafos según estructura de datos, consultas y contexto de aplicación.",
+    "habilidad_2": "Analizar casos empresariales o técnicos para determinar el modelo de persistencia más adecuado según requerimientos.",
+    "habilidad_3": "Elaborar una matriz de selección tecnológica que justifique la elección del modelo NoSQL a partir de criterios técnicos y organizacionales.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-790 Modelado documental y datos JSON",
+    "descripcion": "La persona acreditada es capaz de diseñar modelos documentales utilizando estructuras JSON, colecciones, documentos embebidos y referencias, de acuerdo con patrones de consulta y actualización.",
+    "habilidades": "Estructuras JSON, Objetos, Arreglos, Campos, Tipos de datos, Documentos anidados, Colecciones, Convenciones de diseño, Embebido vs referencia, Duplicación controlada, Relaciones entre documentos, Patrones de acceso, Consultas esperadas, Actualización de datos, Mantenibilidad",
+    "habilidad_1": "Diseñar estructuras JSON con objetos, arreglos y campos anidados para representar datos semiestructurados de una aplicación moderna.",
+    "habilidad_2": "Aplicar criterios de embebido o referencia según patrones de consulta, actualización y mantenibilidad del modelo.",
+    "habilidad_3": "Construir modelos documentales orientados a consultas, justificando decisiones de diseño y convenciones de colecciones.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-791 Operaciones documentales y CRUD",
+    "descripcion": "La persona acreditada es capaz de implementar operaciones de creación, consulta, actualización y eliminación de documentos en una base documental.",
+    "habilidades": "Creación de bases, Colecciones, Documentos, Inserción individual, Inserción múltiple, Consultas documentales, Filtros simples, Campos anidados, Operadores de comparación, Proyecciones, Actualización de documentos, Eliminación, Conteos, Validación de operaciones, Errores comunes",
+    "habilidad_1": "Implementar operaciones de creación de bases, colecciones y documentos aplicando validaciones básicas.",
+    "habilidad_2": "Ejecutar consultas, actualizaciones y eliminaciones documentales utilizando filtros, proyecciones y operadores de comparación.",
+    "habilidad_3": "Validar resultados de operaciones CRUD mediante conteos y control de errores comunes en una base documental.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-792 Consultas avanzadas, agregaciones e índices documentales",
+    "descripcion": "La persona acreditada es capaz de construir consultas documentales avanzadas, agregaciones e índices básicos para recuperar y analizar datos semiestructurados de forma eficiente.",
+    "habilidades": "Consultas avanzadas, Condiciones múltiples, Operadores lógicos, Consultas sobre arreglos, Campos anidados, Agregaciones, Agrupamientos, Filtros en pipelines, Proyecciones, Cálculos, Ordenamientos, Índices documentales, Índices simples, Índices compuestos, Reportes operativos",
+    "habilidad_1": "Construir consultas documentales avanzadas con condiciones múltiples, operadores lógicos y acceso a campos anidados y arreglos.",
+    "habilidad_2": "Aplicar pipelines de agregación para generar agrupamientos, cálculos, filtros y reportes operativos.",
+    "habilidad_3": "Implementar índices simples y compuestos, evaluando su impacto en el rendimiento de las consultas documentales.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-793 Bases key-value y patrones de acceso rápido",
+    "descripcion": "La persona acreditada es capaz de aplicar modelos key-value para resolver necesidades de acceso rápido, almacenamiento temporal, caché, sesiones y estructuras simples de baja latencia.",
+    "habilidades": "Fundamentos key-value, Clave, Valor, Operaciones básicas, Lectura directa, Escritura directa, Cache, Sesiones, Tokens, Preferencias, Contadores, TTL, Listas, Conjuntos, Mapas",
+    "habilidad_1": "Reconocer el funcionamiento del modelo key-value y sus operaciones básicas de lectura y escritura directa.",
+    "habilidad_2": "Aplicar estructuras key-value como TTL, listas, conjuntos, mapas y contadores para resolver necesidades de acceso rápido.",
+    "habilidad_3": "Implementar patrones básicos de caching (cache-aside, invalidación) en casos de sesiones, tokens o datos temporales.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-794 Fundamentos de datos distribuidos",
+    "descripcion": "La persona acreditada es capaz de comprender los principios básicos de distribución de datos, replicación, particionamiento, disponibilidad, tolerancia a fallos y escalabilidad horizontal.",
+    "habilidades": "Escalabilidad vertical, Escalabilidad horizontal, Crecimiento de datos, Replicación, Copias de datos, Disponibilidad, Tolerancia a fallos, Lectura desde réplicas, Particionamiento, Sharding, Claves de partición, Particiones calientes, Latencia, Fallos parciales, Continuidad de servicio",
+    "habilidad_1": "Reconocer los principios de escalabilidad vertical y horizontal, replicación, particionamiento y disponibilidad en sistemas distribuidos.",
+    "habilidad_2": "Analizar escenarios distribuidos considerando tolerancia a fallos, latencia y continuidad del servicio.",
+    "habilidad_3": "Diseñar una estrategia conceptual de distribución para una solución NoSQL, justificando decisiones de replicación y particionamiento.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  },
+  {
+    "codigo_y_nombre": "SOFT-795 Consistencia, escalabilidad y rendimiento inicial",
+    "descripcion": "La persona acreditada es capaz de aplicar criterios básicos de consistencia, escalabilidad y rendimiento en el diseño de soluciones NoSQL y distribuidas.",
+    "habilidades": "Consistencia fuerte, Consistencia eventual, Conflictos, Sincronización, Teorema CAP, BASE vs ACID, Implicaciones prácticas, Diseño por patrones de acceso, Lecturas vs escrituras, Tamaño de documentos, Cardinalidad, Duplicación controlada, Consultas frecuentes, Índices, Particiones calientes",
+    "habilidad_1": "Distinguir los modelos de consistencia fuerte y eventual, así como las implicaciones del teorema CAP y BASE frente a ACID.",
+    "habilidad_2": "Aplicar criterios de diseño para rendimiento basados en patrones de acceso, lecturas, escrituras y cardinalidad de datos.",
+    "habilidad_3": "Mejorar un modelo NoSQL considerando duplicación controlada, índices, particiones calientes y límites del modelo.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  },
+  {
+    "codigo_y_nombre": "SOFT-796 Integración de NoSQL con aplicaciones y APIs",
+    "descripcion": "La persona acreditada es capaz de integrar bases NoSQL con aplicaciones, scripts o APIs, ejecutando operaciones de persistencia, consulta, validación y manejo de datos JSON.",
+    "habilidades": "Drivers, Clientes, Cadenas de conexión, Manejo de credenciales, CRUD desde código, Inserción, Consulta, Actualización, Eliminación, Integración con APIs, Datos JSON, Endpoints, Validación de entradas, Manejo de errores, Capa de acceso a datos",
+    "habilidad_1": "Reconocer los componentes de conexión entre aplicaciones y bases NoSQL: drivers, clientes, cadenas de conexión y credenciales.",
+    "habilidad_2": "Implementar operaciones CRUD desde código para insertar, consultar, actualizar y eliminar documentos o pares clave-valor.",
+    "habilidad_3": "Integrar una base NoSQL con una API o aplicación simple, manejando datos JSON, validaciones y errores.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  },
+  {
+    "codigo_y_nombre": "SOFT-797 Servicios administrados como entorno de implementación",
+    "descripcion": "La persona acreditada es capaz de utilizar servicios administrados de bases de datos como entorno de implementación para soluciones NoSQL, aplicando configuración inicial, conexión, acceso, monitoreo básico y consideraciones de costo.",
+    "habilidades": "Servicios administrados, Instalación propia vs servicio administrado, Ventajas y límites, Aprovisionamiento, Creación del servicio, Configuración inicial, Regiones, Recursos, Parámetros básicos, Reglas de acceso, Credenciales, Cadenas de conexión, Exposición controlada, Métricas básicas, Consideraciones de costo",
+    "habilidad_1": "Distinguir las diferencias entre instalación propia y servicios administrados de datos, identificando ventajas y límites.",
+    "habilidad_2": "Configurar un servicio administrado de base NoSQL aplicando aprovisionamiento, regiones, recursos y parámetros básicos.",
+    "habilidad_3": "Documentar el despliegue de una solución NoSQL considerando acceso seguro, monitoreo básico y consideraciones de costo.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Métodos y herramientas (METL)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/METL"
+  },
+  {
+    "codigo_y_nombre": "SOFT-798 Seguridad básica, documentación y toma de decisiones",
+    "descripcion": "La persona acreditada es capaz de aplicar controles básicos de seguridad, documentar soluciones NoSQL y justificar decisiones técnicas de diseño, integración y despliegue.",
+    "habilidades": "Usuarios, Roles, Permisos, Mínimo privilegio, Exposición de servicios, Manejo seguro de credenciales, Datos sensibles, Conexiones seguras, Inyección NoSQL, Modelo de datos, Colecciones, Campos, Patrones de consulta, Configuración e integración, Justificación de decisiones",
+    "habilidad_1": "Aplicar controles básicos de seguridad NoSQL mediante usuarios, roles, permisos y mínimo privilegio.",
+    "habilidad_2": "Documentar técnicamente una solución NoSQL incluyendo modelo de datos, colecciones, campos, patrones de consulta y configuración.",
+    "habilidad_3": "Justificar decisiones técnicas de diseño, integración y despliegue, reconociendo límites, riesgos y criterios de selección.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Seguridad de la información (SCTY)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SCTY"
+  },
+  {
+    "codigo_y_nombre": "SOFT-799 Proyecto integrador NoSQL y datos distribuidos",
+    "descripcion": "La persona acreditada es capaz de integrar los conocimientos del Path en una solución funcional de persistencia NoSQL y distribuida para un caso empresarial o técnico, justificando decisiones de diseño, integración, seguridad, rendimiento inicial y despliegue.",
+    "habilidades": "Análisis del caso, Requerimientos, Tipo de datos, Patrones de acceso, Restricciones, Criterios de selección NoSQL, Modelo documental, Modelo key-value, Estructura de datos, Embebido o referencia, Implementación NoSQL, Colecciones, CRUD, Consultas, Agregaciones",
+    "habilidad_1": "Diseñar una solución NoSQL funcional integrando modelo documental o key-value, decisiones de distribución y criterios de rendimiento inicial.",
+    "habilidad_2": "Implementar e integrar la solución con una aplicación, script o API, aplicando seguridad básica y consultas con índices.",
+    "habilidad_3": "Documentar y defender técnicamente el proyecto, justificando decisiones de modelado, integración, despliegue y límites del modelo seleccionado.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  }
+]

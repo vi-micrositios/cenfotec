@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Diagrama de flujo de condicionales</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+<section aria-labelledby="ejercicio-condicionales-operadores"
+    style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #f05323; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+    <!-- ENCABEZADO -->
+    <div
+        style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+
+        <span
+            style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #f05323, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+            aria-hidden="true">
+            <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+        </span>
+
+        <h3 id="ejercicio-condicionales-operadores"
+            style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+            Ejercicio: Condicionales y operadores lógicos
+        </h3>
+    </div>
+
+    <!-- PROPÓSITO -->
+    <div
+        style="background: #eef5ff; border-left: 5px solid #f05323; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+
+        <strong>Propósito:</strong> resolver problemas utilizando
+        <strong>estructuras condicionales</strong> y
+        <strong>operadores lógicos</strong> como
+        <strong>AND (&&)</strong>, <strong>OR (||)</strong> y
+        <strong>NOT (!)</strong>, identificando correctamente las condiciones
+        que deben cumplirse para obtener un resultado.
+    </div>
+
+    <!-- INSTRUCCIONES -->
+    <div
+        style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4
+            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+            <i class="fa-solid fa-list-check"
+                style="color: #c7ac19; font-size: 22px;"
+                aria-hidden="true"></i>
+
+            Instrucciones de la actividad
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            A continuación encontrará <strong>cuatro situaciones</strong> que
+            pueden resolverse mediante estructuras condicionales y operadores
+            lógicos.
+        </p>
+
+        <div
+            style="background: #ffffff; border: 1px solid #e5c76b; border-radius: 10px; padding: 18px; margin: 18px 0;">
+
+            <p style="color: #1c3b64; font-size: 16px; line-height: 1.7; margin: 0;">
+
+                <strong>Debe escoger al menos UNO de los cuatro ejercicios</strong>
+                y desarrollar la solución completa.
+
+            </p>
+
+        </div>
+
+        <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+            <li>Analice cuidadosamente el problema.</li>
+
+            <li>Identifique los datos de entrada.</li>
+
+            <li>Identifique las condiciones que deben evaluarse.</li>
+
+            <li>Determine qué operadores lógicos necesita utilizar.</li>
+
+            <li>Construya el algoritmo de solución.</li>
+
+            <li>Represente la solución mediante un diagrama de flujo.</li>
+
+            <li>Implemente la solución en Python.</li>
+
+            <li>Pruebe el programa con diferentes valores de entrada.</li>
+
+        </ul>
+
+        <div
+            style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+            <strong>Importante:</strong> No basta con que el programa funcione.
+            Debe poder identificar y explicar qué condiciones está evaluando
+            y qué operador lógico utiliza en cada caso.
+
+        </div>
+
+    </div>
+
+    <!-- EJERCICIO 1 -->
+    <div
+        style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4
+            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: #006AEA; border-radius: 50%; color: #ffffff; font-size: 16px;">
+                1
+            </span>
+
+            Acceso a una plataforma educativa
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+
+            Una plataforma educativa permite acceder a un curso únicamente
+            cuando se cumplen determinadas condiciones.
+
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar:
+        </p>
+
+        <ul style="margin: 0 0 16px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+            <li>Edad del estudiante.</li>
+
+            <li>Si está matriculado en el curso.</li>
+
+            <li>Si tiene la cuenta activa.</li>
+
+            <li>Si ha realizado el pago correspondiente.</li>
+
+        </ul>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Las reglas son:
+        </p>
+
+        <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+            <li>
+                El estudiante debe tener <strong>18 años o más</strong>.
+            </li>
+
+            <li>
+                Debe estar <strong>matriculado</strong> en el curso.
+            </li>
+
+            <li>
+                Su cuenta debe estar <strong>activa</strong>.
+            </li>
+
+            <li>
+                Además, debe haber realizado el <strong>pago</strong> del curso.
+            </li>
+
+            <li>
+                Si todas las condiciones se cumplen, mostrar
+                <strong>"Acceso permitido"</strong>.
+            </li>
+
+            <li>
+                En cualquier otro caso, mostrar
+                <strong>"Acceso denegado"</strong>.
+            </li>
+
+        </ol>
+
+        <div
+            style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+            <strong>Reto:</strong> Determine cómo utilizar el operador
+            <strong>AND (&&)</strong> para comprobar que todas las condiciones
+            necesarias se cumplen simultáneamente.
+
+        </div>
+
+    </div>
+
+    <!-- EJERCICIO 2 -->
+    <div
+        style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4
+            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: #712c86; border-radius: 50%; color: #ffffff; font-size: 16px;">
+                2
+            </span>
+
+            Descuento en una tienda
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+
+            Una tienda desea determinar si un cliente puede recibir un
+            descuento especial en su compra.
+
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar:
+        </p>
+
+        <ul style="margin: 0 0 16px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+            <li>Edad del cliente.</li>
+
+            <li>Monto total de la compra.</li>
+
+            <li>Si posee una tarjeta de cliente frecuente.</li>
+
+        </ul>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Las reglas son:
+        </p>
+
+        <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+            <li>
+                Recibe un <strong>10 % de descuento</strong> si tiene
+                tarjeta de cliente frecuente <strong>y</strong> la compra
+                es de al menos ₡50 000.
+            </li>
+
+            <li>
+                También recibe un <strong>10 % de descuento</strong> si tiene
+                <strong>65 años o más</strong>, independientemente del monto
+                de la compra.
+            </li>
+
+            <li>
+                Si no cumple ninguna de las condiciones anteriores,
+                no recibe descuento.
+            </li>
+
+            <li>
+                El programa debe mostrar el monto original,
+                el porcentaje de descuento y el monto final.
+            </li>
+
+        </ol>
+
+        <div
+            style="background: #f3eafa; border-left: 5px solid #712c86; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #4c2759; font-size: 14px; line-height: 1.6;">
+
+            <strong>Reto:</strong> En este problema deberá combinar los
+            operadores <strong>AND (&&)</strong> y
+            <strong>OR (||)</strong> para representar correctamente las
+            diferentes formas de obtener el descuento.
+
+        </div>
+
+    </div>
+
+    <!-- EJERCICIO 3 -->
+    <div
+        style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4
+            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: #c7ac19; border-radius: 50%; color: #ffffff; font-size: 16px;">
+                3
+            </span>
+
+            Clasificación de una contraseña
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+
+            Una aplicación necesita determinar si una contraseña cumple con
+            ciertos requisitos básicos de seguridad.
+
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar:
+        </p>
+
+        <ul style="margin: 0 0 16px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+            <li>Longitud de la contraseña.</li>
+
+            <li>Si contiene al menos un número.</li>
+
+            <li>Si contiene al menos una letra mayúscula.</li>
+
+            <li>Si contiene al menos un carácter especial.</li>
+
+        </ul>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Las reglas son:
+        </p>
+
+        <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+            <li>
+                Una contraseña es <strong>segura</strong> si tiene al menos
+                8 caracteres, contiene un número, una mayúscula y un carácter
+                especial.
+            </li>
+
+            <li>
+                Si tiene menos de 8 caracteres, debe clasificarse como
+                <strong>insuficiente</strong>.
+            </li>
+
+            <li>
+                Si tiene 8 caracteres o más pero le falta alguno de los
+                elementos de seguridad, debe clasificarse como
+                <strong>moderada</strong>.
+            </li>
+
+            <li>
+                El programa debe mostrar la clasificación obtenida.
+            </li>
+
+        </ol>
+
+        <div
+            style="background: #fff8df; border-left: 5px solid #c7ac19; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #5b4e13; font-size: 14px; line-height: 1.6;">
+
+            <strong>Reto:</strong> Analice cómo combinar varias condiciones
+            mediante <strong>AND (&&)</strong> para determinar cuándo una
+            contraseña puede considerarse segura.
+
+        </div>
+
+    </div>
+
+    <!-- EJERCICIO 4 -->
+    <div
+        style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+        <h4
+            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; background: #c62828; border-radius: 50%; color: #ffffff; font-size: 16px;">
+                4
+            </span>
+
+            Permiso para conducir
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+
+            Un sistema desea determinar si una persona puede conducir un
+            vehículo de acuerdo con determinadas condiciones.
+
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            El programa debe solicitar:
+        </p>
+
+        <ul style="margin: 0 0 16px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+            <li>Edad de la persona.</li>
+
+            <li>Si posee licencia de conducir.</li>
+
+            <li>Si la licencia está vigente.</li>
+
+            <li>Si tiene permiso especial.</li>
+
+        </ul>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Las reglas son:
+        </p>
+
+        <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+            <li>
+                Una persona puede conducir si tiene
+                <strong>18 años o más</strong>, posee licencia y esta se
+                encuentra vigente.
+            </li>
+
+            <li>
+                Una persona menor de 18 años solamente puede continuar si
+                posee un <strong>permiso especial</strong>, de acuerdo con
+                las reglas establecidas por el ejercicio.
+            </li>
+
+            <li>
+                Si la licencia no está vigente y no posee permiso especial,
+                no puede conducir.
+            </li>
+
+            <li>
+                El programa debe indicar si la persona puede o no conducir.
+            </li>
+
+        </ol>
+
+        <div
+            style="background: #fff0f0; border-left: 5px solid #c62828; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #672020; font-size: 14px; line-height: 1.6;">
+
+            <strong>Reto:</strong> Determine qué combinaciones de
+            <strong>AND (&&)</strong>, <strong>OR (||)</strong> y
+            <strong>NOT (!)</strong> podrían utilizarse para representar
+            las reglas del problema.
+
+        </div>
+
+    </div>
+
+    <!-- PARTE FINAL -->
+    <div
+        style="background: #f2faf6; border: 2px solid #8bc9a8; border-radius: 14px; padding: 22px; margin-bottom: 0;">
+
+        <h4
+            style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+
+            <i class="fa-solid fa-flask"
+                style="color: #218838; font-size: 22px;"
+                aria-hidden="true"></i>
+
+            Probar la solución
+        </h4>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Después de implementar el ejercicio seleccionado, realice
+            diferentes pruebas para comprobar que las condiciones funcionan
+            correctamente.
+        </p>
+
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+            Como mínimo, debe realizar:
+        </p>
+
+        <ul style="margin: 0 0 18px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+
+            <li>Una prueba donde todas las condiciones sean verdaderas.</li>
+
+            <li>Una prueba donde una de las condiciones sea falsa.</li>
+
+            <li>Una prueba que permita comprobar el uso del operador <strong>OR</strong>.</li>
+
+            <li>Una prueba que permita comprobar una condición negativa mediante <strong>NOT</strong>, cuando corresponda.</li>
+
+        </ul>
+
+        <div
+            style="background: #ffffff; border: 1px solid #8bc9a8; border-radius: 10px; padding: 18px;">
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+                <strong>Entrega:</strong>
+            </p>
+
+            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+
+                <li>
+                    Seleccione <strong>uno de los cuatro ejercicios</strong>.
+                </li>
+
+                <li>
+                    Realice el análisis de las condiciones.
+                </li>
+
+                <li>
+                    Identifique los operadores lógicos utilizados.
+                </li>
+
+                <li>
+                    Elabore el diagrama de flujo.
+                </li>
+
+                <li>
+                    Implemente el programa.
+                </li>
+
+                <li>
+                    Realice y documente las pruebas.
+                </li>
+
+            </ol>
+
+        </div>
+
+        <div
+            style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+            <strong>Reflexión:</strong> ¿Qué diferencia existe entre utilizar
+            <strong>AND (&&)</strong>, <strong>OR (||)</strong> y
+            <strong>NOT (!)</strong>? Explique con un ejemplo de su ejercicio
+            cómo cambia el resultado cuando se modifica el operador lógico.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,371 @@
+Microcurso 1: Fundamentos de DevOps y Entrega Continua
+Ingrese el nombre del curso:
+Fundamentos de DevOps y Entrega Continua
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+La cultura y los principios DevOps, junto con la integración y entrega continua, constituyen la base para comprender cómo se automatiza y mejora el flujo de valor en equipos de software. Se abordan cultura y principios DevOps, relación con Agile y Lean, integración y entrega continua (CI/CD), feedback temprano y continuo, y métricas DevOps. El estudiante reconoce los principios culturales de colaboración, eliminación de silos y responsabilidad compartida; relaciona DevOps con Agile y Lean; interpreta métricas de flujo y calidad para evaluar el pipeline y fundamentar mejoras. El curso se alinea con SFIA 8 en Métodos y herramientas (METL) nivel 3, con apoyo en Medición (MEAS) nivel 3 y Liberación e implementación (RELM) nivel 3. Como resultado, comprende el impacto de DevOps en el flujo de valor, identifica prácticas de mejora continua y feedback temprano, y usa métricas para decisiones de mejora. Es el punto de entrada al enfoque DevOps y prepara para prácticas y toolchains más avanzadas.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Python Foundations: Programación Aplicada desde Cero.
+
+Automatización de Pruebas de Software o equivalencia demostrable en CI/CD básico y testing automatizado.
+
+Curso anterior: ninguno (primer curso).
+
+Software requerido:
+No especificado por curso. Se sugiere: Git/GitHub/GitLab, Jenkins/GitLab CI/GitHub Actions/Azure DevOps, Docker, Prometheus/Grafana, Markdown/Mermaid/Draw.io.
+
+Roles que podrá desempeñar:
+DevOps Engineer junior; Release Engineer; CI/CD Engineer; Automation Engineer; Software Engineer con enfoque DevOps; Platform Engineer inicial; Site Reliability Engineer (SRE) inicial.
+
+Palabras clave:
+DevOps, cultura, principios, silos, Agile, Lean, flujo de valor, CI/CD, feedback temprano, métricas DevOps.
+
+Contenidos principales:
+
+Cultura y principios DevOps: origen, cultura colaborativa, eliminación de silos.
+
+DevOps, Agile y Lean: relación entre enfoques, flujo de valor, mejora continua.
+
+Integración y entrega continua (CI/CD): conceptos clave, pipeline básico, automatización.
+
+Feedback temprano y continuo: feedback técnico, feedback del negocio, aprendizaje continuo.
+
+Métricas DevOps: métricas de flujo, métricas de calidad, uso para mejora.
+
+Microcurso 2: Prácticas DevOps y Toolchains
+Ingrese el nombre del curso:
+Prácticas DevOps y Toolchains
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+Las prácticas DevOps y las toolchains permiten automatizar la integración, la entrega y el testing dentro de pipelines, asegurando versionado, releases frecuentes y rollbacks controlados. Se abordan integración continua, entrega continua, testing en pipelines, toolchains DevOps y arquitectura orientada al flujo. El estudiante implementa builds automáticos y validaciones tempranas, aplica estrategias de testing y quality gates, integra toolchains DevOps y criterios de arquitectura orientada al flujo para versionar, desplegar y habilitar rollbacks controlados. El curso se alinea con SFIA 8 en Liberación e implementación (RELM) nivel 3, con apoyo en Métodos y herramientas (METL) nivel 3 y Pruebas (TEST) nivel 3. Como resultado, puede construir y validar software de forma automatizada, aplicar quality gates en pipelines y utilizar toolchains para entregas confiables. Prepara para observabilidad, seguridad y AIOps.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 1: Fundamentos de DevOps y Entrega Continua o equivalente.
+
+Curso anterior: Fundamentos de DevOps y Entrega Continua.
+
+Software requerido:
+No especificado por curso. Se sugiere: Git/GitHub/GitLab, Jenkins/GitLab CI/GitHub Actions/Azure DevOps, Docker, Kubernetes, SonarQube, Terraform/Ansible, frameworks de testing.
+
+Roles que podrá desempeñar:
+DevOps Engineer; CI/CD Engineer; Release Engineer; Build Engineer; Automation Engineer; Platform Engineer; QA Automation Engineer.
+
+Palabras clave:
+Integración continua, entrega continua, builds automáticos, versionado, releases, rollbacks, quality gates, testing en pipelines, toolchains, arquitectura orientada al flujo.
+
+Contenidos principales:
+
+Integración continua: builds automáticos, validaciones, errores tempranos.
+
+Entrega continua: versionado, releases frecuentes, rollbacks.
+
+Testing en pipelines: quality gates, testing automatizado, estrategias.
+
+Toolchains DevOps: herramientas típicas, integración, orquestación.
+
+Arquitectura orientada al flujo: diseño para DevOps, desacoplamiento, escalabilidad.
+
+Microcurso 3: Observabilidad, Métricas y Confiabilidad
+Ingrese el nombre del curso:
+Observabilidad, Métricas y Confiabilidad
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+La observabilidad, las métricas de confiabilidad y la gestión de incidentes permiten evaluar el comportamiento de sistemas, definir objetivos de nivel de servicio y mejorar de forma basada en datos. Se abordan observabilidad (logs, métricas, trazas), métricas de confiabilidad, SLIs, SLOs y SLAs, gestión de incidentes y mejora basada en datos. El estudiante implementa observabilidad, define SLIs, SLOs y SLAs a partir de disponibilidad, latencia y errores, y gestiona incidentes con análisis post-mortem y acciones correctivas. El curso se alinea con SFIA 8 en Medición (MEAS) nivel 3, con apoyo en Gestión de nivel de servicio (SLMO) nivel 3 y Gestión de incidentes (USUP) nivel 3. Como resultado, puede monitorear sistemas, establecer objetivos de confiabilidad, detectar incidentes y mejorar continuamente con base en datos. Prepara para operaciones confiables y DevSecOps.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 2: Prácticas DevOps y Toolchains o equivalente.
+
+Curso anterior: Prácticas DevOps y Toolchains.
+
+Software requerido:
+No especificado por curso. Se sugiere: Prometheus, Grafana, ELK Stack/Loki, Jaeger/Zipkin, PagerDuty/Opsgenie, Datadog/New Relic.
+
+Roles que podrá desempeñar:
+Site Reliability Engineer (SRE); DevOps Engineer; Observability Engineer; Monitoring Engineer; Platform Engineer; Cloud Operations Engineer; Incident Manager inicial.
+
+Palabras clave:
+Observabilidad, logs, métricas, trazas, disponibilidad, latencia, errores, SLI, SLO, SLA, incidentes, post-mortem, mejora basada en datos.
+
+Contenidos principales:
+
+Observabilidad: logs, métricas, trazas.
+
+Métricas de confiabilidad: disponibilidad, latencia, errores.
+
+SLIs, SLOs y SLAs: definiciones, uso práctico, evaluación.
+
+Gestión de incidentes: detección, análisis, aprendizaje.
+
+Mejora basada en datos: análisis post-mortem, acciones correctivas, prevención.
+
+Microcurso 4: Fundamentos de DevSecOps
+Ingrese el nombre del curso:
+Fundamentos de DevSecOps
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+Los fundamentos de DevSecOps permiten integrar la seguridad desde etapas tempranas del ciclo de vida mediante la seguridad como código, la colaboración entre equipos y una cultura de mejora continua. Se abordan DevSecOps mindset, panorama de amenazas, seguridad como código, roles y responsabilidades, y cultura de seguridad. El estudiante reconoce el shift-left security, identifica tipos de amenazas, riesgos comunes y su impacto, y distingue roles, responsabilidades y prácticas de seguridad como código. El curso se alinea con SFIA 8 en Ingeniería de seguridad (SFEN) nivel 3, con apoyo en Seguridad de la información (SCTY) nivel 3 y Métodos y herramientas (METL) nivel 3. Como resultado, puede promover una cultura de seguridad, integrar controles tempranos y fundamentar decisiones de seguridad en equipos técnicos. Prepara para seguridad integrada en pipelines CI/CD.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 3: Observabilidad, Métricas y Confiabilidad o equivalente.
+
+Curso anterior: Observabilidad, Métricas y Confiabilidad.
+
+Software requerido:
+No especificado por curso. Se sugiere: Git, CI/CD, HashiCorp Vault, Snyk/Trivy/OWASP Dependency-Check, OWASP ZAP, SonarQube, Terraform/Ansible.
+
+Roles que podrá desempeñar:
+DevSecOps Engineer; Security Engineer; DevOps Engineer con enfoque en seguridad; Cloud Security Engineer; Application Security Engineer; Compliance Engineer.
+
+Palabras clave:
+DevSecOps, shift-left security, amenazas, riesgos, seguridad como código, infraestructura, configuración, roles, responsabilidades, cultura de seguridad.
+
+Contenidos principales:
+
+DevSecOps mindset: seguridad como responsabilidad compartida, shift-left security.
+
+Panorama de amenazas: tipos de amenazas, riesgos comunes, impacto.
+
+Seguridad como código: infraestructura, configuración, automatización.
+
+Roles y responsabilidades: equipos, colaboración, gobierno.
+
+Cultura de seguridad: conciencia, buenas prácticas, mejora continua.
+
+Microcurso 5: Seguridad Integrada en Pipelines CI/CD
+Ingrese el nombre del curso:
+Seguridad Integrada en Pipelines CI/CD
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+La seguridad integrada en pipelines CI/CD permite aplicar controles automatizados, análisis de vulnerabilidades y gestión de secretos, asegurando compliance y seguridad continua. Se abordan seguridad en pipelines, análisis de vulnerabilidades (OWASP, CVE, CWE), gestión de secretos, compliance automatizado y seguridad continua. El estudiante integra puntos de control automatizados, aplica buenas prácticas de gestión de secretos y credenciales, e implementa controles de compliance y monitoreo continuo de seguridad. El curso se alinea con SFIA 8 en Seguridad de la información (SCTY) nivel 3, con apoyo en Ingeniería de seguridad (SFEN) nivel 3 y Métodos y herramientas (METL) nivel 3. Como resultado, puede detectar vulnerabilidades en el pipeline, proteger información sensible, generar evidencias y responder ante incidentes de seguridad. Prepara para AIOps y operaciones inteligentes.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 4: Fundamentos de DevSecOps o equivalente.
+
+Curso anterior: Fundamentos de DevSecOps.
+
+Software requerido:
+No especificado por curso. Se sugiere: CI/CD, Snyk/Trivy/OWASP Dependency-Check, OWASP ZAP, HashiCorp Vault, SonarQube, Git.
+
+Roles que podrá desempeñar:
+DevSecOps Engineer; Security Automation Engineer; CI/CD Security Engineer; Application Security Engineer; Cloud Security Engineer; Compliance Automation Engineer.
+
+Palabras clave:
+Seguridad en pipelines, puntos de control, OWASP, CVE, CWE, gestión de secretos, credenciales, compliance automatizado, evidencias, seguridad continua.
+
+Contenidos principales:
+
+Seguridad en pipelines: puntos de control, automatización.
+
+Análisis de vulnerabilidades: OWASP, CVE y CWE.
+
+Gestión de secretos: credenciales, buenas prácticas.
+
+Compliance automatizado: controles, evidencias.
+
+Seguridad continua: monitoreo, respuesta, mejora.
+
+Microcurso 6: Introducción a AIOps y Operaciones Inteligentes
+Ingrese el nombre del curso:
+Introducción a AIOps y Operaciones Inteligentes
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+La introducción a AIOps y operaciones inteligentes permite comprender cómo se aplican datos operativos, aprendizaje automático y GenAI para mejorar la detección temprana y la optimización de operaciones. Se abordan qué es AIOps, relación AIOps–DevOps–MLOps, datos operativos, ML y GenAI en operaciones, y casos reales de AIOps. El estudiante reconoce el origen, la necesidad y los beneficios de AIOps, diferencia AIOps de DevOps y MLOps, e identifica casos de uso de ML y GenAI, así como fuentes de datos operativos como logs, métricas y eventos. El curso se alinea con SFIA 8 en Machine learning (MLNG) nivel 2, con apoyo en Ingeniería de datos (DENG) nivel 2 y Gestión de servicios tecnológicos (ITMG) nivel 4. Como resultado, comprende el rol de AIOps en operaciones inteligentes y reconoce oportunidades de detección temprana y optimización. Prepara para datos, métricas y ML para AIOps.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 5: Seguridad Integrada en Pipelines CI/CD o equivalente.
+
+Curso anterior: Seguridad Integrada en Pipelines CI/CD.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, pandas/numpy/scikit-learn, Jupyter Notebooks, MLflow, LangChain/APIs de LLM, Prometheus/Grafana, ELK Stack/Loki.
+
+Roles que podrá desempeñar:
+AIOps Engineer; DevOps Engineer con enfoque en IA; MLOps Engineer inicial; Site Reliability Engineer (SRE) con enfoque AIOps; Operations Analyst; Automation Engineer.
+
+Palabras clave:
+AIOps, DevOps, MLOps, datos operativos, logs, métricas, eventos, ML, GenAI, detección temprana, optimización.
+
+Contenidos principales:
+
+Qué es AIOps: origen, necesidad, beneficios.
+
+Relación AIOps–DevOps–MLOps: complementariedad, diferencias.
+
+Datos operativos: logs, métricas, eventos.
+
+ML y GenAI en operaciones: casos de uso, automatización.
+
+Casos reales de AIOps: detección temprana, optimización.
+
+Microcurso 7: Datos, Métricas y ML para AIOps
+Ingrese el nombre del curso:
+Datos, Métricas y ML para AIOps
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+La preparación de datos operativos, el análisis y correlación de eventos, y la detección de anomalías permiten fundamentar operaciones inteligentes basadas en datos. Se abordan fuentes de datos operativos, preparación de datos, análisis y correlación de eventos, detección de anomalías y evaluación de resultados. El estudiante prepara datos operativos de sistemas, aplicaciones e infraestructura mediante limpieza y normalización, analiza y correlaciona eventos, detecta anomalías con técnicas básicas y evalúa resultados con métricas y ajustes. El curso se alinea con SFIA 8 en Ingeniería de datos (DENG) nivel 3, con apoyo en Machine learning (MLNG) nivel 3 y Medición (MEAS) nivel 3. Como resultado, puede convertir datos operativos en información útil para detección temprana, correlación de eventos y decisiones operativas fundamentadas. Prepara para automatización inteligente y AIOps en producción.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 6: Introducción a AIOps y Operaciones Inteligentes o equivalente.
+
+Curso anterior: Introducción a AIOps y Operaciones Inteligentes.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, pandas/numpy/scikit-learn, Jupyter Notebooks, MLflow, Prometheus/Grafana, ELK Stack/Loki, Jaeger/Zipkin.
+
+Roles que podrá desempeñar:
+AIOps Engineer; Data Engineer for Operations; MLOps Engineer; Site Reliability Engineer (SRE); Observability Engineer; Machine Learning Operations Analyst.
+
+Palabras clave:
+Datos operativos, sistemas, aplicaciones, infraestructura, limpieza, normalización, correlación de eventos, patrones, anomalías, métricas, ajustes.
+
+Contenidos principales:
+
+Fuentes de datos operativos: sistemas, aplicaciones, infraestructura.
+
+Preparación de datos: limpieza, normalización.
+
+Análisis y correlación de eventos: patrones, relaciones.
+
+Detección de anomalías: técnicas básicas, interpretación.
+
+Evaluación de resultados: métricas, ajustes.
+
+Microcurso 8: Automatización Inteligente y AIOps en Producción
+Ingrese el nombre del curso:
+Automatización Inteligente y AIOps en Producción
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+La automatización inteligente y la integración de AIOps en producción permiten aplicar respuestas automáticas, prevención, observabilidad inteligente y consideraciones éticas y organizacionales. Se abordan automatización reactiva y proactiva, integración AIOps en pipelines, observabilidad inteligente, riesgos y ética en AIOps, y preparación organizacional. El estudiante aplica automatización reactiva y proactiva, integra AIOps en pipelines con validaciones y feedback continuo, incorpora observabilidad inteligente con alertas y predicción, y considera riesgos, ética y preparación de procesos y personas. El curso se alinea con SFIA 8 en Machine learning (MLNG) nivel 3, con apoyo en Métodos y herramientas (METL) nivel 3 y Gestión de servicios tecnológicos (ITMG) nivel 4. Como resultado, puede automatizar respuestas y prevención de incidentes, integrar AIOps en el ciclo de entrega y evaluar el impacto organizacional. Prepara para la integración DevOps, DevSecOps y AIOps.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 7: Datos, Métricas y ML para AIOps o equivalente.
+
+Curso anterior: Datos, Métricas y ML para AIOps.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, MLflow, LangChain/APIs de LLM, CI/CD, Prometheus/Grafana, PagerDuty/Opsgenie, Datadog/New Relic.
+
+Roles que podrá desempeñar:
+AIOps Engineer; Automation Engineer; Site Reliability Engineer (SRE); DevOps Engineer; MLOps Engineer; Platform Engineer; Operations Engineer.
+
+Palabras clave:
+Automatización reactiva, proactiva, respuesta automática, prevención, AIOps en pipelines, validación, feedback, observabilidad inteligente, alertas, predicción, riesgos, ética, preparación organizacional.
+
+Contenidos principales:
+
+Automatización reactiva y proactiva: respuesta automática, prevención.
+
+Integración AIOps en pipelines: validación, feedback.
+
+Observabilidad inteligente: alertas, predicción.
+
+Riesgos y ética en AIOps: impacto, responsabilidad.
+
+Preparación organizacional: procesos, personas.
+
+Microcurso 9: Integración DevOps, DevSecOps y AIOps para Software e IA
+Ingrese el nombre del curso:
+Integración DevOps, DevSecOps y AIOps para Software e IA
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+La integración de DevOps, DevSecOps y AIOps permite construir pipelines unificados para software tradicional y software con IA, asegurando testing, seguridad, monitoreo y gobernanza operativa. Se abordan pipelines integrados, testing como quality gate, seguridad en datos y modelos, monitoreo de aplicaciones y modelos, y gobernanza operativa. El estudiante integra pipelines unificados considerando diferencias entre software tradicional y con IA, aplica testing como quality gate y validación continua, implementa seguridad en datos y modelos, monitorea aplicaciones y modelos, y genera evidencias y control. El curso se alinea con SFIA 8 en Construcción e integración de sistemas (SINT) nivel 3, con apoyo en Seguridad de la información (SCTY) nivel 3, Pruebas (TEST) nivel 3 y Machine learning (MLNG) nivel 3. Como resultado, puede operar pipelines integrados para software e IA con controles de calidad, seguridad y gobernanza. Prepara para el proyecto integrador.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 8: Automatización Inteligente y AIOps en Producción o equivalente.
+
+Curso anterior: Automatización Inteligente y AIOps en Producción.
+
+Software requerido:
+No especificado por curso. Se sugiere: Git/GitHub/GitLab, CI/CD, Docker, Kubernetes, Prometheus/Grafana, ELK Stack/Loki, MLflow, HashiCorp Vault, Snyk/Trivy, SonarQube.
+
+Roles que podrá desempeñar:
+DevOps Engineer; DevSecOps Engineer; AIOps Engineer; MLOps Engineer; Site Reliability Engineer (SRE); Platform Engineer; Cloud Engineer; Software Engineer con enfoque en IA.
+
+Palabras clave:
+Pipelines integrados, software tradicional, software con IA, testing como quality gate, validación continua, seguridad en datos y modelos, monitoreo, gobernanza operativa, evidencias, control.
+
+Contenidos principales:
+
+Pipelines integrados: software tradicional, software con IA.
+
+Testing como quality gate: automatización, validación continua.
+
+Seguridad en datos y modelos: protección, riesgos.
+
+Monitoreo de aplicaciones y modelos: métricas, alertas.
+
+Gobernanza operativa: evidencias, control.
+
+Microcurso 10: Proyecto Integrador DevOps, DevSecOps & AIOps
+Ingrese el nombre del curso:
+Proyecto Integrador DevOps, DevSecOps & AIOps
+
+Horas lectivas del curso:
+45 horas lectivas.
+
+Descripción del curso (200 palabras):
+El Proyecto Integrador DevOps, DevSecOps & AIOps permite consolidar las competencias del programa mediante el análisis, diseño, implementación, evaluación y defensa de un pipeline integrado para software o IA. Se abordan análisis del sistema, diseño del pipeline (CI/CD, seguridad, observabilidad), implementación (automatización, testing, monitoreo), evaluación y mejora (métricas, resultados) y presentación final (documentación y defensa técnica). El estudiante diseña un pipeline integrado analizando alcance y riesgos, implementa automatización, testing, monitoreo y controles de seguridad, y evalúa y defiende el pipeline con métricas, resultados y documentación. El curso se alinea con SFIA 8 en Construcción e integración de sistemas (SINT) nivel 3, con apoyo en Liberación e implementación (RELM) nivel 3, Seguridad de la información (SCTY) nivel 3, Medición (MEAS) nivel 3 y Machine learning (MLNG) nivel 3. Como resultado, integra DevOps, DevSecOps y AIOps en una solución funcional y defendible.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Haber aprobado el Microcurso 9: Integración DevOps, DevSecOps y AIOps para Software e IA o equivalente.
+
+Curso anterior: Integración DevOps, DevSecOps y AIOps para Software e IA.
+
+Software requerido:
+Git/GitHub/GitLab, Jenkins/GitLab CI/GitHub Actions/Azure DevOps, Docker, Kubernetes, Terraform/Ansible, Prometheus, Grafana, ELK Stack/Loki, Jaeger/Zipkin, SonarQube, OWASP ZAP, Snyk/Trivy/OWASP Dependency-Check, HashiCorp Vault, Python, pandas/numpy/scikit-learn, Jupyter Notebooks, MLflow, LangChain/APIs de LLM, PagerDuty/Opsgenie, Datadog/New Relic, Markdown/Mermaid/Draw.io.
+
+Roles que podrá desempeñar:
+DevOps Engineer; DevSecOps Engineer; AIOps Engineer; Site Reliability Engineer (SRE); Platform Engineer; Cloud Engineer; Automation Engineer; MLOps Engineer; Technical Lead inicial.
+
+Palabras clave:
+Proyecto integrador, pipeline integrado, CI/CD, seguridad, observabilidad, automatización, testing, monitoreo, métricas, resultados, documentación, defensa técnica.
+
+Contenidos principales:
+
+Análisis del sistema: alcance, riesgos.
+
+Diseño del pipeline: CI/CD, seguridad, observabilidad.
+
+Implementación: automatización, testing, monitoreo.
+
+Evaluación y mejora: métricas, resultados.
+
+Presentación final: documentación, defensa técnica.

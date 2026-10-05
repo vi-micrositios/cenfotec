@@ -1,0 +1,580 @@
+Microcurso 1: Programación Aplicada para Soluciones AI-Native
+Ingrese el nombre del curso:
+Programación Aplicada para Soluciones AI-Native
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso constituye la base para construir componentes de software robustos, mantenibles y preparados para incorporar capacidades de inteligencia artificial. Se abordan Python moderno, gestión de dependencias y ambientes, tipado y estructuras de datos, JSON y formatos de intercambio, programación asíncrona, HTTP y APIs REST, manejo de errores y logging, variables de entorno y configuración, pruebas unitarias y Git. El estudiante desarrolla componentes modulares aplicando buenas prácticas, consume y expone servicios mediante APIs REST, gestiona errores y configuración, y construye una aplicación de integración probada y documentada. El curso se alinea con SFIA 8 en Programación/Desarrollo de software (PROG) nivel 2, con apoyo en Pruebas (TEST) y Métodos y herramientas (METL). Como resultado, queda preparado para integrar datos, servicios y capacidades de IA en aplicaciones AI-Native, sentando las bases técnicas para los siguientes microciclos del Path. Es el punto de entrada al desarrollo de soluciones AI-Native y agénticas.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, Visual Studio Code o IDE equivalente, Git/GitHub, Docker, pytest/unittest, Postman/ThunderClient/Insomnia, Markdown.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Python moderno, dependencias, tipado, JSON, asincronía, HTTP, APIs REST, logging, variables de entorno, pruebas unitarias, Git.
+
+Contenidos principales:
+
+Fundamentos de Python moderno, datos y entorno de trabajo: Python moderno, gestión de dependencias y ambientes, tipado y estructuras de datos, JSON y formatos de intercambio, Git y flujo con repositorios.
+
+HTTP, APIs REST y programación asíncrona.
+
+Manejo de errores, configuración, logging y calidad: manejo de errores y logging, variables de entorno y configuración, pruebas unitarias.
+
+Microcurso 2: Ingeniería de Software Aumentada con IA
+Ingrese el nombre del curso:
+Ingeniería de Software Aumentada con IA
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso utiliza herramientas de inteligencia artificial dentro del ciclo de desarrollo de software, manteniendo mecanismos independientes de comprensión, revisión y verificación del resultado producido. Se abordan AI-assisted coding, ingeniería de contexto aplicada al desarrollo, generación y refactorización, depuración asistida, code review, TDD, Git, gestión de deuda técnica y cognitiva, riesgos de dependencia de herramientas y trazabilidad de decisiones. El estudiante emplea asistentes y agentes para generar, explicar, refactorizar y depurar código, diseña instrucciones y contexto técnico, revisa críticamente el código generado con TDD y pruebas protegidas, y documenta qué decisiones delega y cuáles mantiene bajo responsabilidad humana. El curso se alinea con SFIA 8 en Programación/Desarrollo de software (PROG) nivel 3, con apoyo en Pruebas (TEST) y Métodos y herramientas (METL). Como resultado, puede aumentar su productividad sin perder control técnico, trazabilidad ni calidad sobre el software producido, desarrollando criterio profesional para colaborar con IA.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Programación Aplicada para Soluciones AI-Native.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, IDE con asistente de IA, Git/GitHub, pytest, herramientas TDD, Markdown.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+AI-assisted coding, ingeniería de contexto, generación, refactorización, depuración asistida, code review, TDD, deuda técnica, deuda cognitiva, trazabilidad.
+
+Contenidos principales:
+
+Asistentes de IA e ingeniería de contexto: AI-assisted coding, ingeniería de contexto aplicada al desarrollo.
+
+Generación, refactorización y depuración asistida.
+
+Verificación con code review, TDD y Git.
+
+Deuda técnica, riesgos y trazabilidad de decisiones: deuda técnica y cognitiva, riesgos de dependencia, trazabilidad.
+
+Microcurso 3: Datos, SQL y Pipelines para Sistemas de IA
+Ingrese el nombre del curso:
+Datos, SQL y Pipelines para Sistemas de IA
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite diseñar e implementar pipelines que preparen y suministren datos confiables a aplicaciones y componentes de inteligencia artificial. Se abordan SQL, modelado relacional, normalización, Pandas, ETL/ELT, validación de datos, data quality, procesamiento por lotes, integración mediante APIs y consideraciones de privacidad. El estudiante modela y consulta información con SQL, construye procesos ETL/ELT reproducibles que limpian, transforman y validan datos de múltiples fuentes, y suministra información estructurada a aplicaciones de IA considerando calidad, integración y privacidad. El curso se alinea con SFIA 8 en Ingeniería de datos (DENG) nivel 2, con apoyo en Modelado y diseño de datos (DTAN) y Programación/Desarrollo de software (PROG). Como resultado, puede preparar datos confiables para sistemas de IA, asegurando trazabilidad, validación y calidad mínima en el suministro de información, base para embeddings, RAG y agentes.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Ingeniería de Software Aumentada con IA.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, Pandas, PostgreSQL/MySQL/SQL Server, DBeaver/pgAdmin, Git, APIs, Markdown.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+SQL, modelado relacional, normalización, Pandas, ETL/ELT, validación, data quality, lotes, APIs, privacidad.
+
+Contenidos principales:
+
+Bases de datos relacionales: SQL, modelado relacional, normalización.
+
+Procesamiento y transformación de datos: Pandas, ETL/ELT, procesamiento por lotes.
+
+Calidad y validación de datos: validación, data quality.
+
+Integración y privacidad: integración mediante APIs, consideraciones de privacidad.
+
+Microcurso 4: Modelos Fundacionales e Integración mediante APIs
+Ingrese el nombre del curso:
+Modelos Fundacionales e Integración mediante APIs
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso integra modelos fundacionales en aplicaciones de software mediante interfaces programáticas, seleccionando configuraciones y mecanismos de resiliencia adecuados. Se abordan LLM y modelos fundacionales, tokens y ventanas de contexto, parámetros de inferencia, structured outputs, APIs, streaming, tool/function calling, rate limits, reintentos, fallbacks, costos y selección de modelos. El estudiante explica capacidades y limitaciones operativas de los modelos, integra APIs de distintos proveedores con structured outputs, streaming y tool calling básico, y gestiona errores, límites de tasa, reintentos y alternativas para asegurar resiliencia. El curso se alinea con SFIA 8 en Construcción e integración de sistemas (SINT) nivel 2, con apoyo en Programación/Desarrollo de software (PROG) y Seguridad de la información (SCTY). Como resultado, puede incorporar IA generativa en aplicaciones de forma controlada, considerando costo, latencia, contexto y confiabilidad, habilitando RAG y agentes.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Datos, SQL y Pipelines para Sistemas de IA.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, APIs de LLM (OpenAI, Anthropic, Google, Azure OpenAI, Meta Llama), Postman/ThunderClient/Insomnia, Git, IDE.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+LLM, modelos fundacionales, tokens, ventana de contexto, parámetros de inferencia, structured outputs, streaming, tool calling, rate limits, reintentos, fallbacks, costos.
+
+Contenidos principales:
+
+Modelos fundacionales y contexto: LLM y modelos fundacionales, tokens y ventanas de contexto.
+
+Parámetros, APIs y streaming: parámetros de inferencia, APIs, streaming.
+
+Structured outputs y tool/function calling.
+
+Operación, límites, fallbacks y costos: rate limits, reintentos y fallbacks, costos y selección de modelos.
+
+Microcurso 5: RAG e Ingeniería de Contexto
+Ingrese el nombre del curso:
+RAG e Ingeniería de Contexto
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso diseña e implementa sistemas RAG capaces de fundamentar respuestas de modelos en fuentes de información organizacional y evaluar la calidad de su recuperación. Se abordan embeddings, espacios vectoriales, chunking, vector databases, semantic search, hybrid search, metadata, reranking, context construction, RAG evaluation, citación y trazabilidad de fuentes. El estudiante genera embeddings, diseña estrategias de chunking, implementa búsqueda semántica e híbrida con almacenes vectoriales, metadata filtering y reranking, y evalúa recuperación, relevancia y fundamentación de respuestas incorporando citas y trazabilidad. El curso se alinea con SFIA 8 en Construcción e integración de sistemas (SINT) nivel 3, con apoyo en Ingeniería de datos (DENG) y Diseño de software (SWDN). Como resultado, puede construir soluciones RAG empresariales que reduzcan alucinaciones y conecten los modelos con conocimiento organizacional verificable, base para agentes con contexto.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Modelos Fundacionales e Integración mediante APIs.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, frameworks RAG (LangChain, LlamaIndex, Haystack o propia), base vectorial (pgvector, Pinecone, Weaviate, Qdrant, Chroma), APIs de LLM, herramientas de evaluación (RAGAS, DeepEval, promptfoo), Git.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+RAG, embeddings, espacios vectoriales, chunking, vector databases, semantic search, hybrid search, metadata, reranking, context construction, RAG evaluation, trazabilidad.
+
+Contenidos principales:
+
+Embeddings, espacios vectoriales y chunking.
+
+Almacenes vectoriales y búsqueda: vector databases, semantic search, hybrid search.
+
+Metadata, reranking y contexto: metadata, reranking, context construction.
+
+Evaluación RAG y trazabilidad de fuentes: RAG evaluation, citación y trazabilidad.
+
+Microcurso 6: Especificación y Arquitectura de Software AI-Native
+Ingrese el nombre del curso:
+Especificación y Arquitectura de Software AI-Native
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso transforma un problema organizacional en requisitos verificables y diseña una arquitectura AI-Native que define responsabilidades, interfaces, restricciones y niveles apropiados de autonomía. Se abordan ingeniería de requisitos, criterios de aceptación, requisitos no funcionales, arquitectura AI-Native, patrones de integración, ADR, C4 u otras representaciones, control de autonomía, human-in-the-loop y gestión de deuda cognitiva. El estudiante elicita y estructura requisitos funcionales y no funcionales, formula criterios de aceptación verificables, diseña arquitecturas diferenciando componentes deterministas y probabilísticos, y documenta decisiones y trade-offs mediante ADR. El curso se alinea con SFIA 8 en Gestión y definición de requisitos (REQM) nivel 3, con apoyo en Diseño de sistemas (DESN) y Diseño de software (SWDN). Como resultado, puede especificar y diseñar soluciones AI-Native con límites claros, interfaces definidas y criterios de éxito medibles, guiando la construcción de agentes.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: RAG e Ingeniería de Contexto.
+
+Software requerido:
+No especificado por curso. Se sugiere: Markdown, Mermaid, Draw.io, herramientas de gestión de requisitos, Git.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Requisitos, criterios de aceptación, requisitos no funcionales, arquitectura AI-Native, patrones de integración, ADR, C4, autonomía, human-in-the-loop, deuda cognitiva.
+
+Contenidos principales:
+
+Ingeniería de requisitos y criterios de aceptación: requisitos, criterios de aceptación, requisitos no funcionales.
+
+Arquitectura AI-Native y patrones de integración.
+
+Documentación y representación de decisiones: ADR, C4 u otras representaciones.
+
+Autonomía, human-in-the-loop y deuda cognitiva.
+
+Microcurso 7: Agentes de IA y Automatización de Tareas
+Ingrese el nombre del curso:
+Agentes de IA y Automatización de Tareas
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso construye agentes de IA capaces de razonar sobre una tarea, utilizar herramientas externas y ejecutar flujos de trabajo bajo límites de autonomía definidos. Se abordan arquitectura básica de agentes, ReAct, Plan-and-Solve, Reflection, tool use, estado, workflows, checkpointing, human-in-the-loop, límites de autonomía y frameworks de agentes. El estudiante diferencia automatización, workflow y comportamiento agéntico, implementa patrones como ReAct, Plan-and-Solve y Reflection, incorpora herramientas mediante tool calling, mantiene estado durante la ejecución y controla ciclos, errores y acciones riesgosas. El curso se alinea con SFIA 8 en Programación/Desarrollo de software (PROG) nivel 3, con apoyo en Construcción e integración de sistemas (SINT) y Métodos y herramientas (METL). Como resultado, puede construir agentes funcionales con supervisión humana y límites claros de autonomía, base para sistemas multiagente.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Especificación y Arquitectura de Software AI-Native.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, frameworks de agentes (LangGraph, CrewAI, AutoGen, Semantic Kernel o propia), APIs de LLM, Git, IDE.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Agentes, ReAct, Plan-and-Solve, Reflection, tool use, estado, workflows, checkpointing, human-in-the-loop, autonomía, frameworks.
+
+Contenidos principales:
+
+Fundamentos de agentes y workflows: arquitectura básica, workflows, frameworks de agentes.
+
+Patrones de agentes y uso de herramientas: ReAct, Plan-and-Solve, Reflection, tool use.
+
+Estado y continuidad de ejecución: estado, checkpointing, human-in-the-loop, límites de autonomía.
+
+Microcurso 8: Arquitectura y Orquestación Multiagente
+Ingrese el nombre del curso:
+Arquitectura y Orquestación Multiagente
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso diseña y construye sistemas multiagente mediante patrones explícitos de coordinación, delegación, supervisión, comunicación y recuperación ante fallas. Se abordan multi-agent systems, supervisor-worker, router, planner-executor, handoffs, shared state, message passing, checkpointing, concurrencia, fallos parciales, control de autonomía y frameworks de orquestación. El estudiante determina cuándo un problema requiere uno o varios agentes, selecciona patrones de orquestación, gestiona estado y handoffs, establece mecanismos de delegación y aprobación, y controla fallas, ciclos y terminación. El curso se alinea con SFIA 8 en Diseño de sistemas (DESN) nivel 3, con apoyo en Diseño de software (SWDN) y Construcción e integración de sistemas (SINT). Como resultado, puede diseñar sistemas multiagente verificables, con comunicación clara y recuperación ante fallos, evaluando costos y ventajas de cada arquitectura de orquestación.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Agentes de IA y Automatización de Tareas.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, frameworks de orquestación (LangGraph, CrewAI, AutoGen, Semantic Kernel o propia), APIs de LLM, herramientas de observabilidad, Git.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Multi-agent systems, supervisor-worker, router, planner-executor, handoffs, shared state, message passing, checkpointing, concurrencia, fallos parciales, autonomía, orquestación.
+
+Contenidos principales:
+
+Sistemas multi-agente y patrones de orquestación: multi-agent systems, supervisor-worker, router, planner-executor.
+
+Comunicación, estado y delegación: handoffs, shared state, message passing.
+
+Concurrencia, continuidad y fallos: checkpointing, concurrencia, fallos parciales.
+
+Autonomía y frameworks de orquestación: control de autonomía, frameworks.
+
+Microcurso 9: Memoria, GraphRAG y Sistemas de Conocimiento para Agentes
+Ingrese el nombre del curso:
+Memoria, GraphRAG y Sistemas de Conocimiento para Agentes
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso diseña mecanismos de memoria y recuperación de conocimiento que permiten a agentes mantener contexto útil y utilizar relaciones estructuradas durante la resolución de problemas. Se abordan memoria de agentes, short-term y long-term memory, retrieval, persistencia, knowledge graphs, bases orientadas a grafos, GraphRAG, entity relationships, memory policies y context lifecycle. El estudiante diferencia tipos de memoria, construye grafos de conocimiento e implementa GraphRAG, gestiona actualización, caducidad y relevancia de memoria, y evalúa riesgos de contaminación y pérdida de contexto. El curso se alinea con SFIA 8 en Gestión del conocimiento (KNOW) nivel 3, con apoyo en Ingeniería de datos (DENG) y Construcción e integración de sistemas (SINT). Como resultado, puede dotar a los agentes de memoria útil y conocimiento estructurado, mejorando su desempeño en tareas complejas y conversaciones prolongadas, con políticas claras de contexto.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Arquitectura y Orquestación Multiagente.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, bases de datos orientadas a grafos (Neo4j, Amazon Neptune, ArangoDB), bases vectoriales, frameworks RAG/GraphRAG, APIs de LLM, Git.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Memoria de agentes, short-term memory, long-term memory, retrieval, persistencia, knowledge graphs, GraphRAG, entity relationships, memory policies, context lifecycle.
+
+Contenidos principales:
+
+Memoria de agentes y tipos de memoria: memoria de agentes, short-term y long-term memory.
+
+Recuperación y persistencia: retrieval, persistencia.
+
+Grafos de conocimiento y GraphRAG: knowledge graphs, bases orientadas a grafos, entity relationships, GraphRAG.
+
+Políticas y ciclo de vida de la memoria: memory policies, context lifecycle.
+
+Microcurso 10: Testing, Evaluación y Verificación de Sistemas con IA
+Ingrese el nombre del curso:
+Testing, Evaluación y Verificación de Sistemas con IA
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso diseña un régimen de verificación que combina pruebas de software, evaluaciones de modelos y criterios observables de aceptación para determinar si un sistema AI-Native se comporta dentro de límites aceptables. Se abordan testing pyramid, TDD, contract testing, integration testing, evals, golden datasets, LLM-as-judge y sus limitaciones, RAG evaluation, agent evaluation, regression testing, property-based testing, criterios de aceptación e introducción a contratos y verificabilidad. El estudiante aplica pruebas unitarias, de integración, de contrato y end-to-end, construye datasets de evaluación y métricas para regresión sobre prompts, modelos, RAG y agentes, e implementa evaluación automatizada y revisión humana. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Aseguramiento de la calidad (QUAS) y Pruebas de aceptación (BPTS). Como resultado, puede verificar sistemas probabilísticos con criterios medibles y detectar degradaciones, asegurando calidad.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Memoria, GraphRAG y Sistemas de Conocimiento para Agentes.
+
+Software requerido:
+No especificado por curso. Se sugiere: Python, pytest/unittest/coverage.py, RAGAS, DeepEval, promptfoo, Evals propias, Git.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Testing pyramid, TDD, contract testing, integration testing, evals, golden datasets, LLM-as-judge, RAG evaluation, agent evaluation, regression testing, property-based testing, verificabilidad.
+
+Contenidos principales:
+
+Fundamentos de testing y TDD: testing pyramid, TDD, property-based testing.
+
+Pruebas de integración y contrato.
+
+Evaluación de comportamiento probabilístico: evals, golden datasets, LLM-as-judge y limitaciones, RAG evaluation, agent evaluation.
+
+Regresión, aceptación y verificabilidad: regression testing, criterios de aceptación, contratos y verificabilidad.
+
+Microcurso 11: Seguridad y Gobernanza de Sistemas Agénticos
+Ingrese el nombre del curso:
+Seguridad y Gobernanza de Sistemas Agénticos
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso identifica, evalúa y mitiga riesgos de seguridad y gobernanza asociados con aplicaciones AI-Native y sistemas agénticos, manteniendo control y responsabilidad humana sobre las acciones ejecutadas. Se abordan threat modeling, prompt injection, jailbreaking, tool abuse, exfiltración de información, gestión de secretos, least privilege, supply chain, dependencias y paquetes alucinados, SBOM, guardrails, autorización, audit logs, privacidad y gobernanza. El estudiante analiza amenazas específicas de aplicaciones basadas en LLM, aplica mínimo privilegio, gestión de secretos, guardrails y controles de dependencias, y preserva trazabilidad, auditabilidad y privacidad con autorización y responsabilidad humana. El curso se alinea con SFIA 8 en Seguridad de la información (SCTY) nivel 3, con apoyo en Ingeniería de seguridad (SFEN) y Evaluación de vulnerabilidades (VUAS). Como resultado, puede proteger agentes, herramientas y cadena de suministro, asegurando gobernanza y control humano.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Testing, Evaluación y Verificación de Sistemas con IA.
+
+Software requerido:
+No especificado por curso. Se sugiere: gestores de secretos, herramientas SBOM, guardrails, APIs de LLM, Python, Git, audit logs.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Threat modeling, prompt injection, jailbreaking, tool abuse, exfiltración, secretos, least privilege, supply chain, SBOM, guardrails, autorización, audit logs, privacidad, gobernanza.
+
+Contenidos principales:
+
+Amenazas y ataques en aplicaciones basadas en LLM: threat modeling, prompt injection, jailbreaking, tool abuse, exfiltración.
+
+Protección de secretos, privilegios y cadena de suministro: gestión de secretos, least privilege, supply chain, dependencias y paquetes alucinados, SBOM.
+
+Guardrails, autorización y auditoría: guardrails, autorización, audit logs.
+
+Privacidad, gobernanza y responsabilidad.
+
+Microcurso 12: LLMOps, Observabilidad y Despliegue de Sistemas Agénticos
+Ingrese el nombre del curso:
+LLMOps, Observabilidad y Despliegue de Sistemas Agénticos
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso despliega y opera sistemas AI-Native y agénticos mediante mecanismos de observabilidad, evaluación continua, resiliencia y control de costos. Se abordan Docker, CI/CD, cloud deployment, secrets management, logging, metrics, distributed tracing, LLM traces, observabilidad de agentes, cost tracking, rate limiting, retry, fallback, circuit breaker, evaluación continua e incident analysis. El estudiante conteneriza y despliega soluciones en la nube, administra configuración y secretos con CI/CD, instrumenta logs, métricas y trazas distribuidas, observa llamadas a modelos, herramientas y agentes, y aplica mecanismos de resiliencia y evaluación continua. El curso se alinea con SFIA 8 en Liberación e implementación (RELM) nivel 3, con apoyo en Construcción e integración de sistemas (SINT), Soporte de aplicaciones (ASUP) y Métodos y herramientas (METL). Como resultado, puede operar soluciones agénticas en producción, detectando degradaciones, controlando costos y manteniendo calidad operativa.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: Seguridad y Gobernanza de Sistemas Agénticos.
+
+Software requerido:
+No especificado por curso. Se sugiere: Docker, CI/CD, plataforma cloud (AWS, Azure, GCP o equivalente), LangSmith, LangFuse, OpenTelemetry, Grafana, Prometheus, Git.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Docker, CI/CD, cloud, secrets management, logging, metrics, tracing, LLM traces, observabilidad de agentes, cost tracking, rate limiting, retry, fallback, circuit breaker, evaluación continua, incident analysis.
+
+Contenidos principales:
+
+Contenerización, CI/CD y despliegue cloud: Docker, CI/CD, cloud deployment.
+
+Configuración, secretos y observabilidad: secrets management, logging, metrics, distributed tracing, LLM traces, observabilidad de agentes.
+
+Costos, resiliencia y control de tráfico: cost tracking, rate limiting, retry, fallback, circuit breaker.
+
+Evaluación continua e incidentes: evaluación continua, incident analysis.
+
+Microcurso 13: Proyecto Integrador: Sistema Agéntico Empresarial
+Ingrese el nombre del curso:
+Proyecto Integrador: Sistema Agéntico Empresarial
+
+Horas lectivas del curso:
+32 horas lectivas (4 semanas × 8 horas semanales).
+
+Descripción del curso (200 palabras):
+Este curso permite diseñar, construir, verificar, asegurar, desplegar y defender una solución empresarial AI-Native o agéntica que demuestre de forma integrada las competencias terminales del Path. Se abordan problema y stakeholders, requisitos, criterios de aceptación, arquitectura, ADR, integración de modelos, datos y/o RAG, uno o varios agentes, herramientas, estrategia de autonomía y human-in-the-loop, suite de pruebas, sistema de evals, análisis de seguridad, trazabilidad, observabilidad, despliegue funcional, documentación técnica, análisis de costos, limitaciones y defensa profesional. El estudiante diseña y construye la solución, la verifica y asegura con pruebas y Evals, la despliega y defiende presentando arquitectura, decisiones, costos y limitaciones. El curso se alinea con SFIA 8 en Construcción e integración de sistemas (SINT) nivel 3, con apoyo en PROG, TEST, SCTY y RELM. Como resultado, consolida todas las competencias del Path en un proyecto empresarial funcional y defendible.
+
+Perfil de ingreso (obligatorios y curso anterior):
+
+Fundamentos de programación.
+
+Capacidad para comprender algoritmos y estructuras de datos básicas.
+
+Conocimientos básicos de programación orientada a objetos o programación modular.
+
+Nociones básicas de Git y control de versiones.
+
+Capacidad de lectura de documentación técnica en inglés.
+
+Pensamiento lógico y disposición para resolver problemas mediante programación.
+
+Curso anterior: LLMOps, Observabilidad y Despliegue de Sistemas Agénticos.
+
+Software requerido:
+No especificado por curso. Se sugiere el conjunto global de herramientas del JSON: Python, Visual Studio Code o IDE equivalente, Git/GitHub, Docker, RDBMS (PostgreSQL, MySQL, SQL Server), base vectorial (pgvector, Pinecone, Weaviate, Qdrant, Chroma), base de grafos (Neo4j, Amazon Neptune, ArangoDB), APIs de LLM, frameworks RAG (LangChain, LlamaIndex, Haystack), frameworks de agentes (LangGraph, CrewAI, AutoGen, Semantic Kernel), testing (pytest, unittest, coverage.py), evals (RAGAS, DeepEval, promptfoo), observabilidad (LangSmith, LangFuse, OpenTelemetry, Grafana, Prometheus), cloud (AWS, Azure, GCP), Markdown/Mermaid/Draw.io.
+
+Roles que podrá desempeñar:
+AI Application Developer; AI-Native Software Developer; LLM Application Developer; AI Integration Developer; RAG Application Developer; Agentic Systems Developer; AI Automation Developer; Junior Agentic AI Engineer; Junior LLMOps / AI Platform Engineer; Software Developer especializado en integración de IA.
+
+Palabras clave:
+Proyecto integrador, sistema agéntico, AI-Native, requisitos, arquitectura, ADR, RAG, agentes, human-in-the-loop, pruebas, Evals, seguridad, observabilidad, despliegue, costos, defensa técnica.
+
+Contenidos principales:
+
+Definición del problema, requisitos y arquitectura: problema y stakeholders, requisitos, criterios de aceptación, arquitectura, ADR.
+
+Integración de modelos, datos, agentes y herramientas: integración de modelos, datos y/o RAG, uno o varios agentes, herramientas, estrategia de autonomía y human-in-the-loop.
+
+Verificación, seguridad, trazabilidad y observabilidad: suite de pruebas, sistema de Evals, análisis de seguridad, trazabilidad, observabilidad.
+
+Despliegue, documentación, costos, limitaciones y defensa: despliegue funcional, documentación técnica, análisis de costos, análisis de limitaciones, defensa profesional.
+

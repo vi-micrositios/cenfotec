@@ -1,0 +1,460 @@
+Moneda: Dolares
+Horas: 24
+Roles:
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Software requerido: 
+Python, PostgreSQL+pgvector, DBeaver/pgAdmin, modelos de embeddings, PyMuPDF/Unstructured/LangChain loaders/LlamaIndex readers, LangChain/LlamaIndex o implementación propia guiada, FastAPI/Flask, Postman/ThunderClient/Insomnia, Git/GitHub/GitLab, Markdown/Mermaid/Draw.io.
+
+
+Microcurso 1: Fundamentos de IA generativa, recuperación de información y RAG
+Ingrese el nombre del curso:
+Fundamentos de IA generativa, recuperación de información y RAG
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso introduce el rol de la IA generativa, la recuperación de información y las arquitecturas RAG en soluciones empresariales basadas en conocimiento organizacional. Se estudian los modelos de lenguaje, la generación de texto, sus limitaciones, las alucinaciones y el corte de conocimiento, así como la necesidad de conectar los modelos con datos externos, contexto organizacional y fuentes internas. El estudiante diferencia búsqueda por palabras clave, full-text, búsqueda semántica y ranking/relevancia, y reconoce casos de uso RAG como asistentes internos, buscadores inteligentes, soporte, manuales, políticas y bases de conocimiento. El microciclo se alinea con SFIA 8 en Aprendizaje automático (MLNG) nivel 2, con apoyo en Gestión de la información (IRMG) y Pruebas (TEST) en niveles iniciales. Como resultado, el estudiante identifica cuándo un sistema RAG aporta valor frente a un modelo generativo sin contexto, reconoce sus componentes generales y comprende las limitaciones que justifican la recuperación externa. Está orientado a personas que inician en soluciones RAG y aplicaciones con IA, y requiere el requisito general del Path.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: ninguno.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, navegador, editor de texto/Markdown, Git. Opcional: API de LLM para demostraciones conceptuales.
+
+Roles que podrá desempeñar:
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+IA generativa, modelos de lenguaje, alucinaciones, corte de conocimiento, recuperación de información, búsqueda semántica, RAG, casos de uso, contexto organizacional, fuentes internas.
+
+Contenidos principales:
+
+IA generativa aplicada a datos: modelos de lenguaje, generación de texto, limitaciones, alucinaciones.
+
+Necesidad de datos externos: corte de conocimiento, contexto organizacional, fuentes internas.
+
+Recuperación de información: búsqueda por palabras clave, full-text, búsqueda semántica, ranking y relevancia.
+
+Casos de uso RAG: asistentes internos, buscadores inteligentes, soporte, manuales, políticas, bases de conocimiento.
+
+Microcurso 2: Fuentes documentales, metadatos y calidad de conocimiento
+Ingrese el nombre del curso:
+Fuentes documentales, metadatos y calidad de conocimiento
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso se centra en identificar, clasificar y preparar fuentes de conocimiento empresarial para una solución de recuperación semántica. Se abordan fuentes documentales como PDF, Word, HTML, Markdown, bases de conocimiento, tickets, manuales y políticas; criterios de confiabilidad como vigencia, autoridad, duplicidad, contradicciones y versiones; metadatos relevantes como fuente, fecha, autor, versión, categoría, permisos y confidencialidad; y problemas de calidad documental como ruido, documentos obsoletos, contenido incompleto, versiones múltiples y material irrelevante. El estudiante aprende a clasificar fuentes según confiabilidad, vigencia y utilidad, definir metadatos para recuperación, filtrado y trazabilidad, y detectar problemas de calidad en un corpus organizacional. El microciclo se alinea con SFIA 8 en Gestión de la información (IRMG) nivel 3, con apoyo en Ingeniería de datos (DENG) y Métodos y herramientas (METL). Como resultado, puede preparar una base documental confiable para sistemas RAG, reconociendo que la calidad del conocimiento determina la calidad de la recuperación y de las respuestas generadas. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Fundamentos de IA generativa, recuperación de información y RAG.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, herramientas de catalogación/clasificación documental, Markdown, Git. Opcional: DBeaver/pgAdmin si se almacenan metadatos.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Fuentes documentales, metadatos, confiabilidad, vigencia, autoridad, versiones, calidad documental, ruido, obsolescencia, trazabilidad, permisos, confidencialidad.
+
+Contenidos principales:
+
+Fuentes documentales empresariales: PDF, Word, HTML, Markdown, bases de conocimiento, tickets, manuales, políticas.
+
+Confiabilidad de fuentes: vigencia, autoridad, duplicidad, contradicciones, versiones.
+
+Metadatos: fuente, fecha, autor, versión, categoría, permisos, confidencialidad.
+
+Calidad documental: ruido, documentos obsoletos, contenido incompleto, versiones múltiples, material irrelevante.
+
+Microcurso 3: Procesamiento documental, chunking y preparación de corpus
+Ingrese el nombre del curso:
+Procesamiento documental, chunking y preparación de corpus
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso enseña a preparar documentos para recuperación semántica mediante extracción, limpieza, normalización, segmentación y generación de unidades recuperables. Se abordan la extracción y limpieza de texto, secciones, encabezados, pies de página, ruido y contenido irrelevante; la normalización documental de estructura, formato, contenido útil y exclusión de material no recuperable; el chunking considerando tamaño, overlap y segmentación por párrafos, títulos o secciones; y estrategias de segmentación fija, contextual y semántica, evaluando su impacto en la recuperación. El estudiante construye un pipeline de preparación documental que genere un corpus listo para embeddings, justificando decisiones de segmentación. El microciclo se alinea con SFIA 8 en Ingeniería de datos (DENG) nivel 2, con apoyo en Modelado y diseño de datos (DTAN) y Métodos y herramientas (METL). Como resultado, puede transformar documentos heterogéneos en chunks recuperables, limpiar ruido y definir una estrategia de chunking coherente con los patrones de consulta esperados. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Fuentes documentales, metadatos y calidad de conocimiento.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, PyMuPDF, Unstructured, LangChain loaders, LlamaIndex readers o equivalente, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Extracción, limpieza, normalización, chunking, tamaño de chunk, overlap, segmentación, chunking fijo, contextual, semántico, corpus, recuperación.
+
+Contenidos principales:
+
+Extracción y limpieza: texto, secciones, encabezados, pies de página, ruido, contenido irrelevante.
+
+Normalización documental: estructura, formato, contenido útil, exclusión de material no recuperable.
+
+Chunking: tamaño de chunk, overlap, segmentación por párrafos, por títulos o secciones.
+
+Estrategias de segmentación: chunking fijo, contextual, semántico, impacto en recuperación.
+
+Microcurso 4: Embeddings y representación vectorial
+Ingrese el nombre del curso:
+Embeddings y representación vectorial
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso aborda la generación de representaciones vectoriales de contenido textual y el análisis de similitud semántica para fundamentar la recuperación de información. Se estudia el concepto de embedding, su representación numérica, significado, dimensionalidad y uso en recuperación; los modelos de embeddings, criterios de selección, uso, límites, costo, latencia y actualización; la generación de embeddings para texto, chunks, consultas, almacenamiento y actualización de vectores; y la similitud vectorial mediante coseno, distancia euclidiana, producto interno y top-k. El estudiante reconoce el concepto de embedding, genera vectores para chunks y consultas, y analiza similitud para comparar fragmentos recuperados. El microciclo se alinea con SFIA 8 en Modelado y diseño de datos (DTAN) nivel 3, con apoyo en Aprendizaje automático (MLNG) nivel 2 y Métodos y herramientas (METL). Como resultado, puede seleccionar y aplicar modelos de embeddings, justificar decisiones de costo/latencia y utilizar métricas de similitud para preparar la recuperación semántica. Requiere haber aprobado el curso anterior y manejo básico de Python.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Procesamiento documental, chunking y preparación de corpus.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, modelos de embeddings, LangChain/LlamaIndex o implementación propia guiada, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Embeddings, representación vectorial, dimensionalidad, similitud semántica, coseno, distancia euclidiana, producto interno, top-k, modelos de embeddings, latencia, costo, actualización.
+
+Contenidos principales:
+
+Concepto de embedding: representación numérica, significado, dimensionalidad, uso en recuperación.
+
+Modelos de embeddings: selección, uso, límites, costo, latencia, actualización.
+
+Generación de embeddings: texto, chunks, consultas, almacenamiento, actualización de vectores.
+
+Similitud vectorial: coseno, distancia euclidiana, producto interno, top-k.
+
+Microcurso 5: Bases de datos vectoriales
+Ingrese el nombre del curso:
+Bases de datos vectoriales
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso se centra en almacenar, indexar y consultar embeddings en una base vectorial o extensión vectorial, utilizando una herramienta institucional definida. Se estudian los vector stores, colecciones, índices, vectores, texto original, chunks y metadatos; las operaciones vectoriales de inserción, actualización, eliminación y consulta; la indexación vectorial con búsqueda exacta, aproximada, latencia, tamaño de índice y criterios iniciales de rendimiento; y la herramienta institucional de implementación, específicamente pgvector sobre PostgreSQL. El estudiante explica la función de una base vectorial dentro de un sistema RAG, almacena embeddings con texto y metadatos, y ejecuta consultas por similitud aplicando criterios iniciales de indexación. El microciclo se alinea con SFIA 8 en Administración de base de datos (DBAD) nivel 2, con apoyo en Modelado y diseño de datos (DTAN) y Métodos y herramientas (METL). Como resultado, puede implementar una base vectorial funcional con pgvector, diferenciando vector stores, índices y colecciones, y reconociendo el impacto de la indexación en el rendimiento. Requiere haber aprobado el curso anterior y SQL básico.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Embeddings y representación vectorial.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: PostgreSQL, pgvector, DBeaver/pgAdmin o cliente equivalente, Python, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Vector stores, pgvector, PostgreSQL, colecciones, índices vectoriales, embeddings, metadatos, consulta por similitud, búsqueda exacta, búsqueda aproximada, latencia, rendimiento.
+
+Contenidos principales:
+
+Vector stores: colecciones, índices, vectores, texto original, chunks, metadatos.
+
+Operaciones vectoriales: inserción, actualización, eliminación, consulta de vectores.
+
+Indexación vectorial: búsqueda exacta, búsqueda aproximada, latencia, tamaño de índice, criterios iniciales de rendimiento.
+
+Herramienta institucional de implementación: uso guiado de pgvector para almacenamiento, consulta e indexación vectorial.
+
+Microcurso 6: Búsqueda semántica y relevancia inicial
+Ingrese el nombre del curso:
+Búsqueda semántica y relevancia inicial
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso transforma consultas en lenguaje natural en embeddings y recupera resultados mediante similitud vectorial, interpretando ranking, umbrales y fallos frecuentes. Se abordan la transformación de consulta en embedding y la comparación semántica; la recuperación por similitud con top-k, ranking, umbrales y resultados relevantes; la presentación de resultados con texto recuperado, metadatos, fuente, fragmento y score; y los fallos frecuentes como resultados irrelevantes, ruido, chunks mal segmentados y ausencia de contexto. El estudiante aprende a interpretar el ranking y los umbrales para evaluar la relevancia inicial, así como a identificar problemas de recuperación que afectan la calidad del contexto. El microciclo se alinea con SFIA 8 en Programación/Desarrollo de software (PROG) nivel 2, con apoyo en Modelado y diseño de datos (DTAN) y Pruebas (TEST). Como resultado, puede construir un flujo simple de consulta semántica, presentar resultados con trazabilidad inicial y detectar fallos que luego podrán corregirse mediante chunking, filtros o búsqueda híbrida. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Bases de datos vectoriales.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, PostgreSQL+pgvector, modelos de embeddings, Postman/ThunderClient/Insomnia, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Búsqueda semántica, consulta en lenguaje natural, embedding de consulta, similitud vectorial, top-k, ranking, umbrales, relevancia, score, fallos de recuperación, ruido, chunks.
+
+Contenidos principales:
+
+Consulta en lenguaje natural: transformación de consulta en embedding, comparación semántica.
+
+Recuperación por similitud: top-k, ranking, umbrales, resultados relevantes.
+
+Presentación de resultados: texto recuperado, metadatos, fuente, fragmento, score.
+
+Fallos frecuentes: resultados irrelevantes, ruido, chunks mal segmentados, ausencia de contexto.
+
+Microcurso 7: Búsqueda híbrida y recuperación contextual
+Ingrese el nombre del curso:
+Búsqueda híbrida y recuperación contextual
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso combina búsqueda vectorial con filtros, metadatos y búsqueda textual para mejorar precisión, control, trazabilidad y utilidad del contexto recuperado. Se estudian la búsqueda híbrida con componentes vectorial, textual, filtros y combinación de estrategias; los filtros por metadatos como fecha, fuente, categoría, tipo de documento, permisos, versión y confidencialidad; el re-ranking básico con priorización, reducción de ruido, comparación de resultados y selección de fragmentos; y la recuperación contextual con fragmentos útiles, contexto mínimo suficiente y preparación para generación. El estudiante diferencia la búsqueda semántica simple de la híbrida, aplica filtros para mejorar precisión y trazabilidad, y selecciona fragmentos útiles para el prompt. El microciclo se alinea con SFIA 8 en Modelado y diseño de datos (DTAN) nivel 3, con apoyo en Programación/Desarrollo de software (PROG) y Pruebas (TEST). Como resultado, puede construir una recuperación más controlada y útil, reduciendo ruido y preparando el contexto mínimo suficiente para la generación. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Búsqueda semántica y relevancia inicial.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, PostgreSQL+pgvector, LangChain/LlamaIndex o implementación propia guiada, Postman, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Búsqueda híbrida, filtros por metadatos, re-ranking, recuperación contextual, contexto mínimo suficiente, trazabilidad, precisión, ruido, fragmentos, permisos, versión, confidencialidad.
+
+Contenidos principales:
+
+Búsqueda híbrida: vectorial, textual, filtros, combinación de estrategias.
+
+Filtros por metadatos: fecha, fuente, categoría, tipo de documento, permisos, versión, confidencialidad.
+
+Re-ranking básico: priorización, reducción de ruido, comparación de resultados, selección de fragmentos.
+
+Recuperación contextual: fragmentos útiles, contexto mínimo suficiente, preparación para generación.
+
+Microcurso 8: Arquitectura RAG y prompting con contexto
+Ingrese el nombre del curso:
+Arquitectura RAG y prompting con contexto
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso diseña e implementa el flujo base de una arquitectura RAG, integrando recuperación de contexto, armado de prompt, uso controlado de evidencia y generación de respuestas. Se estudian los componentes RAG: ingesta, chunking, embeddings, vector store, recuperación y generación; el flujo de consulta: pregunta, recuperación de contexto, armado de prompt, generación y respuesta; el prompting para RAG con sistema, contexto, pregunta, formato de salida y uso de evidencia; y el control de respuesta ante ambigüedad, falta de evidencia, límites, tono y “no sé” cuando corresponde. El estudiante diseña el flujo general, diferencia RAG de fine-tuning y construye prompts que usan contexto recuperado, incorporan citas y controlan respuestas sin evidencia suficiente. El microciclo se alinea con SFIA 8 en Aprendizaje automático (MLNG) nivel 3, con apoyo en Programación/Desarrollo de software (PROG) y Diseño de sistemas (DESN). Como resultado, puede integrar recuperación y generación en un flujo coherente, controlando la evidencia y reduciendo alucinaciones. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Búsqueda híbrida y recuperación contextual
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, API de LLM, LangChain/LlamaIndex o implementación propia guiada, Markdown, Mermaid, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Arquitectura RAG, componentes RAG, flujo de consulta, prompting, contexto, evidencia, citas, control de respuesta, ambigüedad, fine-tuning, alucinaciones.
+
+Contenidos principales:
+
+Componentes RAG: ingesta, chunking, embeddings, vector store, recuperación, generación.
+
+Flujo de consulta: pregunta, recuperación de contexto, armado de prompt, generación, respuesta.
+
+Prompting para RAG: sistema, contexto, pregunta, formato de salida, uso de evidencia.
+
+Control de respuesta: manejo de ambigüedad, falta de evidencia, límites, tono, “No sé” cuando corresponde.
+
+Microcurso 9: Integración con modelos de lenguaje, APIs y control operativo
+Ingrese el nombre del curso:
+Integración con modelos de lenguaje, APIs y control operativo
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso integra modelos de lenguaje mediante APIs para generar respuestas a partir de contexto recuperado, considerando parámetros básicos, manejo de errores, costos, tokens y latencia. Se estudian el consumo de APIs de modelos con parámetros básicos, claves, configuración y manejo de respuestas; el control de tokens y latencia con tamaño de contexto, límites operativos, costos y tiempos de respuesta; el manejo de errores mediante reintentos, fallos de API, validaciones y respuestas incompletas; y la separación de componentes de recuperación, generación, respuesta, configuración y manejo operativo básico. El estudiante consume APIs, integra recuperación y generación en un flujo funcional, controla tokens, latencia y costos iniciales, y maneja errores básicos. El microciclo se alinea con SFIA 8 en Construcción e integración de sistemas (SINT) nivel 3, con apoyo en Programación/Desarrollo de software (PROG), Métodos y herramientas (METL) y Seguridad de la información (SCTY). Como resultado, puede construir una integración operativa entre base vectorial, recuperación y LLM, aplicando buenas prácticas de credenciales y validación. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Arquitectura RAG y prompting con contexto.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, API de LLM, FastAPI/Flask, Postman/ThunderClient/Insomnia, Git, gestor de credenciales.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+APIs de LLM, parámetros, claves, tokens, latencia, costos, manejo de errores, reintentos, validaciones, separación de componentes, recuperación, generación.
+
+Contenidos principales:
+
+Consumo de APIs de modelos: parámetros básicos, claves, configuración, manejo de respuestas.
+
+Control de tokens y latencia: tamaño de contexto, límites operativos, costos, tiempos de respuesta.
+
+Manejo de errores: reintentos, fallos de API, validaciones, respuestas incompletas.
+
+Separación de componentes: recuperación, generación, respuesta, configuración, manejo operativo básico.
+
+Microcurso 10: Desarrollo de aplicaciones o servicios RAG
+Ingrese el nombre del curso:
+Desarrollo de aplicaciones o servicios RAG
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso expone una solución RAG mediante una aplicación, servicio o API simple que permite realizar consultas, recuperar contexto, generar respuestas y mostrar fuentes. Se estudian la estructura de una aplicación RAG con componentes, carpetas, configuración y separación lógica; la API o endpoint de consulta con entrada de usuario, validación, respuesta estructurada y manejo de errores; la presentación de fuentes con evidencia recuperada, metadatos, fragmentos y trazabilidad inicial; y los logs y manejo operativo con registro de consultas, errores, respuestas y fuentes utilizadas. El estudiante organiza la aplicación en componentes, crea endpoints o interfaces simples, valida entradas y presenta fuentes. El microciclo se alinea con SFIA 8 en Programación/Desarrollo de software (PROG) nivel 3, con apoyo en Construcción e integración de sistemas (SINT) y Seguridad de la información (SCTY). Como resultado, puede convertir un flujo RAG en un servicio funcional, con trazabilidad básica y manejo de errores, listo para pruebas y evaluación. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Integración con modelos de lenguaje, APIs y control operativo.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, FastAPI/Flask, API de LLM, PostgreSQL+pgvector, Postman/ThunderClient/Insomnia, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Aplicación RAG, API, endpoint, validación, respuesta estructurada, presentación de fuentes, metadatos, trazabilidad, logs, manejo de errores, separación de responsabilidades.
+
+Contenidos principales:
+
+Estructura de aplicación RAG: componentes, carpetas, configuración, separación lógica.
+
+API o endpoint de consulta: entrada de usuario, validación, respuesta estructurada, manejo de errores.
+
+Presentación de fuentes: evidencia recuperada, metadatos, fragmentos, trazabilidad inicial.
+
+Logs y manejo operativo: registro de consultas, errores, respuestas, fuentes utilizadas.
+
+Microcurso 11: Evaluación de recuperación y respuestas generadas
+Ingrese el nombre del curso:
+Evaluación de recuperación y respuestas generadas
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso evalúa la calidad de la recuperación y de las respuestas generadas por un sistema RAG, aplicando criterios de relevancia, fidelidad, exactitud, cobertura y trazabilidad. Se estudian la evaluación de recuperación con relevancia, precisión, recall/cobertura, top-k y calidad del contexto; los casos de prueba con preguntas esperadas, fuera de alcance, ambiguas y críticas; la evaluación de respuesta con fidelidad al contexto, exactitud, completitud, claridad y utilidad; y la detección de fallos como alucinaciones, fuentes incorrectas, respuestas incompletas y ausencia de evidencia. El estudiante diseña casos de prueba, evalúa relevancia y cobertura, mide fidelidad y exactitud, y propone mejoras al sistema. El microciclo se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Medición (MEAS) y Aprendizaje automático (MLNG) nivel 3. Como resultado, puede auditar un sistema RAG con criterios verificables, detectar debilidades y comunicar resultados con evidencia. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Desarrollo de aplicaciones o servicios RAG.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, Postman/ThunderClient/Insomnia, herramientas de evaluación, Markdown, Git.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Evaluación RAG, relevancia, precisión, recall, cobertura, top-k, fidelidad, exactitud, completitud, alucinaciones, trazabilidad, casos de prueba.
+
+Contenidos principales:
+
+Evaluación de recuperación: relevancia, precisión, recall/cobertura, top-k, calidad del contexto.
+
+Casos de prueba: preguntas esperadas, fuera de alcance, ambiguas, críticas.
+
+Evaluación de respuesta: fidelidad al contexto, exactitud, completitud, claridad, utilidad.
+
+Detección de fallos: alucinaciones, fuentes incorrectas, respuestas incompletas, ausencia de evidencia.
+
+Microcurso 12: Seguridad, trazabilidad, mantenimiento y documentación técnica
+Ingrese el nombre del curso:
+Seguridad, trazabilidad, mantenimiento y documentación técnica
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso aplica controles básicos de seguridad, privacidad, trazabilidad, mantenimiento y documentación técnica en sistemas RAG empresariales. Se estudian seguridad y privacidad con datos sensibles, permisos, credenciales, prompt injection y data leakage; trazabilidad entre fuentes, chunks, metadatos, evidencia recuperada y auditoría básica; mantenimiento con reindexación, actualización documental, versiones y eliminación de obsoletos; y documentación técnica de arquitectura, fuentes, chunking, embeddings, límites, decisiones y riesgos. El estudiante aplica controles de seguridad y privacidad, documenta la trazabilidad y elabora un plan básico de mantenimiento de la base de conocimiento. El microciclo se alinea con SFIA 8 en Seguridad de la información (SCTY) nivel 3, con apoyo en Métodos y herramientas (METL) y Gestión de la información (IRMG). Como resultado, puede operar un sistema RAG de forma más confiable, auditable y sostenible, reconociendo riesgos y documentando decisiones. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Evaluación de recuperación y respuestas generadas.
+
+Software requerido:
+No especificado en el JSON. Según contenidos se sugiere: Python, Git, Markdown/Mermaid/Draw.io, gestor de secretos, PostgreSQL+pgvector, DBeaver/pgAdmin.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Seguridad, privacidad, datos sensibles, permisos, credenciales, prompt injection, data leakage, trazabilidad, auditoría, reindexación, mantenimiento, documentación técnica.
+
+Contenidos principales:
+
+Seguridad y privacidad: datos sensibles, permisos, credenciales, prompt injection, data leakage.
+
+Trazabilidad: fuentes, chunks, metadatos, evidencia recuperada, auditoría básica.
+
+Mantenimiento: reindexación, actualización documental, versiones, eliminación de obsoletos.
+
+Documentación técnica: arquitectura, fuentes, chunking, embeddings, límites, decisiones, riesgos.
+
+Microcurso 13: Proyecto Integrador RAG Empresarial
+Ingrese el nombre del curso:
+Proyecto Integrador RAG Empresarial
+
+Horas lectivas del curso:
+No especificado en el JSON.
+
+Descripción del curso (200 palabras):
+Este curso integra las competencias del Path mediante el diseño, implementación, evaluación, documentación y defensa de un sistema RAG empresarial funcional. Se abordan el análisis del caso empresarial con necesidad organizacional, fuentes, alcance, usuarios, restricciones y criterios de éxito; la preparación de conocimiento con fuentes documentales, limpieza, chunking, metadatos y calidad; la implementación vectorial con embeddings, base vectorial, almacenamiento de chunks, metadatos y consultas por similitud; la recuperación y generación con búsqueda semántica, híbrida o filtros, armado de contexto, prompt y respuesta; la integración funcional mediante aplicación, API o servicio de consulta; la evaluación y controles con pruebas, relevancia, fidelidad, trazabilidad, seguridad y privacidad; la documentación técnica de arquitectura, decisiones, límites, riesgos y mantenimiento; y la defensa técnica con demo funcional y explicación de decisiones. El estudiante diseña e implementa un sistema RAG completo, evalúa recuperación y respuestas, y defiende la solución. Se alinea con SFIA 8 en Construcción e integración de sistemas (SINT) nivel 3, con apoyo en MLNG, PROG, SCTY y TEST. Requiere haber aprobado el curso anterior.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Requisito general del Path: Python Foundations: Programación Aplicada desde Cero o suficiencia equivalente.
+
+Curso: Seguridad, trazabilidad, mantenimiento y documentación técnica.
+
+Software requerido:
+Python, PostgreSQL+pgvector, DBeaver/pgAdmin, modelos de embeddings, API de LLM, PyMuPDF/Unstructured/LangChain loaders/LlamaIndex readers, LangChain/LlamaIndex o implementación propia guiada, FastAPI/Flask, Postman/ThunderClient/Insomnia, Git/GitHub/GitLab, Markdown/Mermaid/Draw.io.
+
+Implementador junior de soluciones RAG, Desarrollador junior de aplicaciones con IA, Junior AI Application Developer, AI Data Technician, Asistente de ingeniería de datos para IA, Técnico en búsqueda semántica empresarial, Soporte técnico de soluciones de IA con datos.
+
+Palabras clave:
+Proyecto integrador, RAG empresarial, preparación documental, chunking, embeddings, pgvector, búsqueda semántica, búsqueda híbrida, API, evaluación, trazabilidad, seguridad, documentación, defensa técnica.
+
+Contenidos principales:
+
+Análisis del caso empresarial: necesidad organizacional, fuentes, alcance, usuarios, restricciones, criterios de éxito.
+
+Preparación de conocimiento: fuentes documentales, limpieza, chunking, metadatos, calidad documental.
+
+Implementación vectorial: embeddings, base vectorial, almacenamiento de chunks, metadatos, consultas por similitud.
+
+Recuperación y generación: búsqueda semántica, búsqueda híbrida o filtros, armado de contexto, prompt, respuesta.
+
+Integración funcional: aplicación, API o servicio de consulta, manejo de errores, respuesta estructurada.
+
+Evaluación y controles: pruebas, relevancia, fidelidad, trazabilidad, seguridad básica, privacidad.
+
+Documentación técnica: arquitectura, decisiones, límites, riesgos, mantenimiento, uso de la solución.
+
+Defensa técnica: demo funcional, explicación de decisiones, evidencias y retroalimentación final.
+

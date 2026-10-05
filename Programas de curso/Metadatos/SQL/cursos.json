@@ -1,0 +1,145 @@
+[
+  {
+    "codigo_y_nombre": "SOFT-775 Fundamentos del Dato y Sistemas de Bases de Datos",
+    "descripcion": "La persona acreditada es capaz de comprender el papel del dato en los sistemas organizacionales y explicar los fundamentos de las bases de datos relacionales como soporte para procesos empresariales.",
+    "habilidades": "Dato, Información, Conocimiento, Datos estructurados, Calidad de datos, Inconsistencia, Base de datos, DBMS, Tablas, Claves primarias, Claves foráneas, Relaciones, CRUD, Consulta, Inserción",
+    "habilidad_1": "Habilidad: Reconocer el papel del dato, la información y el conocimiento en los sistemas organizacionales, identificando problemas de calidad e inconsistencia.",
+    "habilidad_2": "Habilidad: Explicar los fundamentos de las bases de datos relacionales y el propósito del DBMS, diferenciando archivos, tablas, claves y relaciones básicas.",
+    "habilidad_3": "Habilidad: Analizar un caso organizacional identificando entidades preliminares, operaciones CRUD y necesidades de consistencia de datos.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-776 Modelado Conceptual y Lógico de Bases de Datos",
+    "descripcion": "La persona acreditada es capaz de diseñar modelos conceptuales y lógicos de bases de datos a partir de requerimientos de información y reglas de negocio.",
+    "habilidades": "Requerimientos de datos, Reglas de negocio, Entidades, Atributos, Identificadores, Relaciones, Cardinalidad, Opcionalidad, Diagramas entidad-relación, Modelo lógico, Tablas, Claves primarias, Claves foráneas, Relaciones lógicas",
+    "habilidad_1": "Habilidad: Interpretar requerimientos de información y reglas de negocio para derivar necesidades de datos y actores del sistema.",
+    "habilidad_2": "Habilidad: Diseñar modelos entidad-relación representando entidades, atributos, relaciones, cardinalidad y opcionalidad.",
+    "habilidad_3": "Habilidad: Transformar modelos conceptuales en modelos lógicos relacionales definiendo tablas, claves primarias y claves foráneas.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-777 Normalización y Diseño Físico Relacional",
+    "descripcion": "La persona acreditada es capaz de implementar el diseño físico de una base de datos relacional normalizada, aplicando claves, restricciones y scripts de creación.",
+    "habilidades": "Normalización, Redundancia, Dependencia funcional, Primera forma normal, Segunda forma normal, Tercera forma normal, Tipos de datos, Columnas, Claves primarias, Claves foráneas, Restricciones, NOT NULL, UNIQUE, CHECK, DEFAULT",
+    "habilidad_1": "Habilidad: Aplicar procesos de normalización hasta tercera forma normal para eliminar redundancia y dependencias funcionales.",
+    "habilidad_2": "Habilidad: Implementar el diseño físico de tablas definiendo tipos de datos, columnas, claves primarias, foráneas y restricciones de integridad.",
+    "habilidad_3": "Habilidad: Elaborar scripts SQL de creación y alteración de base de datos, incluyendo carga inicial de datos de prueba.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Diseño de base de datos (DBDS)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DBDS"
+  },
+  {
+    "codigo_y_nombre": "SOFT-778 SQL Básico para Consulta de Datos",
+    "descripcion": "La persona acreditada es capaz de construir consultas SQL básicas para seleccionar, filtrar, ordenar y transformar datos de una base relacional.",
+    "habilidades": "SQL, DDL, DML, DQL, SELECT, Alias, Expresiones calculadas, DISTINCT, WHERE, Operadores relacionales, Operadores lógicos, BETWEEN, IN, LIKE, ORDER BY",
+    "habilidad_1": "Habilidad: Reconocer la estructura básica de una consulta SQL y la clasificación de comandos DDL, DML y DQL.",
+    "habilidad_2": "Habilidad: Construir consultas simples con SELECT, alias, expresiones calculadas y DISTINCT para seleccionar y transformar datos.",
+    "habilidad_3": "Habilidad: Aplicar filtros, ordenamiento y funciones básicas en consultas SQL para responder a necesidades operativas de datos.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-779 SQL Intermedio y Consultas Multitabla",
+    "descripcion": "La persona acreditada es capaz de construir consultas SQL multitabla y reportes resumidos utilizando joins, agregaciones y filtros sobre datos agrupados.",
+    "habilidades": "Consultas multitabla, Claves primarias y foráneas, INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL JOIN, COUNT, SUM, AVG, MIN, MAX, GROUP BY, HAVING, WHERE, Reportes resumidos",
+    "habilidad_1": "Habilidad: Relacionar datos de múltiples tablas mediante joins, identificando claves y previniendo duplicidad de resultados.",
+    "habilidad_2": "Habilidad: Aplicar funciones de agregación y agrupamientos para generar métricas y reportes resumidos.",
+    "habilidad_3": "Habilidad: Distinguir el uso de WHERE y HAVING para filtrar datos antes y después de la agregación en reportes operativos.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-780 SQL Avanzado para Análisis y Reportes Operativos",
+    "descripcion": "La persona acreditada es capaz de construir consultas SQL avanzadas para análisis operativo mediante subconsultas, CTEs, funciones de ventana y consolidación de indicadores.",
+    "habilidades": "Subconsultas escalares, Subconsultas correlacionadas, EXISTS, Common Table Expressions, WITH, CTEs encadenadas, Funciones de ventana, OVER, PARTITION BY, Rankings, Acumulados, Comparación entre filas, Reportes operativos, Indicadores",
+    "habilidad_1": "Habilidad: Construir subconsultas escalares, correlacionadas y con EXISTS para resolver necesidades de análisis más complejas.",
+    "habilidad_2": "Habilidad: Utilizar Common Table Expressions (CTEs) para organizar y reutilizar consultas, mejorando la legibilidad y mantenimiento.",
+    "habilidad_3": "Habilidad: Aplicar funciones de ventana para generar rankings, acumulados y comparaciones entre filas en reportes operativos.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-781 Integridad, transacciones y consistencia",
+    "descripcion": "La persona acreditada es capaz de aplicar mecanismos de integridad, transacciones y consistencia para proteger la confiabilidad de los datos en operaciones relacionales.",
+    "habilidades": "Integridad de entidad, Integridad referencial, Integridad de dominio, Reglas de negocio, Transacciones, COMMIT, ROLLBACK, Atomicidad, Consistencia, Aislamiento, Durabilidad, Concurrencia, Bloqueos, Consistencia multiusuario",
+    "habilidad_1": "Habilidad: Aplicar reglas de integridad de entidad, referencial y de dominio para asegurar consistencia de los datos.",
+    "habilidad_2": "Habilidad: Ejecutar transacciones con COMMIT y ROLLBACK para garantizar atomicidad y recuperación ante errores.",
+    "habilidad_3": "Habilidad: Reconocer las propiedades ACID y los efectos de la concurrencia básica en operaciones multiusuario.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Diseño de base de datos (DBDS)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DBDS"
+  },
+  {
+    "codigo_y_nombre": "SOFT-782 Programación en base de datos I: vistas y funciones",
+    "descripcion": "La persona acreditada es capaz de implementar vistas y funciones definidas por el usuario para encapsular lógica consultiva, simplificar consultas y reutilizar cálculos de negocio.",
+    "habilidades": "Vistas, Simplificación de consultas, Seguridad, Funciones definidas por el usuario, Parámetros, Valores de retorno, Funciones escalares, Reglas de negocio, Reutilización de lógica SQL, Encapsulamiento, Nombres claros, Documentación, Rendimiento",
+    "habilidad_1": "Habilidad: Crear vistas para simplificar consultas complejas y controlar el acceso a datos de manera segura.",
+    "habilidad_2": "Habilidad: Implementar funciones definidas por el usuario con parámetros y retorno de valores para encapsular reglas de negocio.",
+    "habilidad_3": "Habilidad: Documentar vistas y funciones aplicando nombres claros y buenas prácticas de reutilización y rendimiento.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-783 Programación en base de datos II: procedimientos y triggers",
+    "descripcion": "La persona acreditada es capaz de implementar procedimientos almacenados y triggers para automatizar procesos controlados, reglas de negocio y auditoría básica.",
+    "habilidades": "Procedimientos almacenados, Parámetros de entrada y salida, Lógica procedural, Variables, Condicionales, Ciclos, Control de errores, Triggers, INSERT, UPDATE, DELETE, Automatización de reglas, Auditoría básica, Trazabilidad",
+    "habilidad_1": "Habilidad: Implementar procedimientos almacenados con parámetros de entrada y salida para automatizar operaciones controladas.",
+    "habilidad_2": "Habilidad: Aplicar lógica procedural en base de datos mediante variables, condicionales, ciclos y control de errores.",
+    "habilidad_3": "Habilidad: Crear triggers sobre eventos INSERT, UPDATE o DELETE para automatizar reglas de negocio y auditoría básica.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-784 Integración de bases de datos con aplicaciones",
+    "descripcion": "La persona acreditada es capaz de integrar una base de datos relacional con una aplicación o script, aplicando conexión, operaciones CRUD, consultas parametrizadas y validaciones básicas de seguridad.",
+    "habilidades": "Arquitectura de integración, Capas de acceso, Cadenas de conexión, Drivers, Credenciales, Operaciones CRUD, Consultas parametrizadas, Inserción, Actualización, Consulta, Eliminación, Manejo de errores, SQL injection, Uso de parámetros, Validación de entradas",
+    "habilidad_1": "Habilidad: Reconocer la arquitectura de integración entre aplicación, DBMS y capa de acceso a datos, identificando responsabilidades.",
+    "habilidad_2": "Habilidad: Implementar conexiones a bases de datos y operaciones CRUD mediante consultas parametrizadas desde un script o aplicación.",
+    "habilidad_3": "Habilidad: Aplicar validaciones básicas de seguridad, como prevención de SQL injection y manejo seguro de credenciales, en la integración.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  },
+  {
+    "codigo_y_nombre": "SOFT-785 Rendimiento básico, indexación y planes de ejecución",
+    "descripcion": "La persona acreditada es capaz de evaluar consultas SQL desde una perspectiva básica de rendimiento, aplicando índices, lectura inicial de planes de ejecución y buenas prácticas de optimización.",
+    "habilidades": "Rendimiento SQL, Consulta funcional, Consulta eficiente, Volumen de datos, Costo de operaciones, Índices, Claves, Columnas de búsqueda, Planes de ejecución, Escaneos, Búsquedas, Cuellos de botella, Filtros, Joins eficientes, Optimización",
+    "habilidad_1": "Habilidad: Reconocer criterios básicos de rendimiento SQL, diferenciando una consulta funcional de una consulta eficiente.",
+    "habilidad_2": "Habilidad: Aplicar índices sobre claves y columnas de búsqueda para mejorar el rendimiento de consultas seleccionadas.",
+    "habilidad_3": "Habilidad: Interpretar planes de ejecución básicos para identificar escaneos, búsquedas y oportunidades de optimización.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Administración de base de datos (DBAD)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DBAD"
+  },
+  {
+    "codigo_y_nombre": "SOFT-786 Seguridad básica, calidad de datos y documentación técnica",
+    "descripcion": "La persona acreditada es capaz de aplicar controles básicos de seguridad, reglas de calidad de datos y documentación técnica para mejorar la confiabilidad y mantenibilidad de una solución relacional.",
+    "habilidades": "Seguridad básica, Usuarios, Roles, Permisos, Mínimo privilegio, Acceso a objetos, Protección de datos, Identificación, Exposición innecesaria, Calidad de datos, Completitud, Consistencia, Exactitud, Duplicidad, Documentación técnica",
+    "habilidad_1": "Habilidad: Aplicar controles básicos de seguridad mediante usuarios, roles, permisos y principio de mínimo privilegio.",
+    "habilidad_2": "Habilidad: Definir reglas de calidad de datos para evaluar completitud, consistencia, exactitud y duplicidad en una solución relacional.",
+    "habilidad_3": "Habilidad: Elaborar documentación técnica que incluya diccionario de datos, tablas, relaciones, restricciones y consultas relevantes.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Seguridad de la información (SCTY)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SCTY"
+  },
+  {
+    "codigo_y_nombre": "SOFT-787 Proyecto Integrador SQL Relacional",
+    "descripcion": "La persona acreditada es capaz de diseñar, implementar, integrar, validar, documentar y defender una solución relacional completa para un caso empresarial, evidenciando las competencias terminales del path.",
+    "habilidades": "Análisis del caso empresarial, Requerimientos de datos, Reglas de negocio, Modelo conceptual, Modelo lógico, Modelo físico, Normalización, Scripts de creación, Carga de datos, Restricciones, Integridad, Consultas SQL, Objetos programables, Integración básica, Documentación técnica",
+    "habilidad_1": "Habilidad: Diseñar una solución relacional completa integrando modelo conceptual, lógico y físico a partir de un caso empresarial.",
+    "habilidad_2": "Habilidad: Implementar y validar la base de datos con scripts, integridad, consultas, objetos programables, integración y mejoras básicas de rendimiento y seguridad.",
+    "habilidad_3": "Habilidad: Documentar y defender técnicamente la solución, justificando decisiones de diseño, resultados y evidencias del proyecto.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  }
+]

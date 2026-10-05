@@ -1,0 +1,68 @@
+[
+  {
+    "codigo_y_nombre": "SOFT-769 Calidad, Requerimientos y Fundamentos de Pruebas de Software",
+    "descripcion": "La persona acreditada es capaz de reconocer el rol de la calidad y las pruebas dentro del desarrollo de software, interpretando requerimientos, criterios de aceptación, riesgos y responsabilidades básicas del tester en equipos ágiles.",
+    "habilidades": "Calidad de software, QA, QC, Verificación, Validación, Error, Defecto, Fallo, Requerimientos funcionales, Requerimientos no funcionales, Historias de usuario, Criterios de aceptación, Given-When-Then, Riesgo de producto, Priorización inicial",
+    "habilidad_1": "Reconocer el rol de la calidad y las pruebas en el ciclo de vida del software, distinguiendo conceptos como QA, QC, verificación, validación, error, defecto y fallo.",
+    "habilidad_2": "Interpretar requerimientos funcionales y no funcionales, historias de usuario y reglas de negocio para identificar ambigüedades, vacíos y supuestos.",
+    "habilidad_3": "Elaborar criterios de aceptación verificables y una clasificación inicial de riesgos para establecer condiciones básicas de prueba.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Gestión y definición de requisitos (REQM)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/REQM"
+  },
+  {
+    "codigo_y_nombre": "SOFT-770 Diseño, Documentación y Ejecución de Pruebas Funcionales",
+    "descripcion": "La persona acreditada es capaz de diseñar, documentar y ejecutar pruebas funcionales a partir de requerimientos y criterios de aceptación, aplicando técnicas básicas de diseño y registrando evidencia de resultados.",
+    "habilidades": "Diseño de pruebas funcionales, Casos de prueba, Datos de prueba, Resultados esperados, Partición de equivalencia, Valores límite, Tablas de decisión, Transición de estados, Escenarios positivos, Escenarios negativos, Escenarios alternos, Ejecución manual, Evidencia, Reporte de defectos, Matriz de trazabilidad",
+    "habilidad_1": "Diseñar casos de prueba funcionales aplicando técnicas como partición de equivalencia, valores límite y tablas de decisión, a partir de criterios de aceptación.",
+    "habilidad_2": "Documentar escenarios positivos, negativos y alternos con estructura profesional, datos de prueba y resultados esperados.",
+    "habilidad_3": "Ejecutar pruebas manuales controladas registrando evidencia, reportando defectos y construyendo una matriz de trazabilidad básica.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Pruebas (TEST)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/TEST"
+  },
+  {
+    "codigo_y_nombre": "SOFT-771 Proceso Profesional de QA, APIs Introductorias y Proyecto Foundations",
+    "descripcion": "La persona acreditada es capaz de ejecutar un ciclo básico de QA sobre un caso real o simulado, integrando planificación, enfoque basado en riesgos, diseño, ejecución, evidencia, defectos, APIs introductorias, métricas y reporte final.",
+    "habilidades": "Proceso profesional de pruebas, Planificación de pruebas, Estrategia de pruebas, Riesgos, Tipos de prueba, Criterios de entrada, Criterios de salida, Ambiente de prueba, Datos de prueba, Pruebas funcionales web, APIs REST, Métodos HTTP, Códigos de respuesta, JSON, Métricas de QA",
+    "habilidad_1": "Planificar un ciclo básico de QA definiendo alcance, objetivos, riesgos, tipos de prueba, criterios de entrada y salida.",
+    "habilidad_2": "Ejecutar pruebas funcionales web y validaciones manuales básicas de APIs REST, registrando defectos y métricas de avance.",
+    "habilidad_3": "Comunicar resultados mediante reportes de estado y presentación ejecutiva, integrando evidencias, hallazgos y recomendaciones del Proyecto Foundations.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Aseguramiento de la calidad (QUAS)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/QUAS"
+  },
+  {
+    "codigo_y_nombre": "SOFT-772 Análisis Avanzado, Riesgo y Cobertura para Pruebas Manuales",
+    "descripcion": "La persona acreditada es capaz de aplicar procedimientos de análisis avanzado de requerimientos, riesgos, reglas de negocio y cobertura para definir pruebas manuales más completas, priorizadas y trazables.",
+    "habilidades": "Análisis avanzado de requerimientos, Reglas de negocio complejas, Análisis basado en riesgos, Cobertura de pruebas, Condiciones de prueba avanzadas, Priorización profesional de pruebas, Diseño de datos de prueba, Estrategia manual por ciclo, Matriz de riesgos, Matriz de cobertura, Riesgo funcional, Riesgo operativo, Riesgo de negocio, Criticidad, Exposición al riesgo",
+    "habilidad_1": "Analizar requerimientos complejos, reglas de negocio cruzadas y dependencias para derivar condiciones de prueba más completas y priorizadas.",
+    "habilidad_2": "Construir matrices de riesgo y cobertura que relacionen requerimientos, reglas, flujos, datos y criticidad del negocio.",
+    "habilidad_3": "Diseñar estrategias manuales por ciclo o release, definiendo alcance, regresión, smoke, sanity, datos de prueba y criterios de salida.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Pruebas (TEST)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/TEST"
+  },
+  {
+    "codigo_y_nombre": "SOFT-773 Ejecución Profesional de Pruebas Manuales Web, APIs y Exploratorias",
+    "descripcion": "La persona acreditada es capaz de ejecutar pruebas manuales profesionales sobre aplicaciones web y APIs, incorporando pruebas exploratorias, observación técnica, validaciones no funcionales básicas y documentación robusta de evidencia.",
+    "habilidades": "Flujos web críticos, Roles y permisos, Sesiones, Compatibilidad visual, Usabilidad, Accesibilidad, Seguridad funcional básica, Pruebas manuales de APIs, Headers, Códigos HTTP, JSON, Validación end-to-end, Pruebas exploratorias, Charters, Evidencia profesional",
+    "habilidad_1": "Ejecutar pruebas manuales profesionales sobre flujos web críticos, roles, permisos, sesiones y validaciones end-to-end.",
+    "habilidad_2": "Validar APIs REST manualmente, interpretando headers, parámetros, autenticación, códigos HTTP, JSON y errores.",
+    "habilidad_3": "Aplicar sesiones exploratorias estructuradas con charters, heurísticas y tours, documentando hallazgos, evidencia técnica y recomendaciones no funcionales básicas.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Pruebas (TEST)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/TEST"
+  },
+  {
+    "codigo_y_nombre": "SOFT-774 Gestión de Defectos, Regresión, Métricas y Proyecto Integrador de Pruebas Manuales",
+    "descripcion": "La persona acreditada es capaz de gestionar un ciclo completo de pruebas manuales, integrando defectos, triage, re-testing, regresión, métricas, criterios de salida, reporte final y defensa profesional del Proyecto Integrador.",
+    "habilidades": "Gestión de defectos, Ciclo de vida de defectos, Severidad, Prioridad, Triage, Re-testing, Regresión manual, Smoke, Sanity, Métricas de ejecución, Métricas de defectos, Criterios de salida, Decisión de liberación, Reporte ejecutivo de calidad, Defensa profesional",
+    "habilidad_1": "Gestionar el ciclo de vida de defectos aplicando criterios de severidad, prioridad y triage, así como re-testing y regresión manual.",
+    "habilidad_2": "Calcular métricas de ejecución y defectos, y definir criterios de salida para sustentar la decisión de liberación.",
+    "habilidad_3": "Defender el Proyecto Integrador de Pruebas Manuales mediante un reporte ejecutivo de calidad y una presentación profesional que explique decisiones técnicas, riesgos residuales y lecciones aprendidas.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Pruebas (TEST)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/TEST"
+  }
+]

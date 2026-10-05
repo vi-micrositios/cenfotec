@@ -1,0 +1,399 @@
+Microcurso 1: Criterio Profesional de Automatización de Pruebas
+Ingrese el nombre del curso:
+Criterio Profesional de Automatización de Pruebas
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+El criterio profesional de automatización de pruebas permite seleccionar y priorizar escenarios automatizables considerando riesgo, repetición, estabilidad funcional, valor de negocio, esfuerzo técnico, mantenibilidad y cobertura de regresión. Se abordan el propósito de la automatización, su rol como apoyo a la regresión, la repetibilidad y la retroalimentación continua; los criterios para decidir qué automatizar y qué no; la cobertura automatizable, la estabilidad funcional y el valor de negocio; los riesgos de fragilidad, falsos positivos, falsos negativos y deuda técnica; y la elaboración de una estrategia inicial de automatización. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Aseguramiento de la calidad (QUAS) y Gestión y definición de requisitos (REQM). Como resultado, el estudiante diferencia pruebas manuales, automatizadas y escenarios no recomendados, aplica criterios de priorización y elabora una estrategia inicial con escenarios priorizados, riesgos y cobertura esperada. Está orientado a quienes inician en automatización y requiere bases de programación y pruebas manuales.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Ciclo de Educación General Básica aprobado o equivalente.
+
+Python Foundations o competencia equivalente validada por diagnóstico.
+
+Técnico Ágil en Pruebas Manuales de Software o competencias equivalentes homologables por experiencia o diagnóstico.
+
+Dominio básico previo de programación; no se enseña programación desde cero.
+
+Conocimiento previo de fundamentos de pruebas, casos de prueba, defectos, evidencia, APIs manuales y regresión.
+
+Manejo básico de sistema operativo, navegador, archivos, terminal básica, documentos colaborativos y plataformas virtuales.
+
+Curso anterior: ninguno.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: herramienta de gestión de pruebas (Jira/Xray/TestRail o similar), hoja de cálculo, Markdown, Git.
+
+Roles que podrá desempeñar:
+
+QA Automation Engineer Junior.
+
+Automation Tester Junior.
+
+Test Automation Developer Junior.
+
+API Test Automation Junior.
+
+QA Engineer Junior con énfasis en automatización.
+
+Regression Automation Tester.
+
+Continuous Testing Assistant.
+
+SDET Trainee.
+
+Palabras clave:
+Automatización de pruebas, criterios de selección, priorización, riesgo, repetición, estabilidad funcional, valor de negocio, cobertura, regresión, fragilidad, falsos positivos, deuda técnica, estrategia de automatización.
+
+Contenidos principales:
+
+Propósito y beneficios de la automatización: propósito, apoyo a regresión, repetibilidad y retroalimentación, diferencias manual/automatizado, beneficios en ciclos continuos.
+
+Criterios de selección y cobertura: qué automatizar y qué no, cobertura automatizable, estabilidad funcional, valor de negocio, priorización por riesgo/repetición/valor, matriz de automatización.
+
+Riesgos de automatización: fragilidad, falsos positivos, falsos negativos, deuda técnica, escenarios no recomendados, impacto en mantenimiento de suites.
+
+Estrategia inicial de automatización: elaboración para un contexto definido, justificación técnica de decisiones.
+
+Microcurso 2: Python Aplicado a Automatización de Pruebas
+Ingrese el nombre del curso:
+Python Aplicado a Automatización de Pruebas
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La aplicación de Python a la automatización de pruebas permite construir componentes reutilizables mediante estructuras modulares, manejo de errores, archivos, configuración, dependencias y buenas prácticas de legibilidad. Se abordan la reutilización de funciones y utilidades, la organización modular del código, la creación de utilidades para validación, el manejo de excepciones y mensajes técnicos, la lectura de archivos estructurados, el procesamiento de datos externos, la gestión de dependencias y ambientes, la configuración inicial de un proyecto técnico, y las convenciones de legibilidad y documentación mínima. El curso se alinea con SFIA 8 en Programación/Desarrollo de software (PROG) nivel 2, con apoyo en Métodos y herramientas (METL) y Pruebas (TEST). Como resultado, el estudiante construye funciones, módulos y utilidades reutilizables, maneja errores y mensajes diagnósticos, organiza un proyecto básico con dependencias y configuración, y documenta mínimamente sus componentes. Requiere haber aprobado el microcurso 1.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Haber aprobado el curso 1: Criterio Profesional de Automatización de Pruebas.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, VS Code o PyCharm, pip/venv, pytest, Git.
+
+Roles que podrá desempeñar:
+
+QA Automation Engineer Junior.
+
+Automation Tester Junior.
+
+Test Automation Developer Junior.
+
+API Test Automation Junior.
+
+QA Engineer Junior con énfasis en automatización.
+
+Regression Automation Tester.
+
+Continuous Testing Assistant.
+
+SDET Trainee.
+
+Palabras clave:
+Python, reutilización, modularidad, funciones, utilidades, excepciones, mensajes diagnósticos, archivos estructurados, dependencias, ambientes, configuración, legibilidad, documentación mínima.
+
+Contenidos principales:
+
+Reutilización y organización modular: funciones y utilidades, organización modular, utilidades de validación, módulos de prueba.
+
+Manejo de errores y datos estructurados: excepciones, mensajes técnicos, lectura de archivos estructurados, errores controlados, procesamiento de datos externos.
+
+Dependencias, ambientes y configuración: configuración inicial, gestión de dependencias.
+
+Legibilidad y documentación: convenciones de código, documentación mínima de utilidades.
+
+Microcurso 3: Automatización de Pruebas con Pytest
+Ingrese el nombre del curso:
+Automatización de Pruebas con Pytest
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La automatización de pruebas con Pytest permite construir suites automatizadas aplicando aserciones, preparación de contexto, parametrización, organización modular y ejecución controlada. Se abordan la estructura de pruebas automatizadas, las aserciones y mensajes diagnósticos, la validación de resultados esperados, la preparación y limpieza del contexto de prueba, la parametrización de escenarios, la reutilización de mecanismos de preparación, la clasificación y ejecución selectiva por criterio técnico o funcional, la interpretación de resultados y la organización de suites por propósito, criticidad o tipo de prueba. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 2, con apoyo en Programación/Desarrollo de software (PROG) y Métodos y herramientas (METL). Como resultado, el estudiante crea pruebas con estructura clara, aplica aserciones y mensajes diagnósticos, usa preparación/limpieza y parametrización, organiza suites ejecutables y ejecuta selectivamente interpretando resultados. Requiere haber aprobado el microcurso 2.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Haber aprobado el curso 2: Python Aplicado a Automatización de Pruebas.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pytest, VS Code o PyCharm, pytest-html/Allure, Git.
+
+Roles que podrá desempeñar:
+
+QA Automation Engineer Junior.
+
+Automation Tester Junior.
+
+Test Automation Developer Junior.
+
+API Test Automation Junior.
+
+QA Engineer Junior con énfasis en automatización.
+
+Regression Automation Tester.
+
+Continuous Testing Assistant.
+
+SDET Trainee.
+
+Palabras clave:
+Pytest, aserciones, mensajes diagnósticos, fixtures, preparación/limpieza, parametrización, escenarios, ejecución selectiva, suites, criticidad, interpretación de resultados.
+
+Contenidos principales:
+
+Estructura y aserciones: estructura de pruebas, aserciones, mensajes diagnósticos, validación de resultados, mensajes claros para fallos.
+
+Preparación y parametrización: preparación/limpieza de contexto, parametrización, reutilización, ejecución con múltiples datos.
+
+Clasificación y ejecución selectiva: ejecución por criterio técnico/funcional, interpretación de resultados.
+
+Organización de suites: por propósito, criticidad o tipo de prueba, agrupación por criticidad, suites ejecutables.
+
+Microcurso 4: Datos de Prueba, Configuración y Ambientes
+Ingrese el nombre del curso:
+Datos de Prueba, Configuración y Ambientes
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La gestión de datos de prueba, configuración y ambientes permite separar datos de la lógica de automatización, configurar parámetros por ambiente, manejar credenciales y datos sensibles de forma responsable, y reducir dependencias entre pruebas mediante aislamiento de datos. Se abordan el diseño de datos válidos, inválidos, borde y combinados, la separación de datos y lógica, la parametrización con archivos externos, la ejecución con distintos datos, la configuración por ambiente, variables, credenciales y datos sensibles, el aislamiento, limpieza y reutilización de datos, las dependencias de datos, la estabilidad de ejecución y el análisis de fallos asociados a datos. El curso se alinea con SFIA 8 en Métodos y herramientas (METL) nivel 3, con apoyo en Pruebas (TEST) y Seguridad de la información (SCTY). Como resultado, el estudiante diseña datos de prueba, configura parámetros por ambiente, gestiona credenciales y aplica aislamiento y limpieza para estabilizar ejecuciones. Requiere haber aprobado el microcurso 3.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Haber aprobado el curso 3: Automatización de Pruebas con Pytest.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pytest, archivos JSON/CSV/YAML, dotenv, VS Code, Git, gestor de secretos.
+
+Roles que podrá desempeñar:
+
+QA Automation Engineer Junior.
+
+Automation Tester Junior.
+
+Test Automation Developer Junior.
+
+API Test Automation Junior.
+
+QA Engineer Junior con énfasis en automatización.
+
+Regression Automation Tester.
+
+Continuous Testing Assistant.
+
+SDET Trainee.
+
+Palabras clave:
+Datos de prueba, datos válidos, inválidos, borde, combinados, parametrización, datos externos, configuración por ambiente, variables, credenciales, datos sensibles, aislamiento, limpieza, estabilidad.
+
+Contenidos principales:
+
+Diseño de datos de prueba: válidos, inválidos, borde y combinados; separación de datos y lógica.
+
+Datos externos y parametrización: parametrización con archivos externos, ejecución con distintos datos.
+
+Configuración y credenciales: configuración por ambiente, variables, credenciales y datos sensibles, manejo responsable, parámetros de ejecución.
+
+Aislamiento y estabilidad: aislamiento, limpieza y reutilización, dependencias de datos, reducción de dependencias, análisis de fallos por datos.
+
+Microcurso 5: Framework Base de Automatización
+Ingrese el nombre del curso:
+Framework Base de Automatización
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La organización de un framework base de automatización permite estructurar una solución mantenible mediante separación de responsabilidades, convenciones, utilidades reutilizables, configuración centralizada y documentación técnica inicial. Se abordan la estructura base de un proyecto de automatización, la separación de responsabilidades, el diseño de estructura de carpetas, la separación de pruebas, datos, configuración y reportes, las convenciones de nombres y organización, las utilidades comunes y componentes reutilizables, la configuración centralizada, la documentación técnica mínima, la documentación de instalación y ejecución, los criterios básicos de mantenibilidad, la refactorización básica y la reorganización de suites desestructuradas. El curso se alinea con SFIA 8 en Programación/Desarrollo de software (PROG) nivel 3, con apoyo en Métodos y herramientas (METL) y Gestión de la configuración (CFMG). Como resultado, el estudiante diseña una estructura base, aplica convenciones, incorpora utilidades reutilizables, centraliza configuración y documenta instalación y ejecución. Requiere haber aprobado el curso 4.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso: Datos de Prueba, Configuración y Ambientes.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pytest, VS Code/PyCharm, YAML/JSON, Git, Markdown, Allure/pytest-html.
+
+Roles que podrá desempeñar:
+QA Automation Engineer Junior, Automation Tester Junior, Test Automation Developer Junior, API Test Automation Junior, QA Engineer Junior con énfasis en automatización, Regression Automation Tester, Continuous Testing Assistant, SDET Trainee.
+
+Palabras clave:
+Framework, estructura de carpetas, separación de responsabilidades, convenciones, utilidades comunes, componentes reutilizables, configuración centralizada, documentación técnica, mantenibilidad, refactorización.
+
+Contenidos principales:
+
+Estructura base y separación de responsabilidades: estructura del proyecto, separación de responsabilidades, carpetas, pruebas/datos/configuración/reportes.
+
+Convenciones y componentes reutilizables: nombres y organización, utilidades comunes, componentes reutilizables.
+
+Configuración y documentación técnica: configuración centralizada, documentación mínima, instalación y ejecución.
+
+Criterios de mantenibilidad: mantenibilidad, refactorización básica, revisión, reorganización de suites.
+
+Microcurso 6: Automatización Funcional Web
+Ingrese el nombre del curso:
+Automatización Funcional Web
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La automatización funcional web permite automatizar flujos funcionales mediante localizadores, acciones de usuario, navegación, formularios, esperas, validaciones y evidencia básica de ejecución. Se abordan la automatización funcional de interfaces web, la validación de resultados visibles, los localizadores y selectores, las estrategias de localización de elementos, las acciones de usuario y navegación, la automatización de formularios, la validación de mensajes y resultados, las esperas, sincronización y estabilidad, y el registro de evidencia técnica básica de ejecución. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 2, con apoyo en Programación/Desarrollo de software (PROG) y Métodos y herramientas (METL). Como resultado, el estudiante identifica elementos de interfaz, automatiza acciones de usuario, aplica esperas para estabilizar ejecuciones, valida resultados visibles y genera evidencia básica. Requiere haber aprobado el curso 5.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso: Framework Base de Automatización.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, Playwright o Selenium, pytest, navegador y driver, Allure/pytest-html, Git.
+
+Roles que podrá desempeñar:
+QA Automation Engineer Junior, Automation Tester Junior, Test Automation Developer Junior, API Test Automation Junior, QA Engineer Junior con énfasis en automatización, Regression Automation Tester, Continuous Testing Assistant, SDET Trainee.
+
+Palabras clave:
+Automatización web, localizadores, selectores, acciones de usuario, navegación, formularios, validaciones, mensajes, esperas, sincronización, evidencia, flujos funcionales.
+
+Contenidos principales:
+
+Automatización funcional de interfaces web: flujos funcionales, validación de resultados visibles.
+
+Localizadores y acciones de usuario: selectores, acciones, navegación, estrategias de localización.
+
+Formularios, mensajes y validaciones: formularios, mensajes, validación de resultados, automatización de formularios.
+
+Esperas, sincronización y evidencia: esperas, estabilidad, evidencia técnica, registro de ejecución.
+
+Microcurso 7: Automatización Web Mantenible
+Ingrese el nombre del curso:
+Automatización Web Mantenible
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La automatización web mantenible permite mejorar suites automatizadas aplicando patrones básicos de diseño, componentes reutilizables, manejo de fallos, refactorización, selectores robustos y reducción de fragilidad. Se abordan la fragilidad en pruebas web, la identificación de pruebas frágiles y el análisis de causas; la separación de responsabilidades; los patrones básicos para interacción web mantenible; la encapsulación de páginas o acciones; los componentes reutilizables; la refactorización básica; la mejora de legibilidad y mantenimiento; el manejo de fallos y reducción de intermitencia; la distinción entre defecto de producto, dato, ambiente o automatización; y la documentación de decisiones de diseño. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Programación/Desarrollo de software (PROG) y Métodos y herramientas (METL). Como resultado, el estudiante identifica fragilidad, aplica separación de responsabilidades, refactoriza pruebas, mejora selectores y analiza fallos con evidencia técnica. Requiere haber aprobado el curso 6.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso: Automatización Funcional Web.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, Playwright/Selenium, pytest, patrón Page Object, linters, Allure, Git.
+
+Roles que podrá desempeñar:
+QA Automation Engineer Junior, Automation Tester Junior, Test Automation Developer Junior, API Test Automation Junior, QA Engineer Junior con énfasis en automatización, Regression Automation Tester, Continuous Testing Assistant, SDET Trainee.
+
+Palabras clave:
+Fragilidad, mantenibilidad, separación de responsabilidades, patrones, Page Object, componentes reutilizables, refactorización, selectores robustos, intermitencia, fallos, evidencia.
+
+Contenidos principales:
+
+Fragilidad en pruebas web: identificación, análisis de causas.
+
+Separación de responsabilidades y patrones: patrones básicos, encapsulación de páginas o acciones.
+
+Componentes reutilizables y refactorización: componentes, refactorización básica, legibilidad y mantenimiento.
+
+Manejo de fallos y reducción de intermitencia: distinción defecto/dato/ambiente/automatización, documentación de decisiones.
+
+Microcurso 8: Automatización de APIs y Servicios
+Ingrese el nombre del curso:
+Automatización de APIs y Servicios
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La automatización de pruebas de APIs y servicios permite validar métodos, parámetros, códigos de respuesta, estructuras de datos, autenticación básica, errores, reglas de negocio y escenarios positivos y negativos. Se abordan los fundamentos técnicos de APIs para automatización, la automatización de solicitudes a servicios, la interpretación de fallos, las solicitudes, parámetros, encabezados y cuerpos de petición, la validación de códigos de respuesta, la automatización de endpoints, la validación de estructuras de datos, los escenarios positivos, negativos y borde, la automatización de errores esperados, la autenticación y autorización básica, la validación de reglas de negocio, y la integración de datos de prueba y autenticación. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Programación/Desarrollo de software (PROG) y Métodos y herramientas (METL). Como resultado, el estudiante automatiza solicitudes, valida respuestas y estructuras, cubre escenarios positivos/negativos, integra autenticación y valida reglas de negocio. Requiere haber aprobado el curso 7.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso: Automatización Web Mantenible.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, Requests/httpx, pytest, Postman/Insomnia, API bajo prueba, Allure, Git.
+
+Roles que podrá desempeñar:
+QA Automation Engineer Junior, Automation Tester Junior, Test Automation Developer Junior, API Test Automation Junior, QA Engineer Junior con énfasis en automatización, Regression Automation Tester, Continuous Testing Assistant, SDET Trainee.
+
+Palabras clave:
+APIs, servicios, solicitudes, parámetros, encabezados, cuerpos, códigos de respuesta, estructuras de datos, escenarios positivos, negativos, borde, autenticación, reglas de negocio.
+
+Contenidos principales:
+
+Fundamentos técnicos de APIs: automatización de solicitudes, interpretación de fallos.
+
+Solicitudes y validación de respuestas: parámetros, encabezados, cuerpos, códigos de respuesta, endpoints, validación.
+
+Validación de datos y escenarios: estructuras de datos, escenarios positivos/negativos/borde, errores esperados.
+
+Autenticación y reglas de negocio: autenticación/autorización básica, reglas de negocio, integración de datos y autenticación.
+
+Microcurso 9: Reportes, Control de Versiones e Integración Continua Básica
+Ingrese el nombre del curso:
+Reportes, Control de Versiones e Integración Continua Básica
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+La integración de suites automatizadas con reportes, control de versiones e integración continua básica permite construir un ciclo completo de ejecución, evidencia y retroalimentación técnica. Se abordan los reportes de ejecución y evidencia automatizada, el análisis de fallos y clasificación de causas, la generación de reportes técnicos, la interpretación de resultados y defectos potenciales, el control de versiones aplicado a automatización, repositorio, ramas, commits y revisión básica, la documentación técnica colaborativa, la documentación de instalación, ejecución y mantenimiento, la integración continua básica, los artefactos de ejecución y resultados, la configuración de ejecución automatizada y la publicación o almacenamiento de resultados. El curso se alinea con SFIA 8 en Liberación e implementación (RELM) nivel 3, con apoyo en Métodos y herramientas (METL), Gestión de la configuración (CFMG) y Pruebas (TEST). Como resultado, el estudiante genera reportes, versiona la solución, documenta su uso y configura una ejecución básica en CI. Requiere haber aprobado el curso 8.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso: Automatización de APIs y Servicios.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Git/GitHub/GitLab, GitHub Actions/GitLab CI/Jenkins, pytest-html/Allure, Python/pytest, Docker opcional.
+
+Roles que podrá desempeñar:
+QA Automation Engineer Junior, Automation Tester Junior, Test Automation Developer Junior, API Test Automation Junior, QA Engineer Junior con énfasis en automatización, Regression Automation Tester, Continuous Testing Assistant, SDET Trainee.
+
+Palabras clave:
+Reportes, evidencia, análisis de fallos, control de versiones, repositorio, ramas, commits, documentación colaborativa, integración continua, artefactos, resultados.
+
+Contenidos principales:
+
+Reportes y análisis de fallos: reportes de ejecución, evidencia, clasificación de causas, reportes técnicos, interpretación.
+
+Control de versiones: aplicación a automatización, repositorio, ramas, commits, revisión, versionamiento, organización.
+
+Documentación técnica colaborativa: instalación, ejecución, mantenimiento, repositorio.
+
+Integración continua y artefactos: CI básica, artefactos, configuración de ejecución, publicación/almacenamiento de resultados.
+
+Microcurso 10: Proyecto Integrador de Automatización de Pruebas de Software
+Ingrese el nombre del curso:
+Proyecto Integrador de Automatización de Pruebas de Software
+
+Horas lectivas del curso:
+24 horas lectivas (4 semanas × 6 horas semanales).
+
+Descripción del curso (200 palabras):
+El Proyecto Integrador de Automatización de Pruebas de Software permite consolidar las competencias del Path mediante el diseño, construcción, documentación y defensa de una solución básica de automatización sobre un caso empresarial simulado. Se abordan el contexto empresarial, la estrategia de automatización, el alcance, los objetivos, los riesgos, los escenarios seleccionados y su justificación; la construcción de pruebas web, pruebas de APIs y datos de prueba; la solución técnica, los reportes, el control de versiones y la integración continua básica; y la defensa técnica de decisiones, limitaciones, resultados y oportunidades de mejora. El curso se alinea con SFIA 8 en Pruebas (TEST) nivel 3, con apoyo en Programación/Desarrollo de software (PROG), Métodos y herramientas (METL) y Liberación e implementación (RELM). Como resultado, el estudiante define una estrategia, construye una solución con pruebas web y de APIs, integra datos, configura reportes y CI, y defiende técnicamente el proyecto documentando su uso. Requiere haber aprobado el curso 9.
+
+Perfil de ingreso (solo obligatorios y curso anterior):
+
+Curso: Reportes, Control de Versiones e Integración Continua Básica.
+
+Software requerido:
+No especificado en el JSON. Se sugiere: Python, pytest, Playwright/Selenium, Requests/httpx, Postman/Insomnia, Git, CI (GitHub Actions/GitLab CI/Jenkins), Allure/pytest-html, Docker opcional.
+
+Roles que podrá desempeñar:
+QA Automation Engineer Junior, Automation Tester Junior, Test Automation Developer Junior, API Test Automation Junior, QA Engineer Junior con énfasis en automatización, Regression Automation Tester, Continuous Testing Assistant, SDET Trainee.
+
+Palabras clave:
+Proyecto integrador, estrategia de automatización, pruebas web, pruebas de APIs, datos de prueba, solución técnica, reportes, control de versiones, integración continua, defensa técnica.
+
+Contenidos principales:
+
+Definición del caso, contexto y estrategia de automatización: contexto empresarial, estrategia, alcance, objetivos, riesgos, escenarios seleccionados.
+
+Construcción de la solución: pruebas web, pruebas de APIs, datos de prueba.
+
+Solución técnica, reportes, versiones e integración continua: solución técnica, reportes, control de versiones, integración continua básica.

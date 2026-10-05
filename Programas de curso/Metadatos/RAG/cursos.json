@@ -1,0 +1,145 @@
+[
+  {
+    "codigo_y_nombre": "SOFT-800 Fundamentos de IA generativa, recuperación de información y RAG",
+    "descripcion": "La persona acreditada es capaz de comprender el rol de la IA generativa, la recuperación de información y las arquitecturas RAG en soluciones empresariales basadas en conocimiento organizacional.",
+    "habilidades": "Modelos de lenguaje, Generación de texto, Alucinaciones, Corte de conocimiento, Contexto organizacional, Fuentes internas, Búsqueda por palabras clave, Full-text, Búsqueda semántica, Ranking, Relevancia, Casos de uso RAG, Asistentes internos, Buscadores inteligentes, Bases de conocimiento",
+    "habilidad_1": "Habilidad: Reconocer las limitaciones de los modelos generativos sin contexto externo, identificando alucinaciones, corte de conocimiento y ausencia de fuentes organizacionales.",
+    "habilidad_2": "Habilidad: Diferenciar la búsqueda por palabras clave, la búsqueda semántica y las arquitecturas RAG según su propósito y mecanismo de recuperación.",
+    "habilidad_3": "Habilidad: Identificar casos empresariales donde un sistema RAG aporta valor frente a un modelo generativo sin contexto, reconociendo sus componentes generales.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Aprendizaje automático (MLNG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/MLNG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-801 Fuentes documentales, metadatos y calidad de conocimiento",
+    "descripcion": "La persona acreditada es capaz de identificar, clasificar y preparar fuentes de conocimiento empresarial para una solución de recuperación semántica.",
+    "habilidades": "PDF, Word, HTML, Markdown, Bases de conocimiento, Tickets, Manuales, Políticas, Vigencia, Autoridad, Duplicidad, Contradicciones, Versiones, Metadatos, Calidad documental",
+    "habilidad_1": "Habilidad: Identificar fuentes documentales empresariales útiles para un sistema RAG, clasificándolas según confiabilidad, vigencia y utilidad.",
+    "habilidad_2": "Habilidad: Definir metadatos relevantes (fuente, fecha, autor, versión, categoría, permisos y confidencialidad) para recuperación, filtrado y trazabilidad.",
+    "habilidad_3": "Habilidad: Detectar problemas de calidad documental como ruido, duplicidad, contradicciones, obsolescencia y material irrelevante en un corpus organizacional.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Gestión de la información (IRMG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/IRMG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-802 Procesamiento documental, chunking y preparación de corpus",
+    "descripcion": "La persona acreditada es capaz de preparar documentos para recuperación semántica mediante extracción, limpieza, normalización, segmentación y generación de unidades recuperables.",
+    "habilidades": "Extracción, Limpieza, Texto, Secciones, Encabezados, Pies de página, Ruido, Normalización, Chunking, Tamaño de chunk, Overlap, Segmentación por párrafos, Segmentación por títulos, Chunking fijo, Chunking semántico",
+    "habilidad_1": "Habilidad: Extraer y limpiar texto útil desde fuentes documentales, eliminando encabezados, pies de página y contenido no recuperable.",
+    "habilidad_2": "Habilidad: Diseñar estrategias de chunking (fijo, contextual o semántico) considerando tamaño, overlap y segmentación por párrafos, títulos o secciones.",
+    "habilidad_3": "Habilidad: Construir un pipeline de preparación documental que genere un corpus listo para generación de embeddings, justificando las decisiones de segmentación.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Ingeniería de datos (DENG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DENG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-803 Embeddings y representación vectorial",
+    "descripcion": "La persona acreditada es capaz de generar representaciones vectoriales de contenido textual y analizar similitud semántica para fundamentar la recuperación de información.",
+    "habilidades": "Embedding, Representación numérica, Dimensionalidad, Modelos de embeddings, Selección de modelo, Costo, Latencia, Actualización, Generación de embeddings, Chunks, Consultas, Almacenamiento, Similitud vectorial, Coseno, Distancia euclidiana",
+    "habilidad_1": "Habilidad: Reconocer el concepto de embedding, su dimensionalidad y su uso en recuperación semántica dentro de un sistema RAG.",
+    "habilidad_2": "Habilidad: Generar embeddings para chunks, consultas y documentos, aplicando criterios de selección, costo, latencia y actualización de modelos.",
+    "habilidad_3": "Habilidad: Analizar similitud vectorial mediante coseno, distancia euclidiana o producto interno para comparar consultas y fragmentos recuperados.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-804 Bases de datos vectoriales",
+    "descripcion": "La persona acreditada es capaz de almacenar, indexar y consultar embeddings en una base vectorial o extensión vectorial, utilizando una herramienta institucional definida.",
+    "habilidades": "Vector stores, Colecciones, Índices, Vectores, Texto original, Chunks, Metadatos, Inserción, Actualización, Eliminación, Consulta de vectores, Búsqueda exacta, Búsqueda aproximada, Latencia, pgvector",
+    "habilidad_1": "Habilidad: Explicar la función de una base vectorial dentro de un sistema RAG, diferenciando vector stores, índices y colecciones.",
+    "habilidad_2": "Habilidad: Almacenar embeddings junto con texto original y metadatos en una base vectorial implementada con la herramienta institucional definida (pgvector sobre PostgreSQL).",
+    "habilidad_3": "Habilidad: Ejecutar consultas por similitud e implementar criterios iniciales de indexación y rendimiento en una base vectorial funcional.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Administración de base de datos (DBAD)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DBAD"
+  },
+  {
+    "codigo_y_nombre": "SOFT-805 Búsqueda semántica y relevancia inicial",
+    "descripcion": "La persona acreditada es capaz de transformar consultas en lenguaje natural en embeddings y recuperar resultados mediante similitud vectorial, interpretando ranking, umbrales y fallos frecuentes.",
+    "habilidades": "Consulta en lenguaje natural, Transformación de consulta, Embedding, Comparación semántica, Recuperación por similitud, Ranking, Umbrales, Top-k, Relevancia, Presentación de resultados, Fallos frecuentes, Resultados irrelevantes, Ruido, Chunks mal segmentados, Ausencia de contexto",
+    "habilidad_1": "Habilidad: Transformar consultas en lenguaje natural en embeddings para recuperar resultados mediante similitud vectorial.",
+    "habilidad_2": "Habilidad: Interpretar ranking, umbrales y top-k para evaluar la relevancia inicial de los resultados recuperados.",
+    "habilidad_3": "Habilidad: Identificar fallos frecuentes de recuperación como resultados irrelevantes, ruido, chunks mal segmentados o ausencia de contexto.",
+    "nivel_sfia": 2,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-806 Búsqueda híbrida y recuperación contextual",
+    "descripcion": "La persona acreditada es capaz de combinar búsqueda vectorial con filtros, metadatos y búsqueda textual para mejorar precisión, control, trazabilidad y utilidad del contexto recuperado.",
+    "habilidades": "Búsqueda híbrida, Vectorial, Textual, Filtros, Fecha, Fuente, Categoría, Tipo de documento, Permisos, Versión, Confidencialidad, Re-ranking, Priorización, Reducción de ruido, Recuperación contextual",
+    "habilidad_1": "Habilidad: Diferenciar la búsqueda semántica simple de la búsqueda híbrida, reconociendo el aporte de filtros y búsqueda textual.",
+    "habilidad_2": "Habilidad: Aplicar filtros por metadatos (fecha, fuente, categoría, permisos, versión) para mejorar precisión, control y trazabilidad del contexto recuperado.",
+    "habilidad_3": "Habilidad: Seleccionar fragmentos útiles aplicando re-ranking básico y comparación de estrategias para preparar el contexto mínimo suficiente para generación.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Modelado y diseño de datos (DTAN)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/DTAN"
+  },
+  {
+    "codigo_y_nombre": "SOFT-807 Arquitectura RAG y prompting con contexto",
+    "descripcion": "La persona acreditada es capaz de diseñar e implementar el flujo base de una arquitectura RAG, integrando recuperación de contexto, armado de prompt, uso controlado de evidencia y generación de respuestas.",
+    "habilidades": "Componentes RAG, Ingesta, Chunking, Embeddings, Vector store, Recuperación, Generación, Flujo de consulta, Pregunta, Contexto, Prompt, Respuesta, Prompting para RAG, Sistema, Control de respuesta",
+    "habilidad_1": "Habilidad: Diseñar el flujo general de una solución RAG integrando ingesta, chunking, embeddings, vector store, recuperación y generación.",
+    "habilidad_2": "Habilidad: Diferenciar RAG de fine-tuning, reconociendo cuándo usar cada enfoque según actualización, costo y control de fuentes.",
+    "habilidad_3": "Habilidad: Construir prompts que utilicen contexto recuperado, incorporen citas o referencias a fuentes y controlen respuestas sin evidencia suficiente.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Aprendizaje automático (MLNG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/MLNG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-808 Integración con modelos de lenguaje, APIs y control operativo",
+    "descripcion": "La persona acreditada es capaz de integrar modelos de lenguaje mediante APIs para generar respuestas a partir de contexto recuperado, considerando parámetros básicos, manejo de errores, costos, tokens y latencia.",
+    "habilidades": "Consumo de APIs, Parámetros básicos, Claves, Configuración, Manejo de respuestas, Control de tokens, Latencia, Costos, Tiempos de respuesta, Manejo de errores, Reintentos, Fallos de API, Validaciones, Respuestas incompletas, Separación de componentes",
+    "habilidad_1": "Habilidad: Consumir APIs de modelos de lenguaje aplicando parámetros básicos, configuración de claves y manejo de respuestas.",
+    "habilidad_2": "Habilidad: Integrar recuperación y generación en un flujo funcional que controle tokens, latencia y costos iniciales.",
+    "habilidad_3": "Habilidad: Manejar errores básicos de API mediante reintentos, validaciones y separación de componentes de recuperación, generación y configuración.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  },
+  {
+    "codigo_y_nombre": "SOFT-809 Desarrollo de aplicaciones o servicios RAG",
+    "descripcion": "La persona acreditada es capaz de exponer una solución RAG mediante una aplicación, servicio o API simple que permita realizar consultas, recuperar contexto, generar respuestas y mostrar fuentes.",
+    "habilidades": "Estructura de aplicación RAG, Componentes, Carpetas, Configuración, Separación lógica, API o endpoint, Entrada de usuario, Validación, Respuesta estructurada, Manejo de errores, Presentación de fuentes, Evidencia recuperada, Metadatos, Trazabilidad inicial, Logs",
+    "habilidad_1": "Habilidad: Organizar una aplicación RAG en componentes, carpetas, configuración y separación lógica de responsabilidades.",
+    "habilidad_2": "Habilidad: Crear un endpoint o interfaz simple de consulta que valide entradas de usuario, recupere contexto y presente fuentes y fragmentos utilizados.",
+    "habilidad_3": "Habilidad: Registrar consultas, errores, respuestas y fuentes utilizadas mediante logs y manejo operativo básico en la aplicación o servicio RAG.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Programación/Desarrollo de software (PROG)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/PROG"
+  },
+  {
+    "codigo_y_nombre": "SOFT-810 Evaluación de recuperación y respuestas generadas",
+    "descripcion": "La persona acreditada es capaz de evaluar la calidad de la recuperación y de las respuestas generadas por un sistema RAG, aplicando criterios de relevancia, fidelidad, exactitud, cobertura y trazabilidad.",
+    "habilidades": "Evaluación de recuperación, Relevancia, Precisión, Recall, Cobertura, Top-k, Calidad del contexto, Casos de prueba, Preguntas esperadas, Fuera de alcance, Ambiguas, Críticas, Evaluación de respuesta, Fidelidad al contexto, Exactitud",
+    "habilidad_1": "Habilidad: Diseñar casos de prueba para una solución RAG, incluyendo preguntas esperadas, fuera de alcance, ambiguas y críticas.",
+    "habilidad_2": "Habilidad: Evaluar relevancia, precisión y cobertura de los resultados recuperados, así como fidelidad y exactitud de las respuestas generadas.",
+    "habilidad_3": "Habilidad: Detectar alucinaciones, fuentes incorrectas, respuestas incompletas y ausencia de evidencia, proponiendo mejoras al sistema RAG evaluado.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Pruebas (TEST)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/TEST"
+  },
+  {
+    "codigo_y_nombre": "SOFT-811 Seguridad, trazabilidad, mantenimiento y documentación técnica",
+    "descripcion": "La persona acreditada es capaz de aplicar controles básicos de seguridad, privacidad, trazabilidad, mantenimiento y documentación técnica en sistemas RAG empresariales.",
+    "habilidades": "Datos sensibles, Permisos, Credenciales, Prompt injection, Data leakage, Trazabilidad, Fuentes, Chunks, Metadatos, Evidencia recuperada, Auditoría básica, Mantenimiento, Reindexación, Versiones, Documentación técnica",
+    "habilidad_1": "Habilidad: Aplicar controles básicos de seguridad y privacidad sobre credenciales, fuentes, datos sensibles, prompt injection y data leakage.",
+    "habilidad_2": "Habilidad: Documentar la trazabilidad entre respuestas, chunks y fuentes, así como un plan básico de mantenimiento de la base de conocimiento (reindexación, versiones, eliminación de obsoletos).",
+    "habilidad_3": "Habilidad: Elaborar documentación técnica de arquitectura, fuentes, chunking, embeddings, límites, decisiones y riesgos de una solución RAG empresarial.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Seguridad de la información (SCTY)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SCTY"
+  },
+  {
+    "codigo_y_nombre": "SOFT-812 Proyecto Integrador RAG Empresarial",
+    "descripcion": "La persona acreditada es capaz de diseñar, implementar, evaluar, documentar y defender un sistema RAG empresarial funcional que integre preparación documental, embeddings, base vectorial, búsqueda semántica o híbrida, modelo de lenguaje, trazabilidad, seguridad básica y evaluación de respuestas.",
+    "habilidades": "Análisis del caso, Necesidad organizacional, Fuentes, Alcance, Usuarios, Restricciones, Preparación de conocimiento, Limpieza, Chunking, Metadatos, Embeddings, Base vectorial, Búsqueda semántica, Búsqueda híbrida, Integración funcional",
+    "habilidad_1": "Habilidad: Diseñar e implementar un sistema RAG empresarial funcional que integre preparación documental, embeddings, base vectorial, búsqueda semántica o híbrida y modelo de lenguaje.",
+    "habilidad_2": "Habilidad: Evaluar la recuperación y las respuestas generadas, aplicando criterios de relevancia, fidelidad, exactitud, cobertura y trazabilidad hacia fuentes.",
+    "habilidad_3": "Habilidad: Documentar y defender técnicamente la solución, justificando decisiones de arquitectura, chunking, integración, seguridad, límites y plan de mantenimiento.",
+    "nivel_sfia": 3,
+    "habilidad_area_conocimiento": "Construcción e integración de sistemas (SINT)",
+    "link_sfia": "https://sfia-online.org/es/skillcode/8/SINT"
+  }
+]

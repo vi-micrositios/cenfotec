@@ -1,0 +1,24 @@
+1. Código y nombre del curso
+Ejemplo: SOFT-645 Fundamentos de Python
+
+2. Descripción (máx. 500 caracteres)
+La persona acreditada es capaz de [incluir la competencia descrita en el programa de curso]					
+
+3. Habilidades (máx. 15) separadas por coma de acuerdo con los contenidos del cursos.			
+Ejemplo: Badge Design, Colaboración, Digital Badging System, Innovación, Insignias Digitales, Open Badges, Reconocimiento Digital, Transformacion Digital
+
+4. Requisitos 
+- Autonomía: [Incluida en el programa]		
+- Influencia: [Incluida en el programa]			
+- Complejidad: [Incluida en el ]programa			
+Habilidad 1: [Capacidad especifica 1 del programa] 
+Habilidad 2: [Capacidad especifica 2 del programa] 		
+Habilidad 3: [Capacidad especifica 3 del programa] 		
+- Aprovechamiento: [cantidad] de horas lectivas más [cantidad] horas de trabajo extraclase, para un total de [cantidad] horas, que corresponden a [cantidad] créditos.			
+- Evaluación: Aprobar el curso con un promedio mayor o igual a 70 en la calificación final.			
+
+5. Nombre del estándar (completar con el área de conocimiento y nivel SFIA)
+Marco Global de Habilidades y Competencias para un Mundo Digital (SFIA8). Según este estándar el curso cumple con el nivel de responsabilidad [nivel] en la habilidad de [área de conocimiento]
+
+6. URL SFIA al área de conocimiento
+Ejemplo: https://sfia-online.org/es/skillcode/8/PROG
