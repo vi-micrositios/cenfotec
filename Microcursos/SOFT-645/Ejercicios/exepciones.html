@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Algoritmo y Diagrama de Flujo</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    
+    <section aria-labelledby="ejercicio-excepciones"
+        style="background:#ffffff;border-radius:20px;padding:28px 30px;margin:30px auto 0;width:100%;box-shadow:0 8px 30px rgba(22,74,152,0.12);border-left:6px solid #c81f66;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
+        <div
+            style="display:flex;align-items:center;gap:14px;margin-bottom:18px;border-bottom:3px solid #9CC8FF;padding-bottom:14px;flex-wrap:wrap;">
+            <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:linear-gradient(135deg,#c81f66,#006AEA);border-radius:12px;color:#ffffff;font-size:24px;"
+                aria-hidden="true">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </span>
+
+            <h3 id="ejercicio-excepciones" style="margin:0;color:#164a98;font-size:26px;font-weight:700;">
+                Ejercicio: ¿Qué pasa cuando ocurre un error?
+            </h3>
+        </div>
+
+        <div
+            style="background:#eef5ff;border-left:5px solid #c81f66;padding:16px 18px;margin-bottom:25px;border-radius:8px;color:#1a3a6b;font-size:16px;line-height:1.6;">
+            <strong>Instrucciones:</strong> Seleccione un contexto y utilice
+            <strong>try / except</strong> para controlar un error sencillo relacionado
+            con la lectura de un archivo.
+        </div>
+
+        <div style="background:#fafcff;border:2px solid #c8d1df;border-radius:14px;padding:22px;margin-bottom:28px;">
+
+            <h4 style="margin:0 0 14px;color:#164a98;font-size:20px;">
+                <i class="fa-solid fa-list-check" style="color:#c81f66;margin-right:8px;"></i>
+                Seleccione un contexto
+            </h4>
+
+            <div
+                style="background:#eef7f6;border:2px solid #9bd1cc;border-radius:12px;padding:18px;margin-bottom:16px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-gamepad" style="color:#712c86;margin-right:8px;"></i>
+                    Cargar una partida
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    El programa intenta abrir un archivo llamado <strong>partida.txt</strong>.
+                    Si no existe, debe mostrar un mensaje indicando que no se encontró la partida.
+                </p>
+            </div>
+
+            <div
+                style="background:#fffaf2;border:2px solid #e5c76b;border-radius:12px;padding:18px;margin-bottom:16px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-book" style="color:#006AEA;margin-right:8px;"></i>
+                    Abrir un libro
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    El programa intenta abrir un archivo con información de un libro.
+                    Si el archivo no existe, debe informar al usuario.
+                </p>
+            </div>
+
+            <div
+                style="background:#f7f1fa;border:2px solid #c9a6d5;border-radius:12px;padding:18px;margin-bottom:16px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-music" style="color:#c81f66;margin-right:8px;"></i>
+                    Cargar una playlist
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    El programa intenta leer una playlist almacenada en un archivo.
+                    Si el archivo no está disponible, debe mostrar un mensaje adecuado.
+                </p>
+            </div>
+
+            <div style="background:#f8fbff;border:2px solid #9CC8FF;border-radius:12px;padding:18px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-chart-column" style="color:#006AEA;margin-right:8px;"></i>
+                    Leer datos
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    El programa intenta abrir un archivo de datos. Si el archivo no existe,
+                    debe mostrar un mensaje indicando qué ocurrió.
+                </p>
+            </div>
+        </div>
+
+        <div style="background:#fff5f5;border:2px solid #e5a5a5;border-radius:14px;padding:22px;margin-bottom:25px;">
+
+            <h4 style="margin:0 0 12px;color:#164a98;font-size:20px;">
+                <i class="fa-solid fa-shield-halved" style="color:#c62828;margin-right:8px;"></i>
+                Controle el error
+            </h4>
+
+            <p style="color:#1c3b64;font-size:15px;line-height:1.7;margin:0 0 12px;">
+                El programa debe:
+            </p>
+
+            <ol style="margin:0;padding-left:24px;color:#1c3b64;font-size:15px;line-height:1.8;">
+                <li>Intentar abrir el archivo.</li>
+                <li>Leer el contenido si el archivo existe.</li>
+                <li>Mostrar un mensaje si el archivo no existe.</li>
+                <li>Evitar que el programa termine mostrando un error inesperado.</li>
+            </ol>
+        </div>
+
+        <div style="background:#f8fbff;border:2px solid #9CC8FF;border-radius:14px;padding:22px;margin-bottom:25px;">
+
+            <h4 style="margin:0 0 12px;color:#164a98;font-size:20px;">
+                <i class="fa-solid fa-vial" style="color:#006AEA;margin-right:8px;"></i>
+                Realice dos pruebas
+            </h4>
+
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;">
+
+                <div style="background:#e8f5e9;border:2px solid #9bd1cc;border-radius:10px;padding:16px;">
+                    <strong style="color:#2e7d32;">Prueba 1: Archivo existente</strong>
+                    <p style="color:#1c3b64;font-size:14px;line-height:1.6;margin:8px 0 0;">
+                        Cree el archivo y compruebe que el programa puede leerlo.
+                    </p>
+                </div>
+
+                <div style="background:#fff5f5;border:2px solid #e5a5a5;border-radius:10px;padding:16px;">
+                    <strong style="color:#c62828;">Prueba 2: Archivo inexistente</strong>
+                    <p style="color:#1c3b64;font-size:14px;line-height:1.6;margin:8px 0 0;">
+                        Cambie el nombre del archivo o elimínelo y compruebe que el programa
+                        maneja correctamente la situación.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div
+            style="background:#e8f5e9;border-radius:10px;padding:14px 16px;color:#2e7d32;font-size:14px;line-height:1.6;">
+            <i class="fa-solid fa-circle-check" style="font-size:20px;margin-right:8px;"></i>
+            <strong>Recuerde:</strong> Manejar una excepción permite que el programa responda
+            de manera controlada cuando ocurre una situación inesperada.
+        </div>
+
+    </section>
+
+</body>
+
+</html>

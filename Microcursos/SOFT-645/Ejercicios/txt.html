@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Algoritmo y Diagrama de Flujo</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section aria-labelledby="ejercicio-archivos-texto"
+        style="background:#ffffff;border-radius:20px;padding:28px 30px;margin:0 auto;width:100%;box-shadow:0 8px 30px rgba(22,74,152,0.12);border-left:6px solid #00928d;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;">
+        <div
+            style="display:flex;align-items:center;gap:14px;margin-bottom:18px;border-bottom:3px solid #9CC8FF;padding-bottom:14px;flex-wrap:wrap;">
+            <span
+                style="display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:linear-gradient(135deg,#00928d,#006AEA);border-radius:12px;color:#ffffff;font-size:24px;"
+                aria-hidden="true">
+                <i class="fa-solid fa-file-lines"></i>
+            </span>
+
+            <h3 id="ejercicio-archivos-texto" style="margin:0;color:#164a98;font-size:26px;font-weight:700;">
+                Ejercicio: Guardando información en un archivo
+            </h3>
+        </div>
+
+        <div
+            style="background:#eef5ff;border-left:5px solid #00928d;padding:16px 18px;margin-bottom:25px;border-radius:8px;color:#1a3a6b;font-size:16px;line-height:1.6;">
+            <strong>Instrucciones:</strong> Seleccione un contexto y cree un programa que permita
+            <strong>escribir información en un archivo de texto y posteriormente leerla</strong>.
+        </div>
+
+        <div style="background:#fafcff;border:2px solid #c8d1df;border-radius:14px;padding:22px;margin-bottom:28px;">
+
+            <h4 style="margin:0 0 14px;color:#164a98;font-size:20px;">
+                <i class="fa-solid fa-list-check" style="color:#c81f66;margin-right:8px;"></i>
+                Seleccione un contexto
+            </h4>
+
+            <div
+                style="background:#eef7f6;border:2px solid #9bd1cc;border-radius:12px;padding:18px;margin-bottom:16px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-note-sticky" style="color:#00928d;margin-right:8px;"></i>
+                    Nota personal
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    Solicite al usuario una nota y guárdela en un archivo llamado
+                    <strong>nota.txt</strong>. Después lea el archivo y muestre su contenido.
+                </p>
+            </div>
+
+            <div
+                style="background:#fffaf2;border:2px solid #e5c76b;border-radius:12px;padding:18px;margin-bottom:16px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-gamepad" style="color:#712c86;margin-right:8px;"></i>
+                    Partida guardada
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    Guarde el nombre de un jugador y su puntuación en un archivo de texto.
+                    Posteriormente lea y muestre la información.
+                </p>
+            </div>
+
+            <div
+                style="background:#f7f1fa;border:2px solid #c9a6d5;border-radius:12px;padding:18px;margin-bottom:16px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-music" style="color:#c81f66;margin-right:8px;"></i>
+                    Canción favorita
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    Guarde el nombre de una canción y su artista en un archivo y posteriormente
+                    muestre la información almacenada.
+                </p>
+            </div>
+
+            <div style="background:#f8fbff;border:2px solid #9CC8FF;border-radius:12px;padding:18px;">
+                <h5 style="margin:0 0 8px;color:#164a98;font-size:18px;">
+                    <i class="fa-solid fa-lightbulb" style="color:#C7AC19;margin-right:8px;"></i>
+                    Banco de ideas
+                </h5>
+                <p style="color:#1c3b64;font-size:14px;line-height:1.7;margin:0;">
+                    Permita al usuario escribir una idea para un proyecto, almacenarla en un archivo
+                    y mostrarla posteriormente.
+                </p>
+            </div>
+        </div>
+
+        <div style="background:#f8fbff;border:2px solid #9CC8FF;border-radius:14px;padding:22px;margin-bottom:25px;">
+            <h4 style="margin:0 0 12px;color:#164a98;font-size:20px;">
+                <i class="fa-solid fa-file-arrow-down" style="color:#006AEA;margin-right:8px;"></i>
+                Trabaje con el archivo
+            </h4>
+
+            <ol style="margin:0;padding-left:24px;color:#1c3b64;font-size:15px;line-height:1.8;">
+                <li>Solicite la información.</li>
+                <li>Abra el archivo para escritura.</li>
+                <li>Guarde la información.</li>
+                <li>Cierre el archivo.</li>
+                <li>Abra el archivo para lectura.</li>
+                <li>Muestre la información almacenada.</li>
+            </ol>
+        </div>
+
+        <div
+            style="background:#e8f5e9;border-radius:10px;padding:14px 16px;color:#2e7d32;font-size:14px;line-height:1.6;">
+            <i class="fa-solid fa-circle-check" style="font-size:20px;margin-right:8px;"></i>
+            <strong>Recuerde:</strong> Un archivo permite conservar información aunque el programa
+            termine su ejecución.
+        </div>
+
+    </section>
+</body>
+
+</html>
