@@ -345,6 +345,7 @@
 
 .microsite-wrapper .codigo {
     font-family: 'Courier New', Courier, monospace;
+    font-size: 1.01rem;
     margin-top:12px;
     padding:12px;
     background:#263238;
@@ -416,6 +417,11 @@
 
 .microsite-wrapper #appContainer:fullscreen .step-indicator {
     font-size: 1rem;
+}
+
+.microsite-wrapper #appContainer:fullscreen .codigo {
+    font-size: 1.3rem;
+
 }
 
 .microsite-wrapper .fullscreen-btn, 

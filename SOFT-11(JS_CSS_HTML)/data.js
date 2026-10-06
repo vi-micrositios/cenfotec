@@ -8,87 +8,13 @@ const data = {
     },
     // Temas principales y sus subtemas con pasos
     temas: [
-        // =====================================================================
-        // INTRODUCCIÓN: DESARROLLO DE SOFTWARE
-        // =====================================================================
-        {
-            id: 'tema_001',
-            label: 'Desarrollo de software',
-            subtemas: [
-                {
-                    id: 'm001-cicloVida',
-                    label: 'Ciclo de vida',
-                    steps: [
-                        {
-                            title: 'Ciclo de vida del desarrollo de software (SDLC)',
-                            content: `<p>Proceso estructurado y metódico que se sigue para diseñar, desarrollar y mantener un software de alta calidad.</p>
-                            <p> 
-                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
-                                No es solo "escribir código"; es un marco de trabajo que garantiza que el producto final cumpla con los requisitos del cliente, se entregue a tiempo y dentro del presupuesto.
-                            </p>
-                                `,
-                            nextButton: ' '
-                        }
-                    ]
-                },
-                {
-                    id: 'm001-fases',
-                    label: 'Fases del SDLC',
-                    steps: [
-                        {
-                            title: 'Fase 1: Planificación y análisis de requisitos',
-                            content: `<p>Qué se hace: Reuniones con el cliente y los usuarios finales. Se define qué debe hacer el software y para quién. Se analiza la viabilidad (técnica, económica y legal). </p>
-                            <p> Entregable: Documento de Especificación de Requisitos de Software (ERS o SRS).</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/requerimientos.png',
-                            nextButton: 'Siguiente: Fase 2'
-                        },
-                        {
-                            title: 'Fase 2: Diseño (arquitectura) ',
-                            content: `<p> Qué se hace: Se define cómo funcionará internamente. Se diseña la arquitectura del sistema, las bases de datos, las interfaces de usuario (UI/UX) y los flujos de trabajo. Se crean diagramas UML y prototipos. </p>
-                            <p>Entregable: Documento de análisis y diseño (técnico y visual)</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/disenno.png',
-                            nextButton: 'Siguiente: Fase 3'
-                        },
-                        {
-                            title: 'Fase 3: Implementación (codificación)',
-                            content: `<p>Qué se hace: Los programadores escriben el código fuente según las especificaciones del diseño. Se dividen en módulos y se integran progresivamente.  </p>
-                            <p>Entregable: Código fuente funcional (repositorio en Git). </p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/desarrollo.png',
-                            nextButton: 'Siguiente: Fase 4'
-                        },
-                        {
-                            title: 'Fase 4: Pruebas (testing) ',
-                            content: `<p>Qué se hace: Se ejecutan pruebas para encontrar errores (bugs) y verificar que el software cumpla los requisitos. Incluye pruebas unitarias, de integración, de sistema, de rendimiento y de aceptación por el usuario (UAT). </p> 
-                            <p>Entregable: Reporte de errores y software estabilizado.
-                                </p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/pruebas.png',
-                            nextButton: 'Siguiente: Fase 5'
-                        },
-                        {
-                            title: 'Fase 5: Despliegue (deployment)',
-                            content: `<p>Qué se hace: El software se instala en el entorno de producción (servidores reales) para que los usuarios finales puedan usarlo. Puede ser un lanzamiento completo o por fases (piloto). </p>
-                            <p>Entregable: Software en producción y manuales de usuario.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/despliegue.png',
-                            nextButton: 'Siguiente: Fase 6'
-                        },
-                        {
-                            title: 'Fase 6: Mantenimiento y soporte',
-                            content: `<p>Qué se hace: Una vez en uso, surgen nuevos errores o necesidades. Se corrigen fallos, se optimiza el rendimiento y se añaden mejoras o nuevas funcionalidades (actualizaciones). </p>
-                            <p>Entregable: Nuevas versiones (parches o actualizaciones mayores). </p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/mantenimiento.png',
-                            nextButton: ' '
-                        }
-                    ]
-                }
-            ]
-        },
-
+        
         // =====================================================================
         // MÓDULO 1: ANÁLISIS Y ESPECIFICACIÓN DE REQUERIMIENTOS
         // =====================================================================
         {
             id: 'modulo_01',
-            label: 'Módulo 1: Análisis y especificación de requerimientos',
+            label: 'Análisis',
             subtemas: [
                 {
                     id: 'm01-educcion',
@@ -320,7 +246,7 @@ const data = {
         // =====================================================================
         {
             id: 'modulo_02',
-            label: 'Módulo 2: Gestión y modelado de requerimientos',
+            label: 'Modelado',
             subtemas: [
                 {
                     id: 'm02-planificacion',
@@ -574,7 +500,7 @@ context Cuenta
         // =====================================================================
         {
             id: 'modulo_03',
-            label: 'Módulo 3: Desarrollo de interfaz de usuario',
+            label: 'Desarrollo de interfaz de usuario',
             subtemas: [
                 {
                     id: 'm03-requerimientosSitio',
@@ -872,7 +798,7 @@ formulario.addEventListener('submit', function (evento) {
         // =====================================================================
         {
             id: 'modulo_04',
-            label: 'Módulo 4: Lenguaje JavaScript',
+            label: 'JavaScript',
             subtemas: [
                 {
                     id: 'm04-introduccion',
@@ -1147,7 +1073,7 @@ console.log(sumar(2, 3)); // 5</code></pre>
         // =====================================================================
         {
             id: 'modulo_05',
-            label: 'Módulo 5: Biblioteca multiplataforma jQuery',
+            label: 'jQuery',
             subtemas: [
                 {
                     id: 'm05-introduccion',
@@ -1317,7 +1243,7 @@ $('#frmRegistro').on('submit', function (e) {
         // =====================================================================
         {
             id: 'modulo_06',
-            label: 'Módulo 6: Desarrollo de aplicaciones',
+            label: 'Desarrollo de aplicaciones',
             subtemas: [
                 {
                     id: 'm06-estructura',
@@ -1680,7 +1606,7 @@ usuarioSchema.pre('save', async function () {
         // =====================================================================
         {
             id: 'modulo_07',
-            label: 'Módulo 7: Aspectos del desarrollo del software',
+            label: 'Desarrollo del software',
             subtemas: [
                 {
                     id: 'm07-tradicionales',
