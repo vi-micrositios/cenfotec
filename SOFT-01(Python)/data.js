@@ -1378,7 +1378,7 @@ print("Total:", total)                 # línea 6
                                 <li><strong>Controle el flujo de un menú</strong>: Si el usuario elige la opción 1, hacer esto; si elige la 2, hacer aquello.</li>
                             </ul>
                             `,
-                            nextButton: 'Siguiente: Evitar errores'
+                            nextButton: 'Siguiente: Validar datos'
                         },
                         {
                             title: 'Validar datos de entrada',
@@ -1396,7 +1396,7 @@ else:
                             Si es 25, muestra "Edad registrada: 25".</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/validacionDatos.png',
-                            nextButton: 'Siguiente: Múltiples escenarios'
+                            nextButton: 'Siguiente: Evitar errores'
                         },
                         {
                             title: 'Evitar errores en tiempo de ejecución',
@@ -1413,7 +1413,7 @@ else:
                             <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
                             Sin el <code>if</code>, ingresar 0 como divisor produce el error <code>ZeroDivisionError</code> y el programa termina abruptamente.</p>
                             `,
-                            nextButton: 'Siguiente: Controlar un menú'
+                            nextButton: 'Siguiente: Múltiples escenarios'
                         },
                         {
                             title: 'Manejar múltiples escenarios',
@@ -1435,7 +1435,7 @@ else:
                             El orden importa: primero se pregunta por el caso más restrictivo (tres lados iguales). Si se preguntara primero por "dos lados iguales", un triángulo equilátero se clasificaría como isósceles.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/triangulos.png',
-                            nextButton: 'Siguiente: Controlar un menú de opciones'
+                            nextButton: 'Siguiente: Controlar un menú'
                         },
                         {
                             title: 'Controlar un menú de opciones',
@@ -1457,8 +1457,195 @@ else:
                             <p class="nota">
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             El <code>else</code> final atiende cualquier opción que el programa no reconoce, por ejemplo "7" o "hola".</p>
-                            `,
+<p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+¿Qué ocurre si en el primer número el usuario escribe una letra? <code>float()</code> produce un error que ninguna condición <code>if</code> puede evitar. Ese caso se resuelve con <strong>excepciones</strong>, el siguiente tema.</p>`,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/menuOpciones.png',
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm004-t007',
+                    label: 'Excepciones',
+                    steps: [
+                        {
+                            title: '¿Qué es una excepción?',
+                            content: `<p>Una excepción es un <strong>error que ocurre durante la ejecución</strong> de un programa. Si no se maneja, el programa se detiene y Python muestra un mensaje de error (traceback).</p>
+                            <p><strong>Ejemplo:</strong></p>
+<pre class="codigo">
+edad = int(input("Ingrese su edad: "))   # el usuario escribe: hola
+</pre>
+                            <p><strong>Resultado:</strong></p>
+<pre class="codigo">
+ValueError: invalid literal for int() with base 10: 'hola'
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Las validaciones con <code>if</code> no evitan este error, porque ocurre en la conversión, <strong>antes</strong> de llegar a cualquier condición.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/excepcion.png',
+                            nextButton: 'Siguiente: Excepciones comunes'
+                        },
+                        {
+                            title: 'Excepciones comunes',
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Excepción</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Cuándo ocurre</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ValueError</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Un valor no tiene el formato esperado.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>int("hola")</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ZeroDivisionError</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Se divide entre cero.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>10 / 0</code></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>IndexError</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Se usa un índice que no existe en una lista (módulo 6).</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>[1, 2, 3][5]</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>NameError</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Se usa una variable que no ha sido creada.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>print(totl)</code></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>TypeError</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Se opera con tipos incompatibles.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>"Edad: " + 20</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><code>FileNotFoundError</code></td>
+                                <td style="padding:13px 12px;">Se intenta abrir un archivo que no existe (módulo 6).</td>
+                                <td style="padding:13px 12px;"><code>open("datos.txt")</code></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            `,
+                            nextButton: 'Siguiente: try y except'
+                        },
+                        {
+                            title: 'Manejo de excepciones con try y except',
+                            content: `<p>El bloque <code>try</code> contiene las instrucciones que podrían fallar. Si ocurre una excepción, el flujo salta al bloque <code>except</code> en lugar de detener el programa.</p>
+                            <p><strong>Sintaxis genérica:</strong></p>
+<pre class="codigo">
+intentar
+    instrucciones que pueden fallar
+capturar error
+    instrucciones si ocurre el error
+fin intentar
+</pre>
+<pre class="codigo">
+try:
+    edad = int(input("Ingrese su edad: "))
+    print("Edad registrada:", edad)
+except ValueError:
+    print("Debe ingresar un número entero")
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Si el usuario escribe 25, se ejecuta todo el <code>try</code> y se salta el <code>except</code>. <br>
+                            Si escribe "hola", el <code>print</code> del <code>try</code> no se ejecuta y se muestra el mensaje del <code>except</code>.</p>
+<p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+El bloque <code>try</code> también es una forma de <strong>flujo condicional</strong>: si no ocurre un error se sigue un camino; si ocurre, se sigue otro. En el módulo 5 se combinará con ciclos para volver a pedir el dato hasta que sea válido.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/tryExcept.png',
+                            nextButton: 'Siguiente: Varias excepciones'
+                        },
+                        {
+                            title: 'Capturar varias excepciones',
+                            content: `<p>Un mismo <code>try</code> puede tener varios bloques <code>except</code>, uno por cada tipo de error, para dar un mensaje adecuado en cada caso.</p>
+<pre class="codigo">
+try:
+    dividendo = float(input("Dividendo: "))
+    divisor = float(input("Divisor: "))
+    print("Resultado:", dividendo / divisor)
+except ValueError:
+    print("Debe ingresar valores numéricos")
+except ZeroDivisionError:
+    print("No se puede dividir entre cero")
+</pre>
+                            `,
+                            nextButton: 'Siguiente: else y finally'
+                        },
+                        {
+                            title: 'Bloques else y finally',
+                            content: `<ul>
+                                <li><strong>else</strong>: se ejecuta solo si <strong>no</strong> ocurrió ninguna excepción en el <code>try</code>.</li>
+                                <li><strong>finally</strong>: se ejecuta <strong>siempre</strong>, haya ocurrido o no una excepción. Se usa para tareas de cierre.</li>
+                            </ul>
+<pre class="codigo">
+try:
+    numero = int(input("Ingrese un número: "))
+except ValueError:
+    print("Dato no válido")
+else:
+    print("El doble es:", numero * 2)
+finally:
+    print("Fin del proceso")
+</pre>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Entrada</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Salida</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">8</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">El doble es: 16<br>Fin del proceso</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;">abc</td>
+                                <td style="padding:13px 12px;">Dato no válido<br>Fin del proceso</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            `,
+                            nextButton: 'Siguiente: Buenas prácticas'
+                        },
+                        {
+                            title: 'Buenas prácticas con excepciones',
+                            content: `<div style="padding:15px; background:#ffffff; border-radius:8px; border:1px solid #f0cccc; margin-bottom:12px;">
+                            <i class="fa-solid fa-xmark" aria-hidden="true" style="color:#d2232a;"></i> <strong style="color:#d2232a;">Incorrecto: oculta cualquier error</strong>
+<pre class="codigo">
+try:
+    edad = int(input("Edad: "))
+except:
+    pass
+</pre>
+                            </div>
+                            <div style="padding:15px; background:#ffffff; border-radius:8px; border:1px solid #c9e2d4; margin-bottom:12px;">
+                            <i class="fa-solid fa-check" aria-hidden="true" style="color:#00734a;"></i> <strong style="color:#00734a;">Correcto</strong>
+<pre class="codigo">
+try:
+    edad = int(input("Edad: "))
+except ValueError:
+    print("La edad debe ser un número entero")
+</pre>
+                            </div>
+                            <ul>
+                                <li>Capture excepciones <strong>específicas</strong> (<code>ValueError</code>, <code>ZeroDivisionError</code>) y no un <code>except</code> genérico.</li>
+                                <li>Mantenga el bloque <code>try</code> pequeño: solo las instrucciones que pueden fallar.</li>
+                                <li>Nunca deje un <code>except</code> vacío: el error desaparece pero el problema sigue ahí.</li>
+                                <li>Muestre mensajes que le indiquen al usuario qué hacer.</li>
+                                <li>Las excepciones no sustituyen las validaciones: un <code>try</code> verifica que la edad sea un número; un <code>if</code> verifica que esté en un rango válido.</li>
+                            </ul>
+                            `,
                             nextButton: ''
                         }
                     ]
@@ -1479,7 +1666,7 @@ else:
                             </ul>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/calidadCondicional.png',
-                            nextButton: 'Siguiente: Condiciones redundantes'
+                            nextButton: 'Siguiente: Orden de las condiciones'
                         },
                         {
                             title: 'Ordenar bien las condiciones',
@@ -1506,7 +1693,7 @@ elif nota &gt;= 70:
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Con una nota de 95, la versión incorrecta muestra "Aprobado", porque 95 >= 70 ya es verdadero.</p>
                             `,
-                            nextButton: 'Siguiente: Anidamiento excesivo'
+                            nextButton: 'Siguiente: Condiciones redundantes'
                         },
                         {
                             title: 'Evitar condiciones redundantes',
@@ -1539,7 +1726,7 @@ else:
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Si la nota no es mayor o igual a 70, ya se sabe que es menor: basta con <code>else</code>.</p>
                             `,
-                            nextButton: 'Siguiente: Indentación y legibilidad'
+                            nextButton: 'Siguiente: Anidamiento excesivo'
                         },
                         {
                             title: 'Evitar el anidamiento excesivo',
@@ -1564,7 +1751,7 @@ if edad &gt;= 18 and tiene_licencia and tiene_seguro:
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Use el anidamiento cuando cada nivel tiene su propio <code>else</code> con un mensaje distinto; si no, combine las condiciones.</p>
                             `,
-                            nextButton: 'Siguiente: Casos de prueba'
+                            nextButton: 'Siguiente: Indentación y legibilidad'
                         },
                         {
                             title: 'Indentación y legibilidad',
@@ -1593,7 +1780,7 @@ else:
                                 <li>Use paréntesis para aclarar condiciones complejas: <code>(edad &gt;= 18) and (nota &gt;= 70)</code>.</li>
                             </ul>
                             `,
-                            nextButton: 'Siguiente: Lista de revisión'
+                            nextButton: 'Siguiente: Casos de prueba'
                         },
                         {
                             title: 'Casos de prueba para condicionales',
@@ -1659,7 +1846,7 @@ else:
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Los errores en condicionales suelen esconderse en los límites: usar <code>&gt;</code> en lugar de <code>&gt;=</code> solo se detecta probando exactamente el valor límite.</p>
                             `,
-                            nextButton: 'Siguiente: Lista de revisión para condicionales'
+                            nextButton: 'Siguiente: Lista de revisión'
                         },
                         {
                             title: 'Lista de revisión para condicionales',
@@ -1671,6 +1858,7 @@ else:
                                 <li>¿Se usan <code>==</code> para comparar y <code>=</code> para asignar correctamente?</li>
                                 <li>¿La indentación refleja lo que debe ejecutarse dentro de cada bloque?</li>
                                 <li>¿Se validan los datos de entrada antes de usarlos?</li>
+    <li>¿Se manejan con <code>try</code>/<code>except</code> las conversiones que pueden fallar (<code>int()</code>, <code>float()</code>)?</li>
                                 <li>¿Se probó al menos un caso por cada camino?</li>
                                 <li>¿Se probaron los valores límite?</li>
                             </ol>
@@ -1691,7 +1879,7 @@ else:
                             <p>La técnica más usada es la <strong>prueba de escritorio</strong> (también llamada traza).</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/analisisPrograma.png',
-                            nextButton: 'Siguiente: Ejemplo'
+                            nextButton: 'Siguiente: Prueba de escritorio'
                         },
                         {
                             title: 'Prueba de escritorio',
@@ -1705,7 +1893,7 @@ else:
                             </ol>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/pruebaEscritorio.png',
-                            nextButton: 'Siguiente: Detectar errores'
+                            nextButton: 'Siguiente: Ejemplo'
                         },
                         {
                             title: 'Ejemplo de prueba de escritorio',
@@ -1772,7 +1960,7 @@ print("Total a pagar:", total)
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Las dos condiciones son <strong>independientes</strong> (son dos <code>if</code>, no un <code>if-elif</code>), por eso un cliente puede recibir ambos descuentos.</p>
                             `,
-                            nextButton: 'Siguiente: Preguntas guía'
+                            nextButton: 'Siguiente: Detectar errores'
                         },
                         {
                             title: 'Detectar errores con el análisis',
@@ -1803,7 +1991,7 @@ else:
 </pre>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Preguntas guía para analizar'
+                            nextButton: 'Siguiente: Preguntas guía'
                         },
                         {
                             title: 'Preguntas guía para analizar',
@@ -1850,7 +2038,7 @@ print(mensaje)
                             Imagine que debe mostrar los números del 1 al 100. Sin ciclos necesitaría 100 instrucciones <code>print</code>; con un ciclo bastan dos líneas.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/ciclo.png',
-                            nextButton: 'Siguiente: Ciclo while'
+                            nextButton: 'Siguiente: Elementos de un ciclo'
                         },
                         {
                             title: 'Elementos de un ciclo',
@@ -1892,7 +2080,7 @@ print(mensaje)
                             <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
                             Si falta la actualización, la condición nunca se vuelve falsa y el ciclo se repite para siempre (ciclo infinito).</p>
                             `,
-                            nextButton: 'Siguiente: Ciclo for'
+                            nextButton: 'Siguiente: Ciclo while'
                         },
                         {
                             title: 'Ciclo mientras (while)',
@@ -1915,7 +2103,7 @@ while contador &lt;= 5:
                             Muestra 1, 2, 3, 4 y 5. Cuando <code>contador</code> vale 6, la condición es falsa y el ciclo termina.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/cicloWhile.png',
-                            nextButton: 'Siguiente: ¿while o for?'
+                            nextButton: 'Siguiente: Ciclo for'
                         },
                         {
                             title: 'Ciclo para (for)',
@@ -1964,7 +2152,7 @@ for i in range(1, 6):
                             El valor final de <code>range</code> <strong>no se incluye</strong>: <code>range(1, 6)</code> llega hasta 5.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/cicloFor.png',
-                            nextButton: 'Siguiente: Contadores y acumuladores'
+                            nextButton: 'Siguiente: ¿while o for?'
                         },
                         {
                             title: '¿while o for?',
@@ -2002,7 +2190,7 @@ for i in range(1, 6):
                             </table>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Ciclos anidados'
+                            nextButton: 'Siguiente: Contadores y acumuladores'
                         },
                         {
                             title: 'Contadores y acumuladores',
@@ -2057,7 +2245,7 @@ for i in range(1, 4):
                             <p>Cada vez que regresa, evalúa la condición: si es verdadera, repite; si es falsa, sale del ciclo y continúa con la siguiente instrucción.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/flujoIterativo.png',
-                            nextButton: 'Siguiente: Características'
+                            nextButton: 'Siguiente: Representación'
                         },
                         {
                             title: 'Representación gráfica',
@@ -2067,7 +2255,7 @@ for i in range(1, 4):
                             La flecha de retorno es lo que distingue visualmente un ciclo de una simple decisión.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/diagramaCiclo.png',
-                            nextButton: 'Siguiente: Controlado por contador'
+                            nextButton: 'Siguiente: Características'
                         },
                         {
                             title: 'Características del flujo iterativo',
@@ -2079,7 +2267,7 @@ for i in range(1, 4):
                                 <li><strong>Puede combinarse</strong>: un ciclo puede contener condicionales y otros ciclos.</li>
                             </ul>
                             `,
-                            nextButton: 'Siguiente: Controlado por centinela'
+                            nextButton: 'Siguiente: Controlado por contador'
                         },
                         {
                             title: 'Ciclo controlado por contador',
@@ -2096,7 +2284,7 @@ print("Promedio:", suma / cantidad)
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Si el usuario indica 4 estudiantes, el ciclo se repite exactamente 4 veces.</p>
                             `,
-                            nextButton: 'Siguiente: Ciclo controlado por centinela'
+                            nextButton: 'Siguiente: Controlado por centinela'
                         },
                         {
                             title: 'Ciclo controlado por centinela',
@@ -2134,7 +2322,7 @@ print("Suma total:", total)
                                 <li><strong>Recorra estructuras de datos</strong>: visitar cada elemento de un arreglo o matriz (módulo 6).</li>
                             </ul>
                             `,
-                            nextButton: 'Siguiente: Menú que se repite'
+                            nextButton: 'Siguiente: Validar hasta que sea correcto'
                         },
                         {
                             title: 'Validar datos hasta que sean correctos',
@@ -2151,7 +2339,53 @@ print("Nota registrada:", nota)
                             Si el usuario escribe 150 y luego -2, el programa los rechaza. Cuando escribe 85, sale del ciclo.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/validacionCiclo.png',
-                            nextButton: 'Siguiente: Cálculos acumulativos'
+                            nextButton: 'Siguiente: Validar con try y while'
+                        },
+                        {
+                            title: 'Validar con try y while',
+                            content: `<p>Al combinar <code>try</code>/<code>except</code> (módulo 4) con un ciclo, el programa ya no se detiene si el usuario escribe letras: vuelve a pedir el dato hasta que tenga el tipo y el rango correctos.</p>
+<pre class="codigo">
+edad_valida = False
+while not edad_valida:
+    try:
+        edad = int(input("Ingrese su edad: "))
+        if edad &gt;= 0 and edad &lt;= 120:
+            edad_valida = True
+        else:
+            print("La edad debe estar entre 0 y 120.")
+    except ValueError:
+        print("Debe ingresar un número entero.")
+print("Edad registrada:", edad)
+</pre>
+<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+<table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+<thead>
+<tr>
+    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Entrada</th>
+    <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Qué ocurre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">veinte</td>
+    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ValueError</code>: se muestra el mensaje y se repite el ciclo.</td>
+</tr>
+<tr style="background:#f3f9ff;">
+    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">150</td>
+    <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Es un número, pero está fuera de rango: se repite el ciclo.</td>
+</tr>
+<tr>
+    <td style="padding:13px 12px;">25</td>
+    <td style="padding:13px 12px;">Dato válido: <code>edad_valida</code> pasa a <code>True</code> y el ciclo termina.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+El <code>try</code> controla el <strong>tipo</strong> del dato y el <code>if</code> controla que tenga <strong>sentido</strong>. En el módulo 6 esta lógica se guardará en una función para reutilizarla.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/validacionTry.png',
+                            nextButton: 'Siguiente: Menú que se repite'
                         },
                         {
                             title: 'Menú que se repite',
@@ -2176,7 +2410,7 @@ print("Programa finalizado")
 </pre>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/menuCiclo.png',
-                            nextButton: 'Siguiente: Mayor y menor'
+                            nextButton: 'Siguiente: Cálculos acumulativos'
                         },
                         {
                             title: 'Cálculos acumulativos',
@@ -2192,7 +2426,7 @@ print(n, "! =", factorial)
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             El acumulador inicia en 1 porque se va a multiplicar. Si iniciara en 0, el resultado siempre sería 0.</p>
                             `,
-                            nextButton: 'Siguiente: Encontrar el mayor y el menor'
+                            nextButton: 'Siguiente: Mayor y menor'
                         },
                         {
                             title: 'Encontrar el mayor y el menor',
@@ -2229,7 +2463,7 @@ print("Menor:", menor)
                             <p>Un ciclo de calidad <strong>termina siempre</strong>, se repite <strong>exactamente</strong> las veces necesarias y es fácil de leer.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/calidadIterativa.png',
-                            nextButton: 'Siguiente: Uno más o uno menos'
+                            nextButton: 'Siguiente: Ciclos infinitos'
                         },
                         {
                             title: 'Evitar ciclos infinitos',
@@ -2256,7 +2490,7 @@ while contador &lt;= 5:
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Si un programa se queda "pegado" en la terminal, puede detenerlo con <strong>Ctrl + C</strong>.</p>
                             `,
-                            nextButton: 'Siguiente: Inicializar correctamente'
+                            nextButton: 'Siguiente: Uno más o uno menos'
                         },
                         {
                             title: 'Errores de uno más o uno menos',
@@ -2280,7 +2514,7 @@ for i in range(1, 11):
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Antes de ejecutar, pregúntese: ¿cuál es el primer valor?, ¿cuál es el último?, ¿cuántas veces se repite?</p>
                             `,
-                            nextButton: 'Siguiente: Legibilidad'
+                            nextButton: 'Siguiente: Inicializar correctamente'
                         },
                         {
                             title: 'Inicializar correctamente',
@@ -2306,7 +2540,7 @@ print(total)
 </pre>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Casos de prueba'
+                            nextButton: 'Siguiente: Legibilidad'
                         },
                         {
                             title: 'Legibilidad y buenas prácticas',
@@ -2319,7 +2553,7 @@ print(total)
                             </ul>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/buenasPracticas.png',
-                            nextButton: 'Siguiente: Lista de revisión'
+                            nextButton: 'Siguiente: Casos de prueba'
                         },
                         {
                             title: 'Casos de prueba para ciclos',
@@ -2370,7 +2604,7 @@ print(total)
                             </table>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Lista de revisión para ciclos'
+                            nextButton: 'Siguiente: Lista de revisión'
                         },
                         {
                             title: 'Lista de revisión para ciclos',
@@ -2400,7 +2634,7 @@ print(total)
                             <p>La última fila siempre corresponde a la evaluación en la que la condición es falsa y el ciclo termina.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/pruebaEscritorioCiclo.png',
-                            nextButton: 'Siguiente: Contar iteraciones'
+                            nextButton: 'Siguiente: Ejemplo'
                         },
                         {
                             title: 'Ejemplo de prueba de escritorio',
@@ -2466,7 +2700,7 @@ print(suma)
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Salida: <strong>10</strong>. El cuerpo se ejecutó 4 veces, pero la condición se evaluó 5 veces.</p>
                             `,
-                            nextButton: 'Siguiente: Detectar errores'
+                            nextButton: 'Siguiente: Contar iteraciones'
                         },
                         {
                             title: 'Contar iteraciones',
@@ -2513,7 +2747,7 @@ print(suma)
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Para <code>range(inicio, fin)</code> con paso 1, la cantidad de iteraciones es <code>fin - inicio</code>.</p>
                             `,
-                            nextButton: 'Siguiente: Preguntas guía'
+                            nextButton: 'Siguiente: Detectar errores'
                         },
                         {
                             title: 'Detectar errores con el análisis',
@@ -2541,7 +2775,7 @@ if cantidad &gt; 0:
 </pre>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Preguntas guía para analizar ciclos'
+                            nextButton: 'Siguiente: Preguntas guía'
                         },
                         {
                             title: 'Preguntas guía para analizar ciclos',
@@ -2577,7 +2811,7 @@ if cantidad &gt; 0:
                             <p>En programación ya se ha usado abstracción: al escribir <code>print()</code> o <code>input()</code> se obtiene un resultado sin conocer las instrucciones internas que lo producen.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/abstraccion.png',
-                            nextButton: 'Siguiente: Funciones en Python'
+                            nextButton: 'Siguiente: Abstracción procedimental'
                         },
                         {
                             title: 'Abstracción procedimental',
@@ -2585,7 +2819,7 @@ if cantidad &gt; 0:
                             <p>Permite aplicar la estrategia de <strong>divide y vencerás</strong>: un problema grande se divide en subproblemas pequeños, y cada uno se resuelve con su propia función.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/divideVenceras.png',
-                            nextButton: 'Siguiente: Parámetros y argumentos'
+                            nextButton: 'Siguiente: Funciones en Python'
                         },
                         {
                             title: 'Funciones en Python',
@@ -2608,7 +2842,7 @@ saludar()
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Definir la función no ejecuta nada: solo la "guarda". El mensaje se muestra dos veces porque la función se <strong>invoca</strong> dos veces.</p>
                             `,
-                            nextButton: 'Siguiente: Retorno de valores'
+                            nextButton: 'Siguiente: Parámetros y argumentos'
                         },
                         {
                             title: 'Parámetros y argumentos',
@@ -2644,7 +2878,7 @@ saludar("Luis")
                             </table>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Alcance de las variables'
+                            nextButton: 'Siguiente: Retorno de valores'
                         },
                         {
                             title: 'Retorno de valores (return)',
@@ -2662,7 +2896,7 @@ print("Área:", resultado)
                             <code>print</code> muestra un valor en pantalla; <code>return</code> lo entrega al programa para que pueda guardarlo en una variable, compararlo o usarlo en otro cálculo.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/funcionCajaNegra.png',
-                            nextButton: 'Siguiente: Ejemplo con funciones'
+                            nextButton: 'Siguiente: Alcance de las variables'
                         },
                         {
                             title: 'Alcance de las variables',
@@ -2689,7 +2923,7 @@ print(total)
 </pre>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Buenas prácticas'
+                            nextButton: 'Siguiente: Ejemplo con funciones'
                         },
                         {
                             title: 'Ejemplo: programa organizado en funciones',
@@ -2714,7 +2948,7 @@ print(obtener_condicion(nota))
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             El programa principal se lee casi como un algoritmo en lenguaje natural: leer la nota y mostrar la condición. Los detalles quedan ocultos dentro de cada función.</p>
                             `,
-                            nextButton: 'Siguiente: Ventajas y buenas prácticas'
+                            nextButton: 'Siguiente: Buenas prácticas'
                         },
                         {
                             title: 'Ventajas y buenas prácticas',
@@ -2754,7 +2988,7 @@ nombres = ["Ana", "Luis", "María"]
                             Sin arreglos, guardar las notas de 30 estudiantes requeriría 30 variables distintas.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/arreglo.png',
-                            nextButton: 'Siguiente: Operaciones básicas'
+                            nextButton: 'Siguiente: Índices'
                         },
                         {
                             title: 'Índices',
@@ -2791,7 +3025,7 @@ print(notas[-1])   # 64 (el índice -1 es el último elemento)
                             Acceder a un índice que no existe, como <code>notas[4]</code>, produce el error <code>IndexError</code>.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/indices.png',
-                            nextButton: 'Siguiente: Recorrer un arreglo'
+                            nextButton: 'Siguiente: Operaciones básicas'
                         },
                         {
                             title: 'Operaciones básicas',
@@ -2839,7 +3073,7 @@ print(notas[-1])   # 64 (el índice -1 es el último elemento)
                             </table>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Matrices'
+                            nextButton: 'Siguiente: Recorrer un arreglo'
                         },
                         {
                             title: 'Recorrer un arreglo',
@@ -2867,7 +3101,7 @@ print("Promedio:", suma / len(notas))
 </pre>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/recorrerArreglo.png',
-                            nextButton: 'Siguiente: Recorrer una matriz'
+                            nextButton: 'Siguiente: Matrices'
                         },
                         {
                             title: '¿Qué es una matriz?',
@@ -2917,7 +3151,7 @@ for fila in range(len(notas)):
                             <p>Existen muchos algoritmos de ordenamiento. En este tema se estudian tres clásicos: <strong>burbuja, selección e inserción</strong>.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/ordenamiento.png',
-                            nextButton: 'Siguiente: Burbuja'
+                            nextButton: 'Siguiente: Intercambio de valores'
                         },
                         {
                             title: 'Intercambio de valores',
@@ -2937,7 +3171,7 @@ lista[0], lista[1] = lista[1], lista[0]
                             Es como intercambiar el contenido de dos vasos: se necesita un tercer vaso vacío.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/intercambio.png',
-                            nextButton: 'Siguiente: Selección'
+                            nextButton: 'Siguiente: Burbuja'
                         },
                         {
                             title: 'Ordenamiento burbuja',
@@ -2990,7 +3224,7 @@ print(numeros)
                             </div>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/burbuja.png',
-                            nextButton: 'Siguiente: Inserción'
+                            nextButton: 'Siguiente: Selección'
                         },
                         {
                             title: 'Ordenamiento por selección',
@@ -3045,7 +3279,7 @@ def ordenar_seleccion(lista):
                             </div>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/seleccion.png',
-                            nextButton: 'Siguiente: Comparación'
+                            nextButton: 'Siguiente: Inserción'
                         },
                         {
                             title: 'Ordenamiento por inserción',
@@ -3100,7 +3334,7 @@ def ordenar_insercion(lista):
                             </div>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/insercion.png',
-                            nextButton: 'Siguiente: Comparación de algoritmos'
+                            nextButton: 'Siguiente: Comparación'
                         },
                         {
                             title: 'Comparación de algoritmos',
@@ -3157,7 +3391,7 @@ ordenados = sorted(numeros)        # crea una lista nueva ordenada
                             <p>Se estudian dos algoritmos: <strong>búsqueda secuencial</strong> y <strong>búsqueda binaria</strong>.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/busqueda.png',
-                            nextButton: 'Siguiente: Búsqueda binaria'
+                            nextButton: 'Siguiente: Búsqueda secuencial'
                         },
                         {
                             title: 'Búsqueda secuencial',
@@ -3181,7 +3415,7 @@ else:
                             Funciona con arreglos ordenados o desordenados. En el mejor caso hace 1 comparación; en el peor, tantas como elementos tenga el arreglo.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/busquedaSecuencial.png',
-                            nextButton: 'Siguiente: Binaria en Python'
+                            nextButton: 'Siguiente: Búsqueda binaria'
                         },
                         {
                             title: 'Búsqueda binaria',
@@ -3197,7 +3431,7 @@ else:
                             Es como buscar una palabra en un diccionario: se abre por la mitad y se decide hacia qué lado continuar.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/busquedaBinaria.png',
-                            nextButton: 'Siguiente: Prueba de escritorio'
+                            nextButton: 'Siguiente: Binaria en Python'
                         },
                         {
                             title: 'Búsqueda binaria en Python',
@@ -3219,7 +3453,7 @@ def buscar_binaria(lista, valor):
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             El operador <code>//</code> hace una división entera, para que <code>medio</code> sea siempre un índice válido.</p>
                             `,
-                            nextButton: 'Siguiente: Comparación'
+                            nextButton: 'Siguiente: Prueba de escritorio'
                         },
                         {
                             title: 'Prueba de escritorio de la búsqueda binaria',
@@ -3289,7 +3523,7 @@ def buscar_binaria(lista, valor):
                             </table>
                             </div>
                             `,
-                            nextButton: 'Siguiente: Comparación de búsquedas'
+                            nextButton: 'Siguiente: Comparación'
                         },
                         {
                             title: 'Comparación de búsquedas',
@@ -3329,6 +3563,398 @@ def buscar_binaria(lista, valor):
                             <p>En Python, <code>valor in lista</code> indica si un valor existe y <code>lista.index(valor)</code> devuelve su posición; ambos hacen una búsqueda secuencial.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/comparacionBusquedas.png',
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm006-t005',
+                    label: 'Ficheros de texto',
+                    steps: [
+                        {
+                            title: '¿Qué es un archivo de texto?',
+                            content: `<p>Las variables guardan los datos en la memoria RAM, por lo que <strong>se pierden al terminar el programa</strong>. Un archivo (o fichero) guarda la información en el almacenamiento, de forma permanente.</p>
+                            <p>Un archivo de texto contiene caracteres legibles organizados en líneas. Ejemplos: <code>.txt</code>, <code>.csv</code>.</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Con archivos, un programa puede guardar datos hoy y volver a leerlos mañana, o procesar información que otra persona preparó.</p>
+<p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+Un archivo también es una <strong>abstracción</strong>: el programa trabaja con líneas de texto sin conocer cómo el sistema operativo guarda los datos en el disco, del mismo modo que una función oculta los detalles de una tarea.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/archivoTexto.png',
+                            nextButton: 'Siguiente: Abrir y cerrar'
+                        },
+                        {
+                            title: 'Abrir y cerrar un archivo',
+                            content: `<p>Para trabajar con un archivo primero se <strong>abre</strong> con <code>open()</code>, indicando el nombre y el modo, y al terminar se <strong>cierra</strong> con <code>close()</code>.</p>
+<pre class="codigo">
+archivo = open("datos.txt", "r", encoding="utf-8")
+# ... trabajar con el archivo ...
+archivo.close()
+</pre>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Modo</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Si el archivo no existe</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Si el archivo existe</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>"r"</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Leer (read)</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Error <code>FileNotFoundError</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Lo lee</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>"w"</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Escribir (write)</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Lo crea</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Borra su contenido</strong> y escribe desde cero</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;"><code>"a"</code></td>
+                                <td style="padding:13px 12px;">Agregar (append)</td>
+                                <td style="padding:13px 12px;">Lo crea</td>
+                                <td style="padding:13px 12px;">Escribe al final, sin borrar</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Use <code>encoding="utf-8"</code> para que las tildes y la ñ se guarden y lean correctamente.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/modosApertura.png',
+                            nextButton: 'Siguiente: La instrucción with'
+                        },
+                        {
+                            title: 'La instrucción with',
+                            content: `<p>Si el programa falla antes de llegar a <code>close()</code>, el archivo queda abierto. La instrucción <code>with</code> <strong>cierra el archivo automáticamente</strong> al terminar su bloque, incluso si ocurre un error.</p>
+<pre class="codigo">
+with open("datos.txt", "r", encoding="utf-8") as archivo:
+    contenido = archivo.read()
+print(contenido)   # aquí el archivo ya está cerrado
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            <code>with</code> es la forma recomendada de trabajar con archivos en Python.</p>
+                            `,
+                            nextButton: 'Siguiente: Escribir'
+                        },
+                        {
+                            title: 'Escribir en un archivo',
+                            content: `<p>El método <code>write()</code> escribe texto. No agrega el salto de línea automáticamente: hay que incluir <code>\\n</code>.</p>
+                            <p><strong>Crear un archivo:</strong></p>
+<pre class="codigo">
+with open("notas.txt", "w", encoding="utf-8") as archivo:
+    archivo.write("Ana,85\\n")
+    archivo.write("Luis,70\\n")
+    archivo.write("María,92\\n")
+</pre>
+                            <p><strong>Agregar al final:</strong></p>
+<pre class="codigo">
+with open("notas.txt", "a", encoding="utf-8") as archivo:
+    archivo.write("Pedro,64\\n")
+</pre>
+                            <p class="nota">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
+                            El modo <code>"w"</code> borra todo el contenido anterior del archivo. Si desea conservarlo, use <code>"a"</code>.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/escribirArchivo.png',
+                            nextButton: 'Siguiente: Leer'
+                        },
+                        {
+                            title: 'Leer un archivo',
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Forma</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Qué devuelve</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>archivo.read()</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Todo el contenido en un solo texto.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>archivo.readlines()</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Una lista con cada línea como elemento.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;"><code>for linea in archivo:</code></td>
+                                <td style="padding:13px 12px;">Una línea en cada iteración (recomendada para archivos grandes).</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+<pre class="codigo">
+with open("notas.txt", "r", encoding="utf-8") as archivo:
+    for linea in archivo:
+        print(linea.strip())
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Cada línea leída incluye el salto de línea al final. El método <code>strip()</code> lo elimina, junto con los espacios sobrantes.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/leerArchivo.png',
+                            nextButton: 'Siguiente: Procesar datos'
+                        },
+                        {
+                            title: 'Procesar datos de un archivo',
+                            content: `<p>Es común que cada línea tenga varios datos separados por comas (formato CSV). El método <code>split(",")</code> los separa en una lista.</p>
+                            <p>Contenido de <code>notas.txt</code>:</p>
+<pre class="codigo">
+Ana,85
+Luis,70
+María,92
+Pedro,64
+</pre>
+<pre class="codigo">
+suma = 0
+cantidad = 0
+with open("notas.txt", "r", encoding="utf-8") as archivo:
+    for linea in archivo:
+        datos = linea.strip().split(",")
+        nombre = datos[0]
+        nota = float(datos[1])
+        print(nombre, "obtuvo", nota)
+        suma = suma + nota
+        cantidad = cantidad + 1
+if cantidad &gt; 0:
+    print("Promedio del grupo:", suma / cantidad)
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Para la línea <code>"Ana,85"</code>, <code>split(",")</code> devuelve <code>["Ana", "85"]</code>. El 85 sigue siendo texto, por eso se convierte con <code>float()</code>.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/procesarArchivo.png',
+                            nextButton: 'Siguiente: Errores con archivos'
+                        },
+                        {
+                            title: 'Manejo de errores con archivos',
+                            content: `<p>Trabajar con archivos es una de las fuentes más comunes de excepciones: el archivo puede no existir o tener datos con formato incorrecto.</p>
+<pre class="codigo">
+try:
+    with open("notas.txt", "r", encoding="utf-8") as archivo:
+        for linea in archivo:
+            datos = linea.strip().split(",")
+            print(datos[0], float(datos[1]))
+except FileNotFoundError:
+    print("El archivo notas.txt no existe")
+except (ValueError, IndexError):
+    print("El archivo tiene una línea con formato incorrecto")
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            <code>IndexError</code> ocurre si una línea no tiene coma (por ejemplo, una línea vacía), porque <code>datos[1]</code> no existe.</p>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm006-t006',
+                    label: 'Archivos y directorios',
+                    steps: [
+                        {
+                            title: 'Rutas de archivos',
+                            content: `<p>Un <strong>directorio</strong> (carpeta) organiza archivos y otros directorios. La <strong>ruta</strong> indica dónde se encuentra un archivo.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Tipo de ruta</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Descripción</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Absoluta</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Desde la raíz del disco. Funciona solo en esa computadora.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>C:/Users/ana/curso/notas.txt</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><strong>Relativa</strong></td>
+                                <td style="padding:13px 12px;">Desde el directorio donde se ejecuta el programa.</td>
+                                <td style="padding:13px 12px;"><code>datos/notas.txt</code></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Prefiera rutas relativas: el programa seguirá funcionando si se copia la carpeta del proyecto a otra computadora.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/rutas.png',
+                            nextButton: 'Siguiente: El módulo os'
+                        },
+                        {
+                            title: 'El módulo os',
+                            content: `<p>Python incluye el módulo <code>os</code> para trabajar con archivos y directorios del sistema operativo. Se importa al inicio del programa.</p>
+<pre class="codigo">
+import os
+</pre>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Función</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Qué hace</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.getcwd()</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Devuelve el directorio de trabajo actual.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.listdir(ruta)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Devuelve una lista con los nombres del contenido de un directorio.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.path.exists(ruta)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Indica si la ruta existe (<span style="color:#00734a; font-weight:bold;">Verdadero</span> o <span style="color:#d2232a; font-weight:bold;">Falso</span>).</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.path.isfile(ruta)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Indica si la ruta es un archivo.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.path.isdir(ruta)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Indica si la ruta es un directorio.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><code>os.path.join(a, b)</code></td>
+                                <td style="padding:13px 12px;">Une partes de una ruta con el separador correcto del sistema.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Windows separa las carpetas con <code>\\</code> y Linux o macOS con <code>/</code>. <code>os.path.join</code> elige el correcto automáticamente.</p>
+                            `,
+                            nextButton: 'Siguiente: Crear y eliminar'
+                        },
+                        {
+                            title: 'Crear, renombrar y eliminar',
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Función</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Qué hace</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.mkdir(ruta)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Crea un directorio.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.makedirs(ruta, exist_ok=True)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Crea un directorio (y los intermedios) sin error si ya existe.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.rename(actual, nuevo)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Cambia el nombre de un archivo o directorio.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>os.remove(ruta)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Elimina un archivo.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;"><code>os.rmdir(ruta)</code></td>
+                                <td style="padding:13px 12px;">Elimina un directorio vacío.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+<pre class="codigo">
+import os
+
+os.makedirs("reportes", exist_ok=True)
+ruta = os.path.join("reportes", "resumen.txt")
+if os.path.exists(ruta):
+    os.remove(ruta)
+</pre>
+                            <p class="nota">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
+                            Los archivos eliminados con <code>os.remove</code> <strong>no van a la papelera</strong>: se borran de forma permanente.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/directorios.png',
+                            nextButton: 'Siguiente: Listar archivos'
+                        },
+                        {
+                            title: 'Listar archivos de un directorio',
+                            content: `<p>Con <code>os.listdir</code> y un ciclo se puede recorrer el contenido de un directorio y filtrar los archivos que interesan.</p>
+<pre class="codigo">
+import os
+
+carpeta = "notas"
+for nombre in os.listdir(carpeta):
+    if nombre.endswith(".txt"):
+        print("Archivo de texto:", nombre)
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            <code>endswith(".txt")</code> verifica que el nombre termine en .txt, para ignorar otros tipos de archivo y subdirectorios.</p>
+                            `,
+                            nextButton: 'Siguiente: Varios archivos'
+                        },
+                        {
+                            title: 'Trabajar con varios archivos',
+                            content: `<p>Ejemplo: la carpeta <code>notas</code> contiene un archivo por grupo (<code>grupo1.txt</code>, <code>grupo2.txt</code>…) con líneas <code>nombre,nota</code>. El programa calcula el promedio de cada grupo y lo guarda en <code>resumen.txt</code>.</p>
+<pre class="codigo">
+import os
+
+carpeta = "notas"
+try:
+    with open("resumen.txt", "w", encoding="utf-8") as resumen:
+        for nombre in os.listdir(carpeta):
+            if nombre.endswith(".txt"):
+                ruta = os.path.join(carpeta, nombre)
+                suma = 0
+                cantidad = 0
+                with open(ruta, "r", encoding="utf-8") as archivo:
+                    for linea in archivo:
+                        datos = linea.strip().split(",")
+                        suma = suma + float(datos[1])
+                        cantidad = cantidad + 1
+                if cantidad &gt; 0:
+                    promedio = round(suma / cantidad, 2)
+                    resumen.write(nombre + ": " + str(promedio) + "\\n")
+    print("Resumen generado")
+except FileNotFoundError:
+    print("No existe la carpeta", carpeta)
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Este ejemplo integra lo visto en el curso: ciclos, condicionales, acumuladores, listas, excepciones, archivos y directorios.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/variosArchivos.png',
+                            nextButton: 'Siguiente: Buenas prácticas'
+                        },
+                        {
+                            title: 'Buenas prácticas con archivos y directorios',
+                            content: `<ol>
+                                <li>Use <code>with</code> para abrir archivos, así se cierran siempre.</li>
+                                <li>Indique <code>encoding="utf-8"</code> al abrir archivos de texto.</li>
+                                <li>Verifique que el archivo o directorio exista, o maneje <code>FileNotFoundError</code>.</li>
+                                <li>Use rutas relativas y <code>os.path.join</code> en lugar de escribir rutas fijas de su computadora.</li>
+                                <li>Tenga cuidado con el modo <code>"w"</code>: reemplaza el contenido anterior.</li>
+                                <li>Confirme antes de eliminar archivos o directorios, porque no hay papelera.</li>
+                                <li>Mantenga un formato consistente en los archivos de datos (por ejemplo, siempre <code>nombre,nota</code>).</li>
+                            </ol>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/checklist.png',
                             nextButton: ''
                         }
                     ]
