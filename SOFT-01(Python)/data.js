@@ -417,6 +417,177 @@ add eax, 3 &nbsp;&nbsp; → Sumarle 3 a EAX
                             nextButton: ''
                         }
                     ]
+                },
+                {
+                    id: 'm002-t005',
+                    label: 'Operadores aritméticos',
+                    steps: [
+                        {
+                            title: 'Operadores aritméticos',
+                            content: `<p>Los operadores aritméticos permiten realizar cálculos con datos numéricos. Se combinan con variables, constantes y valores para formar <strong>expresiones</strong>, cuyo resultado normalmente se guarda en una variable.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-top:none; border-radius:0 0 14px 14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                                <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                                    <thead>
+                                        <tr>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operador</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">+</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Suma</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>7 + 3</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">10</td>
+                                        </tr>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">-</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Resta</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>7 - 3</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">4</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">*</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Multiplicación</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>7 * 3</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">21</td>
+                                        </tr>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">/</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">División (siempre da un decimal)</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>7 / 2</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">3.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">//</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">División entera (descarta los decimales)</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>7 // 2</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">3</td>
+                                        </tr>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">%</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Residuo o módulo (lo que sobra de la división)</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>7 % 2</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">1</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:13px 12px;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">**</code></td>
+                                            <td style="padding:13px 12px;">Potencia</td>
+                                            <td style="padding:13px 12px;"><code>2 ** 3</code></td>
+                                            <td style="padding:13px 12px;">8</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            En Python, el operador <code>/</code> siempre devuelve un número decimal (<code>float</code>), aunque la división sea exacta: <code>8 / 4</code> da <code>2.0</code>.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/operadoresAritmeticos.png',
+                            nextButton: 'Siguiente: Prioridad de los operadores'
+                        },
+                        {
+                            title: 'Prioridad de los operadores',
+                            content: `<p>Cuando una expresión tiene varios operadores, Python no la evalúa de izquierda a derecha sin más: sigue un <strong>orden de prioridad</strong>, igual que en matemática.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-top:none; border-radius:0 0 14px 14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                                <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                                    <thead>
+                                        <tr>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Prioridad</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operadores</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                                            <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">1 (primero)</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">( )  paréntesis</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>(2 + 3) * 4</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">20</td>
+                                        </tr>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">2</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">**  potencia</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>2 ** 3 * 2</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">16</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">3</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">*  /  //  %</td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>2 + 3 * 4</code></td>
+                                            <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">14</td>
+                                        </tr>
+                                        <tr style="background:#f3f9ff;">
+                                            <td style="padding:13px 12px;"><code style="background:#9cc8ff; color:#003d61; padding:4px 8px; border-radius:6px;">4 (último)</code></td>
+                                            <td style="padding:13px 12px;">+  -</td>
+                                            <td style="padding:13px 12px;"><code>10 - 4 / 2</code></td>
+                                            <td style="padding:13px 12px;">8.0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+<p>Si dos operadores tienen la misma prioridad, se evalúan de izquierda a derecha.</p>
+<p><strong>Error frecuente: el promedio sin paréntesis</strong></p>
+<pre class="codigo">
+promedio = nota1 + nota2 + nota3 / 3      # incorrecto: solo divide nota3
+promedio = (nota1 + nota2 + nota3) / 3    # correcto
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Con las notas 70, 80 y 90, la primera línea da <strong>180.0</strong> y la segunda da <strong>80.0</strong>. Ante la duda, use paréntesis: hacen la expresión más clara y evitan errores.</p>
+                            `,
+                            nextButton: 'Siguiente: División entera y residuo'
+                        },
+                        {
+                            title: 'División entera y residuo',
+                            content: `<p>Los operadores <code>//</code> y <code>%</code> se usan juntos para repartir una cantidad en unidades más grandes.</p>
+<p><strong>Ejemplo:</strong> convertir 135 minutos a horas y minutos.</p>
+<pre class="codigo">
+total_minutos = 135
+horas = total_minutos // 60      # 2
+minutos = total_minutos % 60     # 15
+print(horas, "horas y", minutos, "minutos")
+</pre>
+<p>Otros usos comunes:</p>
+<ul>
+    <li><code>numero % 10</code> obtiene el último dígito de un número: <code>347 % 10</code> da <code>7</code>.</li>
+    <li><code>numero % 2</code> da 0 si el número es par y 1 si es impar (se usará con las estructuras condicionales).</li>
+    <li><code>monto // 1000</code> indica cuántos billetes de ₡1 000 caben en un monto.</li>
+</ul>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/divisionEntera.png',
+                            nextButton: 'Siguiente: Expresiones en un programa'
+                        },
+                        {
+                            title: 'Expresiones aritméticas en un programa',
+                            content: `<p>En un programa secuencial, los datos se leen, se convierten al tipo adecuado y luego se procesan con expresiones aritméticas.</p>
+<pre class="codigo">
+TASA_IVA = 13
+
+precio = float(input("Precio del producto: "))
+cantidad = int(input("Cantidad: "))
+
+subtotal = precio * cantidad
+impuesto = subtotal * TASA_IVA / 100
+total = subtotal + impuesto
+
+print("Subtotal:", subtotal)
+print("Impuesto:", round(impuesto, 2))
+print("Total:", round(total, 2))
+</pre>
+<ul>
+    <li>Convierta los datos con <code>int()</code> o <code>float()</code> antes de operar: <code>input()</code> siempre devuelve texto, y <code>"5" * 3</code> da <code>"555"</code>, no 15.</li>
+    <li>Use <code>round(valor, 2)</code> para mostrar resultados con dos decimales.</li>
+    <li>Deje un espacio alrededor de cada operador, según el estándar de codificación.</li>
+    <li>Guarde los resultados intermedios en variables con nombres descriptivos.</li>
+</ul>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
                 }
             ]
         },
