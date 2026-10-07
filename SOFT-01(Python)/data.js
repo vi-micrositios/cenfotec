@@ -1655,7 +1655,6 @@ ValueError: invalid literal for int() with base 10: 'hola'
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Las validaciones con <code>if</code> no evitan este error, porque ocurre en la conversión, <strong>antes</strong> de llegar a cualquier condición.</p>
                             `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/excepcion.png',
                             nextButton: 'Siguiente: Excepciones comunes'
                         },
                         {

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Condicionales y excepciones</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="ejercicio-condicionales-excepciones"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #d2232a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #d2232a, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            </span>
+            <h3 id="ejercicio-condicionales-excepciones"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Ejercicio: Decisiones seguras con condicionales y excepciones
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #d2232a; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Instrucciones:</strong> En la primera parte analizará un programa que funciona con datos correctos, pero falla con otros. En la segunda parte seleccionará un contexto y desarrollará una solución que use <strong>estructuras condicionales</strong> para tomar decisiones y <strong>manejo de excepciones</strong> (<code>try</code> / <code>except</code>) para que el programa nunca termine abruptamente. <strong>No utilice ciclos ni funciones.</strong>
+        </div>
+
+        <!-- PARTE 3: SELECCIONE UN CONTEXTO -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-list-check" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i>
+                Seleccione un contexto
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Desarrolle <strong>uno</strong> de los siguientes problemas. En todos debe manejar al menos <strong>dos excepciones diferentes</strong> y tomar al menos <strong>tres decisiones</strong>.</p>
+            <div
+                style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+                <h5 style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-weight-scale" aria-hidden="true" style="color: #00928d;"></i> Calculadora de índice de masa corporal
+                    </strong>
+                </h5>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Solicite el <strong>peso</strong> en kilogramos y la <strong>estatura</strong> en metros. Calcule el IMC = peso / estatura² y clasifíquelo: menor que 18.5 bajo peso; de 18.5 a menos de 25 normal; de 25 a menos de 30 sobrepeso; 30 o más obesidad.</p>
+            <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Maneje <code>ValueError</code> si algún dato no es numérico.</li>
+                <li>Maneje <code>ZeroDivisionError</code> si la estatura es 0.</li>
+                <li>Rechace con <code>if</code> pesos o estaturas negativos y estaturas mayores a 2.5 m.</li>
+            </ul>
+                <div
+                    style="background: #ffffff; border-left: 5px solid #00928d; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+                    <strong>El programa debe mostrar:</strong> peso, estatura, IMC con dos decimales y la clasificación.
+                </div>
+            </div>
+            <div
+                style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+                <h5 style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-money-bill-transfer" aria-hidden="true" style="color: #c7ac19;"></i> Casa de cambio
+                    </strong>
+                </h5>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Una casa de cambio usa las constantes <code>COMPRA = 505</code> y <code>VENTA = 518</code>. El usuario elige la operación (<strong>1</strong>: dólares a colones, <strong>2</strong>: colones a dólares) y digita el monto.</p>
+            <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Maneje <code>ValueError</code> si el monto no es numérico.</li>
+                <li>Indique "Operación no válida" si la opción no es 1 ni 2.</li>
+                <li>Rechace montos menores o iguales a cero.</li>
+                <li>Cobre una comisión de ₡500 si la operación es mayor a ₡250 000 (o su equivalente en dólares).</li>
+            </ul>
+                <div
+                    style="background: #ffffff; border-left: 5px solid #C7AC19; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+                    <strong>El programa debe mostrar:</strong> operación, monto original, tipo de cambio aplicado, comisión y monto final.
+                </div>
+            </div>
+            <div
+                style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+                <h5 style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-graduation-cap" aria-hidden="true" style="color: #006AEA;"></i> Nota final de un curso
+                    </strong>
+                </h5>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Solicite las notas de dos exámenes (30 % cada uno) y del proyecto (40 %). Calcule la nota final y la condición: 70 o más <strong>Aprobado</strong>; de 60 a menos de 70 <strong>Ampliación</strong>; menos de 60 <strong>Reprobado</strong>.</p>
+            <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Maneje <code>ValueError</code> si alguna nota no es numérica, indicando cuál de las tres falló.</li>
+                <li>Rechace con <code>if</code> notas menores que 0 o mayores que 100.</li>
+                <li>Si la nota del proyecto es menor que 50, el estudiante reprueba aunque su nota final sea mayor o igual a 70.</li>
+            </ul>
+                <div
+                    style="background: #ffffff; border-left: 5px solid #006AEA; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+                    <strong>El programa debe mostrar:</strong> las tres notas, la nota final y la condición.
+                </div>
+            </div>
+            <div
+                style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+                <h5 style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+                    <strong style="color: #164a98; font-size: 19px;">
+                        <i class="fa-solid fa-bolt" aria-hidden="true" style="color: #d2232a;"></i> Factura eléctrica por tramos
+                    </strong>
+                </h5>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Solicite el consumo del mes en kWh. Los primeros 200 kWh cuestan ₡75 cada uno; del 201 al 300, ₡110; y a partir del 301, ₡140. Se agrega un 13 % de impuesto.</p>
+            <ul style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Maneje <code>ValueError</code> si el consumo no es numérico.</li>
+                <li>Rechace consumos negativos.</li>
+                <li>Si el consumo es 0, cobre únicamente un cargo fijo de ₡2 000.</li>
+                <li>Si el consumo supera 1000 kWh, muestre una alerta de posible error de lectura.</li>
+            </ul>
+                <div
+                    style="background: #ffffff; border-left: 5px solid #d2232a; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
+                    <strong>El programa debe mostrar:</strong> consumo, costo de cada tramo, subtotal, impuesto y total.
+                </div>
+            </div>
+        </div>
+
+        <!-- PARTE 4: ANALIZAR Y DISEÑAR -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-magnifying-glass" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Parte 4: Analizar y diseñar
+            </h4>
+            <ul style="margin: 0 0 14px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>¿Qué datos puede escribir mal el usuario y qué excepción produciría cada uno?</li>
+                <li>¿Qué datos son del tipo correcto pero no tienen sentido para el problema?</li>
+                <li>¿Qué decisiones toma el programa y en qué orden deben evaluarse?</li>
+                <li>¿Qué instrucciones deben ejecutarse solo si la conversión de los datos fue exitosa?</li>
+            </ul>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0;">Elabore el <strong>diagrama de flujo</strong>. Represente el <code>try</code> como una decisión con dos salidas: <strong>"conversión exitosa"</strong> y <strong>"ocurrió un error"</strong>.</p>
+        </div>
+
+        <!-- PARTE 5: DISEÑAR Y EJECUTAR CASOS DE PRUEBA -->
+        <div
+            style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-vial" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Parte 5: Diseñar y ejecutar casos de prueba
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Diseñe al menos <strong>siete casos de prueba</strong> para el contexto seleccionado:</p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">N.º</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de prueba</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Rama o excepción que se prueba</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida esperada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado obtenido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Normal</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Límite</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Otra rama del condicional</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Dato no numérico</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Segunda excepción</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">6</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Valor fuera de rango</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">7</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Caso especial del contexto</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Importante:</strong> Una prueba que provoca una excepción también tiene una salida esperada: el mensaje que debería ver el usuario. Si aparece un traceback, la prueba falló.
+            </div>
+        </div>
+
+        <!-- PARTE 6: REFLEXIÓN -->
+        <div
+            style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-comments" style="color: #c7ac19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 6: Reflexión
+            </h4>
+            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+                <li>¿Qué diferencia hay entre un error que se resuelve con <code>if</code> y uno que requiere <code>try</code>/<code>except</code>?</li>
+                <li>¿Por qué no conviene encerrar todo el programa en un solo bloque <code>try</code>?</li>
+                <li>¿Qué limitación tiene su programa al no poder volver a pedir un dato inválido? ¿Qué estructura lo resolvería?</li>
+            </ol>
+        </div>
+
+        <!-- RETO -->
+        <div
+            style="background: #fffaf2; border-radius: 10px; padding: 14px 16px; color: #6b531a; font-size: 14px; line-height: 1.6; margin-bottom: 18px;">
+            <i class="fa-solid fa-rocket" aria-hidden="true" style="font-size: 20px; margin-right: 8px; color: #c7ac19;"></i>
+            <span><strong>Reto:</strong> Agregue un bloque <code>finally</code> que muestre siempre el mensaje "Gracias por usar el sistema", haya ocurrido un error o no. Documente la salida con un dato válido y con uno inválido.</span>
+        </div>
+
+        <!-- CIERRE -->
+        <div
+            style="display: flex; align-items: flex-start; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> <code>try</code>/<code>except</code> protege al programa de datos con el <strong>tipo</strong> incorrecto; el <code>if</code> lo protege de datos que <strong>no tienen sentido</strong>. Un programa robusto necesita ambos.</span>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
