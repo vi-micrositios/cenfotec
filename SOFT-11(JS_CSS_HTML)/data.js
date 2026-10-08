@@ -141,13 +141,13 @@ const data = {
                         },
                         {
                             title: 'Del requerimiento al código',
-                            content: `<p>Cada requerimiento termina reflejado en alguna parte del sistema. Así se ven RF-01 y un RNF en el formulario y en el modelo de datos:</p><pre><code>&lt;!-- RF-01: registrarse con nombre, correo y contraseña --&gt;
+                            content: `<p>Cada requerimiento termina reflejado en alguna parte del sistema. Así se ven RF-01 y un RNF en el formulario y en el modelo de datos:</p><pre class="code"><code>&lt;!-- RF-01: registrarse con nombre, correo y contraseña --&gt;
 &lt;form id="frmRegistro"&gt;
     &lt;input type="text" name="nombre" required&gt;
     &lt;input type="email" name="correo" required&gt;
     &lt;!-- RNF-03: contraseña de al menos 8 caracteres --&gt;
     &lt;input type="password" name="clave" minlength="8" required&gt;
-&lt;/form&gt;</code></pre><pre><code>// models/usuario.js
+&lt;/form&gt;</code></pre><pre class="code"><code>// models/usuario.js
 const usuarioSchema = new mongoose.Schema({
     nombre: { type: String, required: true },              // RF-01
     correo: { type: String, required: true, unique: true }, // RF-01
@@ -204,7 +204,7 @@ const usuarioSchema = new mongoose.Schema({
                         },
                         {
                             title: 'Del prototipo a la pantalla',
-                            content: `<p>Un wireframe de "Iniciar sesión" (CU-01) se convierte en HTML con Bootstrap casi de forma directa:</p><pre><code>&lt;div class="container"&gt;
+                            content: `<p>Un wireframe de "Iniciar sesión" (CU-01) se convierte en HTML con Bootstrap casi de forma directa:</p><pre class="code"><code>&lt;div class="container"&gt;
   &lt;div class="row justify-content-center mt-5"&gt;
     &lt;div class="col-md-4"&gt;
       &lt;div class="card shadow-sm"&gt;
@@ -292,7 +292,7 @@ const usuarioSchema = new mongoose.Schema({
                         },
                         {
                             title: 'Requerimientos de seguridad en el código',
-                            content: `<p>Los requerimientos de seguridad se verifican en el servidor. Ejemplo de la regla de contraseñas:</p><pre><code>// RS-01: mínimo 8 caracteres, al menos una letra y un número
+                            content: `<p>Los requerimientos de seguridad se verifican en el servidor. Ejemplo de la regla de contraseñas:</p><pre class="code"><code>// RS-01: mínimo 8 caracteres, al menos una letra y un número
 const regexClave = /^(?=.*[A-Za-z])(?=.*\\d).{8,}$/;
 
 function claveValida(clave) {
@@ -301,7 +301,7 @@ function claveValida(clave) {
 
 console.log(claveValida('abc123'));     // false (muy corta)
 console.log(claveValida('abcdefgh'));   // false (sin números)
-console.log(claveValida('cenfo2026'));  // true</code></pre><pre><code>// RS-05: la sesión expira tras 30 minutos de inactividad
+console.log(claveValida('cenfo2026'));  // true</code></pre><pre class="code"><code>// RS-05: la sesión expira tras 30 minutos de inactividad
 app.use(session({
     secret: process.env.SESSION_SECRET,
     rolling: true,                          // reinicia el tiempo con cada solicitud
@@ -397,9 +397,9 @@ app.use(session({
                         },
                         {
                             title: 'Trazabilidad en el día a día',
-                            content: `<p>La trazabilidad no vive solo en la matriz: también se refleja en las ramas, los commits y las pruebas.</p><pre><code>git checkout -b feature/RF-01-registro
+                            content: `<p>La trazabilidad no vive solo en la matriz: también se refleja en las ramas, los commits y las pruebas.</p><pre class="code"><code>git checkout -b feature/RF-01-registro
 git commit -m "RF-01: formulario de registro de usuarios (CU-01)"
-git commit -m "RF-01: validación de correo único en el modelo"</code></pre><pre><code>// pruebas/usuarios.test.js
+git commit -m "RF-01: validación de correo único en el modelo"</code></pre><pre class="code"><code>// pruebas/usuarios.test.js
 test('CP-01 (RF-01): registra un usuario con datos válidos', async () =&gt; { /* ... */ });
 test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... */ });</code></pre><p>
     <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
@@ -530,7 +530,7 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                                 <li><strong>Embeber</strong> (un documento dentro de otro): cuando los datos se consultan siempre juntos y la cantidad es limitada. Ej.: las direcciones de un cliente.</li>
                                 <li><strong>Referenciar</strong> (guardar el _id del otro documento): cuando los datos se consultan por separado, crecen mucho o se comparten. Ej.: los pedidos de un cliente.</li>
                             </ul>
-<pre><code>// Documento de la colección "pedidos"
+<pre class="code"><code>// Documento de la colección "pedidos"
 {
   "_id": "665f1c...",
   "cliente": "664a2b...",          // referencia a "clientes"
@@ -548,7 +548,7 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                         },
                         {
                             title: 'Ejercicio de modelado: reservas de laboratorios',
-                            content: `<p><strong>Caso:</strong> los estudiantes reservan laboratorios por fecha y bloque horario. Cada laboratorio tiene capacidad y equipos.</p><ol><li>Identifique las entidades: <strong>Usuario</strong>, <strong>Laboratorio</strong>, <strong>Reserva</strong>.</li><li>Defina atributos y relaciones: un usuario hace muchas reservas; un laboratorio recibe muchas reservas.</li><li>Decida qué embeber y qué referenciar según las consultas.</li></ol><pre><code>// Colección "laboratorios": los equipos se embeben (pocos y siempre se consultan juntos)
+                            content: `<p><strong>Caso:</strong> los estudiantes reservan laboratorios por fecha y bloque horario. Cada laboratorio tiene capacidad y equipos.</p><ol><li>Identifique las entidades: <strong>Usuario</strong>, <strong>Laboratorio</strong>, <strong>Reserva</strong>.</li><li>Defina atributos y relaciones: un usuario hace muchas reservas; un laboratorio recibe muchas reservas.</li><li>Decida qué embeber y qué referenciar según las consultas.</li></ol><pre class="code"><code>// Colección "laboratorios": los equipos se embeben (pocos y siempre se consultan juntos)
 {
   "_id": "lab01",
   "nombre": "Lab 3-12",
@@ -575,7 +575,7 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                         },
                         {
                             title: 'Diagrama de clases → esquemas',
-                            content: `<p>Cada clase del modelo de dominio se convierte en un esquema de Mongoose; cada asociación, en una referencia o en un subdocumento:</p><pre><code>// models/reserva.js
+                            content: `<p>Cada clase del modelo de dominio se convierte en un esquema de Mongoose; cada asociación, en una referencia o en un subdocumento:</p><pre class="code"><code>// models/reserva.js
 const reservaSchema = new mongoose.Schema({
     usuario:     { type: mongoose.Schema.Types.ObjectId, ref: 'Usuario', required: true },
     laboratorio: { type: mongoose.Schema.Types.ObjectId, ref: 'Laboratorio', required: true },
@@ -610,7 +610,7 @@ reservaSchema.index({ laboratorio: 1, fecha: 1, bloque: 1 }, { unique: true });<
                                 <li><strong>Postcondición:</strong> lo que se garantiza al terminar.</li>
                                 <li><strong>Invariante:</strong> lo que siempre debe ser verdadero.</li>
                             </ul>
-<pre><code>-- OCL: operación retirar(monto) de una Cuenta
+<pre class="code"><code>-- OCL: operación retirar(monto) de una Cuenta
 context Cuenta::retirar(monto : Real)
   pre:  monto > 0 and monto <= self.saldo
   post: self.saldo = self.saldo@pre - monto
@@ -625,7 +625,7 @@ context Cuenta
                         },
                         {
                             title: 'Del contrato al código',
-                            content: `<p>La especificación OCL de <code>retirar</code> se implementa verificando la precondición y garantizando la invariante:</p><pre><code>function retirar(cuenta, monto) {
+                            content: `<p>La especificación OCL de <code>retirar</code> se implementa verificando la precondición y garantizando la invariante:</p><pre class="code"><code>function retirar(cuenta, monto) {
     // pre: monto &gt; 0 and monto &lt;= saldo
     if (monto &lt;= 0) throw new Error('El monto debe ser positivo');
     if (monto &gt; cuenta.saldo) throw new Error('Saldo insuficiente');
@@ -636,7 +636,7 @@ context Cuenta
     // post: saldo = saldo@pre - monto
     console.assert(cuenta.saldo === saldoAnterior - monto);
     return cuenta;
-}</code></pre><pre><code>// inv: saldo &gt;= 0  →  regla en el esquema
+}</code></pre><pre class="code"><code>// inv: saldo &gt;= 0  →  regla en el esquema
 const cuentaSchema = new mongoose.Schema({
     saldo: { type: Number, min: [0, 'El saldo no puede ser negativo'] }
 });</code></pre>`,
@@ -690,7 +690,7 @@ const cuentaSchema = new mongoose.Schema({
                         {
                             title: 'Arquitectura de la información',
                             content: `<p>Define cómo se organiza y navega el contenido. Se representa con un <strong>mapa del sitio</strong>:</p>
-<pre><code>Inicio
+<pre class="code"><code>Inicio
 ├── Catálogo
 │   └── Detalle de producto
 ├── Carrito
@@ -705,7 +705,7 @@ const cuentaSchema = new mongoose.Schema({
                         {
                             title: 'Estructura de archivos del proyecto',
                             content: `<p>Separar responsabilidades facilita el mantenimiento:</p>
-<pre><code>mi-proyecto/
+<pre class="code"><code>mi-proyecto/
 ├── index.html
 ├── pages/
 │   ├── registro.html
@@ -731,7 +731,7 @@ const cuentaSchema = new mongoose.Schema({
                         },
                         {
                             title: 'Plantilla base de una página',
-                            content: `<p>Esta estructura semántica se repite en todas las páginas del proyecto:</p><pre><code>&lt;!DOCTYPE html&gt;
+                            content: `<p>Esta estructura semántica se repite en todas las páginas del proyecto:</p><pre class="code"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -766,7 +766,7 @@ const cuentaSchema = new mongoose.Schema({
                         {
                             title: '¿Qué es HTML?',
                             content: `<p>HTML es el lenguaje que define la <strong>estructura y el contenido</strong> de una página web mediante etiquetas.</p>
-<pre><code>&lt;!DOCTYPE html&gt;
+<pre class="code"><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="es"&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -800,7 +800,7 @@ const cuentaSchema = new mongoose.Schema({
                         {
                             title: 'HTML semántico',
                             content: `<p>Las etiquetas semánticas describen el <strong>significado</strong> del contenido, lo que mejora la accesibilidad y el posicionamiento en buscadores.</p>
-<pre><code>&lt;header&gt;  Encabezado y logo        &lt;/header&gt;
+<pre class="code"><code>&lt;header&gt;  Encabezado y logo        &lt;/header&gt;
 &lt;nav&gt;     Menú de navegación        &lt;/nav&gt;
 &lt;main&gt;
     &lt;section&gt; Sección temática    &lt;/section&gt;
@@ -816,7 +816,7 @@ const cuentaSchema = new mongoose.Schema({
                         },
                         {
                             title: 'Ejemplo: listas, tablas e imágenes',
-                            content: `<pre><code>&lt;section&gt;
+                            content: `<pre class="code"><code>&lt;section&gt;
     &lt;h2&gt;Laboratorios disponibles&lt;/h2&gt;
     &lt;img src="imgs/lab.jpg" alt="Laboratorio con 30 computadoras" width="300"&gt;
 
@@ -852,7 +852,7 @@ const cuentaSchema = new mongoose.Schema({
                         {
                             title: '¿Qué es CSS?',
                             content: `<p>CSS define la <strong>presentación</strong>: colores, tipografía, tamaños, posición y animaciones.</p>
-<pre><code>/* selector { propiedad: valor; } */
+<pre class="code"><code>/* selector { propiedad: valor; } */
 h1 {
     color: #00928d;
     font-size: 2rem;
@@ -872,7 +872,7 @@ h1 {
                                 <li><strong>Border:</strong> borde.</li>
                                 <li><strong>Margin:</strong> espacio externo, entre cajas.</li>
                             </ul>
-<pre><code>.tarjeta {
+<pre class="code"><code>.tarjeta {
     padding: 16px;
     border: 1px solid #ccc;
     margin: 10px;
@@ -883,13 +883,13 @@ h1 {
                         {
                             title: 'Diseño con Flexbox y Grid',
                             content: `<p><strong>Flexbox</strong> organiza elementos en una dimensión (fila o columna):</p>
-<pre><code>.menu {
+<pre class="code"><code>.menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }</code></pre>
                             <p><strong>Grid</strong> organiza en dos dimensiones (filas y columnas):</p>
-<pre><code>.catalogo {
+<pre class="code"><code>.catalogo {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -899,7 +899,7 @@ h1 {
                         {
                             title: 'Diseño adaptable (media queries)',
                             content: `<p>Las <em>media queries</em> aplican estilos según el tamaño de la pantalla:</p>
-<pre><code>/* Celulares: una columna */
+<pre class="code"><code>/* Celulares: una columna */
 .catalogo { grid-template-columns: 1fr; }
 
 /* Pantallas de 768px o más: tres columnas */
@@ -914,7 +914,7 @@ h1 {
                         },
                         {
                             title: 'Pseudo-clases y transiciones',
-                            content: `<pre><code>/* Cambia al pasar el mouse */
+                            content: `<pre class="code"><code>/* Cambia al pasar el mouse */
 .btn-reservar:hover {
     background-color: #00928d;
     color: white;
@@ -941,7 +941,7 @@ input:focus {
                         },
                         {
                             title: 'Variables CSS',
-                            content: `<p>Las variables (custom properties) centralizan colores y medidas para mantener la consistencia del sitio:</p><pre><code>:root {
+                            content: `<p>Las variables (custom properties) centralizan colores y medidas para mantener la consistencia del sitio:</p><pre class="code"><code>:root {
     --color-primario: #00928d;
     --color-texto: #333;
     --radio: 8px;
@@ -969,7 +969,7 @@ h1 {
                     steps: [
                         {
                             title: '¿Qué es Bootstrap?',
-                            content: `<p>Bootstrap es un <strong>framework de CSS</strong> con estilos y componentes listos (botones, menús, tarjetas, formularios, ventanas modales) que permiten construir interfaces adaptables rápidamente, usando solo clases en el HTML.</p><ul><li>Diseño <strong>mobile first</strong> y adaptable.</li><li>Sistema de rejilla de <strong>12 columnas</strong>.</li><li>Componentes consistentes y accesibles.</li></ul><pre><code>&lt;!-- En el &lt;head&gt;: estilos de Bootstrap --&gt;
+                            content: `<p>Bootstrap es un <strong>framework de CSS</strong> con estilos y componentes listos (botones, menús, tarjetas, formularios, ventanas modales) que permiten construir interfaces adaptables rápidamente, usando solo clases en el HTML.</p><ul><li>Diseño <strong>mobile first</strong> y adaptable.</li><li>Sistema de rejilla de <strong>12 columnas</strong>.</li><li>Componentes consistentes y accesibles.</li></ul><pre class="code"><code>&lt;!-- En el &lt;head&gt;: estilos de Bootstrap --&gt;
 &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
 &lt;!-- Sus estilos van DESPUÉS para poder personalizar --&gt;
 &lt;link rel="stylesheet" href="css/styles.css"&gt;
@@ -981,7 +981,7 @@ h1 {
                         },
                         {
                             title: 'Sistema de rejilla (grid)',
-                            content: `<p>La página se divide en <code>container</code> → <code>row</code> → <code>col</code>. Cada fila tiene 12 columnas, y los sufijos (<code>sm</code>, <code>md</code>, <code>lg</code>) indican a partir de qué ancho aplica:</p><pre><code>&lt;div class="container"&gt;
+                            content: `<p>La página se divide en <code>container</code> → <code>row</code> → <code>col</code>. Cada fila tiene 12 columnas, y los sufijos (<code>sm</code>, <code>md</code>, <code>lg</code>) indican a partir de qué ancho aplica:</p><pre class="code"><code>&lt;div class="container"&gt;
     &lt;div class="row"&gt;
         &lt;!-- Celular: 12 (una por fila) · Tableta: 6 (dos) · Escritorio: 4 (tres) --&gt;
         &lt;div class="col-12 col-md-6 col-lg-4"&gt;Columna A&lt;/div&gt;
@@ -993,7 +993,7 @@ h1 {
                         },
                         {
                             title: 'Barra de navegación',
-                            content: `<pre><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
+                            content: `<pre class="code"><code>&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark"&gt;
     &lt;div class="container"&gt;
         &lt;a class="navbar-brand" href="index.html"&gt;Reservas&lt;/a&gt;
         &lt;button class="navbar-toggler" type="button"
@@ -1016,7 +1016,7 @@ h1 {
                         },
                         {
                             title: 'Tarjetas y botones',
-                            content: `<pre><code>&lt;div class="row g-4"&gt;
+                            content: `<pre class="code"><code>&lt;div class="row g-4"&gt;
     &lt;div class="col-md-4"&gt;
         &lt;div class="card h-100"&gt;
             &lt;img src="imgs/lab312.jpg" class="card-img-top" alt="Laboratorio 3-12"&gt;
@@ -1034,7 +1034,7 @@ h1 {
                         },
                         {
                             title: 'Tablas, alertas e insignias',
-                            content: `<pre><code>&lt;div class="alert alert-success" role="alert"&gt;Reserva registrada correctamente.&lt;/div&gt;
+                            content: `<pre class="code"><code>&lt;div class="alert alert-success" role="alert"&gt;Reserva registrada correctamente.&lt;/div&gt;
 &lt;div class="alert alert-danger" role="alert"&gt;El laboratorio ya está reservado.&lt;/div&gt;
 
 &lt;div class="table-responsive"&gt;
@@ -1059,7 +1059,7 @@ h1 {
                         },
                         {
                             title: 'Ventanas modales',
-                            content: `<p>Un modal muestra contenido sobre la página sin cambiar de pantalla; es útil para confirmar acciones o editar registros:</p><pre><code>&lt;button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#mdlConfirmar"&gt;
+                            content: `<p>Un modal muestra contenido sobre la página sin cambiar de pantalla; es útil para confirmar acciones o editar registros:</p><pre class="code"><code>&lt;button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#mdlConfirmar"&gt;
     Eliminar
 &lt;/button&gt;
 
@@ -1082,7 +1082,7 @@ h1 {
                         },
                         {
                             title: 'Clases utilitarias',
-                            content: `<p>Bootstrap incluye clases de una sola propiedad que evitan escribir CSS para casos comunes:</p><table class="table"><tr><th>Clase</th><th>Efecto</th></tr><tr><td><code>m-3</code>, <code>mt-2</code>, <code>px-4</code></td><td>Margen y relleno (0 a 5)</td></tr><tr><td><code>text-center</code>, <code>fw-bold</code></td><td>Alineación y peso del texto</td></tr><tr><td><code>bg-light</code>, <code>text-danger</code></td><td>Colores de fondo y texto</td></tr><tr><td><code>d-flex</code>, <code>justify-content-between</code></td><td>Flexbox</td></tr><tr><td><code>d-none d-md-block</code></td><td>Oculto en celular, visible desde tableta</td></tr><tr><td><code>shadow</code>, <code>rounded</code></td><td>Sombra y bordes redondeados</td></tr></table><pre><code>&lt;div class="d-flex justify-content-between align-items-center p-3 bg-light rounded shadow-sm"&gt;
+                            content: `<p>Bootstrap incluye clases de una sola propiedad que evitan escribir CSS para casos comunes:</p><table class="table"><tr><th>Clase</th><th>Efecto</th></tr><tr><td><code>m-3</code>, <code>mt-2</code>, <code>px-4</code></td><td>Margen y relleno (0 a 5)</td></tr><tr><td><code>text-center</code>, <code>fw-bold</code></td><td>Alineación y peso del texto</td></tr><tr><td><code>bg-light</code>, <code>text-danger</code></td><td>Colores de fondo y texto</td></tr><tr><td><code>d-flex</code>, <code>justify-content-between</code></td><td>Flexbox</td></tr><tr><td><code>d-none d-md-block</code></td><td>Oculto en celular, visible desde tableta</td></tr><tr><td><code>shadow</code>, <code>rounded</code></td><td>Sombra y bordes redondeados</td></tr></table><pre class="code"><code>&lt;div class="d-flex justify-content-between align-items-center p-3 bg-light rounded shadow-sm"&gt;
     &lt;h2 class="h5 m-0"&gt;Mis reservas&lt;/h2&gt;
     &lt;button class="btn btn-success"&gt;+ Nueva&lt;/button&gt;
 &lt;/div&gt;</code></pre><p>
@@ -1100,7 +1100,7 @@ h1 {
                         {
                             title: 'Estructura de un formulario',
                             content: `<p>Los formularios permiten que el usuario <strong>ingrese datos</strong> que luego se envían al servidor.</p>
-<pre><code>&lt;form id="frmRegistro"&gt;
+<pre class="code"><code>&lt;form id="frmRegistro"&gt;
     &lt;label for="txtNombre"&gt;Nombre&lt;/label&gt;
     &lt;input type="text" id="txtNombre" name="nombre"&gt;
 
@@ -1134,7 +1134,7 @@ h1 {
                         },
                         {
                             title: 'Formulario con Bootstrap',
-                            content: `<pre><code>&lt;form id="frmReserva" class="row g-3"&gt;
+                            content: `<pre class="code"><code>&lt;form id="frmReserva" class="row g-3"&gt;
     &lt;div class="col-md-6"&gt;
         &lt;label for="selLab" class="form-label"&gt;Laboratorio&lt;/label&gt;
         &lt;select id="selLab" name="laboratorio" class="form-select" required&gt;
@@ -1173,7 +1173,7 @@ h1 {
                         },
                         {
                             title: 'Leer los datos del formulario',
-                            content: `<pre><code>const formulario = document.getElementById('frmReserva');
+                            content: `<pre class="code"><code>const formulario = document.getElementById('frmReserva');
 
 formulario.addEventListener('submit', (e) =&gt; {
     e.preventDefault();
@@ -1201,7 +1201,7 @@ formulario.addEventListener('submit', (e) =&gt; {
                         },
                         {
                             title: 'Validación con atributos HTML5',
-                            content: `<pre><code>&lt;input type="text" name="nombre" required minlength="3"&gt;
+                            content: `<pre class="code"><code>&lt;input type="text" name="nombre" required minlength="3"&gt;
 &lt;input type="email" name="correo" required&gt;
 &lt;input type="number" name="edad" min="18" max="99"&gt;
 &lt;input type="text" name="cedula" pattern="[0-9]{9}"
@@ -1211,7 +1211,7 @@ formulario.addEventListener('submit', (e) =&gt; {
                         },
                         {
                             title: 'Validación con JavaScript',
-                            content: `<pre><code>const formulario = document.getElementById('frmRegistro');
+                            content: `<pre class="code"><code>const formulario = document.getElementById('frmRegistro');
 
 formulario.addEventListener('submit', function (evento) {
     const nombre = document.getElementById('txtNombre');
@@ -1229,13 +1229,13 @@ formulario.addEventListener('submit', function (evento) {
         alert('Revise los campos marcados en rojo');
     }
 });</code></pre>
-<pre><code>/* CSS */
+<pre class="code"><code>/* CSS */
 .error { border: 2px solid #d9534f; }</code></pre>`,
                             nextButton: 'Siguiente: Validación con Bootstrap'
                         },
                         {
                             title: 'Validación con estilos de Bootstrap',
-                            content: `<p>Bootstrap muestra los mensajes de error con las clases <code>is-invalid</code> / <code>is-valid</code> y el elemento <code>invalid-feedback</code>:</p><pre><code>&lt;form id="frmRegistro" class="needs-validation" novalidate&gt;
+                            content: `<p>Bootstrap muestra los mensajes de error con las clases <code>is-invalid</code> / <code>is-valid</code> y el elemento <code>invalid-feedback</code>:</p><pre class="code"><code>&lt;form id="frmRegistro" class="needs-validation" novalidate&gt;
     &lt;div class="mb-3"&gt;
         &lt;label for="txtCorreo" class="form-label"&gt;Correo&lt;/label&gt;
         &lt;input type="email" id="txtCorreo" class="form-control" required&gt;
@@ -1247,7 +1247,7 @@ formulario.addEventListener('submit', function (evento) {
         &lt;div class="invalid-feedback"&gt;Mínimo 8 caracteres.&lt;/div&gt;
     &lt;/div&gt;
     &lt;button class="btn btn-primary"&gt;Registrarse&lt;/button&gt;
-&lt;/form&gt;</code></pre><pre><code>const form = document.getElementById('frmRegistro');
+&lt;/form&gt;</code></pre><pre class="code"><code>const form = document.getElementById('frmRegistro');
 
 form.addEventListener('submit', (e) =&gt; {
     if (!form.checkValidity()) {
@@ -1260,7 +1260,7 @@ form.addEventListener('submit', (e) =&gt; {
                         },
                         {
                             title: 'Validaciones personalizadas',
-                            content: `<p>Para reglas que HTML5 no cubre (confirmar contraseña, fechas futuras) se valida con JavaScript y se marca el campo:</p><pre><code>function marcar(campo, esValido, mensaje) {
+                            content: `<p>Para reglas que HTML5 no cubre (confirmar contraseña, fechas futuras) se valida con JavaScript y se marca el campo:</p><pre class="code"><code>function marcar(campo, esValido, mensaje) {
     campo.classList.toggle('is-invalid', !esValido);
     campo.classList.toggle('is-valid', esValido);
     campo.nextElementSibling.textContent = mensaje || '';
@@ -1309,24 +1309,24 @@ document.getElementById('frmReserva').addEventListener('submit', (e) =&gt; {
                         },
                         {
                             title: 'Cómo incluir JavaScript y variables',
-                            content: `<pre><code>&lt;!-- Al final del body --&gt;
+                            content: `<pre class="code"><code>&lt;!-- Al final del body --&gt;
 &lt;script src="js/main.js"&gt;&lt;/script&gt;</code></pre>
-<pre><code>// main.js
+<pre class="code"><code>// main.js
 let contador = 0;          // puede cambiar
 const IVA = 0.13;          // constante
 console.log('Hola mundo'); // se ve en la consola (F12)</code></pre>
                             <p>
-                                <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
-                                Use <code>const</code> por defecto y <code>let</code> solo cuando el valor deba cambiar. Evite <code>var</code>.
+                                <i class="fas fa-lightbulb" style="col or: #00928d;" aria-hidden="true"></i>
+                                Usar <code>const</code> por defecto y <code>let</code> solo cuando el valor deba cambiar. Prohibido usar <code>var</code>.
                             </p>`,
                             nextButton: 'Siguiente: Primer programa'
                         },
                         {
                             title: 'Primer programa interactivo',
-                            content: `<pre><code>&lt;h1 id="saludo"&gt;Hola&lt;/h1&gt;
+                            content: `<pre class="code"><code>&lt;h1 id="saludo"&gt;Hola&lt;/h1&gt;
 &lt;input type="text" id="txtNombre" placeholder="Su nombre"&gt;
 &lt;button id="btnSaludar"&gt;Saludar&lt;/button&gt;
-&lt;p&gt;Clics: &lt;span id="contador"&gt;0&lt;/span&gt;&lt;/p&gt;</code></pre><pre><code>// js/main.js
+&lt;p&gt;Clics: &lt;span id="contador"&gt;0&lt;/span&gt;&lt;/p&gt;</code></pre><pre class="code"><code>// js/main.js
 let clics = 0;
 
 document.getElementById('btnSaludar').addEventListener('click', () =&gt; {
@@ -1342,7 +1342,7 @@ document.getElementById('btnSaludar').addEventListener('click', () =&gt; {
                         },
                         {
                             title: 'Plantillas de texto (template literals)',
-                            content: `<p>Con comillas invertidas se pueden insertar variables y escribir texto en varias líneas:</p><pre><code>const nombre = 'Ana';
+                            content: `<p>Con comillas invertidas se pueden insertar variables y escribir texto en varias líneas:</p><pre class="code"><code>const nombre = 'Ana';
 const edad = 21;
 
 // Concatenación tradicional
@@ -1388,7 +1388,7 @@ const tarjeta = \`
                                 <li><strong>Comparación:</strong> <code>=== !== &gt; &lt; &gt;= &lt;=</code></li>
                                 <li><strong>Lógicos:</strong> <code>&amp;&amp;</code> (y), <code>||</code> (o), <code>!</code> (no)</li>
                             </ul>
-<pre><code>5 == '5'    // true  (convierte tipos)
+<pre class="code"><code>5 == '5'    // true  (convierte tipos)
 5 === '5'   // false (compara valor y tipo)
 '5' + 2     // '52'  (concatena)
 Number('5') + 2  // 7</code></pre>
@@ -1400,14 +1400,14 @@ Number('5') + 2  // 7</code></pre>
                         },
                         {
                             title: 'Conversión de tipos y valores "falsy"',
-                            content: `<pre><code>Number('25')        // 25
+                            content: `<pre class="code"><code>Number('25')        // 25
 Number('abc')       // NaN (Not a Number)
 parseInt('25.7')    // 25
 parseFloat('25.7')  // 25.7
 String(100)         // '100'
 (1500).toFixed(2)   // '1500.00'
 
-isNaN(Number('abc'))   // true → útil para validar</code></pre><p>En una condición, estos valores se consideran <strong>falsos</strong>: <code>false</code>, <code>0</code>, <code>''</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>.</p><pre><code>const nombre = '';
+isNaN(Number('abc'))   // true → útil para validar</code></pre><p>En una condición, estos valores se consideran <strong>falsos</strong>: <code>false</code>, <code>0</code>, <code>''</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>.</p><pre class="code"><code>const nombre = '';
 if (!nombre) {
     console.log('El nombre es obligatorio');
 }</code></pre>`,
@@ -1415,10 +1415,10 @@ if (!nombre) {
                         },
                         {
                             title: 'Ejemplo: calcular un total',
-                            content: `<pre><code>&lt;input type="number" id="txtPrecio" placeholder="Precio"&gt;
+                            content: `<pre class="code"><code>&lt;input type="number" id="txtPrecio" placeholder="Precio"&gt;
 &lt;input type="number" id="txtCantidad" placeholder="Cantidad"&gt;
 &lt;button id="btnCalcular"&gt;Calcular&lt;/button&gt;
-&lt;p id="resultado"&gt;&lt;/p&gt;</code></pre><pre><code>const IVA = 0.13;
+&lt;p id="resultado"&gt;&lt;/p&gt;</code></pre><pre class="code"><code>const IVA = 0.13;
 
 document.getElementById('btnCalcular').addEventListener('click', () =&gt; {
     const precio = Number(document.getElementById('txtPrecio').value);
@@ -1443,7 +1443,7 @@ document.getElementById('btnCalcular').addEventListener('click', () =&gt; {
                     steps: [
                         {
                             title: 'Condicionales',
-                            content: `<pre><code>const nota = 85;
+                            content: `<pre class="code"><code>const nota = 85;
 
 if (nota >= 90) {
     console.log('Excelente');
@@ -1469,7 +1469,7 @@ const estado = nota >= 70 ? 'Aprobado' : 'Reprobado';</code></pre>`,
                         },
                         {
                             title: 'Ciclos',
-                            content: `<pre><code>// for clásico
+                            content: `<pre class="code"><code>// for clásico
 for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
@@ -1489,9 +1489,9 @@ for (const fruta of frutas) {
                         },
                         {
                             title: 'Ejemplo: generar HTML con un ciclo',
-                            content: `<pre><code>&lt;table class="table"&gt;
+                            content: `<pre class="code"><code>&lt;table class="table"&gt;
     &lt;tbody id="tblMultiplicar"&gt;&lt;/tbody&gt;
-&lt;/table&gt;</code></pre><pre><code>const numero = 7;
+&lt;/table&gt;</code></pre><pre class="code"><code>const numero = 7;
 let filas = '';
 
 for (let i = 1; i &lt;= 10; i++) {
@@ -1503,7 +1503,7 @@ document.getElementById('tblMultiplicar').innerHTML = filas;</code></pre>`,
                         },
                         {
                             title: 'break, continue y validación con ciclos',
-                            content: `<pre><code>const notas = [85, 40, 92, -5, 70];
+                            content: `<pre class="code"><code>const notas = [85, 40, 92, -5, 70];
 
 // continue: salta los valores inválidos
 let suma = 0, validas = 0;
@@ -1531,7 +1531,7 @@ for (const nota of notas) {
                     steps: [
                         {
                             title: 'Funciones',
-                            content: `<pre><code>// Declaración
+                            content: `<pre class="code"><code>// Declaración
 function calcularTotal(precio, cantidad) {
     return precio * cantidad;
 }
@@ -1546,7 +1546,7 @@ console.log(aplicarIVA(calcularTotal(1000, 3))); // 3390</code></pre>
                         },
                         {
                             title: 'Arreglos y métodos',
-                            content: `<pre><code>const notas = [80, 95, 60, 72];
+                            content: `<pre class="code"><code>const notas = [80, 95, 60, 72];
 
 notas.push(88);                         // agrega al final
 notas.length;                           // 5
@@ -1559,7 +1559,7 @@ notas.reduce((suma, n) => suma + n, 0); // 395</code></pre>`,
                         {
                             title: 'Arreglos de objetos y JSON',
                             content: `<p>Los datos de una aplicación suelen manejarse como arreglos de objetos, igual que los documentos de MongoDB:</p>
-<pre><code>const estudiantes = [
+<pre class="code"><code>const estudiantes = [
     { nombre: 'Ana',  nota: 90 },
     { nombre: 'Luis', nota: 65 }
 ];
@@ -1577,7 +1577,7 @@ const lista = JSON.parse(texto);</code></pre>
                         },
                         {
                             title: 'Objetos y desestructuración',
-                            content: `<pre><code>const usuario = {
+                            content: `<pre class="code"><code>const usuario = {
     nombre: 'Ana',
     correo: 'ana@cenfotec.ac.cr',
     rol: 'estudiante',
@@ -1604,7 +1604,7 @@ for (const clave in usuario) {
                         },
                         {
                             title: 'Ejemplo: carrito de compras',
-                            content: `<pre><code>const carrito = [];
+                            content: `<pre class="code"><code>const carrito = [];
 
 function agregar(nombre, precio, cantidad) {
     const existente = carrito.find(p =&gt; p.nombre === nombre);
@@ -1633,7 +1633,7 @@ console.log(total());   // 5700</code></pre>`,
                         },
                         {
                             title: 'Ordenar y consultar arreglos',
-                            content: `<pre><code>const productos = [
+                            content: `<pre class="code"><code>const productos = [
     { nombre: 'Café', precio: 1500, stock: 10 },
     { nombre: 'Té', precio: 1200, stock: 0 },
     { nombre: 'Queque', precio: 2000, stock: 5 }
@@ -1663,7 +1663,7 @@ productos.filter(p =&gt; p.nombre.toLowerCase().includes(texto));</code></pre>`,
                         {
                             title: 'El DOM',
                             content: `<p>El <strong>DOM</strong> (Document Object Model) es la representación de la página como un árbol de objetos que JavaScript puede leer y modificar.</p>
-<pre><code>const titulo = document.getElementById('titulo');
+<pre class="code"><code>const titulo = document.getElementById('titulo');
 const botones = document.querySelectorAll('.btn');
 
 titulo.textContent = 'Nuevo título';
@@ -1677,7 +1677,7 @@ document.querySelector('#lista').appendChild(item);</code></pre>`,
                         },
                         {
                             title: 'Eventos',
-                            content: `<pre><code>const boton = document.getElementById('btnSaludar');
+                            content: `<pre class="code"><code>const boton = document.getElementById('btnSaludar');
 
 boton.addEventListener('click', () => {
     const nombre = document.getElementById('txtNombre').value;
@@ -1694,7 +1694,7 @@ boton.addEventListener('click', () => {
                                 <li><strong>window.location:</strong> lee o cambia la URL actual.</li>
                                 <li><strong>setTimeout / setInterval:</strong> ejecutan código después de un tiempo.</li>
                             </ul>
-<pre><code>localStorage.setItem('tema', 'oscuro');
+<pre class="code"><code>localStorage.setItem('tema', 'oscuro');
 const tema = localStorage.getItem('tema');
 
 window.location.href = 'catalogo.html';</code></pre>
@@ -1706,7 +1706,7 @@ window.location.href = 'catalogo.html';</code></pre>
                         },
                         {
                             title: 'Asincronía: promesas y async/await',
-                            content: `<p>Las operaciones que toman tiempo (consultar un servidor) son <strong>asíncronas</strong>: el programa no se detiene a esperarlas. <code>async/await</code> permite escribirlas como si fueran secuenciales:</p><pre><code>async function cargarProductos() {
+                            content: `<p>Las operaciones que toman tiempo (consultar un servidor) son <strong>asíncronas</strong>: el programa no se detiene a esperarlas. <code>async/await</code> permite escribirlas como si fueran secuenciales:</p><pre class="code"><code>async function cargarProductos() {
     try {
         const respuesta = await fetch('/api/productos');
         if (!respuesta.ok) throw new Error('Error ' + respuesta.status);
@@ -1726,9 +1726,9 @@ cargarProductos();</code></pre><p>
                         },
                         {
                             title: 'Ejemplo: mostrar datos en tarjetas Bootstrap',
-                            content: `<pre><code>&lt;div class="container"&gt;
+                            content: `<pre class="code"><code>&lt;div class="container"&gt;
     &lt;div class="row g-3" id="contenedorLabs"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre><pre><code>async function mostrarLaboratorios() {
+&lt;/div&gt;</code></pre><pre class="code"><code>async function mostrarLaboratorios() {
     const respuesta = await fetch('/api/laboratorios');
     const labs = await respuesta.json();
 
@@ -1766,9 +1766,9 @@ document.addEventListener('DOMContentLoaded', mostrarLaboratorios);</code></pre>
                             title: '¿Qué es Node.js?',
                             content: `<p>Node.js es un entorno que permite <strong>ejecutar JavaScript fuera del navegador</strong>, por ejemplo en un servidor. Usa el motor V8 de Chrome.</p>
                             <p>Con Node.js se puede usar el mismo lenguaje en el cliente (frontend) y en el servidor (backend).</p>
-<pre><code>// hola.js
+<pre class="code"><code>// hola.js
 console.log('Hola desde Node.js');</code></pre>
-<pre><code>// En la terminal
+<pre class="code"><code>// En la terminal
 node -v          # verifica la versión instalada
 node hola.js     # ejecuta el archivo</code></pre>`,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_nodejs.png',
@@ -1777,7 +1777,7 @@ node hola.js     # ejecuta el archivo</code></pre>`,
                         {
                             title: 'npm y package.json',
                             content: `<p><strong>npm</strong> (Node Package Manager) instala bibliotecas de terceros.</p>
-<pre><code>npm init -y            # crea package.json
+<pre class="code"><code>npm init -y            # crea package.json
 npm install express    # instala una dependencia
 npm install            # reinstala todo lo de package.json</code></pre>
                             <p>El archivo <code>package.json</code> describe el proyecto y sus dependencias. La carpeta <code>node_modules</code> contiene las bibliotecas instaladas.</p>
@@ -1790,7 +1790,7 @@ npm install            # reinstala todo lo de package.json</code></pre>
                         {
                             title: 'Módulos en Node.js',
                             content: `<p>El código se divide en archivos (módulos) que se exportan e importan:</p>
-<pre><code>// utilidades.js
+<pre class="code"><code>// utilidades.js
 function sumar(a, b) {
     return a + b;
 }
@@ -1804,7 +1804,7 @@ console.log(sumar(2, 3)); // 5</code></pre>
                         },
                         {
                             title: 'Scripts de npm',
-                            content: `<p>En <code>package.json</code> se definen comandos para no tener que recordarlos:</p><pre><code>{
+                            content: `<p>En <code>package.json</code> se definen comandos para no tener que recordarlos:</p><pre class="code"><code>{
   "name": "proyecto-reservas",
   "version": "1.0.0",
   "main": "app.js",
@@ -1816,13 +1816,13 @@ console.log(sumar(2, 3)); // 5</code></pre>
     "express": "^4.19.2",
     "mongoose": "^8.5.0"
   }
-}</code></pre><pre><code>npm run dev     # desarrollo (reinicia al guardar)
+}</code></pre><pre class="code"><code>npm run dev     # desarrollo (reinicia al guardar)
 npm start       # producción</code></pre>`,
                             nextButton: 'Siguiente: Módulo fs'
                         },
                         {
                             title: 'Leer y escribir archivos con fs',
-                            content: `<pre><code>const fs = require('fs');
+                            content: `<pre class="code"><code>const fs = require('fs');
 const path = require('path');
 
 const ruta = path.join(__dirname, 'datos', 'productos.json');
@@ -1843,7 +1843,7 @@ console.log('Productos guardados:', productos.length);</code></pre><p>
                         },
                         {
                             title: 'Un servidor web básico',
-                            content: `<p>Con el módulo <code>http</code> de Node se puede crear un servidor sin instalar nada:</p><pre><code>const http = require('http');
+                            content: `<p>Con el módulo <code>http</code> de Node se puede crear un servidor sin instalar nada:</p><pre class="code"><code>const http = require('http');
 
 const servidor = http.createServer((req, res) =&gt; {
     if (req.url === '/api/saludo') {
@@ -1878,7 +1878,7 @@ servidor.listen(3000, () =&gt; console.log('http://localhost:3000'));</code></pr
                             title: '¿Qué es jQuery?',
                             content: `<p>jQuery es una biblioteca de JavaScript que <strong>simplifica</strong> la manipulación del DOM, el manejo de eventos, las animaciones y las solicitudes al servidor, con un código más corto y compatible entre navegadores.</p>
                             <p>Su lema: <em>"Write less, do more"</em>.</p>
-<pre><code>// JavaScript puro
+<pre class="code"><code>// JavaScript puro
 document.getElementById('titulo').style.color = 'red';
 
 // jQuery
@@ -1888,9 +1888,9 @@ $('#titulo').css('color', 'red');</code></pre>`,
                         },
                         {
                             title: 'Cómo incluir jQuery',
-                            content: `<pre><code>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+                            content: `<pre class="code"><code>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
 &lt;script src="js/main.js"&gt;&lt;/script&gt;</code></pre>
-<pre><code>// main.js: espera a que el DOM esté listo
+<pre class="code"><code>// main.js: espera a que el DOM esté listo
 $(function () {
     console.log('jQuery está listo');
 });</code></pre>
@@ -1902,13 +1902,13 @@ $(function () {
                         },
                         {
                             title: 'jQuery y Bootstrap juntos',
-                            content: `<p>El orden de carga de los scripts al final del <code>&lt;body&gt;</code> es importante:</p><pre><code>    &lt;!-- 1. jQuery --&gt;
+                            content: `<p>El orden de carga de los scripts al final del <code>&lt;body&gt;</code> es importante:</p><pre class="code"><code>    &lt;!-- 1. jQuery --&gt;
     &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
     &lt;!-- 2. Bootstrap --&gt;
     &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
     &lt;!-- 3. Su código --&gt;
     &lt;script src="js/main.js"&gt;&lt;/script&gt;
-&lt;/body&gt;</code></pre><pre><code>$(function () {
+&lt;/body&gt;</code></pre><pre class="code"><code>$(function () {
     // Mostrar una alerta de Bootstrap que se oculta sola
     $('#alerta').removeClass('d-none').hide().fadeIn(300);
     setTimeout(() =&gt; $('#alerta').fadeOut(300), 3000);
@@ -1937,7 +1937,7 @@ $(function () {
                         },
                         {
                             title: 'Filtros y recorrido del DOM',
-                            content: `<pre><code>$('tr:even')            // filas pares
+                            content: `<pre class="code"><code>$('tr:even')            // filas pares
 $('li:first')           // primer li
 $('input:checked')      // casillas marcadas
 
@@ -1949,12 +1949,12 @@ $('li').eq(2)           // el tercer li</code></pre>`,
                         },
                         {
                             title: 'Ejemplo: filtrar una lista en tiempo real',
-                            content: `<pre><code>&lt;input type="text" id="txtFiltro" class="form-control mb-3" placeholder="Buscar laboratorio..."&gt;
+                            content: `<pre class="code"><code>&lt;input type="text" id="txtFiltro" class="form-control mb-3" placeholder="Buscar laboratorio..."&gt;
 &lt;ul class="list-group" id="lstLabs"&gt;
     &lt;li class="list-group-item"&gt;Lab 3-12 Redes&lt;/li&gt;
     &lt;li class="list-group-item"&gt;Lab 3-14 Programación&lt;/li&gt;
     &lt;li class="list-group-item"&gt;Lab 2-05 Diseño&lt;/li&gt;
-&lt;/ul&gt;</code></pre><pre><code>$('#txtFiltro').on('input', function () {
+&lt;/ul&gt;</code></pre><pre class="code"><code>$('#txtFiltro').on('input', function () {
     const texto = $(this).val().toLowerCase();
 
     $('#lstLabs li').each(function () {
@@ -1972,7 +1972,7 @@ $('li').eq(2)           // el tercer li</code></pre>`,
                     steps: [
                         {
                             title: 'Leer y modificar contenido',
-                            content: `<pre><code>$('#titulo').text('Nuevo título');        // texto
+                            content: `<pre class="code"><code>$('#titulo').text('Nuevo título');        // texto
 $('#contenedor').html('&lt;b&gt;Hola&lt;/b&gt;');  // HTML
 const nombre = $('#txtNombre').val();      // valor de un input
 $('#txtNombre').val('');                   // limpiar input
@@ -1985,7 +1985,7 @@ $('.caja').addClass('activa').removeClass('oculta');</code></pre>`,
                         },
                         {
                             title: 'Agregar, eliminar y mostrar elementos',
-                            content: `<pre><code>$('#lista').append('&lt;li&gt;Al final&lt;/li&gt;');
+                            content: `<pre class="code"><code>$('#lista').append('&lt;li&gt;Al final&lt;/li&gt;');
 $('#lista').prepend('&lt;li&gt;Al inicio&lt;/li&gt;');
 $('.temporal').remove();
 $('#tabla tbody').empty();   // vacía el contenido
@@ -2001,7 +2001,7 @@ $('#panel').slideToggle();</code></pre>
                         },
                         {
                             title: 'Ejemplo: llenar una tabla',
-                            content: `<pre><code>const productos = [
+                            content: `<pre class="code"><code>const productos = [
     { nombre: 'Café', precio: 1500 },
     { nombre: 'Té',   precio: 1200 }
 ];
@@ -2018,7 +2018,7 @@ $.each(productos, function (i, p) {
                         },
                         {
                             title: 'Generar tarjetas dinámicamente',
-                            content: `<pre><code>const labs = [
+                            content: `<pre class="code"><code>const labs = [
     { nombre: 'Lab 3-12', capacidad: 30 },
     { nombre: 'Lab 3-14', capacidad: 25 }
 ];
@@ -2043,7 +2043,7 @@ labs.forEach(lab =&gt; {
                         },
                         {
                             title: 'Leer, llenar y limpiar formularios',
-                            content: `<pre><code>// Convertir el formulario en objeto
+                            content: `<pre class="code"><code>// Convertir el formulario en objeto
 function datosFormulario($form) {
     const datos = {};
     $.each($form.serializeArray(), (i, campo) =&gt; datos[campo.name] = campo.value);
@@ -2078,7 +2078,7 @@ $('#frmReserva .is-invalid').removeClass('is-invalid');</code></pre>`,
                     steps: [
                         {
                             title: 'Eventos con .on()',
-                            content: `<pre><code>$('#btnGuardar').on('click', function () {
+                            content: `<pre class="code"><code>$('#btnGuardar').on('click', function () {
     alert('Guardado');
 });
 
@@ -2097,14 +2097,14 @@ $('#frmRegistro').on('submit', function (e) {
                         {
                             title: 'Delegación de eventos',
                             content: `<p>Los elementos agregados dinámicamente (por ejemplo, filas nuevas de una tabla) no reciben eventos asignados antes. La solución es <strong>delegar</strong> el evento en un elemento padre que sí existe:</p>
-<pre><code>$('#tblProductos').on('click', '.btn-eliminar', function () {
+<pre class="code"><code>$('#tblProductos').on('click', '.btn-eliminar', function () {
     $(this).closest('tr').remove();
 });</code></pre>`,
                             nextButton: 'Siguiente: AJAX'
                         },
                         {
                             title: 'Solicitudes al servidor con jQuery (AJAX)',
-                            content: `<pre><code>$.ajax({
+                            content: `<pre class="code"><code>$.ajax({
     url: '/api/productos',
     method: 'GET',
     success: function (datos) {
@@ -2119,7 +2119,7 @@ $('#frmRegistro').on('submit', function (e) {
                         },
                         {
                             title: 'Validar un formulario con jQuery y Bootstrap',
-                            content: `<pre><code>$('#frmRegistro').on('submit', function (e) {
+                            content: `<pre class="code"><code>$('#frmRegistro').on('submit', function (e) {
     e.preventDefault();
     let valido = true;
 
@@ -2149,7 +2149,7 @@ $('#frmRegistro input').on('input', function () {
                         },
                         {
                             title: 'Modal de confirmación con jQuery',
-                            content: `<p>Se combina la delegación de eventos con el modal de Bootstrap del módulo 3:</p><pre><code>const modal = new bootstrap.Modal('#mdlConfirmar');
+                            content: `<p>Se combina la delegación de eventos con el modal de Bootstrap del módulo 3:</p><pre class="code"><code>const modal = new bootstrap.Modal('#mdlConfirmar');
 let idSeleccionado = null;
 
 // Botón "Eliminar" de cada fila (creada dinámicamente)
@@ -2169,7 +2169,7 @@ $('#btnEliminar').on('click', function () {
                         },
                         {
                             title: 'Enviar datos con $.ajax (POST)',
-                            content: `<pre><code>$('#frmReserva').on('submit', function (e) {
+                            content: `<pre class="code"><code>$('#frmReserva').on('submit', function (e) {
     e.preventDefault();
 
     $.ajax({
@@ -2225,7 +2225,7 @@ $('#btnEliminar').on('click', function () {
                         },
                         {
                             title: 'Estructura de carpetas',
-                            content: `<pre><code>proyecto/
+                            content: `<pre class="code"><code>proyecto/
 ├── public/              ← frontend
 │   ├── index.html
 │   ├── css/
@@ -2260,7 +2260,7 @@ $('#btnEliminar').on('click', function () {
                         },
                         {
                             title: 'Middleware en Express',
-                            content: `<p>Un <strong>middleware</strong> es una función que se ejecuta entre la solicitud y la respuesta. Recibe <code>req</code>, <code>res</code> y <code>next</code>:</p><pre><code>// Registrar cada solicitud en la consola
+                            content: `<p>Un <strong>middleware</strong> es una función que se ejecuta entre la solicitud y la respuesta. Recibe <code>req</code>, <code>res</code> y <code>next</code>:</p><pre class="code"><code>// Registrar cada solicitud en la consola
 app.use((req, res, next) =&gt; {
     console.log(new Date().toISOString(), req.method, req.url);
     next();                 // continúa al siguiente middleware o ruta
@@ -2285,13 +2285,13 @@ app.use((err, req, res, next) =&gt; {
                         },
                         {
                             title: 'Separar rutas y controladores',
-                            content: `<pre><code>proyecto/
+                            content: `<pre class="code"><code>proyecto/
 ├── controllers/
 │   └── reservas.controller.js   ← lógica
 ├── routes/
 │   └── reservas.routes.js       ← solo las URLs
 └── models/
-    └── reserva.js</code></pre><pre><code>// controllers/reservas.controller.js
+    └── reserva.js</code></pre><pre class="code"><code>// controllers/reservas.controller.js
 const Reserva = require('../models/reserva');
 
 exports.listar = async (req, res) =&gt; {
@@ -2302,7 +2302,7 @@ exports.listar = async (req, res) =&gt; {
 exports.crear = async (req, res) =&gt; {
     const reserva = await Reserva.create(req.body);
     res.status(201).json(reserva);
-};</code></pre><pre><code>// routes/reservas.routes.js
+};</code></pre><pre class="code"><code>// routes/reservas.routes.js
 const router = require('express').Router();
 const ctrl = require('../controllers/reservas.controller');
 
@@ -2320,7 +2320,7 @@ module.exports = router;</code></pre>`,
                     steps: [
                         {
                             title: 'Preparar el proyecto',
-                            content: `<pre><code>mkdir proyecto && cd proyecto
+                            content: `<pre class="code"><code>mkdir proyecto && cd proyecto
 npm init -y
 npm install express mongoose dotenv
 npm install --save-dev nodemon</code></pre>
@@ -2341,7 +2341,7 @@ npm install --save-dev nodemon</code></pre>
                                 <li>En <strong>Network Access</strong>, permitir la IP desde donde se conectará.</li>
                                 <li>En <strong>Connect → Drivers</strong>, copiar la cadena de conexión.</li>
                             </ol>
-<pre><code># .env
+<pre class="code"><code># .env
 MONGO_URI=mongodb+srv://usuario:clave@cluster0.xxxxx.mongodb.net/proyecto
 PORT=3000</code></pre>
                             <p>
@@ -2352,7 +2352,7 @@ PORT=3000</code></pre>
                         },
                         {
                             title: 'Servidor con Express y conexión a la BD',
-                            content: `<pre><code>// app.js
+                            content: `<pre class="code"><code>// app.js
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
@@ -2375,7 +2375,7 @@ mongoose.connect(process.env.MONGO_URI)
                         {
                             title: 'Del modelo de datos al esquema de Mongoose',
                             content: `<p>El modelado hecho en el módulo 2 se traduce en un <strong>esquema</strong>: define los campos, sus tipos y sus reglas de validación.</p>
-<pre><code>// models/usuario.js
+<pre class="code"><code>// models/usuario.js
 const mongoose = require('mongoose');
 
 const usuarioSchema = new mongoose.Schema({
@@ -2395,7 +2395,7 @@ module.exports = mongoose.model('Usuario', usuarioSchema);</code></pre>
                         },
                         {
                             title: 'Modelo con subdocumentos y referencias',
-                            content: `<p>Así se implementa en Mongoose el modelo de pedidos diseñado en el módulo 2: el cliente se <strong>referencia</strong> y el detalle se <strong>embebe</strong>.</p><pre><code>// models/pedido.js
+                            content: `<p>Así se implementa en Mongoose el modelo de pedidos diseñado en el módulo 2: el cliente se <strong>referencia</strong> y el detalle se <strong>embebe</strong>.</p><pre class="code"><code>// models/pedido.js
 const mongoose = require('mongoose');
 
 const detalleSchema = new mongoose.Schema({
@@ -2424,7 +2424,7 @@ module.exports = mongoose.model('Pedido', pedidoSchema);</code></pre>`,
                         },
                         {
                             title: 'Validaciones personalizadas en el esquema',
-                            content: `<pre><code>const usuarioSchema = new mongoose.Schema({
+                            content: `<pre class="code"><code>const usuarioSchema = new mongoose.Schema({
     nombre: {
         type: String,
         required: [true, 'El nombre es obligatorio'],
@@ -2457,7 +2457,7 @@ module.exports = mongoose.model('Pedido', pedidoSchema);</code></pre>`,
                         {
                             title: 'Control de versiones con Git',
                             content: `<p>Git registra la historia de cambios del proyecto y permite que varias personas trabajen en el mismo código.</p>
-<pre><code>git init                          # inicia el repositorio
+<pre class="code"><code>git init                          # inicia el repositorio
 git add .                         # prepara los cambios
 git commit -m "Crea modelo Usuario"
 git remote add origin https://github.com/usuario/proyecto.git
@@ -2468,7 +2468,7 @@ git pull                          # trae cambios del equipo</code></pre>`,
                         },
                         {
                             title: 'Ramas y trabajo en equipo',
-                            content: `<pre><code>git checkout -b feature/registro   # crea y cambia a una rama
+                            content: `<pre class="code"><code>git checkout -b feature/registro   # crea y cambia a una rama
 # ... trabajar y hacer commits ...
 git push origin feature/registro</code></pre>
                             <p>Luego se crea un <strong>Pull Request</strong> en GitHub para que el equipo revise el código antes de unirlo a <code>main</code>.</p>
@@ -2481,7 +2481,7 @@ git push origin feature/registro</code></pre>
                         },
                         {
                             title: 'Archivo .gitignore',
-                            content: `<pre><code># .gitignore
+                            content: `<pre class="code"><code># .gitignore
 node_modules/
 .env</code></pre>
                             <p>
@@ -2492,7 +2492,7 @@ node_modules/
                         },
                         {
                             title: 'Flujo de trabajo del equipo',
-                            content: `<pre><code># 1. Actualizar main
+                            content: `<pre class="code"><code># 1. Actualizar main
 git checkout main
 git pull
 
@@ -2512,11 +2512,11 @@ git push -u origin feature/RF-05-cancelar-reserva</code></pre>`,
                         },
                         {
                             title: 'Resolver un conflicto',
-                            content: `<p>Un conflicto ocurre cuando dos personas cambian las mismas líneas. Git marca el archivo así:</p><pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+                            content: `<p>Un conflicto ocurre cuando dos personas cambian las mismas líneas. Git marca el archivo así:</p><pre class="code"><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 const PUERTO = 3000;
 =======
 const PUERTO = process.env.PORT || 3000;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/despliegue</code></pre><ol><li>Decida qué versión conservar (o combine ambas).</li><li>Borre las marcas <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> y <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</li><li>Pruebe y haga <code>git add</code> + <code>git commit</code>.</li></ol><pre><code>git status          # muestra los archivos en conflicto
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/despliegue</code></pre><ol><li>Decida qué versión conservar (o combine ambas).</li><li>Borre las marcas <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code> y <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>.</li><li>Pruebe y haga <code>git add</code> + <code>git commit</code>.</li></ol><pre class="code"><code>git status          # muestra los archivos en conflicto
 git log --oneline   # historial resumido
 git diff            # cambios no guardados</code></pre>`,
                             nextButton: ' '
@@ -2529,7 +2529,7 @@ git diff            # cambios no guardados</code></pre>`,
                     steps: [
                         {
                             title: 'Rutas en Express (backend)',
-                            content: `<pre><code>// routes/usuarios.js
+                            content: `<pre class="code"><code>// routes/usuarios.js
 const express = require('express');
 const router = express.Router();
 const Usuario = require('../models/usuario');
@@ -2557,7 +2557,7 @@ module.exports = router;</code></pre>`,
                         },
                         {
                             title: 'Enviar datos desde el frontend con fetch',
-                            content: `<pre><code>// public/js/registro.js
+                            content: `<pre class="code"><code>// public/js/registro.js
 $('#frmRegistro').on('submit', async function (e) {
     e.preventDefault();
 
@@ -2584,7 +2584,7 @@ $('#frmRegistro').on('submit', async function (e) {
                         },
                         {
                             title: 'Operaciones básicas con Mongoose',
-                            content: `<pre><code>await Usuario.create({ nombre: 'Ana', correo: 'ana@mail.com', clave: '...' });
+                            content: `<pre class="code"><code>await Usuario.create({ nombre: 'Ana', correo: 'ana@mail.com', clave: '...' });
 await Usuario.find({ rol: 'admin' });
 await Usuario.findById(id);
 await Usuario.findByIdAndUpdate(id, { nombre: 'Ana M.' }, { new: true });
@@ -2600,7 +2600,7 @@ await Usuario.findById(id).populate('pedidos');</code></pre>
                         },
                         {
                             title: 'CRUD completo en Express',
-                            content: `<pre><code>// routes/laboratorios.js
+                            content: `<pre class="code"><code>// routes/laboratorios.js
 const router = require('express').Router();
 const Laboratorio = require('../models/laboratorio');
 
@@ -2641,10 +2641,10 @@ module.exports = router;</code></pre><p>
                         },
                         {
                             title: 'Listar en una tabla Bootstrap',
-                            content: `<pre><code>&lt;table class="table table-hover"&gt;
+                            content: `<pre class="code"><code>&lt;table class="table table-hover"&gt;
     &lt;thead&gt;&lt;tr&gt;&lt;th&gt;Nombre&lt;/th&gt;&lt;th&gt;Capacidad&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
     &lt;tbody id="tbodyLabs"&gt;&lt;/tbody&gt;
-&lt;/table&gt;</code></pre><pre><code>// public/js/laboratorios.js
+&lt;/table&gt;</code></pre><pre class="code"><code>// public/js/laboratorios.js
 async function cargarTabla() {
     const respuesta = await fetch('/api/laboratorios');
     const labs = await respuesta.json();
@@ -2675,7 +2675,7 @@ $(cargarTabla);</code></pre>`,
                         },
                         {
                             title: 'Editar un registro (PUT)',
-                            content: `<pre><code>let idEditando = null;
+                            content: `<pre class="code"><code>let idEditando = null;
 
 $('#tbodyLabs').on('click', '.btn-editar', async function () {
     idEditando = $(this).closest('tr').data('id');
@@ -2712,7 +2712,7 @@ $('#frmLab').on('submit', async function (e) {
                         },
                         {
                             title: 'Consultas con filtros, orden y paginación',
-                            content: `<pre><code>// GET /api/laboratorios?buscar=redes&amp;pagina=2&amp;limite=10
+                            content: `<pre class="code"><code>// GET /api/laboratorios?buscar=redes&amp;pagina=2&amp;limite=10
 router.get('/', async (req, res) =&gt; {
     const { buscar = '', pagina = 1, limite = 10 } = req.query;
 
@@ -2729,7 +2729,7 @@ router.get('/', async (req, res) =&gt; {
     ]);
 
     res.json({ datos, total, paginas: Math.ceil(total / limite) });
-});</code></pre><pre><code>// Otras consultas útiles
+});</code></pre><pre class="code"><code>// Otras consultas útiles
 await Reserva.find({ fecha: { $gte: inicio, $lte: fin } });     // rango de fechas
 await Reserva.find({ estado: { $in: ['pendiente', 'confirmada'] } });
 await Laboratorio.find({ capacidad: { $gt: 20 } }).select('nombre capacidad');
@@ -2756,8 +2756,8 @@ await Reserva.countDocuments({ laboratorio: idLab, estado: 'confirmada' });</cod
                         },
                         {
                             title: 'Sesiones con express-session y MongoDB',
-                            content: `<pre><code>npm install express-session connect-mongo</code></pre>
-<pre><code>// app.js
+                            content: `<pre class="code"><code>npm install express-session connect-mongo</code></pre>
+<pre class="code"><code>// app.js
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
@@ -2773,7 +2773,7 @@ app.use(session({
                         },
                         {
                             title: 'Inicio de sesión y rutas protegidas',
-                            content: `<pre><code>// Iniciar sesión
+                            content: `<pre class="code"><code>// Iniciar sesión
 router.post('/login', async (req, res) => {
     const usuario = await Usuario.findOne({ correo: req.body.correo });
     const valido = usuario && await bcrypt.compare(req.body.clave, usuario.clave);
@@ -2798,7 +2798,7 @@ router.post('/logout', (req, res) => {
                         },
                         {
                             title: 'Autorización por rol',
-                            content: `<pre><code>// middlewares/auth.js
+                            content: `<pre class="code"><code>// middlewares/auth.js
 function requiereLogin(req, res, next) {
     if (!req.session.usuarioId) {
         return res.status(401).json({ mensaje: 'Debe iniciar sesión' });
@@ -2815,7 +2815,7 @@ function requiereRol(...roles) {
     };
 }
 
-module.exports = { requiereLogin, requiereRol };</code></pre><pre><code>// routes/laboratorios.js
+module.exports = { requiereLogin, requiereRol };</code></pre><pre class="code"><code>// routes/laboratorios.js
 const { requiereLogin, requiereRol } = require('../middlewares/auth');
 
 router.get('/', requiereLogin, ctrl.listar);                          // cualquier usuario
@@ -2825,11 +2825,11 @@ router.delete('/:id', requiereLogin, requiereRol('admin'), ctrl.eliminar);</code
                         },
                         {
                             title: 'Usar la sesión desde el frontend',
-                            content: `<pre><code>// Servidor: ¿quién está conectado?
+                            content: `<pre class="code"><code>// Servidor: ¿quién está conectado?
 router.get('/me', requiereLogin, async (req, res) =&gt; {
     const usuario = await Usuario.findById(req.session.usuarioId).select('nombre rol');
     res.json(usuario);
-});</code></pre><pre><code>// public/js/sesion.js (se incluye en todas las páginas privadas)
+});</code></pre><pre class="code"><code>// public/js/sesion.js (se incluye en todas las páginas privadas)
 async function verificarSesion() {
     const respuesta = await fetch('/api/auth/me');
 
@@ -2863,8 +2863,8 @@ $(verificarSesion);</code></pre><p>
                         {
                             title: 'Contraseñas cifradas con bcrypt',
                             content: `<p>Las contraseñas <strong>nunca</strong> se guardan en texto plano. Se almacena un <em>hash</em> que no se puede revertir.</p>
-<pre><code>npm install bcrypt</code></pre>
-<pre><code>// models/usuario.js — antes de guardar
+<pre class="code"><code>npm install bcrypt</code></pre>
+<pre class="code"><code>// models/usuario.js — antes de guardar
 const bcrypt = require('bcrypt');
 
 usuarioSchema.pre('save', async function () {
@@ -2902,12 +2902,12 @@ usuarioSchema.pre('save', async function () {
                         },
                         {
                             title: 'Aceptar solo los campos permitidos',
-                            content: `<pre><code>// ❌ Peligroso: el cliente podría enviar { "rol": "admin" }
+                            content: `<pre class="code"><code>// ❌ Peligroso: el cliente podría enviar { "rol": "admin" }
 const usuario = await Usuario.create(req.body);
 
 // ✅ Seguro: se toman solo los campos esperados
 const { nombre, correo, clave } = req.body;
-const usuario = await Usuario.create({ nombre, correo, clave });</code></pre><pre><code>// Nunca devolver la contraseña
+const usuario = await Usuario.create({ nombre, correo, clave });</code></pre><pre class="code"><code>// Nunca devolver la contraseña
 usuarioSchema.set('toJSON', {
     transform: (doc, ret) =&gt; {
         delete ret.clave;
@@ -2918,7 +2918,7 @@ usuarioSchema.set('toJSON', {
                         },
                         {
                             title: 'Manejo seguro de errores e identificadores',
-                            content: `<pre><code>const mongoose = require('mongoose');
+                            content: `<pre class="code"><code>const mongoose = require('mongoose');
 
 // Evita que un id mal formado provoque un error 500
 function validarId(req, res, next) {
@@ -3101,14 +3101,14 @@ function manejarError(err, res) {
                         },
                         {
                             title: 'Pruebas unitarias con node:test',
-                            content: `<p>Node.js incluye un ejecutor de pruebas sin instalar nada adicional:</p><pre><code>// utils/calculos.js
+                            content: `<p>Node.js incluye un ejecutor de pruebas sin instalar nada adicional:</p><pre class="code"><code>// utils/calculos.js
 function calcularTotal(detalle) {
     if (!Array.isArray(detalle) || detalle.length === 0) {
         throw new Error('Detalle vacío');
     }
     return detalle.reduce((s, d) =&gt; s + d.cantidad * d.precio, 0);
 }
-module.exports = { calcularTotal };</code></pre><pre><code>// pruebas/calculos.test.js
+module.exports = { calcularTotal };</code></pre><pre class="code"><code>// pruebas/calculos.test.js
 const test = require('node:test');
 const assert = require('node:assert');
 const { calcularTotal } = require('../utils/calculos');
@@ -3123,12 +3123,12 @@ test('CP-10: calcula el total de un pedido', () =&gt; {
 
 test('CP-11: rechaza un pedido vacío', () =&gt; {
     assert.throws(() =&gt; calcularTotal([]), /Detalle vacío/);
-});</code></pre><pre><code>node --test      # ejecuta todos los archivos *.test.js</code></pre>`,
+});</code></pre><pre class="code"><code>node --test      # ejecuta todos los archivos *.test.js</code></pre>`,
                             nextButton: 'Siguiente: Probar la API'
                         },
                         {
                             title: 'Probar la API manualmente',
-                            content: `<p>Con Postman, Thunder Client (extensión de VS Code) o un archivo <code>.http</code> se verifican las rutas antes de conectar el frontend:</p><pre><code>### Crear laboratorio
+                            content: `<p>Con Postman, Thunder Client (extensión de VS Code) o un archivo <code>.http</code> se verifican las rutas antes de conectar el frontend:</p><pre class="code"><code>### Crear laboratorio
 POST http://localhost:3000/api/laboratorios
 Content-Type: application/json
 
@@ -3209,15 +3209,15 @@ GET http://localhost:3000/api/laboratorios?buscar=lab</code></pre><table class="
                         },
                         {
                             title: 'Configuración del proyecto',
-                            content: `<p>Archivos que ayudan a que todo el equipo trabaje igual:</p><pre><code># .env.example  (sí se sube; muestra qué variables se necesitan, sin valores reales)
+                            content: `<p>Archivos que ayudan a que todo el equipo trabaje igual:</p><pre class="code"><code># .env.example  (sí se sube; muestra qué variables se necesitan, sin valores reales)
 MONGO_URI=
 SESSION_SECRET=
-PORT=3000</code></pre><pre><code>// .vscode/settings.json
+PORT=3000</code></pre><pre class="code"><code>// .vscode/settings.json
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.eol": "\\n"
-}</code></pre><pre><code># README.md (mínimo)
+}</code></pre><pre class="code"><code># README.md (mínimo)
 ## Instalación
 1. git clone &lt;repositorio&gt;
 2. npm install
