@@ -28,7 +28,7 @@ const data = {
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 Un error en esta etapa se arrastra a todas las demás: corregir un requerimiento mal entendido en producción cuesta mucho más que hacerlo durante el análisis.
                             </p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m01_educcion.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m01_educcion.png',
                             nextButton: 'Siguiente: Interesados'
                         },
                         {
@@ -69,7 +69,7 @@ const data = {
                             title: 'Problema vs. solución',
                             content: `<p>El usuario suele llegar pidiendo una <strong>solución</strong> ("quiero una app"), pero el analista debe identificar el <strong>problema</strong> real que hay detrás ("los pedidos se pierden porque se anotan en papel").</p>
                             <p>Entender el problema permite proponer la solución adecuada, que no siempre es la que el usuario imaginó.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m01_necesidades.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m01_necesidades.png',
                             nextButton: 'Siguiente: Declaración del problema'
                         },
                         {
@@ -108,7 +108,7 @@ const data = {
                                 <li>RF-02: El sistema debe permitir al administrador registrar nuevos productos.</li>
                                 <li>RF-03: El sistema debe generar un reporte de ventas por rango de fechas.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m01_rf_rnf.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m01_rf_rnf.png',
                             nextButton: 'Siguiente: No funcionales'
                         },
                         {
@@ -173,7 +173,7 @@ const usuarioSchema = new mongoose.Schema({
                                 <li><strong>Relaciones:</strong> asociación, <em>include</em> (siempre se ejecuta) y <em>extend</em> (se ejecuta bajo condición).</li>
                             </ul>
                             <p>El diagrama de casos de uso (UML) da una vista general del alcance del sistema.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m01_casos_uso.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m01_casos_uso.png',
                             nextButton: 'Siguiente: Especificación'
                         },
                         {
@@ -243,7 +243,7 @@ const usuarioSchema = new mongoose.Schema({
                                 <li><strong>Validación:</strong> ¿estamos construyendo <em>el producto correcto</em>? Confirma con el cliente que los requerimientos reflejan sus necesidades reales.</li>
                                 <li><strong>Verificación:</strong> ¿estamos construyendo <em>el producto correctamente</em>? Revisa que los requerimientos estén bien escritos, sean consistentes y cumplan los estándares.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m01_validacion.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m01_validacion.png',
                             nextButton: 'Siguiente: Técnicas'
                         },
                         {
@@ -272,7 +272,7 @@ const usuarioSchema = new mongoose.Schema({
                                 <li><strong>Integridad:</strong> los datos no se modifican sin autorización.</li>
                                 <li><strong>Disponibilidad:</strong> el sistema y los datos están accesibles cuando se necesitan.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m01_seguridad.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m01_seguridad.png',
                             nextButton: 'Siguiente: Ejemplos'
                         },
                         {
@@ -335,7 +335,7 @@ app.use(session({
                                 <li>Quién aprueba los cambios y cómo se solicitan.</li>
                                 <li>Qué herramienta se usa para documentarlos (hoja de cálculo, Jira, Azure DevOps, Trello).</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m02_gestion_req.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m02_gestion_req.png',
                             nextButton: 'Siguiente: Estados'
                         },
                         {
@@ -365,7 +365,7 @@ app.use(session({
                                 <li><strong>Could have:</strong> deseable si hay tiempo.</li>
                                 <li><strong>Won't have (this time):</strong> queda fuera de esta versión.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m02_trazabilidad.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m02_trazabilidad.png',
                             nextButton: 'Siguiente: Trazabilidad'
                         },
                         {
@@ -423,7 +423,7 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                                 <li><strong>Consistente y completo</strong> en el conjunto.</li>
                                 <li><strong>Trazable</strong> hacia su origen y hacia su implementación.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m02_calidad_req.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m02_calidad_req.png',
                             nextButton: 'Siguiente: Errores comunes'
                         },
                         {
@@ -452,7 +452,7 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                                 <li>¿Qué información se crea, consulta o modifica?</li>
                                 <li>¿Qué reglas de negocio se deben respetar?</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m02_bpmn.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m02_bpmn.png',
                             nextButton: 'Siguiente: Herramientas'
                         },
                         {
@@ -495,7 +495,7 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                                 <li><strong>Diagrama de clases (modelo de dominio):</strong> las entidades, sus atributos y relaciones.</li>
                                 <li><strong>Diagrama de estados:</strong> los estados por los que pasa un objeto (pedido: creado, pagado, enviado, entregado).</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m02_modelado_datos.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m02_modelado_datos.png',
                             nextButton: 'Siguiente: Historias de usuario'
                         },
                         {
@@ -599,7 +599,7 @@ reservaSchema.index({ laboratorio: 1, fecha: 1, bloque: 1 }, { unique: true });<
                             content: `<p>Es la descripción de los requerimientos mediante una notación con <strong>sintaxis y semántica precisas</strong> (basada en matemáticas o lógica), lo que elimina la ambigüedad del lenguaje natural.</p>
                             <p>Se usa principalmente en sistemas críticos: aviación, medicina, banca, transporte.</p>
                             <p>Ejemplos de notaciones: <strong>Z</strong>, <strong>VDM</strong>, <strong>B</strong> y <strong>OCL</strong> (Object Constraint Language, complemento de UML).</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m02_formal.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m02_formal.png',
                             nextButton: 'Siguiente: Ejemplo'
                         },
                         {
@@ -667,7 +667,7 @@ const cuentaSchema = new mongoose.Schema({
                                 <li><strong>Funcionalidades:</strong> registro, búsqueda, carrito, reportes.</li>
                                 <li><strong>Restricciones:</strong> navegadores soportados, tiempo de carga, accesibilidad.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m03_req_sitio.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m03_req_sitio.png',
                             nextButton: 'Siguiente: RNF de un sitio'
                         },
                         {
@@ -699,7 +699,7 @@ const cuentaSchema = new mongoose.Schema({
 │   └── Registro
 └── Contacto</code></pre>
                             <p>Cada página del mapa debería corresponder a uno o más casos de uso.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m03_mapa_sitio.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m03_mapa_sitio.png',
                             nextButton: 'Siguiente: Estructura de archivos'
                         },
                         {
@@ -780,7 +780,7 @@ const cuentaSchema = new mongoose.Schema({
     &lt;script src="js/main.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m03_html.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m03_html.png',
                             nextButton: 'Siguiente: Etiquetas básicas'
                         },
                         {
@@ -860,7 +860,7 @@ h1 {
 .destacado { background-color: #f2f2f2; }   /* clase */
 #menu      { display: flex; }               /* id    */</code></pre>
                             <p>"Cascada" significa que, cuando varias reglas aplican al mismo elemento, gana la más específica o la última declarada.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m03_css.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m03_css.png',
                             nextButton: 'Siguiente: Modelo de caja'
                         },
                         {
@@ -976,7 +976,7 @@ h1 {
 
 &lt;!-- Antes de &lt;/body&gt;: JavaScript de Bootstrap (menús, modales) --&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m03_bootstrap.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m03_bootstrap.png',
                             nextButton: 'Siguiente: Rejilla'
                         },
                         {
@@ -1113,7 +1113,7 @@ h1 {
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 Cada <code>&lt;input&gt;</code> debe tener su <code>&lt;label&gt;</code> asociado (atributo <code>for</code> = <code>id</code>) por accesibilidad.
                             </p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m03_formularios.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m03_formularios.png',
                             nextButton: 'Siguiente: Tipos de campos'
                         },
                         {
@@ -1196,7 +1196,7 @@ formulario.addEventListener('submit', (e) =&gt; {
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 La validación en el cliente mejora la experiencia, pero <strong>no reemplaza</strong> la validación en el servidor: cualquier persona puede saltarse el JavaScript del navegador.
                             </p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m03_validaciones.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m03_validaciones.png',
                             nextButton: 'Siguiente: Validación HTML5'
                         },
                         {
@@ -1304,7 +1304,7 @@ document.getElementById('frmReserva').addEventListener('submit', (e) =&gt; {
                                 <li>Es de tipado dinámico: el tipo de una variable se define por su valor.</li>
                                 <li>Es orientado a eventos: reacciona a clics, envíos de formularios, teclas, etc.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m04_javascript.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_javascript.png',
                             nextButton: 'Siguiente: Cómo incluirlo'
                         },
                         {
@@ -1377,7 +1377,7 @@ const tarjeta = \`
                                 <tr><td>array</td><td><code>[1, 2, 3]</code></td></tr>
                             </table>
                             <p>Se puede conocer el tipo con <code>typeof</code>: <code>typeof 25</code> devuelve <code>'number'</code>.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m04_tipos_datos.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_tipos_datos.png',
                             nextButton: 'Siguiente: Operadores'
                         },
                         {
@@ -1464,7 +1464,7 @@ switch (dia) {
 
 // Operador ternario
 const estado = nota >= 70 ? 'Aprobado' : 'Reprobado';</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m04_control.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_control.png',
                             nextButton: 'Siguiente: Ciclos'
                         },
                         {
@@ -1541,7 +1541,7 @@ const aplicarIVA = (monto) => monto * 1.13;
 
 console.log(aplicarIVA(calcularTotal(1000, 3))); // 3390</code></pre>
                             <p>Las funciones permiten reutilizar código y dividir un problema en partes pequeñas.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m04_funciones_arreglos.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_funciones_arreglos.png',
                             nextButton: 'Siguiente: Arreglos'
                         },
                         {
@@ -1672,7 +1672,7 @@ titulo.classList.add('activo');
 const item = document.createElement('li');
 item.textContent = 'Nuevo elemento';
 document.querySelector('#lista').appendChild(item);</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m04_dom.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_dom.png',
                             nextButton: 'Siguiente: Eventos'
                         },
                         {
@@ -1771,7 +1771,7 @@ console.log('Hola desde Node.js');</code></pre>
 <pre><code>// En la terminal
 node -v          # verifica la versión instalada
 node hola.js     # ejecuta el archivo</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m04_nodejs.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_nodejs.png',
                             nextButton: 'Siguiente: npm'
                         },
                         {
@@ -1883,7 +1883,7 @@ document.getElementById('titulo').style.color = 'red';
 
 // jQuery
 $('#titulo').css('color', 'red');</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m05_jquery.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_jquery.png',
                             nextButton: 'Siguiente: Cómo incluirla'
                         },
                         {
@@ -1932,7 +1932,7 @@ $(function () {
                                 <tr><td><code>$('ul li')</code></td><td>Los li dentro de un ul</td></tr>
                                 <tr><td><code>$('input[type="email"]')</code></td><td>Por atributo</td></tr>
                             </table>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m05_selectores.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_selectores.png',
                             nextButton: 'Siguiente: Filtros y recorrido'
                         },
                         {
@@ -1980,7 +1980,7 @@ $('#txtNombre').val('');                   // limpiar input
 $('img').attr('alt', 'Descripción');       // atributos
 $('.caja').css('background', '#eee');      // estilos
 $('.caja').addClass('activa').removeClass('oculta');</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m05_manipulacion.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_manipulacion.png',
                             nextButton: 'Siguiente: Agregar y eliminar'
                         },
                         {
@@ -2091,7 +2091,7 @@ $('#frmRegistro').on('submit', function (e) {
     // validar y enviar datos
 });</code></pre>
                             <p><code>$(this)</code> hace referencia al elemento que disparó el evento.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m05_eventos.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_eventos.png',
                             nextButton: 'Siguiente: Delegación'
                         },
                         {
@@ -2220,7 +2220,7 @@ $('#btnEliminar').on('click', function () {
                                 <li><strong>Base de datos:</strong> MongoDB Atlas (en la nube), accedida mediante Mongoose.</li>
                             </ul>
                             <p><strong>Navegador ⇄ (HTTP / JSON) ⇄ Express ⇄ (Mongoose) ⇄ MongoDB Atlas</strong></p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m06_arquitectura.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m06_arquitectura.png',
                             nextButton: 'Siguiente: Estructura de carpetas'
                         },
                         {
@@ -2330,7 +2330,7 @@ npm install --save-dev nodemon</code></pre>
                                 <li><strong>dotenv:</strong> lee variables del archivo <code>.env</code>.</li>
                                 <li><strong>nodemon:</strong> reinicia el servidor al guardar cambios.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m06_stack.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m06_stack.png',
                             nextButton: 'Siguiente: MongoDB Atlas'
                         },
                         {
@@ -2463,7 +2463,7 @@ git commit -m "Crea modelo Usuario"
 git remote add origin https://github.com/usuario/proyecto.git
 git push -u origin main           # sube a GitHub
 git pull                          # trae cambios del equipo</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m06_git.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m06_git.png',
                             nextButton: 'Siguiente: Ramas'
                         },
                         {
@@ -2552,7 +2552,7 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m06_crud.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m06_crud.png',
                             nextButton: 'Siguiente: Enviar desde el frontend'
                         },
                         {
@@ -2751,7 +2751,7 @@ await Reserva.countDocuments({ laboratorio: idLab, estado: 'confirmada' });</cod
                                 <li>El navegador guarda una cookie con el id de sesión.</li>
                                 <li>En cada solicitud, el servidor lee la cookie y sabe quién es el usuario.</li>
                             </ol>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m06_sesiones.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m06_sesiones.png',
                             nextButton: 'Siguiente: express-session'
                         },
                         {
@@ -2871,7 +2871,7 @@ usuarioSchema.pre('save', async function () {
     if (!this.isModified('clave')) return;
     this.clave = await bcrypt.hash(this.clave, 10);
 });</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m06_seguridad.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m06_seguridad.png',
                             nextButton: 'Siguiente: Validar en el servidor'
                         },
                         {
@@ -2971,7 +2971,7 @@ function manejarError(err, res) {
                                 <li>Contratos con alcance, tiempo y costo fijos.</li>
                                 <li>Control mediante entregables formales al cerrar cada fase.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m07_cascada.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m07_cascada.png',
                             nextButton: 'Siguiente: Modelos'
                         },
                         {
@@ -3004,7 +3004,7 @@ function manejarError(err, res) {
                                 <li><strong>Respuesta ante el cambio</strong> sobre seguir un plan.</li>
                             </ul>
                             <p>No elimina lo de la derecha; da más valor a lo de la izquierda.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m07_scrum.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m07_scrum.png',
                             nextButton: 'Siguiente: Scrum'
                         },
                         {
@@ -3044,7 +3044,7 @@ function manejarError(err, res) {
                                 <li><strong>Descomposición funcional:</strong> dividir un proceso grande en subprocesos más simples.</li>
                             </ul>
                             <p>Ejemplos: Análisis Estructurado de Yourdon/DeMarco, SSADM, Métrica.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m07_dfd_er.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m07_dfd_er.png',
                             nextButton: 'Siguiente: Orientadas a datos'
                         },
                         {
@@ -3086,7 +3086,7 @@ function manejarError(err, res) {
                                 <li>Usabilidad · Fiabilidad · Seguridad</li>
                                 <li>Mantenibilidad · Portabilidad</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m07_calidad.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m07_calidad.png',
                             nextButton: 'Siguiente: Aseguramiento y control'
                         },
                         {
@@ -3160,7 +3160,7 @@ GET http://localhost:3000/api/laboratorios?buscar=lab</code></pre><table class="
                                 <li>Riesgos: qué puede salir mal y cómo responder.</li>
                                 <li>Comunicación: cómo y cuándo se informa el avance.</li>
                             </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m07_triple_restriccion.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m07_triple_restriccion.png',
                             nextButton: 'Siguiente: Herramientas de planificación'
                         },
                         {
@@ -3190,7 +3190,7 @@ GET http://localhost:3000/api/laboratorios?buscar=lab</code></pre><table class="
                                 <li><strong>Navegador:</strong> herramientas de desarrollo (F12): consola, red, inspector.</li>
                             </ul>
                             <p>Se suelen distinguir ambientes de <strong>desarrollo</strong>, <strong>pruebas</strong> y <strong>producción</strong>.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/m07_herramientas.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m07_herramientas.png',
                             nextButton: 'Siguiente: Gestión de proyectos'
                         },
                         {

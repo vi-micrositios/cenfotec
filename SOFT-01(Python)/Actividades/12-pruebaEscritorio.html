@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Prueba de escritorio</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section
+  style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #712c86; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+  aria-labelledby="ejercicio-prueba-escritorio"><!-- ENCABEZADO -->
+  <div
+    style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+    <span
+      style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #712c86, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+      aria-hidden="true"> <i class="fa-solid fa-table-list"
+        aria-hidden="true"></i> </span>
+    <h3 id="ejercicio-prueba-escritorio"
+      style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+      Ejercicio: Prueba de escritorio (traza)</h3>
+  </div>
+  <!-- INSTRUCCIONES GENERALES -->
+  <div
+    style="background: #eef5ff; border-left: 5px solid #712c86; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+    <strong>Instrucciones:</strong> Seleccione al menos uno de los programas
+    propuestos y realice su <strong>prueba de escritorio</strong>: simule a mano
+    la ejecución, línea por línea, registrando en una tabla el valor de las
+    variables, el resultado de las condiciones y la salida en pantalla. Luego
+    compruebe su traza ejecutando el programa.</div>
+  <!-- ¿CÓMO SE HACE UNA PRUEBA DE ESCRITORIO? -->
+  <div
+    style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+    <h4
+      style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+      <i class="fa-solid fa-chalkboard-user"
+        style="color: #006aea; font-size: 22px;" aria-hidden="true"></i> ¿Cómo
+      se hace una prueba de escritorio?</h4>
+    <p
+      style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+      Una prueba de escritorio (o traza) consiste en ejecutar el programa
+      <strong>a mano</strong>, línea por línea, anotando en una tabla cómo
+      cambian las variables. Ejemplo:</p>
+    <pre
+      style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code><span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">1</span>precio = 5000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">2</span>cantidad = 3
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">3</span>total = precio * cantidad
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">4</span>if total &gt; 10000:
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">5</span>    total = total - 1000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">6</span>print("Total:", total)</code></pre>
+    <p
+      style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 16px 0 0 0;">
+      <strong>Traza:</strong></p>
+    <div style="overflow-x: auto; margin-top: 10px;">
+      <table
+        style="width: 100%; border-collapse: collapse; font-size: 13px; color: #1c3b64;">
+        <thead>
+          <tr style="background: #164a98; color: #ffffff;">
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              Paso</th>
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              Línea</th>
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              Instrucción</th>
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              <code style="color: #ffffff;">precio</code></th>
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              <code style="color: #ffffff;">cantidad</code></th>
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              <code style="color: #ffffff;">total</code></th>
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              Condición</th>
+            <th
+              style="padding: 10px; border: 1px solid #c8d1df; white-space: nowrap;">
+              Salida</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #ffffff;">
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">1</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">1</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"><code
+                style="white-space: nowrap;">precio = 5000</code></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">
+              <strong>5000</strong></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">2</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">2</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"><code
+                style="white-space: nowrap;">cantidad = 3</code></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">
+              <strong>3</strong></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #ffffff;">
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">3</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">3</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"><code
+                style="white-space: nowrap;">total = precio * cantidad</code>
+            </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">
+              <strong>15000</strong></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">4</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">4</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"><code
+                style="white-space: nowrap;">if total &gt; 10000:</code></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"><strong
+                style="color: #00734a;">Verdadero</strong></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #ffffff;">
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">5</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">5</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"><code
+                style="white-space: nowrap;">total = total - 1000</code></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">
+              <strong>14000</strong></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">6</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">6</td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"><code
+                style="white-space: nowrap;">print("Total:", total)</code></td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 9px 10px; border: 1px solid #c8d1df;">
+              <code>Total: 14000</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <ul
+      style="margin: 14px 0 0 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+      <li>Cada fila es una línea que <strong>se ejecuta</strong>. Las líneas que
+        se saltan no aparecen.</li>
+      <li>En las columnas de variables se anota el valor solo cuando la variable
+        cambia.</li>
+      <li>En la columna <strong>Condición</strong> se anota si la condición del
+        <code>if</code> es verdadera o falsa.</li>
+      <li>En la columna <strong>Salida</strong> se anota lo que muestra
+        <code>print()</code>.</li>
+    </ul>
+  </div>
+  <!-- PARTE 1: SELECCIONE UN PROGRAMA -->
+  <div
+    style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+    <h4
+      style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+      <i class="fa-solid fa-list-check" style="color: #c81f66; font-size: 22px;"
+        aria-hidden="true"></i> Parte 1: Seleccione un programa</h4>
+    <p
+      style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+      Seleccione <strong>al menos uno</strong> de los siguientes programas. Debe
+      hacer la prueba de escritorio con <strong>todos</strong> sus conjuntos de
+      datos y responder sus preguntas.</p>
+    <div
+      style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+      <h5
+        style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+        <strong style="color: #164a98; font-size: 19px;"> <i
+            class="fa-solid fa-file-code" aria-hidden="true"
+            style="color: #006aea;"></i> Programa 1: Costo de un envío <span
+            style="display: inline-block; background: #2b93d1; color: #ffffff; font-size: 12px; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-left: 6px;">Condicionales</span>
+        </strong></h5>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+        Una empresa de mensajería cobra ₡2 500 por paquete. Si el paquete pesa
+        más de 5 kg, se cobran ₡800 por cada kilogramo adicional. Los envíos
+        internacionales cuestan el triple.</p>
+      <pre
+        style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code><span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">1</span>peso = float(input("Peso del paquete (kg): "))
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">2</span>destino = input("Destino (N = nacional, I = internacional): ")
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">3</span>costo = 2500
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">4</span>if peso &gt; 5:
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">5</span>    costo = costo + (peso - 5) * 800
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">6</span>if destino == "I":
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">7</span>    costo = costo * 3
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">8</span>elif destino != "N":
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">9</span>    costo = 0
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">10</span>    print("Destino no válido")
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">11</span>print("Costo del envío:", costo)</code></pre>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 6px 0;">
+        <strong>Datos de prueba:</strong></p>
+      <ul
+        style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li>Conjunto A: <code>peso</code> = <strong>3</strong>,
+          <code>destino</code> = <strong>N</strong></li>
+        <li>Conjunto B: <code>peso</code> = <strong>8</strong>,
+          <code>destino</code> = <strong>I</strong></li>
+        <li>Conjunto C: <code>peso</code> = <strong>2</strong>,
+          <code>destino</code> = <strong>X</strong></li>
+      </ul>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 6px 0;">
+        <strong>Preguntas:</strong></p>
+      <ol
+        style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+        <li>Con el conjunto A, ¿qué líneas del programa no se ejecutan?</li>
+        <li>Con el conjunto C, ¿por qué el programa muestra "Costo del envío: 0"
+          después del mensaje de error? ¿Es correcto?</li>
+        <li>¿Por qué la condición de la línea 8 no se evalúa con el conjunto B?
+        </li>
+      </ol>
+    </div>
+    <div
+      style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+      <h5
+        style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+        <strong style="color: #164a98; font-size: 19px;"> <i
+            class="fa-solid fa-file-code" aria-hidden="true"
+            style="color: #712c86;"></i> Programa 2: Año bisiesto <span
+            style="display: inline-block; background: #712c86; color: #ffffff; font-size: 12px; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-left: 6px;">Operadores
+            lógicos</span> </strong></h5>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+        Un año es bisiesto si es divisible entre 4 y no entre 100, o si es
+        divisible entre 400.</p>
+      <pre
+        style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code><span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">1</span>anio = int(input("Año: "))
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">2</span>divisible_4 = anio % 4 == 0
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">3</span>divisible_100 = anio % 100 == 0
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">4</span>divisible_400 = anio % 400 == 0
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">5</span>if (divisible_4 and not divisible_100) or divisible_400:
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">6</span>    print(anio, "es bisiesto")
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">7</span>else:
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">8</span>    print(anio, "no es bisiesto")</code></pre>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 6px 0;">
+        <strong>Datos de prueba:</strong></p>
+      <ul
+        style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li>Conjunto A: <code>anio</code> = <strong>2024</strong></li>
+        <li>Conjunto B: <code>anio</code> = <strong>1900</strong></li>
+        <li>Conjunto C: <code>anio</code> = <strong>2000</strong></li>
+      </ul>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 6px 0;">
+        <strong>Preguntas:</strong></p>
+      <ol
+        style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+        <li>¿Qué valor (True o False) tiene cada variable booleana en cada
+          conjunto?</li>
+        <li>Evalúe la condición de la línea 5 por partes: primero el paréntesis
+          y luego el <code>or</code>.</li>
+        <li>¿Por qué 1900 no es bisiesto si es divisible entre 4?</li>
+      </ol>
+    </div>
+    <div
+      style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+      <h5
+        style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+        <strong style="color: #164a98; font-size: 19px;"> <i
+            class="fa-solid fa-file-code" aria-hidden="true"
+            style="color: #00928d;"></i> Programa 3: El mayor de tres números
+          <span
+            style="display: inline-block; background: #2b93d1; color: #ffffff; font-size: 12px; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-left: 6px;">Condicionales</span>
+        </strong></h5>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+        El programa determina cuál es el mayor de tres números enteros.</p>
+      <pre
+        style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code><span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">1</span>a = int(input("Primer número: "))
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">2</span>b = int(input("Segundo número: "))
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">3</span>c = int(input("Tercer número: "))
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">4</span>mayor = a
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">5</span>if b &gt; mayor:
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">6</span>    mayor = b
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">7</span>if c &gt; mayor:
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">8</span>    mayor = c
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">9</span>print("El mayor es:", mayor)</code></pre>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 6px 0;">
+        <strong>Datos de prueba:</strong></p>
+      <ul
+        style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li>Conjunto A: <code>a</code> = <strong>4</strong>, <code>b</code> =
+          <strong>9</strong>, <code>c</code> = <strong>2</strong></li>
+        <li>Conjunto B: <code>a</code> = <strong>7</strong>, <code>b</code> =
+          <strong>7</strong>, <code>c</code> = <strong>3</strong></li>
+        <li>Conjunto C: <code>a</code> = <strong>-1</strong>, <code>b</code> =
+          <strong>-5</strong>, <code>c</code> = <strong>-3</strong></li>
+      </ul>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 6px 0;">
+        <strong>Preguntas:</strong></p>
+      <ol
+        style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+        <li>¿Cuántas veces cambia el valor de <code>mayor</code> en cada
+          conjunto?</li>
+        <li>Con el conjunto B, ¿se ejecuta la línea 6? ¿Por qué?</li>
+        <li>Si en la línea 4 se escribiera <code>mayor = 0</code>, ¿qué
+          mostraría el programa con el conjunto C?</li>
+      </ol>
+    </div>
+    <div
+      style="background: #e8f5e9; border: 2px solid #9bd1cc; border-radius: 12px; padding: 20px; margin-bottom: 18px;">
+      <h5
+        style="display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; flex-wrap: wrap;">
+        <strong style="color: #164a98; font-size: 19px;"> <i
+            class="fa-solid fa-file-code" aria-hidden="true"
+            style="color: #00734a;"></i> Programa 4: Cajero automático <span
+            style="display: inline-block; background: #4aa147; color: #ffffff; font-size: 12px; font-weight: bold; padding: 3px 10px; border-radius: 20px; margin-left: 6px;">Secuencial</span>
+        </strong></h5>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+        Un cajero entrega el monto solicitado usando la menor cantidad de
+        billetes de ₡10 000, ₡5 000 y ₡1 000.</p>
+      <pre
+        style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code><span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">1</span>monto = int(input("Monto a retirar: "))
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">2</span>billetes_10000 = monto // 10000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">3</span>resto = monto % 10000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">4</span>billetes_5000 = resto // 5000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">5</span>resto = resto % 5000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">6</span>billetes_1000 = resto // 1000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">7</span>resto = resto % 1000
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">8</span>print("Billetes de 10 000:", billetes_10000)
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">9</span>print("Billetes de 5 000:", billetes_5000)
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">10</span>print("Billetes de 1 000:", billetes_1000)
+<span style="display: inline-block; width: 2.2em; color: #7c7b75; user-select: none;">11</span>print("Monto no entregado:", resto)</code></pre>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 6px 0;">
+        <strong>Datos de prueba:</strong></p>
+      <ul
+        style="margin: 0 0 12px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+        <li>Conjunto A: <code>monto</code> = <strong>37000</strong></li>
+        <li>Conjunto B: <code>monto</code> = <strong>12500</strong></li>
+        <li>Conjunto C: <code>monto</code> = <strong>4300</strong></li>
+      </ul>
+      <p
+        style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 6px 0;">
+        <strong>Preguntas:</strong></p>
+      <ol
+        style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+        <li>¿Qué representa la variable <code>resto</code> en cada momento? ¿Por
+          qué cambia de valor tres veces?</li>
+        <li>¿Qué diferencia hay entre los operadores <code>//</code> y
+          <code>%</code>?</li>
+        <li>¿Qué monto produce la mayor cantidad de billetes de ₡1 000 posible?
+          Compruébelo con la traza.</li>
+      </ol>
+    </div>
+  </div>
+  <!-- PARTE 2: CONSTRUIR LA TABLA DE TRAZA -->
+  <div
+    style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+    <h4
+      style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+      <i class="fa-solid fa-table" style="color: #006aea; font-size: 22px;"
+        aria-hidden="true"></i> Parte 2: Construir la tabla de traza</h4>
+    <p
+      style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
+      Para cada conjunto de datos, construya una tabla como la siguiente.
+      Agregue una columna por cada variable del programa.</p>
+    <div style="overflow-x: auto; margin-top: 12px;">
+      <table
+        style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+        <thead>
+          <tr style="background: #164a98; color: #ffffff;">
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Paso</th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Línea</th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Variable 1
+            </th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Variable 2
+            </th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Variable 3
+            </th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Condición</th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #ffffff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #ffffff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">4</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #ffffff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">6</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #ffffff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">7</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">8</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+      <strong>Importante:</strong> No ejecute el programa en la computadora
+      durante esta parte. El objetivo es predecir su comportamiento leyendo el
+      código.</div>
+  </div>
+  <!-- PARTE 3: COMPROBAR LA TRAZA -->
+  <div
+    style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+    <h4
+      style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+      <i class="fa-solid fa-laptop-code"
+        style="color: #00928d; font-size: 22px;" aria-hidden="true"></i> Parte
+      3: Comprobar la traza</h4>
+    <ol
+      style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+      <li>Ejecute el programa en Python con los mismos datos de entrada.</li>
+      <li>Compare la salida del programa con la salida de su traza.</li>
+      <li>Si no coinciden, encuentre el paso de la traza donde se equivocó y
+        explique el error.</li>
+    </ol>
+    <div style="overflow-x: auto; margin-top: 12px;">
+      <table
+        style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+        <thead>
+          <tr style="background: #164a98; color: #ffffff;">
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Conjunto</th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida según
+              la traza</th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida del
+              programa</th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">¿Coinciden?
+            </th>
+            <th style="padding: 12px; border: 1px solid #c8d1df;">Observaciones
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background: #ffffff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">A</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #f8fbff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">B</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+          <tr style="background: #ffffff;">
+            <td style="padding: 12px; border: 1px solid #c8d1df;">C</td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+            <td style="padding: 12px; border: 1px solid #c8d1df;"> </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- PARTE 4: REFLEXIÓN -->
+  <div
+    style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+    <h4
+      style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+      <i class="fa-solid fa-comments" style="color: #c7ac19; font-size: 22px;"
+        aria-hidden="true"></i> Parte 4: Reflexión</h4>
+    <ol
+      style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+      <li>¿Qué ventaja tiene hacer la traza antes de ejecutar el programa?</li>
+      <li>¿Qué conjunto de datos fue más útil para entender el programa? ¿Por
+        qué?</li>
+    </ol>
+  </div>
+  <!-- CIERRE -->
+  <div
+    style="display: flex; align-items: flex-start; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+    <i class="fa-solid fa-circle-check" aria-hidden="true"
+      style="font-size: 20px; margin-top: 2px;"></i> <strong>Recuerde:</strong>
+    una traza bien hecha permite encontrar errores de lógica que Python no
+    detecta, porque el programa se ejecuta sin fallar pero produce un resultado
+    incorrecto.</div>
+</section>
+
+</body>
+
+</html>
