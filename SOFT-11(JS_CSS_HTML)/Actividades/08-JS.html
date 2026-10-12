@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: sintaxis de JavaScript en contextos reales (sin soluciones)</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #c81f66; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="titulo-ejercicio">
+
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #c81f66, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);" aria-hidden="true">
+                <i class="fa-brands fa-js"></i></span>
+            <h3 id="titulo-ejercicio" style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Ejercicio: Aplicar la sintaxis de JavaScript</h3>
+        </div>
+        <div style="background: #eef5ff; border-left: 5px solid #c81f66; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo</strong>: Aplicar la sintaxis de JavaScript (<strong>condicionales</strong>, <strong>switch</strong>,
+            <strong>ciclos</strong>, <strong>funciones</strong>, <strong>cadenas</strong>, <strong>arreglos</strong>, <strong>objetos</strong>
+            y los operadores <strong>ternario</strong>, <strong>??</strong> y <strong>?.</strong>) para resolver problemas cotidianos.
+        </div>
+
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-list-ol" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i> Instrucciones</h4>
+            
+            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Lea el repaso y el ejemplo resuelto disponible en Git (<a href="https://github.com/ismora/C3-2026-SOFT-11/tree/js">C3-2026-SOFT-11</a>).</li>
+                <li>Escoja <strong>al menos un</strong> contexto de la lista.</li>
+                <li>Cree un archivo, copie los <strong>datos de partida</strong> y escriba su solución debajo.</li>
+                <li>Ejecute el archivo en la consola del navegador (F12).</li>
+                <li>Compare su resultado con la <strong>salida esperada</strong>. Puede presentar los datos con otro formato, pero los valores deben coincidir.</li>
+                <li>Agregue comentarios que expliquen la lógica: por qué eligió ese condicional, ese ciclo o ese método.</li>
+            </ol>
+        </div>
+
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-shapes" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i> Contextos para resolver (escoja al menos uno)</h4>
+            
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">Cada uno indica los temas que practica; varios incluyen datos incompletos o casos límite a propósito.</p>
+            
+            <article aria-labelledby="ej-1-titulo" style="border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-square-parking"></i></span>
+                    <h5 id="ej-1-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 1. Parqueo del campus</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">if / else</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Ternario</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">??</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Math</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">La universidad quiere automatizar el cobro del parqueo. La caseta registra la placa, el tipo de vehículo y las horas que estuvo dentro. Algunos visitantes entran sin que se registre la placa.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 1" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const vehiculo = { placa: &quot;BCD-123&quot;, horas: 3.5, tipo: &quot;moto&quot;, esEstudiante: true };
+const visitante = { placa: null, horas: 0.5, tipo: &quot;carro&quot; };
+const funcionario = { placa: &quot;ABC-777&quot;, horas: 2, tipo: &quot;carro&quot;, esEstudiante: false };</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Cree la función <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">calcularParqueo(v)</code> que retorne un texto con la placa, el tipo, las horas y el total.</li><li>Si la placa es <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">null</code> o no existe, muestre <strong>SIN PLACA</strong>.</li><li>Tarifa por hora: carro ₡700 y moto ₡400. Las fracciones se cobran como hora completa (<code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">Math.ceil</code>).</li><li>La primera media hora es gratis (0.5 h o menos paga ₡0).</li><li>Los estudiantes tienen 50 % de descuento. Si <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">esEstudiante</code> no viene en el objeto, se asume <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">false</code>.</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 1" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>BCD-123 | moto | 3.5 h → ₡800
+SIN PLACA | carro | 0.5 h → ₡0
+ABC-777 | carro | 2 h → ₡1400</code></pre>
+            </article>
+            <article aria-labelledby="ej-2-titulo" style="border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-bus"></i></span>
+                    <h5 id="ej-2-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 2. Horario de buses interurbanos</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Ciclo for</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Funciones</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Cadenas</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Ternario</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">La ruta San José–Cartago sale cada 25 minutos. La empresa quiere imprimir el horario de la mañana y marcar las salidas en hora pico, en las que se agrega un bus de refuerzo. Para facilitar los cálculos, las horas se manejan en minutos desde la medianoche (05:30 = 330).</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 2" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const PRIMERA_SALIDA = 5 * 60 + 30;   // 05:30
+const ULTIMA_SALIDA = 8 * 60;         // 08:00
+const FRECUENCIA = 25;                // minutos entre salidas
+const INICIO_PICO = 6 * 60;           // 06:00
+const FIN_PICO = 7 * 60 + 30;         // 07:30</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Cree la función <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">formatoHora(minutos)</code> que convierta, por ejemplo, 330 en <strong>05:30</strong>. Use <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">Math.floor</code>, el módulo <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">%</code> y <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">padStart</code>.</li><li>Con un ciclo <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">for</code> genere las salidas desde la primera hasta la última (inclusive), avanzando según la frecuencia.</li><li>Si la salida está dentro de la hora pico (inclusive), muestre <strong>+ refuerzo</strong> (use un ternario).</li><li>Al final muestre la cantidad de salidas, de refuerzos y el total de buses (salidas + refuerzos).</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 2" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>05:30  
+05:55  
+06:20  + refuerzo
+06:45  + refuerzo
+07:10  + refuerzo
+07:35  
+08:00  
+Salidas: 7 | Refuerzos: 3 | Total de buses: 10</code></pre>
+            </article>
+            <article aria-labelledby="ej-3-titulo" style="border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-film"></i></span>
+                    <h5 id="ej-3-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 3. Taquilla del cine</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">switch</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">if / else if</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Funciones</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Math.max</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">Un cine de barrio tiene tres formatos de sala y promociones según el día de la semana. Además, los menores de 3 años entran gratis y las personas adultas mayores tienen su propio descuento. Las promociones no se acumulan: se aplica la mayor.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 3" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const ventas = [
+    { cliente: &quot;Mateo&quot;, edad: 2, formato: &quot;2D&quot;, dia: &quot;sábado&quot; },
+    { cliente: &quot;Carmen&quot;, edad: 70, formato: &quot;3D&quot;, dia: &quot;miércoles&quot; },
+    { cliente: &quot;Andrés&quot;, edad: 25, formato: &quot;VIP&quot;, dia: &quot;martes&quot; },
+    { cliente: &quot;Lucía&quot;, edad: 34, formato: &quot;4D&quot;, dia: &quot;viernes&quot; },
+    { cliente: &quot;Diego&quot;, edad: 19, formato: &quot;2D&quot;, dia: &quot;domingo&quot; }
+];</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Cree la función <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">calcularEntrada(venta)</code> que retorne el precio, o <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">null</code> si el formato no existe.</li><li>Precio por formato con <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">switch</code>: 2D ₡3500, 3D ₡5000, VIP ₡7500. Cualquier otro formato no es válido.</li><li>Descuento por día con <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">switch</code> (agrupe casos): martes 50 %, miércoles 20 %, el resto 0 %.</li><li>Por edad con <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">if / else if</code>: menor de 3 años entra gratis; 65 años o más tiene 50 % de descuento.</li><li>Si aplica más de un descuento, use el mayor (<code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">Math.max</code>). Muestre cada venta y el total recaudado.</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 3" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>Mateo | 2D | sábado | Gratis
+Carmen | 3D | miércoles | ₡2500
+Andrés | VIP | martes | ₡3750
+Lucía: formato &quot;4D&quot; no válido
+Diego | 2D | domingo | ₡3500
+Total recaudado: ₡9750</code></pre>
+            </article>
+            <article aria-labelledby="ej-4-titulo" style="border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-carrot"></i></span>
+                    <h5 id="ej-4-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 4. Caja de la feria del agricultor</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Objetos</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">for...of</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">continue</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Acumuladores</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">Un puesto de la feria del agricultor quiere una caja sencilla. Los precios son por kilo. A veces el cliente pide un producto que ese día no se vende, y quienes traen su propia bolsa reciben ₡100 de descuento.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 4" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const preciosPorKilo = { tomate: 1200, papa: 850, culantro: 300, aguacate: 1500 };
+
+const compra = [
+    { producto: &quot;tomate&quot;, kilos: 2 },
+    { producto: &quot;papa&quot;, kilos: 1.5 },
+    { producto: &quot;mango&quot;, kilos: 3 },
+    { producto: &quot;aguacate&quot;, kilos: 1 }
+];
+
+const cliente = { nombre: &quot;Doña Rosa&quot;, bolsaPropia: true };</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Muestre una línea por producto con su subtotal. Si el producto no está en <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">preciosPorKilo</code>, muestre <strong>no disponible</strong> y no lo sume.</li><li>Use <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">??</code> para obtener el precio o <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">null</code> si no existe.</li><li>Si el cliente trae bolsa propia, reste ₡100 al total. Use un ternario y cuide la precedencia.</li><li>Muestre el total a pagar.</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 4" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>tomate: 2 kg × ₡1200 = ₡2400
+papa: 1.5 kg × ₡850 = ₡1275
+mango: no disponible
+aguacate: 1 kg × ₡1500 = ₡1500
+Cliente: Doña Rosa
+Total a pagar: ₡5075</code></pre>
+            </article>
+            <article aria-labelledby="ej-5-titulo" style="border: 2px solid #9CC8FF; border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-book"></i></span>
+                    <h5 id="ej-5-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 5. Multas de la biblioteca</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Arreglos de objetos</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">for...of</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">?.</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">??</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">La biblioteca necesita un reporte de los préstamos activos. Algunos libros no tienen el autor registrado y no todos los préstamos indican los días permitidos ni el monto de la multa, porque en ese caso aplican los valores generales del reglamento.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 5" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const prestamos = [
+    {
+        libro: { titulo: &quot;Cien años de soledad&quot;, autor: { nombre: &quot;Gabriel García Márquez&quot; } },
+        diasPrestamo: 18,
+        diasPermitidos: 15
+    },
+    {
+        libro: { titulo: &quot;Manual de Node.js&quot;, autor: null },
+        diasPrestamo: 7
+    },
+    {
+        libro: { titulo: &quot;Introducción a MongoDB&quot;, autor: { nombre: &quot;Ana Solís&quot; } },
+        diasPrestamo: 25,
+        diasPermitidos: 10,
+        multaDiaria: 500
+    }
+];</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Recorra los préstamos con <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">for...of</code> y muestre una línea por préstamo.</li><li>Si el autor no existe, muestre <strong>Autor desconocido</strong> (use <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">?.</code> y <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">??</code>).</li><li>Si no se indican <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">diasPermitidos</code>, el reglamento da 15 días; si no hay <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">multaDiaria</code>, es ₡250.</li><li>Días de atraso = días de préstamo − días permitidos (nunca negativo).</li><li>Estado con ternario: <strong>Al día</strong> o <strong>Atrasado (n días)</strong>, y la multa correspondiente.</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 5" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>Cien años de soledad — Gabriel García Márquez | Atrasado (3 días) | Multa: ₡750
+Manual de Node.js — Autor desconocido | Al día | Multa: ₡0
+Introducción a MongoDB — Ana Solís | Atrasado (15 días) | Multa: ₡7500</code></pre>
+            </article>
+            <article aria-labelledby="ej-6-titulo" style="border: 2px solid #9CC8FF; border-left: 6px solid #712c86; border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-piggy-bank"></i></span>
+                    <h5 id="ej-6-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 6. Meta de ahorro para la gira</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Ciclo while</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Acumuladores</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Condicionales</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Cadenas</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">Un grupo de estudiantes ahorra para una gira académica. Empiezan aportando una cantidad fija cada semana y, cada 4 semanas, aumentan el aporte. Quieren saber en cuántas semanas alcanzan la meta y ver su avance semana a semana. Si en 20 semanas no la alcanzan, la gira se pospone.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 6" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const META = 450000;
+const APORTE_INICIAL = 30000;
+const AUMENTO = 5000;          // cuánto sube el aporte
+const CADA_SEMANAS = 4;        // cada cuántas semanas sube
+const MAX_SEMANAS = 20;</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Use un ciclo <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">while</code> que se repita mientras no se alcance la meta y no se superen las semanas máximas.</li><li>El aporte sube en las semanas 5, 9, 13… (use el módulo <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">%</code> dentro de un <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">if</code>).</li><li>Muestre cada semana: número, aporte, total ahorrado y una barra de avance con <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">"█".repeat(...)</code> (un bloque por cada 10 %).</li><li>Al final indique si se alcanzó la meta, en cuántas semanas y cuánto sobró; o cuánto faltó si no se alcanzó.</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 6" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>Semana  1 | +₡30000 | ₡30000 | ·········· 7 %
+Semana  2 | +₡30000 | ₡60000 | █········· 13 %
+Semana  3 | +₡30000 | ₡90000 | ██········ 20 %
+Semana  4 | +₡30000 | ₡120000 | ██········ 27 %
+Semana  5 | +₡35000 | ₡155000 | ███······· 34 %
+Semana  6 | +₡35000 | ₡190000 | ████······ 42 %
+Semana  7 | +₡35000 | ₡225000 | █████····· 50 %
+Semana  8 | +₡35000 | ₡260000 | █████····· 58 %
+Semana  9 | +₡40000 | ₡300000 | ██████···· 67 %
+Semana 10 | +₡40000 | ₡340000 | ███████··· 76 %
+Semana 11 | +₡40000 | ₡380000 | ████████·· 84 %
+Semana 12 | +₡40000 | ₡420000 | █████████· 93 %
+Semana 13 | +₡45000 | ₡465000 | ██████████ 103 %
+¡Meta alcanzada en 13 semanas! Sobran ₡15000.</code></pre>
+            </article>
+            <article aria-labelledby="ej-7-titulo" style="border: 2px solid #9CC8FF;  border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-envelope"></i></span>
+                    <h5 id="ej-7-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 7. Correos institucionales para nuevo ingreso</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Cadenas</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Funciones</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Arreglos</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">while</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">El departamento de registro genera el correo institucional de cada estudiante de nuevo ingreso. Los nombres llegan del formulario de matrícula con espacios de más, tildes y mayúsculas mezcladas, y algunos correos ya están ocupados por otras personas.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 7" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const ingresos = [
+    { nombres: &quot;  maría josé &quot;, apellidos: &quot;RODRÍGUEZ solano&quot; },
+    { nombres: &quot;Luis Ángel&quot;, apellidos: &quot;Mora&quot; },
+    { nombres: &quot;ana&quot;, apellidos: &quot;peña  ruiz&quot; },
+    { nombres: &quot;Marco&quot;, apellidos: &quot;Rodríguez Vega&quot; }
+];
+
+const correosUsados = [&quot;mrodriguez@ucenfotec.ac.cr&quot;, &quot;lmora@ucenfotec.ac.cr&quot;];</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Cree <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">capitalizar(texto)</code>: quita espacios sobrantes y deja cada palabra con mayúscula inicial (<code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">trim</code>, <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">split(/\s+/)</code>, <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">map</code>, <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">join</code>).</li><li>Cree <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">sinTildes(texto)</code>: quita tildes y cambia la ñ por n (<code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">normalize("NFD")</code> y <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">replace</code>).</li><li>Usuario = inicial del primer nombre + primer apellido, en minúsculas y sin tildes. Dominio: <strong>@ucenfotec.ac.cr</strong>.</li><li>Si el correo ya está en <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">correosUsados</code>, agregue la inicial del segundo apellido; si aún está ocupado (o no tiene segundo apellido), agregue un número 2, 3… con un <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">while</code>.</li><li>Agregue cada correo nuevo a <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">correosUsados</code> y muestre: nombre completo formateado → correo.</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 7" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>María José Rodríguez Solano  → mrodriguezs@ucenfotec.ac.cr
+Luis Ángel Mora              → lmora2@ucenfotec.ac.cr
+Ana Peña Ruiz                → apena@ucenfotec.ac.cr
+Marco Rodríguez Vega         → mrodriguezv@ucenfotec.ac.cr
+Correos registrados: 6</code></pre>
+            </article>
+            <article aria-labelledby="ej-8-titulo" style="border: 2px solid #9CC8FF;  border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-id-card"></i></span>
+                    <h5 id="ej-8-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 8. Validación de solicitudes de inscripción</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Funciones</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Expresiones regulares</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Arreglos</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Condicionales</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">Antes de guardar las solicitudes de inscripción en la base de datos, el sistema debe revisarlas y explicar a cada aspirante qué datos están mal. Una solicitud se aprueba solo si no tiene ningún error.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 8" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const CARRERAS = [&quot;Software&quot;, &quot;Ciberseguridad&quot;, &quot;Ciencia de datos&quot;];
+
+const solicitudes = [
+    { nombre: &quot;Valeria Castro&quot;, cedula: &quot;1-1234-0567&quot;, telefono: &quot;8888-1234&quot;,
+      correo: &quot;vale@correo.com&quot;, edad: 19, carrera: &quot;Software&quot; },
+    { nombre: &quot;R2&quot;, cedula: &quot;12345&quot;, telefono: &quot;1234-5678&quot;,
+      correo: &quot;rob@&quot;, edad: 16 },
+    { nombre: &quot;Daniel Quesada&quot;, cedula: &quot;204560789&quot;, telefono: &quot;7012 3456&quot;,
+      correo: &quot;dani@correo.cr&quot;, edad: 22, carrera: &quot;Ciberseguridad&quot; },
+    { nombre: &quot;Elena Mora&quot;, cedula: &quot;3-0456-0789&quot;, telefono: &quot;6123-4567&quot;,
+      correo: &quot;elena@correo.com&quot;, edad: 17, carrera: &quot;Diseño&quot; }
+];</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Cree la función <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">validarSolicitud(s)</code> que retorne un <strong>arreglo con los mensajes de error</strong> (vacío si todo está bien).</li><li>Nombre: solo letras (con tildes y ñ) y espacios, mínimo 3 caracteres. Cédula: 9 dígitos con o sin guiones, sin empezar en 0. Teléfono: 8 dígitos que empiezan en 2, 4, 5, 6, 7 u 8, con guion o espacio opcional. Correo: formato <em>algo@algo.algo</em>.</li><li>Edad mínima: 17 años.</li><li>La carrera debe existir en <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">CARRERAS</code> (use <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">includes</code>). Si no viene, también es un error.</li><li>Muestre <strong>✔ Aprobada</strong> o <strong>✘ Rechazada</strong> con la lista de errores, y al final cuántas se aprobaron.</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 8" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>✔ Valeria Castro: Aprobada (Software)
+✘ R2: Rechazada
+    - Nombre inválido
+    - Cédula inválida
+    - Teléfono inválido
+    - Correo inválido
+    - Debe tener al menos 17 años
+    - Carrera no válida o no indicada
+✔ Daniel Quesada: Aprobada (Ciberseguridad)
+✘ Elena Mora: Rechazada
+    - Carrera no válida o no indicada
+Aprobadas: 2 de 4</code></pre>
+            </article>
+            <article aria-labelledby="ej-9-titulo" style="border: 2px solid #9CC8FF;  border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-gamepad"></i></span>
+                    <h5 id="ej-9-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 9. Tabla de un torneo de e-sports</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">map</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">toSorted</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">forEach</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Cadenas</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">La asociación estudiantil organiza un torneo de videojuegos y necesita la tabla de posiciones. No todos los equipos reportaron empates ni estadísticas completas de la plataforma.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 9" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const equipos = [
+    { nombre: &quot;Quetzales&quot;, ganados: 2, perdidos: 6 },
+    { nombre: &quot;Pumas&quot;, ganados: 5, empatados: 2, perdidos: 1, estadisticas: { bajas: 120, muertes: 80 } },
+    { nombre: &quot;Tucanes&quot;, ganados: 4, empatados: 4, perdidos: 0, estadisticas: { bajas: 95 } }
+];</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Puntos = ganados × 3 + empatados. Si no reportaron empates, cuentan como 0. Revise la precedencia.</li><li>Relación bajas/muertes (K/D) con dos decimales. Si faltan las estadísticas, use 0 bajas y 0 muertes. Si las muertes son 0, el K/D es igual a las bajas (evite dividir entre 0 con un ternario).</li><li>Ordene por puntos de mayor a menor sin modificar el arreglo original (<code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">toSorted</code>).</li><li>Los 2 primeros lugares <strong>Clasifican</strong>; el resto queda <strong>Eliminado</strong> (ternario usando la posición).</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 9" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>Pos | Equipo     | Pts | K/D  | Estado
+1   | Pumas      |  17 |  1.50 | Clasifica
+2   | Tucanes    |  16 | 95.00 | Clasifica
+3   | Quetzales  |   6 |  0.00 | Eliminado</code></pre>
+            </article>
+            <article aria-labelledby="ej-10-titulo" style="border: 2px solid #9CC8FF;  border-radius: 12px; padding: 20px; margin: 0 0 24px 0; background: #ffffff;">
+                <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 10px;">
+                    <span aria-hidden="true" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 10px; background: #eef5ff; color: #164a98; font-size: 20px; flex-shrink: 0;">
+                        <i class="fa-solid fa-seedling"></i></span>
+                    <h5 id="ej-10-titulo" style="margin: 0; color: #164a98; font-size: 19px; flex: 1 1 260px;">Contexto 10. Riego automático de la huerta escolar</h5>
+                    
+                </div>
+                <p style="margin: 0 0 6px 0; color: #1c3b64; font-size: 14px; font-weight: 600;">Temas que practica:</p>
+                <ul aria-label="Temas que practica" style="list-style: none; padding: 0; margin: 0 0 10px 0;"><li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Ciclos</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">Ternario anidado</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">filter / reduce</li> <li style="display: inline-block; margin: 0 6px 6px 0; background: #fff8d6; border: 1px solid #C7AC19; color: #5a4a00; padding: 3px 10px; border-radius: 14px; font-size: 13px; font-family: Consolas, 'Courier New', monospace;">?.</li></ul>
+                <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">Una escuela instaló sensores de humedad en las camas de su huerta. Cada mañana un programa decide cuánto tiempo regar cada cama. Un sensor está dañado (no envía datos) y otro reporta 0 % de humedad, que es un valor real: la tierra está completamente seca.</p>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-database" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Datos de partida (cópielos en su archivo)</p>
+                <pre tabindex="0" aria-label="Datos de partida del contexto 10" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>const UMBRAL_HUMEDAD = 35;   // por debajo de este % se riega
+
+const lecturas = [
+    { cama: &quot;Lechugas&quot;, sensor: { humedad: 28, temperatura: 31 } },
+    { cama: &quot;Tomates&quot;, sensor: { humedad: 55 } },
+    { cama: &quot;Culantro&quot;, sensor: null },
+    { cama: &quot;Chile dulce&quot;, sensor: { humedad: 0, temperatura: 24 } }
+];</code></pre>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Lo que debe hacer su programa</p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;"><li>Obtenga la humedad con <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">?.</code>. Si el sensor no envía datos, la humedad es <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">null</code>. Ojo: 0 es una lectura válida (¿sirve <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">||</code>?).</li><li>Decisión con ternario anidado: humedad <code style="background: #eef5ff; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 0.92em;">null</code> → <strong>Revisar sensor</strong>; menor que el umbral → <strong>Regar</strong>; si no → <strong>No regar</strong>.</li><li>Minutos de riego = (umbral − humedad) ÷ 5 × 2, más 3 minutos si la temperatura supera 30 °C. Redondee hacia arriba. Cuide la precedencia.</li><li>Calcule el promedio de humedad solo con los sensores que sí reportaron (un decimal).</li></ul>
+                <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;"><i class="fa-solid fa-terminal" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Salida esperada en consola</p>
+                <pre tabindex="0" aria-label="Salida esperada del contexto 10" style="background: #0f2a1d; color: #d9f7e6; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; tab-size: 4; white-space: pre;"><code>Lechugas: humedad 28 % → Regar durante 6 min
+Tomates: humedad 55 % → No regar
+Culantro: humedad sin datos → Revisar sensor
+Chile dulce: humedad 0 % → Regar durante 14 min
+Promedio de humedad (3 sensores): 27.7 %</code></pre>
+            </article>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
