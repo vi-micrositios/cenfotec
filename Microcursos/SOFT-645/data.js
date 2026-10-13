@@ -1,11 +1,8 @@
-// Ruta base de las imágenes del curso (subir las imágenes de Canva a esta carpeta del repositorio)
-const IMG = 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-645(Python)/imgs/';
-
 const data = {
     // Pantalla de bienvenida
     welcome: {
         title: 'SOFT-645 <br> Fundamentos de Python',
-        image: IMG + 'logo.png',
+        image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/Microcursos/SOFT-645/imgs/logo.png',
         description: 'Python es un lenguaje de programación de código abierto que permite el diseño de código orientado a objetos, imperativo y funcional, destacado por su fácil lectura y uso en la analítica y visualización de datos y en la automatización de tareas. El curso aborda la introducción a Python, los tipos de datos y variables, las estructuras de datos y el almacenamiento.',
         instruction: 'Seleccione cada pestaña para acceder a la información'
     },
@@ -31,7 +28,7 @@ const data = {
                             La computadora no piensa, no tiene iniciativa ni creatividad. Solo hace exactamente lo que el ser humano le indica a través de un programa.
                             </p>
                             `,
-                            image: IMG + 'pensamientoComputacional.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/pensamientoComputacional.png',
                             nextButton: 'Siguiente: Los cuatro pilares'
                         },
                         {
@@ -46,7 +43,7 @@ const data = {
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Ejemplo: organizar un viaje. Se descompone en transporte, hospedaje y comida (descomposición); se nota que todos los viajes requieren lo mismo (patrones); no importa el color del bus, sino el horario (abstracción); y se define el orden de las reservas (algoritmo).</p>
                             `,
-                            image: IMG + 'pilares.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/pilares.png',
                             nextButton: 'Siguiente: Algoritmo'
                         },
                         {
@@ -103,7 +100,7 @@ print("El área es:", area)
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Un <strong>intérprete</strong> procesa las instrucciones durante la ejecución, a diferencia de un <strong>compilador</strong>, que traduce todo el programa antes de ejecutarlo (como en C o C++).</p>
                             `,
-                            image: IMG + 'python.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/python.png',
                             nextButton: 'Siguiente: IA y programación'
                         },
                         {
@@ -209,7 +206,7 @@ print("¡Hola, mundo!")
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             <code>print()</code> es una <strong>función</strong> incorporada de Python: recibe un valor entre paréntesis y lo muestra en la pantalla.</p>
                             `,
-                            image: IMG + 'holaMundo.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/holaMundo.png',
                             nextButton: 'Siguiente: Python como calculadora'
                         },
                         {
@@ -399,7 +396,7 @@ total = precio * cantidad
                                 <li>Permite que otra persona reproduzca exactamente el mismo ambiente.</li>
                             </ul>
                             `,
-                            image: IMG + 'entornoVirtual.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/entornoVirtual.png',
                             nextButton: 'Siguiente: Crear y activar'
                         },
                         {
@@ -917,7 +914,7 @@ print(edad + 1)
 </pre>
                             </div>
                             `,
-                            image: IMG + 'entradaSalida.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/entradaSalida.png',
                             nextButton: 'Siguiente: Salida de datos'
                         },
                         {
@@ -1313,7 +1310,7 @@ mostrar_condicion(promedio)
                             content: `<p>Es una forma de <strong>organizar y almacenar varios valores</strong> bajo un mismo nombre, para poder acceder a ellos y manipularlos de forma eficiente.</p>
                             <p>Sin estructuras de datos, guardar las notas de 30 estudiantes requeriría 30 variables distintas.</p>
                             `,
-                            image: IMG + 'estructurasDatos.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/estructurasDatos.png',
                             nextButton: 'Siguiente: Comparación'
                         },
                         {
@@ -1552,7 +1549,7 @@ print(len(dias))         # 5
 print("sábado" in dias)  # False
 </pre>
                             `,
-                            image: IMG + 'tupla.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/tupla.png',
                             nextButton: 'Siguiente: Inmutabilidad'
                         },
                         {
@@ -1617,7 +1614,7 @@ print(estudiante["nombre"])    # Ana Mora
                                 <li>Los valores pueden ser de cualquier tipo, incluso listas u otros diccionarios.</li>
                             </ul>
                             `,
-                            image: IMG + 'diccionario.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/diccionario.png',
                             nextButton: 'Siguiente: Operaciones'
                         },
                         {
@@ -1723,7 +1720,7 @@ print(unicos)            # {1, 2, 3}
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Como no tienen orden, los conjuntos <strong>no tienen índices</strong>: <code>colores[0]</code> produce un error.</p>
                             `,
-                            image: IMG + 'conjunto.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/conjunto.png',
                             nextButton: 'Siguiente: Operaciones de conjuntos'
                         },
                         {
@@ -1810,7 +1807,7 @@ cuadrados = [n ** 2 for n in range(1, 6)]
 print(cuadrados)      # [1, 4, 9, 16, 25]
 </pre>
                             `,
-                            image: IMG + 'comprensionListas.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/comprensionListas.png',
                             nextButton: 'Siguiente: Con condición'
                         },
                         {
@@ -1914,7 +1911,7 @@ letras = {letra for letra in "programacion"}
                             content: `<p>Las variables, listas y diccionarios viven en la <strong>memoria RAM</strong>: cuando el programa termina, los datos se pierden.</p>
                             <p>Para que la información <strong>persista</strong> entre ejecuciones, se guarda en un archivo en el disco. La próxima vez que el programa se ejecute, puede leer esos datos y continuar donde quedó.</p>
                             `,
-                            image: IMG + 'almacenamiento.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/almacenamiento.png',
                             nextButton: 'Siguiente: Abrir un archivo'
                         },
                         {
@@ -2065,7 +2062,7 @@ carne,nombre,nota
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             Los archivos CSV se pueden abrir en Excel o Google Sheets, por lo que son ideales para intercambiar datos entre programas.</p>
                             `,
-                            image: IMG + 'csv.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/csv.png',
                             nextButton: 'Siguiente: Leer CSV'
                         },
                         {
@@ -2163,7 +2160,7 @@ print(ruta.suffix)      # .csv
 print(Path.cwd())       # carpeta actual de trabajo
 </pre>
                             `,
-                            image: IMG + 'directorios.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/directorios.png',
                             nextButton: 'Siguiente: Verificar y crear'
                         },
                         {
@@ -2433,7 +2430,7 @@ except ValueError as error:
                             </div>
                             <p><strong>Estrategia:</strong> al iniciar, se cargan los datos del archivo a una lista de diccionarios; las operaciones trabajan sobre la lista; después de cada cambio, se guarda la lista en el archivo.</p>
                             `,
-                            image: IMG + 'crud.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/crud.png',
                             nextButton: 'Siguiente: Cargar y guardar'
                         },
                         {
