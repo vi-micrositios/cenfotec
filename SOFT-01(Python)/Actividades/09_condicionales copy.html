@@ -38,9 +38,10 @@
 
             <strong>Instrucciones:</strong> Seleccione uno de los contextos propuestos y desarrolle una solución que
             utilice <strong>variables, constantes, flujo secuencial, estructuras condicionales y ciclos
-            (for, while o do-while)</strong>. Primero represente la solución mediante un <strong>diagrama de
-            flujo</strong> y posteriormente impleméntela en Python.
+            (for o while)</strong>. Primero represente la solución mediante un <strong>diagrama de
+            flujo</strong>, luego <strong>diseñe los casos de prueba</strong> y finalmente impleméntela en Python.
         </div>
+
 
         <!-- SELECCIÓN DE CONTEXTO -->
         <div
@@ -374,26 +375,129 @@
                 style="background: #ffffff; border-left: 5px solid #c7ac19; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 13px; line-height: 1.6;">
 
                 <strong>Recomendación:</strong> indique junto al ciclo qué tipo usó
-                (for, while o do-while) y justifique brevemente por qué ese tipo es
+                (for o while) y justifique brevemente por qué ese tipo es
                 el más adecuado para el contexto elegido.
 
             </div>
 
         </div>
 
-        <!-- PARTE 3: PROGRAMACIÓN -->
+        <!-- PARTE 3: CASOS DE PRUEBA (MOVIDA ANTES DEL CÓDIGO) -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-vial" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: Diseñar los casos de prueba (antes de programar)
+            </h4>
+
+
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
+                Diseñe al menos <strong>seis casos de prueba</strong>. Los casos deben
+                comprobar tanto el funcionamiento normal como las diferentes decisiones
+                y comportamientos del ciclo.
+            </p>
+
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">N.º</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de prueba</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Condición / iteración que se prueba</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida esperada (calculada a mano)</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado real (tras ejecutar Python)</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">¿Coincide? (Sí / No)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Normal (varias iteraciones)</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ciclo cero iteraciones</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Una sola iteración</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Última iteración (límite)</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Rama verdadera dentro del ciclo</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">6</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Caso especial (dato inválido / sin datos)</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+
+                <strong>Importante:</strong> las dos últimas columnas
+                (<em>resultado real</em> y <em>¿coincide?</em>) se dejan vacías en esta
+                etapa. Se completarán <strong>después</strong> de implementar y ejecutar
+                el programa en Python (Parte 4).
+
+            </div>
+
+        </div>
+
+        <!-- PARTE 4: PROGRAMACIÓN EN PYTHON -->
         <div
             style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
 
             <h4
                 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
                 <i class="fa-brands fa-python" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
-                Parte 3: Implementar la solución en Python
+                Parte 4: Implementar la solución en Python
             </h4>
 
             <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
                 Transforme el diagrama de flujo en un programa funcional utilizando
-                Python.
+                Python. Cuando lo ejecute, use los casos de prueba de la Parte 3 para
+                completar las columnas <em>resultado real</em> y <em>¿coincide?</em>.
             </p>
 
             <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
@@ -412,14 +516,14 @@
 
         </div>
 
-        <!-- PARTE 4: CONVENCIONES -->
+        <!-- PARTE 5: CONVENCIONES -->
         <div
             style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
 
             <h4
                 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
                 <i class="fa-solid fa-code" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
-                Parte 4: Aplicar convenciones y estilos adecuados
+                Parte 5: Aplicar convenciones y estilos adecuados
             </h4>
 
             <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
@@ -439,180 +543,6 @@
 
         </div>
 
-        <!-- PARTE 5 -->
-        <div
-            style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
-
-            <h4
-                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-code-branch" style="color: #c62828; font-size: 22px;" aria-hidden="true"></i>
-                Parte 5: Analizar el flujo del ciclo
-            </h4>
-
-            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
-                Analice qué ocurre con el programa cuando cambian los datos de entrada.
-                No se limite a indicar el resultado: explique <strong>qué camino del
-                    programa se ejecuta y por qué</strong>, y cómo el ciclo controla la repetición.
-            </p>
-
-            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">
-                Responda:
-            </p>
-
-            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
-                <li>¿Cuál es la condición que controla el ciclo?</li>
-                <li>¿Qué instrucciones se ejecutan en cada iteración?</li>
-                <li>¿Qué variable cambia en cada iteración?</li>
-                <li>¿Qué sucede si la condición del ciclo nunca se vuelve falsa?</li>
-                <li>¿Qué sucede si la condición del ciclo es falsa desde el inicio?</li>
-                <li>¿Cuáles son las condiciones (if/else) que están dentro del ciclo?</li>
-                <li>¿Todas las instrucciones se ejecutan en todas las iteraciones?</li>
-                <li>¿Cuántas iteraciones se ejecutan en un caso típico?</li>
-            </ul>
-
-            <div
-                style="background: #ffffff; border-left: 5px solid #c62828; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
-
-                <strong>Reflexión:</strong> Explique con sus propias palabras cómo un
-                ciclo permite repetir instrucciones y qué diferencia existe entre un
-                ciclo controlado por contador y uno controlado por condición o bandera.
-
-            </div>
-
-        </div>
-
-        <!-- PARTE 6 -->
-        <div
-            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
-
-            <h4
-                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-vial" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
-                Parte 6: Diseñar y ejecutar casos de prueba
-            </h4>
-
-            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 14px 0;">
-                Diseñe y ejecute al menos <strong>seis casos de prueba</strong>.
-                Los casos deben comprobar tanto el funcionamiento normal como las
-                diferentes decisiones y comportamientos del ciclo.
-            </p>
-
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
-                    <thead>
-                        <tr style="background: #164a98; color: #ffffff;">
-                            <th style="padding: 12px; border: 1px solid #c8d1df;">N.º</th>
-                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de prueba</th>
-                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
-                            <th style="padding: 12px; border: 1px solid #c8d1df;">Condición / iteración que se prueba</th>
-                            <th style="padding: 12px; border: 1px solid #c8d1df;">Salida esperada</th>
-                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado obtenido (exitosa o fallida)</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr style="background: #ffffff;">
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">Normal (varias iteraciones)</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                        </tr>
-                        <tr style="background: #f8fbff;">
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ciclo cero iteraciones</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                        </tr>
-                        <tr style="background: #ffffff;">
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">Última iteración (límite)</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                        </tr>
-                        <tr style="background: #f8fbff;">
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">4</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">Rama verdadera dentro del ciclo</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                        </tr>
-                        <tr style="background: #ffffff;">
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">Rama falsa dentro del ciclo</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                        </tr>
-                        <tr style="background: #f8fbff;">
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">6</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;">Caso especial (dato inválido / sin datos)</td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div
-                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
-
-                <strong>Importante:</strong> Los casos de prueba deben diseñarse antes
-                de ejecutarlos. La salida esperada debe calcularse previamente y luego
-                compararse con el resultado real del programa. Preste especial atención
-                a los casos donde el ciclo ejecuta <strong>0, 1 y N iteraciones</strong>.
-
-            </div>
-
-        </div>
-
-        <!-- PARTE 7 -->
-        <div
-            style="background: #e8f5e9; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
-
-            <h4
-                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
-                <i class="fa-solid fa-check-double" style="color: #2e7d32; font-size: 22px;" aria-hidden="true"></i>
-                Parte 7: Verificación y reflexión
-            </h4>
-
-            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">
-                Después de ejecutar todos los casos de prueba, analice los resultados
-                obtenidos y responda:
-            </p>
-
-            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
-                <li>¿Todos los resultados obtenidos coinciden con los resultados esperados?</li>
-                <li>¿Qué caso de prueba fue más importante para comprobar la lógica del ciclo?</li>
-                <li>¿Qué sucede cuando el ciclo ejecuta cero iteraciones? ¿El programa sigue funcionando correctamente?</li>
-                <li>¿Se ejecutan todas las instrucciones del programa en todas las iteraciones?</li>
-                <li>¿Qué ramas del flujo condicional dentro del ciclo fueron comprobadas?</li>
-                <li>¿Existe alguna situación que podría provocar un ciclo infinito? ¿Cómo la evitaría?</li>
-                <li>¿Qué modificación realizaría para mejorar el programa (por ejemplo, agregar más validaciones o combinar condiciones)?</li>
-            </ol>
-
-            <div
-                style="background: #ffffff; border-left: 5px solid #2e7d32; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
-
-                <strong>Conclusión:</strong> Un ciclo mal diseñado puede provocar que el
-                programa nunca termine, que no ejecute ninguna iteración o que repita
-                acciones innecesarias. Por eso es fundamental probar el comportamiento
-                del ciclo en sus tres escenarios: <strong>0 iteraciones, 1 iteración y
-                varias iteraciones</strong>, y comprobar que la condición de salida
-                siempre es alcanzable.
-
-            </div>
-
-        </div>
 
         <!-- RETO -->
         <div
@@ -626,9 +556,9 @@
                 agregue <strong>un segundo ciclo</strong> al contexto seleccionado.
                 Por ejemplo: si ya tiene un ciclo controlado por bandera, agregue uno
                 controlado por contador; o si ya tiene un ciclo simple, agregue uno
-                anidado. Actualice el diagrama de flujo, modifique el código y diseñe
-                nuevos casos de prueba que permitan comprobar la nueva condición sin
-                afectar las anteriores.
+                anidado. Actualice el diagrama de flujo, <strong>diseñe primero los
+                nuevos casos de prueba</strong>, modifique el código y verifique que
+                las condiciones anteriores siguen funcionando.
             </span>
 
         </div>

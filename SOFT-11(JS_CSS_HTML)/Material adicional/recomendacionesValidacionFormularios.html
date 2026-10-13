@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendaciones para validar formularios con JavaScript</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-top: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="recomendaciones-validacion-js">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-list-check"></i>
+            </span>
+            <h3 id="recomendaciones-validacion-js"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Recomendaciones para validar formularios con JavaScript
+            </h3>
+        </div>
+
+        <!-- INTRODUCCIÓN -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>¿Para qué validar?</strong>
+            Validar en el navegador ayuda a que la persona <strong>corrija sus datos antes de enviarlos</strong>,
+            con mensajes inmediatos y claros. Una buena validación no castiga al usuario:
+            le <strong>explica qué está mal y cómo corregirlo</strong>.
+        </div>
+
+        <!-- ===================== 1. PREPARAR EL HTML ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Preparar el HTML antes de escribir JavaScript
+            </h4>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Cada campo debe tener un <strong>id único</strong>: es la forma más sencilla de seleccionarlo con JS.</li>
+                <li>Cada campo debe tener su <strong>&lt;label for="…"&gt;</strong> asociado: los lectores de pantalla lo leen y, al hacer clic en la etiqueta, el campo recibe el foco.</li>
+                <li>Agregue debajo de cada campo un <strong>contenedor vacío para el mensaje de error</strong>, con un id fácil de deducir (por ejemplo, <code style="background: #eef5ff; color: #164a98; padding: 1px 5px; border-radius: 4px;">error-correo</code> para el campo <code style="background: #eef5ff; color: #164a98; padding: 1px 5px; border-radius: 4px;">correo</code>).</li>
+                <li>Enlace el campo con su mensaje usando <strong>aria-describedby</strong>: así el lector de pantalla también lee el error.</li>
+                <li>Use <strong>novalidate</strong> en el &lt;form&gt; para controlar los mensajes con JS, pero <strong>mantenga required</strong> en los campos obligatorios: sigue informando a las tecnologías de asistencia.</li>
+                <li>Indique visualmente los campos obligatorios (por ejemplo, con <strong>*</strong>) y explique al inicio qué significa.</li>
+                <li>Use el <strong>type</strong> correcto (<em>email</em>, <em>tel</em>, <em>number</em>, <em>date</em>): en el celular muestra el teclado adecuado.</li>
+            </ul>
+
+            <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;">
+                <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Ejemplo de un campo bien preparado
+            </p>
+            <pre tabindex="0" aria-label="Ejemplo de HTML de un campo con su mensaje de error"
+                style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0;"><code>&lt;label for="correo" class="form-label"&gt;Correo electrónico *&lt;/label&gt;
+&lt;input type="email" id="correo" class="form-control"
+       required aria-describedby="error-correo"&gt;
+&lt;div class="invalid-feedback" id="error-correo"&gt;&lt;/div&gt;</code></pre>
+        </div>
+
+        <!-- ===================== 2. CAPTURAR LOS DATOS ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Capturar los datos correctamente
+            </h4>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li><strong>Seleccione los elementos una sola vez</strong>, al inicio del archivo, y guárdelos en constantes con nombres claros (<em>inputCorreo</em>, <em>selectProvincia</em>).</li>
+                <li>Use <strong>getElementById</strong> para un elemento con id, <strong>querySelector</strong> para el primero que cumpla un selector de CSS y <strong>querySelectorAll</strong> para varios.</li>
+                <li>Lea el valor <strong>cuando se valida</strong>, no al cargar la página: al inicio el campo está vacío.</li>
+                <li>Use <strong>.trim()</strong> para quitar espacios de los extremos: un texto con solo espacios no es un dato válido.</li>
+                <li>Recuerde que <strong>.value siempre es texto</strong>: convierta con <strong>Number()</strong> antes de comparar cantidades.</li>
+                <li>En checkbox y switch se revisa <strong>.checked</strong> (true o false), no .value.</li>
+                <li>Para grupos de checkbox o un select múltiple, cuente los marcados con <strong>querySelectorAll(":checked")</strong>.</li>
+                <li>En un select, la primera opción ("Seleccione…") debe tener <strong>value=""</strong> para poder detectar que no se eligió nada.</li>
+            </ul>
+
+            <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;">
+                <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Ejemplo
+            </p>
+            <pre tabindex="0" aria-label="Ejemplo de captura de datos en JavaScript"
+                style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0;"><code>// Se seleccionan una sola vez, al inicio
+const inputCorreo = document.getElementById("correo");
+const inputCantidad = document.querySelector("#cantidadEstudiantes");
+const checkTerminos = document.getElementById("terminos");
+
+// Se leen al validar
+const correo = inputCorreo.value.trim();          // texto sin espacios extra
+const cantidad = Number(inputCantidad.value);     // texto → número
+const acepto = checkTerminos.checked;             // true o false
+const niveles = document.querySelectorAll('input[name="niveles"]:checked').length;</code></pre>
+        </div>
+
+        <!-- ===================== 3. REGLAS DE VALIDACIÓN ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                Definir reglas claras y en orden
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Revise cada campo en este orden y muestre <strong>solo el primer problema</strong> que encuentre:
+            </p>
+
+            <ol style="margin: 0 0 16px 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li><strong>¿Está vacío?</strong> → "Escriba su correo electrónico."</li>
+                <li><strong>¿Tiene el formato correcto?</strong> (expresión regular) → "Revise el correo: debe tener el formato nombre@dominio.com."</li>
+                <li><strong>¿Cumple las reglas del negocio?</strong> (rangos, fechas, relación entre campos) → "La fecha de cierre debe ser posterior a la de apertura."</li>
+            </ol>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Al validar un dato completo, la expresión regular debe tener <strong>^ al inicio y $ al final</strong>; si no, basta con que una parte cumpla.</li>
+                <li>Guarde las expresiones regulares en <strong>constantes con nombre</strong> y un comentario de qué aceptan.</li>
+                <li>Sea <strong>flexible con el formato</strong> y estricto con el contenido: acepte "8888-1234" y "88881234"; acepte mayúsculas y minúsculas en un correo.</li>
+                <li>Pruebe cada regla con datos <strong>válidos, inválidos y límite</strong> (el mínimo, el máximo, 0, un texto vacío).</li>
+            </ul>
+
+            <div style="overflow-x: auto; margin-top: 18px;" tabindex="0" role="region" aria-label="Tabla de expresiones regulares comunes, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Expresiones regulares comunes (Costa Rica)</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Dato</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Expresión regular</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Acepta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #f4f9ff;">Nombre</th><td style="padding: 10px; border: 1px solid #c8d1df;"><code style="font-family: Consolas, monospace; color: #712c86;">/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{2,40}$/</code></td><td style="padding: 10px; border: 1px solid #c8d1df;">María José, Peña</td></tr>
+                        <tr><th scope="row" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #f4f9ff;">Cédula física</th><td style="padding: 10px; border: 1px solid #c8d1df;"><code style="font-family: Consolas, monospace; color: #712c86;">/^[1-9]-?\d{4}-?\d{4}$/</code></td><td style="padding: 10px; border: 1px solid #c8d1df;">1-2345-6789, 123456789</td></tr>
+                        <tr><th scope="row" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #f4f9ff;">Teléfono</th><td style="padding: 10px; border: 1px solid #c8d1df;"><code style="font-family: Consolas, monospace; color: #712c86;">/^[245678]\d{3}-?\d{4}$/</code></td><td style="padding: 10px; border: 1px solid #c8d1df;">8888-1234, 22223333</td></tr>
+                        <tr><th scope="row" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #f4f9ff;">Correo</th><td style="padding: 10px; border: 1px solid #c8d1df;"><code style="font-family: Consolas, monospace; color: #712c86;">/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/</code></td><td style="padding: 10px; border: 1px solid #c8d1df;">ana@mep.go.cr</td></tr>
+                        <tr><th scope="row" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #f4f9ff;">Código institucional</th><td style="padding: 10px; border: 1px solid #c8d1df;"><code style="font-family: Consolas, monospace; color: #712c86;">/^\d{4,5}$/</code></td><td style="padding: 10px; border: 1px solid #c8d1df;">4021, 12345</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ===================== 4. MENSAJES DE ERROR ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-4" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Escribir mensajes de error útiles
+            </h4>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Diga <strong>qué está mal</strong> y <strong>cómo corregirlo</strong>, idealmente con un ejemplo.</li>
+                <li>Use un lenguaje <strong>amable y sin culpas</strong>: "Escriba su teléfono" en lugar de "Error: dato inválido".</li>
+                <li>Muestre el mensaje <strong>junto al campo</strong> y déjelo visible hasta que se corrija.</li>
+                <li>No dependa <strong>solo del color</strong>: agregue texto y un ícono (hay personas que no distinguen el rojo del verde).</li>
+                <li>Evite mensajes técnicos como "regex no coincide" o "NaN".</li>
+            </ul>
+
+            <div style="overflow-x: auto; margin-top: 18px;" tabindex="0" role="region" aria-label="Comparación de mensajes de error, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 520px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Mensajes poco útiles y su versión mejorada</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #fdecea; color: #8a1c14;"><i class="fa-solid fa-xmark" aria-hidden="true"></i> Evite</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #e8f5e9; color: #1e5b25;"><i class="fa-solid fa-check" aria-hidden="true"></i> Prefiera</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">Campo inválido.</td><td style="padding: 10px; border: 1px solid #c8d1df;">El teléfono tiene 8 dígitos e inicia con 2, 4, 5, 6, 7 u 8. Ej.: 8888-1234.</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">Error en la fecha.</td><td style="padding: 10px; border: 1px solid #c8d1df;">La fecha de cierre debe ser posterior a la fecha de apertura.</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">Texto muy corto.</td><td style="padding: 10px; border: 1px solid #c8d1df;">La justificación debe tener al menos 20 caracteres (lleva 8).</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">Complete los campos.</td><td style="padding: 10px; border: 1px solid #c8d1df;">Hay 3 campos por corregir: Correo, Teléfono y Provincia.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ===================== 5. MOSTRAR LOS ERRORES ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-5" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+                Mostrar los errores en pantalla
+            </h4>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Cree <strong>dos funciones reutilizables</strong>: una que marque el error y otra que marque el campo correcto. Así no repite código en cada validación.</li>
+                <li>Use las clases de Bootstrap <strong>is-invalid</strong> e <strong>is-valid</strong> con <strong>classList.add()</strong> y <strong>classList.remove()</strong>.</li>
+                <li>Escriba el mensaje con <strong>textContent</strong>, nunca con innerHTML, cuando incluya datos escritos por el usuario.</li>
+                <li>Si hay varios errores, muestre un <strong>resumen</strong> (modal de Bootstrap o SweetAlert2) con la lista de campos por corregir.</li>
+                <li>Después del resumen, lleve el <strong>foco al primer campo con error</strong> para que la persona empiece a corregir de inmediato.</li>
+                <li>Cuando todo esté correcto, confirme con un <strong>mensaje de éxito</strong> claro.</li>
+            </ul>
+
+            <p style="margin: 18px 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;">
+                <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>Ejemplo de funciones reutilizables
+            </p>
+            <pre tabindex="0" aria-label="Ejemplo de funciones para marcar errores"
+                style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0;"><code>function marcarError(input, mensaje) {
+    input.classList.add("is-invalid");
+    input.classList.remove("is-valid");
+    const divError = document.getElementById("error-" + input.id);
+    divError.textContent = mensaje;
+}
+
+function marcarCorrecto(input) {
+    input.classList.remove("is-invalid");
+    input.classList.add("is-valid");
+    document.getElementById("error-" + input.id).textContent = "";
+}
+
+// Llevar el foco al primer campo con error
+document.querySelector(".is-invalid").focus();</code></pre>
+        </div>
+
+        <!-- ===================== 6. CUÁNDO VALIDAR ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-6" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Validar en el momento adecuado
+            </h4>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li><strong>No muestre errores al cargar la página</strong>: la persona todavía no ha escrito nada.</li>
+                <li>Valide <strong>al presionar el botón</strong> de enviar o guardar (evento <em>click</em> o <em>submit</em>).</li>
+                <li>Después del primer intento, <strong>vuelva a validar mientras escribe</strong> (evento <em>input</em>) para que el error desaparezca en cuanto se corrige.</li>
+                <li>Si ayuda, <strong>dé formato automático</strong> (agregar el guion del teléfono, permitir solo números en un código), pero sin borrar lo que la persona escribió.</li>
+                <li>No deshabilite el botón de enviar sin explicar por qué: es mejor dejarlo activo y mostrar qué falta.</li>
+            </ul>
+        </div>
+
+        <!-- ===================== 7. NO USAR alert() ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-7" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                Evitar alert() para comunicar errores
+            </h4>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li><strong>Bloquea la página</strong> hasta que se cierra.</li>
+                <li><strong>No se puede personalizar</strong>: sin colores, íconos, listas ni botones propios.</li>
+                <li>Muestra el dominio ("127.0.0.1 dice:"), lo que <strong>confunde o parece un engaño</strong>.</li>
+                <li>El usuario puede marcar <strong>"No permitir más diálogos"</strong> y dejar de ver los errores.</li>
+                <li>Algunos navegadores lo <strong>bloquean dentro de Moodle</strong> u otros iframes.</li>
+                <li>Al cerrarlo, el mensaje desaparece y la persona debe <strong>recordar</strong> qué decía.</li>
+            </ul>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px; line-height: 1.6;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Alternativas:</strong> mensajes junto a cada campo, un modal de Bootstrap o SweetAlert2.
+            </div>
+        </div>
+
+        <!-- ===================== 8. SEGURIDAD ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-8" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Recordar los límites de validar en el navegador
+            </h4>
+
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>La validación con JS <strong>mejora la experiencia</strong>, pero <strong>no protege</strong> los datos: cualquier persona puede desactivar JavaScript o modificarlo con F12.</li>
+                <li>Por eso, <strong>las mismas reglas deben repetirse en el servidor</strong> (en el curso: Express y los esquemas de Mongoose).</li>
+                <li>Nunca inserte con <strong>innerHTML</strong> un texto escrito por el usuario: use <strong>textContent</strong> para evitar que se ejecute código.</li>
+                <li>No guarde contraseñas ni datos personales en <strong>localStorage</strong>.</li>
+            </ul>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Importante:</strong> validar en el cliente es para el usuario; validar en el servidor es para el sistema.
+                    Se necesitan ambas.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== LISTA DE VERIFICACIÓN ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 0;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-clipboard-check" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Lista de verificación antes de entregar
+            </h4>
+
+            <ul style="margin: 0; padding-left: 0; list-style: none; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>Cada campo tiene id, label y un contenedor para su mensaje de error.</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>Los elementos se seleccionan una sola vez, al inicio del archivo JS.</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>Los textos se limpian con trim() y los números se convierten con Number().</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>Se valida: vacío → formato → reglas del negocio.</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>Los mensajes dicen qué está mal y cómo corregirlo.</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>El error se ve con texto, no solo con color.</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>El foco va al primer campo con error.</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>No se usa alert().</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>Se probó con datos válidos, inválidos y límite.</li>
+                <li><i class="fa-regular fa-square-check" style="color: #00928d; margin-right: 8px;" aria-hidden="true"></i>El código tiene comentarios que explican la lógica.</li>
+            </ul>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Captura y validación de datos con JavaScript</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-validacion-js">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-brands fa-js"></i>
+            </span>
+            <h3 id="ejercicio-validacion-js"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Ejercicio: Captura y validación de datos con JavaScript
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong>
+            Capturar los datos del <strong>formulario de SICEN</strong> elaborado en el ejercicio anterior y
+            <strong>validarlos con JavaScript</strong>, utilizando <strong>expresiones regulares</strong>,
+            <strong>clases de CSS</strong> para indicar errores y aciertos, <strong>elementos creados dinámicamente</strong>
+            y <strong>mensajes claros</strong> que ayuden al usuario a corregir sus datos.
+        </div>
+
+        <!-- CONTEXTO -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-users" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Contexto
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">
+                El cliente de SICEN necesita que los datos lleguen <strong>completos y correctos</strong> antes de
+                guardarse. Trabaje sobre el <strong>mismo formulario que creó</strong> con Bootstrap
+                (solicitud de información, creación de formulario censal, configuración de censo u otro).
+            </p>
+
+        </div>
+
+        <!-- ===================== PARTE 1 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Preparar el formulario para la validación
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Revise el HTML de su formulario y ajústelo para que JavaScript pueda encontrar cada campo
+                y mostrar sus mensajes.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-code" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Ajustes al HTML
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Agregar <strong>novalidate</strong> a la etiqueta <strong>&lt;form&gt;</strong> y mantener <strong>required</strong> en los campos obligatorios.</li>
+                    <li>Verificar que cada campo tenga un <strong>id único</strong> y su <strong>&lt;label for="…"&gt;</strong>.</li>
+                    <li>Agregar debajo de cada campo un <strong>&lt;div class="invalid-feedback" id="error-…"&gt;</strong> vacío.</li>
+                    <li>Enlazar cada campo con su mensaje mediante <strong>aria-describedby</strong>.</li>
+                    </ul>
+            </div>
+
+           
+        </div>
+
+        <!-- ===================== PARTE 2 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Capturar los elementos y sus datos
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Cree el archivo <strong>js/formulario.js</strong>. Al inicio, seleccione todos los elementos
+                que va a necesitar y guárdelos en constantes.
+            </p>
+
+        </div>
+
+        <!-- ===================== PARTE 3 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                Validar los campos
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Escriba una función de validación por campo (o una función reutilizable) y una función
+                <strong>validarFormulario()</strong> que las llame a todas e indique si el formulario es válido.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Validaciones mínimas
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Todos los campos <strong>obligatorios</strong> del formulario.</li>
+                    <li>Al menos <strong>2 campos con expresión regular</strong> (correo, teléfono, cédula, código institucional, etc.).</li>
+                    <li>Al menos <strong>1 select</strong> en el que se verifique que se eligió una opción.</li>
+                    <li>Al menos <strong>1 checkbox o grupo de checkbox</strong> (por ejemplo, aceptar términos o marcar al menos una opción).</li>
+                    <li>Al menos <strong>1 regla de negocio</strong>: un rango numérico, una cantidad mínima de caracteres o la relación entre dos campos (por ejemplo, fecha de cierre posterior a la de apertura).</li>
+                    <li>Cada validación revisa en orden: <strong>vacío → formato → regla de negocio</strong>.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> las expresiones regulares deben guardarse en constantes con nombre
+                    y llevar un comentario que indique qué datos aceptan.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 4 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-4" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Mostrar los errores y los aciertos
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                La persona debe saber <strong>qué campo</strong> tiene un problema, <strong>qué está mal</strong>
+                y <strong>cómo corregirlo</strong>.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-palette" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Crear las funciones <strong>marcarError()</strong> y <strong>marcarCorrecto()</strong> que agreguen y quiten las clases <strong>is-invalid</strong> e <strong>is-valid</strong> con <strong>classList</strong>.</li>
+                    <li>Escribir el mensaje de cada campo en su <strong>div de error</strong> con <strong>textContent</strong>.</li>
+                    <li>Mensajes <strong>específicos</strong>, que expliquen cómo corregir (con ejemplo cuando sea útil).</li>
+                    <li>Mostrar un <strong>resumen de errores</strong> con un <strong>modal de Bootstrap</strong> o con <strong>SweetAlert2</strong>.</li>
+                    <li>Llevar el <strong>foco al primer campo con error</strong> al cerrar el resumen.</li>
+                    <li>Mostrar un <strong>mensaje de éxito</strong> cuando todos los datos sean correctos.</li>
+                    <li><strong>No utilizar alert()</strong>.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px; line-height: 1.6;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Resultado esperado:</strong> al presionar el botón principal, cada campo con error queda
+                marcado en rojo con su mensaje, los correctos en verde, y aparece un resumen con la lista de errores.
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 5 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-5" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+                Agregar interactividad con elementos dinámicos
+            </h4>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Importante:</strong> los campos creados con JavaScript también deben validarse.
+                    Recuerde buscarlos en el momento de validar, porque al cargar la página todavía no existen.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 6 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-6" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Probar la validación
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Ejecute <strong>al menos 8 casos de prueba</strong>. Incluya datos <strong>válidos</strong>, <strong>inválidos</strong> y <strong>límite</strong>.
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>
