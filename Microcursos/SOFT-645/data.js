@@ -3,7 +3,7 @@ const data = {
     welcome: {
         title: 'SOFT-645 <br> Fundamentos de Python',
         image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/Microcursos/SOFT-645/imgs/logo.png',
-        description: 'Python es un lenguaje de programación de código abierto que permite el diseño de código orientado a objetos, imperativo y funcional, destacado por su fácil lectura y uso en la analítica y visualización de datos y en la automatización de tareas. El curso aborda la introducción a Python, los tipos de datos y variables, las estructuras de datos y el almacenamiento.',
+        description: 'Aplicación de procedimientos lógicos y abstracciones de computación para la resolución de problemas por medio de Python.',
         instruction: 'Seleccione cada pestaña para acceder a la información'
     },
     // Temas principales y sus subtemas con pasos
