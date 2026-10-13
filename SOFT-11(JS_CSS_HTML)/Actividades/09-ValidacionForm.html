@@ -113,24 +113,9 @@
             </h4>
 
             <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
-                Escriba una función de validación por campo (o una función reutilizable) y una función
-                <strong>validarFormulario()</strong> que las llame a todas e indique si el formulario es válido.
+                Escriba una función de validación por campo (o una función reutilizable) y una función que las llame a todas e indique si el formulario es válido.
             </p>
 
-            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
-                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                    Validaciones mínimas
-                </p>
-                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                    <li>Todos los campos <strong>obligatorios</strong> del formulario.</li>
-                    <li>Al menos <strong>2 campos con expresión regular</strong> (correo, teléfono, cédula, código institucional, etc.).</li>
-                    <li>Al menos <strong>1 select</strong> en el que se verifique que se eligió una opción.</li>
-                    <li>Al menos <strong>1 checkbox o grupo de checkbox</strong> (por ejemplo, aceptar términos o marcar al menos una opción).</li>
-                    <li>Al menos <strong>1 regla de negocio</strong>: un rango numérico, una cantidad mínima de caracteres o la relación entre dos campos (por ejemplo, fecha de cierre posterior a la de apertura).</li>
-                    <li>Cada validación revisa en orden: <strong>vacío → formato → regla de negocio</strong>.</li>
-                </ul>
-            </div>
 
             <div
                 style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
@@ -155,21 +140,7 @@
                 y <strong>cómo corregirlo</strong>.
             </p>
 
-            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
-                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
-                    <i class="fa-solid fa-palette" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
-                    Requisitos
-                </p>
-                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
-                    <li>Crear las funciones <strong>marcarError()</strong> y <strong>marcarCorrecto()</strong> que agreguen y quiten las clases <strong>is-invalid</strong> e <strong>is-valid</strong> con <strong>classList</strong>.</li>
-                    <li>Escribir el mensaje de cada campo en su <strong>div de error</strong> con <strong>textContent</strong>.</li>
-                    <li>Mensajes <strong>específicos</strong>, que expliquen cómo corregir (con ejemplo cuando sea útil).</li>
-                    <li>Mostrar un <strong>resumen de errores</strong> con un <strong>modal de Bootstrap</strong> o con <strong>SweetAlert2</strong>.</li>
-                    <li>Llevar el <strong>foco al primer campo con error</strong> al cerrar el resumen.</li>
-                    <li>Mostrar un <strong>mensaje de éxito</strong> cuando todos los datos sean correctos.</li>
-                    <li><strong>No utilizar alert()</strong>.</li>
-                </ul>
-            </div>
+
 
             <div
                 style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px; line-height: 1.6;">

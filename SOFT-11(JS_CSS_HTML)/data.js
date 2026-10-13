@@ -1316,587 +1316,6 @@ let contador = 0;          // puede cambiar
 const IVA = 0.13;          // constante
 console.log('Hola mundo'); // se ve en la consola (F12)</code></pre>
                             <p>
-                                <i class="fas fa-lightbulb" style="col or: #00928d;" aria-hidden="true"></i>
-                                Usar <code>const</code> por defecto y <code>let</code> solo cuando el valor deba cambiar. Prohibido usar <code>var</code>.
-                            </p>`,
-                            nextButton: 'Siguiente: Primer programa'
-                        },
-                        {
-                            title: 'Primer programa interactivo',
-                            content: `<pre class="code"><code>&lt;h1 id="saludo"&gt;Hola&lt;/h1&gt;
-&lt;input type="text" id="txtNombre" placeholder="Su nombre"&gt;
-&lt;button id="btnSaludar"&gt;Saludar&lt;/button&gt;
-&lt;p&gt;Clics: &lt;span id="contador"&gt;0&lt;/span&gt;&lt;/p&gt;</code></pre><pre class="code"><code>// js/main.js
-let clics = 0;
-
-document.getElementById('btnSaludar').addEventListener('click', () =&gt; {
-    const nombre = document.getElementById('txtNombre').value;
-    clics++;
-    document.getElementById('saludo').textContent = 'Hola, ' + nombre;
-    document.getElementById('contador').textContent = clics;
-});</code></pre><p>
-    <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
-    Abra la consola del navegador (F12) para ver errores y probar instrucciones.
-</p>`,
-                            nextButton: 'Siguiente: Template literals'
-                        },
-                        {
-                            title: 'Plantillas de texto (template literals)',
-                            content: `<p>Con comillas invertidas se pueden insertar variables y escribir texto en varias líneas:</p><pre class="code"><code>const nombre = 'Ana';
-const edad = 21;
-
-// Concatenación tradicional
-console.log('Hola, ' + nombre + '. Tiene ' + edad + ' años');
-
-// Template literal
-console.log(\`Hola, \${nombre}. Tiene \${edad} años\`);
-
-// Muy útil para generar HTML
-const tarjeta = \`
-    &lt;div class="card"&gt;
-        &lt;div class="card-body"&gt;\${nombre} (\${edad})&lt;/div&gt;
-    &lt;/div&gt;\`;</code></pre>`,
-                            nextButton: ' '
-                        }
-                    ]
-                },
-                {
-                    id: 'm04-tiposOperadores',
-                    label: 'Tipos de datos y operadores',
-                    steps: [
-                        {
-                            title: 'Tipos de datos',
-                            content: `<table class="table">
-                                <tr><th>Tipo</th><th>Ejemplo</th></tr>
-                                <tr><td>string</td><td><code>'Ana'</code></td></tr>
-                                <tr><td>number</td><td><code>25</code>, <code>3.14</code></td></tr>
-                                <tr><td>boolean</td><td><code>true</code>, <code>false</code></td></tr>
-                                <tr><td>undefined</td><td>variable sin valor asignado</td></tr>
-                                <tr><td>null</td><td>ausencia intencional de valor</td></tr>
-                                <tr><td>object</td><td><code>{ nombre: 'Ana', edad: 25 }</code></td></tr>
-                                <tr><td>array</td><td><code>[1, 2, 3]</code></td></tr>
-                            </table>
-                            <p>Se puede conocer el tipo con <code>typeof</code>: <code>typeof 25</code> devuelve <code>'number'</code>.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_tipos_datos.png',
-                            nextButton: 'Siguiente: Operadores'
-                        },
-                        {
-                            title: 'Operadores',
-                            content: `<ul>
-                                <li><strong>Aritméticos:</strong> <code>+ - * / % **</code></li>
-                                <li><strong>Asignación:</strong> <code>= += -= *= /=</code></li>
-                                <li><strong>Comparación:</strong> <code>=== !== &gt; &lt; &gt;= &lt;=</code></li>
-                                <li><strong>Lógicos:</strong> <code>&amp;&amp;</code> (y), <code>||</code> (o), <code>!</code> (no)</li>
-                            </ul>
-<pre class="code"><code>5 == '5'    // true  (convierte tipos)
-5 === '5'   // false (compara valor y tipo)
-'5' + 2     // '52'  (concatena)
-Number('5') + 2  // 7</code></pre>
-                            <p>
-                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
-                                Use siempre <code>===</code> y <code>!==</code>. Los valores de un formulario siempre llegan como texto: conviértalos con <code>Number()</code>.
-                            </p>`,
-                            nextButton: 'Siguiente: Conversión de tipos'
-                        },
-                        {
-                            title: 'Conversión de tipos y valores "falsy"',
-                            content: `<pre class="code"><code>Number('25')        // 25
-Number('abc')       // NaN (Not a Number)
-parseInt('25.7')    // 25
-parseFloat('25.7')  // 25.7
-String(100)         // '100'
-(1500).toFixed(2)   // '1500.00'
-
-isNaN(Number('abc'))   // true → útil para validar</code></pre><p>En una condición, estos valores se consideran <strong>falsos</strong>: <code>false</code>, <code>0</code>, <code>''</code>, <code>null</code>, <code>undefined</code>, <code>NaN</code>.</p><pre class="code"><code>const nombre = '';
-if (!nombre) {
-    console.log('El nombre es obligatorio');
-}</code></pre>`,
-                            nextButton: 'Siguiente: Ejemplo'
-                        },
-                        {
-                            title: 'Ejemplo: calcular un total',
-                            content: `<pre class="code"><code>&lt;input type="number" id="txtPrecio" placeholder="Precio"&gt;
-&lt;input type="number" id="txtCantidad" placeholder="Cantidad"&gt;
-&lt;button id="btnCalcular"&gt;Calcular&lt;/button&gt;
-&lt;p id="resultado"&gt;&lt;/p&gt;</code></pre><pre class="code"><code>const IVA = 0.13;
-
-document.getElementById('btnCalcular').addEventListener('click', () =&gt; {
-    const precio = Number(document.getElementById('txtPrecio').value);
-    const cantidad = Number(document.getElementById('txtCantidad').value);
-
-    if (isNaN(precio) || isNaN(cantidad) || precio &lt;= 0 || cantidad &lt;= 0) {
-        document.getElementById('resultado').textContent = 'Datos inválidos';
-        return;
-    }
-
-    const subtotal = precio * cantidad;
-    const total = subtotal + subtotal * IVA;
-    document.getElementById('resultado').textContent = 'Total: ₡' + total.toFixed(2);
-});</code></pre>`,
-                            nextButton: ' '
-                        }
-                    ]
-                },
-                {
-                    id: 'm04-estructurasControl',
-                    label: 'Estructuras de control',
-                    steps: [
-                        {
-                            title: 'Condicionales',
-                            content: `<pre class="code"><code>const nota = 85;
-
-if (nota >= 90) {
-    console.log('Excelente');
-} else if (nota >= 70) {
-    console.log('Aprobado');
-} else {
-    console.log('Reprobado');
-}
-
-switch (dia) {
-    case 'sábado':
-    case 'domingo':
-        console.log('Fin de semana');
-        break;
-    default:
-        console.log('Día hábil');
-}
-
-// Operador ternario
-const estado = nota >= 70 ? 'Aprobado' : 'Reprobado';</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_control.png',
-                            nextButton: 'Siguiente: Ciclos'
-                        },
-                        {
-                            title: 'Ciclos',
-                            content: `<pre class="code"><code>// for clásico
-for (let i = 1; i <= 5; i++) {
-    console.log(i);
-}
-
-// while
-let intentos = 0;
-while (intentos < 3) {
-    intentos++;
-}
-
-// for...of: recorre los elementos de un arreglo
-const frutas = ['mango', 'piña', 'banano'];
-for (const fruta of frutas) {
-    console.log(fruta);
-}</code></pre>`,
-                            nextButton: 'Siguiente: Generar HTML'
-                        },
-                        {
-                            title: 'Ejemplo: generar HTML con un ciclo',
-                            content: `<pre class="code"><code>&lt;table class="table"&gt;
-    &lt;tbody id="tblMultiplicar"&gt;&lt;/tbody&gt;
-&lt;/table&gt;</code></pre><pre class="code"><code>const numero = 7;
-let filas = '';
-
-for (let i = 1; i &lt;= 10; i++) {
-    filas += \`&lt;tr&gt;&lt;td&gt;\${numero} × \${i}&lt;/td&gt;&lt;td&gt;\${numero * i}&lt;/td&gt;&lt;/tr&gt;\`;
-}
-
-document.getElementById('tblMultiplicar').innerHTML = filas;</code></pre>`,
-                            nextButton: 'Siguiente: break y continue'
-                        },
-                        {
-                            title: 'break, continue y validación con ciclos',
-                            content: `<pre class="code"><code>const notas = [85, 40, 92, -5, 70];
-
-// continue: salta los valores inválidos
-let suma = 0, validas = 0;
-for (const nota of notas) {
-    if (nota &lt; 0 || nota &gt; 100) continue;
-    suma += nota;
-    validas++;
-}
-console.log('Promedio:', suma / validas);
-
-// break: se detiene al encontrar el primer reprobado
-for (const nota of notas) {
-    if (nota &lt; 70) {
-        console.log('Hay al menos un reprobado:', nota);
-        break;
-    }
-}</code></pre>`,
-                            nextButton: ' '
-                        }
-                    ]
-                },
-                {
-                    id: 'm04-funcionesArreglos',
-                    label: 'Funciones y arreglos',
-                    steps: [
-                        {
-                            title: 'Funciones',
-                            content: `<pre class="code"><code>// Declaración
-function calcularTotal(precio, cantidad) {
-    return precio * cantidad;
-}
-
-// Función flecha
-const aplicarIVA = (monto) => monto * 1.13;
-
-console.log(aplicarIVA(calcularTotal(1000, 3))); // 3390</code></pre>
-                            <p>Las funciones permiten reutilizar código y dividir un problema en partes pequeñas.</p>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_funciones_arreglos.png',
-                            nextButton: 'Siguiente: Arreglos'
-                        },
-                        {
-                            title: 'Arreglos y métodos',
-                            content: `<pre class="code"><code>const notas = [80, 95, 60, 72];
-
-notas.push(88);                         // agrega al final
-notas.length;                           // 5
-notas.filter(n => n >= 70);             // [80, 95, 72, 88]
-notas.map(n => n + 5);                  // suma 5 a cada nota
-notas.find(n => n > 90);                // 95
-notas.reduce((suma, n) => suma + n, 0); // 395</code></pre>`,
-                            nextButton: 'Siguiente: Objetos y JSON'
-                        },
-                        {
-                            title: 'Arreglos de objetos y JSON',
-                            content: `<p>Los datos de una aplicación suelen manejarse como arreglos de objetos, igual que los documentos de MongoDB:</p>
-<pre class="code"><code>const estudiantes = [
-    { nombre: 'Ana',  nota: 90 },
-    { nombre: 'Luis', nota: 65 }
-];
-
-const aprobados = estudiantes.filter(e => e.nota >= 70);
-
-// Convertir a texto JSON y de vuelta
-const texto = JSON.stringify(estudiantes);
-const lista = JSON.parse(texto);</code></pre>
-                            <p>
-                                <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
-                                JSON es el formato con el que el navegador y el servidor intercambian datos.
-                            </p>`,
-                            nextButton: 'Siguiente: Objetos'
-                        },
-                        {
-                            title: 'Objetos y desestructuración',
-                            content: `<pre class="code"><code>const usuario = {
-    nombre: 'Ana',
-    correo: 'ana@cenfotec.ac.cr',
-    rol: 'estudiante',
-    saludar() {
-        return 'Hola, soy ' + this.nombre;
-    }
-};
-
-usuario.telefono = '8888-8888';     // agregar propiedad
-delete usuario.telefono;           // eliminar propiedad
-console.log(usuario.saludar());
-
-// Desestructuración
-const { nombre, correo } = usuario;
-
-// Copiar y modificar (spread)
-const actualizado = { ...usuario, rol: 'admin' };
-
-// Recorrer propiedades
-for (const clave in usuario) {
-    console.log(clave, usuario[clave]);
-}</code></pre>`,
-                            nextButton: 'Siguiente: Carrito de compras'
-                        },
-                        {
-                            title: 'Ejemplo: carrito de compras',
-                            content: `<pre class="code"><code>const carrito = [];
-
-function agregar(nombre, precio, cantidad) {
-    const existente = carrito.find(p =&gt; p.nombre === nombre);
-    if (existente) {
-        existente.cantidad += cantidad;
-    } else {
-        carrito.push({ nombre, precio, cantidad });
-    }
-}
-
-function eliminar(nombre) {
-    const i = carrito.findIndex(p =&gt; p.nombre === nombre);
-    if (i !== -1) carrito.splice(i, 1);
-}
-
-function total() {
-    return carrito.reduce((suma, p) =&gt; suma + p.precio * p.cantidad, 0);
-}
-
-agregar('Café', 1500, 2);
-agregar('Té', 1200, 1);
-agregar('Café', 1500, 1);
-console.log(carrito);   // Café x3, Té x1
-console.log(total());   // 5700</code></pre>`,
-                            nextButton: 'Siguiente: Ordenar y consultar'
-                        },
-                        {
-                            title: 'Ordenar y consultar arreglos',
-                            content: `<pre class="code"><code>const productos = [
-    { nombre: 'Café', precio: 1500, stock: 10 },
-    { nombre: 'Té', precio: 1200, stock: 0 },
-    { nombre: 'Queque', precio: 2000, stock: 5 }
-];
-
-// Ordenar por precio (menor a mayor)
-productos.sort((a, b) =&gt; a.precio - b.precio);
-
-// Ordenar por nombre
-productos.sort((a, b) =&gt; a.nombre.localeCompare(b.nombre));
-
-productos.some(p =&gt; p.stock === 0);    // true: ¿alguno agotado?
-productos.every(p =&gt; p.precio &gt; 1000); // true: ¿todos cuestan más de 1000?
-productos.map(p =&gt; p.nombre).includes('Té'); // true
-
-// Buscar por texto
-const texto = 'ca';
-productos.filter(p =&gt; p.nombre.toLowerCase().includes(texto));</code></pre>`,
-                            nextButton: ' '
-                        }
-                    ]
-                },
-                {
-                    id: 'm04-apiNavegador',
-                    label: 'Interfaz de programación de aplicaciones en la navegación',
-                    steps: [
-                        {
-                            title: 'El DOM',
-                            content: `<p>El <strong>DOM</strong> (Document Object Model) es la representación de la página como un árbol de objetos que JavaScript puede leer y modificar.</p>
-<pre class="code"><code>const titulo = document.getElementById('titulo');
-const botones = document.querySelectorAll('.btn');
-
-titulo.textContent = 'Nuevo título';
-titulo.classList.add('activo');
-
-const item = document.createElement('li');
-item.textContent = 'Nuevo elemento';
-document.querySelector('#lista').appendChild(item);</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_dom.png',
-                            nextButton: 'Siguiente: Eventos'
-                        },
-                        {
-                            title: 'Eventos',
-                            content: `<pre class="code"><code>const boton = document.getElementById('btnSaludar');
-
-boton.addEventListener('click', () => {
-    const nombre = document.getElementById('txtNombre').value;
-    document.getElementById('salida').textContent = 'Hola, ' + nombre;
-});</code></pre>
-                            <p>Eventos comunes: <code>click</code>, <code>submit</code>, <code>input</code>, <code>change</code>, <code>keyup</code>, <code>DOMContentLoaded</code>.</p>`,
-                            nextButton: 'Siguiente: Otras APIs'
-                        },
-                        {
-                            title: 'Otras APIs del navegador',
-                            content: `<ul>
-                                <li><strong>fetch:</strong> hace solicitudes HTTP al servidor (se usará en el módulo 6).</li>
-                                <li><strong>localStorage / sessionStorage:</strong> guardan datos simples en el navegador.</li>
-                                <li><strong>window.location:</strong> lee o cambia la URL actual.</li>
-                                <li><strong>setTimeout / setInterval:</strong> ejecutan código después de un tiempo.</li>
-                            </ul>
-<pre class="code"><code>localStorage.setItem('tema', 'oscuro');
-const tema = localStorage.getItem('tema');
-
-window.location.href = 'catalogo.html';</code></pre>
-                            <p>
-                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
-                                Nunca guarde contraseñas ni datos sensibles en localStorage.
-                            </p>`,
-                            nextButton: 'Siguiente: async/await'
-                        },
-                        {
-                            title: 'Asincronía: promesas y async/await',
-                            content: `<p>Las operaciones que toman tiempo (consultar un servidor) son <strong>asíncronas</strong>: el programa no se detiene a esperarlas. <code>async/await</code> permite escribirlas como si fueran secuenciales:</p><pre class="code"><code>async function cargarProductos() {
-    try {
-        const respuesta = await fetch('/api/productos');
-        if (!respuesta.ok) throw new Error('Error ' + respuesta.status);
-
-        const productos = await respuesta.json();
-        console.log(productos);
-    } catch (error) {
-        console.error('No se pudieron cargar:', error.message);
-    }
-}
-
-cargarProductos();</code></pre><p>
-    <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
-    <code>await</code> solo puede usarse dentro de una función marcada con <code>async</code>.
-</p>`,
-                            nextButton: 'Siguiente: Mostrar en tarjetas'
-                        },
-                        {
-                            title: 'Ejemplo: mostrar datos en tarjetas Bootstrap',
-                            content: `<pre class="code"><code>&lt;div class="container"&gt;
-    &lt;div class="row g-3" id="contenedorLabs"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre><pre class="code"><code>async function mostrarLaboratorios() {
-    const respuesta = await fetch('/api/laboratorios');
-    const labs = await respuesta.json();
-
-    const contenedor = document.getElementById('contenedorLabs');
-    contenedor.innerHTML = '';
-
-    labs.forEach(lab =&gt; {
-        const col = document.createElement('div');
-        col.className = 'col-md-4';
-        col.innerHTML = \`
-            &lt;div class="card h-100"&gt;
-                &lt;div class="card-body"&gt;
-                    &lt;h5 class="card-title"&gt;&lt;/h5&gt;
-                    &lt;p class="card-text"&gt;Capacidad: \${lab.capacidad}&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;\`;
-        col.querySelector('.card-title').textContent = lab.nombre; // texto seguro
-        contenedor.appendChild(col);
-    });
-}
-
-document.addEventListener('DOMContentLoaded', mostrarLaboratorios);</code></pre><p>
-    <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
-    Los textos escritos por usuarios se asignan con <code>textContent</code>, no dentro del HTML, para evitar inyección de código (XSS).
-</p>`,
-                            nextButton: ' '
-                        }
-                    ]
-                },
-                {
-                    id: 'm04-nodejs',
-                    label: 'Entorno de ejecución Node.js',
-                    steps: [
-                        {
-                            title: '¿Qué es Node.js?',
-                            content: `<p>Node.js es un entorno que permite <strong>ejecutar JavaScript fuera del navegador</strong>, por ejemplo en un servidor. Usa el motor V8 de Chrome.</p>
-                            <p>Con Node.js se puede usar el mismo lenguaje en el cliente (frontend) y en el servidor (backend).</p>
-<pre class="code"><code>// hola.js
-console.log('Hola desde Node.js');</code></pre>
-<pre class="code"><code>// En la terminal
-node -v          # verifica la versión instalada
-node hola.js     # ejecuta el archivo</code></pre>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_nodejs.png',
-                            nextButton: 'Siguiente: npm'
-                        },
-                        {
-                            title: 'npm y package.json',
-                            content: `<p><strong>npm</strong> (Node Package Manager) instala bibliotecas de terceros.</p>
-<pre class="code"><code>npm init -y            # crea package.json
-npm install express    # instala una dependencia
-npm install            # reinstala todo lo de package.json</code></pre>
-                            <p>El archivo <code>package.json</code> describe el proyecto y sus dependencias. La carpeta <code>node_modules</code> contiene las bibliotecas instaladas.</p>
-                            <p>
-                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
-                                <code>node_modules</code> no se sube al repositorio: se agrega al archivo <code>.gitignore</code>.
-                            </p>`,
-                            nextButton: 'Siguiente: Módulos'
-                        },
-                        {
-                            title: 'Módulos en Node.js',
-                            content: `<p>El código se divide en archivos (módulos) que se exportan e importan:</p>
-<pre class="code"><code>// utilidades.js
-function sumar(a, b) {
-    return a + b;
-}
-module.exports = { sumar };
-
-// app.js
-const { sumar } = require('./utilidades');
-console.log(sumar(2, 3)); // 5</code></pre>
-                            <p>Node también trae módulos propios como <code>fs</code> (archivos), <code>path</code> (rutas) y <code>http</code> (servidor).</p>`,
-                            nextButton: 'Siguiente: Scripts de npm'
-                        },
-                        {
-                            title: 'Scripts de npm',
-                            content: `<p>En <code>package.json</code> se definen comandos para no tener que recordarlos:</p><pre class="code"><code>{
-  "name": "proyecto-reservas",
-  "version": "1.0.0",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-  },
-  "dependencies": {
-    "express": "^4.19.2",
-    "mongoose": "^8.5.0"
-  }
-}</code></pre><pre class="code"><code>npm run dev     # desarrollo (reinicia al guardar)
-npm start       # producción</code></pre>`,
-                            nextButton: 'Siguiente: Módulo fs'
-                        },
-                        {
-                            title: 'Leer y escribir archivos con fs',
-                            content: `<pre class="code"><code>const fs = require('fs');
-const path = require('path');
-
-const ruta = path.join(__dirname, 'datos', 'productos.json');
-
-// Leer
-const texto = fs.readFileSync(ruta, 'utf-8');
-const productos = JSON.parse(texto);
-
-// Modificar y guardar
-productos.push({ nombre: 'Galleta', precio: 800 });
-fs.writeFileSync(ruta, JSON.stringify(productos, null, 2));
-
-console.log('Productos guardados:', productos.length);</code></pre><p>
-    <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
-    Guardar en archivos sirve para practicar, pero no soporta varios usuarios a la vez: por eso el proyecto usa MongoDB Atlas.
-</p>`,
-                            nextButton: 'Siguiente: Servidor básico'
-                        },
-                        {
-                            title: 'Un servidor web básico',
-                            content: `<p>Con el módulo <code>http</code> de Node se puede crear un servidor sin instalar nada:</p><pre class="code"><code>const http = require('http');
-
-const servidor = http.createServer((req, res) =&gt; {
-    if (req.url === '/api/saludo') {
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ mensaje: 'Hola desde Node' }));
-    } else {
-        res.writeHead(404);
-        res.end('No encontrado');
-    }
-});
-
-servidor.listen(3000, () =&gt; console.log('http://localhost:3000'));</code></pre><p>En el módulo 6 se usa <strong>Express</strong>, que simplifica las rutas, el manejo de JSON y los archivos estáticos.</p>`,
-                            nextButton: ' '
-                        }
-                    ]
-                }
-            ]
-        },
-
-        // =====================================================================
-        // MÓDULO 5: BIBLIOTECA MULTIPLATAFORMA JQUERY
-        // =====================================================================
-        // =====================================================================
-        // MÓDULO 4: LENGUAJE JAVASCRIPT
-        // =====================================================================
-        {
-            id: 'modulo_04',
-            label: 'JavaScript',
-            subtemas: [
-                {
-                    id: 'm04-introduccion',
-                    label: 'Introducción a JavaScript',
-                    steps: [
-                        {
-                            title: '¿Qué es JavaScript?',
-                            content: `<p>JavaScript es un lenguaje de programación interpretado que agrega <strong>comportamiento e interactividad</strong> a las páginas web. Hoy también se ejecuta en el servidor gracias a Node.js.</p>
-                            <ul>
-                                <li>Se ejecuta en el navegador (cliente) o en Node.js (servidor).</li>
-                                <li>Es de tipado dinámico: el tipo de una variable se define por su valor.</li>
-                                <li>Es orientado a eventos: reacciona a clics, envíos de formularios, teclas, etc.</li>
-                            </ul>`,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_javascript.png',
-                            nextButton: 'Siguiente: Cómo incluirlo'
-                        },
-                        {
-                            title: 'Cómo incluir JavaScript y variables',
-                            content: `<pre class="code"><code>&lt;!-- Al final del body --&gt;
-&lt;script src="js/main.js"&gt;&lt;/script&gt;</code></pre>
-<pre class="code"><code>// main.js
-let contador = 0;          // puede cambiar
-const IVA = 0.13;          // constante
-console.log('Hola mundo'); // se ve en la consola (F12)</code></pre>
-                            <p>
                                 <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
                                 Usar <code>const</code> por defecto y <code>let</code> solo cuando el valor deba cambiar. Prohibido usar <code>var</code>.
                             </p>`,
@@ -2704,6 +2123,341 @@ const servidor = http.createServer((req, res) =&gt; {
 });
 
 servidor.listen(3000, () =&gt; console.log('http://localhost:3000'));</code></pre><p>En el módulo 6 se usa <strong>Express</strong>, que simplifica las rutas, el manejo de JSON y los archivos estáticos.</p>`,
+                            nextButton: ' '
+                        }
+                    ]
+                }
+            ]
+        },
+        // =====================================================================
+        // MÓDULO 5: BIBLIOTECA MULTIPLATAFORMA JQUERY
+        // =====================================================================
+        {
+            id: 'modulo_05',
+            label: 'jQuery',
+            subtemas: [
+                {
+                    id: 'm05-introduccion',
+                    label: 'Introducción a jQuery',
+                    steps: [
+                        {
+                            title: '¿Qué es jQuery?',
+                            content: `<p>jQuery es una biblioteca de JavaScript que <strong>simplifica</strong> la manipulación del DOM, el manejo de eventos, las animaciones y las solicitudes al servidor, con un código más corto y compatible entre navegadores.</p>
+                            <p>Su lema: <em>"Write less, do more"</em>.</p>
+<pre class="code"><code>// JavaScript puro
+document.getElementById('titulo').style.color = 'red';
+
+// jQuery
+$('#titulo').css('color', 'red');</code></pre>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_jquery.png',
+                            nextButton: 'Siguiente: Cómo incluirla'
+                        },
+                        {
+                            title: 'Cómo incluir jQuery',
+                            content: `<pre class="code"><code>&lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/main.js"&gt;&lt;/script&gt;</code></pre>
+<pre class="code"><code>// main.js: espera a que el DOM esté listo
+$(function () {
+    console.log('jQuery está listo');
+});</code></pre>
+                            <p>
+                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
+                                El script de jQuery debe cargarse <strong>antes</strong> que los archivos que lo usan.
+                            </p>`,
+                            nextButton: 'Siguiente: Con Bootstrap'
+                        },
+                        {
+                            title: 'jQuery y Bootstrap juntos',
+                            content: `<p>El orden de carga de los scripts al final del <code>&lt;body&gt;</code> es importante:</p><pre class="code"><code>    &lt;!-- 1. jQuery --&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.7.1.min.js"&gt;&lt;/script&gt;
+    &lt;!-- 2. Bootstrap --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;!-- 3. Su código --&gt;
+    &lt;script src="js/main.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre><pre class="code"><code>$(function () {
+    // Mostrar una alerta de Bootstrap que se oculta sola
+    $('#alerta').removeClass('d-none').hide().fadeIn(300);
+    setTimeout(() =&gt; $('#alerta').fadeOut(300), 3000);
+});</code></pre>`,
+                            nextButton: ' '
+                        }
+                    ]
+                },
+                {
+                    id: 'm05-selectores',
+                    label: 'Selectores',
+                    steps: [
+                        {
+                            title: 'Selectores básicos',
+                            content: `<p>jQuery usa la misma sintaxis de selectores de CSS:</p>
+                            <table class="table">
+                                <tr><th>Selector</th><th>Selecciona</th></tr>
+                                <tr><td><code>$('p')</code></td><td>Todos los párrafos</td></tr>
+                                <tr><td><code>$('#menu')</code></td><td>El elemento con id "menu"</td></tr>
+                                <tr><td><code>$('.btn')</code></td><td>Elementos con la clase "btn"</td></tr>
+                                <tr><td><code>$('ul li')</code></td><td>Los li dentro de un ul</td></tr>
+                                <tr><td><code>$('input[type="email"]')</code></td><td>Por atributo</td></tr>
+                            </table>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_selectores.png',
+                            nextButton: 'Siguiente: Filtros y recorrido'
+                        },
+                        {
+                            title: 'Filtros y recorrido del DOM',
+                            content: `<pre class="code"><code>$('tr:even')            // filas pares
+$('li:first')           // primer li
+$('input:checked')      // casillas marcadas
+
+$('#lista').children()  // hijos directos
+$('.item').parent()     // elemento padre
+$('#tabla').find('td')  // descendientes que sean td
+$('li').eq(2)           // el tercer li</code></pre>`,
+                            nextButton: 'Siguiente: Ejemplo: filtro'
+                        },
+                        {
+                            title: 'Ejemplo: filtrar una lista en tiempo real',
+                            content: `<pre class="code"><code>&lt;input type="text" id="txtFiltro" class="form-control mb-3" placeholder="Buscar laboratorio..."&gt;
+&lt;ul class="list-group" id="lstLabs"&gt;
+    &lt;li class="list-group-item"&gt;Lab 3-12 Redes&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Lab 3-14 Programación&lt;/li&gt;
+    &lt;li class="list-group-item"&gt;Lab 2-05 Diseño&lt;/li&gt;
+&lt;/ul&gt;</code></pre><pre class="code"><code>$('#txtFiltro').on('input', function () {
+    const texto = $(this).val().toLowerCase();
+
+    $('#lstLabs li').each(function () {
+        const coincide = $(this).text().toLowerCase().includes(texto);
+        $(this).toggle(coincide);   // muestra u oculta
+    });
+});</code></pre>`,
+                            nextButton: ' '
+                        }
+                    ]
+                },
+                {
+                    id: 'm05-manipulacion',
+                    label: 'Manipulación de la estructura de contenido',
+                    steps: [
+                        {
+                            title: 'Leer y modificar contenido',
+                            content: `<pre class="code"><code>$('#titulo').text('Nuevo título');        // texto
+$('#contenedor').html('&lt;b&gt;Hola&lt;/b&gt;');  // HTML
+const nombre = $('#txtNombre').val();      // valor de un input
+$('#txtNombre').val('');                   // limpiar input
+
+$('img').attr('alt', 'Descripción');       // atributos
+$('.caja').css('background', '#eee');      // estilos
+$('.caja').addClass('activa').removeClass('oculta');</code></pre>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_manipulacion.png',
+                            nextButton: 'Siguiente: Agregar y eliminar'
+                        },
+                        {
+                            title: 'Agregar, eliminar y mostrar elementos',
+                            content: `<pre class="code"><code>$('#lista').append('&lt;li&gt;Al final&lt;/li&gt;');
+$('#lista').prepend('&lt;li&gt;Al inicio&lt;/li&gt;');
+$('.temporal').remove();
+$('#tabla tbody').empty();   // vacía el contenido
+
+$('#mensaje').hide();
+$('#mensaje').fadeIn(400);
+$('#panel').slideToggle();</code></pre>
+                            <p>
+                                <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
+                                Un uso típico: recorrer un arreglo de datos recibidos del servidor y agregar una fila a una tabla por cada elemento.
+                            </p>`,
+                            nextButton: 'Siguiente: Ejemplo'
+                        },
+                        {
+                            title: 'Ejemplo: llenar una tabla',
+                            content: `<pre class="code"><code>const productos = [
+    { nombre: 'Café', precio: 1500 },
+    { nombre: 'Té',   precio: 1200 }
+];
+
+const $tbody = $('#tblProductos tbody');
+$tbody.empty();
+
+$.each(productos, function (i, p) {
+    $tbody.append(
+        '&lt;tr&gt;&lt;td&gt;' + p.nombre + '&lt;/td&gt;&lt;td&gt;₡' + p.precio + '&lt;/td&gt;&lt;/tr&gt;'
+    );
+});</code></pre>`,
+                            nextButton: 'Siguiente: Tarjetas dinámicas'
+                        },
+                        {
+                            title: 'Generar tarjetas dinámicamente',
+                            content: `<pre class="code"><code>const labs = [
+    { nombre: 'Lab 3-12', capacidad: 30 },
+    { nombre: 'Lab 3-14', capacidad: 25 }
+];
+
+const $contenedor = $('#contenedorLabs').empty();
+
+labs.forEach(lab =&gt; {
+    const $col = $('&lt;div class="col-md-4"&gt;&lt;/div&gt;');
+    const $card = $('&lt;div class="card h-100"&gt;&lt;div class="card-body"&gt;&lt;/div&gt;&lt;/div&gt;');
+
+    $card.find('.card-body')
+        .append($('&lt;h5 class="card-title"&gt;&lt;/h5&gt;').text(lab.nombre))
+        .append($('&lt;p class="card-text"&gt;&lt;/p&gt;').text('Capacidad: ' + lab.capacidad))
+        .append('&lt;button class="btn btn-primary btn-reservar"&gt;Reservar&lt;/button&gt;');
+
+    $col.append($card).appendTo($contenedor);
+});</code></pre><p>
+    <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
+    Crear elementos con <code>$('&lt;etiqueta&gt;')</code> y asignar el texto con <code>.text()</code> evita inyectar HTML no deseado.
+</p>`,
+                            nextButton: 'Siguiente: Formularios con jQuery'
+                        },
+                        {
+                            title: 'Leer, llenar y limpiar formularios',
+                            content: `<pre class="code"><code>// Convertir el formulario en objeto
+function datosFormulario($form) {
+    const datos = {};
+    $.each($form.serializeArray(), (i, campo) =&gt; datos[campo.name] = campo.value);
+    return datos;
+}
+
+const datos = datosFormulario($('#frmReserva'));
+
+// Llenar un formulario para editar
+function llenarFormulario(reserva) {
+    $('#selLab').val(reserva.laboratorio);
+    $('#txtFecha').val(reserva.fecha.slice(0, 10));
+    $(\`input[name="bloque"][value="\${reserva.bloque}"]\`).prop('checked', true);
+}
+
+// Llenar un &lt;select&gt; desde un arreglo
+function llenarSelect(labs) {
+    const $sel = $('#selLab').empty().append('&lt;option value=""&gt;Seleccione...&lt;/option&gt;');
+    labs.forEach(l =&gt; $sel.append($('&lt;option&gt;').val(l._id).text(l.nombre)));
+}
+
+// Limpiar
+$('#frmReserva')[0].reset();
+$('#frmReserva .is-invalid').removeClass('is-invalid');</code></pre>`,
+                            nextButton: ' '
+                        }
+                    ]
+                },
+                {
+                    id: 'm05-eventos',
+                    label: 'Manejo de eventos con jQuery',
+                    steps: [
+                        {
+                            title: 'Eventos con .on()',
+                            content: `<pre class="code"><code>$('#btnGuardar').on('click', function () {
+    alert('Guardado');
+});
+
+$('#txtBuscar').on('keyup', function () {
+    console.log($(this).val());
+});
+
+$('#frmRegistro').on('submit', function (e) {
+    e.preventDefault();
+    // validar y enviar datos
+});</code></pre>
+                            <p><code>$(this)</code> hace referencia al elemento que disparó el evento.</p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_eventos.png',
+                            nextButton: 'Siguiente: Delegación'
+                        },
+                        {
+                            title: 'Delegación de eventos',
+                            content: `<p>Los elementos agregados dinámicamente (por ejemplo, filas nuevas de una tabla) no reciben eventos asignados antes. La solución es <strong>delegar</strong> el evento en un elemento padre que sí existe:</p>
+<pre class="code"><code>$('#tblProductos').on('click', '.btn-eliminar', function () {
+    $(this).closest('tr').remove();
+});</code></pre>`,
+                            nextButton: 'Siguiente: AJAX'
+                        },
+                        {
+                            title: 'Solicitudes al servidor con jQuery (AJAX)',
+                            content: `<pre class="code"><code>$.ajax({
+    url: '/api/productos',
+    method: 'GET',
+    success: function (datos) {
+        console.log(datos);
+    },
+    error: function () {
+        alert('No se pudieron cargar los productos');
+    }
+});</code></pre>
+                            <p>Esta misma idea se retoma en el módulo 6 con <code>fetch</code> para enviar y recibir datos de la API construida con Express.</p>`,
+                            nextButton: 'Siguiente: Validar con jQuery'
+                        },
+                        {
+                            title: 'Validar un formulario con jQuery y Bootstrap',
+                            content: `<pre class="code"><code>$('#frmRegistro').on('submit', function (e) {
+    e.preventDefault();
+    let valido = true;
+
+    const $nombre = $('#txtNombre');
+    if ($nombre.val().trim().length &lt; 3) {
+        $nombre.addClass('is-invalid');
+        valido = false;
+    } else {
+        $nombre.removeClass('is-invalid').addClass('is-valid');
+    }
+
+    const $correo = $('#txtCorreo');
+    const correoOk = /^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test($correo.val());
+    $correo.toggleClass('is-invalid', !correoOk).toggleClass('is-valid', correoOk);
+    valido = valido &amp;&amp; correoOk;
+
+    if (valido) {
+        // enviar datos al servidor
+    }
+});
+
+// Quitar el error mientras el usuario corrige
+$('#frmRegistro input').on('input', function () {
+    $(this).removeClass('is-invalid');
+});</code></pre>`,
+                            nextButton: 'Siguiente: Modal con jQuery'
+                        },
+                        {
+                            title: 'Modal de confirmación con jQuery',
+                            content: `<p>Se combina la delegación de eventos con el modal de Bootstrap del módulo 3:</p><pre class="code"><code>const modal = new bootstrap.Modal('#mdlConfirmar');
+let idSeleccionado = null;
+
+// Botón "Eliminar" de cada fila (creada dinámicamente)
+$('#tblReservas').on('click', '.btn-eliminar', function () {
+    idSeleccionado = $(this).data('id');     // lee data-id="..."
+    modal.show();
+});
+
+// Confirmar dentro del modal
+$('#btnEliminar').on('click', function () {
+    $(\`#tblReservas tr[data-id="\${idSeleccionado}"]\`).fadeOut(300, function () {
+        $(this).remove();
+    });
+    modal.hide();
+});</code></pre>`,
+                            nextButton: 'Siguiente: POST con jQuery'
+                        },
+                        {
+                            title: 'Enviar datos con $.ajax (POST)',
+                            content: `<pre class="code"><code>$('#frmReserva').on('submit', function (e) {
+    e.preventDefault();
+
+    $.ajax({
+        url: '/api/reservas',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({
+            laboratorio: $('#selLab').val(),
+            fecha: $('#txtFecha').val(),
+            bloque: $('input[name="bloque"]:checked').val()
+        }),
+        success: function (reserva) {
+            $('#alerta').removeClass('d-none alert-danger').addClass('alert-success')
+                        .text('Reserva creada');
+            $('#frmReserva')[0].reset();
+        },
+        error: function (xhr) {
+            $('#alerta').removeClass('d-none alert-success').addClass('alert-danger')
+                        .text(xhr.responseJSON?.mensaje || 'Error al reservar');
+        }
+    });
+});</code></pre>`,
                             nextButton: ' '
                         }
                     ]
