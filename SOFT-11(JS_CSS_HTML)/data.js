@@ -2491,22 +2491,81 @@ $('#btnEliminar').on('click', function () {
                         },
                         {
                             title: 'Estructura de carpetas',
-                            content: `<pre class="codigo"><code>proyecto/
-├── public/              ← frontend
+                            content: `<p>Hay dos formas comunes de organizar el proyecto. Ambas separan el código del navegador (frontend) del código del servidor (backend).</p>
+                            <div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start;">
+                                <div style="flex: 1 1 280px; min-width: 0;">
+                                    <p style="font-weight: 600; color: #164a98; margin: 0 0 6px 0;"><i class="fas fa-folder" style="color: #00928d;" aria-hidden="true"></i> Opción A: un solo proyecto</p>
+<pre class="codigo"><code>proyecto/
+├── public/            ← frontend
 │   ├── index.html
 │   ├── css/
-│   └── js/
-├── models/              ← esquemas de Mongoose
+│   ├── js/
+│   └── assets/
+├── models/            ← esquemas Mongoose
 │   └── usuario.js
-├── routes/              ← rutas de la API
+├── routes/            ← rutas de la API
 │   └── usuarios.js
-├── .env                 ← variables secretas (no se sube)
+├── .env               ← secretos (no se sube)
 ├── .gitignore
 ├── package.json
-└── app.js               ← punto de entrada del servidor</code></pre>
+└── app.js             ← inicia el servidor</code></pre>
+                                    <p>Express sirve las páginas y la API desde el <strong>mismo servidor</strong>. Es la más sencilla para empezar.</p>
+                                </div>
+                                <div style="flex: 1 1 280px; min-width: 0;">
+                                    <p style="font-weight: 600; color: #164a98; margin: 0 0 6px 0;"><i class="fas fa-folder-tree" style="color: #00928d;" aria-hidden="true"></i> Opción B: frontend y backend separados</p>
+<pre class="codigo"><code>proyecto/
+├── frontend/
+│   ├── assets/        ← imágenes, íconos
+│   ├── css/
+│   ├── js/
+│   ├── index.html
+│   └── registro.html
+├── backend/
+│   ├── models/
+│   │   └── usuario.js
+│   ├── routes/
+│   │   └── usuarios.js
+│   ├── .env
+│   ├── package.json
+│   └── app.js         ← o index.js
+└── .gitignore</code></pre>
+                                    <p>Cada parte vive en su <strong>propia carpeta</strong>. Es la estructura más usada en empresas.</p>
+                                </div>
+                            </div>
                             <p>
                                 <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
-                                Cada colección de la base de datos suele tener su propio modelo y su propio archivo de rutas.
+                                En ambas, cada colección de la base de datos suele tener su propio modelo y su propio archivo de rutas.
+                            </p>`,
+                            nextButton: 'Siguiente: Frontend y backend separados'
+                        },
+                        {
+                            title: 'Conectar el frontend y el backend separados',
+                            content: `<p>En la <strong>opción B</strong>, los comandos de Node (<code>npm install</code>, <code>npm run dev</code>) se ejecutan <strong>dentro de la carpeta backend</strong>, porque ahí están <code>package.json</code> y <code>.env</code>.</p>
+                            <p>Hay dos maneras de que el frontend llegue al navegador:</p>
+                            <ol>
+                                <li><strong>Express sirve la carpeta frontend</strong> (un solo servidor):</li>
+                            </ol>
+<pre class="codigo"><code>// backend/app.js
+const path = require('path');
+
+// __dirname es la carpeta backend; '..' sube un nivel para llegar a frontend
+app.use(express.static(path.join(__dirname, '..', 'frontend')));
+
+// En el frontend, fetch usa rutas relativas
+fetch('/api/usuarios');</code></pre>
+                            <ol start="2">
+                                <li><strong>Dos servidores</strong>: el frontend con Live Server (puerto 5500) y el backend con Express (puerto 3000). El navegador bloquea las solicitudes entre puertos distintos, así que se habilita <strong>CORS</strong> en el backend:</li>
+                            </ol>
+<pre class="codigo"><code>npm install cors</code></pre>
+<pre class="codigo"><code>// backend/app.js
+const cors = require('cors');
+app.use(cors({ origin: 'http://127.0.0.1:5500' }));   // solo se permite este origen
+
+// En el frontend, fetch usa la dirección completa del backend
+fetch('http://localhost:3000/api/usuarios');</code></pre>
+                            <p>
+                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
+                                No use <code>cors()</code> sin <code>origin</code> en producción: permitiría que cualquier sitio consulte su API.
                             </p>`,
                             nextButton: 'Siguiente: API REST'
                         },
@@ -2581,6 +2640,197 @@ module.exports = router;</code></pre>`,
                     ]
                 },
                 {
+                    id: 'm06-modelado',
+                    label: 'Modelado de la base de datos',
+                    steps: [
+                        {
+                            title: 'Pensar la base de datos antes de programar',
+                            content: `<p>MongoDB no obliga a definir tablas ni un diagrama entidad-relación formal, pero eso <strong>no significa que no haya que diseñar</strong>. Un mal modelo obliga a reescribir esquemas, rutas y pantallas.</p>
+                            <p>En lugar de un diagrama E-R, se elabora un <strong>diagrama de colecciones</strong> siguiendo estos pasos:</p>
+                            <ol>
+                                <li>Identificar las <strong>entidades</strong> (lo que se guarda).</li>
+                                <li>Definir sus <strong>atributos y tipos de dato</strong>.</li>
+                                <li>Identificar las <strong>relaciones</strong> y su <strong>cardinalidad</strong>.</li>
+                                <li>Listar las <strong>consultas más frecuentes</strong> (qué muestra cada pantalla).</li>
+                                <li>Decidir si cada relación se <strong>embebe o se referencia</strong>.</li>
+                                <li>Escribir un <strong>documento de ejemplo</strong> de cada colección.</li>
+                            </ol>
+                            <p>
+                                <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
+                                En bases relacionales se modela según la <strong>estructura</strong> de los datos; en MongoDB, sobre todo según <strong>cómo se van a consultar</strong>.
+                            </p>`,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m06_modelado.png',
+                            nextButton: 'Siguiente: Entidades y atributos'
+                        },
+                        {
+                            title: 'Pasos 1 y 2: entidades y atributos',
+                            content: `<p>Las entidades salen de los <strong>requerimientos y casos de uso</strong> (módulos 1 y 2). Ejemplo con SICEN:</p>
+                            <table class="table">
+                                <tr><th>Entidad</th><th>Atributos principales</th></tr>
+                                <tr><td>Usuario</td><td>nombre, correo, clave, rol</td></tr>
+                                <tr><td>Centro educativo</td><td>nombre, código, provincia, dirección, teléfonos</td></tr>
+                                <tr><td>Censo</td><td>nombre, fecha de apertura, fecha de cierre, estado</td></tr>
+                                <tr><td>Formulario</td><td>nombre, preguntas</td></tr>
+                                <tr><td>Respuesta</td><td>censo, centro, formulario, valores, fecha de envío</td></tr>
+                            </table>
+                            <ul>
+                                <li>Defina el <strong>tipo</strong> de cada atributo: String, Number, Date, Boolean, ObjectId, arreglo u objeto.</li>
+                                <li>Indique cuáles son <strong>obligatorios</strong> y cuáles <strong>únicos</strong> (por ejemplo, el código del centro).</li>
+                                <li>Use nombres en <strong>camelCase</strong> y en singular para los modelos (<code>Usuario</code>, <code>CentroEducativo</code>).</li>
+                            </ul>`,
+                            nextButton: 'Siguiente: Relaciones'
+                        },
+                        {
+                            title: 'Paso 3: relaciones y cardinalidad',
+                            content: `<p>Igual que en un modelo E-R, se identifica cómo se relacionan las entidades y <strong>cuántos</strong> elementos participan:</p>
+                            <table class="table">
+                                <tr><th>Relación</th><th>Cardinalidad</th><th>Pregunta para identificarla</th></tr>
+                                <tr><td>Centro → dirección</td><td>1 a 1</td><td>¿Un centro tiene una sola dirección?</td></tr>
+                                <tr><td>Centro → teléfonos</td><td>1 a pocos</td><td>¿Cuántos teléfonos puede tener? (2 o 3)</td></tr>
+                                <tr><td>Censo → respuestas</td><td>1 a muchos</td><td>¿Cuántas respuestas recibe un censo? (miles)</td></tr>
+                                <tr><td>Censo ↔ centros</td><td>muchos a muchos</td><td>¿Un centro participa en varios censos y un censo incluye varios centros?</td></tr>
+                                <tr><td>Censo ↔ formularios</td><td>muchos a muchos</td><td>¿Un formulario se reutiliza en varios censos?</td></tr>
+                            </table>
+                            <p>
+                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
+                                No basta con decir "uno a muchos": importa <strong>cuántos son "muchos"</strong>. No es lo mismo 3 teléfonos que 5000 respuestas.
+                            </p>`,
+                            nextButton: 'Siguiente: Consultas frecuentes'
+                        },
+                        {
+                            title: 'Paso 4: consultas más frecuentes',
+                            content: `<p>Antes de decidir la estructura, liste qué datos necesita cada pantalla o reporte:</p>
+                            <table class="table">
+                                <tr><th>Pantalla / consulta</th><th>Datos que se muestran juntos</th></tr>
+                                <tr><td>Ficha del centro educativo</td><td>Centro + dirección + teléfonos</td></tr>
+                                <tr><td>Lista de censos abiertos</td><td>Nombre del censo + fechas</td></tr>
+                                <tr><td>Detalle de un censo</td><td>Censo + formularios + centros asignados</td></tr>
+                                <tr><td>Avance del censo</td><td>Cantidad de respuestas por centro</td></tr>
+                            </table>
+                            <ul>
+                                <li>Lo que <strong>siempre se consulta junto</strong> es candidato a ir en el mismo documento.</li>
+                                <li>Lo que se consulta, actualiza o comparte <strong>por separado</strong> es candidato a su propia colección.</li>
+                            </ul>`,
+                            nextButton: 'Siguiente: ¿Embeber o referenciar?'
+                        },
+                        {
+                            title: 'Paso 5: ¿embeber o referenciar?',
+                            content: `<table class="table">
+                                <tr><th></th><th>Embeber (documento dentro de otro)</th><th>Referenciar (guardar el _id)</th></tr>
+                                <tr><td><strong>Cuándo</strong></td><td>Los datos se consultan siempre juntos y son pocos.</td><td>Los datos se consultan por separado, son muchos o se comparten.</td></tr>
+                                <tr><td><strong>Ventaja</strong></td><td>Una sola consulta trae todo.</td><td>No se duplica información; cada parte se actualiza sola.</td></tr>
+                                <tr><td><strong>Desventaja</strong></td><td>El documento crece; si el dato se repite, hay que actualizarlo en varios lugares.</td><td>Se necesita <code>populate()</code> (una consulta extra).</td></tr>
+                                <tr><td><strong>Ejemplo</strong></td><td>Dirección y teléfonos del centro.</td><td>Respuestas de un censo; centros asignados.</td></tr>
+                            </table>
+                            <p><strong>Reglas prácticas según la cardinalidad:</strong></p>
+                            <ul>
+                                <li><strong>1 a 1</strong> → embeber.</li>
+                                <li><strong>1 a pocos</strong> → embeber como arreglo.</li>
+                                <li><strong>1 a muchos</strong> (cientos o miles) → referenciar desde el lado de los "muchos" (cada respuesta guarda el _id del censo).</li>
+                                <li><strong>Muchos a muchos</strong> → arreglo de referencias en el lado que más se consulta.</li>
+                            </ul>
+                            <p>
+                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
+                                Un documento de MongoDB tiene un límite de <strong>16 MB</strong>: nunca embeba un arreglo que pueda crecer sin límite.
+                            </p>`,
+                            nextButton: 'Siguiente: Diagrama de colecciones'
+                        },
+                        {
+                            title: 'Paso 6: diagrama de colecciones',
+                            content: `<p>El resultado del diseño se resume en un diagrama: cada caja es una <strong>colección</strong>, lo embebido va dentro de la caja y las referencias se dibujan con flechas.</p>
+<pre class="codigo"><code>┌──────────────────────┐        ┌──────────────────────┐
+│ centros              │        │ formularios          │
+│ _id                  │        │ _id                  │
+│ nombre               │        │ nombre               │
+│ codigo (único)       │        │ preguntas [ ]  ◄ emb.│
+│ direccion { }  ◄ emb.│        └──────────▲───────────┘
+│ telefonos [ ]  ◄ emb.│                   │ ref
+└──────────▲───────────┘        ┌──────────┴───────────┐
+           │ ref                │ censos               │
+           └────────────────────┤ _id                  │
+                                │ nombre, fechas       │
+                                │ centros [ObjId]      │
+                                │ formularios [ObjId]  │
+                                └──────────▲───────────┘
+┌──────────────────────┐                   │ ref
+│ respuestas           │───────────────────┘
+│ censo    (ObjectId)  │
+│ centro   (ObjectId)  │
+│ valores { }          │
+└──────────────────────┘</code></pre>
+<pre class="codigo"><code>// Documento de ejemplo: colección "centros"
+{
+  "_id": "6650a1...",
+  "nombre": "Liceo de Costa Rica",
+  "codigo": "4021",
+  "direccion": { "provincia": "San José", "canton": "Central" },   // embebido 1 a 1
+  "telefonos": ["2222-1111", "2222-2222"]                           // embebido 1 a pocos
+}
+
+// Documento de ejemplo: colección "respuestas"
+{
+  "_id": "6650f9...",
+  "censo": "6650c3...",      // referencia: un censo tiene miles de respuestas
+  "centro": "6650a1...",     // referencia
+  "valores": { "matriculaInicial": 850, "grupos": 24 },
+  "fechaEnvio": "2026-10-15"
+}</code></pre>`,
+                            nextButton: 'Siguiente: Del diagrama a Mongoose'
+                        },
+                        {
+                            title: 'Del diagrama a los esquemas de Mongoose',
+                            content: `<p>Cada caja del diagrama se convierte en un <strong>modelo</strong>; lo embebido, en un subdocumento; y cada flecha, en un campo <code>ObjectId</code> con <code>ref</code>:</p>
+<pre class="codigo"><code>// models/centro.js
+const centroSchema = new mongoose.Schema({
+    nombre:    { type: String, required: true },
+    codigo:    { type: String, required: true, unique: true },
+    direccion: {                                   // embebido (1 a 1)
+        provincia: String,
+        canton: String
+    },
+    telefonos: [String]                            // embebido (1 a pocos)
+});
+
+// models/censo.js
+const censoSchema = new mongoose.Schema({
+    nombre:       { type: String, required: true },
+    fechaApertura: Date,
+    fechaCierre:   Date,
+    centros:     [{ type: mongoose.Schema.Types.ObjectId, ref: 'Centro' }],     // muchos a muchos
+    formularios: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Formulario' }]
+});
+
+// models/respuesta.js
+const respuestaSchema = new mongoose.Schema({
+    censo:  { type: mongoose.Schema.Types.ObjectId, ref: 'Censo', required: true },  // 1 a muchos
+    centro: { type: mongoose.Schema.Types.ObjectId, ref: 'Centro', required: true },
+    valores: Object,
+    fechaEnvio: { type: Date, default: Date.now }
+});</code></pre>
+                            <p>
+                                <i class="fas fa-lightbulb" style="color: #00928d;" aria-hidden="true"></i>
+                                Con las referencias, <code>Censo.findById(id).populate('centros')</code> trae los centros completos en la misma consulta.
+                            </p>`,
+                            nextButton: 'Siguiente: Errores comunes'
+                        },
+                        {
+                            title: 'Errores comunes al modelar en MongoDB',
+                            content: `<table class="table">
+                                <tr><th>Error</th><th>Consecuencia</th><th>Mejor práctica</th></tr>
+                                <tr><td>Copiar el modelo relacional: una colección por tabla y todo referenciado.</td><td>Muchas consultas y <code>populate()</code> para mostrar una sola pantalla.</td><td>Embeber lo que siempre se consulta junto.</td></tr>
+                                <tr><td>Embeber arreglos que crecen sin límite (todas las respuestas dentro del censo).</td><td>Documentos enormes y lentos; se puede llegar al límite de 16 MB.</td><td>Referenciar desde el lado de los "muchos".</td></tr>
+                                <tr><td>Duplicar datos que cambian con frecuencia (el nombre del director en cada respuesta).</td><td>Hay que actualizar muchos documentos y quedan datos inconsistentes.</td><td>Referenciar lo que cambia; duplicar solo lo que casi nunca cambia.</td></tr>
+                                <tr><td>Diseñar sin pensar en las pantallas y reportes.</td><td>El modelo no responde a lo que el usuario necesita ver.</td><td>Listar las consultas frecuentes antes de decidir.</td></tr>
+                            </table>
+                            <p>
+                                <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
+                                Entregue el diagrama de colecciones y los documentos de ejemplo <strong>antes</strong> de programar los esquemas: es más fácil corregir un dibujo que el código.
+                            </p>`,
+                            nextButton: ' '
+                        }
+                    ]
+                },
+                {
                     id: 'm06-nodejs',
                     label: 'Entorno de ejecución Node.js',
                     steps: [
@@ -2640,7 +2890,7 @@ mongoose.connect(process.env.MONGO_URI)
                         },
                         {
                             title: 'Del modelo de datos al esquema de Mongoose',
-                            content: `<p>El modelado hecho en el módulo 2 se traduce en un <strong>esquema</strong>: define los campos, sus tipos y sus reglas de validación.</p>
+                            content: `<p>El modelado del tema anterior se traduce en un <strong>esquema</strong>: define los campos, sus tipos y sus reglas de validación.</p>
 <pre class="codigo"><code>// models/usuario.js
 const mongoose = require('mongoose');
 
@@ -3217,7 +3467,6 @@ function manejarError(err, res) {
                 }
             ]
         },
-
         // =====================================================================
         // MÓDULO 7: ASPECTOS DEL DESARROLLO DEL SOFTWARE
         // =====================================================================
