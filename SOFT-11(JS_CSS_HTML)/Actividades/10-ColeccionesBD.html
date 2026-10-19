@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Modelado de colecciones de SICEN</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-modelado-colecciones">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-database"></i>
+            </span>
+            <h3 id="ejercicio-modelado-colecciones"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Ejercicio: Modelado de colecciones de SICEN
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong>
+            Diseñar el <strong>modelo de datos de SICEN</strong> para MongoDB, identificando al menos
+            <strong>5 entidades</strong> con sus <strong>atributos</strong>, <strong>tipos de datos</strong>,
+            <strong>relaciones</strong> y <strong>cardinalidad</strong>, y justificar para cada relación si los datos
+            se <strong>embeben</strong> o se <strong>referencian</strong>.
+        </div>
+
+        <!-- CONTEXTO -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-users" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Contexto
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">
+                SICEN es el sistema con el que se configuran los <strong>censos escolares</strong>, se asignan a los
+                <strong>centros educativos</strong> y se recopilan las <strong>respuestas</strong> de sus formularios.
+                Antes de programar los esquemas de Mongoose, el equipo debe acordar <strong>cómo se guardará la información</strong>.
+            </p>
+
+
+            <!-- <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-lightbulb" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Algunas entidades posibles (no son las únicas)
+                </p>
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    Usuario · Rol · Dirección regional · Centro educativo · Censo · Formulario · Pregunta ·
+                    Respuesta · Plantilla · Responsable · Notificación · Bitácora de cambios
+                </p>
+            </div>
+ -->
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> el modelo debe responder a <strong>las necesidades</strong> del cliente. 
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 1 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Identificar las entidades
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Revise los requerimientos y los casos de uso, y subraye los <strong>sustantivos</strong> que representan
+                información que el sistema debe guardar.
+            </p>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Identificar <strong>mínimo 5 entidades</strong>.</li>
+                    <li>Escribir para cada una una <strong>descripción de una línea</strong>: qué representa y para qué la usa el sistema.</li>
+                    <li>Indicar el <strong>requerimiento o caso de uso</strong> del que surge (por ejemplo, RF-03 o CU-02).</li>
+                    <li>Nombrar los modelos en <strong>singular</strong> y con <strong>PascalCase</strong> (<em>CentroEducativo</em>, <em>Censo</em>).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 2 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Definir los atributos y sus tipos de datos
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Elabore una tabla por entidad con sus atributos. Use los tipos de datos de Mongoose:
+                <strong>String, Number, Date, Boolean, ObjectId, Array</strong> u <strong>objeto (subdocumento)</strong>.
+            </p>
+
+            <div style="overflow-x: auto;" tabindex="0" role="region" aria-label="Plantilla de tabla de atributos, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Plantilla de ejemplo: entidad CentroEducativo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Atributo</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Tipo</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">¿Obligatorio?</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">¿Único?</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Regla o ejemplo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">nombre</td><td style="padding: 10px; border: 1px solid #c8d1df;">String</td><td style="padding: 10px; border: 1px solid #c8d1df;">Sí</td><td style="padding: 10px; border: 1px solid #c8d1df;">No</td><td style="padding: 10px; border: 1px solid #c8d1df;">Mínimo 3 caracteres. Ej.: "Liceo de Costa Rica"</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">codigo</td><td style="padding: 10px; border: 1px solid #c8d1df;">String</td><td style="padding: 10px; border: 1px solid #c8d1df;">Sí</td><td style="padding: 10px; border: 1px solid #c8d1df;">Sí</td><td style="padding: 10px; border: 1px solid #c8d1df;">4 o 5 dígitos. Ej.: "4021"</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">cantidadEstudiantes</td><td style="padding: 10px; border: 1px solid #c8d1df;">Number</td><td style="padding: 10px; border: 1px solid #c8d1df;">Sí</td><td style="padding: 10px; border: 1px solid #c8d1df;">No</td><td style="padding: 10px; border: 1px solid #c8d1df;">Entre 1 y 5000</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">direccion</td><td style="padding: 10px; border: 1px solid #c8d1df;">Objeto</td><td style="padding: 10px; border: 1px solid #c8d1df;">Sí</td><td style="padding: 10px; border: 1px solid #c8d1df;">No</td><td style="padding: 10px; border: 1px solid #c8d1df;">{ provincia, canton, distrito, senas }</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Cada entidad debe tener <strong>al menos 4 atributos</strong> (sin contar <em>_id</em>).</li>
+                    <li>Usar <strong>al menos 4 tipos de datos distintos</strong> en todo el modelo.</li>
+                    <li>Incluir <strong>al menos un atributo único</strong> y <strong>un atributo con valores permitidos</strong> (por ejemplo, el estado de un censo: abierto, cerrado, anulado).</li>
+                    <li>Las reglas deben ser coherentes con las <strong>validaciones del formulario</strong> que ya programaron con JavaScript.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 3 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                Identificar las relaciones y su cardinalidad
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Indique cómo se relacionan las entidades y <strong>cuántos</strong> elementos participan.
+                En MongoDB no basta con decir "uno a muchos": hay que estimar <strong>cuántos son "muchos"</strong>.
+            </p>
+
+            <div style="overflow-x: auto;" tabindex="0" role="region" aria-label="Plantilla de tabla de relaciones, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Plantilla de ejemplo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Entidad A</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Entidad B</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Cardinalidad</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Cantidad estimada</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Explicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">CentroEducativo</td><td style="padding: 10px; border: 1px solid #c8d1df;">Teléfono</td><td style="padding: 10px; border: 1px solid #c8d1df;">1 a pocos</td><td style="padding: 10px; border: 1px solid #c8d1df;">1 a 3</td><td style="padding: 10px; border: 1px solid #c8d1df;">Un centro tiene pocos teléfonos de contacto.</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Identificar <strong>al menos 5 relaciones</strong>.</li>
+                    <li>Incluir <strong>al menos una</strong> de cada tipo: <strong>1 a 1</strong> o <strong>1 a pocos</strong>, <strong>1 a muchos</strong> y <strong>muchos a muchos</strong>.</li>
+                    <li>Indicar la <strong>cantidad estimada</strong> de elementos en cada relación.</li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- ===================== PARTE 5 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-4" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+                Decidir: ¿embeber o referenciar?
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Para cada relación de la parte 3, decida cómo se representará en MongoDB y <strong>justifique</strong> la decisión
+                con la cardinalidad y las consultas de la parte 4.
+            </p>
+
+            <div style="overflow-x: auto;" tabindex="0" role="region" aria-label="Guía para decidir entre embeber y referenciar, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Guía rápida</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Cardinalidad</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Recomendación habitual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">1 a 1</td><td style="padding: 10px; border: 1px solid #c8d1df;">Embeber como objeto.</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">1 a pocos</td><td style="padding: 10px; border: 1px solid #c8d1df;">Embeber como arreglo.</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">1 a muchos (cientos o miles)</td><td style="padding: 10px; border: 1px solid #c8d1df;">Referenciar desde el lado de los "muchos".</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">Muchos a muchos</td><td style="padding: 10px; border: 1px solid #c8d1df;">Arreglo de referencias en el lado que más se consulta.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>El modelo debe tener <strong>al menos 1 relación embebida</strong> y <strong>al menos 2 relaciones por referencia</strong>.</li>
+                    <li>Cada decisión lleva una <strong>justificación</strong> de 1 o 2 líneas.</li>
+                    <li>Verificar que ningún documento tenga un <strong>arreglo que crezca sin límite</strong> (recuerde el máximo de 16 MB por documento).</li>
+                    <li>Evitar <strong>duplicar datos que cambian</strong> con frecuencia.</li>
+                </ul>
+            </div>
+
+            <div
+                style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Importante:</strong> la guía rápida no es una regla absoluta. Una decisión distinta es válida
+                    si está bien justificada con las consultas del sistema.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 6 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-5" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Elaborar el diagrama de colecciones y los documentos de ejemplo
+            </h4>
+
+
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-diagram-project" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    El diagrama debe mostrar
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Una <strong>caja por colección</strong>, con el nombre de la colección y sus atributos con su tipo.</li>
+                    <li>Los datos <strong>embebidos dentro</strong> de la caja de su colección.</li>
+                    <li>Las <strong>referencias como flechas</strong> entre cajas, con la cardinalidad escrita sobre la flecha.</li>
+                    <li>Una <strong>leyenda</strong> que explique la simbología utilizada.</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+
+
+    </section>
+
+</body>
+
+</html>
