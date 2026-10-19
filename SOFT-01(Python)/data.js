@@ -2413,8 +2413,12 @@ for i in range(1, 4):
                             title: '¿Qué es un flujo iterativo?',
                             content: `<p>Es el camino que sigue la ejecución cuando encuentra una estructura iterativa. A diferencia del flujo secuencial (siempre hacia adelante) y del condicional (que se bifurca), el flujo iterativo <strong>regresa a un punto anterior</strong> para volver a ejecutar un bloque.</p>
                             <p>Cada vez que regresa, evalúa la condición: si es verdadera, repite; si es falsa, sale del ciclo y continúa con la siguiente instrucción.</p>
+                            <img
+                                src="https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/flujoIterativo.png"
+                                alt="Diagrama de flujo iterativo"
+                                style="display: block; max-width: 100%; height: auto; margin-top: 20px;"
+                            >
                             `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-01(Python)/imgs/flujoIterativo.png',
                             nextButton: 'Siguiente: Representación'
                         },
                         {
