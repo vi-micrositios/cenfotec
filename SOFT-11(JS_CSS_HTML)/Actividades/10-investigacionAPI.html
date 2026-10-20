@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: APIs y protocolo HTTP</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="investigacion-apis-http">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <h3 id="investigacion-apis-http"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Investigación: APIs y protocolo HTTP
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong>
+            Comprender los conceptos clave de las <strong>APIs</strong> y del <strong>protocolo HTTP</strong>
+            antes de construir el back-end con <strong>Node.js</strong>.
+        </div>
+
+
+
+        <!-- ===================== PARTE 1 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                APIs (Interfaces de Programación de Aplicaciones)
+            </h4>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-circle-question" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Investigue y responda
+                </p>
+                <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>¿Qué es una API y cuál es su propósito?</li>
+                    <li>Explique la diferencia entre una <strong>API pública</strong> y una <strong>API privada</strong>.</li>
+                    <li>Mencione <strong>dos ejemplos reales</strong> de APIs públicas e indique qué datos o servicios ofrece cada una.</li>
+                    <li>La API que construirán para el proyecto, ¿será pública o privada? Justifique.</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 2 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Protocolo HTTP
+            </h4>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-circle-question" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Investigue y responda
+                </p>
+                <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>¿Qué es el protocolo HTTP y para qué se utiliza? ¿Qué diferencia hay entre HTTP y HTTPS?</li>
+                    <li>Describa la <strong>estructura básica de una petición HTTP</strong> y de una <strong>respuesta HTTP</strong>.</li>
+                    <li>Explique cada una de las partes de una solicitud: <strong>método</strong>, <strong>URL</strong>, <strong>encabezados (headers)</strong> y <strong>cuerpo (body)</strong>. Dé un ejemplo de cada una.</li>
+                    <li>¿Qué es un <strong>código de estado</strong>? Explique qué indican los grupos 2xx, 3xx, 4xx y 5xx, con un ejemplo de cada grupo (por ejemplo, 200, 201, 400, 404, 409 y 500).</li>
+                    <li>¿Qué es el formato <strong>JSON</strong> y por qué es el más usado para intercambiar datos entre el front-end y el back-end?</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 3 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                API REST y API RESTful
+            </h4>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-circle-question" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Investigue y responda
+                </p>
+                <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>¿Qué es REST?</li>
+                    <li>Explique la diferencia entre una <strong>API REST</strong> y una <strong>API RESTful</strong>.</li>
+                    <li>Describa las <strong>características (restricciones) de REST</strong>: cliente-servidor, sin estado (stateless), caché, interfaz uniforme, sistema en capas.</li>
+                    <li>¿Por qué se recomienda que las rutas usen <strong>sustantivos en plural</strong> (<em>/empleados</em>) y no verbos (<em>/obtenerEmpleados</em>)?</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 4 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-4" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Métodos del protocolo HTTP
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Complete una tabla como la siguiente con los métodos <strong>GET, POST, PUT, PATCH y DELETE</strong>.
+            </p>
+
+            <div style="overflow-x: auto;" tabindex="0" role="region" aria-label="Tabla de métodos HTTP para completar, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Plantilla para completar</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Método</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">¿Para qué se usa?</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">¿Lleva cuerpo?</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Ejemplo en el proyecto</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Código de estado exitoso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;"><strong>GET</strong></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;"><strong>POST</strong></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;"><strong>PUT</strong></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;"><strong>PATCH</strong></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;"><strong>DELETE</strong></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td><td style="padding: 10px; border: 1px solid #c8d1df;"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-circle-question" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Además, responda
+                </p>
+                <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>¿Cuál es la diferencia entre <strong>PUT</strong> y <strong>PATCH</strong>?</li>
+                    <li>¿Qué significa que un método sea <strong>idempotente</strong>? ¿Cuáles de los cinco métodos lo son?</li>
+                    <li>¿Qué diferencia hay entre enviar datos en la <strong>URL</strong> (parámetros de ruta y de consulta, después del <em>?</em>) y enviarlos en el <strong>cuerpo</strong>? ¿Cuándo conviene cada uno?</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 6 ===================== -->
+           <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-5" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Aplicar los conceptos al proyecto SICEN
+            </h4>
+ 
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Con base en el <strong>modelado de colecciones de SICEN</strong> que elaboró su grupo, diseñe (sin programar)
+                los endpoints de la API. Recuerde: cada endpoint responde a una <strong>necesidad del negocio</strong>,
+                no a un "obtener todo".
+            </p>
+ 
+            <p style="margin: 0 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;">
+                <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                Requerimientos comunes para todos los grupos
+            </p>
+            <ol style="margin: 0 0 16px 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                <li>Registrar un centro educativo.</li>
+                <li>Crear un censo con su fecha de apertura y de cierre.</li>
+                <li>Asignar centros educativos a un censo.</li>
+                <li>Consultar los censos abiertos de un centro educativo, a partir de su código institucional.</li>
+                <li>Registrar las respuestas de un centro educativo a un formulario de un censo.</li>
+                <li>Consultar el avance de un censo: cuántos centros asignados ya enviaron sus respuestas y cuántos faltan.</li>
+            </ol>
+ 
+            <p style="margin: 0 0 8px 0; font-weight: 600; color: #164a98; font-size: 15px;">
+                <i class="fa-solid fa-plus" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                Requerimientos de su grupo
+            </p>
+            <p style="color: #1c3b64; font-size: 14px; margin: 0 0 16px 0; line-height: 1.6;">
+                Agregue <strong>al menos 3 endpoints</strong> que salgan de los requerimientos y casos de uso de su grupo
+                (por ejemplo, de los formularios que diseñaron para SICEN). Indique el código del requerimiento (RF-…).
+            </p>
+ 
+            <div style="overflow-x: auto;" tabindex="0" role="region" aria-label="Tabla de diseño de endpoints, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Plantilla con un ejemplo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Requerimiento</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Método</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Ruta</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Datos que envía (dónde)</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Respuesta exitosa</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Posibles errores</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">Registrar un formulario censal</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">POST</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">/formularios</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">Cuerpo (JSON): nombre del formulario y lista de preguntas</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">201: el formulario creado</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">400: falta el nombre o no tiene preguntas<br>409: ya existe un formulario con ese nombre</td>
+                        </tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+ 
+            <div
+                style="background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #2e7d32; font-size: 14px; margin-top: 18px; line-height: 1.6;">
+                <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px;"></i>
+                <strong>Resultado esperado:</strong> una tabla con los 6 endpoints comunes y al menos 3 de su grupo, en la que se distinga cuándo los datos
+                van en la ruta, en los parámetros de consulta o en el cuerpo, y con códigos de estado adecuados.
+            </div>
+        </div>
+ 
+
+        <!-- ===================== FUENTES ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-book" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Fuentes recomendadas
+            </h4>
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li><a href="https://developer.mozilla.org/es/docs/Web/HTTP" target="_blank" rel="noopener" style="color: #164a98;">MDN Web Docs: HTTP</a> (métodos, códigos de estado, encabezados).</li>
+                <li><a href="https://www.redhat.com/es/topics/api/what-is-a-rest-api" target="_blank" rel="noopener" style="color: #164a98;">Red Hat: ¿Qué es una API REST?</a></li>
+                <li><a href="https://jsonplaceholder.typicode.com/" target="_blank" rel="noopener" style="color: #164a98;">JSONPlaceholder</a>: API pública gratuita para practicar.</li>
+            </ul>
+            <p style="color: #1c3b64; font-size: 14px; margin: 12px 0 0 0; line-height: 1.6;">
+                Puede consultar otras fuentes confiables (documentación oficial, libros, artículos académicos).
+                Cite cada fuente con su título y enlace.
+            </p>
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>

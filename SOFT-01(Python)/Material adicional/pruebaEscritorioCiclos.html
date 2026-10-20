@@ -1,0 +1,83 @@
+<!-- EJEMPLO DE PRUEBA DE ESCRITORIO -->
+<div style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 24px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+  <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px;">
+    
+    Ejemplo: Prueba de escritorio
+  </h4>
+
+  <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+    El objetivo del siguiente algoritmo es sumar los números del 1 al 3 utilizando un ciclo <strong>while</strong>.
+  </p>
+
+  <pre style="background: #172b4d; color: #f4f7fb; padding: 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.7;"><code>contador = 1
+suma = 0
+
+while contador &lt;= 3:
+    suma = suma + contador
+    contador = contador + 1
+
+print("La suma es:", suma)</code></pre>
+
+  <p style="color: #1c3b64; font-size: 15px; line-height: 1.7;">
+    Prueba de escitorio / traza:
+  </p>
+
+  <div style="overflow-x: auto; margin: 18px 0;">
+    <table style="width: 100%; min-width: 1050px; border-collapse: collapse; font-size: 13px; color: #1c3b64;">
+      <thead>
+        <tr style="background: #164a98; color: #ffffff;">
+          <th style="padding: 11px; border: 1px solid #c8d1df;">Iteración</th>
+          <th style="padding: 11px; border: 1px solid #c8d1df;">Variables de control (antes)</th>
+          <th style="padding: 11px; border: 1px solid #c8d1df;">Condición evaluada</th>
+          <th style="padding: 11px; border: 1px solid #c8d1df;">¿Entra al ciclo?</th>
+          <th style="padding: 11px; border: 1px solid #c8d1df;">Cálculos / actualizaciones</th>
+          <th style="padding: 11px; border: 1px solid #c8d1df;">Acumuladores (después)</th>
+          <th style="padding: 11px; border: 1px solid #c8d1df;">Salida mostrada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background: #ffffff;">
+          <td style="padding: 11px; border: 1px solid #c8d1df;">1</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">contador = 1</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">1 &lt;= 3 → Verdadero</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">Sí</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">suma = 0 + 1<br>contador = 1 + 1</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">suma = 1</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">—</td>
+        </tr>
+        <tr style="background: #f8fbff;">
+          <td style="padding: 11px; border: 1px solid #c8d1df;">2</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">contador = 2</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">2 &lt;= 3 → Verdadero</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">Sí</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">suma = 1 + 2<br>contador = 2 + 1</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">suma = 3</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">—</td>
+        </tr>
+        <tr style="background: #ffffff;">
+          <td style="padding: 11px; border: 1px solid #c8d1df;">3</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">contador = 3</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">3 &lt;= 3 → Verdadero</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">Sí</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">suma = 3 + 3<br>contador = 3 + 1</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">suma = 6</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">—</td>
+        </tr>
+        <tr style="background: #fffaf2;">
+          <td style="padding: 11px; border: 1px solid #c8d1df;">4</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">contador = 4</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">4 &lt;= 3 → Falso</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">No</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">No se ejecuta el cuerpo del ciclo</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">suma = 6</td>
+          <td style="padding: 11px; border: 1px solid #c8d1df;">La suma es: 6</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="background: #ffffff; border-left: 5px solid #00928d; padding: 13px 15px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.7;">
+    La última fila representa la evaluación que permite salir del ciclo. Aunque no se realiza una nueva iteración, es importante registrar la condición falsa y la salida final del programa.
+  </div>
+</div>
