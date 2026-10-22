@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solución: Avance 1 Misión Órbita</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="solucion-avance1"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00734a; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00734a, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-key" aria-hidden="true"></i>
+            </span>
+            <h3 id="solucion-avance1"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Solución: Avance 1 — Preparación de la misión
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00734a; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Documento para el docente.</strong> Solución de referencia de los cuatro ejercicios: tabla de variables, diagrama de flujo, código y casos de prueba. Todos los resultados obtenidos se verificaron ejecutando los programas en Python; el botón <strong>Ver consola</strong> muestra la evidencia de cada caso. Las soluciones respetan las restricciones del avance: sin ciclos, colecciones, funciones, módulos, <code>elif</code> ni condicionales anidadas.
+        </div>
+
+        <!-- EJERCICIO 1: CÁLCULO DE RECURSOS NECESARIOS PARA UNA MISIÓN -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-calculator" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Ejercicio 1: Cálculo de recursos necesarios para una misión
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;"><strong>Estructura de control:</strong> secuencial.</p>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0;"><strong>Tabla de variables</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Nombre</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de dato</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Descripción</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Clasificación</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Valor inicial / restricciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>CONSUMO_COMBUSTIBLE_DIA</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Unidades de combustible que se consumen por día de viaje.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">8</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>RESERVA_COMBUSTIBLE</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible adicional obligatorio para emergencias.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">10</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>CONSUMO_OXIGENO_DIA</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno que consume un tripulante por día.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>OXIGENO_EMERGENCIA</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno adicional de emergencia.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>CONSUMO_ENERGIA_DIA</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Energía que consume la nave por día.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>ENERGIA_EXPLORACION</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Energía reservada para las operaciones de exploración.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">10</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>CONSUMO_PROVISIONES_DIA</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones que consume un tripulante por día.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>PROVISIONES_ADICIONALES</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones adicionales de la misión.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>TRAYECTOS</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Cantidad de trayectos del viaje (ida y regreso).</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>nombre_mision</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>str</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Nombre de la misión.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Texto no vacío</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>tripulantes</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Cantidad de tripulantes.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>dias_viaje</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Días estimados para llegar al destino.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_ida</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible necesario para llegar.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_regreso</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible necesario para regresar.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_total</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible de ida, regreso y reserva.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>oxigeno_requerido</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno para ida, regreso y emergencia.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>energia_requerida</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Energía para ida, regreso y exploración.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>provisiones_requeridas</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones para ida, regreso y adicionales.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Diagrama de flujo</strong></p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px; margin-top: 12px; overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width:664px; height:auto;"
+ viewBox="0.00 0.00 530.70 969.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(7.2 962.2)">
+<title>G</title>
+<text text-anchor="middle" x="258.15" y="-939.8" font-family="Arial" font-size="14.00" fill="#164a98">Ejercicio 1: Cálculo de recursos necesarios</text>
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M273.15,-932C273.15,-932 243.15,-932 243.15,-932 237.15,-932 231.15,-926 231.15,-920 231.15,-920 231.15,-908 231.15,-908 231.15,-902 237.15,-896 243.15,-896 243.15,-896 273.15,-896 273.15,-896 279.15,-896 285.15,-902 285.15,-908 285.15,-908 285.15,-920 285.15,-920 285.15,-926 279.15,-932 273.15,-932"/>
+<text text-anchor="middle" x="258.15" y="-911.2" font-family="Arial" font-size="11.00" fill="#ffffff">Inicio</text>
+</g>
+<g id="node2" class="node">
+<title>k</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="360.65,-873 155.65,-873 155.65,-757 360.65,-757 360.65,-873"/>
+<text text-anchor="middle" x="258.15" y="-860.2" font-family="Arial" font-size="11.00" fill="#1c3b64">CONSUMO_COMBUSTIBLE_DIA = 8</text>
+<text text-anchor="middle" x="258.15" y="-848.2" font-family="Arial" font-size="11.00" fill="#1c3b64">RESERVA_COMBUSTIBLE = 10</text>
+<text text-anchor="middle" x="258.15" y="-836.2" font-family="Arial" font-size="11.00" fill="#1c3b64">CONSUMO_OXIGENO_DIA = 2</text>
+<text text-anchor="middle" x="258.15" y="-824.2" font-family="Arial" font-size="11.00" fill="#1c3b64">OXIGENO_EMERGENCIA = 5</text>
+<text text-anchor="middle" x="258.15" y="-812.2" font-family="Arial" font-size="11.00" fill="#1c3b64">CONSUMO_ENERGIA_DIA = 5</text>
+<text text-anchor="middle" x="258.15" y="-800.2" font-family="Arial" font-size="11.00" fill="#1c3b64">ENERGIA_EXPLORACION = 10</text>
+<text text-anchor="middle" x="258.15" y="-788.2" font-family="Arial" font-size="11.00" fill="#1c3b64">CONSUMO_PROVISIONES_DIA = 1</text>
+<text text-anchor="middle" x="258.15" y="-776.2" font-family="Arial" font-size="11.00" fill="#1c3b64">PROVISIONES_ADICIONALES = 3</text>
+<text text-anchor="middle" x="258.15" y="-764.2" font-family="Arial" font-size="11.00" fill="#1c3b64">TRAYECTOS = 2</text>
+</g>
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;k</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-895.66C258.15,-891.06 258.15,-885.81 258.15,-880.26"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-880.08 258.15,-873.08 255.7,-880.08 260.6,-880.08"/>
+</g>
+<g id="node3" class="node">
+<title>e1</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="361.46,-734 197.12,-734 154.84,-698 319.19,-698 361.46,-734"/>
+<text text-anchor="middle" x="258.15" y="-713.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer nombre_mision</text>
+</g>
+<g id="edge2" class="edge">
+<title>k&#45;&gt;e1</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-756.73C258.15,-751.35 258.15,-746.12 258.15,-741.31"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-741.14 258.15,-734.14 255.7,-741.14 260.6,-741.14"/>
+</g>
+<g id="node4" class="node">
+<title>e2</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="340.14,-675 209.71,-675 176.16,-639 306.59,-639 340.14,-675"/>
+<text text-anchor="middle" x="258.15" y="-654.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer tripulantes</text>
+</g>
+<g id="edge3" class="edge">
+<title>e1&#45;&gt;e2</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-697.9C258.15,-692.94 258.15,-687.43 258.15,-682.12"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-682.09 258.15,-675.09 255.7,-682.09 260.6,-682.09"/>
+</g>
+<g id="node5" class="node">
+<title>e3</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="338.62,-616 210.61,-616 177.69,-580 305.69,-580 338.62,-616"/>
+<text text-anchor="middle" x="258.15" y="-595.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer dias_viaje</text>
+</g>
+<g id="edge4" class="edge">
+<title>e2&#45;&gt;e3</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-638.9C258.15,-633.94 258.15,-628.43 258.15,-623.12"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-623.09 258.15,-616.09 255.7,-623.09 260.6,-623.09"/>
+</g>
+<g id="node6" class="node">
+<title>p1</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="425.15,-557 91.15,-557 91.15,-521 425.15,-521 425.15,-557"/>
+<text text-anchor="middle" x="258.15" y="-536.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_ida = dias_viaje * CONSUMO_COMBUSTIBLE_DIA</text>
+</g>
+<g id="edge5" class="edge">
+<title>e3&#45;&gt;p1</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-579.9C258.15,-574.94 258.15,-569.43 258.15,-564.12"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-564.09 258.15,-557.09 255.7,-564.09 260.6,-564.09"/>
+</g>
+<g id="node7" class="node">
+<title>p2</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="436.65,-498 79.65,-498 79.65,-462 436.65,-462 436.65,-498"/>
+<text text-anchor="middle" x="258.15" y="-477.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_regreso = dias_viaje * CONSUMO_COMBUSTIBLE_DIA</text>
+</g>
+<g id="edge6" class="edge">
+<title>p1&#45;&gt;p2</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-520.9C258.15,-515.94 258.15,-510.43 258.15,-505.12"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-505.09 258.15,-498.09 255.7,-505.09 260.6,-505.09"/>
+</g>
+<g id="node8" class="node">
+<title>p3</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="410.15,-439 106.15,-439 106.15,-403 410.15,-403 410.15,-439"/>
+<text text-anchor="middle" x="258.15" y="-424.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_total = combustible_ida + combustible_regreso</text>
+<text text-anchor="middle" x="258.15" y="-412.2" font-family="Arial" font-size="11.00" fill="#1c3b64">+ RESERVA_COMBUSTIBLE</text>
+</g>
+<g id="edge7" class="edge">
+<title>p2&#45;&gt;p3</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-461.9C258.15,-456.94 258.15,-451.43 258.15,-446.12"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-446.09 258.15,-439.09 255.7,-446.09 260.6,-446.09"/>
+</g>
+<g id="node9" class="node">
+<title>p4</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="417.15,-380 99.15,-380 99.15,-344 417.15,-344 417.15,-380"/>
+<text text-anchor="middle" x="258.15" y="-365.2" font-family="Arial" font-size="11.00" fill="#1c3b64">oxigeno_requerido = dias_viaje * CONSUMO_OXIGENO_DIA</text>
+<text text-anchor="middle" x="258.15" y="-353.2" font-family="Arial" font-size="11.00" fill="#1c3b64">* TRAYECTOS * tripulantes + OXIGENO_EMERGENCIA</text>
+</g>
+<g id="edge8" class="edge">
+<title>p3&#45;&gt;p4</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-402.9C258.15,-397.94 258.15,-392.43 258.15,-387.12"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-387.09 258.15,-380.09 255.7,-387.09 260.6,-387.09"/>
+</g>
+<g id="node10" class="node">
+<title>p5</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="416.15,-321 100.15,-321 100.15,-285 416.15,-285 416.15,-321"/>
+<text text-anchor="middle" x="258.15" y="-306.2" font-family="Arial" font-size="11.00" fill="#1c3b64">energia_requerida = dias_viaje * CONSUMO_ENERGIA_DIA</text>
+<text text-anchor="middle" x="258.15" y="-294.2" font-family="Arial" font-size="11.00" fill="#1c3b64">* TRAYECTOS + ENERGIA_EXPLORACION</text>
+</g>
+<g id="edge9" class="edge">
+<title>p4&#45;&gt;p5</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-343.9C258.15,-338.94 258.15,-333.43 258.15,-328.12"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-328.09 258.15,-321.09 255.7,-328.09 260.6,-328.09"/>
+</g>
+<g id="node11" class="node">
+<title>p6</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="392.15,-262 124.15,-262 124.15,-218 392.15,-218 392.15,-262"/>
+<text text-anchor="middle" x="258.15" y="-249.2" font-family="Arial" font-size="11.00" fill="#1c3b64">provisiones_requeridas = dias_viaje * tripulantes</text>
+<text text-anchor="middle" x="258.15" y="-237.2" font-family="Arial" font-size="11.00" fill="#1c3b64">* CONSUMO_PROVISIONES_DIA * TRAYECTOS</text>
+<text text-anchor="middle" x="258.15" y="-225.2" font-family="Arial" font-size="11.00" fill="#1c3b64">+ PROVISIONES_ADICIONALES</text>
+</g>
+<g id="edge10" class="edge">
+<title>p5&#45;&gt;p6</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-284.68C258.15,-279.84 258.15,-274.45 258.15,-269.15"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-269.05 258.15,-262.05 255.7,-269.05 260.6,-269.05"/>
+</g>
+<g id="node12" class="node">
+<title>s</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="516.45,-195 105.55,-195 -0.15,-59 410.75,-59 516.45,-195"/>
+<text text-anchor="middle" x="258.15" y="-148.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Mostrar nombre_mision, tripulantes, dias_viaje,</text>
+<text text-anchor="middle" x="258.15" y="-136.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_ida, combustible_regreso,</text>
+<text text-anchor="middle" x="258.15" y="-124.2" font-family="Arial" font-size="11.00" fill="#1c3b64">RESERVA_COMBUSTIBLE, combustible_total,</text>
+<text text-anchor="middle" x="258.15" y="-112.2" font-family="Arial" font-size="11.00" fill="#1c3b64">oxigeno_requerido, energia_requerida,</text>
+<text text-anchor="middle" x="258.15" y="-100.2" font-family="Arial" font-size="11.00" fill="#1c3b64">provisiones_requeridas</text>
+</g>
+<g id="edge11" class="edge">
+<title>p6&#45;&gt;s</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-217.86C258.15,-213.17 258.15,-207.94 258.15,-202.43"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-202.32 258.15,-195.32 255.7,-202.32 260.6,-202.32"/>
+</g>
+<g id="node13" class="node">
+<title>fin</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M273.15,-36C273.15,-36 243.15,-36 243.15,-36 237.15,-36 231.15,-30 231.15,-24 231.15,-24 231.15,-12 231.15,-12 231.15,-6 237.15,0 243.15,0 243.15,0 273.15,0 273.15,0 279.15,0 285.15,-6 285.15,-12 285.15,-12 285.15,-24 285.15,-24 285.15,-30 279.15,-36 273.15,-36"/>
+<text text-anchor="middle" x="258.15" y="-15.2" font-family="Arial" font-size="11.00" fill="#ffffff">Fin</text>
+</g>
+<g id="edge12" class="edge">
+<title>s&#45;&gt;fin</title>
+<path fill="none" stroke="#7c7b75" d="M258.15,-58.84C258.15,-53.44 258.15,-48.24 258.15,-43.48"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="260.6,-43.39 258.15,-36.39 255.7,-43.39 260.6,-43.39"/>
+</g>
+</g>
+</svg>
+
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Código</strong> — <code>ejercicio1_recursos.py</code></p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: ejercicio1_recursos.py
+# Curso: SOFT-01 Principios de Programación 1 - Sección SCV6
+# Integrantes: Solución de referencia (docente)
+# Fecha: 21/10/2026        Versión: 1.0
+# Descripción: Calcula los recursos necesarios (combustible, oxígeno,
+#              energía y provisiones) para una misión de ida y regreso.
+# ============================================================
+
+# ---------- Constantes ----------
+# Consumos por día y márgenes definidos por la agencia.
+CONSUMO_COMBUSTIBLE_DIA = 8
+RESERVA_COMBUSTIBLE = 10
+CONSUMO_OXIGENO_DIA = 2         # por tripulante
+OXIGENO_EMERGENCIA = 5
+CONSUMO_ENERGIA_DIA = 5
+ENERGIA_EXPLORACION = 10
+CONSUMO_PROVISIONES_DIA = 1     # por tripulante
+PROVISIONES_ADICIONALES = 3
+TRAYECTOS = 2                   # el viaje incluye ida y regreso
+
+# ---------- Entrada de datos ----------
+nombre_mision = input("Nombre de la misión: ")
+tripulantes = int(input("Cantidad de tripulantes: "))
+dias_viaje = int(input("Días estimados para llegar al destino: "))
+
+# ---------- Procesamiento ----------
+# El regreso dura lo mismo que la ida, por eso ambos consumen igual.
+combustible_ida = dias_viaje * CONSUMO_COMBUSTIBLE_DIA
+combustible_regreso = dias_viaje * CONSUMO_COMBUSTIBLE_DIA
+combustible_total = combustible_ida + combustible_regreso + RESERVA_COMBUSTIBLE
+
+# Oxígeno, energía y provisiones se calculan para ida y regreso
+# (TRAYECTOS) y se les suma su margen adicional.
+oxigeno_requerido = dias_viaje * CONSUMO_OXIGENO_DIA * TRAYECTOS * tripulantes + OXIGENO_EMERGENCIA
+energia_requerida = dias_viaje * CONSUMO_ENERGIA_DIA * TRAYECTOS + ENERGIA_EXPLORACION
+provisiones_requeridas = dias_viaje * tripulantes * CONSUMO_PROVISIONES_DIA * TRAYECTOS + PROVISIONES_ADICIONALES
+
+# ---------- Salida de resultados ----------
+print()
+print("Misión:", nombre_mision)
+print("Tripulantes:", tripulantes)
+print("Duración estimada hasta el destino:", dias_viaje, "días")
+print("Combustible para llegar:", combustible_ida, "unidades")
+print("Combustible para regresar:", combustible_regreso, "unidades")
+print("Reserva de combustible:", RESERVA_COMBUSTIBLE, "unidades")
+print("Combustible total requerido:", combustible_total, "unidades")
+print("Oxígeno requerido:", oxigeno_requerido, "unidades")
+print("Energía requerida:", energia_requerida, "unidades")
+print("Provisiones requeridas:", provisiones_requeridas, "unidades")</code></pre>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Nota:</strong> El factor 2 de las fórmulas (ida y regreso) también es un número mágico, por eso se declara como la constante <code>TRAYECTOS</code>.
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Casos de prueba</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">ID</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Escenario</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado esperado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado obtenido</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Estado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Evidencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-01</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejemplo de la consigna</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">nombre_mision = Explorador I<br>tripulantes = 3<br>dias_viaje = 5</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Misión: Explorador I<br>Tripulantes: 3<br>Duración estimada hasta el destino: 5 días<br>Combustible para llegar: 40 unidades<br>Combustible para regresar: 40 unidades<br>Reserva de combustible: 10 unidades<br>Combustible total requerido: 90 unidades<br>Oxígeno requerido: 65 unidades<br>Energía requerida: 60 unidades<br>Provisiones requeridas: 33 unidades</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-01" onclick="var v = document.getElementById('cp-cp-01'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-02</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Valores mínimos (1 tripulante, 1 día)</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">nombre_mision = Mínima<br>tripulantes = 1<br>dias_viaje = 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Misión: Mínima<br>Tripulantes: 1<br>Duración estimada hasta el destino: 1 días<br>Combustible para llegar: 8 unidades<br>Combustible para regresar: 8 unidades<br>Reserva de combustible: 10 unidades<br>Combustible total requerido: 26 unidades<br>Oxígeno requerido: 9 unidades<br>Energía requerida: 20 unidades<br>Provisiones requeridas: 5 unidades</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-02" onclick="var v = document.getElementById('cp-cp-02'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-03</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Misión larga con más tripulantes</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">nombre_mision = Explorador II<br>tripulantes = 4<br>dias_viaje = 10</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Misión: Explorador II<br>Tripulantes: 4<br>Duración estimada hasta el destino: 10 días<br>Combustible para llegar: 80 unidades<br>Combustible para regresar: 80 unidades<br>Reserva de combustible: 10 unidades<br>Combustible total requerido: 170 unidades<br>Oxígeno requerido: 165 unidades<br>Energía requerida: 110 unidades<br>Provisiones requeridas: 83 unidades</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-03" onclick="var v = document.getElementById('cp-cp-03'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- EJERCICIO 2: VERIFICACIÓN DE COMBUSTIBLE -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-gas-pump" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Ejercicio 2: Verificación de combustible
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;"><strong>Estructura de control:</strong> condicional simple.</p>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0;"><strong>Tabla de variables</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Nombre</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de dato</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Descripción</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Clasificación</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Valor inicial / restricciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>RESERVA_COMBUSTIBLE</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible adicional obligatorio para emergencias.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">10</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>MARGEN_MINIMO</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Margen adicional mínimo; por debajo se muestra la advertencia.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">10</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_disponible</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible que posee la nave.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_ida</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible requerido para llegar.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_regreso</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible requerido para regresar.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_total</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible de ida, regreso y reserva.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_adicional</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible que sobra después de cubrir el total; puede ser negativo.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Salida</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Diagrama de flujo</strong></p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px; margin-top: 12px; overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width:902px; height:auto;"
+ viewBox="0.00 0.00 722.15 801.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(7.2 794.2)">
+<title>G</title>
+<text text-anchor="middle" x="353.88" y="-771.8" font-family="Arial" font-size="14.00" fill="#164a98">Ejercicio 2: Verificación de combustible</text>
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M448.01,-764C448.01,-764 418.01,-764 418.01,-764 412.01,-764 406.01,-758 406.01,-752 406.01,-752 406.01,-740 406.01,-740 406.01,-734 412.01,-728 418.01,-728 418.01,-728 448.01,-728 448.01,-728 454.01,-728 460.01,-734 460.01,-740 460.01,-740 460.01,-752 460.01,-752 460.01,-758 454.01,-764 448.01,-764"/>
+<text text-anchor="middle" x="433.01" y="-743.2" font-family="Arial" font-size="11.00" fill="#ffffff">Inicio</text>
+</g>
+<g id="node2" class="node">
+<title>k</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="523.51,-703 342.51,-703 342.51,-667 523.51,-667 523.51,-703"/>
+<text text-anchor="middle" x="433.01" y="-688.2" font-family="Arial" font-size="11.00" fill="#1c3b64">RESERVA_COMBUSTIBLE = 10</text>
+<text text-anchor="middle" x="433.01" y="-676.2" font-family="Arial" font-size="11.00" fill="#1c3b64">MARGEN_MINIMO = 10</text>
+</g>
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;k</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-727.93C433.01,-722.48 433.01,-716.33 433.01,-710.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-710.23 433.01,-703.23 430.56,-710.23 435.46,-710.23"/>
+</g>
+<g id="node3" class="node">
+<title>e1</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="568.57,-642 352.93,-642 297.46,-606 513.1,-606 568.57,-642"/>
+<text text-anchor="middle" x="433.01" y="-621.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer combustible_disponible</text>
+</g>
+<g id="edge2" class="edge">
+<title>k&#45;&gt;e1</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-666.93C433.01,-661.48 433.01,-655.33 433.01,-649.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-649.23 433.01,-642.23 430.56,-649.23 435.46,-649.23"/>
+</g>
+<g id="node4" class="node">
+<title>e2</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="539.88,-581 369.88,-581 326.15,-545 496.15,-545 539.88,-581"/>
+<text text-anchor="middle" x="433.01" y="-560.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer combustible_ida</text>
+</g>
+<g id="edge3" class="edge">
+<title>e1&#45;&gt;e2</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-605.93C433.01,-600.48 433.01,-594.33 433.01,-588.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-588.23 433.01,-581.23 430.56,-588.23 435.46,-588.23"/>
+</g>
+<g id="node5" class="node">
+<title>e3</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="559.17,-520 358.48,-520 306.85,-484 507.54,-484 559.17,-520"/>
+<text text-anchor="middle" x="433.01" y="-499.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer combustible_regreso</text>
+</g>
+<g id="edge4" class="edge">
+<title>e2&#45;&gt;e3</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-544.93C433.01,-539.48 433.01,-533.33 433.01,-527.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-527.23 433.01,-520.23 430.56,-527.23 435.46,-527.23"/>
+</g>
+<g id="node6" class="node">
+<title>p1</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="585.01,-459 281.01,-459 281.01,-423 585.01,-423 585.01,-459"/>
+<text text-anchor="middle" x="433.01" y="-444.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_total = combustible_ida + combustible_regreso</text>
+<text text-anchor="middle" x="433.01" y="-432.2" font-family="Arial" font-size="11.00" fill="#1c3b64">+ RESERVA_COMBUSTIBLE</text>
+</g>
+<g id="edge5" class="edge">
+<title>e3&#45;&gt;p1</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-483.93C433.01,-478.48 433.01,-472.33 433.01,-466.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-466.23 433.01,-459.23 430.56,-466.23 435.46,-466.23"/>
+</g>
+<g id="node7" class="node">
+<title>p2</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="556.51,-398 309.51,-398 309.51,-362 556.51,-362 556.51,-398"/>
+<text text-anchor="middle" x="433.01" y="-383.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_adicional = combustible_disponible</text>
+<text text-anchor="middle" x="433.01" y="-371.2" font-family="Arial" font-size="11.00" fill="#1c3b64">&#45; combustible_total</text>
+</g>
+<g id="edge6" class="edge">
+<title>p1&#45;&gt;p2</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-422.93C433.01,-417.48 433.01,-411.33 433.01,-405.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-405.23 433.01,-398.23 430.56,-405.23 435.46,-405.23"/>
+</g>
+<g id="node8" class="node">
+<title>s</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="707.99,-337 270.56,-337 158.03,-249 595.46,-249 707.99,-337"/>
+<text text-anchor="middle" x="433.01" y="-302.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Mostrar combustible_disponible, combustible_ida,</text>
+<text text-anchor="middle" x="433.01" y="-290.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_regreso, RESERVA_COMBUSTIBLE,</text>
+<text text-anchor="middle" x="433.01" y="-278.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_total, combustible_adicional</text>
+</g>
+<g id="edge7" class="edge">
+<title>p2&#45;&gt;s</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-361.8C433.01,-356.64 433.01,-350.7 433.01,-344.52"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-344.19 433.01,-337.19 430.56,-344.19 435.46,-344.19"/>
+</g>
+<g id="node9" class="node">
+<title>d</title>
+<polygon fill="#fff8e1" stroke="#c7ac19" stroke-width="1.4" points="433.01,-224 303.01,-192 433.01,-160 563.01,-192 433.01,-224"/>
+<text text-anchor="middle" x="433.01" y="-195.2" font-family="Arial" font-size="11.00" fill="#1c3b64">¿combustible_adicional</text>
+<text text-anchor="middle" x="433.01" y="-183.2" font-family="Arial" font-size="11.00" fill="#1c3b64">&lt; MARGEN_MINIMO?</text>
+</g>
+<g id="edge8" class="edge">
+<title>s&#45;&gt;d</title>
+<path fill="none" stroke="#7c7b75" d="M433.01,-248.87C433.01,-243 433.01,-237.02 433.01,-231.25"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="435.46,-231.09 433.01,-224.09 430.56,-231.09 435.46,-231.09"/>
+</g>
+<g id="node10" class="node">
+<title>a</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="452.04,-125 92.48,-125 -0.01,-61 359.54,-61 452.04,-125"/>
+<text text-anchor="middle" x="226.01" y="-96.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Mostrar &quot;Advertencia: el margen adicional</text>
+<text text-anchor="middle" x="226.01" y="-84.2" font-family="Arial" font-size="11.00" fill="#1c3b64">de combustible es bajo.&quot;</text>
+</g>
+<g id="edge9" class="edge">
+<title>d&#45;&gt;a</title>
+<path fill="none" stroke="#7c7b75" d="M389.62,-170.67C363.28,-158.32 328.99,-142.25 298.61,-128.02"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="299.56,-125.76 292.19,-125.01 297.49,-130.2 299.56,-125.76"/>
+<text text-anchor="middle" x="342.51" y="-140" font-family="Arial" font-size="10.00" fill="#00734a"> Sí</text>
+</g>
+<g id="node11" class="node">
+<title>fin</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M379.01,-36C379.01,-36 349.01,-36 349.01,-36 343.01,-36 337.01,-30 337.01,-24 337.01,-24 337.01,-12 337.01,-12 337.01,-6 343.01,0 349.01,0 349.01,0 379.01,0 379.01,0 385.01,0 391.01,-6 391.01,-12 391.01,-12 391.01,-24 391.01,-24 391.01,-30 385.01,-36 379.01,-36"/>
+<text text-anchor="middle" x="364.01" y="-15.2" font-family="Arial" font-size="11.00" fill="#ffffff">Fin</text>
+</g>
+<g id="edge10" class="edge">
+<title>d&#45;&gt;fin</title>
+<path fill="none" stroke="#7c7b75" d="M451.09,-164.22C467.43,-136.33 485.97,-92.42 465.01,-61 450.21,-38.81 421.24,-28.33 398.11,-23.38"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="398.48,-20.96 391.14,-22.02 397.54,-25.77 398.48,-20.96"/>
+<text text-anchor="middle" x="482.01" y="-90.5" font-family="Arial" font-size="10.00" fill="#d2232a"> No</text>
+</g>
+<g id="edge11" class="edge">
+<title>a&#45;&gt;fin</title>
+<path fill="none" stroke="#7c7b75" d="M284.94,-60.83C300.42,-52.64 316.6,-44.08 330.26,-36.85"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="331.71,-38.86 336.75,-33.42 329.42,-34.53 331.71,-38.86"/>
+</g>
+</g>
+</svg>
+
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Código</strong> — <code>ejercicio2_combustible.py</code></p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: ejercicio2_combustible.py
+# Curso: SOFT-01 Principios de Programación 1 - Sección SCV6
+# Integrantes: Solución de referencia (docente)
+# Fecha: 21/10/2026        Versión: 1.0
+# Descripción: Calcula el combustible total requerido y el margen
+#              adicional, y advierte si ese margen es bajo.
+# ============================================================
+
+# ---------- Constantes ----------
+RESERVA_COMBUSTIBLE = 10
+MARGEN_MINIMO = 10    # por debajo de este margen se muestra la advertencia
+
+# ---------- Entrada de datos ----------
+combustible_disponible = int(input("Combustible disponible: "))
+combustible_ida = int(input("Combustible requerido para el viaje de ida: "))
+combustible_regreso = int(input("Combustible requerido para el viaje de regreso: "))
+
+# ---------- Procesamiento ----------
+# El total incluye el regreso y la reserva: llegar no es suficiente.
+combustible_total = combustible_ida + combustible_regreso + RESERVA_COMBUSTIBLE
+combustible_adicional = combustible_disponible - combustible_total
+
+# ---------- Salida de resultados ----------
+print()
+print("Combustible disponible:", combustible_disponible, "unidades")
+print("Combustible requerido para llegar:", combustible_ida, "unidades")
+print("Combustible requerido para regresar:", combustible_regreso, "unidades")
+print("Reserva de emergencia:", RESERVA_COMBUSTIBLE, "unidades")
+print("Combustible total requerido:", combustible_total, "unidades")
+print("Combustible adicional:", combustible_adicional, "unidades")
+
+# ---------- Decisión (condicional simple) ----------
+# Solo se advierte cuando el margen es estrictamente menor que el mínimo.
+if combustible_adicional &lt; MARGEN_MINIMO:
+    print("Advertencia: el margen adicional de combustible es bajo.")</code></pre>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Nota:</strong> La rúbrica pide <strong>seis</strong> salidas obligatorias, pero el enunciado lista cinco. La sexta es el combustible adicional, que se muestra para que se entienda la advertencia. La condición usa <code>&lt;</code>: con un margen de exactamente 10 no se advierte (CP-06).
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Casos de prueba</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">ID</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Escenario</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado esperado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado obtenido</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Estado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Evidencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-04</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible suficiente con margen amplio</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 120<br>combustible_ida = 40<br>combustible_regreso = 40</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible disponible: 120 unidades<br>Combustible requerido para llegar: 40 unidades<br>Combustible requerido para regresar: 40 unidades<br>Reserva de emergencia: 10 unidades<br>Combustible total requerido: 90 unidades<br>Combustible adicional: 30 unidades</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-04" onclick="var v = document.getElementById('cp-cp-04'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-05</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Margen adicional bajo (ejemplo de la consigna)</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 95<br>combustible_ida = 40<br>combustible_regreso = 40</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible disponible: 95 unidades<br>Combustible requerido para llegar: 40 unidades<br>Combustible requerido para regresar: 40 unidades<br>Reserva de emergencia: 10 unidades<br>Combustible total requerido: 90 unidades<br>Combustible adicional: 5 unidades<br>Advertencia: el margen adicional de combustible es bajo.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-05" onclick="var v = document.getElementById('cp-cp-05'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-06</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Límite: margen exactamente igual a 10 (no se advierte)</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 100<br>combustible_ida = 40<br>combustible_regreso = 40</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible disponible: 100 unidades<br>Combustible requerido para llegar: 40 unidades<br>Combustible requerido para regresar: 40 unidades<br>Reserva de emergencia: 10 unidades<br>Combustible total requerido: 90 unidades<br>Combustible adicional: 10 unidades</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-06" onclick="var v = document.getElementById('cp-cp-06'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-07</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Límite: disponible igual al total requerido</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 90<br>combustible_ida = 40<br>combustible_regreso = 40</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible disponible: 90 unidades<br>Combustible requerido para llegar: 40 unidades<br>Combustible requerido para regresar: 40 unidades<br>Reserva de emergencia: 10 unidades<br>Combustible total requerido: 90 unidades<br>Combustible adicional: 0 unidades<br>Advertencia: el margen adicional de combustible es bajo.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-07" onclick="var v = document.getElementById('cp-cp-07'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-08</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible suficiente solo para llegar</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 50<br>combustible_ida = 40<br>combustible_regreso = 40</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible disponible: 50 unidades<br>Combustible requerido para llegar: 40 unidades<br>Combustible requerido para regresar: 40 unidades<br>Reserva de emergencia: 10 unidades<br>Combustible total requerido: 90 unidades<br>Combustible adicional: -40 unidades<br>Advertencia: el margen adicional de combustible es bajo.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-08" onclick="var v = document.getElementById('cp-cp-08'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div
+                style="background: #fff8e1; border-left: 5px solid #C7AC19; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #7c7b75; font-size: 14px; line-height: 1.6;">
+                <strong>Observación:</strong> En CP-07 y CP-08 el combustible no alcanza o no deja margen, y el programa solo muestra la advertencia de margen bajo. Así lo pide el enunciado: este ejercicio no decide si la misión se autoriza, eso corresponde al ejercicio 4.
+            </div>
+        </div>
+
+        <!-- EJERCICIO 3: VERIFICACIÓN DEL SOPORTE PARA LA TRIPULACIÓN -->
+        <div
+            style="background: #eef7f6; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-lungs" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Ejercicio 3: Verificación del soporte para la tripulación
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;"><strong>Estructura de control:</strong> condicional doble con condición compuesta (<code>and</code>).</p>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0;"><strong>Tabla de variables</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Nombre</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de dato</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Descripción</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Clasificación</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Valor inicial / restricciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>oxigeno_disponible</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno que posee la nave.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>oxigeno_requerido</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno necesario para la misión.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>provisiones_disponibles</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones que posee la nave.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>provisiones_requeridas</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones necesarias para la misión.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Nota:</strong> Este ejercicio no tiene variables de salida ni intermedias: el resultado es un mensaje.
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Diagrama de flujo</strong></p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px; margin-top: 12px; overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width:1006px; height:auto;"
+ viewBox="0.00 0.00 804.96 590.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(7.2 583.2)">
+<title>G</title>
+<text text-anchor="middle" x="395.28" y="-560.8" font-family="Arial" font-size="14.00" fill="#164a98">Ejercicio 3: Verificación del soporte para la tripulación</text>
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M401.51,-553C401.51,-553 371.51,-553 371.51,-553 365.51,-553 359.51,-547 359.51,-541 359.51,-541 359.51,-529 359.51,-529 359.51,-523 365.51,-517 371.51,-517 371.51,-517 401.51,-517 401.51,-517 407.51,-517 413.51,-523 413.51,-529 413.51,-529 413.51,-541 413.51,-541 413.51,-547 407.51,-553 401.51,-553"/>
+<text text-anchor="middle" x="386.51" y="-532.2" font-family="Arial" font-size="11.00" fill="#ffffff">Inicio</text>
+</g>
+<g id="node2" class="node">
+<title>e1</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="505.56,-492 316.17,-492 267.45,-456 456.84,-456 505.56,-492"/>
+<text text-anchor="middle" x="386.51" y="-471.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer oxigeno_disponible</text>
+</g>
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;e1</title>
+<path fill="none" stroke="#7c7b75" d="M386.51,-516.93C386.51,-511.48 386.51,-505.33 386.51,-499.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="388.96,-499.23 386.51,-492.23 384.06,-499.23 388.96,-499.23"/>
+</g>
+<g id="node3" class="node">
+<title>e2</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="503.53,-431 317.37,-431 269.48,-395 455.64,-395 503.53,-431"/>
+<text text-anchor="middle" x="386.51" y="-410.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer oxigeno_requerido</text>
+</g>
+<g id="edge2" class="edge">
+<title>e1&#45;&gt;e2</title>
+<path fill="none" stroke="#7c7b75" d="M386.51,-455.93C386.51,-450.48 386.51,-444.33 386.51,-438.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="388.96,-438.23 386.51,-431.23 384.06,-438.23 388.96,-438.23"/>
+</g>
+<g id="node4" class="node">
+<title>e3</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="524.85,-370 304.77,-370 248.16,-334 468.24,-334 524.85,-370"/>
+<text text-anchor="middle" x="386.51" y="-349.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer provisiones_disponibles</text>
+</g>
+<g id="edge3" class="edge">
+<title>e2&#45;&gt;e3</title>
+<path fill="none" stroke="#7c7b75" d="M386.51,-394.93C386.51,-389.48 386.51,-383.33 386.51,-377.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="388.96,-377.23 386.51,-370.23 384.06,-377.23 388.96,-377.23"/>
+</g>
+<g id="node5" class="node">
+<title>e4</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="522.06,-309 306.42,-309 250.95,-273 466.59,-273 522.06,-309"/>
+<text text-anchor="middle" x="386.51" y="-288.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer provisiones_requeridas</text>
+</g>
+<g id="edge4" class="edge">
+<title>e3&#45;&gt;e4</title>
+<path fill="none" stroke="#7c7b75" d="M386.51,-333.93C386.51,-328.48 386.51,-322.33 386.51,-316.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="388.96,-316.23 386.51,-309.23 384.06,-316.23 388.96,-316.23"/>
+</g>
+<g id="node6" class="node">
+<title>d</title>
+<polygon fill="#fff8e1" stroke="#c7ac19" stroke-width="1.4" points="386.51,-248 160.51,-204 386.51,-160 612.51,-204 386.51,-248"/>
+<text text-anchor="middle" x="386.51" y="-213.2" font-family="Arial" font-size="11.00" fill="#1c3b64">¿oxigeno_disponible &gt;= oxigeno_requerido</text>
+<text text-anchor="middle" x="386.51" y="-201.2" font-family="Arial" font-size="11.00" fill="#1c3b64">and provisiones_disponibles</text>
+<text text-anchor="middle" x="386.51" y="-189.2" font-family="Arial" font-size="11.00" fill="#1c3b64">&gt;= provisiones_requeridas?</text>
+</g>
+<g id="edge5" class="edge">
+<title>e4&#45;&gt;d</title>
+<path fill="none" stroke="#7c7b75" d="M386.51,-272.8C386.51,-267.64 386.51,-261.7 386.51,-255.52"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="388.96,-255.19 386.51,-248.19 384.06,-255.19 388.96,-255.19"/>
+</g>
+<g id="node7" class="node">
+<title>si</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="367.02,-125 75.09,-125 -0.01,-61 291.92,-61 367.02,-125"/>
+<text text-anchor="middle" x="183.51" y="-96.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Mostrar &quot;La nave posee recursos</text>
+<text text-anchor="middle" x="183.51" y="-84.2" font-family="Arial" font-size="11.00" fill="#1c3b64">suficientes para la tripulación.&quot;</text>
+</g>
+<g id="edge6" class="edge">
+<title>d&#45;&gt;si</title>
+<path fill="none" stroke="#7c7b75" d="M327.52,-171.33C302.48,-157.88 273.23,-142.18 247.66,-128.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="248.57,-126.15 241.24,-125 246.25,-130.47 248.57,-126.15"/>
+<text text-anchor="middle" x="286.01" y="-140" font-family="Arial" font-size="10.00" fill="#00734a"> Sí</text>
+</g>
+<g id="node8" class="node">
+<title>no</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="790.62,-125 473.87,-125 392.39,-61 709.14,-61 790.62,-125"/>
+<text text-anchor="middle" x="591.51" y="-96.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Mostrar &quot;La nave no posee recursos</text>
+<text text-anchor="middle" x="591.51" y="-84.2" font-family="Arial" font-size="11.00" fill="#1c3b64">suficientes para la tripulación.&quot;</text>
+</g>
+<g id="edge7" class="edge">
+<title>d&#45;&gt;no</title>
+<path fill="none" stroke="#7c7b75" d="M445.8,-171.47C471.09,-158.03 500.68,-142.29 526.56,-128.53"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="528.02,-130.53 533.05,-125.08 525.72,-126.2 528.02,-130.53"/>
+<text text-anchor="middle" x="514.51" y="-140" font-family="Arial" font-size="10.00" fill="#d2232a"> No</text>
+</g>
+<g id="node9" class="node">
+<title>fin</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M401.51,-36C401.51,-36 371.51,-36 371.51,-36 365.51,-36 359.51,-30 359.51,-24 359.51,-24 359.51,-12 359.51,-12 359.51,-6 365.51,0 371.51,0 371.51,0 401.51,0 401.51,0 407.51,0 413.51,-6 413.51,-12 413.51,-12 413.51,-24 413.51,-24 413.51,-30 407.51,-36 401.51,-36"/>
+<text text-anchor="middle" x="386.51" y="-15.2" font-family="Arial" font-size="11.00" fill="#ffffff">Fin</text>
+</g>
+<g id="edge8" class="edge">
+<title>si&#45;&gt;fin</title>
+<path fill="none" stroke="#7c7b75" d="M269.89,-60.94C299.03,-50.46 329.88,-39.36 352.52,-31.22"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="353.51,-33.47 359.27,-28.79 351.86,-28.86 353.51,-33.47"/>
+</g>
+<g id="edge9" class="edge">
+<title>no&#45;&gt;fin</title>
+<path fill="none" stroke="#7c7b75" d="M504.27,-60.94C474.64,-50.39 443.27,-39.21 420.37,-31.06"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="420.96,-28.67 413.54,-28.63 419.31,-33.28 420.96,-28.67"/>
+</g>
+</g>
+</svg>
+
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Código</strong> — <code>ejercicio3_soporte_tripulacion.py</code></p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: ejercicio3_soporte_tripulacion.py
+# Curso: SOFT-01 Principios de Programación 1 - Sección SCV6
+# Integrantes: Solución de referencia (docente)
+# Fecha: 21/10/2026        Versión: 1.0
+# Descripción: Verifica si el oxígeno y las provisiones disponibles
+#              alcanzan para la tripulación.
+# ============================================================
+
+# ---------- Entrada de datos ----------
+oxigeno_disponible = int(input("Oxígeno disponible: "))
+oxigeno_requerido = int(input("Oxígeno requerido: "))
+provisiones_disponibles = int(input("Provisiones disponibles: "))
+provisiones_requeridas = int(input("Provisiones requeridas: "))
+
+# ---------- Decisión (condicional doble) ----------
+# Ambos recursos deben alcanzar; basta que uno falte para rechazar.
+print()
+if oxigeno_disponible &gt;= oxigeno_requerido and provisiones_disponibles &gt;= provisiones_requeridas:
+    print("La nave posee recursos suficientes para la tripulación.")
+else:
+    print("La nave no posee recursos suficientes para la tripulación.")</code></pre>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Casos de prueba</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">ID</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Escenario</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado esperado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado obtenido</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Estado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Evidencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-09</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ambos recursos suficientes</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">oxigeno_disponible = 70<br>oxigeno_requerido = 65<br>provisiones_disponibles = 40<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">La nave posee recursos suficientes para la tripulación.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-09" onclick="var v = document.getElementById('cp-cp-09'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-10</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Límite: ambos exactamente iguales al requerido</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">oxigeno_disponible = 65<br>oxigeno_requerido = 65<br>provisiones_disponibles = 33<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">La nave posee recursos suficientes para la tripulación.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-10" onclick="var v = document.getElementById('cp-cp-10'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-11</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno insuficiente por una unidad</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">oxigeno_disponible = 64<br>oxigeno_requerido = 65<br>provisiones_disponibles = 40<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">La nave no posee recursos suficientes para la tripulación.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-11" onclick="var v = document.getElementById('cp-cp-11'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-12</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones insuficientes por una unidad</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">oxigeno_disponible = 70<br>oxigeno_requerido = 65<br>provisiones_disponibles = 32<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">La nave no posee recursos suficientes para la tripulación.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-12" onclick="var v = document.getElementById('cp-cp-12'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-13</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ambos recursos insuficientes</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">oxigeno_disponible = 30<br>oxigeno_requerido = 65<br>provisiones_disponibles = 20<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">La nave no posee recursos suficientes para la tripulación.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-13" onclick="var v = document.getElementById('cp-cp-13'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- EJERCICIO 4: AUTORIZACIÓN INICIAL DE LANZAMIENTO -->
+        <div
+            style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-rocket" style="color: #d2232a; font-size: 22px;" aria-hidden="true"></i>
+                Ejercicio 4: Autorización inicial de lanzamiento
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;"><strong>Estructura de control:</strong> condicional doble sin anidación, con condición compuesta de los cuatro recursos.</p>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0;"><strong>Tabla de variables</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Nombre</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Tipo de dato</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Descripción</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Clasificación</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Valor inicial / restricciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>RESERVA_COMBUSTIBLE</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible adicional obligatorio para emergencias.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Constante</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">10</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_disponible</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible que posee la nave.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_ida</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible requerido para llegar.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_regreso</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible requerido para regresar.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>oxigeno_disponible</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno que posee la nave.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>oxigeno_requerido</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Oxígeno necesario.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>energia_disponible</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Energía que posee la nave.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>energia_requerida</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Energía necesaria.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>provisiones_disponibles</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones que posee la nave.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>provisiones_requeridas</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Provisiones necesarias.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entrada</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Entero positivo</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>combustible_total</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><code>int</code></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible de ida, regreso y reserva; se compara con el disponible.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Intermedia</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Calculado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Diagrama de flujo</strong></p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px; margin-top: 12px; overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width:960px; height:auto;"
+ viewBox="0.00 0.00 767.80 1065.40" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(7.2 1058.2)">
+<title>G</title>
+<text text-anchor="middle" x="376.7" y="-1035.8" font-family="Arial" font-size="14.00" fill="#164a98">Ejercicio 4: Autorización inicial de lanzamiento</text>
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M371.23,-1028C371.23,-1028 341.23,-1028 341.23,-1028 335.23,-1028 329.23,-1022 329.23,-1016 329.23,-1016 329.23,-1004 329.23,-1004 329.23,-998 335.23,-992 341.23,-992 341.23,-992 371.23,-992 371.23,-992 377.23,-992 383.23,-998 383.23,-1004 383.23,-1004 383.23,-1016 383.23,-1016 383.23,-1022 377.23,-1028 371.23,-1028"/>
+<text text-anchor="middle" x="356.23" y="-1007.2" font-family="Arial" font-size="11.00" fill="#ffffff">Inicio</text>
+</g>
+<g id="node2" class="node">
+<title>k</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="446.73,-967 265.73,-967 265.73,-931 446.73,-931 446.73,-967"/>
+<text text-anchor="middle" x="356.23" y="-946.2" font-family="Arial" font-size="11.00" fill="#1c3b64">RESERVA_COMBUSTIBLE = 10</text>
+</g>
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;k</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-991.93C356.23,-986.48 356.23,-980.33 356.23,-974.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-974.23 356.23,-967.23 353.78,-974.23 358.68,-974.23"/>
+</g>
+<g id="node3" class="node">
+<title>e1</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="491.78,-906 276.14,-906 220.67,-870 436.31,-870 491.78,-906"/>
+<text text-anchor="middle" x="356.23" y="-885.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer combustible_disponible</text>
+</g>
+<g id="edge2" class="edge">
+<title>k&#45;&gt;e1</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-930.93C356.23,-925.48 356.23,-919.33 356.23,-913.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-913.23 356.23,-906.23 353.78,-913.23 358.68,-913.23"/>
+</g>
+<g id="node4" class="node">
+<title>e2</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="463.09,-845 293.09,-845 249.36,-809 419.36,-809 463.09,-845"/>
+<text text-anchor="middle" x="356.23" y="-824.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer combustible_ida</text>
+</g>
+<g id="edge3" class="edge">
+<title>e1&#45;&gt;e2</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-869.93C356.23,-864.48 356.23,-858.33 356.23,-852.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-852.23 356.23,-845.23 353.78,-852.23 358.68,-852.23"/>
+</g>
+<g id="node5" class="node">
+<title>e3</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="482.39,-784 281.7,-784 230.07,-748 430.76,-748 482.39,-784"/>
+<text text-anchor="middle" x="356.23" y="-763.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer combustible_regreso</text>
+</g>
+<g id="edge4" class="edge">
+<title>e2&#45;&gt;e3</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-808.93C356.23,-803.48 356.23,-797.33 356.23,-791.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-791.23 356.23,-784.23 353.78,-791.23 358.68,-791.23"/>
+</g>
+<g id="node6" class="node">
+<title>e4</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="475.28,-723 285.89,-723 237.18,-687 426.56,-687 475.28,-723"/>
+<text text-anchor="middle" x="356.23" y="-702.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer oxigeno_disponible</text>
+</g>
+<g id="edge5" class="edge">
+<title>e3&#45;&gt;e4</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-747.93C356.23,-742.48 356.23,-736.33 356.23,-730.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-730.23 356.23,-723.23 353.78,-730.23 358.68,-730.23"/>
+</g>
+<g id="node7" class="node">
+<title>e5</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="473.25,-662 287.09,-662 239.2,-626 425.36,-626 473.25,-662"/>
+<text text-anchor="middle" x="356.23" y="-641.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer oxigeno_requerido</text>
+</g>
+<g id="edge6" class="edge">
+<title>e4&#45;&gt;e5</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-686.93C356.23,-681.48 356.23,-675.33 356.23,-669.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-669.23 356.23,-662.23 353.78,-669.23 358.68,-669.23"/>
+</g>
+<g id="node8" class="node">
+<title>e6</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="473.25,-601 287.09,-601 239.2,-565 425.36,-565 473.25,-601"/>
+<text text-anchor="middle" x="356.23" y="-580.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer energia_disponible</text>
+</g>
+<g id="edge7" class="edge">
+<title>e5&#45;&gt;e6</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-625.93C356.23,-620.48 356.23,-614.33 356.23,-608.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-608.23 356.23,-601.23 353.78,-608.23 358.68,-608.23"/>
+</g>
+<g id="node9" class="node">
+<title>e7</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="471.73,-540 287.99,-540 240.73,-504 424.46,-504 471.73,-540"/>
+<text text-anchor="middle" x="356.23" y="-519.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer energia_requerida</text>
+</g>
+<g id="edge8" class="edge">
+<title>e6&#45;&gt;e7</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-564.93C356.23,-559.48 356.23,-553.33 356.23,-547.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-547.23 356.23,-540.23 353.78,-547.23 358.68,-547.23"/>
+</g>
+<g id="node10" class="node">
+<title>e8</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="494.57,-479 274.5,-479 217.88,-443 437.96,-443 494.57,-479"/>
+<text text-anchor="middle" x="356.23" y="-458.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer provisiones_disponibles</text>
+</g>
+<g id="edge9" class="edge">
+<title>e7&#45;&gt;e8</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-503.93C356.23,-498.48 356.23,-492.33 356.23,-486.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-486.23 356.23,-479.23 353.78,-486.23 358.68,-486.23"/>
+</g>
+<g id="node11" class="node">
+<title>e9</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="491.78,-418 276.14,-418 220.67,-382 436.31,-382 491.78,-418"/>
+<text text-anchor="middle" x="356.23" y="-397.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Leer provisiones_requeridas</text>
+</g>
+<g id="edge10" class="edge">
+<title>e8&#45;&gt;e9</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-442.93C356.23,-437.48 356.23,-431.33 356.23,-425.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-425.23 356.23,-418.23 353.78,-425.23 358.68,-425.23"/>
+</g>
+<g id="node12" class="node">
+<title>p1</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.4" points="508.23,-357 204.23,-357 204.23,-321 508.23,-321 508.23,-357"/>
+<text text-anchor="middle" x="356.23" y="-342.2" font-family="Arial" font-size="11.00" fill="#1c3b64">combustible_total = combustible_ida + combustible_regreso</text>
+<text text-anchor="middle" x="356.23" y="-330.2" font-family="Arial" font-size="11.00" fill="#1c3b64">+ RESERVA_COMBUSTIBLE</text>
+</g>
+<g id="edge11" class="edge">
+<title>e9&#45;&gt;p1</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-381.93C356.23,-376.48 356.23,-370.33 356.23,-364.45"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-364.23 356.23,-357.23 353.78,-364.23 358.68,-364.23"/>
+</g>
+<g id="node13" class="node">
+<title>d</title>
+<polygon fill="#fff8e1" stroke="#c7ac19" stroke-width="1.4" points="356.23,-296 116.23,-228 356.23,-160 596.23,-228 356.23,-296"/>
+<text text-anchor="middle" x="356.23" y="-249.2" font-family="Arial" font-size="11.00" fill="#1c3b64">¿combustible_disponible &gt;= combustible_total</text>
+<text text-anchor="middle" x="356.23" y="-237.2" font-family="Arial" font-size="11.00" fill="#1c3b64">and oxigeno_disponible &gt;= oxigeno_requerido</text>
+<text text-anchor="middle" x="356.23" y="-225.2" font-family="Arial" font-size="11.00" fill="#1c3b64">and energia_disponible &gt;= energia_requerida</text>
+<text text-anchor="middle" x="356.23" y="-213.2" font-family="Arial" font-size="11.00" fill="#1c3b64">and provisiones_disponibles</text>
+<text text-anchor="middle" x="356.23" y="-201.2" font-family="Arial" font-size="11.00" fill="#1c3b64">&gt;= provisiones_requeridas?</text>
+</g>
+<g id="edge12" class="edge">
+<title>p1&#45;&gt;d</title>
+<path fill="none" stroke="#7c7b75" d="M356.23,-320.97C356.23,-315.78 356.23,-309.71 356.23,-303.21"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="358.68,-303.01 356.23,-296.01 353.78,-303.01 358.68,-303.01"/>
+</g>
+<g id="node14" class="node">
+<title>si</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="324.69,-111 66.25,-111 -0.23,-75 258.2,-75 324.69,-111"/>
+<text text-anchor="middle" x="162.23" y="-90.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Mostrar &quot;Lanzamiento autorizado.&quot;</text>
+</g>
+<g id="edge13" class="edge">
+<title>d&#45;&gt;si</title>
+<path fill="none" stroke="#7c7b75" d="M287.01,-179.55C254.98,-157.58 218.53,-132.6 193.33,-115.32"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="194.65,-113.26 187.49,-111.32 191.88,-117.3 194.65,-113.26"/>
+<text text-anchor="middle" x="242.73" y="-140" font-family="Arial" font-size="10.00" fill="#00734a"> Sí</text>
+</g>
+<g id="node15" class="node">
+<title>no</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.4" points="753.56,-125 431.69,-125 348.89,-61 670.76,-61 753.56,-125"/>
+<text text-anchor="middle" x="551.23" y="-96.2" font-family="Arial" font-size="11.00" fill="#1c3b64">Mostrar &quot;Lanzamiento no autorizado.</text>
+<text text-anchor="middle" x="551.23" y="-84.2" font-family="Arial" font-size="11.00" fill="#1c3b64">La misión debe ser revisada.&quot;</text>
+</g>
+<g id="edge14" class="edge">
+<title>d&#45;&gt;no</title>
+<path fill="none" stroke="#7c7b75" d="M425.8,-179.55C450.2,-162.91 477.15,-144.53 499.79,-129.08"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="501.35,-130.99 505.75,-125.02 498.59,-126.94 501.35,-130.99"/>
+<text text-anchor="middle" x="495.23" y="-140" font-family="Arial" font-size="10.00" fill="#d2232a"> No</text>
+</g>
+<g id="node16" class="node">
+<title>fin</title>
+<path fill="#164a98" stroke="#164a98" stroke-width="1.4" d="M371.23,-36C371.23,-36 341.23,-36 341.23,-36 335.23,-36 329.23,-30 329.23,-24 329.23,-24 329.23,-12 329.23,-12 329.23,-6 335.23,0 341.23,0 341.23,0 371.23,0 371.23,0 377.23,0 383.23,-6 383.23,-12 383.23,-12 383.23,-24 383.23,-24 383.23,-30 377.23,-36 371.23,-36"/>
+<text text-anchor="middle" x="356.23" y="-15.2" font-family="Arial" font-size="11.00" fill="#ffffff">Fin</text>
+</g>
+<g id="edge15" class="edge">
+<title>si&#45;&gt;fin</title>
+<path fill="none" stroke="#7c7b75" d="M207.71,-74.88C242.7,-61.72 290.27,-43.82 322.06,-31.86"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="323.3,-34.01 328.99,-29.25 321.57,-29.42 323.3,-34.01"/>
+</g>
+<g id="edge16" class="edge">
+<title>no&#45;&gt;fin</title>
+<path fill="none" stroke="#7c7b75" d="M468.25,-60.94C440.75,-50.64 411.67,-39.76 390.04,-31.66"/>
+<polygon fill="#7c7b75" stroke="#7c7b75" points="390.7,-29.29 383.28,-29.13 388.98,-33.88 390.7,-29.29"/>
+</g>
+</g>
+</svg>
+
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Código</strong> — <code>ejercicio4_autorizacion.py</code></p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: ejercicio4_autorizacion.py
+# Curso: SOFT-01 Principios de Programación 1 - Sección SCV6
+# Integrantes: Solución de referencia (docente)
+# Fecha: 21/10/2026        Versión: 1.0
+# Descripción: Autoriza el lanzamiento solo si los cuatro recursos
+#              cubren lo requerido, incluido el combustible de regreso.
+# ============================================================
+
+# ---------- Constantes ----------
+RESERVA_COMBUSTIBLE = 10
+
+# ---------- Entrada de datos ----------
+combustible_disponible = int(input("Combustible disponible: "))
+combustible_ida = int(input("Combustible requerido para llegar al destino: "))
+combustible_regreso = int(input("Combustible requerido para regresar: "))
+oxigeno_disponible = int(input("Oxígeno disponible: "))
+oxigeno_requerido = int(input("Oxígeno requerido: "))
+energia_disponible = int(input("Energía disponible: "))
+energia_requerida = int(input("Energía requerida: "))
+provisiones_disponibles = int(input("Provisiones disponibles: "))
+provisiones_requeridas = int(input("Provisiones requeridas: "))
+
+# ---------- Procesamiento ----------
+# El combustible se compara contra el total (ida + regreso + reserva)
+# para no autorizar misiones que solo pueden llegar al destino.
+combustible_total = combustible_ida + combustible_regreso + RESERVA_COMBUSTIBLE
+
+# ---------- Decisión (condicional doble sin anidación) ----------
+print()
+if (combustible_disponible &gt;= combustible_total
+        and oxigeno_disponible &gt;= oxigeno_requerido
+        and energia_disponible &gt;= energia_requerida
+        and provisiones_disponibles &gt;= provisiones_requeridas):
+    print("Lanzamiento autorizado.")
+else:
+    print("Lanzamiento no autorizado. La misión debe ser revisada.")</code></pre>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Nota:</strong> La condición larga se divide en varias líneas usando paréntesis, que es la forma recomendada por PEP 8 (sin <code>\</code>).
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Casos de prueba</strong></p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">ID</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Escenario</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Datos de entrada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado esperado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Resultado obtenido</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Estado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Evidencia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-14</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Todos los recursos suficientes</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 120<br>combustible_ida = 40<br>combustible_regreso = 40<br>oxigeno_disponible = 70<br>oxigeno_requerido = 65<br>energia_disponible = 70<br>energia_requerida = 60<br>provisiones_disponibles = 40<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Lanzamiento autorizado.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-14" onclick="var v = document.getElementById('cp-cp-14'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-15</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Límite: todos exactamente iguales al requerido</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 90<br>combustible_ida = 40<br>combustible_regreso = 40<br>oxigeno_disponible = 65<br>oxigeno_requerido = 65<br>energia_disponible = 60<br>energia_requerida = 60<br>provisiones_disponibles = 33<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Lanzamiento autorizado.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-15" onclick="var v = document.getElementById('cp-cp-15'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-16</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible suficiente solo para llegar</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 50<br>combustible_ida = 40<br>combustible_regreso = 40<br>oxigeno_disponible = 70<br>oxigeno_requerido = 65<br>energia_disponible = 70<br>energia_requerida = 60<br>provisiones_disponibles = 40<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Lanzamiento no autorizado. La misión debe ser revisada.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-16" onclick="var v = document.getElementById('cp-cp-16'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-17</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Combustible para ida y regreso, pero sin la reserva</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 80<br>combustible_ida = 40<br>combustible_regreso = 40<br>oxigeno_disponible = 70<br>oxigeno_requerido = 65<br>energia_disponible = 70<br>energia_requerida = 60<br>provisiones_disponibles = 40<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Lanzamiento no autorizado. La misión debe ser revisada.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-17" onclick="var v = document.getElementById('cp-cp-17'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong>CP-18</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejercicio 4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Energía insuficiente por una unidad</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">combustible_disponible = 120<br>combustible_ida = 40<br>combustible_regreso = 40<br>oxigeno_disponible = 70<br>oxigeno_requerido = 65<br>energia_disponible = 59<br>energia_requerida = 60<br>provisiones_disponibles = 40<br>provisiones_requeridas = 33</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Lanzamiento no autorizado. La misión debe ser revisada.</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Igual al esperado</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><strong style="color: #00734a;">Exitoso</strong></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><button type="button" id="btn-cp-cp-18" onclick="var v = document.getElementById('cp-cp-18'); document.body.appendChild(v); v.style.display = 'flex';" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; background: #164a98; color: #ffffff; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; font-family: inherit; cursor: pointer; white-space: nowrap;"><i class="fa-solid fa-terminal" aria-hidden="true"></i> Ver consola</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div
+                style="background: #fff8e1; border-left: 5px solid #C7AC19; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #7c7b75; font-size: 14px; line-height: 1.6;">
+                <strong>Observación:</strong> CP-16 y CP-17 son los casos clave de la rúbrica: hay combustible para llegar (e incluso para regresar en CP-17), pero no para el total con la reserva, así que la misión no se autoriza.
+            </div>
+        </div>
+
+        <!-- CIERRE -->
+        <div
+            style="display: flex; align-items: flex-start; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Para la revisión:</strong> hay más de una solución correcta. Al revisar, verifique sobre todo que el combustible se compare contra el total con reserva, que se use <code>&gt;=</code> en las comparaciones de recursos y <code>&lt;</code> en la advertencia del ejercicio 2, y que no haya números mágicos en las fórmulas.</span>
+        </div>
+
+        <div id="cp-cp-01" role="dialog" aria-modal="true" aria-label="CP-01: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-01: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-01" aria-label="Cerrar" onclick="document.getElementById('cp-cp-01').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Nombre de la misión: Explorador I
+Cantidad de tripulantes: 3
+Días estimados para llegar al destino: 5
+
+Misión: Explorador I
+Tripulantes: 3
+Duración estimada hasta el destino: 5 días
+Combustible para llegar: 40 unidades
+Combustible para regresar: 40 unidades
+Reserva de combustible: 10 unidades
+Combustible total requerido: 90 unidades
+Oxígeno requerido: 65 unidades
+Energía requerida: 60 unidades
+Provisiones requeridas: 33 unidades</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-02" role="dialog" aria-modal="true" aria-label="CP-02: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-02: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-02" aria-label="Cerrar" onclick="document.getElementById('cp-cp-02').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Nombre de la misión: Mínima
+Cantidad de tripulantes: 1
+Días estimados para llegar al destino: 1
+
+Misión: Mínima
+Tripulantes: 1
+Duración estimada hasta el destino: 1 días
+Combustible para llegar: 8 unidades
+Combustible para regresar: 8 unidades
+Reserva de combustible: 10 unidades
+Combustible total requerido: 26 unidades
+Oxígeno requerido: 9 unidades
+Energía requerida: 20 unidades
+Provisiones requeridas: 5 unidades</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-03" role="dialog" aria-modal="true" aria-label="CP-03: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-03: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-03" aria-label="Cerrar" onclick="document.getElementById('cp-cp-03').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Nombre de la misión: Explorador II
+Cantidad de tripulantes: 4
+Días estimados para llegar al destino: 10
+
+Misión: Explorador II
+Tripulantes: 4
+Duración estimada hasta el destino: 10 días
+Combustible para llegar: 80 unidades
+Combustible para regresar: 80 unidades
+Reserva de combustible: 10 unidades
+Combustible total requerido: 170 unidades
+Oxígeno requerido: 165 unidades
+Energía requerida: 110 unidades
+Provisiones requeridas: 83 unidades</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-04" role="dialog" aria-modal="true" aria-label="CP-04: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-04: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-04" aria-label="Cerrar" onclick="document.getElementById('cp-cp-04').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 120
+Combustible requerido para el viaje de ida: 40
+Combustible requerido para el viaje de regreso: 40
+
+Combustible disponible: 120 unidades
+Combustible requerido para llegar: 40 unidades
+Combustible requerido para regresar: 40 unidades
+Reserva de emergencia: 10 unidades
+Combustible total requerido: 90 unidades
+Combustible adicional: 30 unidades</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-05" role="dialog" aria-modal="true" aria-label="CP-05: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-05: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-05" aria-label="Cerrar" onclick="document.getElementById('cp-cp-05').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 95
+Combustible requerido para el viaje de ida: 40
+Combustible requerido para el viaje de regreso: 40
+
+Combustible disponible: 95 unidades
+Combustible requerido para llegar: 40 unidades
+Combustible requerido para regresar: 40 unidades
+Reserva de emergencia: 10 unidades
+Combustible total requerido: 90 unidades
+Combustible adicional: 5 unidades
+Advertencia: el margen adicional de combustible es bajo.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-06" role="dialog" aria-modal="true" aria-label="CP-06: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-06: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-06" aria-label="Cerrar" onclick="document.getElementById('cp-cp-06').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 100
+Combustible requerido para el viaje de ida: 40
+Combustible requerido para el viaje de regreso: 40
+
+Combustible disponible: 100 unidades
+Combustible requerido para llegar: 40 unidades
+Combustible requerido para regresar: 40 unidades
+Reserva de emergencia: 10 unidades
+Combustible total requerido: 90 unidades
+Combustible adicional: 10 unidades</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-07" role="dialog" aria-modal="true" aria-label="CP-07: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-07: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-07" aria-label="Cerrar" onclick="document.getElementById('cp-cp-07').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 90
+Combustible requerido para el viaje de ida: 40
+Combustible requerido para el viaje de regreso: 40
+
+Combustible disponible: 90 unidades
+Combustible requerido para llegar: 40 unidades
+Combustible requerido para regresar: 40 unidades
+Reserva de emergencia: 10 unidades
+Combustible total requerido: 90 unidades
+Combustible adicional: 0 unidades
+Advertencia: el margen adicional de combustible es bajo.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-08" role="dialog" aria-modal="true" aria-label="CP-08: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-08: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-08" aria-label="Cerrar" onclick="document.getElementById('cp-cp-08').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 50
+Combustible requerido para el viaje de ida: 40
+Combustible requerido para el viaje de regreso: 40
+
+Combustible disponible: 50 unidades
+Combustible requerido para llegar: 40 unidades
+Combustible requerido para regresar: 40 unidades
+Reserva de emergencia: 10 unidades
+Combustible total requerido: 90 unidades
+Combustible adicional: -40 unidades
+Advertencia: el margen adicional de combustible es bajo.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-09" role="dialog" aria-modal="true" aria-label="CP-09: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-09: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-09" aria-label="Cerrar" onclick="document.getElementById('cp-cp-09').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Oxígeno disponible: 70
+Oxígeno requerido: 65
+Provisiones disponibles: 40
+Provisiones requeridas: 33
+
+La nave posee recursos suficientes para la tripulación.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-10" role="dialog" aria-modal="true" aria-label="CP-10: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-10: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-10" aria-label="Cerrar" onclick="document.getElementById('cp-cp-10').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Oxígeno disponible: 65
+Oxígeno requerido: 65
+Provisiones disponibles: 33
+Provisiones requeridas: 33
+
+La nave posee recursos suficientes para la tripulación.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-11" role="dialog" aria-modal="true" aria-label="CP-11: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-11: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-11" aria-label="Cerrar" onclick="document.getElementById('cp-cp-11').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Oxígeno disponible: 64
+Oxígeno requerido: 65
+Provisiones disponibles: 40
+Provisiones requeridas: 33
+
+La nave no posee recursos suficientes para la tripulación.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-12" role="dialog" aria-modal="true" aria-label="CP-12: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-12: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-12" aria-label="Cerrar" onclick="document.getElementById('cp-cp-12').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Oxígeno disponible: 70
+Oxígeno requerido: 65
+Provisiones disponibles: 32
+Provisiones requeridas: 33
+
+La nave no posee recursos suficientes para la tripulación.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-13" role="dialog" aria-modal="true" aria-label="CP-13: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-13: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-13" aria-label="Cerrar" onclick="document.getElementById('cp-cp-13').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Oxígeno disponible: 30
+Oxígeno requerido: 65
+Provisiones disponibles: 20
+Provisiones requeridas: 33
+
+La nave no posee recursos suficientes para la tripulación.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-14" role="dialog" aria-modal="true" aria-label="CP-14: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-14: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-14" aria-label="Cerrar" onclick="document.getElementById('cp-cp-14').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 120
+Combustible requerido para llegar al destino: 40
+Combustible requerido para regresar: 40
+Oxígeno disponible: 70
+Oxígeno requerido: 65
+Energía disponible: 70
+Energía requerida: 60
+Provisiones disponibles: 40
+Provisiones requeridas: 33
+
+Lanzamiento autorizado.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-15" role="dialog" aria-modal="true" aria-label="CP-15: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-15: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-15" aria-label="Cerrar" onclick="document.getElementById('cp-cp-15').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 90
+Combustible requerido para llegar al destino: 40
+Combustible requerido para regresar: 40
+Oxígeno disponible: 65
+Oxígeno requerido: 65
+Energía disponible: 60
+Energía requerida: 60
+Provisiones disponibles: 33
+Provisiones requeridas: 33
+
+Lanzamiento autorizado.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-16" role="dialog" aria-modal="true" aria-label="CP-16: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-16: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-16" aria-label="Cerrar" onclick="document.getElementById('cp-cp-16').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 50
+Combustible requerido para llegar al destino: 40
+Combustible requerido para regresar: 40
+Oxígeno disponible: 70
+Oxígeno requerido: 65
+Energía disponible: 70
+Energía requerida: 60
+Provisiones disponibles: 40
+Provisiones requeridas: 33
+
+Lanzamiento no autorizado. La misión debe ser revisada.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-17" role="dialog" aria-modal="true" aria-label="CP-17: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-17: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-17" aria-label="Cerrar" onclick="document.getElementById('cp-cp-17').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 80
+Combustible requerido para llegar al destino: 40
+Combustible requerido para regresar: 40
+Oxígeno disponible: 70
+Oxígeno requerido: 65
+Energía disponible: 70
+Energía requerida: 60
+Provisiones disponibles: 40
+Provisiones requeridas: 33
+
+Lanzamiento no autorizado. La misión debe ser revisada.</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <div id="cp-cp-18" role="dialog" aria-modal="true" aria-label="CP-18: evidencia de ejecución"
+            onclick="if (event.target === this) { this.style.display = 'none'; }"
+            style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(22, 74, 152, 0.55); z-index: 100000; align-items: center; justify-content: center; padding: 16px; box-sizing: border-box;">
+            <div style="background: #ffffff; border-radius: 16px; width: 100%; max-width: 760px; max-height: 90vh; overflow: auto; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); text-align: left; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #1c3b64; font-size: 15px; line-height: 1.6;">
+                <div style="position: sticky; top: 0; background: #ffffff; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 3px solid #9CC8FF;">
+                    <h4 style="margin: 0; color: #164a98; font-size: 18px;">CP-18: evidencia de ejecución</h4>
+                    <button type="button" id="cerrar-cp-cp-18" aria-label="Cerrar" onclick="document.getElementById('cp-cp-18').style.display = 'none';"
+                        style="background: #d2232a; color: #ffffff; border: none; border-radius: 8px; width: 36px; height: 36px; font-size: 18px; font-weight: 700; cursor: pointer; flex-shrink: 0;">✕</button>
+                </div>
+                <div style="padding: 18px 20px 22px 20px;">
+<pre style="background: #0c0c0c; color: #cccccc; padding: 16px; border-radius: 8px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 0;"><code>Combustible disponible: 120
+Combustible requerido para llegar al destino: 40
+Combustible requerido para regresar: 40
+Oxígeno disponible: 70
+Oxígeno requerido: 65
+Energía disponible: 59
+Energía requerida: 60
+Provisiones disponibles: 40
+Provisiones requeridas: 33
+
+Lanzamiento no autorizado. La misión debe ser revisada.</code></pre>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        (function () {
+            // Botones "Ver consola": abren la evidencia de ejecución de cada caso de prueba.
+            function abrir(id) {
+                var v = document.getElementById(id);
+                if (!v) return;
+                if (v.parentNode !== document.body) document.body.appendChild(v);
+                v.style.display = 'flex';
+            }
+            var botones = document.querySelectorAll('[id^="btn-cp-"]');
+            for (var i = 0; i < botones.length; i++) {
+                botones[i].addEventListener('click', function (e) { e.preventDefault(); abrir(this.id.substring(4)); });
+            }
+            var cierres = document.querySelectorAll('[id^="cerrar-cp-"]');
+            for (var j = 0; j < cierres.length; j++) {
+                cierres[j].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.getElementById(this.id.substring(7)).style.display = 'none';
+                });
+            }
+            var ventanas = document.querySelectorAll('[id^="cp-"]');
+            for (var k = 0; k < ventanas.length; k++) {
+                ventanas[k].addEventListener('click', function (e) { if (e.target === this) this.style.display = 'none'; });
+            }
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') for (var m = 0; m < ventanas.length; m++) ventanas[m].style.display = 'none';
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
