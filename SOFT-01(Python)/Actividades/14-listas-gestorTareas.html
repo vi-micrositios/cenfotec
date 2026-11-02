@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas: gestor de tareas</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="listas-gestor-tareas"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-list-ul" aria-hidden="true"></i>
+            </span>
+            <h3 id="listas-gestor-tareas"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Listas: gestor de tareas
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            Objetivo: Completar un programa que guarda tareas en una <strong>lista</strong>: agregará tareas, las mostrará y eliminará las tareas completadas. Lea cada parte en orden. Trabaje en Visual Studio Code y ejecute el programa para comprobar sus respuestas.
+        </div>
+
+
+
+        <!-- PARTE 1: COMPLETE EL PROGRAMA -->
+        <div
+            style="background: #e8f5e9; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-puzzle-piece" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Parte 1: Complete el programa
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">El siguiente programa administra una lista de tareas pendientes. El menú y el ciclo <code>while</code> ya están escritos. Copie el programa en Visual Studio Code y reemplace cada <code>______</code> por el código que indica el comentario de esa línea. Solo debe completar los 7 espacios; no modifique el resto del programa.</p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># Gestor de tareas
+tareas = []                                  # 1. Crear la lista vacía
+opcion = 0
+while opcion != 4:
+    print("\n--- Gestor de tareas ---")
+    print("1. Agregar una tarea")
+    print("2. Completar una tarea")
+    print("3. Mostrar las tareas pendientes")
+    print("4. Salir")
+    opcion = int(input("Seleccione una opción (1, 2, 3 o 4): "))
+    if opcion == 1:
+        tarea_nueva = input("Ingrese el nombre de la tarea: ")
+        ______                                    # 2. Agregue tarea_nueva al final de la lista
+        print("Tarea agregada.")
+    elif opcion == 2:
+        if ______:                                # 3. Condición: la lista está vacía
+            print("No hay tareas pendientes.")
+        else:
+            numero = 1
+            for ______:                           # 4. Recorra la lista tareas
+                print(numero, "-", tarea)
+                numero = numero + 1
+            numero_tarea = int(input("Ingrese el número de la tarea completada: "))
+            if ______:                            # 5. Condición: el número está entre 1 y la cantidad de tareas
+                completada = ______               # 6. Elimine la tarea de la lista
+                print("Tarea completada:", completada)
+            else:
+                print("Número de tarea no válido.")
+    elif opcion == 3:
+        if len(tareas) == 0:
+            print("No hay tareas pendientes.")
+        else:
+            print("Tareas pendientes:", ______)   # 7. Cantidad de tareas
+            for tarea in tareas:
+                print("-", tarea)
+    elif opcion == 4:
+        print("¡Lo esperamos pronto!")
+    else:
+        print("Opción no válida.")</code></pre>
+
+
+        </div>
+
+        <!-- PARTE 2: SIGA EL CONTENIDO DE LA LISTA -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-list-check" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Parte 2: Siga el contenido de la lista
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Antes de ejecutar el programa, complete la tabla: escriba cómo queda la lista <code>tareas</code> después de cada paso, cuántos elementos tiene y qué mensaje muestra el programa (sin contar el menú ni la lista numerada). La lista inicia vacía: <code>[]</code>. Luego ejecute su programa con los mismos datos y compare.</p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Paso</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Opción y dato ingresado</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Contenido de <code>tareas</code> después del paso</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;"><code>len(tareas)</code></th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Mensaje que muestra el programa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Opción 1, tarea «Estudiar listas»</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Opción 1, tarea «Hacer la práctica»</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Opción 1, tarea «Leer el capítulo 5»</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">4</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Opción 2, número 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">5</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Opción 2, número 3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">6</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Opción 1, tarea «Repasar ciclos»</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">7</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Opción 2, número 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- PARTE 3: PREGUNTAS -->
+        <div
+            style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-circle-question" style="color: #c7ac19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: Preguntas
+            </h4>
+            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+                <li>¿Por qué el programa usa <code>numero_tarea - 1</code> y no <code>numero_tarea</code> dentro de <code>pop()</code>?</li>
+                <li>Si se elimina el <code>if</code> del espacio 5 y el usuario escribe el número 10 con solo 2 tareas en la lista, ¿qué ocurre al ejecutar <code>pop()</code>?</li>
+                <li>¿Qué guarda la variable <code>completada</code> después de ejecutar <code>completada = tareas.pop(numero_tarea - 1)</code>?</li>
+                <li>Después de completar una tarea, ¿qué pasa con la posición de las tareas que estaban después de ella?</li>
+            </ol>
+
+        </div>
+
+
+
+        <!-- CIERRE -->
+        <div
+            style=" gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> una lista guarda varios valores. Con <code>append()</code> se agrega al final, con <code>len()</code> se conoce la cantidad, con <code>for</code> se recorre y con <code>pop()</code> se elimina por posición, recordando que los índices empiezan en 0.</span>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

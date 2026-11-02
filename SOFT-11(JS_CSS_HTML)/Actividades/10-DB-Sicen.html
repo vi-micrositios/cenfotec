@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Primera colección de SICEN con NestJS</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-nest-sicen">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-server"></i>
+            </span>
+            <h3 id="ejercicio-nest-sicen"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Primera colección de SICEN con con Node.js y MongoDB (NestJS)
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong>
+            Programar en NestJS <strong>al menos una colección</strong> del modelo de datos de SICEN, con su
+            <strong>esquema</strong>, <strong>DTO</strong>, <strong>servicio</strong>, <strong>controlador</strong> y
+            <strong>módulo</strong>, creando solo los métodos que piden los <strong>requerimientos</strong> del cliente.
+        </div>
+
+        <!-- CONTEXTO -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-users" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Contexto
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 12px 0; line-height: 1.6;">
+                En el ejercicio anterior, el equipo diseñó el <strong>modelo de colecciones de SICEN</strong>: entidades,
+                atributos, tipos de datos, relaciones y la decisión de embeber o referenciar. Ahora ese diseño se convierte
+                en <strong>código</strong>. Use <strong>su propio modelo</strong>: las tablas de atributos y el diagrama son
+                la guía para escribir el esquema y las validaciones.
+            </p>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0; line-height: 1.6;">
+                Igual que en el taller de gestión de personal, <strong>no se programa un CRUD genérico</strong>: cada
+                endpoint debe responder a un requerimiento o caso de uso de SICEN.
+            </p>
+
+        </div>
+
+        <!-- ===================== PARTE 1 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Definir los requerimientos y los endpoints
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Antes de escribir código, complete una tabla que relacione cada <strong>requerimiento</strong> con su
+                <strong>endpoint</strong>. Primero el requerimiento, después la ruta.
+            </p>
+
+            <div style="overflow-x: auto;" tabindex="0" role="region" aria-label="Plantilla de tabla de endpoints, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 680px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Plantilla de ejemplo: entidad CentroEducativo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Requerimiento</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Método y ruta</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Datos que recibe</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Respuesta y errores</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">RF-01 Registrar un centro educativo</td><td style="padding: 10px; border: 1px solid #c8d1df;"><code>POST /centros-educativos</code></td><td style="padding: 10px; border: 1px solid #c8d1df;">JSON en el body</td><td style="padding: 10px; border: 1px solid #c8d1df;">201 con el centro creado · 400 datos inválidos · 409 código repetido</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">RF-04 Consultar los centros de una provincia</td><td style="padding: 10px; border: 1px solid #c8d1df;"><code>GET /centros-educativos/provincia/:provincia</code></td><td style="padding: 10px; border: 1px solid #c8d1df;">Parámetro de ruta</td><td style="padding: 10px; border: 1px solid #c8d1df;">200 con la lista (puede ir vacía)</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td><td style="padding: 10px; border: 1px solid #c8d1df;">…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+
+        <!-- ===================== PARTE 2 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Generar el módulo
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Dentro de la carpeta del back-end, genere el recurso con el CLI de Nest. Use el nombre de la colección en
+                <strong>plural</strong> y en <strong>kebab-case</strong>.
+            </p>
+
+            <pre tabindex="0" aria-label="Comando para generar el módulo" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; white-space: pre;"><code>nest g resource centros-educativos --no-spec
+# What transport layer do you use?            → REST API
+# Would you like to generate CRUD entry points? → n</code></pre>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 16px 0 10px 0; line-height: 1.6;">
+                Cree las carpetas que faltan para que la estructura quede así:
+            </p>
+
+            <pre tabindex="0" aria-label="Estructura de carpetas del módulo" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0; white-space: pre;"><code>src/centros-educativos/
+├── schemas/
+│   └── centro-educativo.schema.ts
+├── dto/
+│   └── crear-centro-educativo.dto.ts
+├── centros-educativos.controller.ts
+├── centros-educativos.service.ts
+└── centros-educativos.module.ts</code></pre>
+        </div>
+
+        <!-- ===================== PARTE 3 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                Escribir el esquema
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Traduzca la tabla de atributos del ejercicio anterior a una clase con <code>@Schema</code> y <code>@Prop</code>.
+                Cada fila de la tabla se convierte en un atributo, y cada regla en una opción de <code>@Prop</code>.
+            </p>
+
+
+        </div>
+
+        <!-- ===================== PARTE 4 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-4" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+                Escribir el DTO
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                El DTO valida los datos <strong>cuando llega la petición</strong>, antes de llegar a la base de datos.
+                Sus reglas deben coincidir con las del esquema y con las validaciones del formulario que ya programaron con JavaScript.
+            </p>
+
+        </div>
+
+        <!-- ===================== PARTE 5 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-5" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Escribir el servicio
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                El servicio contiene la <strong>lógica</strong> y las <strong>consultas</strong> a MongoDB. Programe un método
+                por cada fila de la tabla de la parte 1, usando el modelo inyectado con <code>@InjectModel</code>.
+            </p>
+
+
+        </div>
+
+        <!-- ===================== PARTE 6 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-6" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Escribir el controlador y el módulo
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                El controlador define las <strong>rutas</strong>: recibe la petición, toma los datos y llama al servicio.
+                No contiene consultas a la base de datos. El módulo une todas las piezas.
+            </p>
+
+        </div>
+
+        <!-- ===================== PARTE 7 ===================== -->
+        <div
+            style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-7" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                Probar los endpoints
+            </h4>
+
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Use Thunder Client o Postman para probar cada endpoint.
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+</body>
+
+</html>

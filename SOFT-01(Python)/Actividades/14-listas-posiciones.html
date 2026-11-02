@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas: posiciones e índices</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="listas-posiciones"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #c81f66; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #c81f66, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-list-ol" aria-hidden="true"></i>
+            </span>
+            <h3 id="listas-posiciones"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Listas: posiciones e índices
+            </h3>
+        </div>
+
+
+            <div id="puntaje-listas" aria-live="polite" style="background: #164a98; color: #ffffff; border-radius: 10px; padding: 12px 16px; font-size: 16px; text-align: center; margin-bottom: 18px;">Respuestas correctas: <strong>0 de 14</strong></div>
+
+        <!-- UNA LISTA ES UNA FILA DE CASILLAS NUMERADAS -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-table-cells" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Una lista es una fila de casillas numeradas
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Una <strong>lista</strong> guarda varios valores en una sola variable. Cada valor ocupa una casilla y cada casilla tiene un número llamado <strong>índice</strong> (posición).</p>
+            <div role="img" aria-label="Lista frutas: posición 0: mango, posición 1: piña, posición 2: papaya, posición 3: banano, posición 4: fresa" style="margin: 14px 0;">
+                <p style="font-family: Consolas, 'Courier New', monospace; margin: 0 0 8px 0; color: #1c3b64; font-size: 15px;">frutas = ["mango", "piña", "papaya", "banano", "fresa"]</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end;">
+                    <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 4px; font-size: 12px; color: #7c7b75; text-align: right; padding-right: 4px;">
+                        <span style="color: #164a98; font-weight: 700;">Índice</span><span style="height: 40px;"></span><span style="color: #c81f66; font-weight: 700;">Índice negativo</span>
+                    </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">0</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #006AEA; border-radius: 8px; font-size: 15px; color: #1c3b64;">"mango"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-5</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">1</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #006AEA; border-radius: 8px; font-size: 15px; color: #1c3b64;">"piña"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-4</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">2</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #006AEA; border-radius: 8px; font-size: 15px; color: #1c3b64;">"papaya"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-3</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">3</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #006AEA; border-radius: 8px; font-size: 15px; color: #1c3b64;">"banano"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-2</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">4</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #006AEA; border-radius: 8px; font-size: 15px; color: #1c3b64;">"fresa"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-1</span>
+                </div>
+                </div>
+            </div>
+            <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>El primer elemento está en el índice <strong>0</strong>, no en el 1.</li>
+                <li>El último índice es <strong>la cantidad de elementos − 1</strong>. Esta lista tiene 5 elementos: sus índices van de 0 a 4.</li>
+                <li>Para leer un elemento se escribe el nombre de la lista y el índice entre corchetes: <code>frutas[1]</code> es <code>"piña"</code>.</li>
+                <li>Los índices negativos cuentan desde el final: <code>frutas[-1]</code> es el último elemento.</li>
+                <li><code>len(frutas)</code> devuelve la cantidad de elementos: <code>5</code>.</li>
+                <li>Si se usa un índice que no existe, por ejemplo <code>frutas[7]</code>, Python muestra el error <code>IndexError</code>.</li>
+            </ul>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Cómo responder:</strong> Escriba solo el valor, sin comillas (por ejemplo: <code>mango</code>). Si la instrucción produce un error, escriba <code>error</code>. Presione <strong>Revisar</strong> o la tecla Enter para comprobar cada respuesta.
+            </div>
+        </div>
+
+        <!-- PARTE 1: LEER POR POSICIÓN -->
+        <div
+            style="background: #e8f5e9; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-hand-pointer" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Parte 1: Leer por posición
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Use la lista <code>frutas</code> de arriba. ¿Qué valor muestra cada instrucción?</p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q1" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">1. <code>print(frutas[0])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q1" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q1" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q1" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q1" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q2" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">2. <code>print(frutas[3])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q2" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q2" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q2" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q2" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q3" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">3. <code>print(frutas[-1])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q3" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q3" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q3" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q3" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q4" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">4. <code>print(frutas[-2])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q4" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q4" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q4" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q4" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q5" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">5. <code>print(len(frutas))</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q5" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q5" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q5" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q5" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q6" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">6. <code>print(frutas[5])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q6" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q6" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q6" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q6" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+        </div>
+
+        <!-- PARTE 2: ENCONTRAR LA POSICIÓN -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-magnifying-glass" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Parte 2: Encontrar la posición
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Ahora responda con un <strong>número</strong>.</p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q7" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">7. ¿En qué índice está <code>"papaya"</code>?</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q7" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q7" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q7" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q7" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q8" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">8. ¿Cuál es el último índice válido de <code>frutas</code>?</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q8" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q8" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q8" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q8" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q9" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">9. ¿Qué índice <strong>negativo</strong> corresponde a <code>"mango"</code>?</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q9" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q9" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q9" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q9" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q10" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">10. Escriba la instrucción que muestra <code>"piña"</code> usando un índice positivo.</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q10" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 260px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q10" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q10" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q10" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+        </div>
+
+        <!-- PARTE 3: LA LISTA CAMBIA -->
+        <div
+            style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-arrows-rotate" style="color: #c7ac19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: La lista cambia
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Las instrucciones se ejecutan <strong>en orden</strong>, de arriba hacia abajo, a partir de esta lista:</p>
+            <div role="img" aria-label="Lista colores: posición 0: rojo, posición 1: azul, posición 2: verde" style="margin: 14px 0;">
+                <p style="font-family: Consolas, 'Courier New', monospace; margin: 0 0 8px 0; color: #1c3b64; font-size: 15px;">colores = ["rojo", "azul", "verde"]</p>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end;">
+                    <div style="display: flex; flex-direction: column; justify-content: space-between; gap: 4px; font-size: 12px; color: #7c7b75; text-align: right; padding-right: 4px;">
+                        <span style="color: #164a98; font-weight: 700;">Índice</span><span style="height: 40px;"></span><span style="color: #c81f66; font-weight: 700;">Índice negativo</span>
+                    </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">0</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #00928d; border-radius: 8px; font-size: 15px; color: #1c3b64;">"rojo"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-3</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">1</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #00928d; border-radius: 8px; font-size: 15px; color: #1c3b64;">"azul"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-2</span>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 14px; color: #164a98; font-weight: 700;">2</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 92px; text-align: center; padding: 12px 8px; background: #ffffff; border: 2px solid #00928d; border-radius: 8px; font-size: 15px; color: #1c3b64;">"verde"</span>
+                    <span style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #c81f66; font-weight: 700;">-1</span>
+                </div>
+                </div>
+            </div>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>colores.append("negro")   # instrucción A
+colores.pop(0)            # instrucción B
+colores[1] = "blanco"     # instrucción C</code></pre>
+            <ul style="margin: 10px 0 0 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li><code>append(valor)</code> agrega el valor en una casilla nueva al final.</li>
+                <li><code>pop(indice)</code> elimina el elemento de esa posición; los elementos que estaban después se corren una posición hacia la izquierda.</li>
+                <li><code>lista[indice] = valor</code> reemplaza el valor de esa casilla.</li>
+            </ul>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q11" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">11. Después de la instrucción A, ¿cuánto vale <code>len(colores)</code>?</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q11" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q11" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q11" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q11" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q12" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">12. Después de la instrucción A, ¿qué valor está en <code>colores[3]</code>?</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q12" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q12" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q12" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q12" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q13" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">13. Después de la instrucción B, ¿qué valor está en <code>colores[0]</code>?</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q13" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q13" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q13" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q13" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q14" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">14. Después de la instrucción C, escriba la lista completa (por ejemplo: <code>["a", "b"]</code>).</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+                    <input type="text" id="q14" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 320px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q14" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q14" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q14" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; min-height: 1px;"></p>
+            </div>
+        </div>
+
+        <!-- CIERRE -->
+        <div
+            style="display: flex; align-items: flex-start; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> el primer índice es 0 y el último es <code>len(lista) - 1</code>; los índices negativos cuentan desde el final; <code>append()</code> agrega al final, <code>pop()</code> elimina y corre los elementos siguientes, y <code>lista[i] = valor</code> reemplaza el contenido de una casilla.</span>
+        </div>
+
+    </section>
+
+    <script>
+        (function () {
+            // Revisión automática: cada botón se conecta por su id (sin onclick en el HTML).
+            var preguntas = {"q1": {"ok": ["mango"], "pista": "el primer elemento está en el índice 0.", "resp": "mango"}, "q2": {"ok": ["banano"], "pista": "cuente desde 0: 0, 1, 2, 3.", "resp": "banano"}, "q3": {"ok": ["fresa"], "pista": "el índice -1 es el último elemento.", "resp": "fresa"}, "q4": {"ok": ["banano"], "pista": "el índice -2 es el penúltimo elemento.", "resp": "banano"}, "q5": {"ok": ["5"], "pista": "len() cuenta los elementos, no el último índice.", "resp": "5"}, "q6": {"ok": ["error", "indexerror"], "pista": "¿cuál es el último índice de una lista de 5 elementos?", "resp": "error (IndexError): el último índice es 4"}, "q7": {"ok": ["2"], "pista": "la primera casilla es la 0.", "resp": "2"}, "q8": {"ok": ["4"], "pista": "es la cantidad de elementos menos 1.", "resp": "4"}, "q9": {"ok": ["-5"], "pista": "en una lista de 5 elementos, el primero también es el índice -5.", "resp": "-5"}, "q10": {"ok": ["print(frutas[1])"], "pista": "use print, el nombre de la lista y el índice entre corchetes.", "resp": "print(frutas[1])"}, "q11": {"ok": ["4"], "pista": "append agrega un elemento.", "resp": "4"}, "q12": {"ok": ["negro"], "pista": "append agrega al final; la lista ahora tiene índices 0 a 3.", "resp": "negro"}, "q13": {"ok": ["azul"], "pista": "pop(0) elimina \"rojo\" y los demás se corren hacia la izquierda.", "resp": "azul"}, "q14": {"ok": ["[\"azul\", \"blanco\", \"negro\"]"], "pista": "después de B la lista es [\"azul\", \"verde\", \"negro\"]; C reemplaza el índice 1.", "resp": "[\"azul\", \"blanco\", \"negro\"]"}};
+            var correctas = {};
+            var QUITAR = '"' + "'" + ' ' + String.fromCharCode(91) + String.fromCharCode(93) + String.fromCharCode(9);
+
+            function normalizar(texto) {
+                var t = String(texto).toLowerCase();
+                var limpio = '';
+                for (var i = 0; i < t.length; i++) {
+                    if (QUITAR.indexOf(t.charAt(i)) === -1) limpio = limpio + t.charAt(i);
+                }
+                if (limpio.charAt(limpio.length - 1) === '.') limpio = limpio.substring(0, limpio.length - 1);
+                return limpio;
+            }
+
+            function respuesta(id) {
+                if (preguntas[id].radio) {
+                    var radios = document.getElementsByName(id);
+                    for (var i = 0; i < radios.length; i++) {
+                        if (radios[i].checked) return radios[i].value;
+                    }
+                    return '';
+                }
+                var campo = document.getElementById(id);
+                return campo ? campo.value : '';
+            }
+
+            function mostrar(id, color, html) {
+                var fb = document.getElementById('fb-' + id);
+                if (!fb) return;
+                fb.style.color = color;
+                fb.innerHTML = html;
+            }
+
+            function actualizarPuntaje() {
+                var total = 0, buenas = 0;
+                for (var id in preguntas) {
+                    total++;
+                    if (correctas[id]) buenas++;
+                }
+                var marcador = document.getElementById('puntaje-listas');
+                if (marcador) marcador.innerHTML = 'Respuestas correctas: <strong>' + buenas + ' de ' + total + '</strong>';
+            }
+
+            function revisar(id) {
+                var p = preguntas[id];
+                var r = normalizar(respuesta(id));
+                if (r === '') {
+                    mostrar(id, '#7c7b75', 'Escriba o seleccione una respuesta antes de revisar.');
+                    return;
+                }
+                var ok = false;
+                for (var i = 0; i < p.ok.length; i++) {
+                    if (r === normalizar(p.ok[i])) ok = true;
+                }
+                correctas[id] = ok;
+                if (ok) mostrar(id, '#00734a', '<strong>&#10004; Correcto.</strong>');
+                else mostrar(id, '#d2232a', '<strong>&#10008; Revise su respuesta.</strong> Recuerde: ' + p.pista);
+                actualizarPuntaje();
+            }
+
+            function conectar(id) {
+                var boton = document.getElementById('btn-rev-' + id);
+                if (boton) boton.addEventListener('click', function (e) { e.preventDefault(); revisar(id); });
+                var ver = document.getElementById('btn-ver-' + id);
+                if (ver) ver.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    mostrar(id, '#164a98', '<strong>Respuesta:</strong> ' + preguntas[id].resp);
+                });
+                var campo = document.getElementById(id);
+                if (campo && !preguntas[id].radio) campo.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.keyCode === 13) { e.preventDefault(); revisar(id); }
+                });
+            }
+
+            for (var id in preguntas) conectar(id);
+            actualizarPuntaje();
+        })();
+    </script>
+
+</body>
+
+</html>
