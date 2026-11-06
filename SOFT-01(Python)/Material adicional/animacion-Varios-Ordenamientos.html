@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrera de ordenamientos</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="13-animacionordenamiento-carrera"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-top: 6px solid #006AEA; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #006AEA, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-arrow-down-short-wide" aria-hidden="true"></i>
+            </span>
+            <h3 id="13-animacionordenamiento-carrera"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Algoritmos de ordenamiento: la carrera
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            Los cinco algoritmos de ordenamiento ordenan la misma lista al mismo tiempo. Observe cuál termina primero y cuántas operaciones necesita cada uno.
+        </div>
+
+        <!-- LA CARRERA -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-flag-checkered" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                La carrera
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Los cinco algoritmos ordenan <strong>la misma lista</strong> al mismo tiempo. En cada instante, todos avanzan una operación (una comparación o un movimiento). Así se ve cuál necesita menos trabajo. Pruebe con 50 elementos y con los distintos órdenes iniciales.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; margin: 14px 0;">
+                <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: #164a98;">Tamaño de la lista
+                    <select id="car-tamano" style="padding: 7px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 14px; font-family: inherit; color: #1c3b64; background: #ffffff;">
+                        <option value="8">8 elementos</option>
+                        <option value="12" selected>12 elementos</option>
+                        <option value="20">20 elementos</option>
+                        <option value="30">30 elementos</option>
+                        <option value="50">50 elementos</option>
+                    </select>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: #164a98;">Orden inicial
+                    <select id="car-tipo" style="padding: 7px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 14px; font-family: inherit; color: #1c3b64; background: #ffffff;">
+                        <option value="aleatoria" selected>Aleatoria</option>
+                        <option value="casi">Casi ordenada</option>
+                        <option value="inversa">Orden inverso</option>
+                        <option value="ordenada">Ya ordenada</option>
+                    </select>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: #164a98;">Velocidad
+                    <input type="range" id="car-velocidad" min="1" max="10" value="5" style="width: 150px;">
+                </label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <button type="button" id="car-nueva" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #7c7b75; color: #ffffff;"><i class="fa-solid fa-shuffle" aria-hidden="true"></i> Nueva lista</button>
+                    <button type="button" id="car-iniciar" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #00734a; color: #ffffff;"><i class="fa-solid fa-play" aria-hidden="true"></i> Iniciar</button>
+                    
+                    <button type="button" id="car-reiniciar" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #164a98; color: #ffffff;"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reiniciar</button>
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;">
+                <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <strong style="color: #164a98; font-size: 15px;">Bubble sort (Burbuja)</strong>
+                        <span id="car-estado-burbuja" style="font-size: 12px; font-weight: 700; color: #7c7b75;"></span>
+                    </div>
+                    <div id="car-barras-burbuja" aria-hidden="true" style="display: flex; align-items: flex-end; gap: 2px; height: 130px; background: #fafcff; border-radius: 6px; padding: 6px 4px 2px 4px; box-sizing: border-box;"></div>
+                    <p style="font-size: 12px; color: #1c3b64; margin: 6px 0 0 0;">Comparaciones: <strong id="car-c-burbuja">0</strong> · Movimientos: <strong id="car-m-burbuja">0</strong></p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <strong style="color: #164a98; font-size: 15px;">Selection sort (Selección)</strong>
+                        <span id="car-estado-seleccion" style="font-size: 12px; font-weight: 700; color: #7c7b75;"></span>
+                    </div>
+                    <div id="car-barras-seleccion" aria-hidden="true" style="display: flex; align-items: flex-end; gap: 2px; height: 130px; background: #fafcff; border-radius: 6px; padding: 6px 4px 2px 4px; box-sizing: border-box;"></div>
+                    <p style="font-size: 12px; color: #1c3b64; margin: 6px 0 0 0;">Comparaciones: <strong id="car-c-seleccion">0</strong> · Movimientos: <strong id="car-m-seleccion">0</strong></p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <strong style="color: #164a98; font-size: 15px;">Insertion sort (Inserción)</strong>
+                        <span id="car-estado-insercion" style="font-size: 12px; font-weight: 700; color: #7c7b75;"></span>
+                    </div>
+                    <div id="car-barras-insercion" aria-hidden="true" style="display: flex; align-items: flex-end; gap: 2px; height: 130px; background: #fafcff; border-radius: 6px; padding: 6px 4px 2px 4px; box-sizing: border-box;"></div>
+                    <p style="font-size: 12px; color: #1c3b64; margin: 6px 0 0 0;">Comparaciones: <strong id="car-c-insercion">0</strong> · Movimientos: <strong id="car-m-insercion">0</strong></p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <strong style="color: #164a98; font-size: 15px;">Merge sort (Mezcla)</strong>
+                        <span id="car-estado-mezcla" style="font-size: 12px; font-weight: 700; color: #7c7b75;"></span>
+                    </div>
+                    <div id="car-barras-mezcla" aria-hidden="true" style="display: flex; align-items: flex-end; gap: 2px; height: 130px; background: #fafcff; border-radius: 6px; padding: 6px 4px 2px 4px; box-sizing: border-box;"></div>
+                    <p style="font-size: 12px; color: #1c3b64; margin: 6px 0 0 0;">Comparaciones: <strong id="car-c-mezcla">0</strong> · Movimientos: <strong id="car-m-mezcla">0</strong></p>
+                </div>
+                <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 10px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <strong style="color: #164a98; font-size: 15px;">Quicksort (Rápido)</strong>
+                        <span id="car-estado-rapido" style="font-size: 12px; font-weight: 700; color: #7c7b75;"></span>
+                    </div>
+                    <div id="car-barras-rapido" aria-hidden="true" style="display: flex; align-items: flex-end; gap: 2px; height: 130px; background: #fafcff; border-radius: 6px; padding: 6px 4px 2px 4px; box-sizing: border-box;"></div>
+                    <p style="font-size: 12px; color: #1c3b64; margin: 6px 0 0 0;">Comparaciones: <strong id="car-c-rapido">0</strong> · Movimientos: <strong id="car-m-rapido">0</strong></p>
+                </div>
+            </div>
+            <p id="car-resultado" aria-live="polite" style="background: #f7f1fa; border-left: 5px solid #712c86; border-radius: 8px; padding: 12px 16px; margin: 14px 0 0 0; color: #1c3b64; font-size: 15px; line-height: 1.6;">Presione <strong>Iniciar</strong> para comenzar la carrera.</p>
+        </div>
+
+    </section>
+
+    <script>
+        (function () {
+            // Animación de algoritmos de ordenamiento.
+            // Los botones se conectan por id (sin onclick en el HTML) para que funcione en Moodle.
+            var COLOR = {
+                normal: '#9CC8FF', comparar: '#ffc63e', mover: '#f05323',
+                especial: '#712c86', zona: '#c8e6c9', fijo: '#4aa147'
+            };
+            var NOMBRES = { burbuja: 'Bubble sort (Burbuja)', seleccion: 'Selection sort (Selección)', insercion: 'Insertion sort (Inserción)', mezcla: 'Merge sort (Mezcla)', rapido: 'Quicksort (Rápido)' };
+            var DESCRIPCION = {
+                burbuja: '<strong>Bubble sort (Burbuja):</strong> compara cada par de vecinos y los intercambia si están en desorden. En cada pasada, el mayor de la parte sin ordenar «sube» hasta el final. Se detiene cuando una pasada no hace intercambios.',
+                seleccion: '<strong>Selection sort (Selección):</strong> busca el menor de la parte sin ordenar (en morado) y lo intercambia con el primer elemento de esa parte. La parte ordenada crece de izquierda a derecha.',
+                insercion: '<strong>Insertion sort (Inserción):</strong> toma cada elemento y lo va moviendo hacia la izquierda hasta encontrar su lugar dentro de la parte ordenada (en verde claro), como quien ordena cartas en la mano.',
+                mezcla: '<strong>Merge sort (Mezcla):</strong> divide la lista en mitades cada vez más pequeñas y luego las mezcla en orden. La zona en verde claro es la parte que se está mezclando.',
+                rapido: '<strong>Quicksort (Rápido):</strong> elige un pivote (en morado, el elemento del medio), deja a su izquierda los menores y a su derecha los mayores, y repite el proceso con cada lado.'
+            };
+
+            // ---------- Registro de pasos ----------
+            function crearRegistro(lista) {
+                var r = { a: lista.slice(), f: [], ev: [], c: 0, m: 0 };
+                for (var i = 0; i < lista.length; i++) r.f.push(false);
+                r.paso = function (comp, mov, esp, zona, texto, cuenta) {
+                    r.ev.push({ a: r.a.slice(), f: r.f.slice(), comp: comp || [], mov: mov || [], esp: esp || [],
+                                zona: zona || null, texto: texto, c: r.c, m: r.m, cuenta: cuenta });
+                };
+                r.intercambiar = function (i, j) {
+                    var t = r.a[i]; r.a[i] = r.a[j]; r.a[j] = t;
+                };
+                r.terminar = function () {
+                    for (var k = 0; k < r.f.length; k++) r.f[k] = true;
+                    r.paso([], [], [], null, 'La lista está ordenada. Total: ' + r.c + ' comparaciones y ' + r.m + ' movimientos.', false);
+                };
+                return r;
+            }
+
+            // ---------- Algoritmos: generan la lista de pasos ----------
+            function burbuja(r) {
+                var n = r.a.length, pasada = 0, hubo = true;
+                while (hubo) {
+                    hubo = false;
+                    pasada = pasada + 1;
+                    for (var j = 0; j < n - pasada; j++) {
+                        var x = r.a[j], y = r.a[j + 1];
+                        r.c = r.c + 1;
+                        r.paso([j, j + 1], [], [], null, 'Pasada ' + pasada + ': se comparan ' + x + ' y ' + y + '.', true);
+                        if (x > y) {
+                            r.intercambiar(j, j + 1);
+                            r.m = r.m + 1;
+                            hubo = true;
+                            r.paso([], [j, j + 1], [], null, x + ' es mayor que ' + y + ': se intercambian.', true);
+                        }
+                    }
+                    if (n - pasada >= 0) r.f[n - pasada] = true;
+                    if (hubo) r.paso([], [], [], null, 'Fin de la pasada ' + pasada + ': el ' + r.a[n - pasada] + ' quedó en su posición final.', false);
+                    else r.paso([], [], [], null, 'La pasada ' + pasada + ' no hizo intercambios: el algoritmo se detiene.', false);
+                }
+                r.terminar();
+            }
+
+            function seleccion(r) {
+                var n = r.a.length;
+                for (var i = 0; i < n - 1; i++) {
+                    var pm = i;
+                    r.paso([], [], [pm], null, 'Paso ' + (i + 1) + ': buscar el menor desde la posición ' + i + '. Por ahora, el menor es ' + r.a[pm] + '.', false);
+                    for (var j = i + 1; j < n; j++) {
+                        r.c = r.c + 1;
+                        r.paso([j], [], [pm], null, 'Se compara ' + r.a[j] + ' con el menor actual (' + r.a[pm] + ').', true);
+                        if (r.a[j] < r.a[pm]) {
+                            pm = j;
+                            r.paso([], [], [pm], null, 'Nuevo menor: ' + r.a[pm] + '.', false);
+                        }
+                    }
+                    if (pm !== i) {
+                        var menor = r.a[pm], otro = r.a[i];
+                        r.intercambiar(i, pm);
+                        r.m = r.m + 1;
+                        r.f[i] = true;
+                        r.paso([], [i, pm], [], null, 'Se intercambia el menor (' + menor + ') con ' + otro + ': el ' + menor + ' queda en la posición ' + i + '.', true);
+                    } else {
+                        r.f[i] = true;
+                        r.paso([], [], [], null, 'El menor (' + r.a[i] + ') ya estaba en la posición ' + i + ': no se mueve.', false);
+                    }
+                }
+                r.terminar();
+            }
+
+            function insercion(r) {
+                var n = r.a.length;
+                for (var i = 1; i < n; i++) {
+                    var actual = r.a[i];
+                    r.paso([], [], [i], [0, i - 1], 'Tomar el ' + actual + ' para insertarlo en la parte ordenada (posiciones 0 a ' + (i - 1) + ').', false);
+                    var j = i - 1, seguir = true;
+                    while (j >= 0 && seguir) {
+                        r.c = r.c + 1;
+                        r.paso([j, j + 1], [], [], [0, i], 'Se compara ' + r.a[j] + ' con ' + actual + '.', true);
+                        if (r.a[j] > r.a[j + 1]) {
+                            var mayor = r.a[j];
+                            r.intercambiar(j, j + 1);
+                            r.m = r.m + 1;
+                            r.paso([], [j, j + 1], [], [0, i], mayor + ' es mayor: se corre a la derecha y el ' + actual + ' avanza a la posición ' + j + '.', true);
+                            j = j - 1;
+                        } else {
+                            seguir = false;
+                        }
+                    }
+                    r.paso([], [], [j + 1], [0, i], 'El ' + actual + ' quedó en la posición ' + (j + 1) + '.', false);
+                }
+                r.terminar();
+            }
+
+            function mezcla(r) {
+                var n = r.a.length;
+                function ordenar(ini, fin) {
+                    if (ini >= fin) return;
+                    var medio = Math.floor((ini + fin) / 2);
+                    r.paso([], [], [], [ini, fin], 'Dividir las posiciones ' + ini + ' a ' + fin + ' en dos mitades: ' + ini + ' a ' + medio + ' y ' + (medio + 1) + ' a ' + fin + '.', false);
+                    ordenar(ini, medio);
+                    ordenar(medio + 1, fin);
+                    var izq = r.a.slice(ini, medio + 1), der = r.a.slice(medio + 1, fin + 1);
+                    var i = 0, j = 0, k = ini;
+                    r.paso([], [], [], [ini, fin], 'Mezclar [' + izq.join(', ') + '] con [' + der.join(', ') + '].', false);
+                    while (i < izq.length && j < der.length) {
+                        r.c = r.c + 1;
+                        var elegido;
+                        if (izq[i] <= der[j]) { elegido = izq[i]; i = i + 1; }
+                        else { elegido = der[j]; j = j + 1; }
+                        r.a[k] = elegido;
+                        r.m = r.m + 1;
+                        r.paso([], [k], [], [ini, fin], 'Se compara el primero de cada mitad; el menor (' + elegido + ') pasa a la posición ' + k + '.', true);
+                        k = k + 1;
+                    }
+                    while (i < izq.length) {
+                        r.a[k] = izq[i]; r.m = r.m + 1;
+                        r.paso([], [k], [], [ini, fin], 'Se copia el ' + izq[i] + ', que sobraba de la mitad izquierda.', true);
+                        i = i + 1; k = k + 1;
+                    }
+                    while (j < der.length) {
+                        r.a[k] = der[j]; r.m = r.m + 1;
+                        r.paso([], [k], [], [ini, fin], 'Se copia el ' + der[j] + ', que sobraba de la mitad derecha.', true);
+                        j = j + 1; k = k + 1;
+                    }
+                }
+                ordenar(0, n - 1);
+                r.terminar();
+            }
+
+            function rapido(r) {
+                function ordenarParte(ini, fin) {
+                    if (ini > fin) return;
+                    if (ini === fin) {
+                        r.f[ini] = true;
+                        r.paso([], [], [], null, 'La parte de la posición ' + ini + ' tiene un solo elemento (' + r.a[ini] + '): ya está en su lugar.', false);
+                        return;
+                    }
+                    var medio = Math.floor((ini + fin) / 2);
+                    var pivote = r.a[medio];
+                    r.paso([], [], [medio], [ini, fin], 'Ordenar las posiciones ' + ini + ' a ' + fin + '. Pivote: ' + pivote + ' (elemento del medio).', false);
+                    r.intercambiar(medio, fin);
+                    r.paso([], [medio, fin], [fin], [ini, fin], 'El pivote se mueve temporalmente al final de la parte.', false);
+                    var pos = ini;
+                    for (var j = ini; j < fin; j++) {
+                        r.c = r.c + 1;
+                        r.paso([j], [], [fin], [ini, fin], 'Se compara ' + r.a[j] + ' con el pivote ' + pivote + '.', true);
+                        if (r.a[j] < pivote) {
+                            // Igual que en 05_rapido.py: cada elemento menor cuenta como un movimiento
+                            r.intercambiar(pos, j);
+                            r.m = r.m + 1;
+                            r.paso([], [pos, j], [fin], [ini, fin], r.a[pos] + ' es menor que el pivote: pasa a la zona izquierda (posición ' + pos + ').', true);
+                            pos = pos + 1;
+                        }
+                    }
+                    r.intercambiar(pos, fin);
+                    r.m = r.m + 1;
+                    r.f[pos] = true;
+                    r.paso([], [pos, fin], [], [ini, fin], 'El pivote ' + pivote + ' se coloca en la posición ' + pos + ': a su izquierda quedan los menores y a su derecha los mayores.', true);
+                    ordenarParte(ini, pos - 1);
+                    ordenarParte(pos + 1, fin);
+                }
+                ordenarParte(0, r.a.length - 1);
+                r.terminar();
+            }
+
+            var ALGORITMOS = { burbuja: burbuja, seleccion: seleccion, insercion: insercion, mezcla: mezcla, rapido: rapido };
+            var ORDEN = ['burbuja', 'seleccion', 'insercion', 'mezcla', 'rapido'];
+
+            function generarPasos(clave, lista) {
+                var r = crearRegistro(lista);
+                ALGORITMOS[clave](r);
+                return r.ev;
+            }
+
+            // ---------- Listas de prueba ----------
+            function crearLista(tamano, tipo) {
+                var lista = [], i;
+                for (i = 0; i < tamano; i++) lista.push(Math.floor(Math.random() * 95) + 5);
+                if (tipo === 'ordenada' || tipo === 'casi' || tipo === 'inversa') lista.sort(function (a, b) { return a - b; });
+                if (tipo === 'inversa') lista.reverse();
+                if (tipo === 'casi') {
+                    for (i = 0; i < Math.max(1, Math.floor(tamano / 10)); i++) {
+                        var p = Math.floor(Math.random() * (tamano - 1));
+                        var t = lista[p]; lista[p] = lista[p + 1]; lista[p + 1] = t;
+                    }
+                }
+                return lista;
+            }
+
+            // ---------- Dibujo de barras ----------
+            function dibujar(contenedor, paso, maximo, conValores) {
+                var n = paso.a.length;
+                if (contenedor.children.length !== n) {
+                    contenedor.innerHTML = '';
+                    for (var k = 0; k < n; k++) {
+                        var barra = document.createElement('div');
+                        barra.style.flex = '1';
+                        barra.style.borderRadius = '4px 4px 0 0';
+                        barra.style.display = 'flex';
+                        barra.style.alignItems = 'flex-start';
+                        barra.style.justifyContent = 'center';
+                        barra.style.fontSize = '12px';
+                        barra.style.fontWeight = '700';
+                        barra.style.color = '#1c3b64';
+                        barra.style.transition = 'height 0.12s';
+                        barra.style.minWidth = '3px';
+                        contenedor.appendChild(barra);
+                    }
+                }
+                for (var i = 0; i < n; i++) {
+                    var b = contenedor.children[i];
+                    var color = COLOR.normal;
+                    if (paso.f[i]) color = COLOR.fijo;
+                    else if (paso.zona && i >= paso.zona[0] && i <= paso.zona[1]) color = COLOR.zona;
+                    if (paso.esp.indexOf(i) > -1) color = COLOR.especial;
+                    if (paso.comp.indexOf(i) > -1) color = COLOR.comparar;
+                    if (paso.mov.indexOf(i) > -1) color = COLOR.mover;
+                    b.style.height = Math.max(4, Math.round(paso.a[i] / maximo * 100)) + '%';
+                    b.style.background = color;
+                    b.style.color = (color === COLOR.especial || color === COLOR.mover || color === COLOR.fijo) ? '#ffffff' : '#1c3b64';
+                    b.textContent = conValores ? String(paso.a[i]) : '';
+                }
+            }
+
+            function maximoDe(lista) {
+                var m = 1;
+                for (var i = 0; i < lista.length; i++) if (lista[i] > m) m = lista[i];
+                return m;
+            }
+
+            function demora(control) {
+                var v = Number(control.value);
+                return Math.round(900 / (v * v / 4 + 1));
+            }
+
+            function boton(id) { return document.getElementById(id); }
+
+            function ponerTextoBoton(btn, jugando) {
+                btn.innerHTML = jugando ? '<i class="fa-solid fa-pause" aria-hidden="true"></i> Pausar'
+                                        : '<i class="fa-solid fa-play" aria-hidden="true"></i> Iniciar';
+                btn.style.background = jugando ? '#d2232a' : '#00734a';
+            }
+
+            // ========== Modo 2: carrera ==========
+            var m2 = { lista: [], pasos: {}, indice: {}, terminados: [], temporizador: null };
+
+            function m2Mostrar(clave) {
+                var lista = m2.pasos[clave], paso = lista[m2.indice[clave]];
+                dibujar(boton('car-barras-' + clave), paso, maximoDe(m2.lista), false);
+                boton('car-c-' + clave).textContent = paso.c;
+                boton('car-m-' + clave).textContent = paso.m;
+            }
+
+            function m2Preparar(nuevaLista) {
+                m2Detener();
+                if (nuevaLista || m2.lista.length === 0) m2.lista = crearLista(Number(boton('car-tamano').value), boton('car-tipo').value);
+                m2.terminados = [];
+                for (var i = 0; i < ORDEN.length; i++) {
+                    var clave = ORDEN[i];
+                    var todos = generarPasos(clave, m2.lista), utiles = [];
+                    var inicial = { a: m2.lista.slice(), f: [], comp: [], mov: [], esp: [], zona: null, c: 0, m: 0 };
+                    for (var k = 0; k < m2.lista.length; k++) inicial.f.push(false);
+                    utiles.push(inicial);
+                    // Cada paso dura tantos instantes como operaciones tiene (comparaciones + movimientos)
+                    var cPrev = 0, mPrev = 0;
+                    for (var j = 0; j < todos.length; j++) {
+                        var ops = (todos[j].c - cPrev) + (todos[j].m - mPrev);
+                        cPrev = todos[j].c; mPrev = todos[j].m;
+                        for (var o = 0; o < ops; o++) utiles.push(todos[j]);
+                    }
+                    utiles.push(todos[todos.length - 1]);
+                    m2.pasos[clave] = utiles;
+                    m2.indice[clave] = 0;
+                    boton('car-estado-' + clave).textContent = '';
+                    m2Mostrar(clave);
+                }
+                boton('car-resultado').innerHTML = 'Presione <strong>Iniciar</strong> para comenzar la carrera.';
+            }
+
+            function m2Avanzar() {
+                var activos = 0;
+                for (var i = 0; i < ORDEN.length; i++) {
+                    var clave = ORDEN[i];
+                    if (m2.indice[clave] < m2.pasos[clave].length - 1) {
+                        m2.indice[clave] = m2.indice[clave] + 1;
+                        m2Mostrar(clave);
+                        if (m2.indice[clave] === m2.pasos[clave].length - 1) {
+                            m2.terminados.push(clave);
+                            boton('car-estado-' + clave).textContent = 'Lugar ' + m2.terminados.length;
+                            boton('car-estado-' + clave).style.color = '#00734a';
+                        } else {
+                            activos = activos + 1;
+                        }
+                    }
+                }
+                if (activos === 0) {
+                    var texto = '<strong>Resultado:</strong> ';
+                    for (var t = 0; t < m2.terminados.length; t++) {
+                        var c = m2.terminados[t];
+                        texto = texto + '<br>' + (t + 1) + '. ' + NOMBRES[c] + ': ' + (m2.pasos[c][m2.pasos[c].length - 1].c + m2.pasos[c][m2.pasos[c].length - 1].m) + ' operaciones';
+                    }
+                    boton('car-resultado').innerHTML = texto;
+                }
+                return activos > 0;
+            }
+
+            function m2Ciclo() {
+                if (m2Avanzar()) m2.temporizador = setTimeout(m2Ciclo, demora(boton('car-velocidad')));
+                else m2Detener();
+            }
+
+            function m2Detener() {
+                if (m2.temporizador) clearTimeout(m2.temporizador);
+                m2.temporizador = null;
+                ponerTextoBoton(boton('car-iniciar'), false);
+            }
+
+            boton('car-iniciar').addEventListener('click', function (e) {
+                e.preventDefault();
+                if (m2.temporizador) { m2Detener(); return; }
+                if (m2.terminados.length === ORDEN.length) m2Preparar(false);
+                boton('car-resultado').textContent = 'Carrera en curso...';
+                ponerTextoBoton(boton('car-iniciar'), true);
+                m2Ciclo();
+            });
+            boton('car-reiniciar').addEventListener('click', function (e) { e.preventDefault(); m2Preparar(false); });
+            boton('car-nueva').addEventListener('click', function (e) { e.preventDefault(); m2Preparar(true); });
+            boton('car-tamano').addEventListener('change', function () { m2Preparar(true); });
+            boton('car-tipo').addEventListener('change', function () { m2Preparar(true); });
+
+            boton('car-tamano').value = '30';
+            m2Preparar(true);
+        })();
+    </script>
+
+</body>
+
+</html>

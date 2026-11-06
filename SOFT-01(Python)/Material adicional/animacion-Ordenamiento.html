@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenamiento paso a paso</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="13-animacionordenamiento-pasoapaso"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-top: 6px solid #006AEA; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #006AEA, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-arrow-down-short-wide" aria-hidden="true"></i>
+            </span>
+            <h3 id="13-animacionordenamiento-pasoapaso"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Algoritmos de ordenamiento: paso a paso
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            Elija uno de los cinco algoritmos de ordenamiento y observe cómo ordena la lista. Puede avanzar de forma automática o un paso a la vez, y leer qué hace el algoritmo en cada momento.
+        </div>
+
+        <!-- ELIJA UN ALGORITMO -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-chart-column" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Elija un algoritmo
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Elija un algoritmo, presione <strong>Iniciar</strong> y observe cómo se mueven las barras. Cada barra es un número: mientras más alta, mayor es el número. Use <strong>Un paso</strong> para avanzar lentamente y leer qué hace el algoritmo en cada momento.</p>
+            <div role="group" aria-label="Algoritmo" style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px;"><button type="button" id="ord-alg-burbuja" aria-pressed="true" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #164a98; color: #ffffff; border: 2px solid #164a98;">Bubble sort (Burbuja)</button><button type="button" id="ord-alg-seleccion" aria-pressed="false" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #eef5ff; color: #164a98; border: 2px solid #164a98;">Selection sort (Selección)</button><button type="button" id="ord-alg-insercion" aria-pressed="false" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #eef5ff; color: #164a98; border: 2px solid #164a98;">Insertion sort (Inserción)</button><button type="button" id="ord-alg-mezcla" aria-pressed="false" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #eef5ff; color: #164a98; border: 2px solid #164a98;">Merge sort (Mezcla)</button><button type="button" id="ord-alg-rapido" aria-pressed="false" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #eef5ff; color: #164a98; border: 2px solid #164a98;">Quicksort (Rápido)</button></div>
+            <div id="ord-descripcion" style="background: #ffffff; border-left: 5px solid #006AEA; border-radius: 8px; padding: 12px 16px; margin-top: 14px; color: #1c3b64; font-size: 15px; line-height: 1.6;">Cargando la animación…</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; margin: 14px 0;">
+                <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: #164a98;">Tamaño de la lista
+                    <select id="ord-tamano" style="padding: 7px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 14px; font-family: inherit; color: #1c3b64; background: #ffffff;">
+                        <option value="8">8 elementos</option>
+                        <option value="12" selected>12 elementos</option>
+                        <option value="20">20 elementos</option>
+                        <option value="30">30 elementos</option>
+                        <option value="50">50 elementos</option>
+                    </select>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: #164a98;">Orden inicial
+                    <select id="ord-tipo" style="padding: 7px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 14px; font-family: inherit; color: #1c3b64; background: #ffffff;">
+                        <option value="aleatoria" selected>Aleatoria</option>
+                        <option value="casi">Casi ordenada</option>
+                        <option value="inversa">Orden inverso</option>
+                        <option value="ordenada">Ya ordenada</option>
+                    </select>
+                </label>
+                <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 600; color: #164a98;">Velocidad
+                    <input type="range" id="ord-velocidad" min="1" max="10" value="5" style="width: 150px;">
+                </label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <button type="button" id="ord-nueva" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #7c7b75; color: #ffffff;"><i class="fa-solid fa-shuffle" aria-hidden="true"></i> Nueva lista</button>
+                    <button type="button" id="ord-iniciar" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #00734a; color: #ffffff;"><i class="fa-solid fa-play" aria-hidden="true"></i> Iniciar</button>
+                    <button type="button" id="ord-paso" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #006AEA; color: #ffffff;"><i class="fa-solid fa-forward-step" aria-hidden="true"></i> Un paso</button>
+                    <button type="button" id="ord-reiniciar" style="padding: 9px 16px; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; background: #164a98; color: #ffffff;"><i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Reiniciar</button>
+                </div>
+            </div>
+            <div id="ord-barras" aria-hidden="true" style="display: flex; align-items: flex-end; gap: 3px; height: 280px; background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 12px 10px 6px 10px; box-sizing: border-box; color: #7c7b75; font-size: 14px;">Cargando…</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px;">
+                <div style="background: #164a98; color: #ffffff; border-radius: 8px; padding: 8px 14px; font-size: 14px;">Paso: <strong id="ord-num-paso">0</strong> de <strong id="ord-total-pasos">0</strong></div>
+                <div style="background: #ffc63e; color: #1c3b64; border-radius: 8px; padding: 8px 14px; font-size: 14px;">Comparaciones: <strong id="ord-comparaciones">0</strong></div>
+                <div style="background: #f05323; color: #ffffff; border-radius: 8px; padding: 8px 14px; font-size: 14px;">Movimientos: <strong id="ord-movimientos">0</strong></div>
+            </div>
+            <p id="ord-texto" aria-live="polite" style="background: #fff8e1; border-left: 5px solid #ffc63e; border-radius: 8px; padding: 12px 16px; margin: 12px 0 0 0; color: #1c3b64; font-size: 15px; line-height: 1.6; min-height: 24px;">Cargando…</p>
+            <p id="ord-lista" style="font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #7c7b75; margin: 10px 0 0 0; overflow-wrap: anywhere;">Lista:</p>
+            <p style="font-size: 13px; color: #1c3b64; line-height: 2; margin: 10px 0 0 0;"><strong>Colores:</strong> <span style="color: #9CC8FF; font-size: 20px; line-height: 1; vertical-align: -2px; text-shadow: 0 0 1px #164a98;">&#9632;</span> Sin ordenar &nbsp;·&nbsp; <span style="color: #ffc63e; font-size: 20px; line-height: 1; vertical-align: -2px; text-shadow: 0 0 1px #164a98;">&#9632;</span> Se comparan &nbsp;·&nbsp; <span style="color: #f05323; font-size: 20px; line-height: 1; vertical-align: -2px; text-shadow: 0 0 1px #164a98;">&#9632;</span> Se mueven &nbsp;·&nbsp; <span style="color: #712c86; font-size: 20px; line-height: 1; vertical-align: -2px; text-shadow: 0 0 1px #164a98;">&#9632;</span> Pivote o menor actual &nbsp;·&nbsp; <span style="color: #c8e6c9; font-size: 20px; line-height: 1; vertical-align: -2px; text-shadow: 0 0 1px #4aa147;">&#9632;</span> Parte ordenada (inserción) o parte que se mezcla &nbsp;·&nbsp; <span style="color: #4aa147; font-size: 20px; line-height: 1; vertical-align: -2px; text-shadow: 0 0 1px #164a98;">&#9632;</span> En su posición final</p>
+        </div>
+
+
+    </section>
+
+    <script>
+        (function () {
+            // Animación de algoritmos de ordenamiento.
+            // Los botones se conectan por id (sin onclick en el HTML) para que funcione en Moodle.
+            var COLOR = {
+                normal: '#9CC8FF', comparar: '#ffc63e', mover: '#f05323',
+                especial: '#712c86', zona: '#c8e6c9', fijo: '#4aa147'
+            };
+            var NOMBRES = { burbuja: 'Bubble sort (Burbuja)', seleccion: 'Selection sort (Selección)', insercion: 'Insertion sort (Inserción)', mezcla: 'Merge sort (Mezcla)', rapido: 'Quicksort (Rápido)' };
+            var DESCRIPCION = {
+                burbuja: '<strong>Bubble sort (Burbuja):</strong> compara cada par de vecinos y los intercambia si están en desorden. En cada pasada, el mayor de la parte sin ordenar «sube» hasta el final. Se detiene cuando una pasada no hace intercambios.',
+                seleccion: '<strong>Selection sort (Selección):</strong> busca el menor de la parte sin ordenar (en morado) y lo intercambia con el primer elemento de esa parte. La parte ordenada crece de izquierda a derecha.',
+                insercion: '<strong>Insertion sort (Inserción):</strong> toma cada elemento y lo va moviendo hacia la izquierda hasta encontrar su lugar dentro de la parte ordenada (en verde claro), como quien ordena cartas en la mano.',
+                mezcla: '<strong>Merge sort (Mezcla):</strong> divide la lista en mitades cada vez más pequeñas y luego las mezcla en orden. La zona en verde claro es la parte que se está mezclando.',
+                rapido: '<strong>Quicksort (Rápido):</strong> elige un pivote (en morado, el elemento del medio), deja a su izquierda los menores y a su derecha los mayores, y repite el proceso con cada lado.'
+            };
+
+            // ---------- Registro de pasos ----------
+            function crearRegistro(lista) {
+                var r = { a: lista.slice(), f: [], ev: [], c: 0, m: 0 };
+                for (var i = 0; i < lista.length; i++) r.f.push(false);
+                r.paso = function (comp, mov, esp, zona, texto, cuenta) {
+                    r.ev.push({ a: r.a.slice(), f: r.f.slice(), comp: comp || [], mov: mov || [], esp: esp || [],
+                                zona: zona || null, texto: texto, c: r.c, m: r.m, cuenta: cuenta });
+                };
+                r.intercambiar = function (i, j) {
+                    var t = r.a[i]; r.a[i] = r.a[j]; r.a[j] = t;
+                };
+                r.terminar = function () {
+                    for (var k = 0; k < r.f.length; k++) r.f[k] = true;
+                    r.paso([], [], [], null, 'La lista está ordenada. Total: ' + r.c + ' comparaciones y ' + r.m + ' movimientos.', false);
+                };
+                return r;
+            }
+
+            // ---------- Algoritmos: generan la lista de pasos ----------
+            function burbuja(r) {
+                var n = r.a.length, pasada = 0, hubo = true;
+                while (hubo) {
+                    hubo = false;
+                    pasada = pasada + 1;
+                    for (var j = 0; j < n - pasada; j++) {
+                        var x = r.a[j], y = r.a[j + 1];
+                        r.c = r.c + 1;
+                        r.paso([j, j + 1], [], [], null, 'Pasada ' + pasada + ': se comparan ' + x + ' y ' + y + '.', true);
+                        if (x > y) {
+                            r.intercambiar(j, j + 1);
+                            r.m = r.m + 1;
+                            hubo = true;
+                            r.paso([], [j, j + 1], [], null, x + ' es mayor que ' + y + ': se intercambian.', true);
+                        }
+                    }
+                    if (n - pasada >= 0) r.f[n - pasada] = true;
+                    if (hubo) r.paso([], [], [], null, 'Fin de la pasada ' + pasada + ': el ' + r.a[n - pasada] + ' quedó en su posición final.', false);
+                    else r.paso([], [], [], null, 'La pasada ' + pasada + ' no hizo intercambios: el algoritmo se detiene.', false);
+                }
+                r.terminar();
+            }
+
+            function seleccion(r) {
+                var n = r.a.length;
+                for (var i = 0; i < n - 1; i++) {
+                    var pm = i;
+                    r.paso([], [], [pm], null, 'Paso ' + (i + 1) + ': buscar el menor desde la posición ' + i + '. Por ahora, el menor es ' + r.a[pm] + '.', false);
+                    for (var j = i + 1; j < n; j++) {
+                        r.c = r.c + 1;
+                        r.paso([j], [], [pm], null, 'Se compara ' + r.a[j] + ' con el menor actual (' + r.a[pm] + ').', true);
+                        if (r.a[j] < r.a[pm]) {
+                            pm = j;
+                            r.paso([], [], [pm], null, 'Nuevo menor: ' + r.a[pm] + '.', false);
+                        }
+                    }
+                    if (pm !== i) {
+                        var menor = r.a[pm], otro = r.a[i];
+                        r.intercambiar(i, pm);
+                        r.m = r.m + 1;
+                        r.f[i] = true;
+                        r.paso([], [i, pm], [], null, 'Se intercambia el menor (' + menor + ') con ' + otro + ': el ' + menor + ' queda en la posición ' + i + '.', true);
+                    } else {
+                        r.f[i] = true;
+                        r.paso([], [], [], null, 'El menor (' + r.a[i] + ') ya estaba en la posición ' + i + ': no se mueve.', false);
+                    }
+                }
+                r.terminar();
+            }
+
+            function insercion(r) {
+                var n = r.a.length;
+                for (var i = 1; i < n; i++) {
+                    var actual = r.a[i];
+                    r.paso([], [], [i], [0, i - 1], 'Tomar el ' + actual + ' para insertarlo en la parte ordenada (posiciones 0 a ' + (i - 1) + ').', false);
+                    var j = i - 1, seguir = true;
+                    while (j >= 0 && seguir) {
+                        r.c = r.c + 1;
+                        r.paso([j, j + 1], [], [], [0, i], 'Se compara ' + r.a[j] + ' con ' + actual + '.', true);
+                        if (r.a[j] > r.a[j + 1]) {
+                            var mayor = r.a[j];
+                            r.intercambiar(j, j + 1);
+                            r.m = r.m + 1;
+                            r.paso([], [j, j + 1], [], [0, i], mayor + ' es mayor: se corre a la derecha y el ' + actual + ' avanza a la posición ' + j + '.', true);
+                            j = j - 1;
+                        } else {
+                            seguir = false;
+                        }
+                    }
+                    r.paso([], [], [j + 1], [0, i], 'El ' + actual + ' quedó en la posición ' + (j + 1) + '.', false);
+                }
+                r.terminar();
+            }
+
+            function mezcla(r) {
+                var n = r.a.length;
+                function ordenar(ini, fin) {
+                    if (ini >= fin) return;
+                    var medio = Math.floor((ini + fin) / 2);
+                    r.paso([], [], [], [ini, fin], 'Dividir las posiciones ' + ini + ' a ' + fin + ' en dos mitades: ' + ini + ' a ' + medio + ' y ' + (medio + 1) + ' a ' + fin + '.', false);
+                    ordenar(ini, medio);
+                    ordenar(medio + 1, fin);
+                    var izq = r.a.slice(ini, medio + 1), der = r.a.slice(medio + 1, fin + 1);
+                    var i = 0, j = 0, k = ini;
+                    r.paso([], [], [], [ini, fin], 'Mezclar [' + izq.join(', ') + '] con [' + der.join(', ') + '].', false);
+                    while (i < izq.length && j < der.length) {
+                        r.c = r.c + 1;
+                        var elegido;
+                        if (izq[i] <= der[j]) { elegido = izq[i]; i = i + 1; }
+                        else { elegido = der[j]; j = j + 1; }
+                        r.a[k] = elegido;
+                        r.m = r.m + 1;
+                        r.paso([], [k], [], [ini, fin], 'Se compara el primero de cada mitad; el menor (' + elegido + ') pasa a la posición ' + k + '.', true);
+                        k = k + 1;
+                    }
+                    while (i < izq.length) {
+                        r.a[k] = izq[i]; r.m = r.m + 1;
+                        r.paso([], [k], [], [ini, fin], 'Se copia el ' + izq[i] + ', que sobraba de la mitad izquierda.', true);
+                        i = i + 1; k = k + 1;
+                    }
+                    while (j < der.length) {
+                        r.a[k] = der[j]; r.m = r.m + 1;
+                        r.paso([], [k], [], [ini, fin], 'Se copia el ' + der[j] + ', que sobraba de la mitad derecha.', true);
+                        j = j + 1; k = k + 1;
+                    }
+                }
+                ordenar(0, n - 1);
+                r.terminar();
+            }
+
+            function rapido(r) {
+                function ordenarParte(ini, fin) {
+                    if (ini > fin) return;
+                    if (ini === fin) {
+                        r.f[ini] = true;
+                        r.paso([], [], [], null, 'La parte de la posición ' + ini + ' tiene un solo elemento (' + r.a[ini] + '): ya está en su lugar.', false);
+                        return;
+                    }
+                    var medio = Math.floor((ini + fin) / 2);
+                    var pivote = r.a[medio];
+                    r.paso([], [], [medio], [ini, fin], 'Ordenar las posiciones ' + ini + ' a ' + fin + '. Pivote: ' + pivote + ' (elemento del medio).', false);
+                    r.intercambiar(medio, fin);
+                    r.paso([], [medio, fin], [fin], [ini, fin], 'El pivote se mueve temporalmente al final de la parte.', false);
+                    var pos = ini;
+                    for (var j = ini; j < fin; j++) {
+                        r.c = r.c + 1;
+                        r.paso([j], [], [fin], [ini, fin], 'Se compara ' + r.a[j] + ' con el pivote ' + pivote + '.', true);
+                        if (r.a[j] < pivote) {
+                            // Igual que en 05_rapido.py: cada elemento menor cuenta como un movimiento
+                            r.intercambiar(pos, j);
+                            r.m = r.m + 1;
+                            r.paso([], [pos, j], [fin], [ini, fin], r.a[pos] + ' es menor que el pivote: pasa a la zona izquierda (posición ' + pos + ').', true);
+                            pos = pos + 1;
+                        }
+                    }
+                    r.intercambiar(pos, fin);
+                    r.m = r.m + 1;
+                    r.f[pos] = true;
+                    r.paso([], [pos, fin], [], [ini, fin], 'El pivote ' + pivote + ' se coloca en la posición ' + pos + ': a su izquierda quedan los menores y a su derecha los mayores.', true);
+                    ordenarParte(ini, pos - 1);
+                    ordenarParte(pos + 1, fin);
+                }
+                ordenarParte(0, r.a.length - 1);
+                r.terminar();
+            }
+
+            var ALGORITMOS = { burbuja: burbuja, seleccion: seleccion, insercion: insercion, mezcla: mezcla, rapido: rapido };
+            var ORDEN = ['burbuja', 'seleccion', 'insercion', 'mezcla', 'rapido'];
+
+            function generarPasos(clave, lista) {
+                var r = crearRegistro(lista);
+                ALGORITMOS[clave](r);
+                return r.ev;
+            }
+
+            // ---------- Listas de prueba ----------
+            function crearLista(tamano, tipo) {
+                var lista = [], i;
+                for (i = 0; i < tamano; i++) lista.push(Math.floor(Math.random() * 95) + 5);
+                if (tipo === 'ordenada' || tipo === 'casi' || tipo === 'inversa') lista.sort(function (a, b) { return a - b; });
+                if (tipo === 'inversa') lista.reverse();
+                if (tipo === 'casi') {
+                    for (i = 0; i < Math.max(1, Math.floor(tamano / 10)); i++) {
+                        var p = Math.floor(Math.random() * (tamano - 1));
+                        var t = lista[p]; lista[p] = lista[p + 1]; lista[p + 1] = t;
+                    }
+                }
+                return lista;
+            }
+
+            // ---------- Dibujo de barras ----------
+            function dibujar(contenedor, paso, maximo, conValores) {
+                var n = paso.a.length;
+                if (contenedor.children.length !== n) {
+                    contenedor.innerHTML = '';
+                    for (var k = 0; k < n; k++) {
+                        var barra = document.createElement('div');
+                        barra.style.flex = '1';
+                        barra.style.borderRadius = '4px 4px 0 0';
+                        barra.style.display = 'flex';
+                        barra.style.alignItems = 'flex-start';
+                        barra.style.justifyContent = 'center';
+                        barra.style.fontSize = '12px';
+                        barra.style.fontWeight = '700';
+                        barra.style.color = '#1c3b64';
+                        barra.style.transition = 'height 0.12s';
+                        barra.style.minWidth = '3px';
+                        contenedor.appendChild(barra);
+                    }
+                }
+                for (var i = 0; i < n; i++) {
+                    var b = contenedor.children[i];
+                    var color = COLOR.normal;
+                    if (paso.f[i]) color = COLOR.fijo;
+                    else if (paso.zona && i >= paso.zona[0] && i <= paso.zona[1]) color = COLOR.zona;
+                    if (paso.esp.indexOf(i) > -1) color = COLOR.especial;
+                    if (paso.comp.indexOf(i) > -1) color = COLOR.comparar;
+                    if (paso.mov.indexOf(i) > -1) color = COLOR.mover;
+                    b.style.height = Math.max(4, Math.round(paso.a[i] / maximo * 100)) + '%';
+                    b.style.background = color;
+                    b.style.color = (color === COLOR.especial || color === COLOR.mover || color === COLOR.fijo) ? '#ffffff' : '#1c3b64';
+                    b.textContent = conValores ? String(paso.a[i]) : '';
+                }
+            }
+
+            function maximoDe(lista) {
+                var m = 1;
+                for (var i = 0; i < lista.length; i++) if (lista[i] > m) m = lista[i];
+                return m;
+            }
+
+            function demora(control) {
+                var v = Number(control.value);
+                return Math.round(900 / (v * v / 4 + 1));
+            }
+
+            function boton(id) { return document.getElementById(id); }
+
+            function ponerTextoBoton(btn, jugando) {
+                btn.innerHTML = jugando ? '<i class="fa-solid fa-pause" aria-hidden="true"></i> Pausar'
+                                        : '<i class="fa-solid fa-play" aria-hidden="true"></i> Iniciar';
+                btn.style.background = jugando ? '#d2232a' : '#00734a';
+            }
+
+            // ========== Modo 1: un algoritmo paso a paso ==========
+            var m1 = { alg: 'burbuja', lista: [], pasos: [], indice: 0, temporizador: null };
+
+            function m1Mostrar() {
+                var paso = m1.pasos[m1.indice];
+                dibujar(boton('ord-barras'), paso, maximoDe(m1.lista), paso.a.length <= 20);
+                boton('ord-num-paso').textContent = m1.indice;
+                boton('ord-total-pasos').textContent = m1.pasos.length - 1;
+                boton('ord-comparaciones').textContent = paso.c;
+                boton('ord-movimientos').textContent = paso.m;
+                boton('ord-texto').innerHTML = paso.texto;
+                boton('ord-lista').textContent = 'Lista: [' + paso.a.join(', ') + ']';
+            }
+
+            function m1Preparar(nuevaLista) {
+                m1Detener();
+                if (nuevaLista) m1.lista = crearLista(Number(boton('ord-tamano').value), boton('ord-tipo').value);
+                m1.pasos = generarPasos(m1.alg, m1.lista);
+                var inicial = { a: m1.lista.slice(), f: [], comp: [], mov: [], esp: [], zona: null, c: 0, m: 0,
+                                texto: 'Lista inicial. Presione <strong>Iniciar</strong> o <strong>Un paso</strong>.' };
+                for (var i = 0; i < m1.lista.length; i++) inicial.f.push(false);
+                m1.pasos.unshift(inicial);
+                m1.indice = 0;
+                boton('ord-descripcion').innerHTML = DESCRIPCION[m1.alg];
+                m1Mostrar();
+            }
+
+            function m1Avanzar() {
+                if (m1.indice < m1.pasos.length - 1) {
+                    m1.indice = m1.indice + 1;
+                    m1Mostrar();
+                    return true;
+                }
+                return false;
+            }
+
+            function m1Ciclo() {
+                if (m1Avanzar()) m1.temporizador = setTimeout(m1Ciclo, demora(boton('ord-velocidad')));
+                else m1Detener();
+            }
+
+            function m1Detener() {
+                if (m1.temporizador) clearTimeout(m1.temporizador);
+                m1.temporizador = null;
+                ponerTextoBoton(boton('ord-iniciar'), false);
+            }
+
+            function m1ElegirAlgoritmo(clave) {
+                m1.alg = clave;
+                for (var i = 0; i < ORDEN.length; i++) {
+                    var b = boton('ord-alg-' + ORDEN[i]);
+                    var activo = ORDEN[i] === clave;
+                    b.setAttribute('aria-pressed', activo ? 'true' : 'false');
+                    b.style.background = activo ? '#164a98' : '#eef5ff';
+                    b.style.color = activo ? '#ffffff' : '#164a98';
+                }
+                m1Preparar(false);
+            }
+
+            boton('ord-iniciar').addEventListener('click', function (e) {
+                e.preventDefault();
+                if (m1.temporizador) { m1Detener(); return; }
+                if (m1.indice >= m1.pasos.length - 1) { m1.indice = 0; m1Mostrar(); }
+                ponerTextoBoton(boton('ord-iniciar'), true);
+                m1Ciclo();
+            });
+            boton('ord-paso').addEventListener('click', function (e) { e.preventDefault(); m1Detener(); m1Avanzar(); });
+            boton('ord-reiniciar').addEventListener('click', function (e) { e.preventDefault(); m1Preparar(false); });
+            boton('ord-nueva').addEventListener('click', function (e) { e.preventDefault(); m1Preparar(true); });
+            boton('ord-tamano').addEventListener('change', function () { m1Preparar(true); });
+            boton('ord-tipo').addEventListener('change', function () { m1Preparar(true); });
+            for (var a = 0; a < ORDEN.length; a++) {
+                (function (clave) {
+                    boton('ord-alg-' + clave).addEventListener('click', function (e) { e.preventDefault(); m1ElegirAlgoritmo(clave); });
+                })(ORDEN[a]);
+            }
+
+            m1Preparar(true);
+        })();
+    </script>
+
+</body>
+
+</html>

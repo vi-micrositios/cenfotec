@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices: preguntas rápidas</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="matrices-preguntas"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-top: 6px solid #006AEA; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #006AEA, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-table-cells" aria-hidden="true"></i>
+            </span>
+            <h3 id="matrices-preguntas"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Matrices
+            </h3>
+        </div>
+
+        <!-- INSTRUCCIONES GENERALES -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            Responda cada pregunta y presione <strong>Revisar</strong>: el resultado aparece de inmediato. Si la respuesta no es correcta, lea la pista e intente de nuevo. Puede usar Visual Studio Code para comprobar, pero primero intente responder sin ejecutar el código.
+        </div>
+
+            <div id="puntaje-matrices" aria-live="polite" style="background: #164a98; color: #ffffff; border-radius: 10px; padding: 12px 16px; font-size: 16px; text-align: center; margin-bottom: 18px;">Respuestas correctas: <strong>0 de 19</strong></div>
+
+        <!-- UNA MATRIZ ES UNA LISTA DE LISTAS -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-table-cells" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Una matriz es una lista de listas
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Una <strong>matriz</strong> organiza datos en filas y columnas. En Python se escribe como una lista cuyos elementos también son listas: cada lista interna es una <strong>fila</strong>.</p>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 12px 0 0 0;">La siguiente matriz guarda las notas de tres estudiantes en tres evaluaciones:</p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>notas = [[80, 90, 75],
+         [60, 70, 65],
+         [95, 85, 100]]</code></pre>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table aria-label="Matriz notas" style="border-collapse: separate; border-spacing: 4px;">
+                    <tr><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700; color: #7c7b75;">fila ↓ / col →</th><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">0</th><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">1</th><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">2</th><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700; color: #7c7b75;">Estudiante</th></tr>
+                    <tr><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">0</th><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">80</td><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">90</td><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">75</td><td style="padding: 6px 10px; font-size: 14px; color: #7c7b75;">Ana</td></tr><tr><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">1</th><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">60</td><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">70</td><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">65</td><td style="padding: 6px 10px; font-size: 14px; color: #7c7b75;">Luis</td></tr><tr><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">2</th><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">95</td><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">85</td><td style="border: 2px solid #006AEA; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">100</td><td style="padding: 6px 10px; font-size: 14px; color: #7c7b75;">Sofía</td></tr>
+                </table>
+            </div>
+            <ul style="margin: 12px 0 0 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>Para leer un valor se escriben <strong>dos índices</strong>: primero la fila y luego la columna. <code>notas[0][1]</code> es la fila 0, columna 1.</li>
+                <li>Las filas y las columnas empiezan en <strong>0</strong>, igual que en las listas.</li>
+                <li><code>notas[2]</code> (un solo índice) es la fila completa: una lista.</li>
+                <li><code>len(notas)</code> es la cantidad de filas y <code>len(notas[0])</code> es la cantidad de columnas de la fila 0.</li>
+            </ul>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Cómo responder:</strong> Escriba solo el resultado, sin <code>print</code> (por ejemplo: <code>90</code>). Si el resultado es una lista, escríbala con corchetes o con los valores separados por espacios. Si la instrucción produce un error, escriba <code>error</code>. Presione <strong>Revisar</strong> o la tecla Enter.
+            </div>
+        </div>
+
+        <!-- PARTE 1: LEER POR FILA Y COLUMNA -->
+        <div
+            style="background: #e8f5e9; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-hand-pointer" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Parte 1: Leer por fila y columna
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Use la matriz <code>notas</code>. ¿Qué muestra cada instrucción?</p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q1" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">1. <code>print(notas[0][1])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q1" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q1" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q1" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q1" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q2" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">2. <code>print(notas[2][2])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q2" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q2" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q2" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q2" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q3" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">3. <code>print(notas[1][0])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q3" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q3" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q3" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q3" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q4" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">4. <code>print(notas[2])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q4" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 260px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q4" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q4" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q4" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q5" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">5. <code>print(len(notas))</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q5" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q5" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q5" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q5" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q6" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">6. <code>print(len(notas[0]))</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q6" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q6" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q6" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q6" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q7" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">7. <code>print(notas[-1][0])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q7" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q7" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q7" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q7" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q8" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">8. <code>print(notas[3][0])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q8" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q8" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q8" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q8" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+        </div>
+
+        <!-- PARTE 2: ESCRIBIR EL ACCESO -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-magnifying-glass" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Parte 2: Escribir el acceso
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Ahora escriba la <strong>expresión</strong> que obtiene el valor indicado (por ejemplo: <code>notas[0][0]</code>).</p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q9" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">9. La nota 65.</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q9" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 200px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q9" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q9" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q9" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q10" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">10. La nota de Sofía en la primera evaluación.</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q10" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 200px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q10" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q10" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q10" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q11" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">11. Todas las notas de Luis (la fila completa).</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q11" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 200px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q11" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q11" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q11" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+        </div>
+
+        <!-- PARTE 3: RECORRER Y MODIFICAR -->
+        <div
+            style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-arrows-rotate" style="color: #c7ac19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: Recorrer y modificar
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Cada programa usa la matriz <code>notas</code> original. ¿Qué muestra?</p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q12" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">12. Suma de la primera columna:</label>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>total = 0
+for fila in notas:
+    total = total + fila[0]
+print(total)</code></pre>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q12" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q12" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q12" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q12" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q13" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">13. Valores donde la fila y la columna son iguales (la diagonal). Escriba los valores separados por espacios:</label>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>for i in range(len(notas)):
+    print(notas[i][i])</code></pre>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q13" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 200px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q13" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q13" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q13" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q14" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">14. Contar las notas mayores o iguales a 80:</label>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>contador = 0
+for fila in notas:
+    for nota in fila:
+        if nota &gt;= 80:
+            contador = contador + 1
+print(contador)</code></pre>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q14" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q14" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q14" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q14" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q15" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">15. Modificar una nota:</label>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>notas[1][1] = 75
+print(notas[1])</code></pre>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q15" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 260px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q15" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q15" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q15" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q16" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">16. Agregar una fila:</label>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>notas.append([70, 70, 70])
+print(len(notas))</code></pre>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q16" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q16" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q16" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q16" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+        </div>
+
+        <!-- PARTE 4: LA SALA DE CINE -->
+        <div
+            style="background: #fff5f5; border: 2px solid #e5a5a5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-couch" style="color: #d2232a; font-size: 22px;" aria-hidden="true"></i>
+                Parte 4: La sala de cine
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Esta matriz representa los asientos de una sala pequeña: <code>"L"</code> es libre y <code>"O"</code> es ocupado.</p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code>sala = [["L", "O", "L"],
+        ["O", "O", "L"]]</code></pre>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table aria-label="Matriz sala" style="border-collapse: separate; border-spacing: 4px;">
+                    <tr><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700; color: #7c7b75;">fila ↓ / col →</th><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">0</th><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">1</th><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">2</th></tr>
+                    <tr><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">0</th><td style="border: 2px solid #c81f66; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">&quot;L&quot;</td><td style="border: 2px solid #c81f66; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">&quot;O&quot;</td><td style="border: 2px solid #c81f66; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">&quot;L&quot;</td></tr><tr><th style="padding: 6px 10px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 13px; color: #164a98; font-weight: 700;">1</th><td style="border: 2px solid #c81f66; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">&quot;O&quot;</td><td style="border: 2px solid #c81f66; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">&quot;O&quot;</td><td style="border: 2px solid #c81f66; padding: 10px 14px; text-align: center; font-family: Consolas, 'Courier New', monospace; font-size: 15px; color: #1c3b64; background: #ffffff;">&quot;L&quot;</td></tr>
+                </table>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q17" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">17. <code>print(sala[1][2])</code></label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q17" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q17" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q17" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q17" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q18" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">18. ¿Cuántos asientos libres hay en la sala?</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q18" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 220px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q18" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q18" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q18" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 12px;">
+                <label for="q19" style="display: block; color: #1c3b64; font-size: 15px; line-height: 1.6; margin-bottom: 8px;">19. Después de <code>sala[0][0] = "O"</code>, ¿cuál es el primer asiento libre si se recorre fila por fila, de izquierda a derecha? Escriba la fila y la columna separadas por un espacio.</label>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px;">
+                    <input type="text" id="q19" autocomplete="off" spellcheck="false"
+                        style="font-family: Consolas, 'Courier New', monospace; width: 160px; max-width: 100%; padding: 8px 10px; border: 2px solid #9CC8FF; border-radius: 8px; font-size: 15px; color: #1c3b64;">
+                    <button type="button" id="btn-rev-q19" style="padding: 8px 14px; background: #006AEA; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Revisar</button> <button type="button" id="btn-ver-q19" style="padding: 8px 14px; background: #7c7b75; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer;">Ver respuesta</button>
+                </div>
+                <p id="fb-q19" aria-live="polite" style="margin: 8px 0 0 0; font-size: 14px; line-height: 1.6; color: #7c7b75;">Escriba su respuesta y presione Revisar.</p>
+            </div>
+        </div>
+
+        <!-- CIERRE -->
+        <div
+            style="display: flex; align-items: flex-start; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> una matriz es una lista de listas: el primer índice indica la fila y el segundo, la columna; <code>len(matriz)</code> cuenta las filas, <code>len(matriz[0])</code> cuenta las columnas y para recorrerla completa se usa un <code>for</code> dentro de otro.</span>
+        </div>
+
+    </section>
+
+    <script>
+        (function () {
+            // Revisión automática: cada botón se conecta por su id (sin atributos de evento en el HTML).
+            var preguntas = {"q1": {"ok": ["90"], "pista": "fila 0, columna 1.", "resp": "90"}, "q2": {"ok": ["100"], "pista": "última fila, última columna.", "resp": "100"}, "q3": {"ok": ["60"], "pista": "fila 1 (Luis), columna 0.", "resp": "60"}, "q4": {"ok": ["[95, 85, 100]"], "pista": "con un solo índice se obtiene la fila completa.", "resp": "[95, 85, 100]"}, "q5": {"ok": ["3"], "pista": "len() de la matriz cuenta las filas.", "resp": "3"}, "q6": {"ok": ["3"], "pista": "len() de una fila cuenta sus columnas.", "resp": "3"}, "q7": {"ok": ["95"], "pista": "-1 es la última fila.", "resp": "95"}, "q8": {"ok": ["error", "indexerror"], "pista": "¿existe la fila 3 en una matriz de 3 filas?", "resp": "error (IndexError): las filas van de 0 a 2"}, "q9": {"ok": ["notas[1][2]"], "pista": "busque en qué fila y en qué columna está el 65.", "resp": "notas[1][2]"}, "q10": {"ok": ["notas[2][0]"], "pista": "Sofía es la fila 2; la primera evaluación es la columna 0.", "resp": "notas[2][0]"}, "q11": {"ok": ["notas[1]"], "pista": "use un solo índice.", "resp": "notas[1]"}, "q12": {"ok": ["235"], "pista": "en cada vuelta, fila[0] es la primera nota de esa fila: 80 + 60 + 95.", "resp": "235"}, "q13": {"ok": ["80 70 100"], "pista": "i toma los valores 0, 1 y 2: notas[0][0], notas[1][1] y notas[2][2].", "resp": "80 70 100"}, "q14": {"ok": ["5"], "pista": "el ciclo interno revisa cada nota de cada fila; cuente 80, 90, 95, 85 y 100.", "resp": "5"}, "q15": {"ok": ["[60, 75, 65]"], "pista": "notas[1][1] reemplaza la nota de Luis en la columna 1.", "resp": "[60, 75, 65]"}, "q16": {"ok": ["4"], "pista": "append agrega una fila completa al final.", "resp": "4"}, "q17": {"ok": ["L"], "pista": "fila 1, columna 2.", "resp": "L"}, "q18": {"ok": ["3"], "pista": "revise las dos filas.", "resp": "3"}, "q19": {"ok": ["0 2"], "pista": "después del cambio, en la fila 0 solo queda libre la columna 2.", "resp": "fila 0, columna 2 (0 2)"}};
+            var correctas = {};
+            // Caracteres que se ignoran al comparar: comillas, corchetes, paréntesis y comas
+            var IGNORAR = '"' + "'" + String.fromCharCode(91, 93, 40, 41) + ',';
+
+            function normalizar(texto) {
+                var t = String(texto).toLowerCase(), limpio = '', espacio = false;
+                for (var i = 0; i < t.length; i++) {
+                    var ch = t.charAt(i);
+                    if (IGNORAR.indexOf(ch) > -1 || ch === ' ' || ch === String.fromCharCode(9)) {
+                        espacio = true;
+                    } else {
+                        if (espacio && limpio !== '') limpio = limpio + ' ';
+                        limpio = limpio + ch;
+                        espacio = false;
+                    }
+                }
+                if (limpio.charAt(limpio.length - 1) === '.') limpio = limpio.substring(0, limpio.length - 1);
+                return limpio;
+            }
+            function compacto(texto) {
+                var n = normalizar(texto), r = '';
+                for (var i = 0; i < n.length; i++) if (n.charAt(i) !== ' ') r = r + n.charAt(i);
+                return r;
+            }
+            function mostrar(id, color, html) {
+                var fb = document.getElementById('fb-' + id);
+                if (!fb) return;
+                fb.style.color = color;
+                fb.innerHTML = html;
+            }
+            function actualizarPuntaje() {
+                var total = 0, buenas = 0;
+                for (var id in preguntas) { total++; if (correctas[id]) buenas++; }
+                var marcador = document.getElementById('puntaje-matrices');
+                if (marcador) marcador.innerHTML = 'Respuestas correctas: <strong>' + buenas + ' de ' + total + '</strong>';
+            }
+            function revisar(id) {
+                var p = preguntas[id], campo = document.getElementById(id);
+                var r = campo ? normalizar(campo.value) : '';
+                if (r === '') { mostrar(id, '#7c7b75', 'Escriba una respuesta antes de revisar.'); return; }
+                var ok = false;
+                for (var i = 0; i < p.ok.length; i++) {
+                    // Se acepta con o sin espacios: 80 70 100, [80, 70, 100], notas[1][2]
+                    if (r === normalizar(p.ok[i]) || compacto(r) === compacto(p.ok[i])) ok = true;
+                }
+                correctas[id] = ok;
+                if (ok) mostrar(id, '#00734a', '<strong>&#10004; Correcto.</strong>');
+                else mostrar(id, '#d2232a', '<strong>&#10008; Revise su respuesta.</strong> Pista: ' + p.pista);
+                actualizarPuntaje();
+            }
+            function conectar(id) {
+                var b = document.getElementById('btn-rev-' + id);
+                if (b) b.addEventListener('click', function (e) { e.preventDefault(); revisar(id); });
+                var v = document.getElementById('btn-ver-' + id);
+                if (v) v.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    mostrar(id, '#164a98', '<strong>Respuesta:</strong> ' + preguntas[id].resp);
+                });
+                var c = document.getElementById(id);
+                if (c) c.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.keyCode === 13) { e.preventDefault(); revisar(id); }
+                });
+            }
+            for (var id in preguntas) conectar(id);
+            actualizarPuntaje();
+        })();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigación: algoritmos de ordenamiento</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="investigacion-ordenamiento"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #712c86; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #712c86, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-arrow-down-short-wide" aria-hidden="true"></i>
+            </span>
+            <h3 id="investigacion-ordenamiento"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Investigación: algoritmos de ordenamiento
+            </h3>
+        </div>
+
+
+        <!-- PROPÓSITO -->
+        <div
+            style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-compass" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                Propósito
+            </h4>
+            
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Ordenar datos es una de las tareas más comunes en programación: ordenar notas, precios, nombres o fechas. Existen muchas formas de hacerlo y no todas tardan lo mismo. En esta actividad usted <strong>investiga</strong> cinco algoritmos de ordenamiento, los <strong>explica con sus palabras</strong> y luego <strong>comprueba</strong> con programas en Python si lo que encontró es cierto.</p>
+            
+            <ul>
+                <li>Bubble sort o burbuja</li>
+                <li>Selection sort o selección</li>
+                <li>Insertion sort o inserción</li>
+                <li>Merge sort o mezcla</li>
+                <li>Quicksort o rápido</li>
+            </ul>
+
+
+        </div>
+
+        <!-- PARTE 1: INVESTIGUE Y COMPLETE UNA FICHA POR ALGORITMO -->
+
+        <div
+            style="background: #e8f5e9; border: 2px solid #9bd1cc; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-magnifying-glass" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Parte 1: Investigue y complete una ficha por algoritmo
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Investigue cada uno de los cinco algoritmos y complete una ficha con los siguientes campos. Escriba con sus propias palabras: no copie y pegue definiciones.</p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Campo</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Qué debe escribir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Idea principal</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Una o dos oraciones que expliquen cómo ordena el algoritmo.</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Pasos</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Los pasos del algoritmo en una lista numerada.</td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ejemplo a mano (traza)</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ordene la lista <code>[5, 2, 8, 1, 9, 3]</code> a mano y muestre en una tabla cómo queda la lista después de cada paso (vea el ejemplo modelo).</td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Ventaja y desventaja</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Una ventaja y una desventaja del algoritmo.</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 20px 0 8px 0;"><strong>Ejemplo modelo: traza de burbuja con la lista [4, 3, 1, 2]</strong></p>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Así se espera el ejemplo a mano: una fila por cada paso, con la lista completa después de ese paso. En burbuja, cada paso es una comparación entre dos vecinos; si el de la izquierda es mayor, se intercambian.</p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Pasada</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Posiciones</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Comparación</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">¿Intercambia?</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Lista después</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">0 y 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">4 &gt; 3?</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Sí</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">3</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">4</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">1</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">2</span></span></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1 y 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">4 &gt; 1?</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Sí</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">3</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">1</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">4</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">2</span></span></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2 y 3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">4 &gt; 2?</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Sí</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">3</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">1</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">2</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">4</span></span></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">0 y 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3 &gt; 1?</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Sí</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">1</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">3</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">2</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #e8f5e9; border-color: #4aa147; color: #00734a;">4</span></span></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1 y 2</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3 &gt; 2?</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Sí</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffffff; border-color: #9CC8FF;">1</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">2</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">3</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #e8f5e9; border-color: #4aa147; color: #00734a;">4</span></span></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">0 y 1</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">1 &gt; 2?</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">No</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"><span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">1</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">2</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #e8f5e9; border-color: #4aa147; color: #00734a;">3</span><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #e8f5e9; border-color: #4aa147; color: #00734a;">4</span></span></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">3</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">—</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">—</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">—</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Sin intercambios en esta pasada: la lista está ordenada.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color: #1c3b64; font-size: 14px; line-height: 1.9; margin: 10px 0 0 0;"><strong>Colores:</strong> <span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #ffc63e; border-color: #C7AC19; font-weight: 700;">a</span></span> posiciones que se comparan &nbsp; <span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #9CC8FF; border-color: #C7AC19; font-weight: 700;">a</span></span> elemento que se acaba de colocar &nbsp; <span style="white-space: nowrap;"><span style="font-family: Consolas, 'Courier New', monospace; display: inline-block; min-width: 22px; text-align: center; padding: 2px 4px; margin: 1px; border: 2px solid; border-radius: 5px; background: #e8f5e9; border-color: #4aa147; color: #00734a;">a</span></span> elemento que ya está en su posición final</p>
+            <ul style="margin: 12px 0 0 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.8;">
+                <li>En la pasada 1, el 4 «sube» hasta el final después de tres comparaciones: queda en su posición final.</li>
+                <li>En la pasada 2 ya no se compara la última posición, porque el 4 ya está en su lugar.</li>
+                <li>En la pasada 3 no hay intercambios: el algoritmo se detiene porque la lista está ordenada.</li>
+                <li>Total: 6 comparaciones y 5 intercambios.</li>
+            </ul>
+            <div
+                style="background: #f7f1fa; border-left: 5px solid #712c86; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #3d1a4a; font-size: 14px; line-height: 1.6;">
+                En su ficha haga una traza como esta para <strong>cada</strong> algoritmo, con la lista <code>[5, 2, 8, 1, 9, 3]</code>. Las columnas cambian según el algoritmo: en selección, cada fila es la búsqueda del menor; en inserción, la colocación de un elemento; en mezcla, una división o una mezcla; y en rápido, la elección de un pivote. Puede hacer la traza en una tabla, en papel (con una fotografía legible) o con tarjetas.
+            </div>
+            
+ 
+        </div>
+
+        <!-- PARTE 2: COMPRUEBE CON LOS PROGRAMAS -->
+        <div
+            style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-stopwatch" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Parte 2: Compruebe con los programas
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Ahora compruebe lo que investigó. Cada programa ordena la lista de ejemplo mostrando los pasos, cuenta las comparaciones y los movimientos, y mide el tiempo con listas de 100, 1000 y 3000 números. El programa <code>06_comparar_todos.py</code> ejecuta los cinco algoritmos con las mismas listas y compara sus tiempos con la función <code>sorted()</code> de Python.</p>
+            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+                <li>Copie cada programa en un archivo <code>.py</code> en Visual Studio Code (haga clic en el nombre para ver el código).</li>
+                <li>Ejecute los programas del 01 al 05. Compare los pasos de la lista de ejemplo con su ejemplo a mano de la Parte 1.</li>
+                <li>Complete la tabla con los resultados de su computadora.</li>
+                <li>Ejecute <code>06_comparar_todos.py</code> y copie su resultado en el documento.</li>
+            </ol>
+            <details style="border: 1px solid #c8d1df; border-radius: 10px; margin-top: 10px; background: #ffffff;">
+                <summary style="cursor: pointer; padding: 12px 16px; font-weight: 700; color: #164a98; font-size: 15px;"><code>01_burbuja.py</code></summary>
+                <div style="padding: 0 16px 16px 16px;">
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: 01_burbuja.py
+# Curso: SOFT-01 Principios de Programación 1
+# Descripción: Ordenamiento por burbuja (Bubble sort): compara elementos vecinos y los
+#              intercambia; en cada pasada el mayor "sube" al final.
+# Ejecución: python 01_burbuja.py
+# ============================================================
+import random
+import time
+
+# Tamaños de lista que se usan para medir el tiempo
+TAMANOS = (100, 1000, 3000)
+LISTA_EJEMPLO = [5, 2, 8, 1, 9, 3]
+
+
+def burbuja(lista, mostrar):
+    """Ordena la lista con burbuja. Devuelve (lista, comparaciones, movimientos)."""
+    comparaciones = 0
+    movimientos = 0
+    n = len(lista)
+    hubo_intercambio = True
+    pasada = 0
+    # Se repite mientras en la pasada anterior haya habido algún intercambio
+    while hubo_intercambio:
+        hubo_intercambio = False
+        pasada = pasada + 1
+        for j in range(n - pasada):
+            comparaciones = comparaciones + 1
+            if lista[j] &gt; lista[j + 1]:
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+                movimientos = movimientos + 1
+                hubo_intercambio = True
+        if mostrar:
+            print(f"  Pasada {pasada}: {lista}")
+    return lista, comparaciones, movimientos
+
+
+def medir(lista):
+    """Ordena una copia de la lista y devuelve (segundos, comparaciones, movimientos)."""
+    copia = lista[:]                      # se ordena una copia para no alterar la original
+    inicio = time.perf_counter()
+    resultado, comparaciones, movimientos = burbuja(copia, False)
+    fin = time.perf_counter()
+    if resultado != sorted(lista):        # comprobación: el resultado debe estar ordenado
+        print("¡Error! La lista no quedó ordenada.")
+    return fin - inicio, comparaciones, movimientos
+
+
+def main():
+    print("=" * 60)
+    print("ORDENAMIENTO POR BURBUJA (BUBBLE SORT)")
+    print("=" * 60)
+
+    # 1. Ejemplo paso a paso con una lista pequeña
+    print("\nLista inicial:", LISTA_EJEMPLO)
+    resultado, comparaciones, movimientos = burbuja(LISTA_EJEMPLO[:], True)
+    print("Lista ordenada:", resultado)
+    print("Comparaciones:", comparaciones, "| Movimientos:", movimientos)
+
+    # 2. Medición de tiempo con listas aleatorias de distintos tamaños
+    random.seed(2026)                     # misma semilla: todos obtienen las mismas listas
+    print("\nTiempo con listas aleatorias:")
+    print(f"{'Tamaño':&gt;8} {'Segundos':&gt;12} {'Comparaciones':&gt;15} {'Movimientos':&gt;13}")
+    for tamano in TAMANOS:
+        lista = [random.randint(1, 10000) for _ in range(tamano)]
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{tamano:&gt;8} {segundos:&gt;12.5f} {comparaciones:&gt;15} {movimientos:&gt;13}")
+
+    # 3. Mejor y peor caso con 1000 elementos
+    print("\nCon 1000 elementos según el orden inicial:")
+    casos = (("Ya ordenada", list(range(1000))),
+             ("Orden inverso", list(range(1000, 0, -1))),
+             ("Aleatoria", [random.randint(1, 10000) for _ in range(1000)]))
+    for nombre, lista in casos:
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{nombre:&gt;14}: {segundos:.5f} s | {comparaciones} comparaciones | {movimientos} movimientos")
+
+
+main()</code></pre>
+                </div>
+            </details>
+            <details style="border: 1px solid #c8d1df; border-radius: 10px; margin-top: 10px; background: #ffffff;">
+                <summary style="cursor: pointer; padding: 12px 16px; font-weight: 700; color: #164a98; font-size: 15px;"><code>02_seleccion.py</code></summary>
+                <div style="padding: 0 16px 16px 16px;">
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: 02_seleccion.py
+# Curso: SOFT-01 Principios de Programación 1
+# Descripción: Ordenamiento por selección (Selection sort): busca el menor de la parte
+#              sin ordenar y lo coloca al inicio de esa parte.
+# Ejecución: python 02_seleccion.py
+# ============================================================
+import random
+import time
+
+# Tamaños de lista que se usan para medir el tiempo
+TAMANOS = (100, 1000, 3000)
+LISTA_EJEMPLO = [5, 2, 8, 1, 9, 3]
+
+
+def seleccion(lista, mostrar):
+    """Ordena la lista con selección. Devuelve (lista, comparaciones, movimientos)."""
+    comparaciones = 0
+    movimientos = 0
+    n = len(lista)
+    for i in range(n - 1):
+        # Buscar la posición del menor entre i y el final
+        pos_menor = i
+        for j in range(i + 1, n):
+            comparaciones = comparaciones + 1
+            if lista[j] &lt; lista[pos_menor]:
+                pos_menor = j
+        # Llevar el menor a la posición i
+        if pos_menor != i:
+            lista[i], lista[pos_menor] = lista[pos_menor], lista[i]
+            movimientos = movimientos + 1
+        if mostrar:
+            print(f"  Paso {i + 1}: menor = {lista[i]} -&gt; {lista}")
+    return lista, comparaciones, movimientos
+
+
+def medir(lista):
+    """Ordena una copia de la lista y devuelve (segundos, comparaciones, movimientos)."""
+    copia = lista[:]                      # se ordena una copia para no alterar la original
+    inicio = time.perf_counter()
+    resultado, comparaciones, movimientos = seleccion(copia, False)
+    fin = time.perf_counter()
+    if resultado != sorted(lista):        # comprobación: el resultado debe estar ordenado
+        print("¡Error! La lista no quedó ordenada.")
+    return fin - inicio, comparaciones, movimientos
+
+
+def main():
+    print("=" * 60)
+    print("ORDENAMIENTO POR SELECCIÓN (SELECTION SORT)")
+    print("=" * 60)
+
+    # 1. Ejemplo paso a paso con una lista pequeña
+    print("\nLista inicial:", LISTA_EJEMPLO)
+    resultado, comparaciones, movimientos = seleccion(LISTA_EJEMPLO[:], True)
+    print("Lista ordenada:", resultado)
+    print("Comparaciones:", comparaciones, "| Movimientos:", movimientos)
+
+    # 2. Medición de tiempo con listas aleatorias de distintos tamaños
+    random.seed(2026)                     # misma semilla: todos obtienen las mismas listas
+    print("\nTiempo con listas aleatorias:")
+    print(f"{'Tamaño':&gt;8} {'Segundos':&gt;12} {'Comparaciones':&gt;15} {'Movimientos':&gt;13}")
+    for tamano in TAMANOS:
+        lista = [random.randint(1, 10000) for _ in range(tamano)]
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{tamano:&gt;8} {segundos:&gt;12.5f} {comparaciones:&gt;15} {movimientos:&gt;13}")
+
+    # 3. Mejor y peor caso con 1000 elementos
+    print("\nCon 1000 elementos según el orden inicial:")
+    casos = (("Ya ordenada", list(range(1000))),
+             ("Orden inverso", list(range(1000, 0, -1))),
+             ("Aleatoria", [random.randint(1, 10000) for _ in range(1000)]))
+    for nombre, lista in casos:
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{nombre:&gt;14}: {segundos:.5f} s | {comparaciones} comparaciones | {movimientos} movimientos")
+
+
+main()</code></pre>
+                </div>
+            </details>
+            <details style="border: 1px solid #c8d1df; border-radius: 10px; margin-top: 10px; background: #ffffff;">
+                <summary style="cursor: pointer; padding: 12px 16px; font-weight: 700; color: #164a98; font-size: 15px;"><code>03_insercion.py</code></summary>
+                <div style="padding: 0 16px 16px 16px;">
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: 03_insercion.py
+# Curso: SOFT-01 Principios de Programación 1
+# Descripción: Ordenamiento por inserción (Insertion sort): toma cada elemento y lo
+#              inserta en su lugar dentro de la parte ya ordenada.
+# Ejecución: python 03_insercion.py
+# ============================================================
+import random
+import time
+
+# Tamaños de lista que se usan para medir el tiempo
+TAMANOS = (100, 1000, 3000)
+LISTA_EJEMPLO = [5, 2, 8, 1, 9, 3]
+
+
+def insercion(lista, mostrar):
+    """Ordena la lista con inserción. Devuelve (lista, comparaciones, movimientos)."""
+    comparaciones = 0
+    movimientos = 0
+    for i in range(1, len(lista)):
+        actual = lista[i]
+        j = i - 1
+        # Correr hacia la derecha los elementos mayores que 'actual'
+        seguir = True
+        while j &gt;= 0 and seguir:
+            comparaciones = comparaciones + 1
+            if lista[j] &gt; actual:
+                lista[j + 1] = lista[j]
+                movimientos = movimientos + 1
+                j = j - 1
+            else:
+                seguir = False
+        lista[j + 1] = actual
+        if mostrar:
+            print(f"  Insertar {actual}: {lista}")
+    return lista, comparaciones, movimientos
+
+
+def medir(lista):
+    """Ordena una copia de la lista y devuelve (segundos, comparaciones, movimientos)."""
+    copia = lista[:]                      # se ordena una copia para no alterar la original
+    inicio = time.perf_counter()
+    resultado, comparaciones, movimientos = insercion(copia, False)
+    fin = time.perf_counter()
+    if resultado != sorted(lista):        # comprobación: el resultado debe estar ordenado
+        print("¡Error! La lista no quedó ordenada.")
+    return fin - inicio, comparaciones, movimientos
+
+
+def main():
+    print("=" * 60)
+    print("ORDENAMIENTO POR INSERCIÓN (INSERTION SORT)")
+    print("=" * 60)
+
+    # 1. Ejemplo paso a paso con una lista pequeña
+    print("\nLista inicial:", LISTA_EJEMPLO)
+    resultado, comparaciones, movimientos = insercion(LISTA_EJEMPLO[:], True)
+    print("Lista ordenada:", resultado)
+    print("Comparaciones:", comparaciones, "| Movimientos:", movimientos)
+
+    # 2. Medición de tiempo con listas aleatorias de distintos tamaños
+    random.seed(2026)                     # misma semilla: todos obtienen las mismas listas
+    print("\nTiempo con listas aleatorias:")
+    print(f"{'Tamaño':&gt;8} {'Segundos':&gt;12} {'Comparaciones':&gt;15} {'Movimientos':&gt;13}")
+    for tamano in TAMANOS:
+        lista = [random.randint(1, 10000) for _ in range(tamano)]
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{tamano:&gt;8} {segundos:&gt;12.5f} {comparaciones:&gt;15} {movimientos:&gt;13}")
+
+    # 3. Mejor y peor caso con 1000 elementos
+    print("\nCon 1000 elementos según el orden inicial:")
+    casos = (("Ya ordenada", list(range(1000))),
+             ("Orden inverso", list(range(1000, 0, -1))),
+             ("Aleatoria", [random.randint(1, 10000) for _ in range(1000)]))
+    for nombre, lista in casos:
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{nombre:&gt;14}: {segundos:.5f} s | {comparaciones} comparaciones | {movimientos} movimientos")
+
+
+main()</code></pre>
+                </div>
+            </details>
+            <details style="border: 1px solid #c8d1df; border-radius: 10px; margin-top: 10px; background: #ffffff;">
+                <summary style="cursor: pointer; padding: 12px 16px; font-weight: 700; color: #164a98; font-size: 15px;"><code>04_mezcla.py</code></summary>
+                <div style="padding: 0 16px 16px 16px;">
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: 04_mezcla.py
+# Curso: SOFT-01 Principios de Programación 1
+# Descripción: Ordenamiento por mezcla (Merge sort): divide la lista en mitades, ordena
+#              cada mitad y luego las mezcla en orden.
+# Ejecución: python 04_mezcla.py
+# ============================================================
+import random
+import time
+
+# Tamaños de lista que se usan para medir el tiempo
+TAMANOS = (100, 1000, 3000)
+LISTA_EJEMPLO = [5, 2, 8, 1, 9, 3]
+
+
+def mezclar(izquierda, derecha, contador):
+    """Une dos listas ordenadas en una sola lista ordenada."""
+    resultado = []
+    i = 0
+    j = 0
+    while i &lt; len(izquierda) and j &lt; len(derecha):
+        contador[0] = contador[0] + 1                 # una comparación
+        if izquierda[i] &lt;= derecha[j]:
+            resultado.append(izquierda[i])
+            i = i + 1
+        else:
+            resultado.append(derecha[j])
+            j = j + 1
+        contador[1] = contador[1] + 1                 # un movimiento
+    # Agregar lo que sobre de cualquiera de las dos mitades
+    while i &lt; len(izquierda):
+        resultado.append(izquierda[i])
+        i = i + 1
+        contador[1] = contador[1] + 1
+    while j &lt; len(derecha):
+        resultado.append(derecha[j])
+        j = j + 1
+        contador[1] = contador[1] + 1
+    return resultado
+
+
+def dividir_y_mezclar(lista, contador, mostrar, nivel):
+    """Función recursiva: se llama a sí misma con cada mitad."""
+    if len(lista) &lt;= 1:
+        resultado = lista
+    else:
+        mitad = len(lista) // 2
+        izquierda = dividir_y_mezclar(lista[:mitad], contador, mostrar, nivel + 1)
+        derecha = dividir_y_mezclar(lista[mitad:], contador, mostrar, nivel + 1)
+        resultado = mezclar(izquierda, derecha, contador)
+        if mostrar:
+            print("  " + "  " * nivel + f"Mezclar {izquierda} + {derecha} -&gt; {resultado}")
+    return resultado
+
+
+def mezcla(lista, mostrar):
+    """Ordena la lista con mezcla. Devuelve (lista, comparaciones, movimientos)."""
+    contador = [0, 0]                                 # [comparaciones, movimientos]
+    resultado = dividir_y_mezclar(lista, contador, mostrar, 0)
+    return resultado, contador[0], contador[1]
+
+
+def medir(lista):
+    """Ordena una copia de la lista y devuelve (segundos, comparaciones, movimientos)."""
+    copia = lista[:]                      # se ordena una copia para no alterar la original
+    inicio = time.perf_counter()
+    resultado, comparaciones, movimientos = mezcla(copia, False)
+    fin = time.perf_counter()
+    if resultado != sorted(lista):        # comprobación: el resultado debe estar ordenado
+        print("¡Error! La lista no quedó ordenada.")
+    return fin - inicio, comparaciones, movimientos
+
+
+def main():
+    print("=" * 60)
+    print("ORDENAMIENTO POR MEZCLA (MERGE SORT)")
+    print("=" * 60)
+
+    # 1. Ejemplo paso a paso con una lista pequeña
+    print("\nLista inicial:", LISTA_EJEMPLO)
+    resultado, comparaciones, movimientos = mezcla(LISTA_EJEMPLO[:], True)
+    print("Lista ordenada:", resultado)
+    print("Comparaciones:", comparaciones, "| Movimientos:", movimientos)
+
+    # 2. Medición de tiempo con listas aleatorias de distintos tamaños
+    random.seed(2026)                     # misma semilla: todos obtienen las mismas listas
+    print("\nTiempo con listas aleatorias:")
+    print(f"{'Tamaño':&gt;8} {'Segundos':&gt;12} {'Comparaciones':&gt;15} {'Movimientos':&gt;13}")
+    for tamano in TAMANOS:
+        lista = [random.randint(1, 10000) for _ in range(tamano)]
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{tamano:&gt;8} {segundos:&gt;12.5f} {comparaciones:&gt;15} {movimientos:&gt;13}")
+
+    # 3. Mejor y peor caso con 1000 elementos
+    print("\nCon 1000 elementos según el orden inicial:")
+    casos = (("Ya ordenada", list(range(1000))),
+             ("Orden inverso", list(range(1000, 0, -1))),
+             ("Aleatoria", [random.randint(1, 10000) for _ in range(1000)]))
+    for nombre, lista in casos:
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{nombre:&gt;14}: {segundos:.5f} s | {comparaciones} comparaciones | {movimientos} movimientos")
+
+
+main()</code></pre>
+                </div>
+            </details>
+            <details style="border: 1px solid #c8d1df; border-radius: 10px; margin-top: 10px; background: #ffffff;">
+                <summary style="cursor: pointer; padding: 12px 16px; font-weight: 700; color: #164a98; font-size: 15px;"><code>05_rapido.py</code></summary>
+                <div style="padding: 0 16px 16px 16px;">
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: 05_rapido.py
+# Curso: SOFT-01 Principios de Programación 1
+# Descripción: Ordenamiento rápido (Quicksort): elige un pivote, deja a la izquierda los
+#              menores y a la derecha los mayores, y repite en cada parte.
+# Ejecución: python 05_rapido.py
+# ============================================================
+import random
+import time
+
+# Tamaños de lista que se usan para medir el tiempo
+TAMANOS = (100, 1000, 3000)
+LISTA_EJEMPLO = [5, 2, 8, 1, 9, 3]
+
+
+def particionar(lista, inicio, fin, contador):
+    """Usa el elemento del medio como pivote; devuelve su posición final."""
+    medio = (inicio + fin) // 2
+    lista[medio], lista[fin] = lista[fin], lista[medio]   # el pivote pasa al final
+    pivote = lista[fin]
+    posicion = inicio
+    for j in range(inicio, fin):
+        contador[0] = contador[0] + 1
+        if lista[j] &lt; pivote:
+            lista[posicion], lista[j] = lista[j], lista[posicion]
+            contador[1] = contador[1] + 1
+            posicion = posicion + 1
+    lista[posicion], lista[fin] = lista[fin], lista[posicion]
+    contador[1] = contador[1] + 1
+    return posicion
+
+
+def ordenar_parte(lista, inicio, fin, contador, mostrar):
+    """Función recursiva: ordena la parte de la lista entre inicio y fin."""
+    if inicio &lt; fin:
+        p = particionar(lista, inicio, fin, contador)
+        if mostrar:
+            print(f"  Pivote {lista[p]}: {lista[inicio:p]} &lt; {lista[p]} &lt; {lista[p + 1:fin + 1]}")
+        ordenar_parte(lista, inicio, p - 1, contador, mostrar)
+        ordenar_parte(lista, p + 1, fin, contador, mostrar)
+
+
+def rapido(lista, mostrar):
+    """Ordena la lista con quicksort. Devuelve (lista, comparaciones, movimientos)."""
+    contador = [0, 0]                                     # [comparaciones, movimientos]
+    ordenar_parte(lista, 0, len(lista) - 1, contador, mostrar)
+    return lista, contador[0], contador[1]
+
+
+def medir(lista):
+    """Ordena una copia de la lista y devuelve (segundos, comparaciones, movimientos)."""
+    copia = lista[:]                      # se ordena una copia para no alterar la original
+    inicio = time.perf_counter()
+    resultado, comparaciones, movimientos = rapido(copia, False)
+    fin = time.perf_counter()
+    if resultado != sorted(lista):        # comprobación: el resultado debe estar ordenado
+        print("¡Error! La lista no quedó ordenada.")
+    return fin - inicio, comparaciones, movimientos
+
+
+def main():
+    print("=" * 60)
+    print("ORDENAMIENTO RÁPIDO (QUICKSORT)")
+    print("=" * 60)
+
+    # 1. Ejemplo paso a paso con una lista pequeña
+    print("\nLista inicial:", LISTA_EJEMPLO)
+    resultado, comparaciones, movimientos = rapido(LISTA_EJEMPLO[:], True)
+    print("Lista ordenada:", resultado)
+    print("Comparaciones:", comparaciones, "| Movimientos:", movimientos)
+
+    # 2. Medición de tiempo con listas aleatorias de distintos tamaños
+    random.seed(2026)                     # misma semilla: todos obtienen las mismas listas
+    print("\nTiempo con listas aleatorias:")
+    print(f"{'Tamaño':&gt;8} {'Segundos':&gt;12} {'Comparaciones':&gt;15} {'Movimientos':&gt;13}")
+    for tamano in TAMANOS:
+        lista = [random.randint(1, 10000) for _ in range(tamano)]
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{tamano:&gt;8} {segundos:&gt;12.5f} {comparaciones:&gt;15} {movimientos:&gt;13}")
+
+    # 3. Mejor y peor caso con 1000 elementos
+    print("\nCon 1000 elementos según el orden inicial:")
+    casos = (("Ya ordenada", list(range(1000))),
+             ("Orden inverso", list(range(1000, 0, -1))),
+             ("Aleatoria", [random.randint(1, 10000) for _ in range(1000)]))
+    for nombre, lista in casos:
+        segundos, comparaciones, movimientos = medir(lista)
+        print(f"{nombre:&gt;14}: {segundos:.5f} s | {comparaciones} comparaciones | {movimientos} movimientos")
+
+
+main()</code></pre>
+                </div>
+            </details>
+            <details style="border: 1px solid #c8d1df; border-radius: 10px; margin-top: 10px; background: #ffffff;">
+                <summary style="cursor: pointer; padding: 12px 16px; font-weight: 700; color: #164a98; font-size: 15px;"><code>06_comparar_todos.py</code></summary>
+                <div style="padding: 0 16px 16px 16px;">
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 15px 0 0 0;"><code># ============================================================
+# Archivo: 06_comparar_todos.py
+# Curso: SOFT-01 Principios de Programación 1
+# Descripción: Compara el tiempo de los cinco algoritmos y de sorted() de Python
+#              con las mismas listas aleatorias.
+# Ejecución: python 06_comparar_todos.py
+# ============================================================
+import random
+import time
+
+# Tamaños de lista que se usan para medir el tiempo
+TAMANOS = (100, 500, 1000, 2000, 3000)
+
+
+# ---------- Ordenamiento Por Burbuja (Bubble Sort) ----------
+
+def burbuja(lista, mostrar):
+    """Ordena la lista con burbuja. Devuelve (lista, comparaciones, movimientos)."""
+    comparaciones = 0
+    movimientos = 0
+    n = len(lista)
+    hubo_intercambio = True
+    pasada = 0
+    # Se repite mientras en la pasada anterior haya habido algún intercambio
+    while hubo_intercambio:
+        hubo_intercambio = False
+        pasada = pasada + 1
+        for j in range(n - pasada):
+            comparaciones = comparaciones + 1
+            if lista[j] &gt; lista[j + 1]:
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
+                movimientos = movimientos + 1
+                hubo_intercambio = True
+        if mostrar:
+            print(f"  Pasada {pasada}: {lista}")
+    return lista, comparaciones, movimientos
+
+# ---------- Ordenamiento Por Selección (Selection Sort) ----------
+
+def seleccion(lista, mostrar):
+    """Ordena la lista con selección. Devuelve (lista, comparaciones, movimientos)."""
+    comparaciones = 0
+    movimientos = 0
+    n = len(lista)
+    for i in range(n - 1):
+        # Buscar la posición del menor entre i y el final
+        pos_menor = i
+        for j in range(i + 1, n):
+            comparaciones = comparaciones + 1
+            if lista[j] &lt; lista[pos_menor]:
+                pos_menor = j
+        # Llevar el menor a la posición i
+        if pos_menor != i:
+            lista[i], lista[pos_menor] = lista[pos_menor], lista[i]
+            movimientos = movimientos + 1
+        if mostrar:
+            print(f"  Paso {i + 1}: menor = {lista[i]} -&gt; {lista}")
+    return lista, comparaciones, movimientos
+
+# ---------- Ordenamiento Por Inserción (Insertion Sort) ----------
+
+def insercion(lista, mostrar):
+    """Ordena la lista con inserción. Devuelve (lista, comparaciones, movimientos)."""
+    comparaciones = 0
+    movimientos = 0
+    for i in range(1, len(lista)):
+        actual = lista[i]
+        j = i - 1
+        # Correr hacia la derecha los elementos mayores que 'actual'
+        seguir = True
+        while j &gt;= 0 and seguir:
+            comparaciones = comparaciones + 1
+            if lista[j] &gt; actual:
+                lista[j + 1] = lista[j]
+                movimientos = movimientos + 1
+                j = j - 1
+            else:
+                seguir = False
+        lista[j + 1] = actual
+        if mostrar:
+            print(f"  Insertar {actual}: {lista}")
+    return lista, comparaciones, movimientos
+
+# ---------- Ordenamiento Por Mezcla (Merge Sort) ----------
+
+def mezclar(izquierda, derecha, contador):
+    """Une dos listas ordenadas en una sola lista ordenada."""
+    resultado = []
+    i = 0
+    j = 0
+    while i &lt; len(izquierda) and j &lt; len(derecha):
+        contador[0] = contador[0] + 1                 # una comparación
+        if izquierda[i] &lt;= derecha[j]:
+            resultado.append(izquierda[i])
+            i = i + 1
+        else:
+            resultado.append(derecha[j])
+            j = j + 1
+        contador[1] = contador[1] + 1                 # un movimiento
+    # Agregar lo que sobre de cualquiera de las dos mitades
+    while i &lt; len(izquierda):
+        resultado.append(izquierda[i])
+        i = i + 1
+        contador[1] = contador[1] + 1
+    while j &lt; len(derecha):
+        resultado.append(derecha[j])
+        j = j + 1
+        contador[1] = contador[1] + 1
+    return resultado
+
+
+def dividir_y_mezclar(lista, contador, mostrar, nivel):
+    """Función recursiva: se llama a sí misma con cada mitad."""
+    if len(lista) &lt;= 1:
+        resultado = lista
+    else:
+        mitad = len(lista) // 2
+        izquierda = dividir_y_mezclar(lista[:mitad], contador, mostrar, nivel + 1)
+        derecha = dividir_y_mezclar(lista[mitad:], contador, mostrar, nivel + 1)
+        resultado = mezclar(izquierda, derecha, contador)
+        if mostrar:
+            print("  " + "  " * nivel + f"Mezclar {izquierda} + {derecha} -&gt; {resultado}")
+    return resultado
+
+
+def mezcla(lista, mostrar):
+    """Ordena la lista con mezcla. Devuelve (lista, comparaciones, movimientos)."""
+    contador = [0, 0]                                 # [comparaciones, movimientos]
+    resultado = dividir_y_mezclar(lista, contador, mostrar, 0)
+    return resultado, contador[0], contador[1]
+
+# ---------- Ordenamiento Rápido (Quicksort) ----------
+
+def particionar(lista, inicio, fin, contador):
+    """Usa el elemento del medio como pivote; devuelve su posición final."""
+    medio = (inicio + fin) // 2
+    lista[medio], lista[fin] = lista[fin], lista[medio]   # el pivote pasa al final
+    pivote = lista[fin]
+    posicion = inicio
+    for j in range(inicio, fin):
+        contador[0] = contador[0] + 1
+        if lista[j] &lt; pivote:
+            lista[posicion], lista[j] = lista[j], lista[posicion]
+            contador[1] = contador[1] + 1
+            posicion = posicion + 1
+    lista[posicion], lista[fin] = lista[fin], lista[posicion]
+    contador[1] = contador[1] + 1
+    return posicion
+
+
+def ordenar_parte(lista, inicio, fin, contador, mostrar):
+    """Función recursiva: ordena la parte de la lista entre inicio y fin."""
+    if inicio &lt; fin:
+        p = particionar(lista, inicio, fin, contador)
+        if mostrar:
+            print(f"  Pivote {lista[p]}: {lista[inicio:p]} &lt; {lista[p]} &lt; {lista[p + 1:fin + 1]}")
+        ordenar_parte(lista, inicio, p - 1, contador, mostrar)
+        ordenar_parte(lista, p + 1, fin, contador, mostrar)
+
+
+def rapido(lista, mostrar):
+    """Ordena la lista con quicksort. Devuelve (lista, comparaciones, movimientos)."""
+    contador = [0, 0]                                     # [comparaciones, movimientos]
+    ordenar_parte(lista, 0, len(lista) - 1, contador, mostrar)
+    return lista, contador[0], contador[1]
+
+
+def ordenar_con_sorted(lista, mostrar):
+    """Referencia: sorted() usa Timsort, un algoritmo optimizado (mezcla + inserción)."""
+    return sorted(lista), 0, 0
+
+
+ALGORITMOS = (("Burbuja", burbuja), ("Selección", seleccion), ("Inserción", insercion),
+              ("Mezcla", mezcla), ("Rápido", rapido), ("sorted()", ordenar_con_sorted))
+
+
+def main():
+    print("=" * 72)
+    print("COMPARACIÓN DE ALGORITMOS DE ORDENAMIENTO (tiempo en segundos)")
+    print("=" * 72)
+    random.seed(2026)
+    listas = {}
+    for tamano in TAMANOS:
+        listas[tamano] = [random.randint(1, 10000) for _ in range(tamano)]
+
+    encabezado = f"{'Algoritmo':&lt;11}"
+    for tamano in TAMANOS:
+        encabezado = encabezado + f"{'n = ' + str(tamano):&gt;12}"
+    print(encabezado)
+    print("-" * len(encabezado))
+
+    tiempos_3000 = {}
+    for nombre, funcion in ALGORITMOS:
+        fila = f"{nombre:&lt;11}"
+        for tamano in TAMANOS:
+            copia = listas[tamano][:]
+            inicio = time.perf_counter()
+            resultado = funcion(copia, False)[0]
+            segundos = time.perf_counter() - inicio
+            if resultado != sorted(listas[tamano]):
+                print("¡Error!", nombre, "no ordenó la lista.")
+            fila = fila + f"{segundos:&gt;12.5f}"
+            tiempos_3000[nombre] = segundos
+        print(fila)
+
+    # Cuántas veces más lento que el más rápido de los cinco (con el tamaño mayor)
+    mayor = TAMANOS[-1]
+    mas_rapido = tiempos_3000["Rápido"]
+    if tiempos_3000["Mezcla"] &lt; mas_rapido:
+        mas_rapido = tiempos_3000["Mezcla"]
+    print(f"\nCon n = {mayor}, cuántas veces más tiempo que el más rápido de los cinco:")
+    for nombre, funcion in ALGORITMOS[:5]:
+        veces = tiempos_3000[nombre] / mas_rapido
+        barra = "#" * min(60, int(veces))
+        print(f"{nombre:&lt;11}{veces:&gt;8.1f} veces  {barra}")
+    print("\nNota: los tiempos cambian según la computadora; compare las proporciones, no los valores exactos.")
+
+
+main()</code></pre>
+                </div>
+            </details>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 18px 0 0 0;"><strong>Tabla de resultados</strong> (copie esta tabla en su documento):</p>
+            <div style="overflow-x: auto; margin-top: 12px;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 14px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Algoritmo</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Comparaciones con [5, 2, 8, 1, 9, 3]</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Segundos con n = 100</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Segundos con n = 1000</th>
+                            <th style="padding: 12px; border: 1px solid #c8d1df;">Segundos con n = 3000</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Burbuja</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Selección</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Inserción</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #f8fbff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Mezcla</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 12px; border: 1px solid #c8d1df;">Rápido</td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                            <td style="padding: 12px; border: 1px solid #c8d1df;"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div
+                style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 14px 16px; margin-top: 18px; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;">
+                <strong>Importante:</strong> Los tiempos dependen de la computadora, así que sus valores no serán iguales a los de sus compañeros. Lo que debe coincidir son las <strong>comparaciones</strong> y la <strong>proporción</strong> entre los tiempos. Todas las listas aleatorias se generan con la misma semilla, por eso son iguales en todas las computadoras.
+            </div>
+
+        </div>
+
+        <!-- PARTE 3: ANALICE LOS RESULTADOS -->
+        <div
+            style="background: #fffaf2; border: 2px solid #e5c76b; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4
+                style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-circle-question" style="color: #c7ac19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: Analice los resultados
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Responda en su documento, usando como evidencia los números de su tabla y de la salida de los programas:</p>
+            <ol style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 15px; line-height: 1.9;">
+                <li>Si tuviera que ordenar un millón de datos, ¿cuál de los cinco algoritmos usaría y por qué?</li>
+                <li>La función <code>sorted()</code> de Python fue más rápida que los cinco algoritmos. Investigue qué algoritmo usa y explique por qué es tan rápida.</li>
+            </ol>
+
+        </div>
+
+
+        <!-- CIERRE -->
+        <div
+            style="display: flex; align-items: flex-start; gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> no existe un único algoritmo «mejor»: algunos son fáciles de entender, otros son rápidos con listas grandes y otros aprovechan que los datos ya estén casi ordenados. Medir con datos reales es la forma de comprobar lo que dice la teoría.</span>
+        </div>
+
+    </section>
+
+</body>
+
+</html>
