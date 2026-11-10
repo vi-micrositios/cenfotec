@@ -60,14 +60,19 @@
             const dataUrl = "https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/data.js";
             try {
                 const response = await fetch(dataUrl);
-                if (!response.ok) {
-                    throw new Error('HTTP ' + response.status);
-                }
-                const scriptData = await response.text();
-                const scriptDataJson = scriptData.substring(13, scriptData.length - 2);
-                data = (new Function("return " + scriptDataJson))();
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+
+                const script = await response.text();
+                if (!script.trim()) throw new Error('El archivo data.js está vacío');
+
+                // Ejecuta todo el script dentro de una función y retorna la variable `data`
+                data = new Function(script + '\n; return data;')();
+
+                if (!data) throw new Error('No se pudo extraer el objeto data');
             } catch (error) {
-                console.error('Error cargando datos:', error);
+            console.error('Error cargando datos:', error);
+            // Opcional: mostrar un mensaje de error en la UI
+            return;
             }
 
             // ============================================================

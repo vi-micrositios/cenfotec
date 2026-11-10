@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Conectar el frontend de SICEN con la API</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-conectar-sicen">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-plug"></i>
+            </span>
+            <h3 id="ejercicio-conectar-sicen"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Conectar el frontend de SICEN con la API
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong>
+            Conectar el <strong>formulario de SICEN</strong> con el endpoint <strong>POST</strong> de la API en NestJS
+            usando <code>fetch</code>, <strong>probarlo con datos válidos e inválidos</strong> y continuar el
+            <strong>backend</strong> con nuevas consultas, una modificación y una segunda colección relacionada.
+        </div>
+
+        <!-- CONTEXTO -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-users" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Contexto
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                En el ejercicio anterior, el equipo programó en NestJS la primera colección de SICEN y probó sus endpoints con
+                <code>pruebas.http</code>. Antes, en el ejercicio de validación, programó el formulario con sus reglas en JavaScript.
+                Ahora se unen las dos partes: el usuario registra los datos <strong>desde la pantalla</strong> y estos llegan a
+                <strong>MongoDB Atlas</strong> a través de la API.
+            </p>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0; line-height: 1.6;">
+                El recorrido completo de un registro es: <strong>formulario → validación en JS → fetch (POST) → DTO →
+                servicio → MongoDB Atlas → respuesta → mensaje al usuario</strong>.
+            </p>
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> los ejemplos usan la entidad <em>CentroEducativo</em>. Use las entidades y los requerimientos <strong>de su propio modelo</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 1 ===================== -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Conectar el formulario con el POST
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">Use el formulario de SICEN que ya validaron con JavaScript (ejercicio de validación) y conéctelo con el endpoint <strong>POST</strong> del ejercicio anterior. Esta es la estructura sugerida; complete las partes marcadas con <code>…</code>:</p>
+            <pre tabindex="0" aria-label="Estructura sugerida del script de registro" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0 0 16px 0; white-space: pre;"><code>// Dirección del backend: defínala una sola vez y úsela en todas las peticiones
+const API_URL = &quot;http://localhost:3000&quot;;
+
+// ---------- Elementos del HTML ----------
+const formulario = document.getElementById(&quot;frmCentro&quot;);
+const inputNombre = document.getElementById(&quot;txtNombre&quot;);
+// … un elemento por cada campo del formulario
+
+// ---------- 1. Validar (ya lo tienen del ejercicio de validación) ----------
+function validar() {
+    let hayError = false;
+    // … reglas: obligatorios, expresiones regulares, rangos
+    return !hayError;
+}
+
+// ---------- 2. Enviar al servidor ----------
+async function registrarCentro() {
+    // Los nombres deben ser IGUALES a los del DTO del backend
+    const datos = {
+        nombre: inputNombre.value.trim(),
+        // … los demás campos; el subdocumento como objeto: direccion: { … }
+    };
+
+    try {
+        const respuesta = await fetch(`${API_URL}/centros-educativos`, {
+            method: &quot;POST&quot;,
+            headers: { &quot;Content-Type&quot;: &quot;application/json&quot; },  // el body es JSON
+            body: JSON.stringify(datos)                        // objeto → texto
+        });
+        const resultado = await respuesta.json();              // texto → objeto
+
+        if (!respuesta.ok) {
+            // 400 (datos inválidos), 409 (valor repetido)…
+            // resultado.message puede ser un TEXTO o un ARREGLO de textos
+            mostrarErrorServidor(resultado);
+            return;
+        }
+
+        // 201: se registró. resultado es el documento creado
+        Swal.fire({
+            icon: &quot;success&quot;,
+            title: &quot;Centro registrado&quot;,
+            text: `${resultado.nombre} se registró correctamente.`
+        });
+        formulario.reset();
+    } catch (error) {
+        // El servidor está apagado o no responde
+        // … mostrar un mensaje con Swal.fire
+    }
+}
+
+// ---------- 3. Evento ----------
+formulario.addEventListener(&quot;submit&quot;, (evento) =&gt; {
+    evento.preventDefault();   // evita que la página se recargue
+    if (validar()) {
+        registrarCentro();
+    }
+});</code></pre>
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Activar <code>app.enableCors()</code> en el <code>main.ts</code> del backend, para que la página (Live Server, puerto 5500) pueda consultar la API (puerto 3000).</li>
+                    <li>Construir el objeto con los <strong>mismos nombres</strong> de propiedades que el DTO. El subdocumento se envía como un objeto dentro del objeto.</li>
+                    <li>No enviar los campos opcionales vacíos: agregarlos al objeto solo si el usuario los escribió.</li>
+                    <li>Enviar con <code>fetch</code>, <code>method: "POST"</code>, el encabezado <code>Content-Type</code> y <code>JSON.stringify</code>.</li>
+                    <li>Revisar <code>respuesta.ok</code>: mostrar un mensaje de <strong>éxito</strong> con un dato que devolvió el servidor (por ejemplo, el nombre) y limpiar el formulario.</li>
+                    <li>Programar <code>mostrarErrorServidor(datos)</code>: si <code>datos.message</code> es un arreglo, mostrar <strong>un mensaje por línea</strong>; si es un texto, mostrarlo tal cual.</li>
+                    <li>Mostrar un mensaje claro en el <code>catch</code> cuando el servidor no responde (no solo <code>console.log</code>).</li>
+                    <li>Usar <strong>SweetAlert2</strong> para todos los mensajes. No se permite <code>alert()</code>.</li>
+                </ul>
+            </div>
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Importante:</strong> un error 400 o 409 <strong>no</strong> entra al <code>catch</code>, porque el servidor sí respondió. Esos casos se manejan con <code>respuesta.ok</code>. El <code>catch</code> solo atrapa los errores de conexión.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ===================== PARTE 2 ===================== -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Probar con datos válidos e inválidos
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">La validación del <strong>frontend</strong> ayuda al usuario, pero cualquiera puede saltársela enviando la petición directamente con REST Client o Postman. La validación del <strong>backend</strong> (DTO y esquema) protege los datos. Por eso se prueba <strong>desde los dos lados</strong>.</p>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">Registre cada prueba en una tabla como esta:</p>
+            <div style="overflow-x: auto; margin-bottom: 4px;" tabindex="0" role="region" aria-label="Plantilla de registro de pruebas, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 700px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Plantilla de ejemplo: CentroEducativo</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">N.º</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Caso</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Datos enviados</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Desde</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Resultado esperado</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Resultado obtenido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">1</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Registro válido</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Todos los campos correctos</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Formulario</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Mensaje de éxito; el documento aparece en Atlas</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">2</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Campo obligatorio vacío</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>nombre</code> vacío</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Formulario</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">El JS marca el campo y <strong>no</strong> envía la petición</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                        
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">4</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Valor único repetido</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Un <code>codigo</code> ya registrado</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Formulario</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Mensaje de error 409 en pantalla</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">5</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Servidor apagado</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Datos válidos con el backend detenido</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Formulario</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Mensaje de conexión (desde el <code>catch</code>)</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li><strong>3 pruebas válidas</strong> desde el formulario. Comprobar en <strong>MongoDB Atlas</strong> que cada documento se guardó con la estructura del diagrama (incluido el subdocumento si aplica).</li>
+                    <li><strong>3 pruebas inválidas desde el formulario:</strong> el JavaScript debe detenerlas sin enviar la petición.</li>
+                    <li><strong>1 prueba de valor repetido</strong> (409) y <strong>1 con el servidor apagado</strong>, ambas desde el formulario, verificando el mensaje que ve el usuario.</li>
+                    <li>Si una regla existe solo en el frontend o solo en el backend, agregarla al otro lado y anotar el cambio.</li>
+                    <li>Completar la columna <strong>Resultado obtenido</strong>. Si no coincide con el esperado, corregir el código y repetir la prueba.</li>
+                </ul>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6; margin-top: 22px;">Si algo falla al conectar, revise esta tabla:</p>
+            <div style="overflow-x: auto; margin-bottom: 4px;" tabindex="0" role="region" aria-label="Errores frecuentes al conectar el frontend, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 680px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Errores frecuentes y su causa</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Mensaje o síntoma</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Causa probable</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Solución</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><em>Failed to fetch</em></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">El backend está apagado o la dirección es incorrecta</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Ejecutar <code>npm run start:dev</code> y revisar <code>API_URL</code></td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">400 <em>property … should not exist</em></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Se envió un campo con otro nombre que no está en el DTO</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Usar los mismos nombres del DTO</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">400 en todos los campos aunque se llenaron</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Falta el encabezado <code>Content-Type</code>: el backend recibe el body vacío</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Agregar <code>headers: { "Content-Type": "application/json" }</code></td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">404 <em>Cannot POST …</em></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">La ruta o el método no coinciden con el controlador</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Comparar la URL del <code>fetch</code> con el decorador del controlador</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">La página se recarga al guardar</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Falta <code>evento.preventDefault()</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Agregarlo al inicio del evento <code>submit</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- ===================== PARTE 3 ===================== -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #d2232a; font-size: 24px;" aria-hidden="true"></i>
+                Continuar el backend
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">Agregue al backend nuevos endpoints. Igual que antes, cada uno responde a un <strong>requerimiento</strong> de SICEN: no se programa un CRUD genérico. Complete una tabla como esta antes de programar:</p>
+
+
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> ubique las rutas con texto fijo (<code>opciones</code>) <strong>antes</strong> de las rutas con un parámetro variable (<code>:id</code>, <code>:codigo</code>) en el controlador.
+                </p>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+</body>
+
+</html>
