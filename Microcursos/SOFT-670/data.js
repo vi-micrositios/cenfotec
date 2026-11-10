@@ -21,133 +21,163 @@ const data = {
                     steps: [
                         {
                             title: '¿Qué se necesita para analizar datos con Python?',
-                            content: `<p>Para trabajar en el curso se necesitan tres elementos:</p>
-                            <ul>
-                                <li><strong>Python</strong>: el lenguaje y su intérprete.</li>
-                                <li><strong>Bibliotecas de análisis</strong>: paquetes que agregan funciones especializadas, como Pandas, NumPy, Matplotlib, scikit-learn y TensorFlow.</li>
-                                <li><strong>Un entorno de desarrollo (IDE)</strong>: la herramienta donde se escribe y ejecuta el código.</li>
-                            </ul>
+                            content: `<p>En el curso se trabaja con <strong>Python instalado en la computadora</strong> y con <strong>Visual Studio Code</strong> como entorno de desarrollo. Todo el código se escribe en <strong>scripts</strong>, es decir, archivos con extensión <code>.py</code>.</p>
                             <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
                             <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
                             <thead>
                             <tr>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Entorno</th>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ventajas</th>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Cuándo usarlo</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Elemento</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Para qué sirve</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Google Colab</strong></td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">No requiere instalación; trae las bibliotecas listas y ofrece GPU gratuita.</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Para empezar de inmediato y para los modelos de Machine Learning.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Python 3</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">El lenguaje y su intérprete, que ejecuta el código.</td>
                             </tr>
                             <tr style="background:#f3f9ff;">
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Jupyter Notebook / JupyterLab</strong></td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Cuadernos interactivos en la computadora propia.</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Para trabajar sin conexión con archivos locales.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Visual Studio Code</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">El editor donde se escriben y ejecutan los scripts.</td>
                             </tr>
                             <tr>
-                                <td style="padding:13px 12px;"><strong>Visual Studio Code</strong></td>
-                                <td style="padding:13px 12px;">Editor completo que abre cuadernos (.ipynb) y scripts (.py).</td>
-                                <td style="padding:13px 12px;">Para proyectos más grandes y para combinar cuadernos con código.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Extensión Python</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Agrega a Visual Studio Code la ejecución de Python, la detección de errores y la selección del entorno.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Entorno virtual</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Carpeta del proyecto con su propia copia de Python y de las bibliotecas.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;"><strong>Bibliotecas de análisis</strong></td>
+                                <td style="padding:13px 12px;">Pandas, NumPy, Matplotlib, scikit-learn, statsmodels y TensorFlow.</td>
                             </tr>
                             </tbody>
                             </table>
                             </div>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/entornoDesarrollo.png',
-                            nextButton: 'Siguiente: Opción 1: Google Colab'
+                            nextButton: 'Siguiente: Instalar Python y Visual Studio Code'
                         },
                         {
-                            title: 'Opción 1: Google Colab',
+                            title: 'Instalar Python y Visual Studio Code',
                             content: `<ol>
-                                <li>Ingresar a <strong>colab.research.google.com</strong> con una cuenta de Google.</li>
-                                <li>Seleccionar <em>Nuevo cuaderno</em>.</li>
-                                <li>Escribir código en una celda y presionar <strong>Shift + Enter</strong> para ejecutarla.</li>
-                                <li>Para usar un archivo de datos, abrir el panel <i class="fa-regular fa-folder" aria-hidden="true"></i> <em>Archivos</em> y subirlo, o montar Google Drive.</li>
-                            </ol>
-                            <p>Verificar las bibliotecas disponibles:</p>
-                            
-<pre class="codigo">
-import pandas as pd
-import numpy as np
-import matplotlib
-import tensorflow as tf
-
-print("Pandas:", pd.__version__)
-print("NumPy:", np.__version__)
-print("Matplotlib:", matplotlib.__version__)
-print("TensorFlow:", tf.__version__)
-</pre>
-                            
-                            <p class="nota">
-                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
-                            Los archivos subidos al panel de Colab se borran al cerrar la sesión. Guarde los datos importantes en Google Drive.</p>
-                            `,
-                            nextButton: 'Siguiente: Opción 2: instalación local'
-                        },
-                        {
-                            title: 'Opción 2: instalación local',
-                            content: `<ol>
-                                <li>Instalar Python 3 desde <strong>python.org</strong> (en Windows, marcar <em>Add python.exe to PATH</em>).</li>
-                                <li>Instalar <strong>Visual Studio Code</strong> y las extensiones <strong>Python</strong> y <strong>Jupyter</strong> de Microsoft.</li>
-                                <li>Crear una carpeta para el curso y, dentro de ella, un entorno virtual.</li>
-                                <li>Activar el entorno e instalar las bibliotecas.</li>
+                                <li>Descargar Python 3 desde <strong>python.org/downloads</strong> y ejecutar el instalador.</li>
+                                <li>En Windows, marcar la casilla <strong>"Add python.exe to PATH"</strong> antes de presionar <em>Install Now</em>.</li>
+                                <li>Descargar Visual Studio Code desde <strong>code.visualstudio.com</strong> e instalarlo.</li>
+                                <li>En Visual Studio Code, abrir el panel de <strong>Extensiones</strong> (Ctrl + Shift + X) e instalar la extensión <strong>Python</strong> de Microsoft.</li>
+                                <li>Abrir una terminal y verificar la instalación de Python:</li>
                             </ol>
                             
 <pre class="codigo">
-# Crear y activar el entorno virtual
-python -m venv .venv
-.venv\\Scripts\\activate          # Windows
-source .venv/bin/activate         # macOS / Linux
-
-# Instalar las bibliotecas del curso
-pip install pandas numpy matplotlib openpyxl scikit-learn statsmodels tensorflow jupyter
+python --version
 </pre>
                             
                             <p class="nota">
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
-                            Otra alternativa es <strong>Anaconda</strong>, que instala Python, Jupyter y las principales bibliotecas de datos en un solo paso.</p>
+                            En macOS y Linux el comando suele ser <code>python3 --version</code>.</p>
+                            <p class="nota">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
+                            TensorFlow se publica solo para algunas versiones de Python. Antes de instalar Python, revise en <strong>tensorflow.org/install</strong> cuáles versiones son compatibles, para evitar errores al instalar las bibliotecas del curso.</p>
                             `,
-                            nextButton: 'Siguiente: Trabajar con cuadernos Jupyter'
+                            nextButton: 'Siguiente: Crear el proyecto e instalar las bibliotecas'
                         },
                         {
-                            title: 'Trabajar con cuadernos Jupyter',
-                            content: `<p>Un cuaderno (<code>.ipynb</code>) combina celdas de código, sus resultados y celdas de texto. Es el formato más usado en análisis de datos porque permite documentar el razonamiento junto con el código.</p>
-                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            title: 'Crear el proyecto e instalar las bibliotecas',
+                            content: `<ol>
+                                <li>Crear una carpeta para el curso, por ejemplo <code>SOFT-670</code>, y dentro de ella una carpeta <code>datos</code> con los archivos de datos de la clase.</li>
+                                <li>En Visual Studio Code, abrir la carpeta del curso con <em>Archivo → Abrir carpeta</em>.</li>
+                                <li>Abrir la terminal integrada con <em>Terminal → Nueva terminal</em>.</li>
+                                <li>Crear y activar el entorno virtual, e instalar las bibliotecas:</li>
+                            </ol>
+                            
+<pre class="codigo">
+# Crear el entorno virtual
+python -m venv .venv
+
+# Activarlo
+.venv\\Scripts\\activate            # Windows
+source .venv/bin/activate         # macOS / Linux
+
+# Instalar las bibliotecas del curso
+pip install pandas numpy matplotlib openpyxl scikit-learn statsmodels tensorflow
+</pre>
+                            
+                            <ol>
+                                <li>Presionar <strong>Ctrl + Shift + P</strong>, escribir <em>Python: Select Interpreter</em> y elegir el intérprete de <code>.venv</code>.</li>
+                            </ol>
+                            <p>Al final, la carpeta del curso queda así:</p>
+                            
+<pre class="codigo">
+SOFT-670/
+├── .venv/                          entorno virtual (lo crea Python)
+├── datos/
+│   ├── datosSucursales.csv
+│   ├── datosSucursalesConNulos.csv
+│   ├── ordenesRestauranteX.csv
+│   ├── Teen_Mental_Health_Dataset.csv
+│   ├── celsius_a_fahrenheit.csv
+│   └── ventasDiarias.csv
+├── tema1_primeros_pasos.py
+├── tema2_dataframes.py
+├── tema3_analisis_descriptivo.py
+└── tema4_analitica_avanzada.py
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Si la terminal de Windows no permite activar el entorno por la política de ejecución, ejecute primero <code>Set-ExecutionPolicy -Scope CurrentUser RemoteSigned</code> en PowerShell.</p>
+                            `,
+                            nextButton: 'Siguiente: Ejecutar scripts en Visual Studio Code'
+                        },
+                        {
+                            title: 'Ejecutar scripts en Visual Studio Code',
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
                             <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
                             <thead>
                             <tr>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Elemento</th>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Descripción</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Acción</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Cómo</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Celda de código</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Contiene Python. Se ejecuta con Shift + Enter y su resultado aparece debajo.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Ejecutar el script completo</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Botón <i class="fa-solid fa-play" aria-hidden="true"></i> <em>Run Python File</em>, en la esquina superior derecha del editor.</td>
                             </tr>
                             <tr style="background:#f3f9ff;">
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Celda de texto (Markdown)</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Explicaciones, títulos y conclusiones del análisis.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Ejecutar desde la terminal</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>python tema1_primeros_pasos.py</code></td>
                             </tr>
                             <tr>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Kernel</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">El proceso que ejecuta el código y guarda las variables en memoria.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Comentar o descomentar líneas</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Seleccionar las líneas y presionar <strong>Ctrl + /</strong> (en algunos teclados en español, <strong>Ctrl + }</strong>).</td>
                             </tr>
                             <tr style="background:#f3f9ff;">
-                                <td style="padding:13px 12px;">Reiniciar y ejecutar todo</td>
-                                <td style="padding:13px 12px;">Borra la memoria y ejecuta las celdas en orden. Sirve para comprobar que el cuaderno funciona de principio a fin.</td>
+                                <td style="padding:13px 12px;">Detener un script</td>
+                                <td style="padding:13px 12px;"><strong>Ctrl + C</strong> en la terminal.</td>
                             </tr>
                             </tbody>
                             </table>
                             </div>
+                            <ul>
+                                <li>Los resultados se ven en la terminal solo si se usa <code>print()</code>.</li>
+                                <li><code>plt.show()</code> abre el gráfico en una ventana aparte, y el script se detiene hasta que se cierre esa ventana.</li>
+                                <li>Si hay un error, la terminal indica el archivo, el número de línea y el tipo de error.</li>
+                            </ul>
+                            <p>Los talleres ubican los archivos de datos a partir de la carpeta del script, de modo que funcionan sin importar desde dónde se ejecuten:</p>
+                            
+<pre class="codigo">
+from pathlib import Path
+
+DATOS = Path(__file__).parent / "datos"
+df = pd.read_csv(DATOS / "datosSucursales.csv")
+</pre>
+                            
                             <p class="nota">
                             <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
-                            Las celdas pueden ejecutarse en cualquier orden, y eso causa errores difíciles de encontrar. Antes de entregar un cuaderno, use <em>Reiniciar y ejecutar todo</em>.</p>
+                            Evite rutas escritas a mano con barras invertidas, como <code>"Talleres\\celsius.csv"</code>: en Python la barra invertida tiene un significado especial y la ruta solo funciona en Windows.</p>
                             `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/jupyter.png',
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/vscode.png',
                             nextButton: ''
                         }
                     ]
@@ -289,12 +319,12 @@ df = pd.DataFrame({
 print(df.shape)      # (3, 3)
 print(df.columns)    # nombres de las columnas
 print(df.dtypes)     # tipo de dato de cada columna
-df.head()            # primeras filas
+print(df.head())            # primeras filas
 </pre>
                             
                             <p class="nota">
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
-                            En un cuaderno, la última expresión de una celda se muestra automáticamente como tabla; no hace falta <code>print()</code>.</p>
+                            En un script <code>.py</code>, los resultados solo aparecen en la terminal si se usa <code>print()</code>.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/dataframe.png',
                             nextButton: ''
@@ -348,11 +378,11 @@ df.head()            # primeras filas
                             </div>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/importarDatos.png',
-                            nextButton: 'Siguiente: El conjunto de datos del curso'
+                            nextButton: 'Siguiente: El conjunto de datos de los ejemplos'
                         },
                         {
-                            title: 'El conjunto de datos del curso',
-                            content: `<p>Los ejemplos usan <code>ventas.csv</code>, con las ventas de una cadena de minisúperes:</p>
+                            title: 'El conjunto de datos de los ejemplos',
+                            content: `<p>Los ejemplos de los subtemas usan <code>ventas.csv</code>, con las ventas de una cadena de minisúperes. Los talleres de cada tema usan los archivos de datos de la clase, que se describen en el subtema <strong>Taller</strong>.</p>
                             <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
                             <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
                             <thead>
@@ -437,12 +467,12 @@ df = pd.read_csv("ventas.csv", parse_dates=["fecha"])
                             content: `<p>Lo primero después de cargar los datos es conocerlos:</p>
                             
 <pre class="codigo">
-df.head()        # primeras 5 filas
-df.tail(3)       # últimas 3 filas
-df.sample(5)     # 5 filas al azar
-df.shape         # (filas, columnas)
+print(df.head())        # primeras 5 filas
+print(df.tail(3))       # últimas 3 filas
+print(df.sample(5))     # 5 filas al azar
+print(df.shape)         # (filas, columnas)
 df.info()        # columnas, tipos y valores no nulos
-df.describe()    # resumen estadístico de las columnas numéricas
+print(df.describe())    # resumen estadístico de las columnas numéricas
 </pre>
                             
                             <p class="nota">
@@ -459,13 +489,13 @@ df.describe()    # resumen estadístico de las columnas numéricas
 df["total"] = df["unidades"] * df["precio_unitario"]
 
 # Seleccionar columnas
-df[["fecha", "producto", "total"]]
+print(df[["fecha", "producto", "total"]])
 
 # Ordenar de mayor a menor
-df.sort_values("total", ascending=False)
+print(df.sort_values("total", ascending=False))
 
 # Filtrar filas
-df[df["sucursal"] == "Heredia"]
+print(df[df["sucursal"] == "Heredia"])
 
 # Renombrar y eliminar columnas
 df = df.rename(columns={"precio_unitario": "precio"})
@@ -633,6 +663,333 @@ plt.show()
                             nextButton: ''
                         }
                     ]
+                },
+                {
+                    id: 't1-taller',
+                    label: 'Taller del tema 1',
+                    steps: [
+                        {
+                            title: 'Preparar el taller',
+                            content: `<p>El taller es una guía paso a paso de lo que se hace en clase. Se trabaja en el archivo <code>tema1_primeros_pasos.py</code>, dentro de la carpeta del curso.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Archivo de datos</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Contenido</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>datosSucursales.csv</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Salarios por departamento de una empresa (Gerencia, Desarrollo, Talento humano, Contabilidad, Diseño y Aseo).</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><code>ordenesRestauranteX.csv</code></td>
+                                <td style="padding:13px 12px;">Encuesta de pedidos de un restaurante: fecha, género, país, edad, comida, bebida y postre.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p>Los archivos de datos van en la carpeta <code>datos</code>, junto al script. El taller empieza con las bibliotecas y la ruta de esa carpeta:</p>
+                            
+<pre class="codigo">
+from pathlib import Path
+import sys
+
+import numpy as np
+import pandas as pd
+import matplotlib
+import matplotlib.pyplot as plt
+
+# Carpeta de los datos, ubicada junto a este archivo .py
+DATOS = Path(__file__).parent / "datos"
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Ejecute el script con el botón <em>Run Python File</em>. Si todavía no se ha visto un paso, coméntelo para que no se ejecute.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/taller.png',
+                            nextButton: 'Siguiente: Paso 1. Verificar la instalación'
+                        },
+                        {
+                            title: 'Paso 1. Verificar la instalación',
+                            content: `<p>Antes de empezar, se comprueba que Python y las bibliotecas del curso están instaladas en el entorno virtual. Si alguna importación falla, revise que el intérprete seleccionado en Visual Studio Code sea el de .venv.</p>
+                            
+<pre class="codigo">
+print("Python:", sys.version.split()[0])
+print("NumPy:", np.__version__)
+print("Pandas:", pd.__version__)
+print("Matplotlib:", matplotlib.__version__)
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 2. Arreglos de NumPy'
+                        },
+                        {
+                            title: 'Paso 2. Arreglos de NumPy',
+                            content: `<p>Un arreglo guarda datos del mismo tipo. Si se mezclan tipos, NumPy convierte todos los valores al tipo más general (por ejemplo, a texto). Los arreglos pueden tener una, dos o más dimensiones.</p>
+                            
+<pre class="codigo">
+arregloUnaDimension = np.array([1, 2, 3, 4, 56])
+print("Arreglo de 1 dimensión:", arregloUnaDimension)
+
+arregloMixto = np.array([1, "2", 3.7, "4a", 56])
+print("Arreglo con tipos mezclados (todo se convierte a texto):", arregloMixto)
+
+arregloDecimales = np.array([1, 2.5, 3, 4, 56])
+print("Arreglo de decimales:", arregloDecimales)
+
+arregloDosDimensiones = np.array([[-1, 2, 3], [4, 56, 0], [-12, -321, 5], [2, 1000, 6]])
+print("Arreglo de 2 dimensiones:\\n", arregloDosDimensiones)
+print("Forma (filas, columnas):", arregloDosDimensiones.shape)
+
+arregloTresDimensiones = np.array([[[2.4, -2.0], [1.7, 100.5]],
+                                   [[80.6, -15.1], [1.9, 3.2]],
+                                   [[-963.5, 2], [2, 6]]])
+print("Arreglo de 3 dimensiones:\\n", arregloTresDimensiones)
+print("Forma:", arregloTresDimensiones.shape)
+
+# Acceso a los elementos: los índices empiezan en 0
+print("Elemento en el índice 4:", arregloUnaDimension[4])
+print("Fila en el índice 1:", arregloDosDimensiones[1])
+print("Elemento en la fila 1, columna 0:", arregloDosDimensiones[1, 0])
+print("Elemento en la fila 3, columna 1:", arregloDosDimensiones[3, 1])
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 1. Acceso a elementos de un arreglo de 3 dimensiones'
+                        },
+                        {
+                            title: 'Ejercicio 1. Acceso a elementos de un arreglo de 3 dimensiones',
+                            content: `<p>Con el arreglo arregloTresDimensiones del paso anterior:</p>
+                            <ul>
+                                <li>a) Acceda al elemento -963.5.</li>
+                                <li>b) Acceda al elemento [2, 6].</li>
+                                <li>c) Acceda al bloque [[80.6, -15.1], [1.9, 3.2]].</li>
+                            </ul>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 3. Operaciones con arreglos'
+                        },
+                        {
+                            title: 'Paso 3. Operaciones con arreglos',
+                            content: `<p>Las operaciones se aplican elemento por elemento, sin escribir ciclos. Las funciones como min, max y sum pueden calcularse sobre todo el arreglo, por columna (axis=0) o por fila (axis=1).</p>
+                            
+<pre class="codigo">
+a = np.array([[1, 2, 3], [4, 5, 6]])
+b = np.array([[1, 1, 1], [2, 2, 2]])
+
+print("a + b =\\n", a + b)
+print("a / b =\\n", a / b)
+print("a ** b =\\n", a ** b)
+print("a * 10 =\\n", a * 10)
+
+print("Mínimo de a:", a.min())
+print("Máximo de a:", a.max())
+print("Suma por columna:", a.sum(axis=0))
+print("Suma por fila:", a.sum(axis=1))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 4. Leer un archivo con NumPy'
+                        },
+                        {
+                            title: 'Paso 4. Leer un archivo con NumPy',
+                            content: `<p>np.loadtxt lee un archivo de texto con números. skiprows=1 omite la fila de encabezados y usecols permite elegir solo algunas columnas. Las columnas de datosSucursales.csv son: Gerencia, Desarrollo, Talento humano, Contabilidad, Diseño y Aseo.</p>
+                            
+<pre class="codigo">
+salarios = np.loadtxt(DATOS / "datosSucursales.csv", delimiter=",", skiprows=1)
+print("Forma (filas, columnas):", salarios.shape)
+print("Salario máximo de toda la tabla:", salarios.max())
+print("Salario mínimo de toda la tabla:", salarios.min())
+
+# Solo Gerencia (0), Talento humano (2) y Diseño (4)
+salariosSeleccion = np.loadtxt(DATOS / "datosSucursales.csv", delimiter=",",
+                               skiprows=1, usecols=(0, 2, 4))
+print("Primeras 5 filas de Gerencia, Talento humano y Diseño:\\n", salariosSeleccion[:5])
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 2. Salario máximo de cada departamento'
+                        },
+                        {
+                            title: 'Ejercicio 2. Salario máximo de cada departamento',
+                            content: `<p>Con el arreglo salarios, obtenga el salario máximo y el promedio de cada departamento (de cada columna).</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 5. Series de Pandas'
+                        },
+                        {
+                            title: 'Paso 5. Series de Pandas',
+                            content: `<p>Una Series es una columna de datos con un índice. Se puede crear a partir de una lista (índice numérico) o de un diccionario (las claves son el índice).</p>
+                            
+<pre class="codigo">
+serieConceptos = pd.Series(["Ciclos", "Condicionales", "Listas", "Diccionarios"])
+print("Serie a partir de una lista:\\n", serieConceptos)
+print("Elemento en la posición 1:", serieConceptos[1])
+
+serieNotas = pd.Series({"Ciclos": 85, "Condicionales": 100, "Listas": 95,
+                        "Diccionarios": 97, "Tuplas": 70})
+print("Serie a partir de un diccionario:\\n", serieNotas)
+print("Nota de Listas:", serieNotas["Listas"])
+
+# Operaciones y orden
+print("Notas + 5:\\n", serieNotas + 5)
+print("Nota máxima:", serieNotas.max(), "en", serieNotas.idxmax())
+print("Notas ordenadas de mayor a menor:\\n", serieNotas.sort_values(ascending=False))
+
+# Filtrar
+print("Notas menores a 90:\\n", serieNotas[serieNotas &lt; 90])
+
+# Con texto, * repite el texto y los valores se ordenan alfabéticamente
+serieTexto = pd.Series(["a", "s", "d", "A", "@"])
+print("Texto * 3:\\n", serieTexto * 3)
+print("Texto ordenado:\\n", serieTexto.sort_values())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 3. Ventas por producto'
+                        },
+                        {
+                            title: 'Ejercicio 3. Ventas por producto',
+                            content: `<p>A partir de la serie ventas, muestre:</p>
+                            <ul>
+                                <li>a) El producto con la venta mayor y su valor.</li>
+                                <li>b) El producto con la venta menor y su valor.</li>
+                                <li>c) Los productos con ventas mayores a 500 unidades.</li>
+                            </ul>
+                            <p>Código de partida:</p>
+<pre class="codigo">
+ventas = pd.Series({"Producto A": 450, "Producto B": 780, "Producto C": 120,
+                    "Producto D": 560, "Producto E": 300})
+</pre>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 6. Crear un DataFrame'
+                        },
+                        {
+                            title: 'Paso 6. Crear un DataFrame',
+                            content: `<p>Un DataFrame es una tabla. Se puede crear a partir de un diccionario: cada clave es el nombre de una columna y cada lista, sus valores.</p>
+                            
+<pre class="codigo">
+datosEstudiantes = {
+    "nombre": ["Natalia", "Sebastián", "José Antonio"],
+    "edad": [20, 21, 22],
+    "correo": ["natalia@test.com", "sebastian@test.com", "jose_antonio@test.com"]
+}
+dfEstudiantes = pd.DataFrame(datosEstudiantes)
+print(dfEstudiantes)
+print("Forma:", dfEstudiantes.shape)
+print("Columnas:", list(dfEstudiantes.columns))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 7. Leer un archivo CSV con Pandas'
+                        },
+                        {
+                            title: 'Paso 7. Leer un archivo CSV con Pandas',
+                            content: `<p>En datosSucursales.csv, después de cada coma hay un espacio. Sin skipinitialspace=True, las columnas se llamarían " Desarrollo", " Aseo", etc., con un espacio al inicio.</p>
+                            
+<pre class="codigo">
+dfSucursales = pd.read_csv(DATOS / "datosSucursales.csv", skipinitialspace=True)
+
+print("Columnas:", list(dfSucursales.columns))
+print("Forma:", dfSucursales.shape)
+print("Primeras 5 filas:\\n", dfSucursales.head())
+print("Últimas 3 filas:\\n", dfSucursales.tail(3))
+print("Estadísticas básicas:\\n", dfSucursales.describe())
+dfSucursales.info()   # info() imprime por sí mismo; no necesita print()
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 8. Acceder a los datos de un DataFrame'
+                        },
+                        {
+                            title: 'Paso 8. Acceder a los datos de un DataFrame',
+                            content: `<p>iloc selecciona por posición (fila, columna) y los corchetes con el nombre seleccionan una columna. Una condición produce una serie de True y False; usada dentro de corchetes, filtra las filas.</p>
+                            
+<pre class="codigo">
+print("Elemento en la fila 1, columna 3:", dfSucursales.iloc[1, 3])
+print("Fila en la posición 73:\\n", dfSucursales.iloc[73])
+print("Columna Gerencia (primeras 5):\\n", dfSucursales["Gerencia"].head())
+
+condicion = dfSucursales["Aseo"] &gt;= 1500
+print("¿Salario de Aseo &gt;= 1500? (primeras 5):\\n", condicion.head())
+print("Filas con salario de Aseo &gt;= 1500:\\n", dfSucursales[condicion])
+
+print("Salario máximo de cada departamento:\\n", dfSucursales.max())
+print("Salario máximo de toda la tabla:", dfSucursales.max().max())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 9. Primer gráfico con Matplotlib'
+                        },
+                        {
+                            title: 'Paso 9. Primer gráfico con Matplotlib',
+                            content: `<p>Un gráfico se crea con una figura y uno o más ejes. Aquí se crean dos gráficos de barras, uno al lado del otro, porque temperatura y humedad tienen unidades distintas y no deben compartir el mismo eje.</p>
+                            
+<pre class="codigo">
+provincias = ["Heredia", "Alajuela", "San José", "Puntarenas", "Guanacaste", "Limón", "Cartago"]
+temperaturas = [17, 19, 22, 27, 28, 26, 15]
+humedad = [80, 20, 35, 55, 85, 72, 10]
+
+figura, ejes = plt.subplots(1, 2, figsize=(12, 4))
+
+ejes[0].bar(provincias, temperaturas, color="#f05323")
+ejes[0].set_title("Temperatura por provincia", fontdict={"fontsize": 14, "fontweight": "bold"})
+ejes[0].set_ylabel("Temperatura (°C)")
+
+ejes[1].bar(provincias, humedad, color="#2b93d1")
+ejes[1].set_title("Humedad por provincia", fontdict={"fontsize": 14, "fontweight": "bold"})
+ejes[1].set_ylabel("Humedad (%)")
+
+for eje in ejes:
+    eje.set_xlabel("Provincia")
+    eje.tick_params(axis="x", rotation=45)
+    eje.grid(axis="y", color="gray", linestyle="dashed", alpha=0.5)
+
+plt.tight_layout()
+plt.show()   # El programa se detiene hasta cerrar la ventana del gráfico
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 10. Gráficos a partir de un DataFrame'
+                        },
+                        {
+                            title: 'Paso 10. Gráficos a partir de un DataFrame',
+                            content: `<p>Se cuentan los pedidos de cada tipo con value_counts() y se grafican en tres gráficos de una misma figura. value_counts() devuelve los nombres en el índice y las cantidades en los valores, siempre en el mismo orden.</p>
+                            
+<pre class="codigo">
+dfOrdenes = pd.read_csv(DATOS / "ordenesRestauranteX.csv")
+print("Primeras filas de las órdenes:\\n", dfOrdenes.head())
+
+columnas = ["Food", "Juice", "Dessert"]
+titulos = ["Pedidos de comida", "Pedidos de bebidas", "¿Quiere postre?"]
+colores = ["#00928d", "#2b93d1", "#c81f66"]
+
+figura, ejes = plt.subplots(1, 3, figsize=(14, 4))
+for i in range(3):
+    conteo = dfOrdenes[columnas[i]].value_counts()
+    ejes[i].bar(conteo.index, conteo.values, color=colores[i])
+    ejes[i].set_title(titulos[i])
+    ejes[i].set_ylabel("Cantidad de pedidos")
+    ejes[i].tick_params(axis="x", rotation=30)
+
+plt.tight_layout()
+plt.show()
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 4. Pedidos por género'
+                        },
+                        {
+                            title: 'Ejercicio 4. Pedidos por género',
+                            content: `<p>Con dfOrdenes, haga un gráfico de barras con la cantidad de pedidos de cada género (columna Gender). Incluya título y nombres de los ejes.</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
                 }
             ]
         },
@@ -657,10 +1014,10 @@ plt.show()
                             </ul>
                             
 <pre class="codigo">
-df["sucursal"].value_counts()     # cantidad de ventas por sucursal
-df["categoria"].unique()          # valores distintos
-df["producto"].nunique()          # cantidad de productos distintos
-df["total"].sum()                 # ingresos totales
+print(df["sucursal"].value_counts())     # cantidad de ventas por sucursal
+print(df["categoria"].unique())          # valores distintos
+print(df["producto"].nunique())          # cantidad de productos distintos
+print(df["total"].sum())                 # ingresos totales
 </pre>
                             
                             `,
@@ -673,20 +1030,21 @@ df["total"].sum()                 # ingresos totales
                             
 <pre class="codigo">
 # Ingresos por categoría
-df.groupby("categoria")["total"].sum()
+print(df.groupby("categoria")["total"].sum())
 
 # Varias medidas a la vez
-df.groupby("sucursal")["total"].agg(["sum", "mean", "count"])
+print(df.groupby("sucursal")["total"].agg(["sum", "mean", "count"]))
 
 # Agrupar por dos columnas
-df.groupby(["sucursal", "categoria"])["unidades"].sum()
+print(df.groupby(["sucursal", "categoria"])["unidades"].sum())
 
 # Nombres propios para cada resumen
-df.groupby("sucursal").agg(
+resumen = df.groupby("sucursal").agg(
     ingresos=("total", "sum"),
     ventas=("total", "count"),
     ticket_promedio=("total", "mean")
 )
+print(resumen)
 </pre>
                             
                             `,
@@ -698,7 +1056,7 @@ df.groupby("sucursal").agg(
                             content: `<p><code>pivot_table()</code> funciona como las tablas dinámicas de Excel: un grupo en las filas, otro en las columnas y un cálculo en el centro.</p>
                             
 <pre class="codigo">
-pd.pivot_table(
+tabla = pd.pivot_table(
     df,
     values="total",
     index="sucursal",
@@ -706,12 +1064,13 @@ pd.pivot_table(
     aggfunc="sum",
     fill_value=0
 )
+print(tabla)
 </pre>
                             
                             <p><code>crosstab()</code> cuenta cuántas veces aparece cada combinación:</p>
                             
 <pre class="codigo">
-pd.crosstab(df["sucursal"], df["categoria"])
+print(pd.crosstab(df["sucursal"], df["categoria"]))
 </pre>
                             
                             `,
@@ -729,7 +1088,7 @@ top5 = (
     .sort_values(ascending=False)
     .head(5)
 )
-top5
+print(top5)
 </pre>
                             
                             <p class="nota">
@@ -749,10 +1108,10 @@ top5
                             content: `<p>Los datos reales casi nunca están listos para analizarse. Antes de calcular, revise:</p>
                             
 <pre class="codigo">
-df.isna().sum()            # valores faltantes por columna
-df.duplicated().sum()      # filas duplicadas
-df.dtypes                  # ¿cada columna tiene el tipo correcto?
-df["sucursal"].unique()    # ¿hay valores mal escritos?
+print(df.isna().sum())            # valores faltantes por columna
+print(df.duplicated().sum())      # filas duplicadas
+print(df.dtypes)                  # ¿cada columna tiene el tipo correcto?
+print(df["sucursal"].unique())    # ¿hay valores mal escritos?
 </pre>
                             
                             <p class="nota">
@@ -839,7 +1198,7 @@ df["sucursal"] = df["sucursal"].replace({
     "San Jose": "San José"
 })
 
-df[df["producto"].str.contains("leche", case=False)]
+print(df[df["producto"].str.contains("leche", case=False)])
 </pre>
                             
                             `,
@@ -894,9 +1253,9 @@ completo = df.merge(productos, on="producto", how="left")
                             title: 'Seleccionar columnas',
                             content: `
 <pre class="codigo">
-df["total"]                       # una columna: Series
-df[["producto", "total"]]         # varias columnas: DataFrame
-df.select_dtypes("number")        # solo columnas numéricas
+print(df["total"])                       # una columna: Series
+print(df[["producto", "total"]])         # varias columnas: DataFrame
+print(df.select_dtypes("number"))        # solo columnas numéricas
 </pre>
                             
                             <p class="nota">
@@ -932,10 +1291,10 @@ df.select_dtypes("number")        # solo columnas numéricas
                             </div>
                             
 <pre class="codigo">
-df.loc[10, "total"]          # fila con índice 10, columna total
-df.iloc[0]                   # primera fila
-df.iloc[-1]                  # última fila
-df.iloc[:, 0:3]              # todas las filas, primeras 3 columnas
+print(df.loc[10, "total"])          # fila con índice 10, columna total
+print(df.iloc[0])                   # primera fila
+print(df.iloc[-1])                  # última fila
+print(df.iloc[:, 0:3])              # todas las filas, primeras 3 columnas
 </pre>
                             
                             <p class="nota">
@@ -949,18 +1308,18 @@ df.iloc[:, 0:3]              # todas las filas, primeras 3 columnas
                             title: 'Filtros con condiciones',
                             content: `
 <pre class="codigo">
-df[df["total"] &gt; 10000]
+print(df[df["total"] &gt; 10000])
 
 # Varias condiciones: &amp; (y), | (o), ~ (no). Cada condición entre paréntesis
-df[(df["sucursal"] == "Heredia") &amp; (df["categoria"] == "Bebidas")]
-df[(df["unidades"] &lt; 2) | (df["unidades"] &gt; 50)]
+print(df[(df["sucursal"] == "Heredia") &amp; (df["categoria"] == "Bebidas")])
+print(df[(df["unidades"] &lt; 2) | (df["unidades"] &gt; 50)])
 
-df[df["sucursal"].isin(["Heredia", "Alajuela"])]
-df[df["precio_unitario"].between(1000, 2000)]
-df[df["fecha"] &gt;= "2025-06-01"]
+print(df[df["sucursal"].isin(["Heredia", "Alajuela"])])
+print(df[df["precio_unitario"].between(1000, 2000)])
+print(df[df["fecha"] &gt;= "2025-06-01"])
 
 # La misma consulta escrita como texto
-df.query("sucursal == 'Heredia' and total &gt; 10000")
+print(df.query("sucursal == 'Heredia' and total &gt; 10000"))
 </pre>
                             
                             <p class="nota">
@@ -974,11 +1333,11 @@ df.query("sucursal == 'Heredia' and total &gt; 10000")
                             content: `
 <pre class="codigo">
 por_fecha = df.set_index("fecha")
-por_fecha.loc["2025-03"]            # todas las filas de marzo de 2025
-por_fecha.sort_index()
+print(por_fecha.loc["2025-03"])            # todas las filas de marzo de 2025
+print(por_fecha.sort_index())
 
 resumen = df.groupby("sucursal")["total"].sum()
-resumen.reset_index()               # el índice vuelve a ser una columna
+print(resumen.reset_index())               # el índice vuelve a ser una columna
 </pre>
                             
                             <p class="nota">
@@ -1084,7 +1443,7 @@ df["mes"] = df["fecha"].dt.month
 df["dia_semana"] = df["fecha"].dt.day_name()
 df["trimestre"] = df["fecha"].dt.quarter
 
-df.groupby("dia_semana")["total"].mean()
+print(df.groupby("dia_semana")["total"].mean())
 </pre>
                             
                             <p class="nota">
@@ -1112,6 +1471,288 @@ resumen = (
                             
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/transformaciones.png',
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 't2-taller',
+                    label: 'Taller del tema 2',
+                    steps: [
+                        {
+                            title: 'Preparar el taller',
+                            content: `<p>El taller es una guía paso a paso de lo que se hace en clase. Se trabaja en el archivo <code>tema2_dataframes.py</code>, dentro de la carpeta del curso.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Archivo de datos</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Contenido</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ordenesRestauranteX.csv</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Encuesta de pedidos de un restaurante: fecha, género, país, edad, comida, bebida y postre.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><code>datosSucursalesConNulos.csv</code></td>
+                                <td style="padding:13px 12px;">Los mismos salarios, con algunos valores faltantes.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p>Los archivos de datos van en la carpeta <code>datos</code>, junto al script. El taller empieza con las bibliotecas y la ruta de esa carpeta:</p>
+                            
+<pre class="codigo">
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+DATOS = Path(__file__).parent / "datos"
+
+# Mostrar todas las columnas al imprimir un DataFrame
+pd.set_option("display.max_columns", None)
+pd.set_option("display.width", 150)
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Ejecute el script con el botón <em>Run Python File</em>. Si todavía no se ha visto un paso, coméntelo para que no se ejecute.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/taller.png',
+                            nextButton: 'Siguiente: Paso 1. Cargar y explorar los datos'
+                        },
+                        {
+                            title: 'Paso 1. Cargar y explorar los datos',
+                            content: `<p>Lo primero es conocer la tabla: cuántas filas y columnas tiene, cómo se llaman las columnas y qué tipo de dato tiene cada una.</p>
+                            
+<pre class="codigo">
+df = pd.read_csv(DATOS / "ordenesRestauranteX.csv")
+
+print("Forma:", df.shape)
+print("Columnas:", list(df.columns))
+print("Primeras filas:\\n", df.head())
+df.info()
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 2. Primeros análisis'
+                        },
+                        {
+                            title: 'Paso 2. Primeros análisis',
+                            content: `<p>value_counts() cuenta cuántas veces aparece cada valor; unique() muestra los valores distintos y nunique() cuenta cuántos son.</p>
+                            
+<pre class="codigo">
+print("Pedidos por tipo de comida:\\n", df["Food"].value_counts())
+print("Pedidos por género:\\n", df["Gender"].value_counts())
+print("Edad promedio:", round(df["Age"].mean(), 1))
+print("Cantidad de países:", df["Country"].nunique())
+print("Países:\\n", df["Country"].unique().tolist())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 3. Limpiar texto'
+                        },
+                        {
+                            title: 'Paso 3. Limpiar texto',
+                            content: `<p>En el paso anterior aparecen países repetidos, como "Colombia" y "Colombia ", porque algunos tienen espacios. str.strip() quita los espacios al inicio y al final, y replace() corrige valores escritos de otra forma.</p>
+                            
+<pre class="codigo">
+df["Country"] = df["Country"].str.strip()
+df["Country"] = df["Country"].replace({
+    "Malaysia": "Malasia",
+    "Korea": "Corea del Sur",
+    "Seychellois": "Seychelles",
+    "Mauritian": "Mauricio"
+})
+print("Cantidad de países después de limpiar:", df["Country"].nunique())
+print("Pedidos por país:\\n", df["Country"].value_counts())
+
+# Normalizar mayúsculas y minúsculas
+provincias = pd.Series(["San José", "san José", "San Jose", "SAN JOSÉ", "Alajuela"])
+print("Antes:", provincias.unique().tolist())
+provincias = provincias.str.lower().replace({"san jose": "san josé"}).str.title()
+print("Después:", provincias.unique().tolist())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 4. Convertir tipos de datos'
+                        },
+                        {
+                            title: 'Paso 4. Convertir tipos de datos',
+                            content: `<p>La columna Timestamp es texto, por ejemplo "2019/05/07 2:59:13 PM GMT+8". Se quita la zona horaria y se convierte a fecha con el formato del texto. Con el accesor .dt se obtienen partes de la fecha.</p>
+                            
+<pre class="codigo">
+df["Timestamp"] = df["Timestamp"].str.replace(" GMT+8", "", regex=False)
+df["Timestamp"] = pd.to_datetime(df["Timestamp"], format="%Y/%m/%d %I:%M:%S %p")
+
+df["dia"] = df["Timestamp"].dt.day_name()
+df["hora"] = df["Timestamp"].dt.hour
+print(df[["Timestamp", "dia", "hora"]].head())
+print("Tipos de datos:\\n", df.dtypes)
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 5. Seleccionar columnas y filas'
+                        },
+                        {
+                            title: 'Paso 5. Seleccionar columnas y filas',
+                            content: `<p>loc selecciona por etiquetas (índice y nombre de columna) e iloc por posición. Para filtrar con varias condiciones se usan &amp; (y) y | (o), con cada condición entre paréntesis.</p>
+                            
+<pre class="codigo">
+print(df[["Gender", "Age", "Food"]].head())          # varias columnas
+print(df.loc[0:4, ["Country", "Food"]])               # filas 0 a 4 (incluye la 4)
+print(df.iloc[0:5, 2:5])                              # filas 0 a 4, columnas 2 a 4
+
+costarricenses = df[df["Country"] == "Costa Rica"]
+print("Personas de Costa Rica:", len(costarricenses))
+
+mujeresCR = df[(df["Country"] == "Costa Rica") &amp; (df["Gender"] == "Femenino")]
+print("Mujeres de Costa Rica:", len(mujeresCR))
+
+jovenes = df[df["Age"].between(18, 30)]
+print("Personas entre 18 y 30 años:", len(jovenes))
+
+centroamerica = df[df["Country"].isin(["Costa Rica", "Panamá"])]
+print("Personas de Costa Rica o Panamá:", len(centroamerica))
+
+print(df.query("Food == 'Comida caribeña' and Dessert == 'Sí'").head())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 1. Filtros'
+                        },
+                        {
+                            title: 'Ejercicio 1. Filtros',
+                            content: `<p>Muestre cuántas personas:</p>
+                            <ul>
+                                <li>a) Son de Francia y pidieron comida tradicional.</li>
+                                <li>b) Tienen más de 50 años o menos de 15 años.</li>
+                                <li>c) No quieren postre (Dessert igual a "No").</li>
+                            </ul>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 6. Agrupar y resumir'
+                        },
+                        {
+                            title: 'Paso 6. Agrupar y resumir',
+                            content: `<p>groupby() divide los datos en grupos y calcula un resumen para cada uno. crosstab() cuenta las combinaciones de dos columnas y pivot_table() calcula un resumen con un grupo en las filas y otro en las columnas.</p>
+                            
+<pre class="codigo">
+print("Edad promedio por tipo de comida:\\n", df.groupby("Food")["Age"].mean())
+
+print(df.groupby("Gender").agg(
+    pedidos=("Participant_ID", "count"),
+    edad_promedio=("Age", "mean"),
+    edad_maxima=("Age", "max")
+))
+
+print("Comida y postre:\\n", pd.crosstab(df["Food"], df["Dessert"]))
+
+print("Edad promedio por género y comida:\\n",
+      pd.pivot_table(df, values="Age", index="Gender", columns="Food", aggfunc="mean").round(1))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 7. Operaciones en columnas'
+                        },
+                        {
+                            title: 'Paso 7. Operaciones en columnas',
+                            content: `<p>np.where crea una columna con dos opciones según una condición; map() reemplaza valores con un diccionario y apply() aplica una función propia a cada valor.</p>
+                            
+<pre class="codigo">
+df["grupo"] = np.where(df["Age"] &gt;= 18, "Adulto", "Menor de edad")
+df["postre_numerico"] = df["Dessert"].map({"Sí": 1, "Quizás": 0.5, "No": 0})
+
+def jornada(hora):
+    if hora &lt; 12:
+        return "Mañana"
+    elif hora &lt; 18:
+        return "Tarde"
+    return "Noche"
+
+df["jornada"] = df["hora"].apply(jornada)
+
+print(df[["Age", "grupo", "Dessert", "postre_numerico", "hora", "jornada"]].head())
+print("Pedidos por jornada:\\n", df["jornada"].value_counts())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 2. Resúmenes'
+                        },
+                        {
+                            title: 'Ejercicio 2. Resúmenes',
+                            content: `<ul>
+                                <li>a) ¿Qué porcentaje de cada tipo de comida pide postre (Dessert igual a "Sí")? Pista: cree una columna con True cuando Dessert sea "Sí" y calcule su promedio por tipo de comida (el promedio de True/False es la proporción).</li>
+                                <li>b) ¿Cuál es la edad promedio de quienes piden gaseosa y de quienes piden bebida natural?</li>
+                            </ul>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 8. Valores faltantes: estrategias'
+                        },
+                        {
+                            title: 'Paso 8. Valores faltantes: estrategias',
+                            content: `<p>Antes de rellenar, se elige la estrategia según el tipo de dato:</p>
+                            <ul>
+                                <li>Con valores extremos, la mediana representa mejor que la media.</li>
+                                <li>Con datos sin extremos, se puede usar la media.</li>
+                                <li>Con datos de texto (categóricos), se usa la moda.</li>
+                                <li>Cuando la ausencia significa cero, se rellena con 0.</li>
+                            </ul>
+                            
+<pre class="codigo">
+salarios = pd.Series([500, 600, 550, 580, 10000, np.nan])
+print("Media:", salarios.mean(), "| Mediana:", salarios.median())
+print("Rellenado con la mediana:\\n", salarios.fillna(salarios.median()))
+
+notas = pd.Series([70, 75, 80, 85, np.nan])
+print("Rellenado con la media:\\n", notas.fillna(notas.mean()))
+
+provincias = pd.Series(["San José", "Alajuela", "San José", np.nan])
+print("Moda:", provincias.mode()[0])
+print("Rellenado con la moda:\\n", provincias.fillna(provincias.mode()[0]))
+
+print("Rellenado con 0:\\n", notas.fillna(0))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 9. Valores faltantes en un archivo'
+                        },
+                        {
+                            title: 'Paso 9. Valores faltantes en un archivo',
+                            content: `<p>Se revisa cuántos faltantes tiene cada columna. dropna() elimina las filas con faltantes, pero se pierden también los demás datos de esas filas.</p>
+                            
+<pre class="codigo">
+dfNulos = pd.read_csv(DATOS / "datosSucursalesConNulos.csv")
+print("Valores faltantes por columna:\\n", dfNulos.isna().sum())
+print("Filas con algún faltante:\\n", dfNulos[dfNulos.isna().any(axis=1)])
+
+sinNulos = dfNulos.dropna()
+print("Filas antes:", len(dfNulos), "| después de dropna():", len(sinNulos))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 3. Rellenar faltantes con estrategias distintas'
+                        },
+                        {
+                            title: 'Ejercicio 3. Rellenar faltantes con estrategias distintas',
+                            content: `<p>Rellene los valores faltantes de dfNulos usando una estrategia diferente en cada columna con faltantes y explique en un comentario por qué la eligió. Verifique al final que no quedan faltantes.</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 10. Duplicados y exportar'
+                        },
+                        {
+                            title: 'Paso 10. Duplicados y exportar',
+                            content: `<p>duplicated() marca las filas repetidas. Un duplicado no siempre es un error: en los salarios, dos personas pueden ganar exactamente lo mismo. En las órdenes, el identificador del participante sí debe ser único. Al final, se guarda la tabla limpia en un archivo nuevo.</p>
+                            
+<pre class="codigo">
+print("Filas repetidas en salarios:", dfNulos.duplicated().sum())
+print("Participantes repetidos en órdenes:", df["Participant_ID"].duplicated().sum())
+
+df = df.drop_duplicates(subset="Participant_ID")
+df.to_csv(DATOS / "ordenesLimpias.csv", index=False)
+print("Archivo guardado:", DATOS / "ordenesLimpias.csv")
+</pre>
+                            `,
                             nextButton: ''
                         }
                     ]
@@ -1215,16 +1856,16 @@ resumen = (
                             title: 'Resumen con describe()',
                             content: `
 <pre class="codigo">
-df["total"].describe()
+print(df["total"].describe())
 
 # Percentiles adicionales
-df["total"].describe(percentiles=[0.1, 0.5, 0.9])
+print(df["total"].describe(percentiles=[0.1, 0.5, 0.9]))
 
 # Por grupo
-df.groupby("sucursal")["total"].describe()
+print(df.groupby("sucursal")["total"].describe())
 
 # Columnas de texto: cantidad, valores únicos, más frecuente
-df[["sucursal", "categoria", "producto"]].describe()
+print(df[["sucursal", "categoria", "producto"]].describe())
 </pre>
                             
                             <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
@@ -1262,9 +1903,9 @@ df[["sucursal", "categoria", "producto"]].describe()
                             title: 'Forma de la distribución y correlación',
                             content: `
 <pre class="codigo">
-df["total"].skew()          # asimetría
+print(df["total"].skew())          # asimetría
 
-df[["unidades", "precio_unitario", "total"]].corr()
+print(df[["unidades", "precio_unitario", "total"]].corr())
 </pre>
                             
                             <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
@@ -1349,7 +1990,7 @@ df[["unidades", "precio_unitario", "total"]].corr()
                             
 <pre class="codigo">
 df["sucursal"] = df["sucursal"].astype("category")
-df["sucursal"].cat.categories
+print(df["sucursal"].cat.categories)
 </pre>
                             
                             <p class="nota">
@@ -1370,7 +2011,7 @@ df["rango_monto"] = pd.cut(
     labels=["Baja", "Media", "Alta"]
 )
 
-df["rango_monto"].value_counts()
+print(df["rango_monto"].value_counts())
 </pre>
                             
                             <p class="nota">
@@ -1385,7 +2026,7 @@ df["rango_monto"].value_counts()
                             
 <pre class="codigo">
 df["cuartil"] = pd.qcut(df["total"], q=4, labels=["Q1", "Q2", "Q3", "Q4"])
-df.groupby("cuartil", observed=True)["total"].agg(["min", "max", "count"])
+print(df.groupby("cuartil", observed=True)["total"].agg(["min", "max", "count"]))
 </pre>
                             
                             <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
@@ -1419,11 +2060,11 @@ df.groupby("cuartil", observed=True)["total"].agg(["min", "max", "count"])
                             content: `
 <pre class="codigo">
 # Frecuencia absoluta y relativa
-df["categoria"].value_counts()
-df["categoria"].value_counts(normalize=True) * 100
+print(df["categoria"].value_counts())
+print(df["categoria"].value_counts(normalize=True) * 100)
 
 # Frecuencias cruzadas en porcentaje por fila
-pd.crosstab(df["sucursal"], df["rango_monto"], normalize="index") * 100
+print(pd.crosstab(df["sucursal"], df["rango_monto"], normalize="index") * 100)
 </pre>
                             
                             <p class="nota">
@@ -1665,6 +2306,239 @@ atipicos_z = df[z.abs() &gt; 3]
                             nextButton: ''
                         }
                     ]
+                },
+                {
+                    id: 't3-taller',
+                    label: 'Taller del tema 3',
+                    steps: [
+                        {
+                            title: 'Preparar el taller',
+                            content: `<p>El taller es una guía paso a paso de lo que se hace en clase. Se trabaja en el archivo <code>tema3_analisis_descriptivo.py</code>, dentro de la carpeta del curso.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Archivo de datos</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Contenido</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>datosSucursales.csv</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Salarios por departamento de una empresa (Gerencia, Desarrollo, Talento humano, Contabilidad, Diseño y Aseo).</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><code>ordenesRestauranteX.csv</code></td>
+                                <td style="padding:13px 12px;">Encuesta de pedidos de un restaurante: fecha, género, país, edad, comida, bebida y postre.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p>Los archivos de datos van en la carpeta <code>datos</code>, junto al script. El taller empieza con las bibliotecas y la ruta de esa carpeta:</p>
+                            
+<pre class="codigo">
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+DATOS = Path(__file__).parent / "datos"
+pd.set_option("display.max_columns", None)
+pd.set_option("display.width", 150)
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Ejecute el script con el botón <em>Run Python File</em>. Si todavía no se ha visto un paso, coméntelo para que no se ejecute.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/taller.png',
+                            nextButton: 'Siguiente: Paso 1. Cargar los datos'
+                        },
+                        {
+                            title: 'Paso 1. Cargar los datos',
+                            content: `<p>skipinitialspace=True quita el espacio que hay después de cada coma en el archivo, para que las columnas se llamen "Desarrollo" y no " Desarrollo".</p>
+                            
+<pre class="codigo">
+df = pd.read_csv(DATOS / "datosSucursales.csv", skipinitialspace=True)
+print("Forma:", df.shape)
+print("Columnas:", list(df.columns))
+print(df.head())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 2. Medidas de tendencia central'
+                        },
+                        {
+                            title: 'Paso 2. Medidas de tendencia central',
+                            content: `<p>La media es el promedio; la mediana, el valor del centro de los datos ordenados; y la moda, el valor más frecuente. mode() devuelve una serie, porque puede haber más de una moda.</p>
+                            
+<pre class="codigo">
+desarrollo = df["Desarrollo"]
+
+print("Media:", round(desarrollo.mean(), 2))
+print("Mediana:", desarrollo.median())
+print("Moda:", desarrollo.mode().tolist())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 3. Medidas de dispersión'
+                        },
+                        {
+                            title: 'Paso 3. Medidas de dispersión',
+                            content: `<p>Indican qué tan separados están los datos. Con ddof=0 se calcula la varianza de una población (todos los datos); con ddof=1, que es el valor por defecto de Pandas, la de una muestra. El rango intercuartílico (IQR) es la distancia entre el percentil 25 y el 75, es decir, el rango del 50 % central de los datos.</p>
+                            
+<pre class="codigo">
+print("Rango:", desarrollo.max() - desarrollo.min())
+print("Varianza (población, ddof=0):", round(desarrollo.var(ddof=0), 2))
+print("Varianza (muestra, ddof=1):", round(desarrollo.var(), 2))
+print("Desviación estándar (población):", round(desarrollo.std(ddof=0), 2))
+
+q1 = desarrollo.quantile(0.25)
+q3 = desarrollo.quantile(0.75)
+print("Q1:", q1, "| Q3:", q3, "| IQR:", q3 - q1)
+print("Coeficiente de variación:", round(desarrollo.std() / desarrollo.mean(), 3))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 1. Medidas de Talento humano'
+                        },
+                        {
+                            title: 'Ejercicio 1. Medidas de Talento humano',
+                            content: `<p>Obtenga la media, la mediana, la moda, la varianza y la desviación estándar de la columna Talento humano. ¿Por qué la media y la mediana son distintas?</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 4. Resumen de todos los departamentos'
+                        },
+                        {
+                            title: 'Paso 4. Resumen de todos los departamentos',
+                            content: `<p>describe() resume todas las columnas numéricas. agg() permite elegir las medidas. skew() mide la asimetría y corr() la correlación entre columnas.</p>
+                            
+<pre class="codigo">
+print("Resumen:\\n", df.describe().round(1))
+print("Medidas elegidas:\\n", df.agg(["mean", "median", "std", "min", "max"]).round(1))
+print("Asimetría:\\n", df.skew().round(2))
+print("Correlación:\\n", df.corr().round(2))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 5. Categorizar datos numéricos'
+                        },
+                        {
+                            title: 'Paso 5. Categorizar datos numéricos',
+                            content: `<p>pd.cut() crea categorías con límites que define el analista; pd.qcut() divide los datos en grupos con aproximadamente la misma cantidad de filas. value_counts(normalize=True) da la proporción de cada categoría.</p>
+                            
+<pre class="codigo">
+df["rango_desarrollo"] = pd.cut(
+    df["Desarrollo"],
+    bins=[-1, 5000, 8000, float("inf")],
+    labels=["Bajo", "Medio", "Alto"]
+)
+print("Cantidad por rango:\\n", df["rango_desarrollo"].value_counts())
+print("Porcentaje por rango:\\n", (df["rango_desarrollo"].value_counts(normalize=True) * 100).round(1))
+
+dfOrdenes = pd.read_csv(DATOS / "ordenesRestauranteX.csv")
+dfOrdenes["grupo_edad"] = pd.cut(
+    dfOrdenes["Age"],
+    bins=[0, 17, 29, 44, 59, 120],
+    labels=["Menor de 18", "18 a 29", "30 a 44", "45 a 59", "60 o más"]
+)
+print("Personas por grupo de edad:\\n", dfOrdenes["grupo_edad"].value_counts(sort=False))
+
+# Porcentaje de cada tipo de comida dentro de cada grupo de edad
+print((pd.crosstab(dfOrdenes["grupo_edad"], dfOrdenes["Food"], normalize="index") * 100).round(1))
+
+dfOrdenes["cuartil_edad"] = pd.qcut(dfOrdenes["Age"], q=4, labels=["Q1", "Q2", "Q3", "Q4"])
+print(dfOrdenes.groupby("cuartil_edad", observed=True)["Age"].agg(["min", "max", "count"]))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 6. Gráficos de resumen'
+                        },
+                        {
+                            title: 'Paso 6. Gráficos de resumen',
+                            content: `<p>El histograma muestra la distribución de una variable; el diagrama de caja (boxplot) resume varias distribuciones y marca los posibles atípicos; y las barras comparan un valor entre grupos. savefig() guarda la figura.</p>
+                            
+<pre class="codigo">
+figura, ejes = plt.subplots(1, 3, figsize=(16, 4))
+
+ejes[0].hist(df["Desarrollo"], bins=15, color="#2b93d1", edgecolor="white")
+ejes[0].set_title("Distribución de salarios de Desarrollo")
+ejes[0].set_xlabel("Salario")
+
+departamentos = ["Gerencia", "Desarrollo", "Talento humano", "Contabilidad", "Diseño", "Aseo"]
+# En Matplotlib anterior a la versión 3.9, use labels= en lugar de tick_labels=
+ejes[1].boxplot([df[d] for d in departamentos], tick_labels=departamentos)
+ejes[1].set_title("Salarios por departamento")
+ejes[1].tick_params(axis="x", rotation=45)
+
+promedios = df[departamentos].mean().sort_values()
+ejes[2].barh(promedios.index, promedios.values, color="#00928d")
+ejes[2].set_title("Salario promedio por departamento")
+
+plt.tight_layout()
+plt.savefig(Path(__file__).parent / "resumen_salarios.png", dpi=150)
+plt.show()
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 7. Detectar valores atípicos'
+                        },
+                        {
+                            title: 'Paso 7. Detectar valores atípicos',
+                            content: `<p>Regla del IQR: es atípico lo que está a más de 1,5 IQR por debajo de Q1 o por encima de Q3. Puntaje Z: es atípico lo que está a más de 3 desviaciones estándar de la media. Observe que en estos datos casi todos ganan lo mismo, el IQR es muy pequeño y la regla del IQR marca muchos valores.</p>
+                            
+<pre class="codigo">
+gerencia = df["Gerencia"]
+
+q1 = gerencia.quantile(0.25)
+q3 = gerencia.quantile(0.75)
+iqr = q3 - q1
+limiteInferior = q1 - 1.5 * iqr
+limiteSuperior = q3 + 1.5 * iqr
+atipicosIQR = gerencia[(gerencia &lt; limiteInferior) | (gerencia &gt; limiteSuperior)]
+print(f"IQR = {iqr}. Límites: {limiteInferior} y {limiteSuperior}")
+print("Atípicos según IQR:", len(atipicosIQR), sorted(atipicosIQR.tolist()))
+
+z = (gerencia - gerencia.mean()) / gerencia.std()
+atipicosZ = gerencia[z.abs() &gt; 3]
+print("Atípicos según puntaje Z:", len(atipicosZ), sorted(atipicosZ.tolist()))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 8. Tratar los valores atípicos'
+                        },
+                        {
+                            title: 'Paso 8. Tratar los valores atípicos',
+                            content: `<p>Un salario de 0 es un error de registro: se convierte en faltante y se rellena con la mediana. Un salario muy alto puede ser real (por ejemplo, un gerente general), así que no se elimina; se puede recortar con clip() para limitar su efecto en los promedios. Compare los resultados antes y después.</p>
+                            
+<pre class="codigo">
+dfTratado = df[departamentos].copy()
+
+ceros = (dfTratado == 0).sum()
+print("Salarios en 0 por departamento:\\n", ceros)
+
+dfTratado = dfTratado.replace(0, np.nan)
+dfTratado = dfTratado.fillna(dfTratado.median())
+
+gerenciaRecortada = dfTratado["Gerencia"].clip(upper=dfTratado["Gerencia"].quantile(0.95))
+
+print("Media de Gerencia original:", round(df["Gerencia"].mean(), 2))
+print("Media sin ceros:", round(dfTratado["Gerencia"].mean(), 2))
+print("Media sin ceros y recortada al percentil 95:", round(gerenciaRecortada.mean(), 2))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 2. Atípicos en Contabilidad'
+                        },
+                        {
+                            title: 'Ejercicio 2. Atípicos en Contabilidad',
+                            content: `<ul>
+                                <li>a) Detecte los atípicos de Contabilidad con el puntaje Z.</li>
+                                <li>b) ¿Hay algún salario que sea claramente un error? Corríjalo con la mediana.</li>
+                                <li>c) Compare la media antes y después de la corrección.</li>
+                            </ul>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
                 }
             ]
         },
@@ -1802,7 +2676,7 @@ modelo = keras.Sequential([
 modelo.compile(optimizer="adam", loss="mse", metrics=["mae"])
 historial = modelo.fit(X_train, y_train, epochs=100, validation_split=0.2, verbose=0)
 
-modelo.evaluate(X_test, y_test)
+print(modelo.evaluate(X_test, y_test))
 predicciones = modelo.predict(X_test)
 </pre>
                             
@@ -1925,7 +2799,7 @@ print("Logística:", logistica.score(X_test, y_test))
 print("Bosque aleatorio:", bosque.score(X_test, y_test))
 
 # Qué variables pesan más en el bosque
-pd.Series(bosque.feature_importances_, index=X.columns).sort_values(ascending=False)
+print(pd.Series(bosque.feature_importances_, index=X.columns).sort_values(ascending=False))
 </pre>
                             
                             <p class="nota">
@@ -2380,6 +3254,354 @@ print("F1 en prueba:", busqueda.score(X_test, y_test))
                             Un modelo útil no es el más complejo, sino el que resuelve el problema con un error aceptable y se puede explicar.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/checklist.png',
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 't4-taller',
+                    label: 'Taller del tema 4',
+                    steps: [
+                        {
+                            title: 'Preparar el taller',
+                            content: `<p>El taller es una guía paso a paso de lo que se hace en clase. Se trabaja en el archivo <code>tema4_analitica_avanzada.py</code>, dentro de la carpeta del curso.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Archivo de datos</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Contenido</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>celsius_a_fahrenheit.csv</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Temperaturas en grados Celsius y su equivalente en Fahrenheit.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>Teen_Mental_Health_Dataset.csv</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Hábitos, rendimiento académico y bienestar de adolescentes.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;"><code>ventasDiarias.csv</code></td>
+                                <td style="padding:13px 12px;">Ventas diarias de un comercio durante 2024 y 2025.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p>Los archivos de datos van en la carpeta <code>datos</code>, junto al script. El taller empieza con las bibliotecas y la ruta de esa carpeta:</p>
+                            
+<pre class="codigo">
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from sklearn.model_selection import train_test_split, cross_val_score, GridSearchCV
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LinearRegression
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import (mean_absolute_error, mean_squared_error, r2_score,
+                             accuracy_score, confusion_matrix, classification_report)
+from statsmodels.tsa.seasonal import seasonal_decompose
+
+DATOS = Path(__file__).parent / "datos"
+pd.set_option("display.max_columns", None)
+pd.set_option("display.width", 150)
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Ejecute el script con el botón <em>Run Python File</em>. Si todavía no se ha visto un paso, coméntelo para que no se ejecute.</p>
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/taller.png',
+                            nextButton: 'Siguiente: Paso 1. Primer modelo con Keras: de Celsius a Fahrenheit'
+                        },
+                        {
+                            title: 'Paso 1. Primer modelo con Keras: de Celsius a Fahrenheit',
+                            content: `<p>Una red con una sola neurona aprende la relación F = C × 1,8 + 32 a partir de ejemplos, sin que se le dé la fórmula. La tasa de aprendizaje (learning_rate) controla el tamaño de cada ajuste: si es muy grande, el modelo no converge; si es muy pequeña, aprende muy lento.</p>
+                            
+<pre class="codigo">
+dfTemperaturas = pd.read_csv(DATOS / "celsius_a_fahrenheit.csv")
+print(dfTemperaturas.head())
+
+xTemperaturas = dfTemperaturas[["Celsius"]].values      # variable independiente
+yTemperaturas = dfTemperaturas["Fahrenheit"].values     # variable objetivo
+
+modeloTemperatura = tf.keras.Sequential([
+    tf.keras.Input(shape=(1,)),
+    tf.keras.layers.Dense(units=1)
+])
+modeloTemperatura.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.1),
+                          loss="mean_squared_error")
+historialTemp = modeloTemperatura.fit(xTemperaturas, yTemperaturas, epochs=500, verbose=0)
+
+peso, sesgo = modeloTemperatura.get_weights()
+print(f"El modelo aprendió: F = C × {peso[0][0]:.3f} + {sesgo[0]:.3f}")
+print("Predicción para -8 °C:", modeloTemperatura.predict(np.array([[-8.0]]), verbose=0)[0][0])
+
+plt.plot(historialTemp.history["loss"])
+plt.title("Pérdida durante el entrenamiento")
+plt.xlabel("Época")
+plt.ylabel("Error cuadrático medio")
+plt.show()
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 2. Cargar y limpiar los datos de adolescentes'
+                        },
+                        {
+                            title: 'Paso 2. Cargar y limpiar los datos de adolescentes',
+                            content: `<p>Antes de entrenar un modelo, los datos deben estar limpios. En este archivo hay filas con faltantes y textos escritos de varias formas: "Medium" y "medium", o "Instagra" en lugar de "instagram".</p>
+                            
+<pre class="codigo">
+df = pd.read_csv(DATOS / "Teen_Mental_Health_Dataset.csv")
+print("Forma:", df.shape)
+print("Faltantes por columna:\\n", df.isna().sum())
+
+df = df.dropna()
+
+columnasTexto = ["gender", "platform_usage", "social_interaction_level", "depression_risk"]
+for columna in columnasTexto:
+    df[columna] = df[columna].str.strip().str.lower()
+
+df["platform_usage"] = df["platform_usage"].replace({"instagra": "instagram", "nstagram": "instagram"})
+
+for columna in columnasTexto:
+    print(columna, "-&gt;", df[columna].unique().tolist())
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 3. Explorar las relaciones'
+                        },
+                        {
+                            title: 'Paso 3. Explorar las relaciones',
+                            content: `<p>Antes de modelar, se grafica cada variable contra el rendimiento académico para ver cuáles parecen relacionarse con él.</p>
+                            
+<pre class="codigo">
+variables = ["screen_time_before_sleep", "sleep_hours", "stress_level", "physical_activity"]
+
+plt.figure(figsize=(10, 8))
+for i, variable in enumerate(variables):
+    plt.subplot(2, 2, i + 1)
+    plt.scatter(df[variable], df["academic_performance"], alpha=0.3)
+    plt.title(f"{variable} vs. rendimiento")
+    plt.xlabel(variable)
+    plt.ylabel("Rendimiento académico")
+plt.tight_layout()
+plt.show()
+
+print("Correlación con el rendimiento:\\n",
+      df[variables + ["academic_performance"]].corr()["academic_performance"].round(2))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 4. Preparar los datos para un modelo'
+                        },
+                        {
+                            title: 'Paso 4. Preparar los datos para un modelo',
+                            content: `<p>X contiene las variables independientes y y la variable objetivo. Se separa un 20 % de los datos para la prueba final. El escalador se ajusta solo con los datos de entrenamiento y después se aplica a los de prueba.</p>
+                            
+<pre class="codigo">
+X = df[variables]
+y = df["academic_performance"]
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+print("Entrenamiento:", X_train.shape, "| Prueba:", X_test.shape)
+
+escalador = StandardScaler()
+X_train_e = escalador.fit_transform(X_train)
+X_test_e = escalador.transform(X_test)
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 5. Modelo de referencia: regresión lineal'
+                        },
+                        {
+                            title: 'Paso 5. Modelo de referencia: regresión lineal',
+                            content: `<p>Se empieza con un modelo sencillo. Cualquier modelo más complejo debe superarlo para que valga la pena. MAE es el error promedio; RMSE castiga más los errores grandes; R² indica qué proporción de la variación se explica.</p>
+                            
+<pre class="codigo">
+regresion = LinearRegression()
+regresion.fit(X_train, y_train)
+predLineal = regresion.predict(X_test)
+
+print("Regresión lineal")
+print("  MAE :", round(mean_absolute_error(y_test, predLineal), 3))
+print("  RMSE:", round(np.sqrt(mean_squared_error(y_test, predLineal)), 3))
+print("  R²  :", round(r2_score(y_test, predLineal), 3))
+print("Coeficientes:\\n", pd.Series(regresion.coef_, index=variables).round(3))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 6. Red neuronal para regresión'
+                        },
+                        {
+                            title: 'Paso 6. Red neuronal para regresión',
+                            content: `<p>La red tiene dos capas ocultas. EarlyStopping detiene el entrenamiento cuando la pérdida de validación deja de mejorar, para evitar el sobreajuste. Para predecir con datos nuevos, también hay que escalarlos.</p>
+                            
+<pre class="codigo">
+red = tf.keras.Sequential([
+    tf.keras.Input(shape=(len(variables),)),
+    tf.keras.layers.Dense(16, activation="relu"),
+    tf.keras.layers.Dense(8, activation="relu"),
+    tf.keras.layers.Dense(1)
+])
+red.compile(optimizer="adam", loss="mean_squared_error", metrics=["mae"])
+
+parada = tf.keras.callbacks.EarlyStopping(monitor="val_loss", patience=15,
+                                          restore_best_weights=True)
+historial = red.fit(X_train_e, y_train.values, epochs=300, validation_split=0.2,
+                    callbacks=[parada], verbose=0)
+print("Épocas entrenadas:", len(historial.history["loss"]))
+
+predRed = red.predict(X_test_e, verbose=0).ravel()
+print("Red neuronal")
+print("  MAE :", round(mean_absolute_error(y_test, predRed), 3))
+print("  R²  :", round(r2_score(y_test, predRed), 3))
+
+plt.plot(historial.history["loss"], label="Entrenamiento")
+plt.plot(historial.history["val_loss"], label="Validación")
+plt.title("Curva de entrenamiento")
+plt.xlabel("Época")
+plt.ylabel("Pérdida")
+plt.legend()
+plt.show()
+
+# Predicción para un estudiante nuevo
+nuevo = pd.DataFrame([[2.4, 6.4, 4, 0.9]], columns=variables)
+print("Rendimiento estimado (red):", red.predict(escalador.transform(nuevo), verbose=0)[0][0])
+print("Rendimiento estimado (lineal):", regresion.predict(nuevo)[0])
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 1. Más variables'
+                        },
+                        {
+                            title: 'Ejercicio 1. Más variables',
+                            content: `<p>Agregue daily_social_media_hours y anxiety_level a las variables de la regresión lineal. ¿Mejora el R² en los datos de prueba?</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
+                            nextButton: 'Siguiente: Paso 7. Clasificación con un bosque aleatorio'
+                        },
+                        {
+                            title: 'Paso 7. Clasificación con un bosque aleatorio',
+                            content: `<p>Ahora se predice una categoría: el nivel de riesgo (low, medium o high). La exactitud se compara con la de un modelo que siempre responde la clase más frecuente. La matriz de confusión muestra en qué clases se equivoca.</p>
+                            
+<pre class="codigo">
+variablesClase = ["daily_social_media_hours", "sleep_hours", "screen_time_before_sleep",
+                  "physical_activity", "stress_level", "anxiety_level"]
+Xc = df[variablesClase]
+yc = df["depression_risk"]
+
+Xc_train, Xc_test, yc_train, yc_test = train_test_split(
+    Xc, yc, test_size=0.2, random_state=42, stratify=yc)
+
+bosque = RandomForestClassifier(n_estimators=200, random_state=42)
+bosque.fit(Xc_train, yc_train)
+predClase = bosque.predict(Xc_test)
+
+print("Exactitud si siempre se responde la clase más frecuente:",
+      round(yc_test.value_counts(normalize=True).max(), 3))
+print("Exactitud del bosque aleatorio:", round(accuracy_score(yc_test, predClase), 3))
+
+clases = ["low", "medium", "high"]
+matriz = confusion_matrix(yc_test, predClase, labels=clases)
+print("Matriz de confusión (filas = real, columnas = predicho):\\n",
+      pd.DataFrame(matriz, index=clases, columns=clases))
+print(classification_report(yc_test, predClase))
+print("Importancia de las variables:\\n",
+      pd.Series(bosque.feature_importances_, index=variablesClase).sort_values(ascending=False).round(3))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 8. Optimizar el modelo'
+                        },
+                        {
+                            title: 'Paso 8. Optimizar el modelo',
+                            content: `<p>La validación cruzada evalúa el modelo en varias divisiones de los datos de entrenamiento. GridSearchCV prueba combinaciones de hiperparámetros y elige la mejor. Los datos de prueba se usan solo al final.</p>
+                            
+<pre class="codigo">
+puntajes = cross_val_score(bosque, Xc_train, yc_train, cv=3, scoring="f1_macro")
+print("F1 por división:", puntajes.round(3), "| promedio:", round(puntajes.mean(), 3))
+
+parametros = {
+    "n_estimators": [100, 200],
+    "max_depth": [5, 10, None]
+}
+busqueda = GridSearchCV(RandomForestClassifier(random_state=42), parametros,
+                        cv=3, scoring="f1_macro")
+busqueda.fit(Xc_train, yc_train)
+print("Mejores hiperparámetros:", busqueda.best_params_)
+print("F1 en prueba del mejor modelo:", round(busqueda.score(Xc_test, yc_test), 3))
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 9. Series temporales: explorar'
+                        },
+                        {
+                            title: 'Paso 9. Series temporales: explorar',
+                            content: `<p>Con la fecha como índice, resample() agrupa por periodo y rolling() calcula un promedio móvil que suaviza el ruido. seasonal_decompose() separa la tendencia, la estacionalidad semanal (period=7) y el ruido.</p>
+                            
+<pre class="codigo">
+ventas = pd.read_csv(DATOS / "ventasDiarias.csv", parse_dates=["fecha"], index_col="fecha")["ventas"]
+print(ventas.head())
+
+mensual = ventas.resample("ME").sum()
+print("Ventas por mes (primeros 6):\\n", mensual.head(6))
+print("Ventas promedio por día de la semana:\\n",
+      ventas.groupby(ventas.index.day_name()).mean().round(0))
+
+movil = ventas.rolling(window=7).mean()
+plt.figure(figsize=(12, 4))
+plt.plot(ventas, alpha=0.4, label="Diaria")
+plt.plot(movil, label="Promedio móvil de 7 días")
+plt.title("Ventas diarias")
+plt.legend()
+plt.show()
+
+descomposicion = seasonal_decompose(ventas, model="additive", period=7)
+descomposicion.plot()
+plt.show()
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Paso 10. Series temporales: predecir'
+                        },
+                        {
+                            title: 'Paso 10. Series temporales: predecir',
+                            content: `<p>Se crean variables con las ventas de días anteriores (rezagos). Los datos se separan respetando el tiempo: se entrena con el pasado y se prueba con los últimos meses. El modelo se compara con una referencia ingenua: "las ventas serán iguales a las del mismo día de la semana anterior".</p>
+                            
+<pre class="codigo">
+datos = ventas.to_frame()
+datos["lag_1"] = datos["ventas"].shift(1)
+datos["lag_7"] = datos["ventas"].shift(7)
+datos["media_7"] = datos["ventas"].shift(1).rolling(7).mean()
+datos = datos.dropna()
+
+corte = int(len(datos) * 0.8)
+entrenamiento = datos.iloc[:corte]
+prueba = datos.iloc[corte:].copy()
+
+columnasX = ["lag_1", "lag_7", "media_7"]
+modeloSerie = LinearRegression()
+modeloSerie.fit(entrenamiento[columnasX], entrenamiento["ventas"])
+prueba["prediccion"] = modeloSerie.predict(prueba[columnasX])
+
+print("MAE referencia ingenua:", round(mean_absolute_error(prueba["ventas"], prueba["lag_7"])))
+print("MAE regresión con rezagos:", round(mean_absolute_error(prueba["ventas"], prueba["prediccion"])))
+
+plt.figure(figsize=(12, 4))
+plt.plot(prueba["ventas"], label="Real")
+plt.plot(prueba["prediccion"], label="Predicción")
+plt.title("Predicción de ventas en el periodo de prueba")
+plt.legend()
+plt.show()
+</pre>
+                            `,
+                            nextButton: 'Siguiente: Ejercicio 2. Mejorar la predicción'
+                        },
+                        {
+                            title: 'Ejercicio 2. Mejorar la predicción',
+                            content: `<p>Agregue variables del día de la semana al modelo del paso anterior y compare el MAE. Pista: pd.get_dummies(datos.index.dayofweek, prefix="dia") crea una columna de 0 y 1 para cada día.</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Escriba la solución en el script y ejecútelo para comprobar el resultado.</p>
+                            `,
                             nextButton: ''
                         }
                     ]

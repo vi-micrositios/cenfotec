@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedimientos sin parámetros</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="procedimientos-sin-parametros"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #164a98); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22, 74, 152, 0.35);" aria-hidden="true">
+                <i class="fa-solid fa-cubes" aria-hidden="true"></i>
+            </span>
+            <h3 id="procedimientos-sin-parametros" style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Procedimientos: Calculadora de áreas
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 18px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong> aplicar la <strong>abstracción procedimental</strong> para implementar en Python un programa organizado en <strong>procedimientos sin parámetros y sin valor de retorno</strong>, representarlo mediante diagramas de flujo y comprobar su funcionamiento con casos de prueba.
+        </div>
+
+        <!-- INSTRUCCIONES -->
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 22px 0;">En esta actividad programará una calculadora de áreas dividida en <strong>procedimientos</strong>.</p>
+
+
+
+        <!-- PARTE 1: PROGRAME LA CALCULADORA DE ÁREAS -->
+        <div style="background: #f1f9f2; border: 2px solid #a5d6a7; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-code" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Programe la calculadora de áreas
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Escriba en Visual Studio Code un programa que calcule áreas de figuras usando <strong>procedimientos sin parámetros y sin <code>return</code></strong>.</p>
+            <ol style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0; padding-left: 24px;">
+                <li style="margin-bottom: 6px;">Declare las constantes <code>PI = 3.1416</code> y <code>OPCION_SALIR = 4</code> al inicio del archivo.</li>
+                <li style="margin-bottom: 6px;">Programe estos cinco procedimientos, con estos nombres exactos:<ul style="margin: 8px 0 0 0; padding-left: 22px;"><li><code>mostrar_encabezado()</code>: muestra el título «CALCULADORA DE ÁREAS» entre dos líneas de signos <code>=</code>.</li><li><code>mostrar_menu()</code>: muestra «1. Rectángulo», «2. Triángulo», «3. Círculo» y «4. Salir», una opción por línea.</li><li><code>calcular_area_rectangulo()</code>: lee la base y la altura, calcula <code>base * altura</code> y muestra «Área del rectángulo: &lt;área&gt;».</li><li><code>calcular_area_triangulo()</code>: lee la base y la altura, calcula <code>base * altura / 2</code> y muestra «Área del triángulo: &lt;área&gt;».</li><li><code>calcular_area_circulo()</code>: lee el radio, calcula <code>PI * radio * radio</code> y muestra «Área del círculo: &lt;área&gt;», con el área redondeada a 2 decimales.</li></ul></li>
+                <li style="margin-bottom: 6px;">Programe <code>main()</code>: primero llama a <code>mostrar_encabezado()</code>; después repite el menú hasta que el usuario elija la opción 4 y, en cada vuelta, llama al procedimiento que corresponde a la opción elegida. Si la opción no es 1, 2, 3 ni 4, muestra «Opción no válida.».</li>
+                <li style="margin-bottom: 6px;">Al salir del ciclo, <code>main()</code> muestra «Gracias por usar la calculadora.».</li>
+                <li style="margin-bottom: 6px;">La última línea del archivo es la llamada <code>main()</code>.</li>
+                <li style="margin-bottom: 6px;">Ningún procedimiento recibe parámetros ni usa <code>return</code>. Los datos se leen como números decimales (<code>float</code>).</li>
+            </ol>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0;"><strong>Casos de prueba:</strong> ejecute su programa con estos datos y compare.</p>
+            <div style="overflow-x: auto; margin: 12px 0;">
+                <table style="border-collapse: collapse; width: 100%; min-width: 480px;">
+                    <tr><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Opción y datos</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Resultado esperado</th></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Opción 1, base 5, altura 3</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Área del rectángulo: 15.0</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Opción 2, base 6, altura 4</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Área del triángulo: 12.0</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Opción 3, radio 2</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Área del círculo: 12.57</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Opción 7</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Opción no válida.</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Opción 4</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Gracias por usar la calculadora.</td></tr>
+                </table>
+            </div>
+        </div>
+        <!-- PARTE 2: ELABORE LOS DIAGRAMAS DE FLUJO -->
+        <div style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-diagram-project" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Elabore los diagramas de flujo
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Elabore un diagrama de flujo para <code>main()</code> y uno para cada procedimiento: seis diagramas en total.</p>
+
+        </div>
+
+        <!-- CIERRE -->
+        <div style="gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> un procedimiento se <strong>define</strong> con <code>def</code> y se <strong>ejecuta</strong> al llamarlo con paréntesis. Sus variables son locales: solo existen mientras el procedimiento se ejecuta.</span>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
