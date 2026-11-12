@@ -132,6 +132,167 @@ print("El área es:", area)
                     ]
                 },
                 {
+                    id: 'm001-diagrama',
+                    label: 'Diagramas de flujo',
+                    steps: [
+                        {
+                            title: '¿Qué es un diagrama de flujo?',
+                            content: `<p>Un diagrama de flujo es la <strong>representación gráfica de un algoritmo</strong>. Cada instrucción se dibuja con un símbolo, y los símbolos se unen con flechas que indican el orden en que se ejecutan.</p>
+                            <p>Sirve para:</p>
+                            <ul>
+                                <li><strong>Diseñar</strong> la solución antes de programarla: primero se piensa la lógica y después se escribe el código.</li>
+                                <li><strong>Comunicar</strong> la solución: cualquier persona lo puede leer, aunque no conozca el lenguaje de programación.</li>
+                                <li><strong>Revisar</strong> la lógica: es más fácil ver un camino que falta o una condición incorrecta.</li>
+                            </ul>
+                            <p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+El diagrama de flujo es una herramienta de <strong>diseño</strong>, no de construcción: por eso no lleva instrucciones propias del lenguaje, como <code>print()</code>, <code>input()</code> o <code>int()</code>.</p>
+                            `,
+                            nextButton: 'Siguiente: Símbolos'
+                        },
+                        {
+                            title: 'Símbolos del diagrama de flujo',
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+<table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+<thead><tr>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Símbolo</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Nombre</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Uso</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo de texto</th>
+</tr></thead><tbody>
+<tr>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><svg viewBox="0 0 150 60" role="img" aria-label="símbolo" style="display:block; width:130px; max-width:150px; height:auto; margin:0 auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="s-term" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><rect x="20" y="11" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="75" y="30" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Inicio</text></svg></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Terminal</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Marca el inicio y el fin del algoritmo. Cada diagrama tiene un único Inicio y un único Fin.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>Inicio / Fin</code></td>
+</tr>
+<tr style="background:#f3f9ff;">
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><svg viewBox="0 0 150 60" role="img" aria-label="símbolo" style="display:block; width:130px; max-width:150px; height:auto; margin:0 auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="s-io" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><polygon points="37,10 141,10 113,50 9,50" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="75" y="30" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Leer base</text></svg></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Entrada / salida</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Representa los datos que se leen (entrada) o los mensajes y resultados que se muestran (salida).</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>Leer base<br>Mostrar area</code></td>
+</tr>
+<tr>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><svg viewBox="0 0 150 60" role="img" aria-label="símbolo" style="display:block; width:130px; max-width:150px; height:auto; margin:0 auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="s-proc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><rect x="15" y="10" width="120" height="40" fill="#ffffff" stroke="#164a98" stroke-width="2"/><text x="75" y="30" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="#164a98">area = base * altura</text></svg></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Proceso</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Representa un cálculo o una asignación.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>area = base * altura</code></td>
+</tr>
+<tr style="background:#f3f9ff;">
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><svg viewBox="0 0 150 60" role="img" aria-label="símbolo" style="display:block; width:130px; max-width:150px; height:auto; margin:0 auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="s-dec" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><polygon points="75,3 140,30 75,57 10,30" fill="#fff4d6" stroke="#164a98" stroke-width="2"/><text x="75" y="30" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">¿nota &gt;= 70?</text></svg></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Decisión</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Representa una condición. Tiene dos salidas rotuladas: Sí y No (o Verdadero y Falso).</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>¿nota >= 70?</code></td>
+</tr>
+<tr>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><svg viewBox="0 0 150 60" role="img" aria-label="símbolo" style="display:block; width:130px; max-width:150px; height:auto; margin:0 auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="s-pred" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><rect x="10" y="10" width="130" height="40" fill="#f3eefa" stroke="#164a98" stroke-width="2"/><line x1="20" y1="10" x2="20" y2="50" stroke="#164a98" stroke-width="2"/><line x1="130" y1="10" x2="130" y2="50" stroke="#164a98" stroke-width="2"/><text x="75" y="30" text-anchor="middle" dominant-baseline="middle" font-size="11" fill="#164a98">calcular_area(...)</text></svg></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Proceso predefinido</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Representa la llamada a una función o procedimiento que se describe en otro diagrama.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>area = calcular_area(base, altura)</code></td>
+</tr>
+<tr style="background:#f3f9ff;">
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><svg viewBox="0 0 150 60" role="img" aria-label="símbolo" style="display:block; width:130px; max-width:150px; height:auto; margin:0 auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="s-con" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><circle cx="75" cy="30" r="15" fill="#ffffff" stroke="#164a98" stroke-width="2"/><text x="75" y="30" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98" font-weight="bold">1</text></svg></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Conector</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Une partes del diagrama que están separadas, por ejemplo, en otra página. Dos conectores con el mismo número se unen.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>1</code></td>
+</tr>
+<tr>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><svg viewBox="0 0 150 60" role="img" aria-label="símbolo" style="display:block; width:130px; max-width:150px; height:auto; margin:0 auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="s-fl" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><polyline points="20,30 128,30" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#s-fl)"/></svg></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Línea de flujo</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Indica el orden en que se ejecutan las instrucciones. Se dibuja con una flecha.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">—</td>
+</tr>
+</tbody></table></div>
+                            `,
+                            nextButton: 'Siguiente: Reglas'
+                        },
+                        {
+                            title: 'Reglas para construir un diagrama de flujo',
+                            content: `<ul>
+                                <li>Tiene un único símbolo de <strong>Inicio</strong> y un único símbolo de <strong>Fin</strong>.</li>
+                                <li>Se lee de arriba hacia abajo; las flechas indican el orden y no se cruzan.</li>
+                                <li>Las entradas se escriben con <strong>Leer</strong> y las salidas con <strong>Mostrar</strong>.</li>
+                                <li>Cada proceso usa los mismos nombres de variables y constantes que tendrá el código.</li>
+                                <li>Cada rombo contiene una condición completa y tiene dos salidas rotuladas (Sí y No).</li>
+                                <li>Un ciclo se reconoce por la <strong>flecha de retorno</strong> que regresa a la condición.</li>
+                                <li>No quedan flechas sueltas: todo camino llega al Fin.</li>
+                                <li>Si el diagrama no cabe en una página, se usan conectores numerados.</li>
+                            </ul>
+                            <p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+Antes de programar, recorra el diagrama con datos de prueba: si con algún dato no llega al Fin o muestra un resultado incorrecto, el error está en el diseño.</p>
+                            `,
+                            nextButton: 'Siguiente: Ejemplo secuencial'
+                        },
+                        {
+                            title: 'Ejemplo 1: diagrama secuencial',
+                            content: `<p>Calcular el área de un rectángulo. Las instrucciones se ejecutan una después de la otra, sin decisiones.</p>
+                            <svg viewBox="0 0 360 400" role="img" aria-label="Diagrama de flujo secuencial: área de un rectángulo" style="display:block; width:100%; max-width:360px; height:auto; margin:14px auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="fl-seq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><rect x="125" y="11" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="180" y="30" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Inicio</text><polygon points="109,75 279,75 251,115 81,115" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="180" y="95" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Leer base</text><polygon points="109,140 279,140 251,180 81,180" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="180" y="160" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Leer altura</text><rect x="85" y="205" width="190" height="40" fill="#ffffff" stroke="#164a98" stroke-width="2"/><text x="180" y="225" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">area = base * altura</text><polygon points="99,270 289,270 261,310 71,310" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="180" y="290" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Mostrar "El área es:", area</text><rect x="125" y="341" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="180" y="360" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Fin</text><polyline points="180,49 180,75" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-seq)"/><polyline points="180,115 180,140" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-seq)"/><polyline points="180,180 180,205" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-seq)"/><polyline points="180,245 180,270" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-seq)"/><polyline points="180,310 180,341" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-seq)"/></svg>
+                            <p>Programa en Python:</p>
+<pre class="codigo">
+base = float(input("Ingrese la base: "))
+altura = float(input("Ingrese la altura: "))
+area = base * altura
+print("El área es:", area)
+</pre>
+                            
+                            `,
+                            nextButton: 'Siguiente: Ejemplo con decisión'
+                        },
+                        {
+                            title: 'Ejemplo 2: diagrama con una decisión',
+                            content: `<p>Mostrar si un estudiante aprueba (nota mayor o igual que 70) o reprueba. El rombo divide el flujo en dos caminos, que se unen antes del Fin.</p>
+                            <svg viewBox="0 0 440 400" role="img" aria-label="Diagrama de flujo condicional: aprobado o reprobado" style="display:block; width:100%; max-width:440px; height:auto; margin:14px auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="fl-cond" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><rect x="165" y="11" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="220" y="30" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Inicio</text><polygon points="159,75 309,75 281,115 131,115" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="220" y="95" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Leer nota</text><polygon points="220,142 310,180 220,218 130,180" fill="#fff4d6" stroke="#164a98" stroke-width="2"/><text x="220" y="180" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">¿nota &gt;= 70?</text><polygon points="29,250 189,250 161,290 1,290" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="95" y="270" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Mostrar "Aprobado"</text><polygon points="279,250 439,250 411,290 251,290" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="345" y="270" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Mostrar "Reprobado"</text><rect x="165" y="346" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="220" y="365" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Fin</text><polyline points="220,49 220,75" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-cond)"/><polyline points="220,115 220,142" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-cond)"/><polyline points="130,180 95,180 95,250" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-cond)"/><polyline points="310,180 345,180 345,250" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-cond)"/><text x="110" y="168" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#c81f66" font-weight="bold">Sí</text><text x="330" y="168" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#c81f66" font-weight="bold">No</text><polyline points="95,290 95,315 345,315 345,290" fill="none" stroke="#164a98" stroke-width="2"/><polyline points="220,315 220,346" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-cond)"/></svg>
+<pre class="codigo">
+nota = float(input("Nota: "))
+if nota &gt;= 70:
+    print("Aprobado")
+else:
+    print("Reprobado")
+</pre>
+                            
+                            `,
+                            nextButton: 'Siguiente: Ejemplo con ciclo'
+                        },
+                        {
+                            title: 'Ejemplo 3: diagrama con un ciclo',
+                            content: `<p>Mostrar los números del 1 al 5. La flecha que regresa a la condición forma el ciclo: mientras la condición sea verdadera, el cuerpo se repite.</p>
+                            <svg viewBox="0 0 440 470" role="img" aria-label="Diagrama de flujo iterativo: mostrar los números del 1 al 5" style="display:block; width:100%; max-width:440px; height:auto; margin:14px auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="fl-ciclo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><rect x="155" y="11" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="210" y="30" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Inicio</text><rect x="135" y="75" width="150" height="40" fill="#ffffff" stroke="#164a98" stroke-width="2"/><text x="210" y="95" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">contador = 1</text><polygon points="210,145 305,185 210,225 115,185" fill="#fff4d6" stroke="#164a98" stroke-width="2"/><text x="210" y="185" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">¿contador &lt;= 5?</text><polygon points="139,260 309,260 281,300 111,300" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="210" y="280" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Mostrar contador</text><rect x="110" y="330" width="200" height="40" fill="#ffffff" stroke="#164a98" stroke-width="2"/><text x="210" y="350" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">contador = contador + 1</text><rect x="315" y="411" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="370" y="430" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Fin</text><polyline points="210,49 210,75" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-ciclo)"/><polyline points="210,115 210,145" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-ciclo)"/><polyline points="210,225 210,260" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-ciclo)"/><text x="226" y="240" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#c81f66" font-weight="bold">Sí</text><polyline points="210,300 210,330" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-ciclo)"/><polyline points="210,370 210,395 40,395 40,185 115,185" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-ciclo)"/><polyline points="305,185 370,185 370,411" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-ciclo)"/><text x="312" y="173" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#c81f66" font-weight="bold">No</text></svg>
+<pre class="codigo">
+contador = 1
+while contador &lt;= 5:
+    print(contador)
+    contador = contador + 1
+</pre>
+                            <p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+En el diagrama se ven las tres partes del ciclo: la inicialización (<code>contador = 1</code>), la condición (rombo) y la actualización (<code>contador = contador + 1</code>).</p>
+                            `,
+                            nextButton: 'Siguiente: Ejemplo con función'
+                        },
+                        {
+                            title: 'Ejemplo 4: llamada a una función',
+                            content: `<p>Cuando el programa se organiza en funciones, la llamada se dibuja con el símbolo de <strong>proceso predefinido</strong>, y la función tiene su propio diagrama: el Inicio indica su nombre y sus parámetros, y el Fin indica el valor que devuelve.</p>
+                            <svg viewBox="0 0 640 360" role="img" aria-label="Diagrama de flujo con llamada a una función y diagrama de la función" style="display:block; width:100%; max-width:640px; height:auto; margin:14px auto; font-family:Arial, sans-serif;" xmlns="http://www.w3.org/2000/svg"><defs><marker id="fl-func" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#164a98"/></marker></defs><text x="165" y="14" text-anchor="middle" dominant-baseline="middle" font-size="14" fill="#164a98" font-weight="bold">Programa principal</text><rect x="110" y="31" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="165" y="50" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Inicio</text><polygon points="89,95 269,95 241,135 61,135" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="165" y="115" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Leer base, altura</text><rect x="30" y="165" width="270" height="40" fill="#f3eefa" stroke="#164a98" stroke-width="2"/><line x1="40" y1="165" x2="40" y2="205" stroke="#164a98" stroke-width="2"/><line x1="290" y1="165" x2="290" y2="205" stroke="#164a98" stroke-width="2"/><text x="165" y="185" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">area = calcular_area(base, altura)</text><polygon points="94,235 264,235 236,275 66,275" fill="#e3f1fc" stroke="#164a98" stroke-width="2"/><text x="165" y="255" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">Mostrar area</text><rect x="110" y="306" width="110" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="165" y="325" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Fin</text><polyline points="165,69 165,95" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-func)"/><polyline points="165,135 165,165" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-func)"/><polyline points="165,205 165,235" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-func)"/><polyline points="165,275 165,306" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-func)"/><text x="480" y="14" text-anchor="middle" dominant-baseline="middle" font-size="14" fill="#164a98" font-weight="bold">Función calcular_area</text><rect x="355" y="31" width="250" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="480" y="50" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Inicio calcular_area(base, altura)</text><rect x="385" y="105" width="190" height="40" fill="#ffffff" stroke="#164a98" stroke-width="2"/><text x="480" y="125" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#164a98">area = base * altura</text><rect x="390" y="181" width="180" height="38" rx="19" fill="#164a98" stroke="#164a98" stroke-width="2"/><text x="480" y="200" text-anchor="middle" dominant-baseline="middle" font-size="13" fill="#ffffff" font-weight="bold">Fin: devolver area</text><polyline points="480,69 480,105" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-func)"/><polyline points="480,145 480,181" fill="none" stroke="#164a98" stroke-width="2" marker-end="url(#fl-func)"/><line x1="322" y1="12" x2="322" y2="345" stroke="#9cc8ff" stroke-width="2" stroke-dasharray="6 5"/></svg>
+<pre class="codigo">
+def calcular_area(base, altura):
+    area = base * altura
+    return area
+
+base = float(input("Base: "))
+altura = float(input("Altura: "))
+area = calcular_area(base, altura)
+print("Área:", area)
+</pre>
+                            <p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+Las funciones se estudian en el módulo de abstracciones; este ejemplo muestra cómo se representarán en los diagramas.</p>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
                     id: 'm001-lenguaje',
                     label: 'Compilador y editor',
                     steps: [
@@ -3140,6 +3301,167 @@ print(obtener_condicion(nota))
                                 <li>Prefiera recibir datos por parámetros y devolver resultados con <code>return</code>, en lugar de usar variables globales.</li>
                                 <li>Mantenga las funciones cortas; si una crece demasiado, divídala.</li>
                             </ul>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'm006-pruebas',
+                    label: 'Pruebas unitarias y de integración',
+                    steps: [
+                        {
+                            title: 'Niveles de prueba',
+                            content: `<p>Un programa organizado en funciones puede fallar en dos lugares: <strong>dentro de una función</strong> o en la <strong>forma en que las funciones se conectan</strong>. Por eso se prueba por niveles:</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+<table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+<thead><tr>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Nivel</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Qué se prueba</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Cómo se prueba</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Si falla, el error está…</th>
+</tr></thead><tbody>
+<tr>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Prueba unitaria</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Una sola función, por aparte.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Se llama a la función por su nombre, con datos de prueba, antes de <code>main()</code>.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Dentro de esa función: una fórmula, una condición o un ciclo.</td>
+</tr>
+<tr style="background:#f3f9ff;">
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><strong>Prueba de integración</strong></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Varias funciones trabajando juntas.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Se ejecuta <code>main()</code>, que llama a las demás funciones, con un caso completo.</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">En la conexión: argumentos en otro orden, un valor de retorno que no se guarda o una función que no se llama.</td>
+</tr>
+</tbody></table></div>
+<p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+Primero se hacen las pruebas unitarias de cada función y, cuando todas pasan, la prueba de integración con <code>main()</code>.</p>
+                            `,
+                            nextButton: 'Siguiente: Prueba unitaria'
+                        },
+                        {
+                            title: 'Prueba unitaria',
+                            content: `<p>Para probar una función por aparte, se escribe una <strong>llamada por su nombre</strong>, con datos de prueba, en las líneas anteriores a <code>main()</code>:</p>
+                            <ul>
+                                <li>Si la función <strong>devuelve</strong> un valor (tiene <code>return</code>), la llamada se escribe dentro de <code>print()</code> para ver lo que devuelve.</li>
+                                <li>Si es un <strong>procedimiento</strong> (solo muestra mensajes), se llama directamente.</li>
+                                <li>El resultado esperado se calcula a mano <strong>antes</strong> de ejecutar y se escribe en un comentario.</li>
+                            </ul>
+<pre class="codigo">
+def mostrar_linea(caracter, cantidad):
+    print(caracter * cantidad)
+
+def mostrar_titulo(texto):
+    mostrar_linea("=", 25)
+    print(texto)
+    mostrar_linea("=", 25)
+
+def calcular_area(base, altura):
+    area = base * altura
+    return area
+
+def main():
+    mostrar_titulo("ÁREA DE UN RECTÁNGULO")
+    base = float(input("Base: "))
+    altura = float(input("Altura: "))
+    area = calcular_area(base, altura)
+    print("Área:", area)
+    mostrar_linea("-", 25)
+
+# Pruebas unitarias
+mostrar_linea("+", 10)          # Esperado: ++++++++++
+mostrar_titulo("PRUEBA")        # Esperado: PRUEBA entre dos líneas de =
+print(calcular_area(10, 5))     # Esperado: 50
+print(calcular_area(0, 5))      # Esperado: 0 (caso límite)
+
+main()  # Prueba de integración (mostrar_titulo + mostrar_linea + calcular_area)
+</pre>
+                            
+                            `,
+                            nextButton: 'Siguiente: Resultado en la terminal'
+                        },
+                        {
+                            title: 'Resultado en la terminal',
+                            content: `<p>Al ejecutar el archivo, primero aparecen los resultados de las pruebas unitarias y después empieza <code>main()</code> (datos: base 10, altura 5):</p>
+<pre class="codigo">
+++++++++++
+=========================
+PRUEBA
+=========================
+50
+0
+=========================
+ÁREA DE UN RECTÁNGULO
+=========================
+Base: 10
+Altura: 5
+Área: 50.0
+-------------------------
+</pre>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+<table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+<thead><tr>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Prueba</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Tipo</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado esperado</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado obtenido</th>
+<th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Estado</th>
+</tr></thead><tbody>
+<tr>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>mostrar_linea("+", 10)</code></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Unitaria</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">++++++++++</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">++++++++++</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Exitoso</td>
+</tr>
+<tr style="background:#f3f9ff;">
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>calcular_area(10, 5)</code></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Unitaria</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">50</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">50</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Exitoso</td>
+</tr>
+<tr>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>calcular_area(0, 5)</code></td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Unitaria (caso límite)</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">0</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">0</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Exitoso</td>
+</tr>
+<tr style="background:#f3f9ff;">
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;"><code>main()</code> con base 10 y altura 5</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Integración</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Título, «Área: 50.0» y una línea de guiones</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Igual al esperado</td>
+<td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:middle;">Exitoso</td>
+</tr>
+</tbody></table></div>
+<p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+La evidencia de cada prueba es una <strong>captura de pantalla de la terminal</strong>, no la salida copiada y pegada como texto.</p>
+                            `,
+                            nextButton: 'Siguiente: Por qué los dos niveles'
+                        },
+                        {
+                            title: '¿Por qué se necesitan los dos niveles?',
+                            content: `<p>En este <code>main()</code> se olvidó guardar el valor que devuelve <code>calcular_area</code>:</p>
+<pre class="codigo">
+def main():
+    mostrar_titulo("ÁREA DE UN RECTÁNGULO")
+    base = float(input("Base: "))
+    altura = float(input("Altura: "))
+    calcular_area(base, altura)      # el valor devuelto no se guarda
+    print("Área:", area)             # NameError: area no existe aquí
+    mostrar_linea("-", 25)
+</pre>
+                            <ul>
+                                <li><strong>Prueba unitaria:</strong> <code>print(calcular_area(10, 5))</code> muestra 50. <span style="color:#00734a; font-weight:bold;">Pasa</span>: la función está bien.</li>
+                                <li><strong>Prueba de integración:</strong> <code>main()</code> se detiene con NameError. <span style="color:#d2232a; font-weight:bold;">Falla</span>: el error está en la conexión entre <code>main()</code> y la función.</li>
+                            </ul>
+                            <p class="nota">
+<i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+Al revés, si la fórmula de <code>calcular_area</code> estuviera mal, la prueba de integración solo mostraría un área incorrecta al final, sin decir en qué función está el error; la prueba unitaria lo señala de inmediato.</p>
                             `,
                             nextButton: ''
                         }

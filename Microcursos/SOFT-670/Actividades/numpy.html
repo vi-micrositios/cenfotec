@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio: Redes sociales y bienestar de 2500 adolescentes</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- ============ TARJETA PRINCIPAL ============ -->
+    <section
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 20px auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #00928d; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"
+        aria-labelledby="ejercicio-adolescentes-numpy">
+
+        <!-- ENCABEZADO -->
+        <div
+            style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span
+                style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #00928d, #006AEA); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0, 146, 141, 0.35);"
+                aria-hidden="true">
+                <i class="fa-solid fa-file-csv"></i>
+            </span>
+            <h3 id="ejercicio-adolescentes-numpy"
+                style="margin: 0; color: #164a98; font-size: 26px; font-weight: bold; letter-spacing: -0.3px;">
+                Redes sociales y bienestar de 2500 adolescentes
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div
+            style="background: #eef5ff; border-left: 5px solid #00928d; padding: 16px 18px; margin: 0 0 25px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong>
+            Cargar un archivo CSV con <strong>NumPy</strong>, <strong>tratar los valores faltantes</strong>, calcular
+            estadísticas, <strong>comparar grupos con filtros</strong> y <strong>medir correlaciones</strong> para
+            responder una pregunta con datos.
+        </div>
+
+        <!-- CONTEXTO -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-users" style="color: #00928d; font-size: 22px;" aria-hidden="true"></i>
+                Contexto
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                En el taller se analizaron con NumPy los datos de 8000 estudiantes: se cargó el archivo, se buscaron los
+                faltantes, se calcularon estadísticas, se filtraron filas y se calculó la correlación. Ahora se aplica
+                <strong>el mismo proceso a otro conjunto de datos</strong>: los hábitos de uso de redes sociales, sueño y
+                bienestar de 2500 adolescentes.
+            </p>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                La pregunta que debe responder es: <strong>¿cómo se relacionan las horas en redes sociales con el sueño,
+                el rendimiento académico y el estrés?</strong>
+            </p>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">
+                Use el archivo <code>Teen_Mental_Health_Dataset.csv</code>, de la carpeta <code>datos</code>. Tiene 12
+                columnas; estas son las <strong>numéricas</strong>, que son las que se cargan con NumPy:
+            </p>
+            <div style="overflow-x: auto; margin-bottom: 4px;" tabindex="0" role="region" aria-label="Columnas numéricas del archivo, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Columnas numéricas de Teen_Mental_Health_Dataset.csv</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Posición</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Columna</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Contenido</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">0</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>age</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Edad (13 a 19 años)</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">2</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>daily_social_media_hours</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Horas diarias en redes sociales</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">4</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>sleep_hours</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Horas de sueño</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">5</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>screen_time_before_sleep</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Horas de pantalla antes de dormir</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">6</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>academic_performance</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Rendimiento académico (2 a 4)</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">7</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>physical_activity</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Horas diarias de actividad física</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">9</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>stress_level</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Nivel de estrés (1 a 10)</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">10</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>anxiety_level</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Nivel de ansiedad (1 a 10)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> las columnas 1, 3, 8 y 11 tienen texto y no se cargan. Después de cargar, el arreglo tiene sus <strong>propias posiciones</strong>: la columna 0 del arreglo es la edad, la 1 son las horas en redes sociales, la 2 el sueño, y así sucesivamente.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 1 ===================== -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-1" style="color: #c7ac19; font-size: 24px;" aria-hidden="true"></i>
+                Cargar y revisar los datos
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">Cree el archivo <code>ejercicio002_adolescentes.py</code> en la carpeta del curso, junto a la carpeta <code>datos</code>. Esta es la estructura sugerida; complete las partes marcadas con <code>…</code>:</p>
+            <pre tabindex="0" aria-label="Estructura sugerida del script" style="background: #1b2a41; color: #f1f5fb; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.55; font-family: Consolas, 'Courier New', monospace; margin: 0 0 16px 0; white-space: pre;"><code>from pathlib import Path
+import numpy as np
+
+# ---------- Ruta del archivo ----------
+DATOS = Path(__file__).parent / &quot;datos&quot;
+archivo = DATOS / &quot;Teen_Mental_Health_Dataset.csv&quot;
+print(&quot;¿Existe el archivo?&quot;, archivo.exists())
+
+# ---------- 1. Cargar las columnas numéricas ----------
+datos = np.genfromtxt(archivo, delimiter=&quot;,&quot;, skip_header=1, usecols=(…))
+print(&quot;Forma (filas, columnas):&quot;, …)
+
+# ---------- 2. Valores faltantes ----------
+print(&quot;Faltantes por columna:&quot;, …)
+completas = datos[~np.isnan(datos).any(axis=1)]    # solo las filas sin faltantes
+print(&quot;Filas completas:&quot;, …)
+
+# ---------- 3. Resumen de cada columna ----------
+columnas = [&quot;Edad&quot;, &quot;Redes (h)&quot;, …]                # un nombre por cada columna
+minimos = completas.min(axis=0)
+# … máximos y promedios
+
+for i in range(len(columnas)):
+    print(…)                                         # una línea por columna, 2 decimales</code></pre>
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Construir la ruta de la carpeta <code>datos</code> con <code>Path</code>, no con una ruta escrita a mano.</li>
+                    <li>Cargar las columnas 0, 2, 4, 5, 6, 7, 9 y 10 con <code>np.genfromtxt</code> y mostrar la <strong>forma</strong> del arreglo.</li>
+                    <li>Contar los faltantes de cada columna con <code>np.isnan()</code> y <code>sum(axis=0)</code>.</li>
+                    <li>Crear el arreglo <code>completas</code>, sin filas con faltantes, y usarlo en el resto del ejercicio.</li>
+                    <li>Mostrar el <strong>mínimo</strong>, el <strong>máximo</strong> y el <strong>promedio</strong> de cada columna, con su nombre en español y 2 decimales.</li>
+                </ul>
+            </div>
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Importante:</strong> si usa <code>mean()</code> o <code>max()</code> sobre un arreglo que tiene faltantes, el resultado es <code>nan</code>. Use <code>completas</code> o las funciones <code>np.nanmean</code>, <code>np.nanmax</code> y <code>np.nanmin</code>.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 2 ===================== -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-2" style="color: #00928d; font-size: 24px;" aria-hidden="true"></i>
+                Comparar grupos con filtros
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">Guarde en variables las columnas de horas en redes sociales, sueño, rendimiento y estrés. Con <strong>máscaras</strong> (condiciones entre corchetes) compare a quienes usan redes sociales <strong>más de 6 horas</strong> con quienes las usan <strong>menos de 2 horas</strong>. Anote sus resultados en una tabla como esta:</p>
+            <div style="overflow-x: auto; margin-bottom: 4px;" tabindex="0" role="region" aria-label="Plantilla de comparación de grupos, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Comparación de grupos</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Grupo</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Adolescentes</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Sueño promedio (h)</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Rendimiento promedio</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Estrés promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Más de 6 horas en redes</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Menos de 2 horas en redes</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Crear las máscaras <code>alto = redes &gt; 6</code> y <code>bajo = redes &lt; 2</code>, y usarlas para filtrar las otras columnas.</li>
+                    <li>Mostrar en la terminal, para cada grupo, la cantidad de adolescentes y los tres promedios, con un texto que explique cada valor.</li>
+                    <li>Calcular los percentiles 25, 50 y 75 de las horas en redes sociales con <code>np.percentile</code>.</li>
+                    <li>Completar la tabla con los valores que obtuvo.</li>
+                </ul>
+            </div>
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> una máscara es un arreglo de <code>True</code> y <code>False</code>. Al sumarla con <code>sum()</code> se obtiene cuántos valores cumplen la condición, porque <code>True</code> vale 1.
+                </p>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 3 ===================== -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-3" style="color: #c81f66; font-size: 24px;" aria-hidden="true"></i>
+                Correlaciones, resultado y conclusión
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">La <strong>correlación</strong> va de -1 a 1: cerca de 1 es una relación positiva fuerte, cerca de -1 una negativa fuerte y cerca de 0, ninguna. Calcule la correlación de las horas en redes sociales con las otras variables y anótela:</p>
+            <div style="overflow-x: auto; margin-bottom: 4px;" tabindex="0" role="region" aria-label="Plantilla de correlaciones, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 560px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Correlación con las horas en redes sociales</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Variable</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Correlación</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">¿Positiva o negativa?</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">¿Fuerte o débil?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Sueño</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Rendimiento académico</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Estrés</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">…</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Calcular cada correlación con <code>np.corrcoef(x, y)[0, 1]</code> y mostrarla con 3 decimales.</li>
+                    <li>Guardar con <code>np.savetxt</code> el archivo <code>adolescentes_alto_uso.csv</code>, en la carpeta <code>datos</code>, con las filas de quienes usan redes sociales más de 6 horas: separado por comas, con 2 decimales y con una fila de encabezados (<code>header=…</code> y <code>comments=""</code>).</li>
+                    <li>Abrir el archivo generado en Visual Studio Code y revisar que tenga encabezados.</li>
+                    <li>Escribir al final del script, como comentario, la <strong>respuesta a la pregunta</strong> del ejercicio en dos o tres oraciones, apoyada en los números obtenidos.</li>
+                    <li><strong>Reto opcional:</strong> con <code>np.unique()</code> y un ciclo <code>for</code>, mostrar para cada edad cuántos adolescentes hay y su promedio de horas en redes sociales.</li>
+                </ul>
+            </div>
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Importante:</strong> una correlación fuerte <strong>no prueba</strong> que una variable cause la otra. Tómelo en cuenta al escribir su conclusión.
+                </p>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6; margin-top: 22px;">Si algo falla, revise esta tabla:</p>
+            <div style="overflow-x: auto; margin-bottom: 4px;" tabindex="0" role="region" aria-label="Errores frecuentes, desplazable">
+                <table style="border-collapse: collapse; width: 100%; min-width: 680px; font-size: 14px; color: #1c3b64;">
+                    <caption style="text-align: left; padding-bottom: 8px; font-weight: 600; color: #164a98;">Errores frecuentes y su causa</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Mensaje o síntoma</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Causa probable</th>
+                            <th scope="col" style="text-align: left; padding: 10px; border: 1px solid #c8d1df; background: #164a98; color: #ffffff;">Solución</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>¿Existe el archivo? False</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">El CSV no está en la carpeta <code>datos</code> o tiene otro nombre</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Mover el archivo a <code>datos</code>, junto al script, y revisar el nombre</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Columnas llenas de <code>nan</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">En <code>usecols</code> se incluyó una columna de texto</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Usar solo las posiciones de la tabla del contexto</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Un promedio da <code>nan</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Se calculó sobre <code>datos</code>, que tiene faltantes</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Usar <code>completas</code> o las funciones <code>nan</code></td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;"><code>IndexError: index 8 is out of bounds</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Se usó la posición del archivo y no la del arreglo</td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">El arreglo tiene 8 columnas, numeradas de 0 a 7</td></tr>
+                        <tr><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">El CSV generado empieza con <code>#</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Falta <code>comments=""</code> en <code>np.savetxt</code></td><td style="padding: 10px; border: 1px solid #c8d1df; vertical-align: top;">Agregar <code>comments=""</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ===================== PARTE 4 ===================== -->
+        <div style="background: #fafcff; border: 2px solid #c8d1df; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-4" style="color: #006AEA; font-size: 24px;" aria-hidden="true"></i>
+                Comprobar, entregar y demostrar
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; margin: 0 0 16px 0; line-height: 1.6;">Si su programa está bien, debe obtener estos valores: forma <code>(2500, 8)</code>, faltantes <code>[1 0 0 1 0 0 0 0]</code>, <code>2498</code> filas completas y <code>667</code> adolescentes con más de 6 horas en redes sociales.</p>
+            <div style="background: #f4f9ff; border: 2px solid #9CC8FF; border-radius: 10px; padding: 16px 18px; margin-top: 18px;">
+                <p style="margin: 0 0 10px 0; font-weight: 600; color: #164a98;">
+                    <i class="fa-solid fa-list-check" style="color: #00928d; margin-right: 6px;" aria-hidden="true"></i>
+                    Requisitos
+                </p>
+                <ul style="margin: 0; padding-left: 24px; color: #1c3b64; font-size: 14px; line-height: 1.8;">
+                    <li>Subir a <strong>Moodle</strong>  en <strong> Evaluación (Laboratorio: Numpy)</strong> el script <code>ejercicio002_adolescentes.py</code> y el archivo <code>adolescentes_alto_uso.csv</code>.</li>
+                    
+                </ul>
+            </div>
+            <div style="background: #fffbea; border-left: 5px solid #C7AC19; border-radius: 8px; padding: 14px 16px; margin-top: 18px;">
+                <p style="margin: 0; color: #1c3b64; font-size: 14px; line-height: 1.7;">
+                    <strong>Nota:</strong> no abra ni guarde el CSV con Excel, porque puede cambiar el formato de los números y los resultados dejarían de coincidir.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+
+</html>

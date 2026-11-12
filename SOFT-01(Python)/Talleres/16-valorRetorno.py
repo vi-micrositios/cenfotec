@@ -1,4 +1,4 @@
-# Ejemplo 3: funciones con return
+# Ejemplo: Funciones con return
 NOTA_MINIMA = 0
 NOTA_MAXIMA = 100
 NOTA_APROBACION = 70

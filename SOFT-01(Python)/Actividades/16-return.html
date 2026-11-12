@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones con parámetros y return</title>
+    <!-- Font Awesome 6 (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="funciones-parametros-return"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #006AEA; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #006AEA, #164a98); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22, 74, 152, 0.35);" aria-hidden="true">
+                <i class="fa-solid fa-gears" aria-hidden="true"></i>
+            </span>
+            <h3 id="funciones-parametros-return" style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Funciones con parámetros y return: caminata espacial
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 16px 18px; margin: 0 0 18px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong> aplicar la <strong>abstracción procedimental</strong> para implementar en Python funciones que reciben datos mediante <strong>parámetros</strong> y devuelven resultados con <strong>return</strong>, representarlas mediante diagramas de flujo y comprobar su funcionamiento con casos de prueba.
+        </div>
+
+        <!-- INSTRUCCIONES -->
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 22px 0;">En esta actividad programará las funciones que verifican si el oxígeno alcanza para una caminata espacial: lea la explicación, programe las funciones (Parte 1), programe el programa principal (Parte 2) y elabore al menos un diagrama de flujo (Parte 3). Si termina antes, resuelva el reto opcional.</p>
+
+        <!-- DE PROCEDIMIENTO A FUNCIÓN -->
+        <div style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-book-open" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                De procedimiento a función
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">En la actividad anterior, cada procedimiento leía sus datos y mostraba su resultado. Una <strong>función con parámetros y <code>return</code></strong> trabaja distinto: <strong>recibe</strong> los datos en sus parámetros y <strong>devuelve</strong> el resultado a quien la llamó, que puede guardarlo en una variable y usarlo después.</p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code># Procedimiento (sin parámetros ni return): lee, calcula y muestra
+def calcular_area_rectangulo():
+    base = float(input(&quot;Base: &quot;))
+    altura = float(input(&quot;Altura: &quot;))
+    print(&quot;Área:&quot;, base * altura)
+
+
+# Función con parámetros y return: recibe los datos y DEVUELVE el resultado
+def calcular_area(base, altura):
+    area = base * altura
+    return area
+
+
+area_sala = calcular_area(5, 4)        # area_sala guarda 20
+area_cocina = calcular_area(3, 2.5)    # area_cocina guarda 7.5
+print(&quot;Área total:&quot;, area_sala + area_cocina)</code></pre>
+            <ul style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0; padding-left: 24px;">
+                <li style="margin-bottom: 6px;"><code>base</code> y <code>altura</code> son los <strong>parámetros</strong>: variables que reciben los valores de la llamada.</li>
+                <li style="margin-bottom: 6px;">En <code>calcular_area(5, 4)</code>, los valores 5 y 4 son los <strong>argumentos</strong>.</li>
+                <li style="margin-bottom: 6px;"><code>return area</code> <strong>devuelve</strong> el valor: la llamada <code>calcular_area(5, 4)</code> se reemplaza por 20.</li>
+                <li style="margin-bottom: 6px;">Como la función devuelve el valor en lugar de mostrarlo, el resultado se puede reutilizar: aquí se suman dos áreas.</li>
+            </ul>
+            <div style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 12px 16px; margin: 14px 0 0 0; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;"><strong>En el diagrama:</strong> En el diagrama de flujo, el inicio indica el nombre y los parámetros (<code>Inicio calcular_area(base, altura)</code>) y el fin indica el valor que devuelve (<code>Fin: devolver area</code>). La llamada se dibuja con el símbolo de proceso predefinido, incluida la variable que recibe el valor: <code>area_sala = calcular_area(5, 4)</code>.</div>
+        </div>
+        <!-- SITUACIÓN: LA CAMINATA ESPACIAL -->
+        <div style="background: #fff5f7; border: 2px solid #f3b3c6; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-user-astronaut" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i>
+                Situación: la caminata espacial
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Antes de que los astronautas salgan de la nave a una <strong>caminata espacial</strong>, el sistema debe verificar si el oxígeno de los trajes alcanza. Cada astronauta consume <strong>2 unidades de oxígeno por minuto</strong> y siempre deben quedar <strong>20 unidades de reserva</strong>.</p>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Declare estas constantes al inicio del archivo:</p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code>CONSUMO_OXIGENO_MINUTO = 2     # unidades por astronauta por minuto
+RESERVA_OXIGENO = 20           # unidades que siempre deben quedar de reserva
+MARGEN_SEGURO = 30             # margen mínimo para considerar la caminata segura</code></pre>
+        </div>
+        <!-- PARTE 1: PROGRAME LAS FUNCIONES -->
+        <div style="background: #f1f9f2; border: 2px solid #a5d6a7; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-code" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Parte 1: Programe las funciones
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Programe las siguientes <strong>cuatro</strong> funciones con estos nombres y parámetros. Cada función que devuelve un valor tiene <strong>un único <code>return</code></strong>, como última instrucción. Las funciones de cálculo <strong>no</strong> usan <code>input()</code> ni <code>print()</code>: reciben los datos por sus parámetros y devuelven el resultado.</p>
+            <div style="overflow-x: auto; margin: 12px 0;">
+                <table style="border-collapse: collapse; width: 100%; min-width: 480px;">
+                    <tr><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Función</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Parámetros</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Devuelve</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Qué hace</th></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;"><code>calcular_oxigeno_requerido</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;"><code>minutos, astronautas</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">int</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Oxígeno requerido = minutos × astronautas × CONSUMO_OXIGENO_MINUTO + RESERVA_OXIGENO.</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;"><code>oxigeno_alcanza</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;"><code>disponible, requerido</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">bool</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;"><code>True</code> si el disponible es mayor o igual que el requerido; si no, <code>False</code>.</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;"><code>calcular_minutos_maximos</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;"><code>disponible, astronautas</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">int</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Minutos completos que se pueden caminar sin usar la reserva: (disponible − RESERVA_OXIGENO) // (astronautas × CONSUMO_OXIGENO_MINUTO). Si el disponible es menor que la reserva, devuelve 0.</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;"><code>clasificar_margen</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;"><code>disponible, requerido</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">str</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Calcula margen = disponible − requerido y devuelve «Insuficiente» si el margen es menor que 0, «Bajo» si es menor que MARGEN_SEGURO y «Seguro» en los demás casos.</td></tr>
+                </table>
+            </div>
+        </div>
+        <!-- PARTE 2: PROGRAME EL PROGRAMA PRINCIPAL -->
+        <div style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-play" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Parte 2: Programe el programa principal
+            </h4>
+            <ol style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0; padding-left: 24px;">
+                <li style="margin-bottom: 6px;">Programe <code>main()</code>: lea la cantidad de astronautas, la duración de la caminata y el oxígeno disponible como números enteros, con los mensajes «Cantidad de astronautas: », «Duración de la caminata (minutos): » y «Oxígeno disponible: ».</li>
+                <li style="margin-bottom: 6px;">Llame a <code>calcular_oxigeno_requerido</code>, <code>clasificar_margen</code> y <code>calcular_minutos_maximos</code>, y guarde cada valor devuelto en una variable.</li>
+                <li style="margin-bottom: 6px;">Muestre, en este orden: «Oxígeno requerido: &lt;requerido&gt;», «Margen de oxígeno: &lt;clasificacion&gt;», «Caminata autorizada.» o «Caminata no autorizada.» (use <code>oxigeno_alcanza</code> en la condición del <code>if</code>) y «Tiempo máximo posible: &lt;minutos_maximos&gt; minutos».</li>
+                <li style="margin-bottom: 6px;">La última línea del archivo es la llamada <code>main()</code>.</li>
+            </ol>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0;"><strong>Casos de prueba:</strong></p>
+            <div style="overflow-x: auto; margin: 12px 0;">
+                <table style="border-collapse: collapse; width: 100%; min-width: 480px;">
+                    <tr><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Astronautas</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Minutos</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Oxígeno disponible</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">Resultado esperado</th></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">2</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">30</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">160</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Oxígeno requerido: 140 · Margen de oxígeno: Bajo · Caminata autorizada. · Tiempo máximo posible: 35 minutos</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">3</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">40</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">300</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Oxígeno requerido: 260 · Margen de oxígeno: Seguro · Caminata autorizada. · Tiempo máximo posible: 46 minutos</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">2</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">60</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">200</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Oxígeno requerido: 260 · Margen de oxígeno: Insuficiente · Caminata no autorizada. · Tiempo máximo posible: 45 minutos</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">1</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">10</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">15</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Oxígeno requerido: 40 · Margen de oxígeno: Insuficiente · Caminata no autorizada. · Tiempo máximo posible: 0 minutos</td></tr>
+                </table>
+            </div>
+            <button type="button" id="btn-sol-codigo" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: #00734a; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; margin-top: 14px;"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver solución</button>
+            <div id="sol-codigo" style="display: none; margin-top: 10px;">
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;"><strong>Programa completo:</strong></p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code># ============================================================
+# Archivo: caminata_espacial.py
+# Descripción: Verifica si el oxígeno alcanza para una caminata
+#              espacial, usando funciones con parámetros y return.
+# ============================================================
+CONSUMO_OXIGENO_MINUTO = 2     # unidades por astronauta por minuto
+RESERVA_OXIGENO = 20           # unidades que siempre deben quedar de reserva
+MARGEN_SEGURO = 30             # margen mínimo para considerar la caminata segura
+
+
+def calcular_oxigeno_requerido(minutos, astronautas):
+    &quot;&quot;&quot;Devuelve el oxígeno requerido para la caminata, incluida la reserva.&quot;&quot;&quot;
+    requerido = minutos * astronautas * CONSUMO_OXIGENO_MINUTO + RESERVA_OXIGENO
+    return requerido
+
+
+def oxigeno_alcanza(disponible, requerido):
+    &quot;&quot;&quot;Devuelve True si el oxígeno disponible es mayor o igual que el requerido.&quot;&quot;&quot;
+    alcanza = disponible &gt;= requerido
+    return alcanza
+
+
+def calcular_minutos_maximos(disponible, astronautas):
+    &quot;&quot;&quot;Devuelve los minutos completos que se pueden caminar sin tocar la reserva (0 si no alcanza ni la reserva).&quot;&quot;&quot;
+    if disponible &lt; RESERVA_OXIGENO:
+        minutos = 0
+    else:
+        minutos = (disponible - RESERVA_OXIGENO) // (astronautas * CONSUMO_OXIGENO_MINUTO)
+    return minutos
+
+
+def clasificar_margen(disponible, requerido):
+    &quot;&quot;&quot;Devuelve &#x27;Insuficiente&#x27;, &#x27;Bajo&#x27; o &#x27;Seguro&#x27; según el margen de oxígeno.&quot;&quot;&quot;
+    margen = disponible - requerido
+    if margen &lt; 0:
+        clasificacion = &quot;Insuficiente&quot;
+    elif margen &lt; MARGEN_SEGURO:
+        clasificacion = &quot;Bajo&quot;
+    else:
+        clasificacion = &quot;Seguro&quot;
+    return clasificacion
+
+
+def main():
+    &quot;&quot;&quot;Programa principal: guarda en variables los valores que devuelven las funciones.&quot;&quot;&quot;
+    astronautas = int(input(&quot;Cantidad de astronautas: &quot;))
+    minutos = int(input(&quot;Duración de la caminata (minutos): &quot;))
+    disponible = int(input(&quot;Oxígeno disponible: &quot;))
+    requerido = calcular_oxigeno_requerido(minutos, astronautas)
+    clasificacion = clasificar_margen(disponible, requerido)
+    minutos_maximos = calcular_minutos_maximos(disponible, astronautas)
+    print(&quot;Oxígeno requerido:&quot;, requerido)
+    print(&quot;Margen de oxígeno:&quot;, clasificacion)
+    if oxigeno_alcanza(disponible, requerido):
+        print(&quot;Caminata autorizada.&quot;)
+    else:
+        print(&quot;Caminata no autorizada.&quot;)
+    print(&quot;Tiempo máximo posible:&quot;, minutos_maximos, &quot;minutos&quot;)
+
+
+main()</code></pre>
+            </div>
+        </div>
+        <!-- PARTE 3: ELABORE AL MENOS UN DIAGRAMA DE FLUJO -->
+        <div style="background: #fffaf0; border: 2px solid #ffd98a; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-diagram-project" style="color: #C7AC19; font-size: 22px;" aria-hidden="true"></i>
+                Parte 3: Elabore al menos un diagrama de flujo
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">Elabore <strong>al menos un</strong> diagrama de flujo: el de <code>calcular_minutos_maximos</code>. Si termina antes, elabore también el de <code>main()</code>.</p>
+            <ul style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0; padding-left: 24px;">
+                <li style="margin-bottom: 6px;">El símbolo de inicio indica el nombre y los parámetros: <code>Inicio calcular_minutos_maximos(disponible, astronautas)</code>.</li>
+                <li style="margin-bottom: 6px;">El símbolo de fin indica el valor que devuelve: <code>Fin: devolver minutos</code>.</li>
+                <li style="margin-bottom: 6px;">En <code>main()</code>, cada llamada se dibuja con el símbolo de proceso predefinido e incluye la variable que recibe el valor: <code>requerido = calcular_oxigeno_requerido(minutos, astronautas)</code>.</li>
+            </ul>
+            <button type="button" id="btn-sol-diagramas" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: #00734a; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; margin-top: 14px;"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver solución</button>
+            <div id="sol-diagramas" style="display: none; margin-top: 10px;">
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;"><strong>Diagramas de referencia</strong> (incluye también las otras tres funciones):</p>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 14px;">
+                <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 8px 0;"><strong><code>calcular_oxigeno_requerido(minutos, astronautas)</code></strong></p>
+                <div style="overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width: 528px; height: auto;" role="img" aria-label="Diagrama de flujo de calcular_oxigeno_requerido(minutos, astronautas)"
+ viewBox="0.00 0.00 422.80 221.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 207.4)">
+<title>G</title>
+<text text-anchor="middle" x="197" y="-177.8" font-family="Segoe UI,Arial" font-size="14.00" fill="#164a98">calcular_oxigeno_requerido(minutos, astronautas)</text>
+
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M347.5,-170C347.5,-170 46.5,-170 46.5,-170 40.5,-170 34.5,-164 34.5,-158 34.5,-158 34.5,-146 34.5,-146 34.5,-140 40.5,-134 46.5,-134 46.5,-134 347.5,-134 347.5,-134 353.5,-134 359.5,-140 359.5,-146 359.5,-146 359.5,-158 359.5,-158 359.5,-164 353.5,-170 347.5,-170"/>
+<text text-anchor="middle" x="197" y="-148.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Inicio calcular_oxigeno_requerido(minutos, astronautas)</text>
+</g>
+
+<g id="node2" class="node">
+<title>a</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="394,-104 0,-104 0,-66 394,-66 394,-104"/>
+<text text-anchor="middle" x="197" y="-88.4" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">requerido = minutos * astronautas * CONSUMO_OXIGENO_MINUTO</text>
+<text text-anchor="middle" x="197" y="-75.4" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">+ RESERVA_OXIGENO</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;a</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M197,-133.92C197,-127.33 197,-119.63 197,-112.35"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="199.8,-112.1 197,-104.1 194.2,-112.1 199.8,-112.1"/>
+</g>
+
+<g id="node3" class="node">
+<title>fin</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M260,-36C260,-36 134,-36 134,-36 128,-36 122,-30 122,-24 122,-24 122,-12 122,-12 122,-6 128,0 134,0 134,0 260,0 260,0 266,0 272,-6 272,-12 272,-12 272,-24 272,-24 272,-30 266,-36 260,-36"/>
+<text text-anchor="middle" x="197" y="-14.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Fin: devolver requerido</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>a&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M197,-65.89C197,-59.2 197,-51.48 197,-44.26"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="199.8,-44.12 197,-36.12 194.2,-44.12 199.8,-44.12"/>
+</g>
+</g>
+</svg>
+
+                </div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 14px;">
+                <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 8px 0;"><strong><code>oxigeno_alcanza(disponible, requerido)</code></strong></p>
+                <div style="overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width: 373px; height: auto;" role="img" aria-label="Diagrama de flujo de oxigeno_alcanza(disponible, requerido)"
+ viewBox="0.00 0.00 298.80 219.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 205.4)">
+<title>G</title>
+<text text-anchor="middle" x="135" y="-175.8" font-family="Segoe UI,Arial" font-size="14.00" fill="#164a98">oxigeno_alcanza(disponible, requerido)</text>
+
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M258,-168C258,-168 12,-168 12,-168 6,-168 0,-162 0,-156 0,-156 0,-144 0,-144 0,-138 6,-132 12,-132 12,-132 258,-132 258,-132 264,-132 270,-138 270,-144 270,-144 270,-156 270,-156 270,-162 264,-168 258,-168"/>
+<text text-anchor="middle" x="135" y="-146.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Inicio oxigeno_alcanza(disponible, requerido)</text>
+</g>
+
+<g id="node2" class="node">
+<title>a</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="238.5,-102 31.5,-102 31.5,-66 238.5,-66 238.5,-102"/>
+<text text-anchor="middle" x="135" y="-80.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">alcanza = disponible &gt;= requerido</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;a</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M135,-131.85C135,-125.25 135,-117.57 135,-110.35"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="137.8,-110.2 135,-102.2 132.2,-110.2 137.8,-110.2"/>
+</g>
+
+<g id="node3" class="node">
+<title>fin</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M193.5,-36C193.5,-36 76.5,-36 76.5,-36 70.5,-36 64.5,-30 64.5,-24 64.5,-24 64.5,-12 64.5,-12 64.5,-6 70.5,0 76.5,0 76.5,0 193.5,0 193.5,0 199.5,0 205.5,-6 205.5,-12 205.5,-12 205.5,-24 205.5,-24 205.5,-30 199.5,-36 193.5,-36"/>
+<text text-anchor="middle" x="135" y="-14.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Fin: devolver alcanza</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>a&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M135,-65.85C135,-59.25 135,-51.57 135,-44.35"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="137.8,-44.2 135,-36.2 132.2,-44.2 137.8,-44.2"/>
+</g>
+</g>
+</svg>
+
+                </div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 14px;">
+                <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 8px 0;"><strong><code>calcular_minutos_maximos(disponible, astronautas)</code></strong></p>
+                <div style="overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width: 588px; height: auto;" role="img" aria-label="Diagrama de flujo de calcular_minutos_maximos(disponible, astronautas)"
+ viewBox="0.00 0.00 470.62 301.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 287.4)">
+<title>G</title>
+<text text-anchor="middle" x="220.91" y="-257.8" font-family="Segoe UI,Arial" font-size="14.00" fill="#164a98">calcular_minutos_maximos(disponible, astronautas)</text>
+
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M338.32,-250C338.32,-250 27.32,-250 27.32,-250 21.32,-250 15.32,-244 15.32,-238 15.32,-238 15.32,-226 15.32,-226 15.32,-220 21.32,-214 27.32,-214 27.32,-214 338.32,-214 338.32,-214 344.32,-214 350.32,-220 350.32,-226 350.32,-226 350.32,-238 350.32,-238 350.32,-244 344.32,-250 338.32,-250"/>
+<text text-anchor="middle" x="182.82" y="-228.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Inicio calcular_minutos_maximos(disponible, astronautas)</text>
+</g>
+
+<g id="node2" class="node">
+<title>c</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.6" points="182.82,-183 0.18,-165 182.82,-147 365.46,-165 182.82,-183"/>
+<text text-anchor="middle" x="182.82" y="-161.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">¿disponible &lt; RESERVA_OXIGENO?</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;c</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M182.82,-213.92C182.82,-207.11 182.82,-199.12 182.82,-191.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="185.62,-191.19 182.82,-183.19 180.02,-191.19 185.62,-191.19"/>
+</g>
+
+<g id="node3" class="node">
+<title>a</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="115.82,-104 27.82,-104 27.82,-68 115.82,-68 115.82,-104"/>
+<text text-anchor="middle" x="71.82" y="-82.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">minutos = 0</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>c&#45;&gt;a</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M161.15,-148.97C144.63,-137.51 121.65,-121.56 103.13,-108.72"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="104.7,-106.4 96.53,-104.14 101.5,-111 104.7,-106.4"/>
+<text text-anchor="middle" x="141.82" y="-123.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#00734a"> Sí</text>
+</g>
+
+<g id="node4" class="node">
+<title>b</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="441.82,-105 147.82,-105 147.82,-67 441.82,-67 441.82,-105"/>
+<text text-anchor="middle" x="294.82" y="-89.4" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">minutos = (disponible &#45; RESERVA_OXIGENO)</text>
+<text text-anchor="middle" x="294.82" y="-76.4" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">// (astronautas * CONSUMO_OXIGENO_MINUTO)</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>c&#45;&gt;b</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M204.68,-148.97C220.75,-137.92 242.89,-122.7 261.21,-110.11"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="263.27,-112.09 268.28,-105.25 260.1,-107.47 263.27,-112.09"/>
+<text text-anchor="middle" x="253.82" y="-123.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#d2232a"> No</text>
+</g>
+
+<g id="node5" class="node">
+<title>fin</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M241.32,-36C241.32,-36 124.32,-36 124.32,-36 118.32,-36 112.32,-30 112.32,-24 112.32,-24 112.32,-12 112.32,-12 112.32,-6 118.32,0 124.32,0 124.32,0 241.32,0 241.32,0 247.32,0 253.32,-6 253.32,-12 253.32,-12 253.32,-24 253.32,-24 253.32,-30 247.32,-36 241.32,-36"/>
+<text text-anchor="middle" x="182.82" y="-14.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Fin: devolver minutos</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>a&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M100.69,-67.83C114.83,-59.43 131.98,-49.23 146.94,-40.33"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="148.65,-42.58 154.09,-36.08 145.78,-37.76 148.65,-42.58"/>
+</g>
+
+<g id="edge5" class="edge">
+<title>b&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M264.22,-66.97C250.19,-58.7 233.47,-48.85 218.84,-40.22"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="220.16,-37.75 211.84,-36.1 217.32,-42.58 220.16,-37.75"/>
+</g>
+</g>
+</svg>
+
+                </div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 14px;">
+                <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 8px 0;"><strong><code>clasificar_margen(disponible, requerido)</code></strong></p>
+                <div style="overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width: 648px; height: auto;" role="img" aria-label="Diagrama de flujo de clasificar_margen(disponible, requerido)"
+ viewBox="0.00 0.00 518.84 468.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 454.4)">
+<title>G</title>
+<text text-anchor="middle" x="245.02" y="-424.8" font-family="Segoe UI,Arial" font-size="14.00" fill="#164a98">clasificar_margen(disponible, requerido)</text>
+
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M261,-417C261,-417 12,-417 12,-417 6,-417 0,-411 0,-405 0,-405 0,-393 0,-393 0,-387 6,-381 12,-381 12,-381 261,-381 261,-381 267,-381 273,-387 273,-393 273,-393 273,-405 273,-405 273,-411 267,-417 261,-417"/>
+<text text-anchor="middle" x="136.5" y="-395.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Inicio clasificar_margen(disponible, requerido)</text>
+</g>
+
+<g id="node2" class="node">
+<title>m</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="234.5,-350 38.5,-350 38.5,-314 234.5,-314 234.5,-350"/>
+<text text-anchor="middle" x="136.5" y="-328.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">margen = disponible &#45; requerido</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;m</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M136.5,-380.92C136.5,-374.11 136.5,-366.12 136.5,-358.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="139.3,-358.19 136.5,-350.19 133.7,-358.19 139.3,-358.19"/>
+</g>
+
+<g id="node3" class="node">
+<title>c1</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.6" points="136.5,-283 64.48,-265 136.5,-247 208.52,-265 136.5,-283"/>
+<text text-anchor="middle" x="136.5" y="-261.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">¿margen &lt; 0?</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>m&#45;&gt;c1</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M136.5,-313.92C136.5,-307.11 136.5,-299.12 136.5,-291.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="139.3,-291.19 136.5,-283.19 133.7,-291.19 139.3,-291.19"/>
+</g>
+
+<g id="node4" class="node">
+<title>a</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="199,-154 24,-154 24,-118 199,-118 199,-154"/>
+<text text-anchor="middle" x="111.5" y="-132.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">clasificacion = &quot;Insuficiente&quot;</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>c1&#45;&gt;a</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M133.28,-247.66C129.02,-225.99 121.45,-187.54 116.45,-162.15"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="119.16,-161.4 114.86,-154.09 113.66,-162.48 119.16,-161.4"/>
+<text text-anchor="middle" x="137.5" y="-223.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#00734a"> Sí</text>
+</g>
+
+<g id="node5" class="node">
+<title>c2</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.6" points="325.5,-205 160.92,-187 325.5,-169 490.08,-187 325.5,-205"/>
+<text text-anchor="middle" x="325.5" y="-183.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">¿margen &lt; MARGEN_SEGURO?</text>
+</g>
+
+<g id="edge4" class="edge">
+<title>c1&#45;&gt;c2</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M162.78,-253.43C194.31,-240.75 247.55,-219.35 284.5,-204.49"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="285.75,-207 292.13,-201.42 283.66,-201.81 285.75,-207"/>
+<text text-anchor="middle" x="250.5" y="-223.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#d2232a"> No</text>
+</g>
+
+<g id="node8" class="node">
+<title>fin</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M301,-36C301,-36 160,-36 160,-36 154,-36 148,-30 148,-24 148,-24 148,-12 148,-12 148,-6 154,0 160,0 160,0 301,0 301,0 307,0 313,-6 313,-12 313,-12 313,-24 313,-24 313,-30 307,-36 301,-36"/>
+<text text-anchor="middle" x="230.5" y="-14.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Fin: devolver clasificacion</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>a&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M116.53,-117.92C121.62,-103.04 130.72,-81.6 144.5,-67 154.7,-56.2 167.89,-47.2 180.86,-40.02"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="182.26,-42.44 188.02,-36.22 179.64,-37.5 182.26,-42.44"/>
+</g>
+
+<g id="node6" class="node">
+<title>b</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="300,-103 161,-103 161,-67 300,-67 300,-103"/>
+<text text-anchor="middle" x="230.5" y="-81.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">clasificacion = &quot;Bajo&quot;</text>
+</g>
+
+<g id="edge5" class="edge">
+<title>c2&#45;&gt;b</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M310.66,-170.38C295.09,-153.99 270.46,-128.06 252.6,-109.27"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="254.37,-107.06 246.83,-103.19 250.31,-110.92 254.37,-107.06"/>
+<text text-anchor="middle" x="301.5" y="-133.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#00734a"> Sí</text>
+</g>
+
+<g id="node7" class="node">
+<title>s</title>
+<polygon fill="#ffffff" stroke="#164a98" stroke-width="1.6" points="485,-103 332,-103 332,-67 485,-67 485,-103"/>
+<text text-anchor="middle" x="408.5" y="-81.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">clasificacion = &quot;Seguro&quot;</text>
+</g>
+
+<g id="edge6" class="edge">
+<title>c2&#45;&gt;s</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M338.47,-170.38C351.95,-154.13 373.22,-128.51 388.78,-109.76"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="391.28,-111.13 394.23,-103.19 386.97,-107.56 391.28,-111.13"/>
+<text text-anchor="middle" x="390.5" y="-133.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#d2232a"> No</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>b&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M230.5,-66.92C230.5,-60.11 230.5,-52.12 230.5,-44.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="233.3,-44.19 230.5,-36.19 227.7,-44.19 233.3,-44.19"/>
+</g>
+
+<g id="edge9" class="edge">
+<title>s&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M361.73,-66.92C338.22,-58.33 309.58,-47.88 285.07,-38.93"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="285.74,-36.19 277.26,-36.08 283.82,-41.45 285.74,-36.19"/>
+</g>
+</g>
+</svg>
+
+                </div>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #c8d1df; border-radius: 10px; padding: 14px 16px; margin-top: 14px;">
+                <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 8px 0;"><strong><code>main()</code></strong></p>
+                <div style="overflow-x: auto; text-align: center;">
+<svg width="100%" style="max-width: 1097px; height: auto;" role="img" aria-label="Diagrama de flujo de main()"
+ viewBox="0.00 0.00 878.35 919.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 905.4)">
+<title>G</title>
+<text text-anchor="middle" x="424.78" y="-875.8" font-family="Segoe UI,Arial" font-size="14.00" fill="#164a98">main()</text>
+
+<g id="node1" class="node">
+<title>ini</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M449.62,-868C449.62,-868 381.62,-868 381.62,-868 375.62,-868 369.62,-862 369.62,-856 369.62,-856 369.62,-844 369.62,-844 369.62,-838 375.62,-832 381.62,-832 381.62,-832 449.62,-832 449.62,-832 455.62,-832 461.62,-838 461.62,-844 461.62,-844 461.62,-856 461.62,-856 461.62,-862 455.62,-868 449.62,-868"/>
+<text text-anchor="middle" x="415.62" y="-846.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Inicio main()</text>
+</g>
+
+<g id="node2" class="node">
+<title>a</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="533.98,-801 345.69,-801 297.25,-765 485.54,-765 533.98,-801"/>
+<text text-anchor="middle" x="415.62" y="-779.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Leer astronautas</text>
+</g>
+
+<g id="edge1" class="edge">
+<title>ini&#45;&gt;a</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-831.92C415.62,-825.11 415.62,-817.12 415.62,-809.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-809.19 415.62,-801.19 412.82,-809.19 418.42,-809.19"/>
+</g>
+
+<g id="node3" class="node">
+<title>b</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="513.23,-734 357.95,-734 318,-698 473.28,-698 513.23,-734"/>
+<text text-anchor="middle" x="415.62" y="-712.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Leer minutos</text>
+</g>
+
+<g id="edge2" class="edge">
+<title>a&#45;&gt;b</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-764.92C415.62,-758.11 415.62,-750.12 415.62,-742.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-742.19 415.62,-734.19 412.82,-742.19 418.42,-742.19"/>
+</g>
+
+<g id="node4" class="node">
+<title>c</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="526.72,-667 349.98,-667 304.51,-631 481.25,-631 526.72,-667"/>
+<text text-anchor="middle" x="415.62" y="-645.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Leer disponible</text>
+</g>
+
+<g id="edge3" class="edge">
+<title>b&#45;&gt;c</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-697.92C415.62,-691.11 415.62,-683.12 415.62,-675.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-675.19 415.62,-667.19 412.82,-675.19 418.42,-675.19"/>
+</g>
+
+<g id="node5" class="node">
+<title>d</title>
+<polygon fill="#e8f5e9" stroke="transparent" points="231.12,-569 231.12,-600 600.12,-600 600.12,-569 231.12,-569"/>
+<polygon fill="none" stroke="#164a98" points="232.62,-569.5 232.62,-598.5 242.62,-598.5 242.62,-569.5 232.62,-569.5"/>
+<text text-anchor="start" x="235.62" y="-580.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64"> </text>
+<polygon fill="none" stroke="#164a98" points="242.62,-569.5 242.62,-598.5 589.62,-598.5 589.62,-569.5 242.62,-569.5"/>
+<text text-anchor="start" x="250.62" y="-580.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">requerido = calcular_oxigeno_requerido(minutos, astronautas)</text>
+<polygon fill="none" stroke="#164a98" points="589.62,-569.5 589.62,-598.5 599.62,-598.5 599.62,-569.5 589.62,-569.5"/>
+<text text-anchor="start" x="592.62" y="-580.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64"> </text>
+<polygon fill="none" stroke="#164a98" points="231.12,-569 231.12,-600 600.12,-600 600.12,-569 231.12,-569"/>
+</g>
+
+<g id="edge4" class="edge">
+<title>c&#45;&gt;d</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-630.92C415.62,-623.96 415.62,-615.81 415.62,-608.35"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-608.02 415.62,-600.02 412.82,-608.02 418.42,-608.02"/>
+</g>
+
+<g id="node6" class="node">
+<title>e</title>
+<polygon fill="#e8f5e9" stroke="transparent" points="249.62,-507 249.62,-538 581.62,-538 581.62,-507 249.62,-507"/>
+<polygon fill="none" stroke="#164a98" points="250.62,-507.5 250.62,-536.5 260.62,-536.5 260.62,-507.5 250.62,-507.5"/>
+<text text-anchor="start" x="253.62" y="-518.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64"> </text>
+<polygon fill="none" stroke="#164a98" points="260.62,-507.5 260.62,-536.5 570.62,-536.5 570.62,-507.5 260.62,-507.5"/>
+<text text-anchor="start" x="268.62" y="-518.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">clasificacion = clasificar_margen(disponible, requerido)</text>
+<polygon fill="none" stroke="#164a98" points="570.62,-507.5 570.62,-536.5 580.62,-536.5 580.62,-507.5 570.62,-507.5"/>
+<text text-anchor="start" x="573.62" y="-518.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64"> </text>
+<polygon fill="none" stroke="#164a98" points="249.62,-507 249.62,-538 581.62,-538 581.62,-507 249.62,-507"/>
+</g>
+
+<g id="edge5" class="edge">
+<title>d&#45;&gt;e</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-568.98C415.62,-562.3 415.62,-554.2 415.62,-546.71"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-546.31 415.62,-538.31 412.82,-546.31 418.42,-546.31"/>
+</g>
+
+<g id="node7" class="node">
+<title>f</title>
+<polygon fill="#e8f5e9" stroke="transparent" points="203.12,-445 203.12,-476 628.12,-476 628.12,-445 203.12,-445"/>
+<polygon fill="none" stroke="#164a98" points="204.62,-445.5 204.62,-474.5 214.62,-474.5 214.62,-445.5 204.62,-445.5"/>
+<text text-anchor="start" x="207.62" y="-456.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64"> </text>
+<polygon fill="none" stroke="#164a98" points="214.62,-445.5 214.62,-474.5 617.62,-474.5 617.62,-445.5 214.62,-445.5"/>
+<text text-anchor="start" x="222.62" y="-456.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">minutos_maximos = calcular_minutos_maximos(disponible, astronautas)</text>
+<polygon fill="none" stroke="#164a98" points="617.62,-445.5 617.62,-474.5 627.62,-474.5 627.62,-445.5 617.62,-445.5"/>
+<text text-anchor="start" x="620.62" y="-456.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64"> </text>
+<polygon fill="none" stroke="#164a98" points="203.12,-445 203.12,-476 628.12,-476 628.12,-445 203.12,-445"/>
+</g>
+
+<g id="edge6" class="edge">
+<title>e&#45;&gt;f</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-506.98C415.62,-500.3 415.62,-492.2 415.62,-484.71"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-484.31 415.62,-476.31 412.82,-484.31 418.42,-484.31"/>
+</g>
+
+<g id="node8" class="node">
+<title>g</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="657.04,-414 272.99,-414 174.19,-378 558.24,-378 657.04,-414"/>
+<text text-anchor="middle" x="415.62" y="-392.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Mostrar &quot;Oxígeno requerido:&quot;, requerido</text>
+</g>
+
+<g id="edge7" class="edge">
+<title>f&#45;&gt;g</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-444.69C415.62,-438.15 415.62,-430.27 415.62,-422.82"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-422.37 415.62,-414.37 412.82,-422.37 418.42,-422.37"/>
+</g>
+
+<g id="node9" class="node">
+<title>h</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="676.26,-347 261.63,-347 154.97,-311 569.6,-311 676.26,-347"/>
+<text text-anchor="middle" x="415.62" y="-325.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Mostrar &quot;Margen de oxígeno:&quot;, clasificacion</text>
+</g>
+
+<g id="edge8" class="edge">
+<title>g&#45;&gt;h</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-377.92C415.62,-371.11 415.62,-363.12 415.62,-355.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-355.19 415.62,-347.19 412.82,-355.19 418.42,-355.19"/>
+</g>
+
+<g id="node10" class="node">
+<title>k</title>
+<polygon fill="#eef5ff" stroke="#164a98" stroke-width="1.6" points="415.62,-280 245.62,-246 415.62,-212 585.62,-246 415.62,-280"/>
+<text text-anchor="middle" x="415.62" y="-249.4" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">¿oxigeno_alcanza(disponible,</text>
+<text text-anchor="middle" x="415.62" y="-236.4" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">requerido)?</text>
+</g>
+
+<g id="edge9" class="edge">
+<title>h&#45;&gt;k</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-310.82C415.62,-304.2 415.62,-296.33 415.62,-288.4"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-288.18 415.62,-280.18 412.82,-288.18 418.42,-288.18"/>
+</g>
+
+<g id="node11" class="node">
+<title>s</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="391.35,-170 79.98,-170 -0.12,-134 311.25,-134 391.35,-170"/>
+<text text-anchor="middle" x="195.62" y="-148.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Mostrar &quot;Caminata autorizada.&quot;</text>
+</g>
+
+<g id="edge10" class="edge">
+<title>k&#45;&gt;s</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M362.08,-222.61C326.13,-207.58 279.15,-187.93 244.27,-173.34"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="245.03,-170.63 236.57,-170.13 242.87,-175.8 245.03,-170.63"/>
+<text text-anchor="middle" x="306.62" y="-188.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#00734a"> Sí</text>
+</g>
+
+<g id="node12" class="node">
+<title>n</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="849.49,-170 510.86,-170 423.74,-134 762.37,-134 849.49,-170"/>
+<text text-anchor="middle" x="636.62" y="-148.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Mostrar &quot;Caminata no autorizada.&quot;</text>
+</g>
+
+<g id="edge11" class="edge">
+<title>k&#45;&gt;n</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M469.4,-222.61C505.51,-207.58 552.7,-187.93 587.74,-173.34"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="589.17,-175.79 595.48,-170.13 587.01,-170.62 589.17,-175.79"/>
+<text text-anchor="middle" x="567.62" y="-188.2" font-family="Segoe UI,Arial" font-size="11.00" fill="#d2232a"> No</text>
+</g>
+
+<g id="node13" class="node">
+<title>t</title>
+<polygon fill="#fff8e1" stroke="#164a98" stroke-width="1.6" points="790.47,-103 194.16,-103 40.76,-67 637.07,-67 790.47,-103"/>
+<text text-anchor="middle" x="415.62" y="-81.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Mostrar &quot;Tiempo máximo posible:&quot;, minutos_maximos, &quot;minutos&quot;</text>
+</g>
+
+<g id="edge12" class="edge">
+<title>s&#45;&gt;t</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M253.42,-133.92C283.11,-125.15 319.41,-114.42 350.13,-105.35"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="350.94,-108.03 357.82,-103.08 349.35,-102.66 350.94,-108.03"/>
+</g>
+
+<g id="edge13" class="edge">
+<title>n&#45;&gt;t</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M578.55,-133.92C548.72,-125.15 512.26,-114.42 481.39,-105.35"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="482.14,-102.65 473.68,-103.08 480.56,-108.02 482.14,-102.65"/>
+</g>
+
+<g id="node14" class="node">
+<title>fin</title>
+<path fill="#9cc8ff" stroke="#164a98" stroke-width="1.6" d="M430.62,-36C430.62,-36 400.62,-36 400.62,-36 394.62,-36 388.62,-30 388.62,-24 388.62,-24 388.62,-12 388.62,-12 388.62,-6 394.62,0 400.62,0 400.62,0 430.62,0 430.62,0 436.62,0 442.62,-6 442.62,-12 442.62,-12 442.62,-24 442.62,-24 442.62,-30 436.62,-36 430.62,-36"/>
+<text text-anchor="middle" x="415.62" y="-14.9" font-family="Segoe UI,Arial" font-size="12.00" fill="#1c3b64">Fin</text>
+</g>
+
+<g id="edge14" class="edge">
+<title>t&#45;&gt;fin</title>
+<path fill="none" stroke="#164a98" stroke-width="1.3" d="M415.62,-66.92C415.62,-60.11 415.62,-52.12 415.62,-44.64"/>
+<polygon fill="#164a98" stroke="#164a98" stroke-width="1.3" points="418.42,-44.19 415.62,-36.19 412.82,-44.19 418.42,-44.19"/>
+</g>
+</g>
+</svg>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <!-- RETO OPCIONAL (SI TERMINA ANTES) -->
+        <div style="background: #fff5f7; border: 2px solid #f3b3c6; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-trophy" style="color: #c81f66; font-size: 22px;" aria-hidden="true"></i>
+                Reto opcional (si termina antes)
+            </h4>
+            <ol style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0; padding-left: 24px;">
+                <li style="margin-bottom: 6px;">Programe <code>leer_entero_positivo(mensaje)</code>: lee un entero mostrando el mensaje recibido; mientras el valor sea menor que 1, muestra «El valor debe ser mayor que 0.» y lo vuelve a pedir. Devuelve el entero. Úsela en <code>main()</code> para leer los tres datos.</li>
+                <li style="margin-bottom: 6px;">Programe el procedimiento <code>mostrar_reporte(requerido, clasificacion, autorizada, minutos_maximos)</code>, que muestra los cuatro mensajes del reporte, y llámelo desde <code>main()</code>.</li>
+                <li style="margin-bottom: 6px;">Compruebe: si escribe 0 como cantidad de astronautas y luego 2, primero debe aparecer «El valor debe ser mayor que 0.» y después el mismo resultado del primer caso de prueba.</li>
+            </ol>
+            <button type="button" id="btn-sol-reto" style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; background: #00734a; color: #ffffff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; font-family: inherit; cursor: pointer; margin-top: 14px;"><i class="fa-solid fa-eye" aria-hidden="true"></i> Ver solución</button>
+            <div id="sol-reto" style="display: none; margin-top: 10px;">
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;"><strong>Programa con el reto:</strong></p>
+            <pre style="background: #272822; color: #f8f8f2; padding: 18px; border-radius: 10px; overflow-x: auto; font-family: Consolas, 'Courier New', monospace; font-size: 14px; line-height: 1.7; margin: 12px 0 0 0;"><code># ============================================================
+# Archivo: caminata_espacial.py
+# Descripción: Verifica si el oxígeno alcanza para una caminata
+#              espacial, usando funciones con parámetros y return.
+# ============================================================
+CONSUMO_OXIGENO_MINUTO = 2     # unidades por astronauta por minuto
+RESERVA_OXIGENO = 20           # unidades que siempre deben quedar de reserva
+MARGEN_SEGURO = 30             # margen mínimo para considerar la caminata segura
+
+
+def leer_entero_positivo(mensaje):
+    &quot;&quot;&quot;Lee un entero con el mensaje indicado; lo vuelve a pedir mientras sea menor que 1. Devuelve el entero.&quot;&quot;&quot;
+    valor = int(input(mensaje))
+    while valor &lt; 1:
+        print(&quot;El valor debe ser mayor que 0.&quot;)
+        valor = int(input(mensaje))
+    return valor
+
+
+def calcular_oxigeno_requerido(minutos, astronautas):
+    &quot;&quot;&quot;Devuelve el oxígeno requerido para la caminata, incluida la reserva.&quot;&quot;&quot;
+    requerido = minutos * astronautas * CONSUMO_OXIGENO_MINUTO + RESERVA_OXIGENO
+    return requerido
+
+
+def oxigeno_alcanza(disponible, requerido):
+    &quot;&quot;&quot;Devuelve True si el oxígeno disponible es mayor o igual que el requerido.&quot;&quot;&quot;
+    alcanza = disponible &gt;= requerido
+    return alcanza
+
+
+def calcular_minutos_maximos(disponible, astronautas):
+    &quot;&quot;&quot;Devuelve los minutos completos que se pueden caminar sin tocar la reserva (0 si no alcanza ni la reserva).&quot;&quot;&quot;
+    if disponible &lt; RESERVA_OXIGENO:
+        minutos = 0
+    else:
+        minutos = (disponible - RESERVA_OXIGENO) // (astronautas * CONSUMO_OXIGENO_MINUTO)
+    return minutos
+
+
+def clasificar_margen(disponible, requerido):
+    &quot;&quot;&quot;Devuelve &#x27;Insuficiente&#x27;, &#x27;Bajo&#x27; o &#x27;Seguro&#x27; según el margen de oxígeno.&quot;&quot;&quot;
+    margen = disponible - requerido
+    if margen &lt; 0:
+        clasificacion = &quot;Insuficiente&quot;
+    elif margen &lt; MARGEN_SEGURO:
+        clasificacion = &quot;Bajo&quot;
+    else:
+        clasificacion = &quot;Seguro&quot;
+    return clasificacion
+
+
+def mostrar_reporte(requerido, clasificacion, autorizada, minutos_maximos):
+    &quot;&quot;&quot;Procedimiento: muestra el resultado de la verificación (no devuelve nada).&quot;&quot;&quot;
+    print()
+    print(&quot;Oxígeno requerido:&quot;, requerido)
+    print(&quot;Margen de oxígeno:&quot;, clasificacion)
+    if autorizada:
+        print(&quot;Caminata autorizada.&quot;)
+    else:
+        print(&quot;Caminata no autorizada.&quot;)
+    print(&quot;Tiempo máximo posible:&quot;, minutos_maximos, &quot;minutos&quot;)
+
+
+def main():
+    &quot;&quot;&quot;Programa principal: guarda en variables los valores que devuelven las funciones.&quot;&quot;&quot;
+    astronautas = leer_entero_positivo(&quot;Cantidad de astronautas: &quot;)
+    minutos = leer_entero_positivo(&quot;Duración de la caminata (minutos): &quot;)
+    disponible = leer_entero_positivo(&quot;Oxígeno disponible: &quot;)
+    requerido = calcular_oxigeno_requerido(minutos, astronautas)
+    autorizada = oxigeno_alcanza(disponible, requerido)
+    clasificacion = clasificar_margen(disponible, requerido)
+    minutos_maximos = calcular_minutos_maximos(disponible, astronautas)
+    mostrar_reporte(requerido, clasificacion, autorizada, minutos_maximos)
+
+
+main()</code></pre>
+            </div>
+        </div>
+        <!-- ¿PARA QUÉ LE SIRVE EN EL PROYECTO? -->
+<!--         <div style="background: #f8fbff; border: 2px solid #9CC8FF; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-rocket" style="color: #006AEA; font-size: 22px;" aria-hidden="true"></i>
+                ¿Para qué le sirve en el proyecto?
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 12px 0;">En el Avance 3 de Misión Órbita necesitará funciones con la misma estructura. Lo que practicó aquí se aplica así:</p>
+            <div style="overflow-x: auto; margin: 12px 0;">
+                <table style="border-collapse: collapse; width: 100%; min-width: 480px;">
+                    <tr><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">En este ejercicio</th><th style="background: #164a98; color: #ffffff; padding: 10px 12px; text-align: left; font-size: 14px;">En el proyecto</th></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;"><code>leer_entero_positivo(mensaje)</code> (reto)</td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Una función reutilizable para leer datos: se llama varias veces con mensajes distintos.</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;"><code>calcular_oxigeno_requerido(minutos, astronautas)</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Calcular los recursos requeridos a partir de los días de viaje y los tripulantes.</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;"><code>oxigeno_alcanza(disponible, requerido)</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Decidir si se autoriza el lanzamiento o si los recursos alcanzan para un día más (devolver un bool).</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;"><code>calcular_minutos_maximos(disponible, astronautas)</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #f4f8fd; font-size: 14px; color: #1c3b64;">Calcular los días de supervivencia con división entera <code>//</code>.</td></tr>
+<tr><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;"><code>clasificar_margen(disponible, requerido)</code></td><td style="padding: 9px 12px; border: 1px solid #d2d2d2; background: #ffffff; font-size: 14px; color: #1c3b64;">Devolver un texto según una condición, como el resultado de la misión.</td></tr>
+                </table>
+            </div>
+            <div style="background: #eef5ff; border-left: 5px solid #006AEA; padding: 12px 16px; margin: 14px 0 0 0; border-radius: 8px; color: #1a3a6b; font-size: 14px; line-height: 1.6;"><strong>Consejo:</strong> Diseñe primero qué recibe y qué devuelve cada función; después escriba su diagrama y su código. Una función que devuelve su resultado se puede probar sola, con <code>print()</code>, antes de unirla al programa completo.</div>
+        </div> -->
+        <!-- CIERRE -->
+        <div style=" gap: 10px; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> una función con parámetros y <code>return</code> <strong>recibe</strong> los datos en sus parámetros y <strong>devuelve</strong> el resultado; quien la llama lo guarda en una variable. Así cada función se puede probar por separado y reutilizar.</span>
+        </div>
+
+    </section>
+
+    <script>
+        (function () {
+            // Revisión automática y botones de solución: todo se conecta por id (sin atributos de evento en el HTML).
+            var preguntas = {};
+            var correctas = {};
+            var IGNORAR = '"' + "'" + String.fromCharCode(91, 93, 40, 41) + ',';
+            function normalizar(texto) {
+                var t = String(texto).toLowerCase(), limpio = '', espacio = false;
+                for (var i = 0; i < t.length; i++) {
+                    var ch = t.charAt(i);
+                    if (IGNORAR.indexOf(ch) > -1 || ch === ' ' || ch === String.fromCharCode(9)) {
+                        espacio = true;
+                    } else {
+                        if (espacio && limpio !== '') limpio = limpio + ' ';
+                        limpio = limpio + ch;
+                        espacio = false;
+                    }
+                }
+                if (limpio.charAt(limpio.length - 1) === '.') limpio = limpio.substring(0, limpio.length - 1);
+                return limpio;
+            }
+            function respuesta(id) {
+                if (preguntas[id].tipo === 'radio') {
+                    var radios = document.getElementsByName(id);
+                    for (var i = 0; i < radios.length; i++) if (radios[i].checked) return radios[i].value;
+                    return '';
+                }
+                var campo = document.getElementById(id);
+                return campo ? campo.value : '';
+            }
+            function mostrar(id, color, html) {
+                var fb = document.getElementById('fb-' + id);
+                if (!fb) return;
+                fb.style.color = color;
+                fb.innerHTML = html;
+            }
+            function actualizarPuntaje() {
+                var total = 0, buenas = 0;
+                for (var id in preguntas) { total++; if (correctas[id]) buenas++; }
+                var marcador = document.getElementById('puntaje-funciones');
+                if (marcador) marcador.innerHTML = 'Respuestas correctas: <strong>' + buenas + ' de ' + total + '</strong>';
+            }
+            function revisar(id) {
+                var p = preguntas[id], r = normalizar(respuesta(id));
+                if (r === '') { mostrar(id, '#7c7b75', 'Responda antes de revisar.'); return; }
+                var ok = false;
+                for (var i = 0; i < p.ok.length; i++) if (r === normalizar(p.ok[i])) ok = true;
+                correctas[id] = ok;
+                if (ok) mostrar(id, '#00734a', '<strong>&#10004; Correcto.</strong> ' + p.explica);
+                else mostrar(id, '#d2232a', '<strong>&#10008; Revise su respuesta.</strong> Pista: ' + p.pista);
+                actualizarPuntaje();
+            }
+            function conectar(id) {
+                var b = document.getElementById('btn-rev-' + id);
+                if (b) b.addEventListener('click', function (e) { e.preventDefault(); revisar(id); });
+                var v = document.getElementById('btn-ver-' + id);
+                if (v) v.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    mostrar(id, '#164a98', '<strong>Respuesta:</strong> ' + preguntas[id].resp);
+                });
+                var c = document.getElementById(id);
+                if (c && preguntas[id].tipo === 'texto') c.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.keyCode === 13) { e.preventDefault(); revisar(id); }
+                });
+            }
+            for (var id in preguntas) conectar(id);
+            var botones = document.querySelectorAll('[id^="btn-sol-"]');
+            for (var k = 0; k < botones.length; k++) {
+                botones[k].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var bloque = document.getElementById(this.id.substring(4));
+                    if (!bloque) return;
+                    var abierto = bloque.style.display !== 'none';
+                    bloque.style.display = abierto ? 'none' : 'block';
+                    this.innerHTML = abierto ? '<i class="fa-solid fa-eye" aria-hidden="true"></i> Ver solución'
+                                             : '<i class="fa-solid fa-eye-slash" aria-hidden="true"></i> Ocultar solución';
+                });
+            }
+            actualizarPuntaje();
+        })();
+    </script>
+
+</body>
+
+</html>

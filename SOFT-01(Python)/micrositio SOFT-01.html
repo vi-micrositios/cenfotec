@@ -21,29 +21,29 @@
 
         <div class="microsite-container" id="appContainer">
 
-            <!-- Menú principal horizontal -->
-            <nav aria-label="Temas principales">
-                <ul class="main-menu" id="mainMenu" role="tablist">
-                    <!-- Los botones se generarán con JavaScript -->
-                </ul>
-            </nav>
+            <!-- Encabezado: menú principal y botones de acción en la misma fila -->
+            <div class="microsite-header">
+                <nav aria-label="Temas principales">
+                    <ul class="main-menu" id="mainMenu" role="tablist">
+                        <!-- Los botones se generarán con JavaScript -->
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <!-- Botón de inicio -->
+                    <button class="header-action-btn" id="homeBtn" type="button" title="Ir al inicio" aria-label="Ir al inicio">
+                        <i class="fa-solid fa-house" aria-hidden="true"></i>
+                    </button>
+                    <!-- Botón de pantalla completa -->
+                    <button class="fullscreen-btn" id="fullscreenBtn" type="button" title="Maximizar" aria-label="Maximizar">
+                        <span aria-hidden="true">⛶</span>
+                    </button>
+                </div>
+            </div>
 
             <!-- Área de contenido dinámico -->
             <div class="content-area" id="contentArea">
                 <!-- Aquí se inyectará la bienvenida o el panel de subtemas + contenido -->
             </div>
-
-            <!-- Botón de inicio -->
-
-            <button class="header-action-btn" id="homeBtn" type="button" title="Ir al inicio" aria-label="Ir al inicio" style="position:absolute; top:8px; right:90px; z-index:10;"> 
-                <i class="fa-solid fa-house" aria-hidden="true"></i>  
-            </button>
-
-            <!-- Botón de pantalla completa -->
-            <button class="fullscreen-btn" id="fullscreenBtn" type="button"
-                style="position:absolute; top:8px; right:20px; z-index:10; background:rgba(255,255,255,0.9); border-color:#c81f66; color:#c81f66; box-shadow:0 2px 0 #9b114a; padding:8px 16px; font-size:0.85rem;">
-                <span aria-hidden="true">⛶</span> Maximizar
-            </button>
         </div>
     </div>
 
@@ -64,7 +64,9 @@
                     throw new Error('HTTP ' + response.status);
                 }
                 const scriptData = await response.text();
-                const scriptDataJson = scriptData.substring(13, scriptData.length - 2);
+                // Se toma desde la primera { hasta la última }: funciona aunque cambien
+                // los espacios de "const data =" o el final del archivo.
+                const scriptDataJson = scriptData.substring(scriptData.indexOf('{'), scriptData.lastIndexOf('}') + 1);
                 data = (new Function("return " + scriptDataJson))();
             } catch (error) {
                 console.error('Error cargando datos:', error);
@@ -135,7 +137,7 @@
                 var html = '';
                 data.temas.forEach(function (tema) {
                     var active = (state.currentTemaId === tema.id) ? 'active' : '';
-                    html += '<li role="none"><button role="tab" class="' + active + '" data-tema-id="' + tema.id + '">' + tema.label + '</button></li>';
+                    html += '<li role="none"><button type="button" role="tab" aria-selected="' + (active ? 'true' : 'false') + '" class="' + active + '" data-tema-id="' + tema.id + '">' + tema.label + '</button></li>';
                 });
                 mainMenuEl.innerHTML = html;
 
@@ -241,7 +243,7 @@
                 html += '<ul>';
                 subtemas.forEach(function (sub) {
                     var active = (sub.id === state.currentSubtemaId) ? 'active' : '';
-                    html += '<li><button class="' + active + '" data-subtema-id="' + sub.id + '">' + sub.label + '</button></li>';
+                    html += '<li><button type="button" class="' + active + '"' + (active ? ' aria-current="true"' : '') + ' data-subtema-id="' + sub.id + '">' + sub.label + '</button></li>';
                 });
                 html += '</ul>';
                 html += '</nav>';
@@ -296,11 +298,11 @@
                 // Navegación de pasos (igual que antes)
                 html += '<div class="step-navigation">';
                 var prevDisabled = (stepIndex === 0) ? 'style="visibility:hidden;"' : '';
-                html += '<button class="prev-btn" data-action="prev" ' + prevDisabled + '><span aria-hidden="true">←</span> Anterior</button>';
+                html += '<button type="button" class="prev-btn" data-action="prev" ' + prevDisabled + '><span aria-hidden="true">←</span> Anterior</button>';
                 html += '<span class="step-indicator">Contenido ' + (stepIndex + 1) + ' de ' + total + '</span>';
                 var nextLabel = step.nextButton || 'Siguiente';
                 var nextDisabled = (stepIndex === total - 1) ? 'style="visibility:hidden;"' : '';
-                html += '<button class="next-btn" data-action="next" ' + nextDisabled + '>' + nextLabel + ' <span aria-hidden="true">→</span></button>';
+                html += '<button type="button" class="next-btn" data-action="next" ' + nextDisabled + '>' + nextLabel + ' <span aria-hidden="true">→</span></button>';
                 html += '</div>';
 
                 return html;
@@ -318,6 +320,18 @@
                 var tema = getTemaById(temaId);
                 if (tema) {
                     renderTemaPanel(tema);
+                    irAlInicioDelContenido();
+                }
+            }
+
+            // Si el paso anterior era largo, el siguiente se muestra desde su inicio
+            function irAlInicioDelContenido() {
+                var panel = contentAreaEl.querySelector('.content-panel');
+                if (!panel) return;
+                panel.scrollTop = 0;   // en pantalla completa el panel tiene su propio desplazamiento
+                var arriba = container.getBoundingClientRect().top;
+                if (arriba < 0) {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }
 
@@ -335,6 +349,7 @@
                 var tema = getTemaById(temaId);
                 if (tema) {
                     renderTemaPanel(tema);
+                    irAlInicioDelContenido();
                 }
             }
 
@@ -444,6 +459,14 @@
             // 7. INICIALIZACIÓN
             // ============================================================
             function init() {
+                if (!data || !data.temas) {
+                    contentAreaEl.innerHTML = '<div style="padding: 40px; text-align: center;"><p>No se pudo cargar el contenido del micrositio. Revise la conexión o la dirección de data.js y recargue la página.</p></div>';
+                    homeBtn.style.display = 'none';
+                    return;
+                }
+                // Título de la pestaña del navegador a partir del título de bienvenida
+                document.title = data.welcome.title.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+
                 // Estado inicial: sin tema seleccionado → bienvenida
                 state.currentTemaId = null;
                 state.currentSubtemaId = null;
