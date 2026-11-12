@@ -64,7 +64,9 @@
                     throw new Error('HTTP ' + response.status);
                 }
                 const scriptData = await response.text();
-                const scriptDataJson = scriptData.substring(13, scriptData.length - 2);
+                // Se toma desde la primera { hasta la última }: funciona aunque cambien
+                // los espacios de "const data =" o el final del archivo.
+                const scriptDataJson = scriptData.substring(scriptData.indexOf('{'), scriptData.lastIndexOf('}') + 1);
                 data = (new Function("return " + scriptDataJson))();
             } catch (error) {
                 console.error('Error cargando datos:', error);

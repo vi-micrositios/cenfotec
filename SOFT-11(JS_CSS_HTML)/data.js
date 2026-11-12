@@ -75,12 +75,14 @@ const data = {
                         {
                             title: 'Declaración del problema',
                             content: `<p>Una forma clara de documentar el problema es con la siguiente plantilla:</p>
-                            <table class="table">
-                                <tr><td><strong>El problema de</strong></td><td>describir el problema</td></tr>
-                                <tr><td><strong>afecta a</strong></td><td>los interesados afectados</td></tr>
-                                <tr><td><strong>cuyo impacto es</strong></td><td>consecuencias del problema</td></tr>
-                                <tr><td><strong>una solución exitosa sería</strong></td><td>beneficios esperados</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>El problema de</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">describir el problema</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>afecta a</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">los interesados afectados</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>cuyo impacto es</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">consecuencias del problema</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;"><strong>una solución exitosa sería</strong></td><td style="padding:12px; vertical-align:top;">beneficios esperados</td></tr>
+                            </tbody></table></div>
                             <p>Ejemplo: <em>El problema de</em> la reserva manual de laboratorios <em>afecta a</em> docentes y estudiantes, <em>cuyo impacto es</em> choques de horario y laboratorios vacíos; <em>una solución exitosa sería</em> un sistema de reservas en línea con disponibilidad en tiempo real.</p>`,
                             nextButton: 'Siguiente: Técnicas de análisis'
                         },
@@ -179,14 +181,16 @@ const usuarioSchema = new mongoose.Schema({
                         {
                             title: 'Especificación de un caso de uso',
                             content: `<p>Cada caso de uso se detalla en una plantilla:</p>
-                            <table class="table">
-                                <tr><td><strong>Nombre</strong></td><td>CU-01 Iniciar sesión</td></tr>
-                                <tr><td><strong>Actor</strong></td><td>Usuario registrado</td></tr>
-                                <tr><td><strong>Precondición</strong></td><td>El usuario tiene una cuenta activa</td></tr>
-                                <tr><td><strong>Flujo principal</strong></td><td>1. Ingresa correo y contraseña. 2. El sistema valida los datos. 3. El sistema muestra la página de inicio.</td></tr>
-                                <tr><td><strong>Flujo alterno</strong></td><td>2a. Credenciales incorrectas: el sistema muestra un mensaje de error.</td></tr>
-                                <tr><td><strong>Postcondición</strong></td><td>Se crea una sesión activa</td></tr>
-                            </table>`,
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Nombre</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">CU-01 Iniciar sesión</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Actor</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Usuario registrado</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Precondición</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">El usuario tiene una cuenta activa</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Flujo principal</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">1. Ingresa correo y contraseña. 2. El sistema valida los datos. 3. El sistema muestra la página de inicio.</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Flujo alterno</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">2a. Credenciales incorrectas: el sistema muestra un mensaje de error.</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;"><strong>Postcondición</strong></td><td style="padding:12px; vertical-align:top;">Se crea una sesión activa</td></tr>
+                            </tbody></table></div>`,
                             nextButton: 'Siguiente: Prototipos'
                         },
                         {
@@ -372,11 +376,15 @@ app.use(session({
                             title: 'Trazabilidad',
                             content: `<p>Es la capacidad de seguir un requerimiento desde su <strong>origen</strong> hasta su <strong>implementación y prueba</strong>.</p>
                             <p>Se registra en una <strong>matriz de trazabilidad</strong>:</p>
-                            <table class="table">
-                                <tr><th>Requerimiento</th><th>Caso de uso</th><th>Pantalla / módulo</th><th>Caso de prueba</th></tr>
-                                <tr><td>RF-01</td><td>CU-01</td><td>registro.html</td><td>CP-01</td></tr>
-                                <tr><td>RF-02</td><td>CU-03</td><td>productos.html</td><td>CP-04</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Requerimiento</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Caso de uso</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Pantalla / módulo</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Caso de prueba</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">RF-01</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">CU-01</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">registro.html</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">CP-01</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;">RF-02</td><td style="padding:12px; vertical-align:top;">CU-03</td><td style="padding:12px; vertical-align:top;">productos.html</td><td style="padding:12px; vertical-align:top;">CP-04</td></tr>
+                            </tbody></table></div>
                             <p>Permite saber qué se ve afectado cuando un requerimiento cambia.</p>`,
                             nextButton: 'Siguiente: Control de cambios'
                         },
@@ -428,12 +436,16 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                         },
                         {
                             title: 'Errores comunes',
-                            content: `<table class="table">
-                                <tr><th>Mal escrito</th><th>Mejorado</th></tr>
-                                <tr><td>El sistema debe ser rápido.</td><td>La consulta de productos debe responder en máximo 2 segundos con 100 usuarios concurrentes.</td></tr>
-                                <tr><td>El sistema debe permitir registrar y editar usuarios y productos.</td><td>Dividir en requerimientos atómicos: uno por acción y por entidad.</td></tr>
-                                <tr><td>El sistema debe ser fácil de usar.</td><td>Un usuario nuevo debe completar una compra en menos de 5 pasos.</td></tr>
-                            </table>`,
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Mal escrito</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Mejorado</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">El sistema debe ser rápido.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">La consulta de productos debe responder en máximo 2 segundos con 100 usuarios concurrentes.</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">El sistema debe permitir registrar y editar usuarios y productos.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Dividir en requerimientos atómicos: uno por acción y por entidad.</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">El sistema debe ser fácil de usar.</td><td style="padding:12px; vertical-align:top;">Un usuario nuevo debe completar una compra en menos de 5 pasos.</td></tr>
+                            </tbody></table></div>`,
                             nextButton: ' '
                         }
                     ]
@@ -513,14 +525,18 @@ test('CP-02 (RF-01): rechaza un correo ya registrado', async () =&gt; { /* ... *
                         {
                             title: 'Modelado de datos: pensar en la base de datos',
                             content: `<p>A partir del modelo de dominio se diseña cómo se guardará la información. En el curso se usa <strong>MongoDB</strong>, una base de datos orientada a <strong>documentos</strong>:</p>
-                            <table class="table">
-                                <tr><th>Modelo relacional</th><th>MongoDB</th></tr>
-                                <tr><td>Base de datos</td><td>Base de datos</td></tr>
-                                <tr><td>Tabla</td><td>Colección</td></tr>
-                                <tr><td>Fila</td><td>Documento (JSON/BSON)</td></tr>
-                                <tr><td>Columna</td><td>Campo</td></tr>
-                                <tr><td>Llave foránea</td><td>Referencia (ObjectId) o documento embebido</td></tr>
-                            </table>`,
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Modelo relacional</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">MongoDB</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Base de datos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Base de datos</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Tabla</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Colección</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Fila</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Documento (JSON/BSON)</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Columna</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Campo</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">Llave foránea</td><td style="padding:12px; vertical-align:top;">Referencia (ObjectId) o documento embebido</td></tr>
+                            </tbody></table></div>`,
                             nextButton: 'Siguiente: Embeber o referenciar'
                         },
                         {
@@ -785,16 +801,20 @@ const cuentaSchema = new mongoose.Schema({
                         },
                         {
                             title: 'Etiquetas básicas',
-                            content: `<table class="table">
-                                <tr><th>Etiqueta</th><th>Uso</th></tr>
-                                <tr><td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td><td>Títulos</td></tr>
-                                <tr><td><code>&lt;p&gt;</code></td><td>Párrafo</td></tr>
-                                <tr><td><code>&lt;a href=""&gt;</code></td><td>Enlace</td></tr>
-                                <tr><td><code>&lt;img src="" alt=""&gt;</code></td><td>Imagen (con texto alternativo)</td></tr>
-                                <tr><td><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></td><td>Listas</td></tr>
-                                <tr><td><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code></td><td>Tablas</td></tr>
-                                <tr><td><code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></td><td>Contenedores genéricos</td></tr>
-                            </table>`,
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Etiqueta</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Uso</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Títulos</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>&lt;p&gt;</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Párrafo</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>&lt;a href=""&gt;</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Enlace</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>&lt;img src="" alt=""&gt;</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Imagen (con texto alternativo)</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Listas</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Tablas</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;"><code>&lt;div&gt;</code>, <code>&lt;span&gt;</code></td><td style="padding:12px; vertical-align:top;">Contenedores genéricos</td></tr>
+                            </tbody></table></div>`,
                             nextButton: 'Siguiente: HTML semántico'
                         },
                         {
@@ -988,7 +1008,18 @@ h1 {
         &lt;div class="col-12 col-md-6 col-lg-4"&gt;Columna B&lt;/div&gt;
         &lt;div class="col-12 col-md-12 col-lg-4"&gt;Columna C&lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;</code></pre><table class="table"><tr><th>Prefijo</th><th>Ancho mínimo</th></tr><tr><td>col-</td><td>0 (celular)</td></tr><tr><td>col-sm-</td><td>576px</td></tr><tr><td>col-md-</td><td>768px</td></tr><tr><td>col-lg-</td><td>992px</td></tr><tr><td>col-xl-</td><td>1200px</td></tr></table>`,
+&lt;/div&gt;</code></pre><div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Prefijo</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Ancho mínimo</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">col-</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">0 (celular)</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">col-sm-</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">576px</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">col-md-</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">768px</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">col-lg-</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">992px</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">col-xl-</td><td style="padding:12px; vertical-align:top;">1200px</td></tr>
+                            </tbody></table></div>`,
                             nextButton: 'Siguiente: Navbar'
                         },
                         {
@@ -1082,7 +1113,19 @@ h1 {
                         },
                         {
                             title: 'Clases utilitarias',
-                            content: `<p>Bootstrap incluye clases de una sola propiedad que evitan escribir CSS para casos comunes:</p><table class="table"><tr><th>Clase</th><th>Efecto</th></tr><tr><td><code>m-3</code>, <code>mt-2</code>, <code>px-4</code></td><td>Margen y relleno (0 a 5)</td></tr><tr><td><code>text-center</code>, <code>fw-bold</code></td><td>Alineación y peso del texto</td></tr><tr><td><code>bg-light</code>, <code>text-danger</code></td><td>Colores de fondo y texto</td></tr><tr><td><code>d-flex</code>, <code>justify-content-between</code></td><td>Flexbox</td></tr><tr><td><code>d-none d-md-block</code></td><td>Oculto en celular, visible desde tableta</td></tr><tr><td><code>shadow</code>, <code>rounded</code></td><td>Sombra y bordes redondeados</td></tr></table><pre class="codigo"><code>&lt;div class="d-flex justify-content-between align-items-center p-3 bg-light rounded shadow-sm"&gt;
+                            content: `<p>Bootstrap incluye clases de una sola propiedad que evitan escribir CSS para casos comunes:</p><div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Clase</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Efecto</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>m-3</code>, <code>mt-2</code>, <code>px-4</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Margen y relleno (0 a 5)</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>text-center</code>, <code>fw-bold</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Alineación y peso del texto</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>bg-light</code>, <code>text-danger</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Colores de fondo y texto</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>d-flex</code>, <code>justify-content-between</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Flexbox</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>d-none d-md-block</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Oculto en celular, visible desde tableta</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;"><code>shadow</code>, <code>rounded</code></td><td style="padding:12px; vertical-align:top;">Sombra y bordes redondeados</td></tr>
+                            </tbody></table></div><pre class="codigo"><code>&lt;div class="d-flex justify-content-between align-items-center p-3 bg-light rounded shadow-sm"&gt;
     &lt;h2 class="h5 m-0"&gt;Mis reservas&lt;/h2&gt;
     &lt;button class="btn btn-success"&gt;+ Nueva&lt;/button&gt;
 &lt;/div&gt;</code></pre><p>
@@ -1118,17 +1161,21 @@ h1 {
                         },
                         {
                             title: 'Tipos de campos',
-                            content: `<table class="table">
-                                <tr><th>Control</th><th>Uso</th></tr>
-                                <tr><td><code>type="text"</code></td><td>Texto corto</td></tr>
-                                <tr><td><code>type="email"</code></td><td>Correo electrónico</td></tr>
-                                <tr><td><code>type="password"</code></td><td>Contraseña (oculta)</td></tr>
-                                <tr><td><code>type="number"</code></td><td>Números (con min, max)</td></tr>
-                                <tr><td><code>type="date"</code></td><td>Fecha</td></tr>
-                                <tr><td><code>type="radio"</code> / <code>"checkbox"</code></td><td>Opción única / múltiple</td></tr>
-                                <tr><td><code>&lt;select&gt;</code></td><td>Lista desplegable</td></tr>
-                                <tr><td><code>&lt;textarea&gt;</code></td><td>Texto largo</td></tr>
-                            </table>
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Control</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Uso</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>type="text"</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Texto corto</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>type="email"</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Correo electrónico</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>type="password"</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Contraseña (oculta)</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>type="number"</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Números (con min, max)</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>type="date"</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Fecha</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>type="radio"</code> / <code>"checkbox"</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Opción única / múltiple</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>&lt;select&gt;</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Lista desplegable</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;"><code>&lt;textarea&gt;</code></td><td style="padding:12px; vertical-align:top;">Texto largo</td></tr>
+                            </tbody></table></div>
                             <p>El atributo <code>name</code> de cada campo será el nombre del dato que llega al servidor y, normalmente, el nombre del campo en la base de datos.</p>`,
                             nextButton: 'Siguiente: Formulario con Bootstrap'
                         },
@@ -1366,16 +1413,20 @@ const tarjeta = \`
                     steps: [
                         {
                             title: 'Tipos de datos',
-                            content: `<table class="table">
-                                <tr><th>Tipo</th><th>Ejemplo</th></tr>
-                                <tr><td>string</td><td><code>'Ana'</code></td></tr>
-                                <tr><td>number</td><td><code>25</code>, <code>3.14</code></td></tr>
-                                <tr><td>boolean</td><td><code>true</code>, <code>false</code></td></tr>
-                                <tr><td>undefined</td><td>variable sin valor asignado</td></tr>
-                                <tr><td>null</td><td>ausencia intencional de valor</td></tr>
-                                <tr><td>object</td><td><code>{ nombre: 'Ana', edad: 25 }</code></td></tr>
-                                <tr><td>array</td><td><code>[1, 2, 3]</code></td></tr>
-                            </table>
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Tipo</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Ejemplo</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">string</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>'Ana'</code></td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">number</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>25</code>, <code>3.14</code></td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">boolean</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>true</code>, <code>false</code></td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">undefined</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">variable sin valor asignado</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">null</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">ausencia intencional de valor</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">object</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>{ nombre: 'Ana', edad: 25 }</code></td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">array</td><td style="padding:12px; vertical-align:top;"><code>[1, 2, 3]</code></td></tr>
+                            </tbody></table></div>
                             <p>Se puede conocer el tipo con <code>typeof</code>: <code>typeof 25</code> devuelve <code>'number'</code>.</p>`,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m04_tipos_datos.png',
                             nextButton: 'Siguiente: Operadores'
@@ -1766,12 +1817,16 @@ document.addEventListener('DOMContentLoaded', mostrarLaboratorios);</code></pre>
                             title: '¿Por qué validar los formularios?',
                             content: `<p>Validar en el navegador ayuda a que la persona <strong>corrija sus datos antes de enviarlos</strong>, con mensajes inmediatos y claros.</p>
                             <p>Una buena validación no castiga al usuario: le <strong>explica qué está mal y cómo corregirlo</strong>.</p>
-                            <table class="table">
-                                <tr><th>Validación en el cliente (JS)</th><th>Validación en el servidor</th></tr>
-                                <tr><td>Mejora la experiencia: respuesta inmediata.</td><td>Protege los datos del sistema.</td></tr>
-                                <tr><td>Se puede desactivar o modificar con F12.</td><td>No se puede saltar.</td></tr>
-                                <tr><td>Navegador: JavaScript.</td><td>En el curso: Express y Mongoose.</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Validación en el cliente (JS)</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Validación en el servidor</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Mejora la experiencia: respuesta inmediata.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Protege los datos del sistema.</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Se puede desactivar o modificar con F12.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">No se puede saltar.</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">Navegador: JavaScript.</td><td style="padding:12px; vertical-align:top;">En el curso: Express y Mongoose.</td></tr>
+                            </tbody></table></div>
                             <p>
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 Se necesitan <strong>ambas</strong>: validar en el cliente es para el usuario; validar en el servidor es para el sistema.
@@ -1856,14 +1911,18 @@ function validarTelefono() {
                         },
                         {
                             title: 'Expresiones regulares comunes',
-                            content: `<table class="table">
-                                <tr><th>Dato</th><th>Expresión regular</th><th>Acepta</th></tr>
-                                <tr><td>Nombre</td><td><code>/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{2,40}$/</code></td><td>María José</td></tr>
-                                <tr><td>Cédula física</td><td><code>/^[1-9]-?\\d{4}-?\\d{4}$/</code></td><td>1-2345-6789, 123456789</td></tr>
-                                <tr><td>Teléfono</td><td><code>/^[245678]\\d{3}-?\\d{4}$/</code></td><td>8888-1234, 22223333</td></tr>
-                                <tr><td>Correo</td><td><code>/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/</code></td><td>ana@mep.go.cr</td></tr>
-                                <tr><td>Código institucional</td><td><code>/^\\d{4,5}$/</code></td><td>4021</td></tr>
-                            </table>
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Dato</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Expresión regular</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Acepta</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Nombre</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{2,40}$/</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">María José</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Cédula física</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>/^[1-9]-?\\d{4}-?\\d{4}$/</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">1-2345-6789, 123456789</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Teléfono</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>/^[245678]\\d{3}-?\\d{4}$/</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">8888-1234, 22223333</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Correo</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">ana@mep.go.cr</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">Código institucional</td><td style="padding:12px; vertical-align:top;"><code>/^\\d{4,5}$/</code></td><td style="padding:12px; vertical-align:top;">4021</td></tr>
+                            </tbody></table></div>
                             <ul>
                                 <li>Sea <strong>flexible con el formato</strong> y estricto con el contenido: acepte "8888-1234" y "88881234".</li>
                                 <li>Pruebe cada regla con datos <strong>válidos, inválidos y límite</strong> (el mínimo, el máximo, 0, texto vacío).</li>
@@ -1874,13 +1933,17 @@ function validarTelefono() {
                         {
                             title: 'Paso 4: mensajes de error útiles',
                             content: `<p>Un buen mensaje dice <strong>qué está mal</strong> y <strong>cómo corregirlo</strong>, con un lenguaje amable y, si ayuda, un ejemplo.</p>
-                            <table class="table">
-                                <tr><th>✘ Evite</th><th>✔ Prefiera</th></tr>
-                                <tr><td>Campo inválido.</td><td>El teléfono tiene 8 dígitos e inicia con 2, 4, 5, 6, 7 u 8. Ej.: 8888-1234.</td></tr>
-                                <tr><td>Error en la fecha.</td><td>La fecha de cierre debe ser posterior a la fecha de apertura.</td></tr>
-                                <tr><td>Texto muy corto.</td><td>La justificación debe tener al menos 20 caracteres (lleva 8).</td></tr>
-                                <tr><td>Complete los campos.</td><td>Hay 3 campos por corregir: Correo, Teléfono y Provincia.</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">✘ Evite</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">✔ Prefiera</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Campo inválido.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">El teléfono tiene 8 dígitos e inicia con 2, 4, 5, 6, 7 u 8. Ej.: 8888-1234.</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Error en la fecha.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">La fecha de cierre debe ser posterior a la fecha de apertura.</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Texto muy corto.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">La justificación debe tener al menos 20 caracteres (lleva 8).</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;">Complete los campos.</td><td style="padding:12px; vertical-align:top;">Hay 3 campos por corregir: Correo, Teléfono y Provincia.</td></tr>
+                            </tbody></table></div>
                             <p>
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 Muestre el mensaje <strong>junto al campo</strong> y no dependa solo del color: agregue texto (hay personas que no distinguen el rojo del verde). Evite mensajes técnicos como "regex no coincide" o "NaN".
@@ -2190,14 +2253,18 @@ $(function () {
                         {
                             title: 'Selectores básicos',
                             content: `<p>jQuery usa la misma sintaxis de selectores de CSS:</p>
-                            <table class="table">
-                                <tr><th>Selector</th><th>Selecciona</th></tr>
-                                <tr><td><code>$('p')</code></td><td>Todos los párrafos</td></tr>
-                                <tr><td><code>$('#menu')</code></td><td>El elemento con id "menu"</td></tr>
-                                <tr><td><code>$('.btn')</code></td><td>Elementos con la clase "btn"</td></tr>
-                                <tr><td><code>$('ul li')</code></td><td>Los li dentro de un ul</td></tr>
-                                <tr><td><code>$('input[type="email"]')</code></td><td>Por atributo</td></tr>
-                            </table>`,
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Selector</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Selecciona</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>$('p')</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Todos los párrafos</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>$('#menu')</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">El elemento con id "menu"</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>$('.btn')</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Elementos con la clase "btn"</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><code>$('ul li')</code></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Los li dentro de un ul</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;"><code>$('input[type="email"]')</code></td><td style="padding:12px; vertical-align:top;">Por atributo</td></tr>
+                            </tbody></table></div>`,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/refs/heads/main/SOFT-11(JS_CSS_HTML)/imgs/m05_selectores.png',
                             nextButton: 'Siguiente: Filtros y recorrido'
                         },
@@ -2572,14 +2639,18 @@ fetch('http://localhost:3000/api/usuarios');</code></pre>
                         {
                             title: 'API REST',
                             content: `<p>El servidor expone recursos mediante URLs y métodos HTTP:</p>
-                            <table class="table">
-                                <tr><th>Método</th><th>Ruta</th><th>Acción</th></tr>
-                                <tr><td>GET</td><td>/api/usuarios</td><td>Listar usuarios</td></tr>
-                                <tr><td>GET</td><td>/api/usuarios/:id</td><td>Obtener un usuario</td></tr>
-                                <tr><td>POST</td><td>/api/usuarios</td><td>Crear usuario</td></tr>
-                                <tr><td>PUT</td><td>/api/usuarios/:id</td><td>Actualizar usuario</td></tr>
-                                <tr><td>DELETE</td><td>/api/usuarios/:id</td><td>Eliminar usuario</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Método</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Ruta</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Acción</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">GET</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">/api/usuarios</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Listar usuarios</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">GET</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">/api/usuarios/:id</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Obtener un usuario</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">POST</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">/api/usuarios</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Crear usuario</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">PUT</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">/api/usuarios/:id</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Actualizar usuario</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">DELETE</td><td style="padding:12px; vertical-align:top;">/api/usuarios/:id</td><td style="padding:12px; vertical-align:top;">Eliminar usuario</td></tr>
+                            </tbody></table></div>
                             <p>Estas operaciones corresponden al CRUD: <strong>C</strong>reate, <strong>R</strong>ead, <strong>U</strong>pdate, <strong>D</strong>elete.</p>`,
                             nextButton: 'Siguiente: Middleware'
                         },
@@ -2665,14 +2736,18 @@ module.exports = router;</code></pre>`,
                         {
                             title: 'Pasos 1 y 2: entidades y atributos',
                             content: `<p>Las entidades salen de los <strong>requerimientos y casos de uso</strong> (módulos 1 y 2). Ejemplo con SICEN:</p>
-                            <table class="table">
-                                <tr><th>Entidad</th><th>Atributos principales</th></tr>
-                                <tr><td>Usuario</td><td>nombre, correo, clave, rol</td></tr>
-                                <tr><td>Centro educativo</td><td>nombre, código, provincia, dirección, teléfonos</td></tr>
-                                <tr><td>Censo</td><td>nombre, fecha de apertura, fecha de cierre, estado</td></tr>
-                                <tr><td>Formulario</td><td>nombre, preguntas</td></tr>
-                                <tr><td>Respuesta</td><td>censo, centro, formulario, valores, fecha de envío</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Entidad</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Atributos principales</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Usuario</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">nombre, correo, clave, rol</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Centro educativo</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">nombre, código, provincia, dirección, teléfonos</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Censo</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">nombre, fecha de apertura, fecha de cierre, estado</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Formulario</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">nombre, preguntas</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">Respuesta</td><td style="padding:12px; vertical-align:top;">censo, centro, formulario, valores, fecha de envío</td></tr>
+                            </tbody></table></div>
                             <ul>
                                 <li>Defina el <strong>tipo</strong> de cada atributo: String, Number, Date, Boolean, ObjectId, arreglo u objeto.</li>
                                 <li>Indique cuáles son <strong>obligatorios</strong> y cuáles <strong>únicos</strong> (por ejemplo, el código del centro).</li>
@@ -2683,14 +2758,18 @@ module.exports = router;</code></pre>`,
                         {
                             title: 'Paso 3: relaciones y cardinalidad',
                             content: `<p>Igual que en un modelo E-R, se identifica cómo se relacionan las entidades y <strong>cuántos</strong> elementos participan:</p>
-                            <table class="table">
-                                <tr><th>Relación</th><th>Cardinalidad</th><th>Pregunta para identificarla</th></tr>
-                                <tr><td>Centro → dirección</td><td>1 a 1</td><td>¿Un centro tiene una sola dirección?</td></tr>
-                                <tr><td>Centro → teléfonos</td><td>1 a pocos</td><td>¿Cuántos teléfonos puede tener? (2 o 3)</td></tr>
-                                <tr><td>Censo → respuestas</td><td>1 a muchos</td><td>¿Cuántas respuestas recibe un censo? (miles)</td></tr>
-                                <tr><td>Censo ↔ centros</td><td>muchos a muchos</td><td>¿Un centro participa en varios censos y un censo incluye varios centros?</td></tr>
-                                <tr><td>Censo ↔ formularios</td><td>muchos a muchos</td><td>¿Un formulario se reutiliza en varios censos?</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Relación</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Cardinalidad</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Pregunta para identificarla</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Centro → dirección</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">1 a 1</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">¿Un centro tiene una sola dirección?</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Centro → teléfonos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">1 a pocos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">¿Cuántos teléfonos puede tener? (2 o 3)</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Censo → respuestas</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">1 a muchos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">¿Cuántas respuestas recibe un censo? (miles)</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Censo ↔ centros</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">muchos a muchos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">¿Un centro participa en varios censos y un censo incluye varios centros?</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">Censo ↔ formularios</td><td style="padding:12px; vertical-align:top;">muchos a muchos</td><td style="padding:12px; vertical-align:top;">¿Un formulario se reutiliza en varios censos?</td></tr>
+                            </tbody></table></div>
                             <p>
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 No basta con decir "uno a muchos": importa <strong>cuántos son "muchos"</strong>. No es lo mismo 3 teléfonos que 5000 respuestas.
@@ -2700,13 +2779,17 @@ module.exports = router;</code></pre>`,
                         {
                             title: 'Paso 4: consultas más frecuentes',
                             content: `<p>Antes de decidir la estructura, liste qué datos necesita cada pantalla o reporte:</p>
-                            <table class="table">
-                                <tr><th>Pantalla / consulta</th><th>Datos que se muestran juntos</th></tr>
-                                <tr><td>Ficha del centro educativo</td><td>Centro + dirección + teléfonos</td></tr>
-                                <tr><td>Lista de censos abiertos</td><td>Nombre del censo + fechas</td></tr>
-                                <tr><td>Detalle de un censo</td><td>Censo + formularios + centros asignados</td></tr>
-                                <tr><td>Avance del censo</td><td>Cantidad de respuestas por centro</td></tr>
-                            </table>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Pantalla / consulta</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Datos que se muestran juntos</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Ficha del centro educativo</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Centro + dirección + teléfonos</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Lista de censos abiertos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Nombre del censo + fechas</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Detalle de un censo</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Censo + formularios + centros asignados</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;">Avance del censo</td><td style="padding:12px; vertical-align:top;">Cantidad de respuestas por centro</td></tr>
+                            </tbody></table></div>
                             <ul>
                                 <li>Lo que <strong>siempre se consulta junto</strong> es candidato a ir en el mismo documento.</li>
                                 <li>Lo que se consulta, actualiza o comparte <strong>por separado</strong> es candidato a su propia colección.</li>
@@ -2715,13 +2798,17 @@ module.exports = router;</code></pre>`,
                         },
                         {
                             title: 'Paso 5: ¿embeber o referenciar?',
-                            content: `<table class="table">
-                                <tr><th></th><th>Embeber (documento dentro de otro)</th><th>Referenciar (guardar el _id)</th></tr>
-                                <tr><td><strong>Cuándo</strong></td><td>Los datos se consultan siempre juntos y son pocos.</td><td>Los datos se consultan por separado, son muchos o se comparten.</td></tr>
-                                <tr><td><strong>Ventaja</strong></td><td>Una sola consulta trae todo.</td><td>No se duplica información; cada parte se actualiza sola.</td></tr>
-                                <tr><td><strong>Desventaja</strong></td><td>El documento crece; si el dato se repite, hay que actualizarlo en varios lugares.</td><td>Se necesita <code>populate()</code> (una consulta extra).</td></tr>
-                                <tr><td><strong>Ejemplo</strong></td><td>Dirección y teléfonos del centro.</td><td>Respuestas de un censo; centros asignados.</td></tr>
-                            </table>
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;"></th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Embeber (documento dentro de otro)</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Referenciar (guardar el _id)</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Cuándo</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Los datos se consultan siempre juntos y son pocos.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Los datos se consultan por separado, son muchos o se comparten.</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Ventaja</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Una sola consulta trae todo.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">No se duplica información; cada parte se actualiza sola.</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;"><strong>Desventaja</strong></td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">El documento crece; si el dato se repite, hay que actualizarlo en varios lugares.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Se necesita <code>populate()</code> (una consulta extra).</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;"><strong>Ejemplo</strong></td><td style="padding:12px; vertical-align:top;">Dirección y teléfonos del centro.</td><td style="padding:12px; vertical-align:top;">Respuestas de un censo; centros asignados.</td></tr>
+                            </tbody></table></div>
                             <p><strong>Reglas prácticas según la cardinalidad:</strong></p>
                             <ul>
                                 <li><strong>1 a 1</strong> → embeber.</li>
@@ -2815,13 +2902,17 @@ const respuestaSchema = new mongoose.Schema({
                         },
                         {
                             title: 'Errores comunes al modelar en MongoDB',
-                            content: `<table class="table">
-                                <tr><th>Error</th><th>Consecuencia</th><th>Mejor práctica</th></tr>
-                                <tr><td>Copiar el modelo relacional: una colección por tabla y todo referenciado.</td><td>Muchas consultas y <code>populate()</code> para mostrar una sola pantalla.</td><td>Embeber lo que siempre se consulta junto.</td></tr>
-                                <tr><td>Embeber arreglos que crecen sin límite (todas las respuestas dentro del censo).</td><td>Documentos enormes y lentos; se puede llegar al límite de 16 MB.</td><td>Referenciar desde el lado de los "muchos".</td></tr>
-                                <tr><td>Duplicar datos que cambian con frecuencia (el nombre del director en cada respuesta).</td><td>Hay que actualizar muchos documentos y quedan datos inconsistentes.</td><td>Referenciar lo que cambia; duplicar solo lo que casi nunca cambia.</td></tr>
-                                <tr><td>Diseñar sin pensar en las pantallas y reportes.</td><td>El modelo no responde a lo que el usuario necesita ver.</td><td>Listar las consultas frecuentes antes de decidir.</td></tr>
-                            </table>
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Error</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Consecuencia</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Mejor práctica</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Copiar el modelo relacional: una colección por tabla y todo referenciado.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Muchas consultas y <code>populate()</code> para mostrar una sola pantalla.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Embeber lo que siempre se consulta junto.</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Embeber arreglos que crecen sin límite (todas las respuestas dentro del censo).</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Documentos enormes y lentos; se puede llegar al límite de 16 MB.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Referenciar desde el lado de los "muchos".</td></tr>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Duplicar datos que cambian con frecuencia (el nombre del director en cada respuesta).</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Hay que actualizar muchos documentos y quedan datos inconsistentes.</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Referenciar lo que cambia; duplicar solo lo que casi nunca cambia.</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; vertical-align:top;">Diseñar sin pensar en las pantallas y reportes.</td><td style="padding:12px; vertical-align:top;">El modelo no responde a lo que el usuario necesita ver.</td><td style="padding:12px; vertical-align:top;">Listar las consultas frecuentes antes de decidir.</td></tr>
+                            </tbody></table></div>
                             <p>
                                 <i class="fas fa-warning" style="color: #00928d;" aria-hidden="true"></i>
                                 Entregue el diagrama de colecciones y los documentos de ejemplo <strong>antes</strong> de programar los esquemas: es más fácil corregir un dibujo que el código.
@@ -3578,12 +3669,16 @@ function manejarError(err, res) {
                         },
                         {
                             title: 'Comparación con la orientación a objetos',
-                            content: `<table class="table">
-                                <tr><th>Enfoque</th><th>Centro del análisis</th><th>Modelos típicos</th></tr>
-                                <tr><td>Procedimientos</td><td>Funciones y flujos</td><td>DFD, diagramas de flujo</td></tr>
-                                <tr><td>Datos</td><td>Información y relaciones</td><td>E-R, modelo de documentos</td></tr>
-                                <tr><td>Objetos</td><td>Objetos que unen datos y comportamiento</td><td>UML: clases, casos de uso, secuencia</td></tr>
-                            </table>`,
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Enfoque</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Centro del análisis</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Modelos típicos</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Procedimientos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Funciones y flujos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">DFD, diagramas de flujo</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Datos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">Información y relaciones</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">E-R, modelo de documentos</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">Objetos</td><td style="padding:12px; vertical-align:top;">Objetos que unen datos y comportamiento</td><td style="padding:12px; vertical-align:top;">UML: clases, casos de uso, secuencia</td></tr>
+                            </tbody></table></div>`,
                             nextButton: ' '
                         }
                     ]
@@ -3656,7 +3751,16 @@ Content-Type: application/json
 { "nombre": "Lab X", "capacidad": -5 }
 
 ### Listar
-GET http://localhost:3000/api/laboratorios?buscar=lab</code></pre><table class="table"><tr><th>Caso</th><th>Esperado</th><th>Obtenido</th></tr><tr><td>CP-20 Crear con datos válidos</td><td>201</td><td>201 ✔</td></tr><tr><td>CP-21 Capacidad negativa</td><td>400</td><td>400 ✔</td></tr><tr><td>CP-22 Eliminar sin sesión</td><td>401</td><td>200 ✘ (bug)</td></tr></table>`,
+GET http://localhost:3000/api/laboratorios?buscar=lab</code></pre><div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12); margin-top:15px;">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif; margin-top:0;">
+                            <thead>
+                            <tr><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Caso</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Esperado</th><th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left; vertical-align:bottom;">Obtenido</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">CP-20 Crear con datos válidos</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">201</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">201 ✔</td></tr>
+                            <tr style="background:#f3f9ff;"><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">CP-21 Capacidad negativa</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">400</td><td style="padding:12px; border-bottom:1px solid #dceeff; vertical-align:top;">400 ✔</td></tr>
+                            <tr><td style="padding:12px; vertical-align:top;">CP-22 Eliminar sin sesión</td><td style="padding:12px; vertical-align:top;">401</td><td style="padding:12px; vertical-align:top;">200 ✘ (bug)</td></tr>
+                            </tbody></table></div>`,
                             nextButton: ' '
                         }
                     ]

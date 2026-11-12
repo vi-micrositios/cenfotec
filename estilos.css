@@ -453,6 +453,22 @@
 
 }
 
+/* Texto suelto, tablas y diagramas también crecen en pantalla completa */
+.microsite-wrapper #appContainer:fullscreen .content-panel .step-text {
+    font-size: 1.25rem;
+}
+
+.microsite-wrapper #appContainer:fullscreen .content-panel table th,
+.microsite-wrapper #appContainer:fullscreen .content-panel table td {
+    font-size: 1.2rem !important;   /* también si la tabla trae un tamaño en línea */
+    line-height: 1.6;
+}
+
+/* Los diagramas SVG de data.js usan max-width: calc(var(--ancho) * var(--escala, 1)) */
+.microsite-wrapper #appContainer:fullscreen .content-panel svg {
+    --escala: 1.4;
+}
+
 .microsite-wrapper .fullscreen-btn, 
 .microsite-wrapper .header-action-btn {
     font-family: 'Poppins', sans-serif;
