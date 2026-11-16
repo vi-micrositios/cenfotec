@@ -1,3 +1,7 @@
+/* Fuente monoespaciada para el código: más gruesa y legible que Courier New,
+   también al compartir pantalla. Debe ir antes de cualquier otra regla. */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 /* ===== RESET Y BASE (solo dentro del wrapper) ===== */
 .microsite-wrapper * {
     box-sizing: border-box;
@@ -371,12 +375,15 @@
 }
 
 .microsite-wrapper .codigo {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1.01rem;
+    font-family: 'JetBrains Mono', Consolas, 'Cascadia Mono', Menlo, monospace;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.6;
     margin-top:12px;
-    padding:12px;
+    padding:14px 16px;
     background:#263238;
-    color:#ffffff;
+    color:#f5f7fa;
+    -webkit-font-smoothing: antialiased;
     border-radius:8px;
     white-space: pre;
     overflow-x: auto;       /* las líneas largas se desplazan dentro del bloque */
@@ -451,6 +458,24 @@
 .microsite-wrapper #appContainer:fullscreen .codigo {
     font-size: 1.3rem;
 
+}
+
+/* Un <code> dentro de .codigo usa la misma fuente (el navegador le pone Courier New por defecto) */
+.microsite-wrapper .codigo code {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    background: none;
+    color: inherit;
+    padding: 0;
+}
+
+/* Código dentro del texto (nombres de funciones, variables, etc.) */
+.microsite-wrapper .step-text code,
+.microsite-wrapper .step-text kbd {
+    font-family: 'JetBrains Mono', Consolas, 'Cascadia Mono', Menlo, monospace;
+    font-weight: 500;
+    font-size: 0.92em;
 }
 
 /* Texto suelto, tablas y diagramas también crecen en pantalla completa */

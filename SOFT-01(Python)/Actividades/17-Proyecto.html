@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega final del proyecto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <section aria-labelledby="entrega-final"
+        style="background: #ffffff; border-radius: 20px; padding: 28px 30px; margin: 0 auto; width: 100%; box-sizing: border-box; box-shadow: 0 8px 30px rgba(22, 74, 152, 0.12); border-left: 6px solid #712c86; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+
+        <!-- ENCABEZADO -->
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 18px; border-bottom: 3px solid #9CC8FF; padding-bottom: 14px; flex-wrap: wrap;">
+            <span style="display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: linear-gradient(135deg, #712c86, #164a98); border-radius: 12px; color: #ffffff; font-size: 24px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(22, 74, 152, 0.35);" aria-hidden="true">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+            </span>
+            <h3 id="entrega-final" style="margin: 0; color: #164a98; font-size: 26px; font-weight: 700; letter-spacing: -0.3px;">
+                Entrega final del proyecto: cómo organizar el trabajo
+            </h3>
+        </div>
+
+        <!-- OBJETIVO -->
+        <div style="background: #eef5ff; border-left: 5px solid #712c86; padding: 16px 18px; margin: 0 0 18px 0; border-radius: 8px; color: #1a3a6b; font-size: 16px; line-height: 1.6;">
+            <strong>Objetivo:</strong> organizar el desarrollo de la entrega final del proyecto aplicando la <strong>abstracción procedimental</strong>, los <strong>casos de prueba</strong> (pruebas unitarias y de integración), el <strong>control de versiones</strong> y la documentación que pide la consigna.
+        </div>
+
+        <!-- INSTRUCCIONES -->
+        <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 22px 0;">Estas indicaciones le ayudan a organizar el trabajo. <strong>No reemplazan la consigna</strong>: los requisitos, los mensajes exactos y la subrúbrica están en la consigna del proyecto. Léala completa antes de empezar y vuelva a ella cada vez que tenga una duda.</p>
+
+        <!-- FECHAS -->
+        <div style="background: #f1f9f2; border: 2px solid #a5d6a7; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-calendar-days" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Fechas importantes
+            </h4>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 15px; color: #1c3b64;">
+                    <thead>
+                        <tr style="background: #164a98; color: #ffffff;">
+                            <th style="padding: 10px; border: 1px solid #c8d1df; text-align: left;">Qué</th>
+                            <th style="padding: 10px; border: 1px solid #c8d1df; text-align: left;">Cuándo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">Commits que cuentan para la entrega</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">Del 11/11/2026 a la fecha y hora de entrega</td>
+                        </tr>
+                        <tr style="background: #f5f8fc;">
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">Entrega del código (repositorio y PDF en Moodle)</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;"><strong>30/11/2026, 23:59</strong></td>
+                        </tr>
+                        <tr style="background: #ffffff;">
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">Presentación y defensa</td>
+                            <td style="padding: 10px; border: 1px solid #c8d1df;">En la cita de revisión que reserve el grupo</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 12px 0 0 0;">Lo que se suba después de la fecha y hora de entrega no se califica. No deje el último commit para los últimos minutos.</p>
+        </div>
+
+        <!-- ORDEN DE TRABAJO -->
+        <div style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-list-ol" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Orden de trabajo recomendado
+            </h4>
+            <ol style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0; padding-left: 22px;">
+                <li><strong>Lea la consigna completa</strong> y marque los componentes y las funciones que le corresponden según el tamaño de su grupo.</li>
+                <li><strong>Revise la retroalimentación</strong> de los avances 1 y 2 y anote cada corrección que debe aplicar: luego va en la tabla de cambios.</li>
+                <li><strong>Copie las constantes</strong> de la consigna al inicio del archivo, con los mismos nombres y valores.</li>
+                <li><strong>Trabaje función por función</strong>, siguiendo el ciclo de la siguiente sección. No escriba todo el programa de una vez.</li>
+                <li><strong>Integre</strong>: cuando las funciones de un componente pasan sus pruebas, conéctelas desde <code style="background: #e8f0fe; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 14px;">ejecutar_mision()</code> y <code style="background: #e8f0fe; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 14px;">main()</code> y pruebe el sistema completo.</li>
+                <li><strong>Compare con los ejemplos de ejecución</strong> de la consigna: los mensajes deben ser exactamente iguales.</li>
+                <li><strong>Complete la documentación</strong> (tabla de variables, diagramas, casos de prueba con capturas y tabla de cambios) y súbala al repositorio.</li>
+                <li><strong>Revise la lista de verificación</strong> del final de esta página antes de entregar.</li>
+            </ol>
+        </div>
+
+        <!-- CICLO POR FUNCIÓN -->
+        <div style="background: #f1f9f2; border: 2px solid #a5d6a7; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-rotate" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Ciclo de trabajo para cada función
+            </h4>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                <div style="flex: 1 1 150px; background: #ffffff; border: 1px solid #c8d1df; border-top: 4px solid #00928d; border-radius: 10px; padding: 12px 14px; color: #1c3b64; font-size: 14px; line-height: 1.6;"><strong style="color: #164a98;">1. Analizar</strong><br>¿Qué recibe (parámetros), qué devuelve y qué debe hacer? Escríbalo en la tabla de variables.</div>
+                <div style="flex: 1 1 150px; background: #ffffff; border: 1px solid #c8d1df; border-top: 4px solid #00928d; border-radius: 10px; padding: 12px 14px; color: #1c3b64; font-size: 14px; line-height: 1.6;"><strong style="color: #164a98;">2. Diseñar</strong><br>Si la función requiere diagrama de flujo, hágalo antes de programar.</div>
+                <div style="flex: 1 1 150px; background: #ffffff; border: 1px solid #c8d1df; border-top: 4px solid #00928d; border-radius: 10px; padding: 12px 14px; color: #1c3b64; font-size: 14px; line-height: 1.6;"><strong style="color: #164a98;">3. Preparar pruebas</strong><br>Escoja datos de prueba y calcule a mano el resultado esperado.</div>
+                <div style="flex: 1 1 150px; background: #ffffff; border: 1px solid #c8d1df; border-top: 4px solid #00928d; border-radius: 10px; padding: 12px 14px; color: #1c3b64; font-size: 14px; line-height: 1.6;"><strong style="color: #164a98;">4. Programar</strong><br>Escriba el código con los mismos nombres de la tabla y del diagrama.</div>
+                <div style="flex: 1 1 150px; background: #ffffff; border: 1px solid #c8d1df; border-top: 4px solid #00928d; border-radius: 10px; padding: 12px 14px; color: #1c3b64; font-size: 14px; line-height: 1.6;"><strong style="color: #164a98;">5. Probar</strong><br>Llame a la función por su nombre antes de <code style="background: #e8f0fe; color: #164a98; padding: 1px 4px; border-radius: 4px; font-size: 13px;">main()</code> y compare. Tome la captura de pantalla.</div>
+                <div style="flex: 1 1 150px; background: #ffffff; border: 1px solid #c8d1df; border-top: 4px solid #00734a; border-radius: 10px; padding: 12px 14px; color: #1c3b64; font-size: 14px; line-height: 1.6;"><strong style="color: #00734a;">6. Commit</strong><br>Cuando la prueba pasa, haga un commit que describa lo que agregó.</div>
+            </div>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 14px 0 0 0;">Si una prueba falla, corrija la función antes de pasar a la siguiente: un error pequeño en una función se vuelve difícil de encontrar cuando el programa está completo.</p>
+        </div>
+
+        <!-- GIT -->
+        <div style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-brands fa-git-alt" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Trabajo con Git
+            </h4>
+            <ul style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0; padding-left: 22px;">
+                <li>Cada integrante debe tener <strong>al menos 8 commits significativos propios</strong>, hechos entre el 11/11/2026 y la fecha de entrega, en <strong>al menos tres días diferentes</strong>. No cuentan los commits que solo agregan o eliminan comentarios.</li>
+                <li>Haga un commit cada vez que termine y pruebe una parte; por ejemplo, una función o una corrección.</li>
+                <li>Escriba mensajes que digan qué cambió: <em>«Agrega calcular_consumo_diario y su prueba unitaria»</em>, y no <em>«cambios»</em> ni <em>«avance»</em>.</li>
+                <li>Antes de empezar a trabajar, traiga los cambios de su compañero (<code style="background: #e8f0fe; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 14px;">git pull</code>); al terminar, suba los suyos (<code style="background: #e8f0fe; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 14px;">git push</code>).</li>
+                <li>Si trabajan en pareja, repártanse funciones diferentes para no modificar las mismas líneas al mismo tiempo.</li>
+                <li>Verifique en GitHub que los archivos se subieron a la rama que va a indicar en el PDF de Moodle.</li>
+            </ul>
+        </div>
+
+        <!-- PRUEBAS Y EVIDENCIA -->
+        <div style="background: #f1f9f2; border: 2px solid #a5d6a7; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-vial" style="color: #00734a; font-size: 22px;" aria-hidden="true"></i>
+                Pruebas y evidencia
+            </h4>
+            <ul style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0; padding-left: 22px;">
+                <li><strong>Pruebas unitarias:</strong> llame a cada función por su nombre, con datos de prueba, antes de <code style="background: #e8f0fe; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 14px;">main()</code>. Si la función devuelve un valor, escriba la llamada dentro de print().</li>
+                <li><strong>Pruebas de integración:</strong> ejecute <code style="background: #e8f0fe; color: #164a98; padding: 1px 6px; border-radius: 4px; font-family: Consolas, 'Courier New', monospace; font-size: 14px;">main()</code> con casos completos, al menos uno por cada resultado posible del sistema.</li>
+                <li>Incluya casos normales, casos límite (por ejemplo, valores exactamente iguales) y casos de error (por ejemplo, una opción no válida).</li>
+                <li>Calcule el resultado esperado <strong>antes</strong> de ejecutar, no después.</li>
+                <li>La evidencia de cada caso es una <strong>captura de pantalla de la terminal</strong>. No se acepta la salida copiada y pegada como texto.</li>
+            </ul>
+        </div>
+
+        <!-- DEFENSA -->
+        <div style="background: #f7f1fa; border: 2px solid #c9a6d5; border-radius: 14px; padding: 22px; margin-bottom: 28px;">
+            <h4 style="margin: 0 0 14px 0; color: #164a98; font-size: 20px; display: flex; align-items: center; gap: 10px;">
+                <i class="fa-solid fa-comments" style="color: #712c86; font-size: 22px;" aria-hidden="true"></i>
+                Mientras programa, prepare la defensa
+            </h4>
+            <p style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0 0 10px 0;">En la defensa debe explicar <strong>cualquier parte del código</strong>, justificar decisiones de diseño, predecir resultados sin ejecutar y hacer un cambio en vivo. Para llegar preparado:</p>
+            <ul style="color: #1c3b64; font-size: 15px; line-height: 1.7; margin: 0; padding-left: 22px;">
+                <li>Después de terminar cada función, explíquela en voz alta: qué recibe, qué devuelve y cómo lo logra.</li>
+                <li>Si usó inteligencia artificial, no agregue al proyecto ninguna línea que no pueda explicar.</li>
+                <li>Si trabaja en pareja, lea y entienda también las funciones de su compañero.</li>
+            </ul>
+        </div>
+
+
+        <!-- CIERRE -->
+        <div style="display: flex; gap: 10px; align-items: flex-start; background: #e8f5e9; border-radius: 10px; padding: 14px 16px; color: #00734a; font-size: 14px; line-height: 1.6;">
+            <i class="fa-solid fa-circle-check" aria-hidden="true" style="font-size: 20px; margin-top: 2px;"></i>
+            <span><strong>Recuerde:</strong> si tiene una duda sobre lo que pide la consigna, pregunte con tiempo. No suponga: una interpretación diferente puede costarle puntos.</span>
+        </div>
+
+    </section>
+
+
+
+</body>
+
+</html>
