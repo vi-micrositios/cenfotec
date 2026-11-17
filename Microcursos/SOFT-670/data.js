@@ -1,20 +1,141 @@
+
 const data = {
     // Pantalla de bienvenida
     welcome: {
         title: 'SOFT-670 <br> Python para el Análisis de Datos',
         image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/logo.png',
-        description: 'Python es el lenguaje más utilizado para transformar datos en información útil para la toma de decisiones. El curso aborda la preparación del entorno de trabajo, la manipulación de datos con Pandas y NumPy, el análisis descriptivo y la visualización con Matplotlib, y los métodos avanzados de analítica, como los modelos predictivos con scikit-learn, Keras y TensorFlow.',
+        description: 'Python es el lenguaje más utilizado para transformar datos en información para la toma de decisiones. El curso aborda los primeros pasos en Python, el trabajo con Data Frames, el análisis descriptivo y resumen de datos, y los métodos avanzados de analítica de datos con NumPy, Pandas, Matplotlib y TensorFlow.',
         instruction: 'Seleccione cada pestaña para acceder a la información'
     },
     // Temas, subtemas y pasos
     temas: [
         // =====================================================================
-        // TEMA 1. PRIMEROS PASOS EN PYTHON
+        // SECCIÓN 1. PRIMEROS PASOS
         // =====================================================================
         {
             id: 'tema_001',
-            label: 'Primeros pasos en Python',
+            label: 'Primeros pasos',
             subtemas: [
+                {
+                    id: 'pp-intro',
+                    label: 'Introducción al análisis de datos',
+                    steps: [
+                        {
+                            title: '¿Qué es el análisis de datos?',
+                            content: `<p>El <strong>análisis de datos</strong> es el proceso de revisar, limpiar, transformar y resumir datos para obtener información que ayude a tomar decisiones. Los datos por sí solos son registros (ventas, notas, temperaturas); la información aparece cuando se responden preguntas con ellos.</p>
+                            <p>Algunos ejemplos de preguntas que se responden con análisis de datos:</p>
+                            <ul>
+                                <li>¿Qué productos se venden más en cada sucursal y en qué meses?</li>
+                                <li>¿Qué hábitos se relacionan con un mejor rendimiento académico?</li>
+                                <li>¿Cuántas unidades se venderán la próxima semana?</li>
+                                <li>¿Qué clientes tienen mayor probabilidad de dejar de comprar?</li>
+                            </ul>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Una buena pregunta es el punto de partida: indica qué datos se necesitan y qué análisis se debe hacer.</p>
+                            `,
+                            nextButton: 'Siguiente: Tipos de análisis'
+                        },
+                        {
+                            title: 'Tipos de análisis',
+                            content: `<p>Según la pregunta que responden, los análisis se clasifican en cuatro tipos. Cada uno se apoya en el anterior:</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Tipo</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Pregunta</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo con las ventas de un minisúper</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Descriptivo</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Qué pasó?</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Las ventas de marzo fueron de ₡12 millones y Heredia fue la sucursal con más ventas.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Diagnóstico</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Por qué pasó?</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Las ventas subieron porque hubo una promoción de bebidas.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Predictivo</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Qué pasará?</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">En abril se venderán unas 3200 unidades de leche.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;">Prescriptivo</td>
+                                <td style="padding:13px 12px;">¿Qué se debe hacer?</td>
+                                <td style="padding:13px 12px;">Conviene aumentar el inventario de leche en Heredia antes de abril.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            En el curso, NumPy, Pandas y Matplotlib se usan sobre todo para el análisis descriptivo y diagnóstico; TensorFlow, para el análisis predictivo.</p>
+                            `,
+                            nextButton: 'Siguiente: El proceso de análisis de datos'
+                        },
+                        {
+                            title: 'El proceso de análisis de datos',
+                            content: `<p>Un análisis sigue, en general, estos pasos:</p>
+                            <ol>
+                                <li><strong>Definir la pregunta</strong> que se quiere responder.</li>
+                                <li><strong>Obtener los datos</strong>: archivos CSV o Excel, bases de datos, sitios web.</li>
+                                <li><strong>Limpiar los datos</strong>: corregir errores, tratar los valores faltantes y los duplicados.</li>
+                                <li><strong>Explorar y resumir</strong>: calcular estadísticas, agrupar y graficar.</li>
+                                <li><strong>Modelar</strong>: construir un modelo que explique o prediga, cuando la pregunta lo requiere.</li>
+                                <li><strong>Comunicar</strong> los resultados con tablas, gráficos y conclusiones claras.</li>
+                            </ol>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            La limpieza suele ocupar la mayor parte del tiempo de un análisis: con datos incorrectos, los resultados también lo son.</p>
+                            `,
+                            nextButton: 'Siguiente: Las bibliotecas del curso'
+                        },
+                        {
+                            title: 'Las bibliotecas del curso',
+                            content: `<p>Una <strong>biblioteca</strong> es un conjunto de herramientas ya programadas que se instala y se importa en el código. El curso avanza por cuatro bibliotecas, cada una en su sección:</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Biblioteca</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Para qué se usa</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Paso del proceso</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>NumPy</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Cálculos rápidos con arreglos de números.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Obtener, limpiar y resumir</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Pandas</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Leer, limpiar, transformar y resumir tablas de datos.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Obtener, limpiar, explorar y resumir</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><strong>Matplotlib</strong></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Crear gráficos.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Explorar y comunicar</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><strong>TensorFlow</strong> (con Keras y scikit-learn)</td>
+                                <td style="padding:13px 12px;">Construir y evaluar modelos predictivos.</td>
+                                <td style="padding:13px 12px;">Modelar</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
+                },
                 {
                     id: 't1-entorno',
                     label: 'Entorno de desarrollo',
@@ -176,8 +297,211 @@ df = pd.read_csv(DATOS / "ventas.csv")
                     ]
                 },
                 {
-                    id: 't1-pandas-numpy',
-                    label: 'Pandas y NumPy',
+                    id: 'pp-matematica',
+                    label: 'Conceptos matemáticos para el análisis de datos',
+                    steps: [
+                        {
+                            title: 'Variables y tipos de datos',
+                            content: `<p>Una <strong>variable</strong> es una característica que se mide o se registra, como la edad, la sucursal o las unidades vendidas. Según sus valores, puede ser:</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Tipo</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Descripción</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Ejemplo</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Cuantitativa continua</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Número que puede tener decimales.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Precio, temperatura, horas de sueño</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Cuantitativa discreta</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Número entero, que se cuenta.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Unidades vendidas, cantidad de hijos</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Cualitativa nominal</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Categoría sin orden.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Sucursal, color, tipo de vehículo</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;">Cualitativa ordinal</td>
+                                <td style="padding:13px 12px;">Categoría con un orden.</td>
+                                <td style="padding:13px 12px;">Nivel de estrés: bajo, medio, alto</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p>Cuando se estudia la relación entre dos variables, la <strong>variable independiente</strong> (x) es la que explica o se usa para predecir, y la <strong>variable dependiente</strong> (y) es la que se quiere explicar o predecir. Por ejemplo, las horas de estudio (independiente) y la nota (dependiente).</p>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Con las variables cuantitativas se calculan promedios y otras medidas; las cualitativas se cuentan y se agrupan.</p>
+                            `,
+                            nextButton: 'Siguiente: Funciones y rectas'
+                        },
+                        {
+                            title: 'Funciones y rectas',
+                            content: `<p>Una <strong>función</strong> asigna a cada valor de entrada (x) un único valor de salida (y). La función lineal tiene la forma <code>y = m·x + b</code>, donde <code>m</code> es la <strong>pendiente</strong> (cuánto cambia y cuando x aumenta en 1) y <code>b</code> es el <strong>intercepto</strong> (el valor de y cuando x es 0).</p>
+                            
+<pre class="codigo">
+import numpy as np
+
+x = np.array([0, 1, 2, 3, 4])   # variable independiente
+y = 2 * x + 3                    # pendiente 2, intercepto 3
+print(y)                         # [ 3  5  7  9 11]
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            La regresión lineal, que se estudia en la sección TensorFlow, busca la recta que mejor se ajusta a los datos: encuentra la pendiente y el intercepto a partir de ejemplos.</p>
+                            `,
+                            nextButton: 'Siguiente: Vectores y matrices'
+                        },
+                        {
+                            title: 'Vectores y matrices',
+                            content: `<p>Un <strong>vector</strong> es una lista ordenada de números y una <strong>matriz</strong> es una tabla de números con filas y columnas. Una tabla de datos es, en el fondo, una matriz: cada fila es un registro y cada columna, una variable.</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Operación</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Qué hace</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">En NumPy</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Transpuesta</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Convierte las filas en columnas.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>m.T</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Producto punto</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Multiplica dos vectores elemento por elemento y suma los resultados.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>np.dot(u, v)</code></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Producto de matrices</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Combina filas de una matriz con columnas de otra.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>a @ b</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Determinante</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Número que indica si una matriz cuadrada tiene inversa (si no es 0).</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>np.linalg.det(m)</code></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;">Inversa</td>
+                                <td style="padding:13px 12px;">Matriz que, multiplicada por la original, da la matriz identidad.</td>
+                                <td style="padding:13px 12px;"><code>np.linalg.inv(m)</code></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            
+<pre class="codigo">
+m = np.array([[1, 2], [3, 4]])
+print(m.T)                          # transpuesta
+print(round(np.linalg.det(m), 2))   # determinante: -2.0
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Las redes neuronales hacen, en cada capa, un producto de matrices entre los datos y los pesos que aprenden.</p>
+                            `,
+                            nextButton: 'Siguiente: Medidas de resumen'
+                        },
+                        {
+                            title: 'Medidas de resumen',
+                            content: `<p>Las medidas de resumen describen un conjunto de datos con pocos números. Con las notas <code>70, 85, 90, 60, 85, 100, 45</code>:</p>
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Medida</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Qué indica</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Resultado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Media</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">El promedio: la suma dividida entre la cantidad de datos.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">76,43</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Mediana</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">El valor del centro cuando los datos se ordenan.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">85</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Moda</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">El valor que más se repite.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">85</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Rango</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">La diferencia entre el máximo y el mínimo.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">55</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Desviación estándar</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Cuánto se alejan, en promedio, los datos de la media.</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">17,67</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;">Percentil 25 y 75</td>
+                                <td style="padding:13px 12px;">Valores por debajo de los cuales está el 25 % y el 75 % de los datos.</td>
+                                <td style="padding:13px 12px;">65 y 87,5</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            La media se ve afectada por los valores extremos; la mediana no. Por eso, cuando hay valores muy altos o muy bajos, la mediana representa mejor el valor típico.</p>
+                            `,
+                            nextButton: 'Siguiente: Relación entre variables'
+                        },
+                        {
+                            title: 'Relación entre variables',
+                            content: `<p>La <strong>correlación</strong> mide qué tan relacionadas están dos variables cuantitativas. Va de -1 a 1:</p>
+                            <ul>
+                                <li>Cerca de <strong>1</strong>: cuando una variable sube, la otra también.</li>
+                                <li>Cerca de <strong>-1</strong>: cuando una variable sube, la otra baja.</li>
+                                <li>Cerca de <strong>0</strong>: no hay una relación lineal.</li>
+                            </ul>
+                            
+<pre class="codigo">
+horas = np.array([1, 2, 3, 4, 5, 6])
+notas = np.array([52, 60, 61, 70, 74, 83])
+print(np.corrcoef(horas, notas)[0, 1].round(3))   # 0.986
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
+                            Correlación no significa causa: que dos variables cambien juntas no prueba que una provoque la otra.</p>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
+                }
+            ]
+        },
+        // =====================================================================
+        // SECCIÓN 2. NUMPY
+        // =====================================================================
+        {
+            id: 'tema_002',
+            label: 'NumPy',
+            subtemas: [
+                {
+                    id: 'np-arreglos',
+                    label: 'Arreglos y operaciones',
                     steps: [
                         {
                             title: '¿Qué son NumPy y Pandas?',
@@ -281,8 +605,147 @@ simulados = rng.normal(loc=100, scale=15, size=5)
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
                             La <strong>semilla</strong> (<code>42</code>) hace que los números aleatorios sean los mismos cada vez que se ejecuta el código, lo que permite reproducir los resultados.</p>
                             `,
-                            nextButton: 'Siguiente: Series de Pandas'
+                            nextButton: ''
+                        }
+                    ]
+                },
+                {
+                    id: 'np-archivos',
+                    label: 'Archivos con NumPy',
+                    steps: [
+                        {
+                            title: 'Leer un archivo con NumPy',
+                            content: `<p>NumPy puede leer archivos de texto, como un CSV, con <code>np.genfromtxt()</code>. Como NumPy solo trabaja con números, se indican las columnas numéricas que se van a leer. Las celdas vacías se convierten en <code>nan</code> ("no es un número").</p>
+                            
+<pre class="codigo">
+from pathlib import Path
+import numpy as np
+
+archivo = Path(__file__).parent / "datos" / "ventas.csv"
+datos = np.genfromtxt(archivo, delimiter=",", skip_header=1, usecols=(4, 5))
+
+print(datos.shape)    # (filas, 2): unidades y precio_unitario
+print(datos[:5])      # primeras 5 filas
+
+unidades = datos[:, 0]
+precios = datos[:, 1]
+print((unidades * precios).sum())   # ingreso total
+</pre>
+                            
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Parámetro</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Significado</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>delimiter=","</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Carácter que separa los valores.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>skip_header=1</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Omite la primera fila, que tiene los nombres de las columnas.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;"><code>usecols=(4, 5)</code></td>
+                                <td style="padding:13px 12px;">Posiciones de las columnas que se leen (empiezan en 0).</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            <code>np.loadtxt()</code> también lee archivos, pero se detiene con un error si hay celdas vacías o texto.</p>
+                            <p class="nota">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
+                            <code>genfromtxt</code> no maneja bien los textos entre comillas que contienen comas. Para archivos con texto y números mezclados se usa Pandas, en la siguiente sección.</p>
+                            `,
+                            nextButton: 'Siguiente: Valores faltantes en NumPy'
                         },
+                        {
+                            title: 'Valores faltantes en NumPy',
+                            content: `<p>Un solo <code>nan</code> hace que <code>mean()</code>, <code>max()</code> o <code>sum()</code> den <code>nan</code>. Hay dos formas de tratarlos: usar las funciones que ignoran los faltantes o eliminar las filas incompletas.</p>
+                            
+<pre class="codigo">
+print(np.isnan(datos).sum(axis=0))    # faltantes por columna
+print(datos.mean(axis=0))             # da nan si hay faltantes
+print(np.nanmean(datos, axis=0))      # ignora los faltantes
+
+completas = datos[~np.isnan(datos).any(axis=1)]   # solo filas sin faltantes
+print(len(completas))
+</pre>
+                            
+                            <div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Función</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Uso</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>np.isnan(a)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Devuelve <code>True</code> donde hay un faltante.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>np.nanmean</code>, <code>np.nanmax</code>, <code>np.nanmin</code>, <code>np.nansum</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Calculan ignorando los faltantes.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>a.any(axis=1)</code></td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Indica si cada fila tiene al menos un <code>True</code>.</td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px;"><code>~</code></td>
+                                <td style="padding:13px 12px;">Invierte una máscara: <code>True</code> pasa a <code>False</code> y viceversa.</td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            `,
+                            nextButton: 'Siguiente: Filtrar, relacionar y guardar'
+                        },
+                        {
+                            title: 'Filtrar, relacionar y guardar',
+                            content: `<p>Con una condición sobre una columna se obtiene una <strong>máscara</strong> que filtra las filas. <code>np.corrcoef()</code> mide la relación entre dos columnas y <code>np.savetxt()</code> guarda un arreglo en un archivo nuevo.</p>
+                            
+<pre class="codigo">
+caras = completas[completas[:, 1] &gt; 2000]     # productos de más de ₡2000
+print(len(caras))
+print(caras[:, 0].mean())                     # unidades promedio
+
+relacion = np.corrcoef(completas[:, 0], completas[:, 1])[0, 1]
+print(round(relacion, 3))    # entre -1 y 1
+
+np.savetxt("ventas_caras.csv", caras, delimiter=",", fmt="%.2f",
+           header="unidades,precio_unitario", comments="")
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            La correlación va de -1 a 1: cerca de 1, las dos columnas suben juntas; cerca de -1, cuando una sube la otra baja; cerca de 0, no hay relación.</p>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
+                }
+            ]
+        },
+        // =====================================================================
+        // SECCIÓN 3. PANDAS
+        // =====================================================================
+        {
+            id: 'tema_003',
+            label: 'Pandas',
+            subtemas: [
+                {
+                    id: 't1-importacion',
+                    label: 'Series, DataFrames e importación de datos',
+                    steps: [
                         {
                             title: 'Series de Pandas',
                             content: `<p>Una <code>Series</code> es una columna de datos con un <strong>índice</strong> que identifica cada valor.</p>
@@ -320,14 +783,8 @@ print(df.head())            # primeras filas
                             En un script <code>.py</code>, los resultados solo aparecen en la terminal si se usa <code>print()</code>.</p>
                             `,
                             image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/dataframe.png',
-                            nextButton: ''
-                        }
-                    ]
-                },
-                {
-                    id: 't1-importacion',
-                    label: 'Importación y manipulación de datos',
-                    steps: [
+                            nextButton: 'Siguiente: Fuentes de datos'
+                        },
                         {
                             title: 'Fuentes de datos',
                             content: `<p>Pandas lee datos de muchos formatos con funciones que empiezan con <code>read_</code>:</p>
@@ -517,155 +974,6 @@ df.to_excel("reporte.xlsx", sheet_name="Ventas", index=False)
                         }
                     ]
                 },
-                {
-                    id: 't1-matplotlib',
-                    label: 'Visualización con Matplotlib',
-                    steps: [
-                        {
-                            title: 'Anatomía de un gráfico',
-                            content: `<p>Matplotlib es la biblioteca base de visualización en Python. Un gráfico se compone de:</p>
-                            <ul>
-                                <li><strong>Figure</strong>: el lienzo completo.</li>
-                                <li><strong>Axes</strong>: el área del gráfico, con sus ejes.</li>
-                                <li><strong>Título, etiquetas de los ejes y leyenda</strong>: indican qué se está mostrando.</li>
-                            </ul>
-                            
-<pre class="codigo">
-import matplotlib.pyplot as plt
-
-fig, ax = plt.subplots(figsize=(8, 4))
-ax.plot([1, 2, 3, 4], [10, 25, 18, 30])
-ax.set_title("Título del gráfico")
-ax.set_xlabel("Eje X")
-ax.set_ylabel("Eje Y")
-plt.show()
-</pre>
-                            
-                            `,
-                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/matplotlib.png',
-                            nextButton: 'Siguiente: Gráfico de líneas: evolución en el tiempo'
-                        },
-                        {
-                            title: 'Gráfico de líneas: evolución en el tiempo',
-                            content: `
-<pre class="codigo">
-ventas_mes = df.groupby(df["fecha"].dt.month)["total"].sum()
-
-fig, ax = plt.subplots(figsize=(8, 4))
-ax.plot(ventas_mes.index, ventas_mes.values, marker="o")
-ax.set_title("Ventas por mes")
-ax.set_xlabel("Mes")
-ax.set_ylabel("Total (₡)")
-ax.grid(True, alpha=0.3)
-plt.show()
-</pre>
-                            
-                            <p class="nota">
-                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
-                            El gráfico de líneas es el indicado cuando el eje X tiene un orden natural, como el tiempo.</p>
-                            `,
-                            nextButton: 'Siguiente: Gráfico de barras: comparar categorías'
-                        },
-                        {
-                            title: 'Gráfico de barras: comparar categorías',
-                            content: `
-<pre class="codigo">
-por_sucursal = df.groupby("sucursal")["total"].sum().sort_values()
-
-fig, ax = plt.subplots(figsize=(8, 4))
-ax.barh(por_sucursal.index, por_sucursal.values, color="#2b93d1")
-ax.set_title("Ventas totales por sucursal")
-ax.set_xlabel("Total (₡)")
-plt.show()
-</pre>
-                            
-                            <p class="nota">
-                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
-                            Ordenar las barras facilita ver cuál categoría es mayor. Las barras horizontales funcionan mejor cuando los nombres son largos.</p>
-                            `,
-                            nextButton: 'Siguiente: Histograma y dispersión'
-                        },
-                        {
-                            title: 'Histograma y dispersión',
-                            content: `<p><strong>Histograma</strong>: muestra cómo se distribuyen los valores de una variable numérica.</p>
-                            
-<pre class="codigo">
-fig, ax = plt.subplots()
-ax.hist(df["total"], bins=20, edgecolor="white")
-ax.set_title("Distribución del monto por venta")
-plt.show()
-</pre>
-                            
-                            <p><strong>Dispersión</strong>: muestra la relación entre dos variables numéricas.</p>
-                            
-<pre class="codigo">
-fig, ax = plt.subplots()
-ax.scatter(df["precio_unitario"], df["unidades"], alpha=0.5)
-ax.set_xlabel("Precio unitario")
-ax.set_ylabel("Unidades vendidas")
-plt.show()
-</pre>
-                            
-                            `,
-                            nextButton: 'Siguiente: ¿Qué gráfico usar?'
-                        },
-                        {
-                            title: '¿Qué gráfico usar?',
-                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
-                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
-                            <thead>
-                            <tr>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Pregunta</th>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Gráfico</th>
-                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Matplotlib</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Cómo cambia en el tiempo?</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Líneas</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.plot()</code></td>
-                            </tr>
-                            <tr style="background:#f3f9ff;">
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Cuál categoría es mayor?</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Barras</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.bar()</code> / <code>ax.barh()</code></td>
-                            </tr>
-                            <tr>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Cómo se distribuyen los valores?</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Histograma</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.hist()</code></td>
-                            </tr>
-                            <tr style="background:#f3f9ff;">
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Se relacionan dos variables?</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Dispersión</td>
-                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.scatter()</code></td>
-                            </tr>
-                            <tr>
-                                <td style="padding:13px 12px;">¿Cómo se compara la distribución entre grupos?</td>
-                                <td style="padding:13px 12px;">Caja (boxplot)</td>
-                                <td style="padding:13px 12px;"><code>ax.boxplot()</code></td>
-                            </tr>
-                            </tbody>
-                            </table>
-                            </div>
-                            <p class="nota">
-                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
-                            Evite los gráficos circulares con muchas categorías y los efectos 3D: dificultan comparar los valores.</p>
-                            `,
-                            nextButton: ''
-                        }
-                    ]
-                }
-            ]
-        },
-        // =====================================================================
-        // TEMA 2. DATA FRAMES
-        // =====================================================================
-        {
-            id: 'tema_002',
-            label: 'Data Frames',
-            subtemas: [
                 {
                     id: 't2-primeros-analisis',
                     label: 'Primeros análisis con Pandas',
@@ -1008,7 +1316,7 @@ print(resumen.reset_index())               # el índice vuelve a ser una columna
                             
                             <p class="nota">
                             <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
-                            Usar la fecha como índice simplifica los análisis de series temporales del Tema 4.</p>
+                            Usar la fecha como índice simplifica los análisis de series temporales de la sección TensorFlow.</p>
                             `,
                             nextButton: 'Siguiente: Modificar valores seleccionados'
                         },
@@ -1140,16 +1448,7 @@ resumen = (
                             nextButton: ''
                         }
                     ]
-                }
-            ]
-        },
-        // =====================================================================
-        // TEMA 3. ANÁLISIS DESCRIPTIVO
-        // =====================================================================
-        {
-            id: 'tema_003',
-            label: 'Análisis descriptivo',
-            subtemas: [
+                },
                 {
                     id: 't3-estadistica',
                     label: 'Estadística descriptiva',
@@ -1458,6 +1757,155 @@ print(pd.crosstab(df["sucursal"], df["rango_monto"], normalize="index") * 100)
                             nextButton: ''
                         }
                     ]
+                }
+            ]
+        },
+        // =====================================================================
+        // SECCIÓN 4. MATPLOTLIB
+        // =====================================================================
+        {
+            id: 'tema_004',
+            label: 'Matplotlib',
+            subtemas: [
+                {
+                    id: 't1-matplotlib',
+                    label: 'Visualización con Matplotlib',
+                    steps: [
+                        {
+                            title: 'Anatomía de un gráfico',
+                            content: `<p>Matplotlib es la biblioteca base de visualización en Python. Un gráfico se compone de:</p>
+                            <ul>
+                                <li><strong>Figure</strong>: el lienzo completo.</li>
+                                <li><strong>Axes</strong>: el área del gráfico, con sus ejes.</li>
+                                <li><strong>Título, etiquetas de los ejes y leyenda</strong>: indican qué se está mostrando.</li>
+                            </ul>
+                            
+<pre class="codigo">
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot([1, 2, 3, 4], [10, 25, 18, 30])
+ax.set_title("Título del gráfico")
+ax.set_xlabel("Eje X")
+ax.set_ylabel("Eje Y")
+plt.show()
+</pre>
+                            
+                            `,
+                            image: 'https://raw.githubusercontent.com/vi-micrositios/cenfotec/main/Microcursos/SOFT-670/imgs/matplotlib.png',
+                            nextButton: 'Siguiente: Gráfico de líneas: evolución en el tiempo'
+                        },
+                        {
+                            title: 'Gráfico de líneas: evolución en el tiempo',
+                            content: `
+<pre class="codigo">
+ventas_mes = df.groupby(df["fecha"].dt.month)["total"].sum()
+
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.plot(ventas_mes.index, ventas_mes.values, marker="o")
+ax.set_title("Ventas por mes")
+ax.set_xlabel("Mes")
+ax.set_ylabel("Total (₡)")
+ax.grid(True, alpha=0.3)
+plt.show()
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            El gráfico de líneas es el indicado cuando el eje X tiene un orden natural, como el tiempo.</p>
+                            `,
+                            nextButton: 'Siguiente: Gráfico de barras: comparar categorías'
+                        },
+                        {
+                            title: 'Gráfico de barras: comparar categorías',
+                            content: `
+<pre class="codigo">
+por_sucursal = df.groupby("sucursal")["total"].sum().sort_values()
+
+fig, ax = plt.subplots(figsize=(8, 4))
+ax.barh(por_sucursal.index, por_sucursal.values, color="#2b93d1")
+ax.set_title("Ventas totales por sucursal")
+ax.set_xlabel("Total (₡)")
+plt.show()
+</pre>
+                            
+                            <p class="nota">
+                            <i class="fa-regular fa-lightbulb" style="color: #c81f66;" aria-hidden="true"></i>
+                            Ordenar las barras facilita ver cuál categoría es mayor. Las barras horizontales funcionan mejor cuando los nombres son largos.</p>
+                            `,
+                            nextButton: 'Siguiente: Histograma y dispersión'
+                        },
+                        {
+                            title: 'Histograma y dispersión',
+                            content: `<p><strong>Histograma</strong>: muestra cómo se distribuyen los valores de una variable numérica.</p>
+                            
+<pre class="codigo">
+fig, ax = plt.subplots()
+ax.hist(df["total"], bins=20, edgecolor="white")
+ax.set_title("Distribución del monto por venta")
+plt.show()
+</pre>
+                            
+                            <p><strong>Dispersión</strong>: muestra la relación entre dos variables numéricas.</p>
+                            
+<pre class="codigo">
+fig, ax = plt.subplots()
+ax.scatter(df["precio_unitario"], df["unidades"], alpha=0.5)
+ax.set_xlabel("Precio unitario")
+ax.set_ylabel("Unidades vendidas")
+plt.show()
+</pre>
+                            
+                            `,
+                            nextButton: 'Siguiente: ¿Qué gráfico usar?'
+                        },
+                        {
+                            title: '¿Qué gráfico usar?',
+                            content: `<div style="overflow-x:auto; border:1px solid #9cc8ff; border-radius:14px; box-shadow:0 6px 20px rgba(0,110,174,.12);">
+                            <table style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;">
+                            <thead>
+                            <tr>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Pregunta</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Gráfico</th>
+                                <th style="padding:14px 12px; background:#2b93d1; color:#fff; text-align:left;">Matplotlib</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Cómo cambia en el tiempo?</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Líneas</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.plot()</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Cuál categoría es mayor?</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Barras</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.bar()</code> / <code>ax.barh()</code></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Cómo se distribuyen los valores?</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Histograma</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.hist()</code></td>
+                            </tr>
+                            <tr style="background:#f3f9ff;">
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">¿Se relacionan dos variables?</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;">Dispersión</td>
+                                <td style="padding:13px 12px; border-bottom:1px solid #dceeff;"><code>ax.scatter()</code></td>
+                            </tr>
+                            <tr>
+                                <td style="padding:13px 12px;">¿Cómo se compara la distribución entre grupos?</td>
+                                <td style="padding:13px 12px;">Caja (boxplot)</td>
+                                <td style="padding:13px 12px;"><code>ax.boxplot()</code></td>
+                            </tr>
+                            </tbody>
+                            </table>
+                            </div>
+                            <p class="nota">
+                            <i class="fa-solid fa-triangle-exclamation" style="color: #d2232a;" aria-hidden="true"></i>
+                            Evite los gráficos circulares con muchas categorías y los efectos 3D: dificultan comparar los valores.</p>
+                            `,
+                            nextButton: ''
+                        }
+                    ]
                 },
                 {
                     id: 't3-graficos',
@@ -1694,11 +2142,11 @@ atipicos_z = df[z.abs() &gt; 3]
             ]
         },
         // =====================================================================
-        // TEMA 4. ANALÍTICA AVANZADA
+        // SECCIÓN 5. TENSORFLOW
         // =====================================================================
         {
-            id: 'tema_004',
-            label: 'Analítica avanzada',
+            id: 'tema_005',
+            label: 'TensorFlow',
             subtemas: [
                 {
                     id: 't4-ml',

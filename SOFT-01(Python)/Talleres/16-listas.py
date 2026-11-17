@@ -10,11 +10,8 @@ def gastar_numero(energia):
     """
     # energia es una copia del valor: cambiarla aquí no afecta
     # a la variable de main().
-    if (energia <= 0): 
-        print("  La energía debe ser positiva")
-    else: 
-        energia = energia - CONSUMO_DIARIO
-        print("  Dentro de la función, energia =", energia)
+    energia = energia - CONSUMO_DIARIO
+    print("  Dentro de la función, energia =", energia)
 
 
 # ---------- Caso 2: una lista como parámetro ----------
@@ -38,6 +35,9 @@ def reemplazar_lista(recursos):
     """
     # Con el signo = el parámetro pasa a apuntar a OTRA lista.
     # La lista de main() no cambia.
+
+    # recursos = [70, 30, 45]   # 0xc1
+    # recursos = [0, 0, 0]      # 1xc1
     recursos = [0, 0, 0]
     print("  Dentro de la función, recursos =", recursos)
 
@@ -96,9 +96,7 @@ if __name__ == "__main__":
 
     gastar_lista([50, 60, 70])
     gastar_lista([-10, 60, 70])
-    gastar_lista([50, 10, 5, 60, 70])
+    gastar_lista([50, 10, 5, 60, 70]) 
 
-
-    
     main()
     
